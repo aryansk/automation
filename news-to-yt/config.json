@@ -1,0 +1,30 @@
+{
+  "channelName": "Daily World News",
+  "defaultStoriesPerVideo": 5,
+  "topics": {
+    "world": {
+      "label": "World",
+      "feeds": ["https://feeds.bbci.co.uk/news/world/rss.xml"]
+    },
+    "technology": {
+      "label": "Technology",
+      "feeds": ["https://feeds.bbci.co.uk/news/technology/rss.xml"]
+    },
+    "business": {
+      "label": "Business",
+      "feeds": ["https://feeds.bbci.co.uk/news/business/rss.xml"]
+    },
+    "science": {
+      "label": "Science & Environment",
+      "feeds": ["https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"]
+    },
+    "health": {
+      "label": "Health",
+      "feeds": ["https://feeds.bbci.co.uk/news/health/rss.xml"]
+    }
+  },
+  "youtube": {
+    "longForm": { "privacy": "public", "categoryId": "25" },
+    "shorts": { "privacy": "public", "asShorts": true }
+  }
+}

@@ -1,0 +1,41 @@
+<template id="fullscreen-avatar-template">
+  <div id="fullscreen-avatar-root" data-composition-id="fullscreen-avatar" data-width="1920" data-height="1080">
+    <video
+      id="avatar-scene12-video"
+      class="avatar-video-full"
+      src="../assets/avatar-scene12-bg-video.mp4"
+      data-start="0"
+      data-duration="8.727"
+      data-track-index="1"
+      data-has-audio="false"
+      muted
+      playsinline
+      data-media-start="0"
+    ></video>
+
+    <style>
+      #fullscreen-avatar-root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: transparent;
+      }
+
+      .avatar-video-full {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        object-fit: cover;
+        object-position: center center;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["fullscreen-avatar"] = gsap.timeline({ paused: true });
+    </script>
+  </div>
+</template>

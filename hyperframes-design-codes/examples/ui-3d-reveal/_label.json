@@ -1,0 +1,9 @@
+{
+  "id": "ui-3d-reveal",
+  "name": "UI 3D Reveal",
+  "description": "UI 3D perspective reveal animation",
+  "width": 1920,
+  "height": 1080,
+  "duration": 13,
+  "source": "zip"
+}

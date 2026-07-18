@@ -1,0 +1,38 @@
+{
+  "slug": "cartesian",
+  "name": "Cartesian",
+  "tagline": "Minimal sparse layout \u2014 warm parchment, ink display type, taupe accents, hairline rules",
+  "scheme": "light",
+  "density": "low",
+  "tokens": {
+    "consumes": [
+      "primary",
+      "secondary",
+      "tertiary",
+      "accent"
+    ]
+  },
+  "defaultPalette": "cartesian-default",
+  "defaultFontPairId": "playfair-inter",
+  "supportedTones": [
+    "editorial"
+  ],
+  "fonts": {
+    "headline": "Playfair Display",
+    "body": "Inter"
+  },
+  "frames": {
+    "landscape": [],
+    "portrait": []
+  },
+  "colorTokens": [
+    {
+      "name": "bg-2",
+      "label": "Bg 2"
+    },
+    {
+      "name": "gray",
+      "label": "Gray"
+    }
+  ]
+}

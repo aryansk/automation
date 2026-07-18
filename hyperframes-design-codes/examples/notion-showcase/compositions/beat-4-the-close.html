@@ -1,0 +1,221 @@
+<template id="beat-4-template">
+  <div data-composition-id="beat-4-the-close" data-width="1920" data-height="1080" data-start="0" data-duration="8.2">
+    <!-- Background: deep navy with radial glow -->
+    <div class="bg-navy">
+      <div class="bg-glow"></div>
+    </div>
+
+    <!-- Particle field -->
+    <canvas id="particles" width="1920" height="1080" class="particle-canvas"></canvas>
+
+    <!-- Center: Notion logo SVG (drawn) -->
+    <div class="logo-center">
+      <svg class="notion-svg" width="132" height="136" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="logo-stroke" d="M3.8051 3.26755L20.5301 2.04319C22.5839 1.86808 23.1124 1.98538 24.4032 2.91756L29.7421 6.64773C30.623 7.28917 30.9165 7.46381 30.9165 8.16307V28.6217C30.9165 29.9038 30.4468 30.6622 28.804 30.7782L9.38138 31.9442C8.14825 32.0027 7.56135 31.8279 6.91556 31.0114L2.98395 25.9405C2.27947 25.0072 1.98651 24.3088 1.98651 23.4918V5.3068C1.98651 4.25826 2.45649 3.38366 3.8051 3.26755Z" stroke="#FFFFFF" stroke-width="0.8" fill="none"/>
+        <path class="logo-fill-path" d="M20.5301 2.04318C22.5838 1.86808 23.1124 1.98541 24.4031 2.91757L29.7421 6.64778C30.623 7.28918 30.9167 7.46383 30.9167 8.16301V28.6217C30.9167 29.9039 30.4468 30.6622 28.804 30.7782L9.38127 31.944C8.14822 32.0025 7.56137 31.8279 6.9156 31.0114L2.98396 25.9405C2.27951 25.0072 1.98647 24.3088 1.98645 23.492V5.30687C1.98645 4.25835 2.45646 3.38365 3.80508 3.26754L20.5301 2.04318ZM28.9214 9.91165C28.9214 9.15462 28.6285 8.74625 27.9818 8.80449L8.91064 9.91165C8.20688 9.97045 7.9722 10.3204 7.9722 11.0779V28.4466C7.97222 29.3801 8.44147 29.7293 9.49759 29.6715L27.7471 28.6217C28.8037 28.5641 28.9214 27.922 28.9214 27.1636V9.91165ZM25.988 12.0096C26.1051 12.5347 25.988 13.0592 25.4588 13.1182L24.5795 13.2926V26.1151C23.816 26.5231 23.1122 26.7563 22.5256 26.7563C21.5863 26.7563 21.351 26.4646 20.6475 25.5908L14.8959 16.6149V25.2992L16.7158 25.7076C16.7158 25.7076 16.7159 26.7563 15.2475 26.7563L11.1994 26.9897C11.0818 26.7563 11.1995 26.1739 11.6101 26.0571L12.6664 25.7662V14.2837L11.1997 14.1668C11.0822 13.6417 11.3751 12.8847 12.1972 12.8259L16.5398 12.5349L22.5256 21.6277V13.5839L20.9993 13.4098C20.8821 12.7679 21.351 12.3018 21.9379 12.244L25.988 12.0096Z" fill="#FFFFFF" opacity="0"/>
+      </svg>
+    </div>
+
+    <!-- Tagline -->
+    <div class="tagline-center">
+      <span class="tag-line-1">Your AI workspace</span>
+      <span class="tag-line-2">with built-in <span class="agents-word">agents</span>.</span>
+    </div>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=block');
+
+      [data-composition-id="beat-4-the-close"] {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        position: relative;
+        background: #02093A;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .bg-navy {
+        position: absolute;
+        inset: 0;
+      }
+
+      .bg-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 800px;
+        height: 800px;
+        margin-top: -400px;
+        margin-left: -400px;
+        background: radial-gradient(circle, rgba(96, 125, 246, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+      }
+
+      .particle-canvas {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        opacity: 0.4;
+      }
+
+      .logo-center {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        padding-bottom: 120px;
+      }
+
+      .notion-svg {
+        width: 132px;
+        height: 136px;
+      }
+
+      .logo-stroke {
+        stroke-dasharray: 120;
+        stroke-dashoffset: 120;
+      }
+
+      .tagline-center {
+        position: absolute;
+        bottom: 320px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        z-index: 2;
+      }
+
+      .tag-line-1 {
+        font-size: 48px;
+        font-weight: 500;
+        color: #FFFFFF;
+        letter-spacing: -0.02em;
+        opacity: 0;
+      }
+
+      .tag-line-2 {
+        font-size: 36px;
+        font-weight: 400;
+        color: #FFFFFF;
+        font-style: italic;
+        font-family: 'Georgia', serif;
+        opacity: 0;
+      }
+
+      .agents-word {
+        color: #607DF6;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+      var comp = document.querySelector('[data-composition-id="beat-4-the-close"]');
+
+      // Seeded PRNG (mulberry32)
+      function mulberry32(a) {
+        return function() {
+          a |= 0; a = a + 0x6D2B79F5 | 0;
+          var t = Math.imul(a ^ a >>> 15, 1 | a);
+          t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+          return ((t ^ t >>> 14) >>> 0) / 4294967296;
+        };
+      }
+      var rand = mulberry32(42);
+
+      // Draw particles on canvas
+      var canvas = comp.querySelector('#particles');
+      var ctx = canvas.getContext('2d');
+      var particles = [];
+      for (var i = 0; i < 80; i++) {
+        particles.push({
+          x: rand() * 1920,
+          y: rand() * 1080,
+          size: rand() * 2 + 0.5,
+          speed: rand() * 0.3 + 0.1,
+          alpha: rand() * 0.3 + 0.1
+        });
+      }
+
+      var proxy = { t: 0 };
+      function drawParticles() {
+        ctx.clearRect(0, 0, 1920, 1080);
+        for (var i = 0; i < particles.length; i++) {
+          var p = particles[i];
+          var py = p.y - proxy.t * p.speed * 60;
+          py = ((py % 1080) + 1080) % 1080;
+          ctx.beginPath();
+          ctx.arc(p.x, py, p.size, 0, 6.283);
+          ctx.fillStyle = 'rgba(255, 255, 255, ' + p.alpha + ')';
+          ctx.fill();
+        }
+      }
+      drawParticles();
+
+      // Animate particles upward
+      tl.to(proxy, {
+        t: 5,
+        duration: 5,
+        ease: 'none',
+        onUpdate: drawParticles
+      }, 0);
+
+      // Logo stroke draws in
+      tl.to('.logo-stroke', {
+        strokeDashoffset: 0,
+        duration: 1.0,
+        ease: 'power2.inOut'
+      }, 0.2);
+
+      // Logo fill floods in after stroke
+      tl.to('.logo-fill-path', {
+        opacity: 1,
+        duration: 0.3,
+        ease: 'power2.out'
+      }, 1.3);
+
+      // Logo stroke fades out as fill takes over
+      tl.to('.logo-stroke', {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'power1.out'
+      }, 1.4);
+
+      // "Your AI workspace" fades in
+      tl.fromTo('.tag-line-1', {
+        opacity: 0, y: 16
+      }, {
+        opacity: 1, y: 0, duration: 0.5, ease: 'power2.out'
+      }, 1.8);
+
+      // "with built-in agents." slides in
+      tl.fromTo('.tag-line-2', {
+        opacity: 0, y: 16
+      }, {
+        opacity: 1, y: 0, duration: 0.5, ease: 'power2.out'
+      }, 2.3);
+
+      // Bg glow pulses gently
+      tl.to('.bg-glow', {
+        scale: 1.1,
+        opacity: 0.8,
+        duration: 2,
+        ease: 'sine.inOut',
+        yoyo: true,
+        repeat: 1
+      }, 0.5);
+
+      // Hold and fade to silence — no exit transition (final beat)
+      window.__timelines["beat-4-the-close"] = tl;
+    </script>
+  </div>
+</template>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+    </style>
+  </head>
+  <body>
+    <!-- Root composition wrapper -->
+    <div data-composition-id="main" data-width="1920" data-height="1080" data-start="0" data-duration="25">
+
+      <!-- Beat 1: The Number (0.00–4.30s) -->
+      <div id="beat-1" data-composition-id="beat-1-the-number" data-composition-src="compositions/beat-1-the-number.html" data-start="0" data-duration="4.3" data-track-index="1" data-width="1920" data-height="1080"></div>
+
+      <!-- Beat 2: The Agents (4.30–9.80s) -->
+      <div id="beat-2" data-composition-id="beat-2-the-agents" data-composition-src="compositions/beat-2-the-agents.html" data-start="4.3" data-duration="5.5" data-track-index="1" data-width="1920" data-height="1080"></div>
+
+      <!-- Beat 3: The Proof (9.80–16.80s) -->
+      <div id="beat-3" data-composition-id="beat-3-the-proof" data-composition-src="compositions/beat-3-the-proof.html" data-start="9.8" data-duration="7.0" data-track-index="1" data-width="1920" data-height="1080"></div>
+
+      <!-- Beat 4: The Close (16.80–25.00s) -->
+      <div id="beat-4" data-composition-id="beat-4-the-close" data-composition-src="compositions/beat-4-the-close.html" data-start="16.8" data-duration="8.2" data-track-index="1" data-width="1920" data-height="1080"></div>
+
+      <!-- Narration audio -->
+      <audio id="narration" data-start="0" data-duration="19.4" data-track-index="0" data-volume="1" src="narration.wav"></audio>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

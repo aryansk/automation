@@ -1,0 +1,62 @@
+<template id="pip-avatar-template">
+  <div id="pip-avatar-root" data-composition-id="pip-avatar" data-width="1920" data-height="1080" data-layout-allow-overflow>
+    <div class="avatar-video-bubble" aria-label="右下アバター映像" data-layout-allow-overflow="">
+      <video
+        id="avatar-scene3-video"
+        class="avatar-video-bubble-media"
+        src="../assets/avatar-scene3-bg-video.mp4"
+        data-start="0"
+        data-duration="5.016"
+        data-track-index="1"
+        data-has-audio="false"
+        muted
+        playsinline
+      ></video>
+    </div>
+
+    <style>
+      #pip-avatar-root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: visible;
+      }
+
+      .avatar-video-bubble {
+        position: absolute;
+        right: 48px;
+        bottom: 48px;
+        width: 166px;
+        height: 166px;
+        overflow: hidden;
+        border: 6px solid rgba(255, 255, 255, 0.95);
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 16px 48px rgba(0, 55, 100, 0.16);
+        opacity: 0;
+      }
+
+      .avatar-video-bubble-media {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 720px;
+        height: 405px;
+        max-width: none;
+        transform: translate(-50%, -28%);
+        object-fit: cover;
+        object-position: 50% 35%;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      gsap.set(".avatar-video-bubble", { opacity: 0 });
+      tl.to(".avatar-video-bubble", { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }, 0.743);
+      tl.to(".avatar-video-bubble", { opacity: 0, scale: 0.96, duration: 0.22, ease: "power2.in" }, 4.023);
+      window.__timelines["pip-avatar"] = tl;
+    </script>
+  </div>
+</template>

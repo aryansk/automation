@@ -1,0 +1,342 @@
+<template id="beat-2-triplet-template">
+  <div data-composition-id="beat-2-triplet" data-width="1920" data-height="1080" data-start="0" data-duration="4.33">
+    <div class="b2-stage">
+      <div class="b2-row">
+        <!-- Card A: Cabin -->
+        <div class="b2-col">
+          <div class="b2-card b2-card-A">
+            <div class="b2-photo-wrap b2-photo-A">
+              <img
+                class="b2-photo"
+                src="../capture/assets/9f85c5ab-fe74-4e40-8c53-027ec0eed322.jpeg"
+                alt="A-frame cabin in forest"
+              />
+            </div>
+            <div class="b2-pill">Guest favourite</div>
+            <div class="b2-heart" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 28s-11-6.86-11-15.07A6.93 6.93 0 0 1 12 6a6.5 6.5 0 0 1 4 1.5A6.5 6.5 0 0 1 20 6a6.93 6.93 0 0 1 7 6.93C27 21.14 16 28 16 28z"
+                  fill="rgba(0,0,0,0.4)"
+                  stroke="#FFFFFF"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="b2-label">
+            <span class="b2-label-main">Cabin · Les Laurentides · </span><span class="b2-label-price">$1,157 CAD</span>
+          </div>
+        </div>
+
+        <!-- Card B: Loft -->
+        <div class="b2-col">
+          <div class="b2-card b2-card-B">
+            <div class="b2-photo-wrap b2-photo-B">
+              <img
+                class="b2-photo"
+                src="../capture/assets/0dc92c30-116e-4020-9db0-6bd5ce7c7d95.jpeg"
+                alt="Rome streetscape"
+              />
+            </div>
+            <div class="b2-pill">Guest favourite</div>
+            <div class="b2-heart" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 28s-11-6.86-11-15.07A6.93 6.93 0 0 1 12 6a6.5 6.5 0 0 1 4 1.5A6.5 6.5 0 0 1 20 6a6.93 6.93 0 0 1 7 6.93C27 21.14 16 28 16 28z"
+                  fill="rgba(0,0,0,0.4)"
+                  stroke="#FFFFFF"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="b2-label">
+            <span class="b2-label-main">Loft · Rome · </span><span class="b2-label-price">$189 / night</span>
+          </div>
+        </div>
+
+        <!-- Card C: Dome -->
+        <div class="b2-col">
+          <div class="b2-card b2-card-C">
+            <div class="b2-photo-wrap b2-photo-C">
+              <img
+                class="b2-photo"
+                src="../capture/assets/c77d85d8-d768-4034-80cf-56673f02274c.jpeg"
+                alt="Geodesic dome glamping"
+              />
+            </div>
+            <div class="b2-pill">Guest favourite</div>
+            <div class="b2-heart" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 28s-11-6.86-11-15.07A6.93 6.93 0 0 1 12 6a6.5 6.5 0 0 1 4 1.5A6.5 6.5 0 0 1 20 6a6.93 6.93 0 0 1 7 6.93C27 21.14 16 28 16 28z"
+                  fill="rgba(0,0,0,0.4)"
+                  stroke="#FFFFFF"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="b2-label">
+            <span class="b2-label-main">Dome · Lac-Supérieur · </span><span class="b2-label-price">$745 CAD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @font-face {
+        font-family: 'Airbnb Cereal VF';
+        src: url('../capture/assets/fonts/AirbnbCerealVF_W_Wght.8816d9e5c3b6a860636193e36b6ac4e4.woff2') format('woff2');
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: block;
+      }
+
+      [data-composition-id="beat-2-triplet"] {
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;
+        font-family: 'Airbnb Cereal VF', system-ui, sans-serif;
+        overflow: hidden;
+        position: relative;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-stage {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 60px;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 56px;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        width: 420px;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-card {
+        position: relative;
+        width: 420px;
+        height: 500px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        background: #1a1a1a;
+        will-change: transform, box-shadow, opacity;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-photo-wrap {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        transform-origin: center center;
+        will-change: transform, filter;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-pill {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background: #FFFFFF;
+        border: 1px solid #DDDDDD;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 500;
+        color: #222222;
+        letter-spacing: 0.1px;
+        z-index: 2;
+        will-change: transform, opacity;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-heart {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        will-change: transform;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-heart svg path {
+        will-change: fill, stroke;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-label {
+        font-family: 'Airbnb Cereal VF', system-ui, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: #222222;
+        letter-spacing: 0.1px;
+        will-change: transform, opacity;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-label-main {
+        color: #222222;
+      }
+
+      [data-composition-id="beat-2-triplet"] .b2-label-price {
+        color: #6A6A6A;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        const scope = '[data-composition-id="beat-2-triplet"]';
+
+        const shadowOff = '0 6px 16px rgba(0,0,0,0.12)';
+        const shadowOn = '0 6px 16px rgba(0,0,0,0.12), 0 0 0 4px #FF385C';
+
+        // 1) Cards cascade in (stagger 0.12s) starting at t=0
+        tl.from(scope + ' .b2-card', {
+          y: 80,
+          opacity: 0,
+          duration: 0.5,
+          stagger: 0.12,
+          ease: 'power2.out',
+        }, 0);
+
+        // 2) Labels fade+rise in with stagger 0.14s starting at t=0.5
+        tl.from(scope + ' .b2-label', {
+          y: 16,
+          opacity: 0,
+          duration: 0.45,
+          stagger: 0.14,
+          ease: 'power3.out',
+        }, 0.5);
+
+        // 3) Ken Burns on each photo wrapper over full beat (4.33s)
+        // Card A: scale 1 -> 1.06 + translateX -12px
+        tl.fromTo(scope + ' .b2-photo-A', {
+          scale: 1,
+          x: 0,
+        }, {
+          scale: 1.06,
+          x: -12,
+          duration: 6.90,
+          ease: 'none',
+        }, 0);
+
+        // Card B: gentle zoom in 1 -> 1.06
+        tl.fromTo(scope + ' .b2-photo-B', {
+          scale: 1,
+        }, {
+          scale: 1.06,
+          duration: 6.90,
+          ease: 'none',
+        }, 0);
+
+        // Card C: scale 1 -> 1.06 + translateY -12px (pan up)
+        tl.fromTo(scope + ' .b2-photo-C', {
+          scale: 1,
+          y: 0,
+        }, {
+          scale: 1.06,
+          y: -12,
+          duration: 6.90,
+          ease: 'none',
+        }, 0);
+
+        // 4) Highlight rotation helper
+        // Each highlight: pulse the target card's pink ring + heart fill,
+        // and dim the other two photos to saturate(0.7) for the hold window.
+        function pulseCard(letter, startTime) {
+          const all = ['A', 'B', 'C'];
+          const others = all.filter((l) => l !== letter);
+          const cardSel = scope + ' .b2-card-' + letter;
+          const heartPathSel = cardSel + ' .b2-heart svg path';
+          const otherPhotos = others.map((l) => scope + ' .b2-photo-' + l);
+
+          // Ring fades in 0.25s
+          tl.to(cardSel, {
+            boxShadow: shadowOn,
+            duration: 0.25,
+            ease: 'power2.out',
+          }, startTime);
+
+          // Heart fills pink (cross-fade fill to #FF385C, stroke goes transparent-ish to keep clean)
+          tl.to(heartPathSel, {
+            attr: { fill: '#FF385C', stroke: '#FFFFFF' },
+            duration: 0.25,
+            ease: 'power2.out',
+          }, startTime);
+
+          // Dim other two photos
+          otherPhotos.forEach((sel) => {
+            tl.to(sel, {
+              filter: 'saturate(0.7)',
+              duration: 0.25,
+              ease: 'power2.out',
+            }, startTime);
+          });
+
+          // Hold for 0.5s, then release back over 0.3s
+          const releaseAt = startTime + 0.25 + 0.5;
+
+          tl.to(cardSel, {
+            boxShadow: shadowOff,
+            duration: 0.3,
+            ease: 'power2.inOut',
+          }, releaseAt);
+
+          tl.to(heartPathSel, {
+            attr: { fill: 'rgba(0,0,0,0.4)', stroke: '#FFFFFF' },
+            duration: 0.3,
+            ease: 'power2.inOut',
+          }, releaseAt);
+
+          otherPhotos.forEach((sel) => {
+            tl.to(sel, {
+              filter: 'saturate(1)',
+              duration: 0.3,
+              ease: 'power2.inOut',
+            }, releaseAt);
+          });
+        }
+
+        // Card A pulses at t=0.35s ("A cabin in the forest")
+        pulseCard('A', 0.35);
+        // Card B pulses at t=1.77s ("A loft in Rome")
+        pulseCard('B', 1.77);
+        // Card C pulses at t=4.08s ("A dome under the stars")
+        pulseCard('C', 4.08);
+
+        // No exit — cards remain fully visible at t=6.90s.
+
+        window.__timelines["beat-2-triplet"] = tl;
+      })();
+    </script>
+  </div>
+</template>

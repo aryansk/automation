@@ -1,0 +1,1187 @@
+- generic [ref=e83]:
+  - banner [ref=e62]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - button "Guide" [ref=e67] [cursor=pointer]:
+          - generic [ref=e85]:
+            - img
+        - generic [ref=e69]:
+          - link "YouTube Home" [ref=e86] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e91]:
+              - img
+          - generic [ref=e92]: IN
+        - button "Skip navigation" [ref=e96] [cursor=pointer]:
+          - generic [ref=e97]: Skip navigation
+      - generic [ref=e70]:
+        - search [ref=e71]:
+          - generic [ref=e72]:
+            - combobox "Search" [expanded] [ref=e101]
+            - button "Search" [ref=e76] [cursor=pointer]:
+              - generic [ref=e103]:
+                - img
+        - generic [ref=e105]:
+          - button "Search with your voice" [ref=e107] [cursor=pointer]:
+            - generic [ref=e111]:
+              - img
+          - tooltip "tooltip"
+      - generic [ref=e115]:
+        - button "Settings" [ref=e120] [cursor=pointer]:
+          - generic [ref=e123]:
+            - img
+        - link "Sign in" [ref=e126] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DKJSSvOY1UOk&hl=en&ec=65620
+          - generic [ref=e130]:
+            - img
+          - generic [ref=e131]: Sign in
+  - main [ref=e136]:
+    - generic [ref=e137]:
+      - generic [ref=e139]:
+        - complementary [ref=e146]:
+          - generic "YouTube Video Player" [ref=e5]:
+            - generic [ref=e10]:
+              - generic [ref=e11] [cursor=pointer]:
+                - generic:
+                  - generic:
+                    - img
+                - slider "Seek slider" [ref=e12]
+                - generic:
+                  - generic:
+                    - generic:
+                      - slider "Click or scroll the panel for the precise seeking."
+              - generic [ref=e21]:
+                - generic [ref=e22]:
+                  - button "Pause (k)" [ref=e23] [cursor=pointer]:
+                    - img
+                  - generic [ref=e24]:
+                    - button "Unmute keyboard shortcut m" [active] [ref=e2309] [cursor=pointer]:
+                      - img
+                    - slider "Volume"
+                  - button "0 Minutes 8 Seconds of 12 Minutes 31 Seconds" [ref=e2310] [cursor=pointer]: 0:08 / 12:31
+                - generic [ref=e31]:
+                  - generic [ref=e32]:
+                    - button "Autoplay is on" [ref=e152] [cursor=pointer]
+                    - button "Subtitles/closed captions unavailable" [ref=e33] [cursor=pointer]:
+                      - generic [ref=e34]:
+                        - img
+                    - button "Settings" [ref=e35] [cursor=pointer]:
+                      - img
+                  - generic [ref=e36]:
+                    - button "Theater mode keyboard shortcut t" [ref=e37] [cursor=pointer]:
+                      - img
+                    - button "Full screen (f)" [ref=e38] [cursor=pointer]:
+                      - img
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - generic [ref=e158]:
+              - heading "How to Get Rich So Fast It Feels Like CHEATING" [level=1] [ref=e160]
+              - generic [ref=e161]:
+                - generic [ref=e162]:
+                  - generic [ref=e163]:
+                    - link "LITTLE BIT BETTER" [ref=e164] [cursor=pointer]:
+                      - /url: /@littlebitbetter7
+                      - img "LITTLE BIT BETTER" [ref=e166]
+                    - generic [ref=e167]:
+                      - generic "LITTLE BIT BETTER" [ref=e171]:
+                        - link "LITTLE BIT BETTER" [ref=e172] [cursor=pointer]:
+                          - /url: /@littlebitbetter7
+                      - generic "1.26 million subscribers" [ref=e173]: 1.26M subscribers
+                  - generic [ref=e177]:
+                    - button "Subscribe to LITTLE BIT BETTER." [ref=e179] [cursor=pointer]:
+                      - generic [ref=e180]: Subscribe
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                      - generic:
+                        - img
+                - generic [ref=e187]:
+                  - generic [ref=e188]:
+                    - generic [ref=e192]:
+                      - button "like this video along with 13,036 other people" [ref=e196] [cursor=pointer]:
+                        - generic [ref=e200]:
+                          - img
+                        - generic [ref=e201]: 13K
+                      - button "Dislike this video" [ref=e208] [cursor=pointer]:
+                        - generic [ref=e212]:
+                          - img
+                    - button "Share" [ref=e218] [cursor=pointer]:
+                      - generic [ref=e222]:
+                        - img
+                      - generic [ref=e223]: Share
+                  - button "Save to playlist" [ref=e230] [cursor=pointer]:
+                    - generic [ref=e234]:
+                      - img
+                    - generic [ref=e235]: Save
+                  - button "More actions" [ref=e240] [cursor=pointer]:
+                    - generic [ref=e244]:
+                      - img
+              - generic [ref=e250] [cursor=pointer]:
+                - generic [ref=e251]:
+                  - generic [ref=e253]: 220K views 3 weeks ago
+                  - tooltip "tooltip"
+                - generic [ref=e254]:
+                  - generic [ref=e258]: How to Get Rich So Fast It Feels Like CHEATING
+                  - button "...more" [ref=e259]
+            - text: •
+          - generic [ref=e262]:
+            - generic [ref=e264]:
+              - generic [ref=e265]:
+                - heading "381 Comments" [level=2] [ref=e267]:
+                  - generic [ref=e268]: 381 Comments
+                - generic [ref=e271]:
+                  - tooltip "tooltip"
+                  - group [ref=e273]:
+                    - button "Sort comments" [ref=e275] [cursor=pointer]:
+                      - generic [ref=e278]:
+                        - img
+                      - generic [ref=e279]: Sort by
+              - generic [ref=e281]:
+                - img "Default profile photo" [ref=e283]
+                - textbox [ref=e285]
+            - generic [ref=e286]:
+              - generic [ref=e287]:
+                - generic [ref=e291]:
+                  - button "@littlebitbetter7" [ref=e293] [cursor=pointer]
+                  - generic [ref=e297]:
+                    - generic [ref=e298]:
+                      - generic [ref=e300]:
+                        - generic [ref=e303]:
+                          - img
+                        - generic [ref=e304]: Pinned by @littlebitbetter7
+                      - generic [ref=e305]:
+                        - heading [level=3]
+                        - link "@littlebitbetter7" [ref=e308] [cursor=pointer]:
+                          - /url: /@littlebitbetter7
+                          - generic "@littlebitbetter7" [ref=e312]
+                        - link "2 weeks ago" [ref=e314] [cursor=pointer]:
+                          - /url: /watch?v=KJSSvOY1UOk&lc=UgxDPaL1iV99s_GZj_R4AaABAg
+                    - generic [ref=e315]:
+                      - generic [ref=e317]: "Hi Guys I keep receiving emails from people saying they are going to copy my videos one-to-one into their own language, so let me address this directly: This video is about cloning business systems and strategies, not plagiarizing creative work. Copying someone's video one-to-one or translating it without permission is copyright infringement, which completely misses the point of this lesson."
+                      - button "Read more" [ref=e318] [cursor=pointer]
+                    - generic [ref=e320]:
+                      - generic [ref=e321]:
+                        - button "Like this comment along with 248 other people" [ref=e323] [cursor=pointer]:
+                          - generic [ref=e327]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e331]: "248"
+                      - generic [ref=e332]:
+                        - button "Dislike this comment" [ref=e334] [cursor=pointer]:
+                          - generic [ref=e338]:
+                            - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e344] [cursor=pointer]:
+                        - generic [ref=e345]: Reply
+                - button "26 replies" [ref=e359] [cursor=pointer]:
+                  - generic [ref=e360]: 26 replies
+                  - generic [ref=e364]:
+                    - img
+              - generic [ref=e369]:
+                - generic [ref=e373]:
+                  - button "@GrandpaThinking" [ref=e375] [cursor=pointer]
+                  - generic [ref=e379]:
+                    - generic [ref=e381]:
+                      - heading "@GrandpaThinking" [level=3] [ref=e382]:
+                        - link "@GrandpaThinking" [ref=e383] [cursor=pointer]:
+                          - /url: /@GrandpaThinking
+                      - link "2 weeks ago" [ref=e385] [cursor=pointer]:
+                        - /url: /watch?v=KJSSvOY1UOk&lc=Ugx3ERqAhg4YJX0UMXF4AaABAg
+                    - generic [ref=e388]: The fastest way to grow is to borrow lessons from lives you have not lived
+                    - generic [ref=e390]:
+                      - generic [ref=e391]:
+                        - button "Like this comment along with 469 other people" [ref=e393] [cursor=pointer]:
+                          - generic [ref=e397]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e401]: "469"
+                      - generic [ref=e402]:
+                        - button "Dislike this comment" [ref=e404] [cursor=pointer]:
+                          - generic [ref=e408]:
+                            - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e414] [cursor=pointer]:
+                        - generic [ref=e415]: Reply
+                - button "6 replies" [ref=e429] [cursor=pointer]:
+                  - generic [ref=e430]: 6 replies
+                  - generic [ref=e434]:
+                    - img
+              - generic [ref=e439]:
+                - generic [ref=e443]:
+                  - button "@Will-yi2jq" [ref=e445] [cursor=pointer]
+                  - generic [ref=e449]:
+                    - generic [ref=e451]:
+                      - heading "@Will-yi2jq" [level=3] [ref=e452]:
+                        - link "@Will-yi2jq" [ref=e453] [cursor=pointer]:
+                          - /url: /@Will-yi2jq
+                      - link "11 days ago" [ref=e455] [cursor=pointer]:
+                        - /url: /watch?v=KJSSvOY1UOk&lc=Ugw6T9DiZ9VAn5maP0l4AaABAg
+                    - generic [ref=e458]: I'll try copy Elon Musk. Wish me luck guys I'll be a trillionaire by end of this year.
+                    - generic [ref=e460]:
+                      - generic [ref=e461]:
+                        - button "Like this comment along with 189 other people" [ref=e463] [cursor=pointer]:
+                          - generic [ref=e467]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e471]: "189"
+                      - generic [ref=e472]:
+                        - button "Dislike this comment" [ref=e474] [cursor=pointer]:
+                          - generic [ref=e478]:
+                            - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e484] [cursor=pointer]:
+                        - generic [ref=e485]: Reply
+                - button "9 replies" [ref=e499] [cursor=pointer]:
+                  - generic [ref=e500]: 9 replies
+                  - generic [ref=e504]:
+                    - img
+              - generic [ref=e509]:
+                - generic [ref=e513]:
+                  - button "@SmartMoneyHabits-g8h" [ref=e515] [cursor=pointer]
+                  - generic [ref=e519]:
+                    - generic [ref=e521]:
+                      - heading "@SmartMoneyHabits-g8h" [level=3] [ref=e522]:
+                        - link "@SmartMoneyHabits-g8h" [ref=e523] [cursor=pointer]:
+                          - /url: /@SmartMoneyHabits-g8h
+                      - link "2 weeks ago" [ref=e525] [cursor=pointer]:
+                        - /url: /watch?v=KJSSvOY1UOk&lc=UgykM-whkp469uwDP6N4AaABAg&pp=0gcJCSIANpG00pGi
+                    - generic [ref=e528]: Copy first. Understand second. Innovate last
+                    - generic [ref=e530]:
+                      - generic [ref=e531]:
+                        - button "Like this comment along with 419 other people" [ref=e533] [cursor=pointer]:
+                          - generic [ref=e537]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e541]: "419"
+                      - generic [ref=e542]:
+                        - button "Dislike this comment" [ref=e544] [cursor=pointer]:
+                          - generic [ref=e548]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e553]:
+                        - generic [ref=e554]:
+                          - button "Heart" [disabled]:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e557] [cursor=pointer]:
+                        - generic [ref=e558]: Reply
+                - button "11 replies" [ref=e572] [cursor=pointer]:
+                  - generic [ref=e573]: 11 replies
+                  - generic [ref=e577]:
+                    - img
+              - generic [ref=e582]:
+                - generic [ref=e586]:
+                  - button "@stivdon" [ref=e588] [cursor=pointer]
+                  - generic [ref=e592]:
+                    - generic [ref=e594]:
+                      - heading "@stivdon" [level=3] [ref=e595]:
+                        - link "@stivdon" [ref=e596] [cursor=pointer]:
+                          - /url: /@stivdon
+                      - link "2 weeks ago" [ref=e598] [cursor=pointer]:
+                        - /url: /watch?v=KJSSvOY1UOk&lc=Ugx3ZCPSWzsYJL0uhhN4AaABAg
+                    - generic [ref=e601]: I need to copy your content. It's so damn good
+                    - generic [ref=e603]:
+                      - generic [ref=e604]:
+                        - button "Like this comment along with 509 other people" [ref=e606] [cursor=pointer]:
+                          - generic [ref=e610]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e614]: "509"
+                      - generic [ref=e615]:
+                        - button "Dislike this comment" [ref=e617] [cursor=pointer]:
+                          - generic [ref=e621]:
+                            - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e627] [cursor=pointer]:
+                        - generic [ref=e628]: Reply
+                - button "30 replies" [ref=e642] [cursor=pointer]:
+                  - generic [ref=e643]: 30 replies
+                  - generic [ref=e647]:
+                    - img
+              - generic [ref=e652]:
+                - generic [ref=e656]:
+                  - button "@GokuCagorat-u7h" [ref=e658] [cursor=pointer]
+                  - generic [ref=e662]:
+                    - generic [ref=e664]:
+                      - heading "@GokuCagorat-u7h" [level=3] [ref=e665]:
+                        - link "@GokuCagorat-u7h" [ref=e666] [cursor=pointer]:
+                          - /url: /@GokuCagorat-u7h
+                      - link "2 weeks ago" [ref=e668] [cursor=pointer]:
+                        - /url: /watch?v=KJSSvOY1UOk&lc=UgzC0CKl72T3Yz9-Bqh4AaABAg
+                    - generic [ref=e671]: We all copied "Alphabet" , "Speaking" , "walking" etc. We are all coppers it's just a matter of blending the copies
+                    - generic [ref=e673]:
+                      - generic [ref=e674]:
+                        - button "Like this comment along with 77 other people" [ref=e676] [cursor=pointer]:
+                          - generic [ref=e680]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e684]: "77"
+                      - generic [ref=e685]:
+                        - button "Dislike this comment" [ref=e687] [cursor=pointer]:
+                          - generic [ref=e691]:
+                            - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e697] [cursor=pointer]:
+                        - generic [ref=e698]: Reply
+                - button "1 reply" [ref=e712] [cursor=pointer]:
+                  - generic [ref=e713]: 1 reply
+                  - generic [ref=e717]:
+                    - img
+              - generic [ref=e722]:
+                - generic [ref=e726]:
+                  - button "@JuanDayOff" [ref=e728] [cursor=pointer]
+                  - generic [ref=e732]:
+                    - generic [ref=e734]:
+                      - heading "@JuanDayOff" [level=3] [ref=e735]:
+                        - link "@JuanDayOff" [ref=e736] [cursor=pointer]:
+                          - /url: /@JuanDayOff
+                      - link "2 weeks ago" [ref=e738] [cursor=pointer]:
+                        - /url: /watch?v=KJSSvOY1UOk&lc=UgyEIsQNsphQRGUwQwB4AaABAg
+                    - generic [ref=e741]: I applied this exact framework back in 2018, and it is the only reason I get to experience 'founder boredom' today. I cloned a physical business model, skipped the ego-driven stuff, and built out the backend architecture so a high schooler could run the daily operations. When you clone the baseline and automate the boring parts, you eventually become operationally irrelevant to your own company. That is the actual finish line.
+                    - generic [ref=e743]:
+                      - generic [ref=e744]:
+                        - button "Like this comment along with 66 other people" [ref=e746] [cursor=pointer]:
+                          - generic [ref=e750]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e754]: "66"
+                      - generic [ref=e755]:
+                        - button "Dislike this comment" [ref=e757] [cursor=pointer]:
+                          - generic [ref=e761]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e766]:
+                        - generic [ref=e767]:
+                          - button "Heart" [disabled]:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e770] [cursor=pointer]:
+                        - generic [ref=e771]: Reply
+                - button "3 replies" [ref=e785] [cursor=pointer]:
+                  - generic [ref=e786]: 3 replies
+                  - generic [ref=e790]:
+                    - img
+              - generic [ref=e799]:
+                - button "@Th_eguy" [ref=e801] [cursor=pointer]
+                - generic [ref=e803]:
+                  - generic [ref=e805]:
+                    - heading "@Th_eguy" [level=3] [ref=e806]:
+                      - link "@Th_eguy" [ref=e807] [cursor=pointer]:
+                        - /url: /@Th_eguy
+                    - link "2 weeks ago" [ref=e809] [cursor=pointer]:
+                      - /url: /watch?v=KJSSvOY1UOk&lc=UgzvBPBUGPaVHxjc9wR4AaABAg
+                  - generic [ref=e812]: Casually stumbled upon the best channel on YouTube
+                  - generic [ref=e814]:
+                    - generic [ref=e815]:
+                      - button "Like this comment along with 11 other people" [ref=e817] [cursor=pointer]:
+                        - generic [ref=e821]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e825]: "11"
+                    - generic [ref=e826]:
+                      - button "Dislike this comment" [ref=e828] [cursor=pointer]:
+                        - generic [ref=e832]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e837]:
+                      - generic [ref=e838]:
+                        - button "Heart" [disabled]:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                      - tooltip "tooltip"
+                    - button "Reply" [ref=e841] [cursor=pointer]:
+                      - generic [ref=e842]: Reply
+              - generic [ref=e846]:
+                - generic [ref=e850]:
+                  - button "@ardiansach3290" [ref=e852] [cursor=pointer]
+                  - generic [ref=e856]:
+                    - generic [ref=e858]:
+                      - heading "@ardiansach3290" [level=3] [ref=e859]:
+                        - link "@ardiansach3290" [ref=e860] [cursor=pointer]:
+                          - /url: /@ardiansach3290
+                      - link "2 weeks ago" [ref=e862] [cursor=pointer]:
+                        - /url: /watch?v=KJSSvOY1UOk&lc=UgzBVFoR-a9oQ7Re74F4AaABAg
+                    - generic [ref=e863]:
+                      - generic [ref=e865]: "I watched a martial art video few months ago, basically it's a same principal. There are 3 step to become an martial art expert: 1. copy your master/mentor, 100% !! don't improvised - ever. 2. after mastering his technique, go and learn from different style, repeat step 1. 3. After repeating the step over & over again, eventually your body and mind will move on it's own, creating your own original style."
+                      - button "Read more" [ref=e866] [cursor=pointer]
+                    - generic [ref=e868]:
+                      - generic [ref=e869]:
+                        - button "Like this comment along with 81 other people" [ref=e871] [cursor=pointer]:
+                          - generic [ref=e875]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e879]: "81"
+                      - generic [ref=e880]:
+                        - button "Dislike this comment" [ref=e882] [cursor=pointer]:
+                          - generic [ref=e886]:
+                            - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e892] [cursor=pointer]:
+                        - generic [ref=e893]: Reply
+                - button "2 replies" [ref=e907] [cursor=pointer]:
+                  - generic [ref=e908]: 2 replies
+                  - generic [ref=e912]:
+                    - img
+              - generic [ref=e921]:
+                - button "@netkap9920" [ref=e923] [cursor=pointer]
+                - generic [ref=e925]:
+                  - generic [ref=e927]:
+                    - heading "@netkap9920" [level=3] [ref=e928]:
+                      - link "@netkap9920" [ref=e929] [cursor=pointer]:
+                        - /url: /@netkap9920
+                    - link "2 weeks ago" [ref=e931] [cursor=pointer]:
+                      - /url: /watch?v=KJSSvOY1UOk&lc=UgyqmtuLrK-Vky968B94AaABAg
+                  - generic [ref=e935]:
+                    - link "4:00" [ref=e937] [cursor=pointer]:
+                      - /url: /watch?v=KJSSvOY1UOk&t=240s
+                    - text: Eklavya donated his thumb after closing the master who rejected him . Great philosophy
+                  - generic [ref=e939]:
+                    - generic [ref=e940]:
+                      - button "Like this comment along with 11 other people" [ref=e942] [cursor=pointer]:
+                        - generic [ref=e946]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e950]: "11"
+                    - generic [ref=e951]:
+                      - button "Dislike this comment" [ref=e953] [cursor=pointer]:
+                        - generic [ref=e957]:
+                          - img
+                      - tooltip "tooltip"
+                    - button "Reply" [ref=e963] [cursor=pointer]:
+                      - generic [ref=e964]: Reply
+              - generic [ref=e972]:
+                - button "@douglaskeen873" [ref=e974] [cursor=pointer]
+                - generic [ref=e976]:
+                  - generic [ref=e978]:
+                    - heading "@douglaskeen873" [level=3] [ref=e979]:
+                      - link "@douglaskeen873" [ref=e980] [cursor=pointer]:
+                        - /url: /@douglaskeen873
+                    - link "2 weeks ago" [ref=e982] [cursor=pointer]:
+                      - /url: /watch?v=KJSSvOY1UOk&lc=UgyrgrtnirywYBxwTV54AaABAg
+                  - generic [ref=e985]: Just logged on to youtube looking specifically for this channel and it was my third feed. Started watching this channel for the first time last night and shared three videos with my 19 year old son. Love this channel. Very informative and, I personally think, trustworthy content. Keep the videos coming.
+                  - generic [ref=e987]:
+                    - generic [ref=e988]:
+                      - button "Like this comment along with 6 other people" [ref=e990] [cursor=pointer]:
+                        - generic [ref=e994]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e998]: "6"
+                    - generic [ref=e999]:
+                      - button "Dislike this comment" [ref=e1001] [cursor=pointer]:
+                        - generic [ref=e1005]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e1010]:
+                      - generic [ref=e1011]:
+                        - button "Heart" [disabled]:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                      - tooltip "tooltip"
+                    - button "Reply" [ref=e1014] [cursor=pointer]:
+                      - generic [ref=e1015]: Reply
+              - generic [ref=e1019]:
+                - generic [ref=e1023]:
+                  - button "@archangebanzouzi1014" [ref=e1025] [cursor=pointer]
+                  - generic [ref=e1029]:
+                    - generic [ref=e1031]:
+                      - heading "@archangebanzouzi1014" [level=3] [ref=e1032]:
+                        - link "@archangebanzouzi1014" [ref=e1033] [cursor=pointer]:
+                          - /url: /@archangebanzouzi1014
+                      - link "2 weeks ago" [ref=e1035] [cursor=pointer]:
+                        - /url: /watch?v=KJSSvOY1UOk&lc=UgyKTgKhGnbH8Pw85FR4AaABAg&pp=0gcJCSIANpG00pGi
+                    - generic [ref=e1038]: Every time I watch your videos, I become more structured. Thank you so much!
+                    - generic [ref=e1040]:
+                      - generic [ref=e1041]:
+                        - button "Like this comment along with 25 other people" [ref=e1043] [cursor=pointer]:
+                          - generic [ref=e1047]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e1051]: "25"
+                      - generic [ref=e1052]:
+                        - button "Dislike this comment" [ref=e1054] [cursor=pointer]:
+                          - generic [ref=e1058]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e1063]:
+                        - generic [ref=e1064]:
+                          - button "Heart" [disabled]:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e1067] [cursor=pointer]:
+                        - generic [ref=e1068]: Reply
+                - button "1 reply" [ref=e1082] [cursor=pointer]:
+                  - generic [ref=e1083]: 1 reply
+                  - generic [ref=e1087]:
+                    - img
+              - generic [ref=e1092]:
+                - generic [ref=e1096]:
+                  - button "@Cooper1" [ref=e1098] [cursor=pointer]
+                  - generic [ref=e1102]:
+                    - generic [ref=e1104]:
+                      - heading "@Cooper1" [level=3] [ref=e1105]:
+                        - link "@Cooper1" [ref=e1106] [cursor=pointer]:
+                          - /url: /@Cooper1
+                      - link "2 weeks ago" [ref=e1108] [cursor=pointer]:
+                        - /url: /watch?v=KJSSvOY1UOk&lc=UgwvxUF04iJONBCFfq14AaABAg
+                    - generic [ref=e1111]: Cool. Using this advice, I just created a new video called, “how to build wealth so fast it feels like cheating”
+                    - generic [ref=e1113]:
+                      - generic [ref=e1114]:
+                        - button "Like this comment along with 141 other people" [ref=e1116] [cursor=pointer]:
+                          - generic [ref=e1120]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e1124]: "141"
+                      - generic [ref=e1125]:
+                        - button "Dislike this comment" [ref=e1127] [cursor=pointer]:
+                          - generic [ref=e1131]:
+                            - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e1137] [cursor=pointer]:
+                        - generic [ref=e1138]: Reply
+                - button "4 replies" [ref=e1152] [cursor=pointer]:
+                  - generic [ref=e1153]: 4 replies
+                  - generic [ref=e1157]:
+                    - img
+              - generic [ref=e1166]:
+                - button "@KarlSkorger" [ref=e1168] [cursor=pointer]
+                - generic [ref=e1170]:
+                  - generic [ref=e1172]:
+                    - heading "@KarlSkorger" [level=3] [ref=e1173]:
+                      - link "@KarlSkorger" [ref=e1174] [cursor=pointer]:
+                        - /url: /@KarlSkorger
+                    - link "44 minutes ago" [ref=e1176] [cursor=pointer]:
+                      - /url: /watch?v=KJSSvOY1UOk&lc=UgzKkYzetZdg0PcInlR4AaABAg
+                  - generic [ref=e1180]: This is actually good content
+                  - generic [ref=e1183]:
+                    - generic [ref=e1184]:
+                      - button "Like this comment along with 1 other person" [ref=e1186] [cursor=pointer]:
+                        - generic [ref=e1190]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e1194]: "1"
+                    - generic [ref=e1195]:
+                      - button "Dislike this comment" [ref=e1197] [cursor=pointer]:
+                        - generic [ref=e1201]:
+                          - img
+                      - tooltip "tooltip"
+                    - button "Reply" [ref=e1207] [cursor=pointer]:
+                      - generic [ref=e1208]: Reply
+              - generic [ref=e1216]:
+                - button "@youarerich2711" [ref=e1218] [cursor=pointer]
+                - generic [ref=e1220]:
+                  - generic [ref=e1222]:
+                    - heading "@youarerich2711" [level=3] [ref=e1223]:
+                      - link "@youarerich2711" [ref=e1224] [cursor=pointer]:
+                        - /url: /@youarerich2711
+                    - link "1 day ago" [ref=e1226] [cursor=pointer]:
+                      - /url: /watch?v=KJSSvOY1UOk&lc=UgyLsCwbmo5_DpJuWbp4AaABAg
+                  - generic [ref=e1229]: Cool thanks for sharing.
+                  - generic [ref=e1231]:
+                    - generic [ref=e1232]:
+                      - button "Like this comment along with 0 other people" [ref=e1234] [cursor=pointer]:
+                        - generic [ref=e1238]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e1242]:
+                      - button "Dislike this comment" [ref=e1244] [cursor=pointer]:
+                        - generic [ref=e1248]:
+                          - img
+                      - tooltip "tooltip"
+                    - button "Reply" [ref=e1254] [cursor=pointer]:
+                      - generic [ref=e1255]: Reply
+              - generic [ref=e1263]:
+                - button "@shamsarif8010" [ref=e1265] [cursor=pointer]
+                - generic [ref=e1267]:
+                  - generic [ref=e1269]:
+                    - heading "@shamsarif8010" [level=3] [ref=e1270]:
+                      - link "@shamsarif8010" [ref=e1271] [cursor=pointer]:
+                        - /url: /@shamsarif8010
+                    - link "2 weeks ago" [ref=e1273] [cursor=pointer]:
+                      - /url: /watch?v=KJSSvOY1UOk&lc=UgwLlDBF5kqrU34eSDl4AaABAg
+                  - generic [ref=e1276]: your contents are gold
+                  - generic [ref=e1278]:
+                    - generic [ref=e1279]:
+                      - button "Like this comment along with 3 other people" [ref=e1281] [cursor=pointer]:
+                        - generic [ref=e1285]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e1289]: "3"
+                    - generic [ref=e1290]:
+                      - button "Dislike this comment" [ref=e1292] [cursor=pointer]:
+                        - generic [ref=e1296]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e1301]:
+                      - generic [ref=e1302]:
+                        - button "Heart" [disabled]:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                      - tooltip "tooltip"
+                    - button "Reply" [ref=e1305] [cursor=pointer]:
+                      - generic [ref=e1306]: Reply
+              - generic [ref=e1314]:
+                - button "@dhandanakasinu8420" [ref=e1316] [cursor=pointer]
+                - generic [ref=e1318]:
+                  - generic [ref=e1320]:
+                    - heading "@dhandanakasinu8420" [level=3] [ref=e1321]:
+                      - link "@dhandanakasinu8420" [ref=e1322] [cursor=pointer]:
+                        - /url: /@dhandanakasinu8420
+                    - link "2 weeks ago" [ref=e1324] [cursor=pointer]:
+                      - /url: /watch?v=KJSSvOY1UOk&lc=UgzNYMkki4tHqJ9aYWR4AaABAg
+                  - generic [ref=e1327]: Big help
+                  - generic [ref=e1329]:
+                    - generic [ref=e1330]:
+                      - button "Like this comment along with 2 other people" [ref=e1332] [cursor=pointer]:
+                        - generic [ref=e1336]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e1340]: "2"
+                    - generic [ref=e1341]:
+                      - button "Dislike this comment" [ref=e1343] [cursor=pointer]:
+                        - generic [ref=e1347]:
+                          - img
+                      - tooltip "tooltip"
+                    - button "Reply" [ref=e1353] [cursor=pointer]:
+                      - generic [ref=e1354]: Reply
+              - generic [ref=e1362]:
+                - button "@pongracdus" [ref=e1364] [cursor=pointer]
+                - generic [ref=e1366]:
+                  - generic [ref=e1368]:
+                    - heading "@pongracdus" [level=3] [ref=e1369]:
+                      - link "@pongracdus" [ref=e1370] [cursor=pointer]:
+                        - /url: /@pongracdus
+                    - link "2 days ago" [ref=e1372] [cursor=pointer]:
+                      - /url: /watch?v=KJSSvOY1UOk&lc=Ugx4yaBc3jL_vP02TgV4AaABAg
+                  - generic [ref=e1375]: Valuable content, thank you and congrats!
+                  - generic [ref=e1377]:
+                    - generic [ref=e1378]:
+                      - button "Like this comment along with 0 other people" [ref=e1380] [cursor=pointer]:
+                        - generic [ref=e1384]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e1388]:
+                      - button "Dislike this comment" [ref=e1390] [cursor=pointer]:
+                        - generic [ref=e1394]:
+                          - img
+                      - tooltip "tooltip"
+                    - button "Reply" [ref=e1400] [cursor=pointer]:
+                      - generic [ref=e1401]: Reply
+              - generic [ref=e1405]:
+                - generic [ref=e1409]:
+                  - button "@songsan807" [ref=e1411] [cursor=pointer]
+                  - generic [ref=e1415]:
+                    - generic [ref=e1417]:
+                      - heading "@songsan807" [level=3] [ref=e1418]:
+                        - link "@songsan807" [ref=e1419] [cursor=pointer]:
+                          - /url: /@songsan807
+                      - link "2 weeks ago" [ref=e1421] [cursor=pointer]:
+                        - /url: /watch?v=KJSSvOY1UOk&lc=UgyHkzhrZPeytgp7fUh4AaABAg
+                    - generic [ref=e1425]:
+                      - text: Steve Jobs was credited that "good artist copies, but great artists steals". I don't copy people anymore
+                      - text: .
+                    - generic [ref=e1428]:
+                      - generic [ref=e1429]:
+                        - button "Like this comment along with 17 other people" [ref=e1431] [cursor=pointer]:
+                          - generic [ref=e1435]:
+                            - img
+                        - tooltip "tooltip"
+                      - generic [ref=e1439]: "17"
+                      - generic [ref=e1440]:
+                        - button "Dislike this comment" [ref=e1442] [cursor=pointer]:
+                          - generic [ref=e1446]:
+                            - img
+                        - tooltip "tooltip"
+                      - button "Reply" [ref=e1452] [cursor=pointer]:
+                        - generic [ref=e1453]: Reply
+                - button "2 replies" [ref=e1467] [cursor=pointer]:
+                  - generic [ref=e1468]: 2 replies
+                  - generic [ref=e1472]:
+                    - img
+              - generic [ref=e1481]:
+                - button "@AnaBuckeye" [ref=e1483] [cursor=pointer]
+                - generic [ref=e1485]:
+                  - generic [ref=e1487]:
+                    - heading "@AnaBuckeye" [level=3] [ref=e1488]:
+                      - link "@AnaBuckeye" [ref=e1489] [cursor=pointer]:
+                        - /url: /@AnaBuckeye
+                    - link "3 weeks ago" [ref=e1491] [cursor=pointer]:
+                      - /url: /watch?v=KJSSvOY1UOk&lc=UgyQCMtXwxv1rCGGoSp4AaABAg&pp=0gcJCSIANpG00pGi
+                  - generic [ref=e1494]: So excited for this episode!
+                  - generic [ref=e1496]:
+                    - generic [ref=e1497]:
+                      - button "Like this comment along with 1 other person" [ref=e1499] [cursor=pointer]:
+                        - generic [ref=e1503]:
+                          - img
+                      - tooltip "tooltip"
+                    - generic [ref=e1507]: "1"
+                    - generic [ref=e1508]:
+                      - button "Dislike this comment" [ref=e1510] [cursor=pointer]:
+                        - generic [ref=e1514]:
+                          - img
+                      - tooltip "tooltip"
+                    - button "Reply" [ref=e1520] [cursor=pointer]:
+                      - generic [ref=e1521]: Reply
+      - generic [ref=e1590]:
+        - generic [ref=e1592] [cursor=pointer]:
+          - link [ref=e1593]:
+            - /url: /watch?v=Pd3HYjpmks4
+            - generic [ref=e1600]: 12:35
+          - generic [ref=e1602]:
+            - generic [ref=e1603]:
+              - heading "How To Hit Financial Freedom SO Fast It’s Almost Unfair" [level=3] [ref=e1604]:
+                - link "How To Hit Financial Freedom SO Fast It’s Almost Unfair 12 minutes, 35 seconds" [ref=e1605]:
+                  - /url: /watch?v=Pd3HYjpmks4
+                  - text: How To Hit Financial Freedom SO Fast It’s Almost Unfair
+              - generic [ref=e1607]:
+                - group [ref=e1608]:
+                  - generic [ref=e1609]: LITTLE BIT BETTER
+                - group [ref=e1610]:
+                  - generic [ref=e1611]: 319K views
+                  - generic [ref=e1612]: •
+                  - generic "3 months ago" [ref=e1613]
+            - button "More actions" [ref=e1616]:
+              - generic [ref=e1620]:
+                - img
+        - generic [ref=e1625] [cursor=pointer]:
+          - link [ref=e1626]:
+            - /url: /watch?v=C8KULYii7NY
+            - generic [ref=e1633]: 25:17
+          - generic [ref=e1635]:
+            - generic [ref=e1636]:
+              - heading "If you don't understand CASHFLOW, You don't understand Money" [level=3] [ref=e1637]:
+                - link "If you don't understand CASHFLOW, You don't understand Money 25 minutes" [ref=e1638]:
+                  - /url: /watch?v=C8KULYii7NY
+                  - text: If you don't understand CASHFLOW, You don't understand Money
+              - generic [ref=e1640]:
+                - group [ref=e1641]:
+                  - generic [ref=e1642]: LITTLE BIT BETTER
+                - group [ref=e1643]:
+                  - generic [ref=e1644]: 175K views
+                  - generic [ref=e1645]: •
+                  - generic "11 days ago" [ref=e1646]
+            - button "More actions" [ref=e1649]:
+              - generic [ref=e1653]:
+                - img
+        - generic [ref=e1658] [cursor=pointer]:
+          - link [ref=e1659]:
+            - /url: /watch?v=auvuMC4r_6E&pp=0gcJCT8LAYcqIYzv
+            - generic [ref=e1666]: 5:41
+          - generic [ref=e1668]:
+            - generic [ref=e1669]:
+              - heading "Before You Borrow Money, Watch This" [level=3] [ref=e1670]:
+                - link "Before You Borrow Money, Watch This 5 minutes, 41 seconds" [ref=e1671]:
+                  - /url: /watch?v=auvuMC4r_6E&pp=0gcJCT8LAYcqIYzv
+                  - text: Before You Borrow Money, Watch This
+              - generic [ref=e1673]:
+                - group [ref=e1674]:
+                  - generic [ref=e1675]: StoryLine
+                - group [ref=e1676]:
+                  - generic [ref=e1677]: 14 views
+                  - generic [ref=e1678]: •
+                  - generic "6 days ago" [ref=e1679]
+                - group [ref=e1680]:
+                  - generic [ref=e1684]: New
+            - button "More actions" [ref=e1687]:
+              - generic [ref=e1691]:
+                - img
+        - generic [ref=e1696] [cursor=pointer]:
+          - link [ref=e1697]:
+            - /url: /watch?v=Pfnq2ikwJSs&pp=ugUHEgVlbi1VUw%3D%3D
+            - generic [ref=e1704]: 24:25
+          - generic [ref=e1706]:
+            - generic [ref=e1707]:
+              - heading "How A True Workaholic Works" [level=3] [ref=e1708]:
+                - link "How A True Workaholic Works 24 minutes" [ref=e1709]:
+                  - /url: /watch?v=Pfnq2ikwJSs&pp=ugUHEgVlbi1VUw%3D%3D
+                  - text: How A True Workaholic Works
+              - generic [ref=e1711]:
+                - group [ref=e1712]:
+                  - generic [ref=e1713]: Nic Munoz
+                - group [ref=e1714]:
+                  - generic [ref=e1715]: 204K views
+                  - generic [ref=e1716]: •
+                  - generic "2 weeks ago" [ref=e1717]
+            - button "More actions" [ref=e1720]:
+              - generic [ref=e1724]:
+                - img
+        - generic [ref=e1729] [cursor=pointer]:
+          - link [ref=e1730]:
+            - /url: /watch?v=EonibwnAEME
+            - generic [ref=e1737]: 10:49
+          - generic [ref=e1739]:
+            - generic [ref=e1740]:
+              - heading "How to Catch Up In Life (Using Logic)" [level=3] [ref=e1741]:
+                - link "How to Catch Up In Life (Using Logic) 10 minutes, 49 seconds" [ref=e1742]:
+                  - /url: /watch?v=EonibwnAEME
+                  - text: How to Catch Up In Life (Using Logic)
+              - generic [ref=e1744]:
+                - group [ref=e1745]:
+                  - generic [ref=e1746]:
+                    - text: Alex Hormozi
+                    - img [ref=e1749]:
+                      - generic [ref=e1751]:
+                        - img
+                - group [ref=e1752]:
+                  - generic [ref=e1753]: 470K views
+                  - generic [ref=e1754]: •
+                  - generic "1 month ago" [ref=e1755]
+            - button "More actions" [ref=e1758]:
+              - generic [ref=e1762]:
+                - img
+        - generic [ref=e1767] [cursor=pointer]:
+          - link [ref=e1768]:
+            - /url: /watch?v=pkqpb3gSV44
+            - generic [ref=e1775]: 18:54
+          - generic [ref=e1777]:
+            - generic [ref=e1778]:
+              - heading "Your Vending Machines Generate $35M/Year. Nobody Knows.Your Life as a Stealth Cashflow King" [level=3] [ref=e1779]:
+                - link "Your Vending Machines Generate $35M/Year. Nobody Knows.Your Life as a Stealth Cashflow King 18 minutes" [ref=e1780]:
+                  - /url: /watch?v=pkqpb3gSV44
+                  - text: Your Vending Machines Generate $35M/Year. Nobody Knows.Your Life as a Stealth Cashflow King
+              - generic [ref=e1782]:
+                - group [ref=e1783]:
+                  - generic [ref=e1784]: Elliot Finance
+                - group [ref=e1785]:
+                  - generic [ref=e1786]: 18K views
+                  - generic [ref=e1787]: •
+                  - generic "13 days ago" [ref=e1788]
+            - button "More actions" [ref=e1791]:
+              - generic [ref=e1795]:
+                - img
+        - generic [ref=e1800] [cursor=pointer]:
+          - link [ref=e1801]:
+            - /url: /watch?v=zxVoCw3P1Gc&pp=ugUEEgJlbg%3D%3D
+            - generic [ref=e1808]: 19:12
+          - generic [ref=e1810]:
+            - generic [ref=e1811]:
+              - heading "Once You Learn Economics, You Can't Be MANIPULATED Anymore" [level=3] [ref=e1812]:
+                - link "Once You Learn Economics, You Can't Be MANIPULATED Anymore 19 minutes" [ref=e1813]:
+                  - /url: /watch?v=zxVoCw3P1Gc&pp=ugUEEgJlbg%3D%3D
+                  - text: Once You Learn Economics, You Can't Be MANIPULATED Anymore
+              - generic [ref=e1815]:
+                - group [ref=e1816]:
+                  - generic [ref=e1817]: LITTLE BIT BETTER
+                - group [ref=e1818]:
+                  - generic [ref=e1819]: 1.6M views
+                  - generic [ref=e1820]: •
+                  - generic "3 months ago" [ref=e1821]
+            - button "More actions" [ref=e1824]:
+              - generic [ref=e1828]:
+                - img
+        - generic [ref=e1833] [cursor=pointer]:
+          - link [ref=e1834]:
+            - /url: /watch?v=mnuOZcmoGD8
+            - generic [ref=e1841]: 21:12
+          - generic [ref=e1843]:
+            - generic [ref=e1844]:
+              - heading "Entire Map of Money in 21 Min." [level=3] [ref=e1845]:
+                - link "Entire Map of Money in 21 Min. 21 minutes" [ref=e1846]:
+                  - /url: /watch?v=mnuOZcmoGD8
+                  - text: Entire Map of Money in 21 Min.
+              - generic [ref=e1848]:
+                - group [ref=e1849]:
+                  - generic [ref=e1850]: LITTLE BIT BETTER
+                - group [ref=e1851]:
+                  - generic [ref=e1852]: 910K views
+                  - generic [ref=e1853]: •
+                  - generic "1 month ago" [ref=e1854]
+            - button "More actions" [ref=e1857]:
+              - generic [ref=e1861]:
+                - img
+        - generic [ref=e1866] [cursor=pointer]:
+          - link [ref=e1867]:
+            - /url: /watch?v=GWnEUUNtw3c
+            - generic [ref=e1874]: 25:28
+          - generic [ref=e1876]:
+            - generic [ref=e1877]:
+              - 'heading "How the Rich Play the Money Game: 25 WEALTH RULES" [level=3] [ref=e1878]':
+                - 'link "How the Rich Play the Money Game: 25 WEALTH RULES 25 minutes" [ref=e1879]':
+                  - /url: /watch?v=GWnEUUNtw3c
+                  - text: "How the Rich Play the Money Game: 25 WEALTH RULES"
+              - generic [ref=e1881]:
+                - group [ref=e1882]:
+                  - generic [ref=e1883]: LITTLE BIT BETTER
+                - group [ref=e1884]:
+                  - generic [ref=e1885]: 60K views
+                  - generic [ref=e1886]: •
+                  - generic "1 month ago" [ref=e1887]
+            - button "More actions" [ref=e1890]:
+              - generic [ref=e1894]:
+                - img
+        - generic [ref=e1899] [cursor=pointer]:
+          - link [ref=e1900]:
+            - /url: /watch?v=8EO7rLAGkXg
+            - generic [ref=e1907]: 26:26
+          - generic [ref=e1909]:
+            - generic [ref=e1910]:
+              - heading "This is Boring But It’ll Make You Insanely CONSISTENT in Anything You Do" [level=3] [ref=e1911]:
+                - link "This is Boring But It’ll Make You Insanely CONSISTENT in Anything You Do 26 minutes" [ref=e1912]:
+                  - /url: /watch?v=8EO7rLAGkXg
+                  - text: This is Boring But It’ll Make You Insanely CONSISTENT in Anything You Do
+              - generic [ref=e1914]:
+                - group [ref=e1915]:
+                  - generic [ref=e1916]: LITTLE BIT BETTER
+                - group [ref=e1917]:
+                  - generic [ref=e1918]: 78K views
+                  - generic [ref=e1919]: •
+                  - generic "5 months ago" [ref=e1920]
+            - button "More actions" [ref=e1923]:
+              - generic [ref=e1927]:
+                - img
+        - generic [ref=e1932] [cursor=pointer]:
+          - link [ref=e1933]:
+            - /url: /watch?v=VeU6gScy92s&pp=ugUEEgJlbg%3D%3D
+            - generic [ref=e1940]: 17:42
+          - generic [ref=e1942]:
+            - generic [ref=e1943]:
+              - heading "How To Become Dangerously Self-Educated (with AI)" [level=3] [ref=e1944]:
+                - link "How To Become Dangerously Self-Educated (with AI) 17 minutes" [ref=e1945]:
+                  - /url: /watch?v=VeU6gScy92s&pp=ugUEEgJlbg%3D%3D
+                  - text: How To Become Dangerously Self-Educated (with AI)
+              - generic [ref=e1947]:
+                - group [ref=e1948]:
+                  - generic [ref=e1949]: Sandeep Swadia | theMITmonk
+                - group [ref=e1950]:
+                  - generic [ref=e1951]: 724K views
+                  - generic [ref=e1952]: •
+                  - generic "2 weeks ago" [ref=e1953]
+            - button "More actions" [ref=e1956]:
+              - generic [ref=e1960]:
+                - img
+        - generic [ref=e1965] [cursor=pointer]:
+          - link [ref=e1966]:
+            - /url: /watch?v=52qIFWLuFsE
+            - generic [ref=e1973]: 15:56
+          - generic [ref=e1975]:
+            - generic [ref=e1976]:
+              - heading "Baba culture must stop..." [level=3] [ref=e1977]:
+                - link "Baba culture must stop... 15 minutes" [ref=e1978]:
+                  - /url: /watch?v=52qIFWLuFsE
+                  - text: Baba culture must stop...
+              - generic [ref=e1980]:
+                - group [ref=e1981]:
+                  - generic [ref=e1982]:
+                    - text: Open Letter
+                    - img [ref=e1985]:
+                      - generic [ref=e1987]:
+                        - img
+                - group [ref=e1988]:
+                  - generic [ref=e1989]: 459K views
+                  - generic [ref=e1990]: •
+                  - generic "1 day ago" [ref=e1991]
+                - group [ref=e1992]:
+                  - generic [ref=e1996]: New
+            - button "More actions" [ref=e1999]:
+              - generic [ref=e2003]:
+                - img
+        - generic [ref=e2008] [cursor=pointer]:
+          - link [ref=e2009]:
+            - /url: /watch?v=KT0fxCW56UU&pp=ugUEEgJlbtIHCQk_CwGHKiGM7w%3D%3D
+            - generic [ref=e2016]: 12:19
+          - generic [ref=e2018]:
+            - generic [ref=e2019]:
+              - heading "You Escaped the Rat Race. Nobody Noticed." [level=3] [ref=e2020]:
+                - link "You Escaped the Rat Race. Nobody Noticed. 12 minutes, 19 seconds" [ref=e2021]:
+                  - /url: /watch?v=KT0fxCW56UU&pp=ugUEEgJlbtIHCQk_CwGHKiGM7w%3D%3D
+                  - text: You Escaped the Rat Race. Nobody Noticed.
+              - generic [ref=e2023]:
+                - group [ref=e2024]:
+                  - generic [ref=e2025]: Dark Ledger
+                - group [ref=e2026]:
+                  - generic [ref=e2027]: 104K views
+                  - generic [ref=e2028]: •
+                  - generic "2 weeks ago" [ref=e2029]
+            - button "More actions" [ref=e2032]:
+              - generic [ref=e2036]:
+                - img
+        - generic [ref=e2041] [cursor=pointer]:
+          - link [ref=e2042]:
+            - /url: /watch?v=90svIa07ilQ
+            - generic [ref=e2049]: 15:05
+          - generic [ref=e2051]:
+            - generic [ref=e2052]:
+              - heading "Every Negotiation Tactic & How To Use Them Yourself, Explained" [level=3] [ref=e2053]:
+                - link "Every Negotiation Tactic & How To Use Them Yourself, Explained 15 minutes" [ref=e2054]:
+                  - /url: /watch?v=90svIa07ilQ
+                  - text: Every Negotiation Tactic & How To Use Them Yourself, Explained
+              - generic [ref=e2056]:
+                - group [ref=e2057]:
+                  - generic [ref=e2058]:
+                    - text: EverythingProfessor
+                    - img [ref=e2061]:
+                      - generic [ref=e2063]:
+                        - img
+                - group [ref=e2064]:
+                  - generic [ref=e2065]: 523K views
+                  - generic [ref=e2066]: •
+                  - generic "3 months ago" [ref=e2067]
+            - button "More actions" [ref=e2070]:
+              - generic [ref=e2074]:
+                - img
+        - generic [ref=e2079] [cursor=pointer]:
+          - link [ref=e2080]:
+            - /url: /watch?v=w8t7_M6Yt1w
+            - generic [ref=e2087]: 27:47
+          - generic [ref=e2089]:
+            - generic [ref=e2090]:
+              - heading "Build a Business That Runs WITHOUT You & Gives You FINANCIAL FREEDOM" [level=3] [ref=e2091]:
+                - link "Build a Business That Runs WITHOUT You & Gives You FINANCIAL FREEDOM 27 minutes" [ref=e2092]:
+                  - /url: /watch?v=w8t7_M6Yt1w
+                  - text: Build a Business That Runs WITHOUT You & Gives You FINANCIAL FREEDOM
+              - generic [ref=e2094]:
+                - group [ref=e2095]:
+                  - generic [ref=e2096]: LITTLE BIT BETTER
+                - group [ref=e2097]:
+                  - generic [ref=e2098]: 1.7M views
+                  - generic [ref=e2099]: •
+                  - generic "2 years ago" [ref=e2100]
+            - button "More actions" [ref=e2103]:
+              - generic [ref=e2107]:
+                - img
+        - generic [ref=e2112] [cursor=pointer]:
+          - link [ref=e2113]:
+            - /url: /watch?v=oh2Z6aZphLE&pp=ugUEEgJlbg%3D%3D
+            - generic [ref=e2120]: 36:30
+          - generic [ref=e2122]:
+            - generic [ref=e2123]:
+              - heading "15 Skills That Will Be Worth Twice as Much by 2030" [level=3] [ref=e2124]:
+                - link "15 Skills That Will Be Worth Twice as Much by 2030 36 minutes" [ref=e2125]:
+                  - /url: /watch?v=oh2Z6aZphLE&pp=ugUEEgJlbg%3D%3D
+                  - text: 15 Skills That Will Be Worth Twice as Much by 2030
+              - generic [ref=e2127]:
+                - group [ref=e2128]:
+                  - generic [ref=e2129]:
+                    - text: Alux.com
+                    - img [ref=e2132]:
+                      - generic [ref=e2134]:
+                        - img
+                - group [ref=e2135]:
+                  - generic [ref=e2136]: 167K views
+                  - generic [ref=e2137]: •
+                  - generic "2 weeks ago" [ref=e2138]
+            - button "More actions" [ref=e2141]:
+              - generic [ref=e2145]:
+                - img
+        - generic [ref=e2150] [cursor=pointer]:
+          - link [ref=e2151]:
+            - /url: /watch?v=QYAnJ_QyCQg&pp=ugUEEgJlbg%3D%3D
+            - generic [ref=e2158]: 12:54
+          - generic [ref=e2160]:
+            - generic [ref=e2161]:
+              - heading "The pain of becoming yourself" [level=3] [ref=e2162]:
+                - link "The pain of becoming yourself 12 minutes, 54 seconds" [ref=e2163]:
+                  - /url: /watch?v=QYAnJ_QyCQg&pp=ugUEEgJlbg%3D%3D
+                  - text: The pain of becoming yourself
+              - generic [ref=e2165]:
+                - group [ref=e2166]:
+                  - generic [ref=e2167]: Alastair
+                - group [ref=e2168]:
+                  - generic [ref=e2169]: 5.6M views
+                  - generic [ref=e2170]: •
+                  - generic "6 months ago" [ref=e2171]
+            - button "More actions" [ref=e2174]:
+              - generic [ref=e2178]:
+                - img
+        - generic [ref=e2183] [cursor=pointer]:
+          - link [ref=e2184]:
+            - /url: /watch?v=ZkA3QGufOao&pp=ugUHEgVlbi1VUw%3D%3D
+            - generic [ref=e2191]: 17:01
+          - generic [ref=e2193]:
+            - generic [ref=e2194]:
+              - heading "You Watched These Movies... But Missed The MONEY Lessons" [level=3] [ref=e2195]:
+                - link "You Watched These Movies... But Missed The MONEY Lessons 17 minutes" [ref=e2196]:
+                  - /url: /watch?v=ZkA3QGufOao&pp=ugUHEgVlbi1VUw%3D%3D
+                  - text: You Watched These Movies... But Missed The MONEY Lessons
+              - generic [ref=e2198]:
+                - group [ref=e2199]:
+                  - generic [ref=e2200]: how really?
+                - group [ref=e2201]:
+                  - generic [ref=e2202]: 120K views
+                  - generic [ref=e2203]: •
+                  - generic "3 weeks ago" [ref=e2204]
+            - button "More actions" [ref=e2207]:
+              - generic [ref=e2211]:
+                - img
+        - generic [ref=e2216] [cursor=pointer]:
+          - link [ref=e2217]:
+            - /url: /watch?v=r3TqW0LOtuM&pp=ugUEEgJlbg%3D%3D
+            - generic [ref=e2224]: 19:14
+          - generic [ref=e2226]:
+            - generic [ref=e2227]:
+              - heading "what happens to Corporate Employees After 45? | Indian IT jobs after 45" [level=3] [ref=e2228]:
+                - link "what happens to Corporate Employees After 45? | Indian IT jobs after 45 19 minutes" [ref=e2229]:
+                  - /url: /watch?v=r3TqW0LOtuM&pp=ugUEEgJlbg%3D%3D
+                  - text: what happens to Corporate Employees After 45? | Indian IT jobs after 45
+              - generic [ref=e2231]:
+                - group [ref=e2232]:
+                  - generic [ref=e2233]:
+                    - text: The Corporate Diaries
+                    - img [ref=e2236]:
+                      - generic [ref=e2238]:
+                        - img
+                - group [ref=e2239]:
+                  - generic [ref=e2240]: 350K views
+                  - generic [ref=e2241]: •
+                  - generic "9 days ago" [ref=e2242]
+            - button "More actions" [ref=e2245]:
+              - generic [ref=e2249]:
+                - img
+        - generic [ref=e2254] [cursor=pointer]:
+          - link [ref=e2255]:
+            - /url: /watch?v=T-ZYI06QD78
+            - generic [ref=e2262]: 26:47
+          - generic [ref=e2264]:
+            - generic [ref=e2265]:
+              - heading "The 3 Games You Only Need To Play To Get Rich" [level=3] [ref=e2266]:
+                - link "The 3 Games You Only Need To Play To Get Rich 26 minutes" [ref=e2267]:
+                  - /url: /watch?v=T-ZYI06QD78
+                  - text: The 3 Games You Only Need To Play To Get Rich
+              - generic [ref=e2269]:
+                - group [ref=e2270]:
+                  - generic [ref=e2271]: Prof Jiang Simplified
+                - group [ref=e2272]:
+                  - generic [ref=e2273]: 462K views
+                  - generic [ref=e2274]: •
+                  - generic "4 months ago" [ref=e2275]
+            - button "More actions" [ref=e2278]:
+              - generic [ref=e2282]:
+                - img

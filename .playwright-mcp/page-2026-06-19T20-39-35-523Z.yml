@@ -1,0 +1,153 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - img "HyperFrames" [ref=e5] [cursor=pointer]
+    - generic [ref=e6]:
+      - link "URL → Video" [ref=e7] [cursor=pointer]:
+        - /url: /website
+        - text: URL → Video
+      - button "Switch to light theme" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+      - link "Create frame.md" [ref=e16] [cursor=pointer]:
+        - /url: /design
+      - button "New video" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: New video
+      - link "Log in" [ref=e21] [cursor=pointer]:
+        - /url: /api/auth/login?return_to=/
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - heading "Community Playground" [level=1] [ref=e27]
+          - link "Star us" [ref=e28] [cursor=pointer]:
+            - /url: https://github.com/heygen-com/hyperframes
+            - img [ref=e29]
+            - text: Star us
+          - link "Prompt guide" [ref=e31] [cursor=pointer]:
+            - /url: https://hyperframes.heygen.com/guides/prompting
+            - img [ref=e32]
+            - text: Prompt guide
+          - link "Contribute" [ref=e35] [cursor=pointer]:
+            - /url: https://hyperframes.heygen.com/contributing/catalog
+            - img [ref=e36]
+            - text: Contribute
+        - generic [ref=e38]:
+          - img "HyperFrames" [ref=e39]
+          - generic [ref=e40]: Made with HyperFrames
+      - generic [ref=e42]:
+        - button "Examples" [ref=e43] [cursor=pointer]
+        - button "Catalog86" [ref=e44] [cursor=pointer]
+        - button "Community" [ref=e45] [cursor=pointer]
+      - generic [ref=e46]:
+        - button "New video Generate with an AI agent" [ref=e47] [cursor=pointer]:
+          - generic [ref=e48]:
+            - img [ref=e50]
+            - generic [ref=e52]: New video
+          - paragraph [ref=e54]: Generate with an AI agent
+        - button "hermes-hyperframes 41s · 1920×1080 Remix" [ref=e55] [cursor=pointer]:
+          - iframe [ref=e58]:
+            
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - paragraph [ref=e64]: hermes-hyperframes
+              - paragraph [ref=e65]: 41s · 1920×1080
+            - generic [ref=e66]: Remix
+        - button "ycombinator 15s · 1920×1080 Remix" [ref=e67] [cursor=pointer]:
+          - iframe [ref=e70]:
+            
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - paragraph [ref=e76]: ycombinator
+              - paragraph [ref=e77]: 15s · 1920×1080
+            - generic [ref=e78]: Remix
+        - button "Notion Showcase 15s · 1920×1080 Remix" [ref=e79] [cursor=pointer]:
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - paragraph [ref=e85]: Notion Showcase
+              - paragraph [ref=e86]: 15s · 1920×1080
+            - generic [ref=e87]: Remix
+        - button "blue-sweater-intro-video 12s · 1920×1080 Remix" [ref=e88] [cursor=pointer]:
+          - iframe [ref=e91]:
+            
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - paragraph [ref=e97]: blue-sweater-intro-video
+              - paragraph [ref=e98]: 12s · 1920×1080
+            - generic [ref=e99]: Remix
+        - button "Dribbble Showcase 20s · 1920×1080 Remix" [ref=e100] [cursor=pointer]:
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - paragraph [ref=e106]: Dribbble Showcase
+              - paragraph [ref=e107]: 20s · 1920×1080
+            - generic [ref=e108]: Remix
+        - button "may-financial-recap-cathedral-light 80s · 1920×1080 Remix" [ref=e109] [cursor=pointer]:
+          - iframe [ref=e112]:
+            
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - paragraph [ref=e118]: may-financial-recap-cathedral-light
+              - paragraph [ref=e119]: 80s · 1920×1080
+            - generic [ref=e120]: Remix
+        - button "Stripe Showcase 25s · 1920×1080 Remix" [ref=e121] [cursor=pointer]:
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - paragraph [ref=e127]: Stripe Showcase
+              - paragraph [ref=e128]: 25s · 1920×1080
+            - generic [ref=e129]: Remix
+        - button "Raycast Showcase 15s · 1920×1080 Remix" [ref=e130] [cursor=pointer]:
+          - generic [ref=e134]:
+            - generic [ref=e135]:
+              - paragraph [ref=e136]: Raycast Showcase
+              - paragraph [ref=e137]: 15s · 1920×1080
+            - generic [ref=e138]: Remix
+        - button "Fitness App Showcase 5.5s · 1920×1080 Remix" [ref=e139] [cursor=pointer]:
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - paragraph [ref=e145]: Fitness App Showcase
+              - paragraph [ref=e146]: 5.5s · 1920×1080
+            - generic [ref=e147]: Remix
+        - button "Spotify Bento 26.5s · 1920×1080 Remix" [ref=e148] [cursor=pointer]:
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - paragraph [ref=e154]: Spotify Bento
+              - paragraph [ref=e155]: 26.5s · 1920×1080
+            - generic [ref=e156]: Remix
+        - button "UI 3D Reveal 13s · 1920×1080 Remix" [ref=e157] [cursor=pointer]:
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - paragraph [ref=e163]: UI 3D Reveal
+              - paragraph [ref=e164]: 13s · 1920×1080
+            - generic [ref=e165]: Remix
+        - button "agentbook-launch-video 24s · 1920×1080 Remix" [ref=e166] [cursor=pointer]:
+          - iframe [ref=e169]:
+            
+          - generic [ref=e173]:
+            - generic [ref=e174]:
+              - paragraph [ref=e175]: agentbook-launch-video
+              - paragraph [ref=e176]: 24s · 1920×1080
+            - generic [ref=e177]: Remix
+        - button "California News 16.5s · 1080×1920 Remix" [ref=e178] [cursor=pointer]:
+          - iframe [ref=e181]:
+            
+          - generic [ref=e185]:
+            - generic [ref=e186]:
+              - paragraph [ref=e187]: California News
+              - paragraph [ref=e188]: 16.5s · 1080×1920
+            - generic [ref=e189]: Remix
+        - button "avatar-explainer 16s · 1920×1080 Remix" [ref=e190] [cursor=pointer]:
+          - iframe [ref=e193]:
+            
+          - generic [ref=e197]:
+            - generic [ref=e198]:
+              - paragraph [ref=e199]: avatar-explainer
+              - paragraph [ref=e200]: 16s · 1920×1080
+            - generic [ref=e201]: Remix
+        - button "airbnb-reel 31.6s · 1920×1080 Remix" [ref=e202] [cursor=pointer]:
+          - iframe [ref=e205]:
+            
+          - generic [ref=e209]:
+            - generic [ref=e210]:
+              - paragraph [ref=e211]: airbnb-reel
+              - paragraph [ref=e212]: 31.6s · 1920×1080
+            - generic [ref=e213]: Remix
+  - alert [ref=e214]

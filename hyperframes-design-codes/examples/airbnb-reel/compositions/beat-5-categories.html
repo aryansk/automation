@@ -1,0 +1,189 @@
+<template id="beat-5-categories-template">
+  <div data-composition-id="beat-5-categories" data-width="1920" data-height="1080" data-start="0" data-duration="2.29">
+    <style>
+      @font-face {
+        font-family: "Airbnb Cereal";
+        src: url("../capture/assets/fonts/AirbnbCerealVF_W_Wght.8816d9e5c3b6a860636193e36b6ac4e4.woff2") format("woff2-variations");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: block;
+      }
+
+      [data-composition-id="beat-5-categories"] {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #F7F6F2;
+        overflow: hidden;
+        font-family: "Airbnb Cereal", -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      [data-composition-id="beat-5-categories"] .scene-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      [data-composition-id="beat-5-categories"] .stage {
+        position: relative;
+        width: 720px;
+        height: 740px;
+      }
+
+      [data-composition-id="beat-5-categories"] .card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 720px;
+        height: 740px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+        will-change: transform, opacity;
+      }
+
+      [data-composition-id="beat-5-categories"] .card-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        will-change: transform;
+      }
+
+      [data-composition-id="beat-5-categories"] .card-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.55) 100%);
+        pointer-events: none;
+      }
+
+      [data-composition-id="beat-5-categories"] .card-text {
+        position: absolute;
+        left: 56px;
+        right: 56px;
+        bottom: 140px;
+        z-index: 2;
+      }
+
+      [data-composition-id="beat-5-categories"] .card-label {
+        font-size: 78px;
+        font-weight: 800;
+        color: #FFFFFF;
+        line-height: 1.0;
+        letter-spacing: -0.02em;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+        will-change: transform, opacity;
+      }
+
+      [data-composition-id="beat-5-categories"] .card-sublabel {
+        margin-top: 28px;
+        font-size: 22px;
+        font-weight: 500;
+        color: #FFFFFF;
+        opacity: 0.9;
+        letter-spacing: 0;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        will-change: transform, opacity;
+      }
+
+      [data-composition-id="beat-5-categories"] .card-underline {
+        margin-top: 18px;
+        width: 80px;
+        height: 4px;
+        background: #FF385C;
+        transform-origin: left center;
+        will-change: transform;
+      }
+    </style>
+
+    <div class="scene-content">
+      <div class="stage">
+        <div class="card card-1">
+          <img class="card-photo card-photo-1" src="../capture/assets/77d3e07a-4785-41b4-b0b3-a9d36b0e42d9.jpg" alt="Homes">
+          <div class="card-gradient"></div>
+          <div class="card-text">
+            <div class="card-label card-label-1">Homes</div>
+            <div class="card-sublabel card-sublabel-1">Stays for every kind of trip</div>
+            <div class="card-underline card-underline-1"></div>
+          </div>
+        </div>
+
+        <div class="card card-2">
+          <img class="card-photo card-photo-2" src="../capture/assets/108e069b-3e1c-4b90-86e1-f6a1cee70039.jpeg" alt="Experiences">
+          <div class="card-gradient"></div>
+          <div class="card-text">
+            <div class="card-label card-label-2">Experiences</div>
+            <div class="card-sublabel card-sublabel-2">Hosted, hands-on, local</div>
+            <div class="card-underline card-underline-2"></div>
+          </div>
+        </div>
+
+        <div class="card card-3">
+          <img class="card-photo card-photo-3" src="../capture/assets/53ac95c9-b0f7-4165-b51f-10c5c4a06189.png" alt="Hosts who care">
+          <div class="card-gradient"></div>
+          <div class="card-text">
+            <div class="card-label card-label-3">Hosts who care</div>
+            <div class="card-sublabel card-sublabel-3">Five-star service, real humans</div>
+            <div class="card-underline card-underline-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+
+        // Initial state: cards 2 and 3 offscreen right; card 1 starts offscreen right too
+        tl.set(".card-1", { x: 600, opacity: 1 }, 0);
+        tl.set(".card-2", { x: 600, opacity: 1 }, 0);
+        tl.set(".card-3", { x: 600, opacity: 1 }, 0);
+
+        tl.set(".card-label-1", { opacity: 0, y: 20 }, 0);
+        tl.set(".card-sublabel-1", { opacity: 0, y: 14 }, 0);
+        tl.set(".card-underline-1", { scaleX: 0 }, 0);
+
+        tl.set(".card-label-2", { opacity: 0, y: 20 }, 0);
+        tl.set(".card-sublabel-2", { opacity: 0, y: 14 }, 0);
+        tl.set(".card-underline-2", { scaleX: 0 }, 0);
+
+        tl.set(".card-label-3", { opacity: 0, y: 20 }, 0);
+        tl.set(".card-sublabel-3", { opacity: 0, y: 14 }, 0);
+        tl.set(".card-underline-3", { scaleX: 0 }, 0);
+
+        // ===== CARD 1 "Homes" (narration t=0.29s): enter at 0.10, exit at 1.10 =====
+        tl.to(".card-1", { x: 0, duration: 0.40, ease: "power3.out" }, 0.10);
+        tl.to(".card-label-1", { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }, 0.28);
+        tl.to(".card-sublabel-1", { opacity: 1, y: 0, duration: 0.22, ease: "power2.out" }, 0.38);
+        tl.to(".card-underline-1", { scaleX: 1, duration: 0.35, ease: "power2.out" }, 0.43);
+        tl.fromTo(".card-photo-1", { scale: 1 }, { scale: 1.04, duration: 1.05, ease: "none" }, 0.10);
+        // Exit before "Experiences" lands (t=0.96)
+        tl.to(".card-1", { x: -600, opacity: 0, duration: 0.35, ease: "power3.in" }, 1.10);
+
+        // ===== CARD 2 "Experiences" (narration t=0.96s): enter at 0.95, exit at 2.20 =====
+        tl.to(".card-2", { x: 0, duration: 0.40, ease: "power3.out" }, 0.95);
+        tl.to(".card-label-2", { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }, 1.13);
+        tl.to(".card-sublabel-2", { opacity: 1, y: 0, duration: 0.22, ease: "power2.out" }, 1.23);
+        tl.to(".card-underline-2", { scaleX: 1, duration: 0.35, ease: "power2.out" }, 1.28);
+        tl.fromTo(".card-photo-2", { scale: 1 }, { scale: 1.04, duration: 1.30, ease: "none" }, 0.95);
+        // Exit before "Hosts" lands (t=2.24)
+        tl.to(".card-2", { x: -600, opacity: 0, duration: 0.35, ease: "power3.in" }, 2.10);
+
+        // ===== CARD 3 "Hosts who care" (narration t=2.24s): enter at 2.20, NO EXIT =====
+        tl.to(".card-3", { x: 0, duration: 0.40, ease: "power3.out" }, 2.20);
+        tl.to(".card-label-3", { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }, 2.38);
+        tl.to(".card-sublabel-3", { opacity: 1, y: 0, duration: 0.22, ease: "power2.out" }, 2.48);
+        tl.to(".card-underline-3", { scaleX: 1, duration: 0.35, ease: "power2.out" }, 2.53);
+        tl.fromTo(".card-photo-3", { scale: 1 }, { scale: 1.04, duration: 1.50, ease: "none" }, 2.20);
+
+        window.__timelines["beat-5-categories"] = tl;
+      })();
+    </script>
+  </div>
+</template>

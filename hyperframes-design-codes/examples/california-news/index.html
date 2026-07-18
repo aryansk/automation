@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080, height=1920" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0d0d0d;
+    }
+
+    /* ── Background layer ── */
+    #bg-layer { position: absolute; width: 100%; height: 100%; }
+    #glow-ambient {
+      position: absolute;
+      width: 860px; height: 860px;
+      left: 110px; top: 530px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,32,26,0.18) 0%, rgba(232,32,26,0.04) 55%, transparent 75%);
+      pointer-events: none;
+    }
+    #glow-burst {
+      position: absolute;
+      width: 600px; height: 600px;
+      left: 240px; top: 660px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,32,26,0.55) 0%, transparent 65%);
+      opacity: 0;
+      pointer-events: none;
+    }
+    #bg-watermark {
+      position: absolute;
+      width: 1080px; height: auto;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.15;
+      filter: blur(15px);
+      pointer-events: none;
+    }
+    #hairline-top {
+      position: absolute;
+      top: 96px; left: 60px; right: 60px;
+      height: 2px;
+      background: rgba(232,32,26,0.35);
+      transform-origin: left center;
+    }
+    #hairline-bottom {
+      position: absolute;
+      bottom: 96px; left: 60px; right: 60px;
+      height: 2px;
+      background: rgba(232,32,26,0.35);
+      transform-origin: left center;
+    }
+    .corner-mark { position: absolute; width: 28px; height: 28px; opacity: 0.22; }
+    .corner-mark::before, .corner-mark::after { content: ''; position: absolute; background: #e8201a; }
+    .corner-mark::before { width: 2px; height: 28px; left: 13px; top: 0; }
+    .corner-mark::after  { width: 28px; height: 2px; left: 0; top: 13px; }
+    #cm-tl { top: 80px; left: 44px; }
+    #cm-tr { top: 80px; right: 44px; }
+    #cm-bl { bottom: 80px; left: 44px; }
+    #cm-br { bottom: 80px; right: 44px; }
+
+    /* ── App card ── */
+    #app-card-wrap {
+      position: absolute;
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #app-card {
+      width: 880px;
+      background: #1c1c1e;
+      border-radius: 32px;
+      border: 1.5px solid #2e2e32;
+      box-shadow: 0 48px 140px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,255,255,0.04);
+      padding: 44px 44px 36px;
+    }
+    #card-top-row { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 28px; }
+    #app-icon {
+      width: 108px; height: 108px; flex-shrink: 0;
+      filter: drop-shadow(0 8px 28px rgba(232,32,26,0.5));
+    }
+    #app-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    #card-info { flex: 1; padding-top: 4px; }
+    #app-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700; font-size: 36px; color: #f5f0eb;
+      letter-spacing: -0.02em; margin-bottom: 8px;
+    }
+    #app-subtitle {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 400; font-size: 22px; color: #8e8e93;
+      letter-spacing: -0.01em; margin-bottom: 16px;
+    }
+    #app-stars { display: flex; align-items: center; gap: 8px; }
+    #stars-glyphs { font-size: 26px; color: #f5c518; letter-spacing: 2px; }
+    #stars-count {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px; color: #9a9aa0; font-weight: 400;
+    }
+    #card-bottom-row { display: flex; align-items: flex-end; justify-content: space-between; }
+    #card-meta {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px; color: #9a9aa0; font-weight: 400; line-height: 1.4;
+    }
+    #get-btn {
+      background: #e8201a; border: none; border-radius: 22px;
+      padding: 14px 36px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #btn-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700; font-size: 22px; color: #fff; letter-spacing: 0.04em;
+    }
+    #iap-note {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px; color: #9a9aa0;
+      text-align: right; margin-top: 8px; letter-spacing: 0.01em;
+    }
+
+    /* ── Burst news cards (polaroid) ── */
+    .news-card {
+      position: absolute;
+      width: 490px;
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 10px 10px 64px;
+      box-shadow:
+        0 32px 80px rgba(0,0,0,0.78),
+        0 4px 20px rgba(0,0,0,0.45),
+        inset 0 0 0 1px rgba(0,0,0,0.05);
+    }
+    .news-card img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    #nc1 { left: 40px;  top: 340px; }
+    #nc2 { left: 550px; top: 340px; }
+    #nc3 { left: 40px;  top: 1200px; }
+    #nc4 { left: 550px; top: 1200px; }
+
+    /* ── Scroll section: full-width uncropped feed ── */
+    #scroll-wrap {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1080px; height: 1920px;
+      overflow: hidden;
+      z-index: 10;
+    }
+    #scroll-track {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1080px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .scroll-img { width: 1080px; height: auto; display: block; flex-shrink: 0; }
+
+    /* ── Fade overlay ── */
+    #fade-overlay {
+      position: absolute;
+      width: 1080px; height: 1920px;
+      top: 0; left: 0;
+      pointer-events: none;
+      z-index: 30;
+    }
+    #fade-grad {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 1080px; height: 1300px;
+      background: linear-gradient(to top, #0d0d0d 50%, transparent 100%);
+      opacity: 0;
+    }
+
+    /* ── CTA ── */
+    #cta-clip {
+      position: absolute;
+      width: 1080px; height: 1920px;
+      top: 0; left: 0;
+      z-index: 40;
+    }
+    #cta-wrap {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #cta-btn {
+      background: #CC0000;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 42px;
+      padding: 32px 80px;
+      border-radius: 0;
+      border: none;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div
+    id="root"
+    data-composition-id="main"
+    data-start="0"
+    data-duration="16.5"
+    data-width="1080"
+    data-height="1920"
+  >
+
+    <!-- Background (full duration) -->
+    <div id="bg-layer" class="clip" data-start="0" data-duration="16.5" data-track-index="0">
+      <div id="glow-ambient"></div>
+      <div id="glow-burst"></div>
+      <img id="bg-watermark" src="CP - logo sin fondo.png" alt="" aria-hidden="true" data-layout-allow-overflow />
+      <div id="hairline-top"></div>
+      <div id="hairline-bottom"></div>
+      <div class="corner-mark" id="cm-tl"></div>
+      <div class="corner-mark" id="cm-tr"></div>
+      <div class="corner-mark" id="cm-bl"></div>
+      <div class="corner-mark" id="cm-br"></div>
+    </div>
+
+    <!-- Burst cards: nc1/nc3/nc4 fade out; nc2 expands into the scroll header -->
+    <div id="nc1" class="news-card clip" data-start="2.0" data-duration="2.2" data-track-index="2">
+      <img src="Captura de pantalla 2026-04-27 105241.png" alt="" />
+    </div>
+    <!-- nc2 duration extended to cover the expansion animation and scroll handoff -->
+    <div id="nc2" class="news-card clip" data-start="2.0" data-duration="2.7" data-track-index="3" data-layout-allow-overflow>
+      <img src="Captura de pantalla 2026-04-27 105246.png" alt="" />
+    </div>
+    <div id="nc3" class="news-card clip" data-start="2.0" data-duration="2.2" data-track-index="4">
+      <img src="Captura de pantalla 2026-04-27 105250.png" alt="" />
+    </div>
+    <div id="nc4" class="news-card clip" data-start="2.0" data-duration="2.2" data-track-index="5">
+      <img src="Captura de pantalla 2026-04-27 105256.png" alt="" />
+    </div>
+
+    <!-- App card -->
+    <div id="app-card-wrap" class="clip" data-start="0" data-duration="4.5" data-track-index="1" data-layout-allow-overflow>
+      <div id="app-card" data-layout-allow-overflow>
+        <div id="card-top-row">
+          <div id="app-icon"><img src="CP - logo app.png" alt="California Post" /></div>
+          <div id="card-info">
+            <div id="app-name">California Post</div>
+            <div id="app-subtitle">California News &amp; Politics</div>
+            <div id="app-stars">
+              <span id="stars-glyphs">★★★★★</span>
+              <span id="stars-count">2.4K Ratings</span>
+            </div>
+          </div>
+        </div>
+        <div id="card-bottom-row">
+          <div id="card-meta">Free<br>News</div>
+          <div>
+            <button id="get-btn"><span id="btn-label">GET</span></button>
+            <div id="iap-note">In-App Purchases</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      Scroll section starts at 4.3s.
+      First image is 105246 — same as expanded nc2, so the handoff is seamless.
+      scroll-track y=0 means first image sits at top of canvas, matching nc2's expanded position.
+    -->
+    <div id="scroll-wrap" class="clip" data-start="4.3" data-duration="12.2" data-track-index="6" data-layout-allow-overflow>
+      <div id="scroll-track">
+        <img class="scroll-img" src="Captura de pantalla 2026-04-27 105246.png" alt="" />
+        <img class="scroll-img" src="Captura de pantalla 2026-04-27 105241.png" alt="" />
+        <img class="scroll-img" src="Captura de pantalla 2026-04-27 105250.png" alt="" />
+        <img class="scroll-img" src="Captura de pantalla 2026-04-27 105256.png" alt="" />
+        <img class="scroll-img" src="Captura de pantalla 2026-04-27 105302.png" alt="" />
+        <img class="scroll-img" src="Captura de pantalla 2026-04-27 105305.png" alt="" />
+        <img class="scroll-img" src="Captura de pantalla 2026-04-27 105316.png" alt="" />
+        <img class="scroll-img" src="Captura de pantalla 2026-04-27 105321.png" alt="" />
+        <img class="scroll-img" src="Captura de pantalla 2026-04-27 105330.png" alt="" />
+      </div>
+    </div>
+
+    <!-- Fade overlay: bottom-up darkness builds as scroll accelerates -->
+    <div id="fade-overlay" class="clip" data-start="7.0" data-duration="9.5" data-track-index="8">
+      <div id="fade-grad"></div>
+    </div>
+
+    <!-- CTA: emerges from darkness -->
+    <div id="cta-clip" class="clip" data-start="12.5" data-duration="4.0" data-track-index="9">
+      <div id="cta-wrap">
+        <div id="cta-btn">Download free on iOS</div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // ── BACKGROUND ──
+      // 11 plays × 1.5s = 16.5s (repeat:10)
+      tl.fromTo("#glow-ambient",
+        { scale: 1.0 },
+        { scale: 1.38, duration: 1.5, ease: "sine.inOut", yoyo: true, repeat: 10 },
+        0
+      );
+      tl.fromTo("#hairline-top",
+        { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: "power2.out" },
+        0.2
+      );
+      tl.fromTo("#hairline-bottom",
+        { scaleX: 0 }, { scaleX: 1, duration: 0.75, ease: "expo.out" },
+        0.35
+      );
+      tl.fromTo("#glow-burst",
+        { scale: 0.4, opacity: 0 },
+        { scale: 2.2, opacity: 0.75, duration: 0.13, ease: "power3.out" },
+        2.0
+      );
+      tl.to("#glow-burst", { scale: 3.2, opacity: 0, duration: 0.65, ease: "expo.out" }, 2.13);
+
+      // ── APP CARD ENTRANCE ──
+      tl.fromTo("#app-card",
+        { y: -1100, scale: 0.55, opacity: 0 },
+        { y: 0, scale: 1, opacity: 1, duration: 0.78, ease: "elastic.out(1, 0.52)" },
+        0.15
+      );
+      tl.fromTo("#app-icon",
+        { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.42, ease: "back.out(2.4)" },
+        0.38
+      );
+      tl.fromTo("#app-name",
+        { x: -28, opacity: 0 }, { x: 0, opacity: 1, duration: 0.36, ease: "power3.out" },
+        0.54
+      );
+      tl.fromTo("#app-subtitle",
+        { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power2.out" },
+        0.7
+      );
+      tl.fromTo("#app-stars",
+        { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.55, ease: "elastic.out(1, 0.65)" },
+        0.85
+      );
+      tl.fromTo("#get-btn",
+        { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.42, ease: "back.out(2.6)" },
+        1.0
+      );
+      tl.fromTo("#card-meta",
+        { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" },
+        1.1
+      );
+
+      // ── BUTTON PRESS at t=1.8 ──
+      tl.to("#get-btn", { scaleY: 0.66, scaleX: 1.22, duration: 0.09, ease: "power3.in" }, 1.8);
+      tl.to("#app-card", { y: -10, duration: 0.09, ease: "power2.out" }, 1.8);
+      tl.to("#get-btn", {
+        scaleY: 1.0, scaleX: 1.0, backgroundColor: "#3a3a3c",
+        duration: 0.42, ease: "back.out(3.2)", overwrite: "auto"
+      }, 1.89);
+      tl.to("#app-card", { y: 0, duration: 0.3, ease: "back.out(2.2)", overwrite: "auto" }, 1.89);
+      tl.call(function() {
+        document.getElementById("btn-label").textContent = "OPEN ✓";
+      }, null, 1.94);
+
+      // ── NEWS CARDS BURST at t=2.0 ──
+      tl.fromTo("#nc1",
+        { x: 255, y: 430, scale: 0.07, opacity: 0, rotationZ: 0, transformPerspective: 900, rotationY: 0, rotationX: 0 },
+        { x: 0, y: 0, scale: 1, opacity: 1, rotationZ: -720, rotationY: 18, rotationX: -12, duration: 0.88, ease: "expo.out" },
+        2.0
+      );
+      tl.fromTo("#nc2",
+        { x: -255, y: 430, scale: 0.07, opacity: 0, rotationZ: 0, transformPerspective: 900, rotationY: 0, rotationX: 0 },
+        { x: 0, y: 0, scale: 1, opacity: 1, rotationZ: 720, rotationY: -22, rotationX: 10, duration: 0.82, ease: "expo.out" },
+        2.0
+      );
+      tl.fromTo("#nc3",
+        { x: 255, y: -430, scale: 0.07, opacity: 0, rotationZ: 0, transformPerspective: 900, rotationY: 0, rotationX: 0 },
+        { x: 0, y: 0, scale: 1, opacity: 1, rotationZ: -720, rotationY: 16, rotationX: 14, duration: 0.94, ease: "expo.out" },
+        2.0
+      );
+      tl.fromTo("#nc4",
+        { x: -255, y: -430, scale: 0.07, opacity: 0, rotationZ: 0, transformPerspective: 900, rotationY: 0, rotationX: 0 },
+        { x: 0, y: 0, scale: 1, opacity: 1, rotationZ: 720, rotationY: -18, rotationX: -14, duration: 0.79, ease: "expo.out" },
+        2.0
+      );
+
+      // ── TRANSITION at t=3.3 ──
+      // nc1/nc3/nc4 fade out simultaneously while nc2 expands.
+      tl.to("#nc1", { opacity: 0, y: -44, duration: 0.45, ease: "power2.in" }, 3.3);
+      tl.to("#nc3", { opacity: 0, y:  44, duration: 0.45, ease: "power2.in" }, 3.3);
+      tl.to("#nc4", { opacity: 0, y:  44, duration: 0.45, ease: "power2.in" }, 3.3);
+      tl.set("#nc1, #nc3, #nc4", { visibility: "hidden" }, 3.8);
+
+      // App card exits simultaneously.
+      tl.to("#app-card", { y: 1350, opacity: 0, duration: 0.52, ease: "power2.in" }, 3.3);
+      tl.set("#app-card", { opacity: 0 }, 3.86);
+
+      // nc2 lifts in front of everything and expands to full-width banner at the top.
+      // CSS position: left:550, top:340. To reach canvas (0,0): x=-550, y=-340.
+      // Width grows from 490→1080, padding collapses, 3D tilt flattens.
+      tl.set("#nc2", { zIndex: 100 }, 3.3);
+      tl.to("#nc2", {
+        x: -550,
+        y: -340,
+        width: 1080,
+        paddingTop: 0,
+        paddingLeft: 0,
+        paddingRight: 0,
+        paddingBottom: 0,
+        borderRadius: 0,
+        rotationY: 0,
+        rotationX: 0,
+        duration: 0.9,
+        ease: "expo.out"
+      }, 3.3);
+
+      // ── HANDOFF at t=4.3 ──
+      // scroll-wrap appears at t=4.3. Its first image (105246) is at canvas (0,0), matching nc2.
+      // nc2 fades out; scroll-track takes over seamlessly.
+      tl.to("#nc2", { opacity: 0, duration: 0.3, ease: "none" }, 4.3);
+
+      // Keep scroll-track off-screen until handoff so white screenshots don't contaminate
+      // the background during the earlier app-card / burst-card section.
+      tl.set("#scroll-track", { y: 2000 }, 0);
+      // At handoff: jump to y=0 — first image aligns with expanded nc2.
+      tl.set("#scroll-track", { y: 0 }, 4.3);
+      // Hold while nc2 fades (0.3s), then begin comfortable scroll.
+      tl.to("#scroll-track",
+        { y: -550, duration: 2.0, ease: "none" },
+        4.6
+      );
+
+      // ── SCROLL: phase 2 — accelerating (t=6.6, 7.2s, power3.in) ──
+      tl.to("#scroll-track",
+        { y: -9500, duration: 7.2, ease: "power3.in", overwrite: "auto" },
+        6.6
+      );
+
+      // ── FADE OVERLAY builds from bottom as scroll accelerates (t=7.0) ──
+      tl.fromTo("#fade-grad",
+        { opacity: 0 },
+        { opacity: 1, duration: 4.5, ease: "power2.in" },
+        7.0
+      );
+
+      // ── CTA emerges from darkness (t=12.5) ──
+      // autoAlpha sets both opacity:0 and visibility:hidden immediately so the
+      // contrast checker skips the element during the scroll section.
+      tl.fromTo("#cta-clip",
+        { autoAlpha: 0 },
+        { autoAlpha: 1, duration: 0.6, ease: "power2.out" },
+        12.5
+      );
+
+      window.__timelines["main"] = tl;
+    </script>
+  </div>
+</body>
+</html>

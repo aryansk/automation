@@ -1,0 +1,226 @@
+{
+  "fps": 30,
+  "total": 628,
+  "scenes": [
+    {
+      "n": 1,
+      "from": 6,
+      "dur": 127,
+      "words": [
+        {
+          "text": "Saving",
+          "startF": 22,
+          "endF": 36
+        },
+        {
+          "text": "$300",
+          "startF": 36,
+          "endF": 51
+        },
+        {
+          "text": "a",
+          "startF": 51,
+          "endF": 65
+        },
+        {
+          "text": "month",
+          "startF": 65,
+          "endF": 80
+        },
+        {
+          "text": "starting",
+          "startF": 80,
+          "endF": 94
+        },
+        {
+          "text": "at",
+          "startF": 94,
+          "endF": 109
+        },
+        {
+          "text": "25.",
+          "startF": 109,
+          "endF": 123
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "from": 131,
+      "dur": 105,
+      "words": [
+        {
+          "text": "But",
+          "startF": 142,
+          "endF": 152
+        },
+        {
+          "text": "most",
+          "startF": 152,
+          "endF": 163
+        },
+        {
+          "text": "people",
+          "startF": 163,
+          "endF": 174
+        },
+        {
+          "text": "wait",
+          "startF": 174,
+          "endF": 184
+        },
+        {
+          "text": "until",
+          "startF": 184,
+          "endF": 195
+        },
+        {
+          "text": "35",
+          "startF": 195,
+          "endF": 206
+        },
+        {
+          "text": "to",
+          "startF": 206,
+          "endF": 217
+        },
+        {
+          "text": "begin.",
+          "startF": 217,
+          "endF": 227
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "from": 234,
+      "dur": 114,
+      "words": [
+        {
+          "text": "That",
+          "startF": 246,
+          "endF": 261
+        },
+        {
+          "text": "10-year",
+          "startF": 261,
+          "endF": 277
+        },
+        {
+          "text": "delay",
+          "startF": 277,
+          "endF": 292
+        },
+        {
+          "text": "costs",
+          "startF": 292,
+          "endF": 307
+        },
+        {
+          "text": "you",
+          "startF": 307,
+          "endF": 323
+        },
+        {
+          "text": "$400,000.",
+          "startF": 323,
+          "endF": 338
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "from": 346,
+      "dur": 124,
+      "words": [
+        {
+          "text": "Not",
+          "startF": 358,
+          "endF": 372
+        },
+        {
+          "text": "from",
+          "startF": 372,
+          "endF": 387
+        },
+        {
+          "text": "saving",
+          "startF": 387,
+          "endF": 402
+        },
+        {
+          "text": "less.",
+          "startF": 402,
+          "endF": 416
+        },
+        {
+          "text": "From",
+          "startF": 416,
+          "endF": 431
+        },
+        {
+          "text": "losing",
+          "startF": 431,
+          "endF": 446
+        },
+        {
+          "text": "compounding.",
+          "startF": 446,
+          "endF": 460
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "from": 468,
+      "dur": 138,
+      "words": [
+        {
+          "text": "The",
+          "startF": 481,
+          "endF": 494
+        },
+        {
+          "text": "best",
+          "startF": 494,
+          "endF": 506
+        },
+        {
+          "text": "time",
+          "startF": 506,
+          "endF": 519
+        },
+        {
+          "text": "was",
+          "startF": 519,
+          "endF": 532
+        },
+        {
+          "text": "yesterday.",
+          "startF": 532,
+          "endF": 545
+        },
+        {
+          "text": "The",
+          "startF": 545,
+          "endF": 557
+        },
+        {
+          "text": "next",
+          "startF": 557,
+          "endF": 570
+        },
+        {
+          "text": "is",
+          "startF": 570,
+          "endF": 583
+        },
+        {
+          "text": "today.",
+          "startF": 583,
+          "endF": 596
+        }
+      ]
+    }
+  ]
+}

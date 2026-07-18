@@ -1,0 +1,19 @@
+# Dependencies and generated output
+node_modules/
+.next/
+dist/
+build/
+coverage/
+.venv*/
+
+# Nested project with its own Git history
+vskills/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and OS files
+*.log
+.DS_Store

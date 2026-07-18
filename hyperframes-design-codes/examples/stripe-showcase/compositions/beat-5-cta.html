@@ -1,0 +1,221 @@
+<template id="beat-5-template">
+  <div data-composition-id="beat-5-cta" data-width="1920" data-height="1080" data-start="0" data-duration="2.0">
+
+    <!-- L1: Full-bleed og-image background -->
+    <div class="bg-gradient">
+      <img src="../assets/og-image.jpg" alt="" />
+    </div>
+
+    <!-- L2: CTA Button -->
+    <div class="cta-button">
+      <span class="cta-button-text">Start building</span>
+      <span class="cta-button-arrow">&rarr;</span>
+    </div>
+
+    <!-- L3: Cursor -->
+    <div class="cursor-wrap">
+      <svg class="cursor" width="28" height="34" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L2 26L8.5 19.5L14.5 30L19 28L13 17L22 17L2 2Z" fill="white" stroke="#333" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <!-- L4: URL text -->
+    <div class="cta-url">stripe.com</div>
+
+    <!-- L5: Grain overlay -->
+    <canvas class="grain-canvas" width="1920" height="1080"></canvas>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=block');
+
+      [data-composition-id="beat-5-cta"] {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        position: relative;
+        background: #000000;
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* L1: Background */
+      [data-composition-id="beat-5-cta"] .bg-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        will-change: transform;
+      }
+
+      [data-composition-id="beat-5-cta"] .bg-gradient img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* L2: CTA Button */
+      [data-composition-id="beat-5-cta"] .cta-button {
+        position: absolute;
+        top: 300px;
+        left: 0;
+        width: 100%;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      [data-composition-id="beat-5-cta"] .cta-button-text,
+      [data-composition-id="beat-5-cta"] .cta-button-arrow {
+        display: inline;
+      }
+
+      [data-composition-id="beat-5-cta"] .cta-button {
+        /* We use an inner styling approach — the div itself is the button */
+      }
+
+      [data-composition-id="beat-5-cta"] .cta-button {
+        top: 300px;
+        left: 50%;
+        width: auto;
+        margin-left: -140px;
+        background: #FFFFFF;
+        color: #000000;
+        font-size: 28px;
+        font-weight: 500;
+        padding: 20px 48px;
+        border-radius: 60px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15), 0 12px 40px rgba(0,0,0,0.1);
+        gap: 12px;
+        cursor: default;
+      }
+
+      /* L3: Cursor */
+      [data-composition-id="beat-5-cta"] .cursor-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        will-change: transform;
+        pointer-events: none;
+      }
+
+      /* L4: URL */
+      [data-composition-id="beat-5-cta"] .cta-url {
+        position: absolute;
+        top: 720px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 400;
+        color: #FFFFFF;
+        z-index: 4;
+        opacity: 0;
+        text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        letter-spacing: -0.005em;
+      }
+
+      /* L5: Grain */
+      [data-composition-id="beat-5-cta"] .grain-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1920px;
+        height: 1080px;
+        z-index: 20;
+        opacity: 0.03;
+        pointer-events: none;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      var S = '[data-composition-id="beat-5-cta"] ';
+      var tl = gsap.timeline({ paused: true });
+
+      /* L5: Generate deterministic grain texture */
+      (function () {
+        var canvas = document.querySelector(S + '.grain-canvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var w = 1920, h = 1080;
+        var imgData = ctx.createImageData(w, h);
+        var d = imgData.data;
+        var seed = 12345;
+        for (var i = 0; i < d.length; i += 4) {
+          seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+          var v = (seed >> 16) & 255;
+          d[i] = v;
+          d[i + 1] = v;
+          d[i + 2] = v;
+          d[i + 3] = 255;
+        }
+        ctx.putImageData(imgData, 0, 0);
+      })();
+
+      /* L1: Background slow zoom 1 → 1.03 over 2s */
+      tl.fromTo(S + '.bg-gradient',
+        { scale: 1 },
+        { scale: 1.03, duration: 2.0, ease: 'none' },
+        0
+      );
+
+      /* L2: Button drops in */
+      tl.fromTo(S + '.cta-button',
+        { y: -30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.35, ease: 'back.out(1.3)' },
+        0.1
+      );
+
+      /* L4: stripe.com fades in */
+      tl.to(S + '.cta-url',
+        { opacity: 1, duration: 0.3, ease: 'power1.out' },
+        0.15
+      );
+
+      /* L3: Cursor enters from bottom-right, glides to button */
+      gsap.set(S + '.cursor-wrap', { x: 1400, y: 800 });
+      tl.to(S + '.cursor-wrap',
+        { x: 1020, y: 340, duration: 0.6, ease: 'power2.inOut' },
+        0.3
+      );
+
+      /* L3: Click — cursor moves down 4px */
+      tl.to(S + '.cursor-wrap',
+        { y: 344, duration: 0.08, ease: 'power1.in' },
+        1.0
+      );
+
+      /* L2: Click — button depresses */
+      tl.to(S + '.cta-button',
+        { scale: 0.95, boxShadow: '0 2px 10px rgba(0,0,0,0.1), 0 4px 15px rgba(0,0,0,0.08)', duration: 0.08, ease: 'power1.in' },
+        1.0
+      );
+
+      /* L3: Release — cursor moves back up */
+      tl.to(S + '.cursor-wrap',
+        { y: 340, duration: 0.1, ease: 'power1.out' },
+        1.1
+      );
+
+      /* L2: Release — button bounces back */
+      tl.to(S + '.cta-button',
+        { scale: 1, boxShadow: '0 4px 20px rgba(0,0,0,0.15), 0 12px 40px rgba(0,0,0,0.1)', duration: 0.15, ease: 'elastic.out(1,0.5)' },
+        1.1
+      );
+
+      /* L2: Button glow pulse with Stripe purple tint */
+      tl.to(S + '.cta-button',
+        { boxShadow: '0 4px 20px rgba(83,58,253,0.3), 0 12px 50px rgba(83,58,253,0.2), 0 0 60px rgba(83,58,253,0.15)', duration: 0.3, ease: 'power2.out' },
+        1.3
+      );
+
+      window.__timelines['beat-5-cta'] = tl;
+    </script>
+  </div>
+</template>

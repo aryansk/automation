@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @font-face {
+      font-family: 'Barlow Condensed';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url('capture/assets/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B45L0z3bWuYMBYro.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url('capture/assets/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPbF4C_k3HqU.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('capture/assets/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPbF4C_k3HqU.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('capture/assets/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPbF4C_k3HqU.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Space Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('capture/assets/fonts/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ.woff2') format('woff2');
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0D0D0D;
+      overflow: hidden;
+      width: 1080px;
+      height: 1920px;
+    }
+
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      background: #0D0D0D;
+      overflow: hidden;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* ── Decoratives ─────────────────────────────── */
+
+    .bg-glow {
+      position: absolute;
+      width: 1000px;
+      height: 1000px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.16) 0%, transparent 68%);
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .bg-ghost {
+      position: absolute;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 600px;
+      color: rgba(212,175,55,0.055);
+      top: -50px;
+      right: -100px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .rule {
+      position: absolute;
+      height: 1px;
+      background: rgba(212,175,55,0.22);
+      left: 80px;
+      right: 80px;
+      pointer-events: none;
+    }
+    .rule.top    { top: 136px; }
+    .rule.bottom { bottom: 136px; }
+
+    .corner {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #D4AF37;
+      pointer-events: none;
+      opacity: 0;
+    }
+    .corner.tl { top: 133px;    left: 77px;  }
+    .corner.tr { top: 133px;    right: 77px; }
+    .corner.bl { bottom: 133px; left: 77px;  }
+    .corner.br { bottom: 133px; right: 77px; }
+
+    /* ── Content layout ──────────────────────────── */
+
+    .scene-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 200px 80px 168px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid #D4AF37;
+      color: #D4AF37;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 26px;
+      letter-spacing: 0.14em;
+      padding: 10px 22px;
+      border-radius: 40px;
+      align-self: flex-start;
+      margin-bottom: 52px;
+      text-transform: uppercase;
+    }
+
+    .stat {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 256px;
+      color: #D4AF37;
+      line-height: 0.88;
+      letter-spacing: -0.03em;
+      margin-bottom: 44px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .headline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 70px;
+      color: #F0EDE6;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      max-width: 920px;
+      margin-bottom: 28px;
+    }
+
+    .hl-line {
+      height: 3px;
+      background: #D4AF37;
+      width: 0;
+      margin-bottom: 44px;
+      transform-origin: left center;
+    }
+
+    .summary {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 300;
+      font-size: 38px;
+      color: #8A8680;
+      line-height: 1.55;
+      letter-spacing: 0.005em;
+      max-width: 900px;
+      margin-bottom: 28px;
+    }
+
+    .meta {
+      font-family: 'Space Mono', monospace;
+      font-size: 22px;
+      color: rgba(212,175,55,0.48);
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
+      margin-bottom: auto;
+    }
+
+    .cta {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 400;
+      font-size: 34px;
+      color: #D4AF37;
+      letter-spacing: 0.02em;
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid rgba(212,175,55,0.22);
+    }
+  </style>
+</head>
+<body>
+  <div data-hf-id="hf-8f5q" id="root" data-composition-id="root" data-start="0" data-duration="18" data-width="1080" data-height="1920">
+
+    <!-- Background decoratives -->
+    <div data-hf-id="hf-oplk" class="bg-glow" data-layout-ignore=""></div>
+    <div data-hf-id="hf-91yh" class="bg-ghost" data-layout-ignore="">30B</div>
+    <div data-hf-id="hf-aphy" class="rule top" data-layout-ignore=""></div>
+    <div data-hf-id="hf-rpeq" class="rule bottom" data-layout-ignore=""></div>
+    <div data-hf-id="hf-3iiw" class="corner tl" data-layout-ignore=""></div>
+    <div data-hf-id="hf-sv4q" class="corner tr" data-layout-ignore=""></div>
+    <div data-hf-id="hf-bfwi" class="corner bl" data-layout-ignore=""></div>
+    <div data-hf-id="hf-mum8" class="corner br" data-layout-ignore=""></div>
+
+    <!-- Main content -->
+    <div data-hf-id="hf-cn5c" class="scene-content">
+      <div data-hf-id="hf-9sxf" class="badge" id="badge">● TECH</div>
+      <div data-hf-id="hf-vue9" class="stat" id="stat">$30B</div>
+      <h1 data-hf-id="hf-bj4c" class="headline" id="headline">Anthropic Just<br data-hf-id="hf-x5px">Overtook OpenAI<br data-hf-id="hf-rsrt">in Revenue</h1>
+      <div data-hf-id="hf-6xhk" class="hl-line" id="hl-line"></div>
+      <p data-hf-id="hf-eadi" class="summary" id="summary">Anthropic hit a $30B annualized run rate — a historic first. Driven by Claude enterprise API, coding tools, and Amazon &amp; Google partnerships.</p>
+      <div data-hf-id="hf-d5zz" class="meta" id="meta">anthropic · june 19, 2026</div>
+      <div data-hf-id="hf-zt5t" class="cta" id="cta">Follow for daily news 🔔</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const D = 18; // total duration
+
+      // ── Background ambient ────────────────────────
+
+      // Glow breathe (on tl — NOT standalone)
+      const glowCycles = Math.ceil(D / 3.2) - 1;
+      tl.fromTo(".bg-glow",
+        { scale: 1,    opacity: 0.6 },
+        { scale: 1.18, opacity: 1,   duration: 3.2, ease: "sine.inOut", yoyo: true, repeat: glowCycles },
+        0
+      );
+
+      // Ghost text: slow drift upward (opacity reveal separately)
+      tl.fromTo(".bg-ghost",
+        { y: 0, opacity: 0 },
+        { y: -50, opacity: 1, duration: D, ease: "none" },
+        0.8
+      );
+
+      // Rules: scaleX reveal from opposing edges
+      tl.fromTo(".rule.top",
+        { scaleX: 0, transformOrigin: "left center",  opacity: 0 },
+        { scaleX: 1, opacity: 1, duration: 0.9, ease: "expo.out" },
+        0.1
+      );
+      tl.fromTo(".rule.bottom",
+        { scaleX: 0, transformOrigin: "right center", opacity: 0 },
+        { scaleX: 1, opacity: 1, duration: 0.9, ease: "expo.out" },
+        0.25
+      );
+
+      // Corner dots pop in (staggered)
+      tl.fromTo(".corner",
+        { opacity: 0, scale: 0 },
+        { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2.5)", stagger: 0.07 },
+        0.15
+      );
+
+      // ── Badge ─────────────────────────────────────
+      tl.fromTo("#badge",
+        { x: -70, opacity: 0 },
+        { x: 0,   opacity: 1, duration: 0.52, ease: "power3.out" },
+        0.38
+      );
+
+      // ── Giant stat slam ───────────────────────────
+      tl.fromTo("#stat",
+        { y: 90, opacity: 0, scale: 0.82 },
+        { y: 0,  opacity: 1, scale: 1,    duration: 0.72, ease: "expo.out" },
+        0.78
+      );
+
+      // ── Headline slide in from right ──────────────
+      tl.fromTo("#headline",
+        { x: 60, opacity: 0 },
+        { x: 0,  opacity: 1, duration: 0.58, ease: "power2.out" },
+        1.38
+      );
+
+      // ── Gold underline reveal ─────────────────────
+      tl.fromTo("#hl-line",
+        { width: "0%" },
+        { width: "100%", duration: 0.68, ease: "expo.out" },
+        1.85
+      );
+
+      // ── Summary fade + lift ───────────────────────
+      tl.fromTo("#summary",
+        { y: 32, opacity: 0 },
+        { y: 0,  opacity: 1, duration: 0.65, ease: "power2.out" },
+        2.35
+      );
+
+      // ── Meta fade ─────────────────────────────────
+      tl.fromTo("#meta",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5, ease: "power1.out" },
+        3.0
+      );
+
+      // ── CTA entrance ──────────────────────────────
+      tl.fromTo("#cta",
+        { y: 24, opacity: 0 },
+        { y: 0,  opacity: 1, duration: 0.6, ease: "power2.out" },
+        3.45
+      );
+
+      // CTA pulse (on tl)
+      const ctaPulseCycles = Math.ceil((D - 4.8) / 1.6) - 1;
+      tl.fromTo("#cta",
+        { opacity: 1 },
+        { opacity: 0.55, duration: 1.6, ease: "sine.inOut", yoyo: true, repeat: ctaPulseCycles },
+        4.8
+      );
+
+      // ── Resolve: fade to black ────────────────────
+      tl.to(".scene-content", { opacity: 0, duration: 0.9, ease: "power2.in" }, D - 0.9);
+      tl.to([".bg-glow", ".bg-ghost", ".rule", ".corner"],
+            { opacity: 0, duration: 0.9, ease: "power2.in" }, D - 0.9);
+
+      window.__timelines["root"] = tl;
+    </script>
+  </div>
+</body>
+</html>

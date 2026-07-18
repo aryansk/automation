@@ -1,0 +1,22 @@
+{
+  "name": "remotion-buffett-short",
+  "version": "1.0.0",
+  "description": "Remotion remake of a viral finance-short style (Video-332)",
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render Short out/video.mp4",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/google-fonts": "4.0.379",
+    "@remotion/noise": "4.0.379",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.379"
+  },
+  "devDependencies": {
+    "@remotion/cli": "4.0.379",
+    "@types/react": "19.0.0",
+    "typescript": "5.4.5"
+  }
+}

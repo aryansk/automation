@@ -1,0 +1,33 @@
+{
+  "slug": "editorial-forest",
+  "name": "Editorial Forest",
+  "tagline": "Green/pink/cream editorial triad, Source Serif 4 display, JetBrains Mono chrome, hairline rules",
+  "scheme": "light",
+  "density": "medium",
+  "tokens": {
+    "consumes": [
+      "primary",
+      "secondary",
+      "tertiary",
+      "accent"
+    ]
+  },
+  "defaultPalette": "editorial-forest-default",
+  "defaultFontPairId": "source-serif-jetbrains-mono",
+  "supportedTones": [
+    "editorial"
+  ],
+  "fonts": {
+    "headline": "Source Serif 4",
+    "body": "JetBrains Mono"
+  },
+  "frames": {
+    "landscape": [],
+    "portrait": []
+  },
+  "colorTokens": [
+    { "name": "green-deep", "label": "Green deep" },
+    { "name": "green-lite", "label": "Green lite" },
+    { "name": "pink-deep", "label": "Pink deep" }
+  ]
+}

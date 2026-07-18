@@ -1,0 +1,29 @@
+{
+  "slug": "bold-poster",
+  "name": "Bold Poster",
+  "tagline": "Shrikhand tilted display + red accent on cream \u2014 magazine cover energy",
+  "scheme": "light",
+  "density": "high",
+  "tokens": {
+    "consumes": [
+      "primary",
+      "secondary",
+      "tertiary",
+      "accent"
+    ]
+  },
+  "defaultPalette": "bold-poster-default",
+  "defaultFontPairId": "shrikhand-libre-baskerville",
+  "supportedTones": [
+    "bold",
+    "editorial"
+  ],
+  "fonts": {
+    "headline": "Shrikhand",
+    "body": "Libre Baskerville"
+  },
+  "frames": {
+    "landscape": [],
+    "portrait": []
+  }
+}

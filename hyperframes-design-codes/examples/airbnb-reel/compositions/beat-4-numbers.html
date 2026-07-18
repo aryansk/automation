@@ -1,0 +1,365 @@
+<template id="beat-4-numbers-template">
+  <div data-composition-id="beat-4-numbers" data-width="1920" data-height="1080" data-start="0" data-duration="6.38">
+    <div class="b4-stage">
+      <!-- Background mosaic of scattered photo cards -->
+      <div class="b4-mosaic" aria-hidden="true">
+        <div class="b4-card b4-card-1">
+          <img src="../capture/assets/485e4450-088e-40b0-a031-0ee28d0afb64.jpg" alt="" />
+        </div>
+        <div class="b4-card b4-card-2">
+          <img src="../capture/assets/77d3e07a-4785-41b4-b0b3-a9d36b0e42d9.jpg" alt="" />
+        </div>
+        <div class="b4-card b4-card-3">
+          <img src="../capture/assets/53ac95c9-b0f7-4165-b51f-10c5c4a06189.png" alt="" />
+        </div>
+        <div class="b4-card b4-card-4">
+          <img src="../capture/assets/4e4cb4db-eb8d-4ca1-bb96-54081c630056.jpeg" alt="" />
+        </div>
+        <div class="b4-card b4-card-5">
+          <img src="../capture/assets/e45a0c11-b7f8-4809-af01-87435268d157.jpeg" alt="" />
+        </div>
+        <div class="b4-card b4-card-6">
+          <img src="../capture/assets/6a58074e-a439-48fe-9a06-020d13bf1d29.jpeg" alt="" />
+        </div>
+      </div>
+
+      <!-- Center stage: three stacked stat slots, only one visible at a time -->
+      <div class="b4-center">
+        <div class="b4-stat b4-stat-1">
+          <div class="b4-num"><span id="b4-stat-1-num">0</span><span class="b4-suffix b4-suffix-1">M+</span></div>
+          <div class="b4-label">places to stay</div>
+        </div>
+
+        <div class="b4-stat b4-stat-2">
+          <div class="b4-num"><span id="b4-stat-2-num">0</span></div>
+          <div class="b4-label">countries &amp; regions worldwide</div>
+        </div>
+
+        <div class="b4-stat b4-stat-3">
+          <div class="b4-heart" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 28s-11-6.86-11-15.07A6.93 6.93 0 0 1 12 6a6.5 6.5 0 0 1 4 1.5A6.5 6.5 0 0 1 20 6a6.93 6.93 0 0 1 7 6.93C27 21.14 16 28 16 28z"
+                fill="#FF385C"
+              />
+            </svg>
+          </div>
+          <div class="b4-num">
+            <span id="b4-stat-3-num" class="b4-stat-3-digit">0</span><span class="b4-suffix b4-suffix-3">M+</span>
+          </div>
+          <div class="b4-label">Guest Favourites — picked by guests</div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @font-face {
+        font-family: 'Airbnb Cereal VF';
+        src: url('../capture/assets/fonts/AirbnbCerealVF_W_Wght.8816d9e5c3b6a860636193e36b6ac4e4.woff2') format('woff2');
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: block;
+      }
+
+      [data-composition-id="beat-4-numbers"] {
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;
+        font-family: 'Airbnb Cereal VF', system-ui, sans-serif;
+        overflow: hidden;
+        position: relative;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-stage {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-mosaic {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-card {
+        position: absolute;
+        width: 220px;
+        height: 260px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+        opacity: 0.6;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Scatter around edges, away from center. Stage is 1920x1080. */
+      [data-composition-id="beat-4-numbers"] .b4-card-1 {
+        top: 70px;
+        left: 90px;
+        transform: rotate(-3deg);
+      }
+      [data-composition-id="beat-4-numbers"] .b4-card-2 {
+        top: 90px;
+        right: 110px;
+        transform: rotate(2deg);
+      }
+      [data-composition-id="beat-4-numbers"] .b4-card-3 {
+        top: 410px;
+        left: 60px;
+        transform: rotate(-2deg);
+      }
+      [data-composition-id="beat-4-numbers"] .b4-card-4 {
+        top: 430px;
+        right: 80px;
+        transform: rotate(3deg);
+      }
+      [data-composition-id="beat-4-numbers"] .b4-card-5 {
+        bottom: 70px;
+        left: 140px;
+        transform: rotate(-3deg);
+      }
+      [data-composition-id="beat-4-numbers"] .b4-card-6 {
+        bottom: 80px;
+        right: 160px;
+        transform: rotate(2deg);
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-center {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-stat {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        text-align: center;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-num {
+        font-size: 280px;
+        font-weight: 800;
+        color: #222222;
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: -4px;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-suffix {
+        display: inline-block;
+        transform-origin: left center;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-suffix-3 {
+        color: #FF385C;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-stat-3-digit {
+        color: #222222;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-label {
+        font-size: 28px;
+        font-weight: 500;
+        color: #6A6A6A;
+        letter-spacing: 0;
+        max-width: 900px;
+      }
+
+      [data-composition-id="beat-4-numbers"] .b4-heart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+
+        const duration = 11.50;
+        const root = document.querySelector('[data-composition-id="beat-4-numbers"]');
+
+        // ---------- Initial states (set inside timeline at t=0) ----------
+        // Mosaic cards start invisible
+        const cards = [
+          { sel: ".b4-card-1", bobDelay: 0.0 },
+          { sel: ".b4-card-2", bobDelay: 0.6 },
+          { sel: ".b4-card-3", bobDelay: 1.2 },
+          { sel: ".b4-card-4", bobDelay: 0.3 },
+          { sel: ".b4-card-5", bobDelay: 0.9 },
+          { sel: ".b4-card-6", bobDelay: 1.5 },
+        ];
+
+        cards.forEach((c) => {
+          tl.set(c.sel, { opacity: 0 }, 0);
+        });
+
+        // Stat 1 starts hidden too (we'll fade in label separately)
+        tl.set(".b4-stat-1", { opacity: 0, y: 60 }, 0);
+        tl.set(".b4-suffix-1", { scale: 0, opacity: 0, transformOrigin: "left center" }, 0);
+
+        // Stat 2 hidden
+        tl.set(".b4-stat-2", { opacity: 0, y: 60 }, 0);
+
+        // Stat 3 hidden
+        tl.set(".b4-stat-3", { opacity: 0, y: 60 }, 0);
+        tl.set(".b4-heart", { scale: 1 }, 0);
+        tl.set(".b4-suffix-3", { scale: 0, opacity: 0, transformOrigin: "left center" }, 0);
+
+        // Label inner-fade initials
+        tl.set(".b4-stat-1 .b4-label", { opacity: 0 }, 0);
+        tl.set(".b4-stat-2 .b4-label", { opacity: 0 }, 0);
+        tl.set(".b4-stat-3 .b4-label", { opacity: 0 }, 0);
+
+        // ---------- Mosaic entrance (stagger) ----------
+        cards.forEach((c, i) => {
+          tl.to(
+            c.sel,
+            { opacity: 0.6, duration: 0.6, ease: "power2.out" },
+            0 + i * 0.1
+          );
+        });
+
+        // ---------- Mosaic ambient drift (finite repeats) ----------
+        // Bob each card ±6px on Y with sine.inOut. Half-cycle = 2s.
+        const cycleDuration = 4;
+        // Total bob window ~11s; repeats = ceil(11 / 2) = 6 half-cycles
+        cards.forEach((c) => {
+          tl.to(
+            c.sel,
+            {
+              y: -6,
+              duration: cycleDuration / 2,
+              ease: "sine.inOut",
+              yoyo: true,
+              repeat: 5, // 6 half-cycles * 2s = 12s coverage
+            },
+            0.6 + c.bobDelay
+          );
+        });
+
+        // ---------- STAT 1: "7M+" places to stay (narration ~0.2 - 2.0s) ----------
+        // Enter at t=0.05
+        tl.to(".b4-stat-1", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.05);
+
+        // Counter 0 -> 7 over 0.8s
+        const obj1 = { v: 0 };
+        tl.to(
+          obj1,
+          {
+            v: 7,
+            duration: 0.8,
+            ease: "power2.out",
+            onUpdate: () => {
+              const el = root.querySelector("#b4-stat-1-num");
+              if (el) el.textContent = Math.round(obj1.v);
+            },
+          },
+          0.05
+        );
+
+        // Label fade at t=0.4
+        tl.to(".b4-stat-1 .b4-label", { opacity: 1, duration: 0.4, ease: "power2.out" }, 0.4);
+
+        // M+ suffix pop at t=0.9
+        tl.to(
+          ".b4-suffix-1",
+          { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2)" },
+          0.9
+        );
+
+        // Stat 1 exits at t=2.10 (after "stay" lands at ~1.97)
+        tl.to(".b4-stat-1", { y: -100, opacity: 0, duration: 0.3, ease: "power3.in" }, 2.10);
+
+        // ---------- STAT 2: 220 countries (narration ~2.2 - 4.4s) ----------
+        tl.to(".b4-stat-2", { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 2.20);
+
+        const obj2 = { v: 0 };
+        tl.to(
+          obj2,
+          {
+            v: 220,
+            duration: 1.0,
+            ease: "power2.out",
+            onUpdate: () => {
+              const el = root.querySelector("#b4-stat-2-num");
+              if (el) el.textContent = Math.round(obj2.v);
+            },
+          },
+          2.20
+        );
+
+        tl.to(".b4-stat-2 .b4-label", { opacity: 1, duration: 0.4, ease: "power2.out" }, 2.60);
+
+        // Stat 2 exits at t=4.45 (after "countries" + pause)
+        tl.to(".b4-stat-2", { y: -100, opacity: 0, duration: 0.3, ease: "power3.in" }, 4.45);
+
+        // ---------- STAT 3: 2M+ Guest Favourites + heart (narration ~5.2 - 11.1s) ----------
+        tl.to(".b4-stat-3", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 4.85);
+
+        // Heart pulse at t=4.95
+        tl.to(".b4-heart", { scale: 1.25, duration: 0.2, ease: "power2.out" }, 4.95);
+        tl.to(".b4-heart", { scale: 1.0, duration: 0.2, ease: "back.out(2)" }, 5.15);
+
+        // Counter 0 -> 2 at t=4.90
+        const obj3 = { v: 0 };
+        tl.to(
+          obj3,
+          {
+            v: 2,
+            duration: 0.8,
+            ease: "power2.out",
+            onUpdate: () => {
+              const el = root.querySelector("#b4-stat-3-num");
+              if (el) el.textContent = Math.round(obj3.v);
+            },
+          },
+          4.90
+        );
+
+        // Label fade at t=5.25
+        tl.to(".b4-stat-3 .b4-label", { opacity: 1, duration: 0.4, ease: "power2.out" }, 5.25);
+
+        // Pink M+ suffix pop at t=5.75
+        tl.to(
+          ".b4-suffix-3",
+          { scale: 1.1, opacity: 1, duration: 0.2, ease: "power2.out" },
+          5.75
+        );
+        tl.to(
+          ".b4-suffix-3",
+          { scale: 1, duration: 0.15, ease: "back.out(2)" },
+          5.95
+        );
+
+        // No exit on stat 3 — must remain visible at t=11.50
+
+        window.__timelines["beat-4-numbers"] = tl;
+      })();
+    </script>
+  </div>
+</template>

@@ -1,0 +1,406 @@
+{
+  "id": "InstaPoster00001",
+  "name": "Post Reel or Carousel to Instagram",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Post to Instagram",
+        "formDescription": "Upload a video for a Reel, or 2-10 images for a Carousel, add a caption, and submit.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Post Type",
+              "fieldType": "dropdown",
+              "fieldName": "Post Type",
+              "fieldOptions": { "values": [{ "option": "Reel" }, { "option": "Carousel" }] },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Caption",
+              "fieldType": "textarea",
+              "fieldName": "Caption"
+            },
+            {
+              "fieldLabel": "Media Files",
+              "fieldType": "file",
+              "fieldName": "Media Files",
+              "multipleFiles": true,
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false,
+          "respondWithOptions": {
+            "values": { "formSubmittedText": "Got it! Posting to Instagram now. It can take up to a minute for Reels to process." }
+          }
+        }
+      },
+      "id": "94f757b8-01a8-4eaa-afed-cb2dc2ce67aa",
+      "name": "Receive Post",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [0, 304],
+      "webhookId": "cd84b396-fb29-4747-95d8-adc47fe36403"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            { "id": "a1", "name": "cloudName", "value": "dkyzflc9q", "type": "string" },
+            { "id": "a2", "name": "uploadPreset", "value": "uploadtoinsta", "type": "string" },
+            { "id": "a3", "name": "igUserId", "value": "17841423424199135", "type": "string" },
+            { "id": "a4", "name": "igToken", "value": "IGAAMSksU2hZCxBZAFliU2ZALNHBoMUpJQVAxSEh2WmhRM2J2TGRMVGQyR3BNdDVBazV4bEFRZAmpmektEX0xNMFpSYWFmSEVVMEh1SmZAaeEI3X1VNT3VPbXJGenpyUkEyTHZAwS0R5R2JlWmdoenRQX1F0bkwya0U4ZA0ZADM2ZADakc4RQZDZD", "type": "string" },
+            { "id": "a5", "name": "fbPageId", "value": "1187457397783256", "type": "string" },
+            { "id": "a6", "name": "fbPageToken", "value": "EAAV52RQBbI4BRug83iq8rkEoyymNhF6rYZBnD4qH8vSVnfCiUKNXKooFXRL2amOYVhUhAju0t795xZCQoRL6JoQAqJA2Oar7745JdDJhlVGAf81ZANbkzJHa1UPFvcPC1ZBuZCRTKpAsHGuNXfiAw7HvwKyvS3ExHZByydihGiGkfSP2b693ZBHZCqtvDJLivbJjg9WQ", "type": "string" }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "9b0648c9-7ff0-4f53-bb15-9facef24356b",
+      "name": "Config",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [224, 304],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const form = $('Receive Post').first();\nconst binary = form.binary || {};\nconst caption = form.json['Caption'] || '';\nconst postType = form.json['Post Type'] || '';\nconst out = [];\nlet i = 0;\nfor (const key of Object.keys(binary)) {\n  const b = binary[key];\n  out.push({\n    json: {\n      fileName: b.fileName || ('file_' + i),\n      mimeType: b.mimeType,\n      dataUri: 'data:' + b.mimeType + ';base64,' + b.data,\n      caption: caption,\n      postType: postType,\n      index: i\n    }\n  });\n  i++;\n}\nif (out.length === 0) { throw new Error('No files were uploaded'); }\nreturn out;"
+      },
+      "id": "a351b123-0c5c-4d4a-b0d8-a49db3547193",
+      "name": "Prepare Files",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [448, 304]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.cloudinary.com/v1_1/{{ $(\"Config\").first().json.cloudName }}/auto/upload",
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            { "name": "file", "value": "={{ $json.dataUri }}" },
+            { "name": "upload_preset", "value": "={{ $(\"Config\").first().json.uploadPreset }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8b38af25-15fa-494f-b14b-bd66615e7ed4",
+      "name": "Upload to Cloudinary",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [672, 304]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose", "version": 1 },
+          "conditions": [
+            { "id": "c1", "leftValue": "={{ $(\"Prepare Files\").item.json.postType }}", "operator": { "type": "string", "operation": "equals" }, "rightValue": "Reel" }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "5d2190c0-5d8d-4a08-b46d-dc6e060303b0",
+      "name": "Is Reel?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [896, 176]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.instagram.com/v21.0/{{ $(\"Config\").first().json.igUserId }}/media",
+        "sendQuery": true,
+        "specifyQuery": "keypair",
+        "queryParameters": {
+          "parameters": [
+            { "name": "media_type", "value": "REELS" },
+            { "name": "video_url", "value": "={{ $json.secure_url }}" },
+            { "name": "caption", "value": "={{ $(\"Prepare Files\").first().json.caption }}" },
+            { "name": "access_token", "value": "={{ $(\"Config\").first().json.igToken }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f0c12323-c1e3-4943-ad3a-8bf19f39086e",
+      "name": "Create Reel Container",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1104, 160]
+    },
+    {
+      "parameters": { "amount": 30 },
+      "id": "4e92054e-a330-40a3-a9ae-8ced83f54b3c",
+      "name": "Wait For Processing",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [1328, 160],
+      "webhookId": "504f6154-9579-42d9-ace9-cd19b11c235f"
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=https://graph.instagram.com/v21.0/{{ $(\"Create Reel Container\").first().json.id }}",
+        "sendQuery": true,
+        "specifyQuery": "keypair",
+        "queryParameters": {
+          "parameters": [
+            { "name": "fields", "value": "status_code" },
+            { "name": "access_token", "value": "={{ $(\"Config\").first().json.igToken }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ad9d77fd-f8f7-4dec-8432-57c52d8dbc49",
+      "name": "Check Reel Status",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1552, 160]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose", "version": 1 },
+          "conditions": [
+            { "id": "c2", "leftValue": "={{ $json.status_code }}", "operator": { "type": "string", "operation": "equals" }, "rightValue": "FINISHED" }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "2e82cea0-1d86-4f0e-a90e-3599e04d0653",
+      "name": "Reel Ready?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [1792, 80]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.instagram.com/v21.0/{{ $(\"Config\").first().json.igUserId }}/media_publish",
+        "sendQuery": true,
+        "specifyQuery": "keypair",
+        "queryParameters": {
+          "parameters": [
+            { "name": "creation_id", "value": "={{ $(\"Create Reel Container\").first().json.id }}" },
+            { "name": "access_token", "value": "={{ $(\"Config\").first().json.igToken }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4e1723cc-42bd-4e87-afcc-6f4b5cdf8d6d",
+      "name": "Publish Reel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1984, 160]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.instagram.com/v21.0/{{ $(\"Config\").first().json.igUserId }}/media",
+        "sendQuery": true,
+        "specifyQuery": "keypair",
+        "queryParameters": {
+          "parameters": [
+            { "name": "image_url", "value": "={{ $json.secure_url }}" },
+            { "name": "is_carousel_item", "value": "true" },
+            { "name": "access_token", "value": "={{ $(\"Config\").first().json.igToken }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d1083e3d-3f0f-49fc-a19b-ca5baf9d0afc",
+      "name": "Create Carousel Item",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1104, 464]
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": { "fieldToAggregate": [{ "fieldToAggregate": "id" }] },
+        "options": {}
+      },
+      "id": "f3c38490-5655-4d56-81f3-ab57fd323759",
+      "name": "Collect Item IDs",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [1328, 464]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.instagram.com/v21.0/{{ $(\"Config\").first().json.igUserId }}/media",
+        "sendQuery": true,
+        "specifyQuery": "keypair",
+        "queryParameters": {
+          "parameters": [
+            { "name": "media_type", "value": "CAROUSEL" },
+            { "name": "children", "value": "={{ $(\"Collect Item IDs\").first().json.id.join(\",\") }}" },
+            { "name": "caption", "value": "={{ $(\"Prepare Files\").first().json.caption }}" },
+            { "name": "access_token", "value": "={{ $(\"Config\").first().json.igToken }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fba07a59-91d3-4f67-adac-da3178a2ea4a",
+      "name": "Create Carousel Container",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1552, 464]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.instagram.com/v21.0/{{ $(\"Config\").first().json.igUserId }}/media_publish",
+        "sendQuery": true,
+        "specifyQuery": "keypair",
+        "queryParameters": {
+          "parameters": [
+            { "name": "creation_id", "value": "={{ $(\"Create Carousel Container\").first().json.id }}" },
+            { "name": "access_token", "value": "={{ $(\"Config\").first().json.igToken }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0cffd3c9-d40e-48a1-b61d-3fbcd7e911d1",
+      "name": "Publish Carousel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1760, 464]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.secure_url }}",
+        "options": { "response": { "response": { "responseFormat": "file", "outputPropertyName": "data" } } }
+      },
+      "id": "yt00aa01-0000-4000-8000-000000000001",
+      "name": "Download Video",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1104, 0]
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "upload",
+        "title": "={{ (($(\"Prepare Files\").first().json.caption || \"indiehouse.io\").split(\"\\n\")[0]).slice(0, 90) }}",
+        "binaryProperty": "data",
+        "options": {
+          "description": "={{ ($(\"Prepare Files\").first().json.caption || \"\") + \"\\n\\n#Shorts\" }}",
+          "privacyStatus": "public"
+        }
+      },
+      "id": "yt00aa01-0000-4000-8000-000000000002",
+      "name": "Upload to YouTube",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [1328, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v21.0/{{ $(\"Config\").first().json.fbPageId }}/videos",
+        "sendQuery": true,
+        "specifyQuery": "keypair",
+        "queryParameters": {
+          "parameters": [
+            { "name": "file_url", "value": "={{ $json.secure_url }}" },
+            { "name": "description", "value": "={{ $(\"Prepare Files\").first().json.caption }}" },
+            { "name": "access_token", "value": "={{ $(\"Config\").first().json.fbPageToken }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fb11aa01-0000-4000-8000-000000000001",
+      "name": "Post Reel to Facebook",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1104, 320]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v21.0/{{ $(\"Config\").first().json.fbPageId }}/photos",
+        "sendQuery": true,
+        "specifyQuery": "keypair",
+        "queryParameters": {
+          "parameters": [
+            { "name": "url", "value": "={{ $json.secure_url }}" },
+            { "name": "published", "value": "false" },
+            { "name": "access_token", "value": "={{ $(\"Config\").first().json.fbPageToken }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fb11aa01-0000-4000-8000-000000000002",
+      "name": "FB Upload Photo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1104, 640]
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": { "fieldToAggregate": [{ "fieldToAggregate": "id" }] },
+        "options": {}
+      },
+      "id": "fb11aa01-0000-4000-8000-000000000003",
+      "name": "Collect FB Photo IDs",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [1328, 640]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v21.0/{{ $(\"Config\").first().json.fbPageId }}/feed",
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ { \"message\": $(\"Prepare Files\").first().json.caption, \"attached_media\": $(\"Collect FB Photo IDs\").first().json.id.map(id => ({ \"media_fbid\": id })), \"access_token\": $(\"Config\").first().json.fbPageToken } }}",
+        "options": {}
+      },
+      "id": "fb11aa01-0000-4000-8000-000000000004",
+      "name": "FB Carousel Post",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1552, 640]
+    },
+    {
+      "parameters": {
+        "content": "## Setup (Instagram Login API)\nFill these in the **Config** node:\n1. **cloudName** / **uploadPreset** — already filled (Cloudinary).\n2. **igUserId** — your Instagram user_id (from graph.instagram.com/me?fields=user_id).\n3. **igToken** — Instagram access token from app → Instagram → 'API setup with Instagram login' → Add account.\n\nNo Facebook Page or credential needed — the token is read from Config. Refresh the token every ~60 days.",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "3c7ff28e-06a5-43ec-8517-7020e7b6afea",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [256, 32]
+    }
+  ],
+  "connections": {
+    "Receive Post": { "main": [[{ "node": "Config", "type": "main", "index": 0 }]] },
+    "Config": { "main": [[{ "node": "Prepare Files", "type": "main", "index": 0 }]] },
+    "Prepare Files": { "main": [[{ "node": "Upload to Cloudinary", "type": "main", "index": 0 }]] },
+    "Upload to Cloudinary": { "main": [[{ "node": "Is Reel?", "type": "main", "index": 0 }]] },
+    "Is Reel?": { "main": [[{ "node": "Create Reel Container", "type": "main", "index": 0 }, { "node": "Post Reel to Facebook", "type": "main", "index": 0 }, { "node": "Download Video", "type": "main", "index": 0 }], [{ "node": "Create Carousel Item", "type": "main", "index": 0 }, { "node": "FB Upload Photo", "type": "main", "index": 0 }]] },
+    "Download Video": { "main": [[{ "node": "Upload to YouTube", "type": "main", "index": 0 }]] },
+    "FB Upload Photo": { "main": [[{ "node": "Collect FB Photo IDs", "type": "main", "index": 0 }]] },
+    "Collect FB Photo IDs": { "main": [[{ "node": "FB Carousel Post", "type": "main", "index": 0 }]] },
+    "Create Reel Container": { "main": [[{ "node": "Wait For Processing", "type": "main", "index": 0 }]] },
+    "Wait For Processing": { "main": [[{ "node": "Check Reel Status", "type": "main", "index": 0 }]] },
+    "Check Reel Status": { "main": [[{ "node": "Reel Ready?", "type": "main", "index": 0 }]] },
+    "Reel Ready?": { "main": [[{ "node": "Publish Reel", "type": "main", "index": 0 }], [{ "node": "Wait For Processing", "type": "main", "index": 0 }]] },
+    "Create Carousel Item": { "main": [[{ "node": "Collect Item IDs", "type": "main", "index": 0 }]] },
+    "Collect Item IDs": { "main": [[{ "node": "Create Carousel Container", "type": "main", "index": 0 }]] },
+    "Create Carousel Container": { "main": [[{ "node": "Publish Carousel", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" }
+}

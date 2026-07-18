@@ -1,0 +1,263 @@
+<template id="beat-1-template">
+  <div data-composition-id="beat-1-hook" data-width="1920" data-height="1080" data-start="0" data-duration="3.4">
+    <div class="scene">
+      <!-- L1: Grain overlay -->
+      <canvas class="grain-canvas" width="1920" height="1080"></canvas>
+
+      <!-- L3: Wave artwork -->
+      <div class="wave-wrapper">
+        <img class="wave" src="../assets/wave-fallback-desktop.png" alt="" />
+      </div>
+
+      <!-- L5: Gradient sweep light leak -->
+      <div class="gradient-sweep"></div>
+
+      <!-- L4: Brand logo -->
+      <div class="logo-wrapper">
+        <img class="stripe-logo" src="../assets/svgs/stripe-logo.svg" alt="Stripe" />
+      </div>
+
+      <!-- L2: Hero stat -->
+      <div class="stat-wrapper">
+        <div class="stat-number-wrapper">
+          <div class="stat-number">
+            <span class="char char-dollar">$</span><span class="char char-1">1</span><span class="char char-dot">.</span><span class="char char-9">9</span><span class="char char-T">T</span>
+          </div>
+          <!-- L5: SVG underline -->
+          <svg class="underline-svg" viewBox="0 0 520 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="underline-path" d="M2 8 C60 2, 140 10, 220 5 C300 0, 400 9, 518 4" stroke="#533AFD" stroke-width="4" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="stat-label">processed in 2025</div>
+      </div>
+    </div>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=block');
+
+      [data-composition-id="beat-1-hook"] {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        position: relative;
+        background: #FFFFFF;
+        font-family: 'Inter', sans-serif;
+      }
+
+      [data-composition-id="beat-1-hook"] .scene {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      /* L1: Grain canvas */
+      [data-composition-id="beat-1-hook"] .grain-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1920px;
+        height: 1080px;
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      /* L3: Wave artwork */
+      [data-composition-id="beat-1-hook"] .wave-wrapper {
+        position: absolute;
+        top: -100px;
+        right: -200px;
+        width: 1500px;
+        height: 1280px;
+        z-index: 2;
+      }
+
+      [data-composition-id="beat-1-hook"] .wave {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.92;
+      }
+
+      /* L5: Gradient sweep */
+      [data-composition-id="beat-1-hook"] .gradient-sweep {
+        position: absolute;
+        top: 0;
+        left: -40%;
+        width: 35%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.45) 40%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.45) 60%, transparent 100%);
+        z-index: 5;
+        pointer-events: none;
+      }
+
+      /* L4: Brand logo */
+      [data-composition-id="beat-1-hook"] .logo-wrapper {
+        position: absolute;
+        top: 60px;
+        left: 80px;
+        z-index: 4;
+      }
+
+      [data-composition-id="beat-1-hook"] .stripe-logo {
+        width: 120px;
+        height: auto;
+        opacity: 0;
+      }
+
+      /* L2: Hero stat */
+      [data-composition-id="beat-1-hook"] .stat-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 120px;
+        z-index: 3;
+      }
+
+      [data-composition-id="beat-1-hook"] .stat-number-wrapper {
+        position: relative;
+        display: inline-block;
+      }
+
+      [data-composition-id="beat-1-hook"] .stat-number {
+        font-size: 280px;
+        font-weight: 300;
+        color: #000000;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        perspective: 800px;
+      }
+
+      [data-composition-id="beat-1-hook"] .char {
+        display: inline-block;
+        opacity: 0;
+        transform-style: preserve-3d;
+      }
+
+      [data-composition-id="beat-1-hook"] .underline-svg {
+        position: absolute;
+        bottom: -8px;
+        left: 5px;
+        width: 520px;
+        height: 12px;
+      }
+
+      [data-composition-id="beat-1-hook"] .underline-path {
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+      }
+
+      [data-composition-id="beat-1-hook"] .stat-label {
+        font-size: 28px;
+        font-weight: 400;
+        color: #64748D;
+        margin-top: 20px;
+        letter-spacing: 0.02em;
+        opacity: 0;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      /* L1: Seeded PRNG grain */
+      (function() {
+        var canvas = document.querySelector('[data-composition-id="beat-1-hook"] .grain-canvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var w = 1920, h = 1080;
+
+        /* Mulberry32 seeded PRNG */
+        function mulberry32(a) {
+          return function() {
+            a |= 0; a = a + 0x6D2B79F5 | 0;
+            var t = Math.imul(a ^ a >>> 15, 1 | a);
+            t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+            return ((t ^ t >>> 14) >>> 0) / 4294967296;
+          };
+        }
+
+        var rng = mulberry32(42);
+        var imgData = ctx.createImageData(w, h);
+        var d = imgData.data;
+        for (var i = 0; i < d.length; i += 4) {
+          var v = (rng() * 255) | 0;
+          d[i] = v;
+          d[i+1] = v;
+          d[i+2] = v;
+          d[i+3] = 255;
+        }
+        ctx.putImageData(imgData, 0, 0);
+      })();
+
+      /* Timeline */
+      window.__timelines = window.__timelines || {};
+      var S = '[data-composition-id="beat-1-hook"] ';
+      var tl = gsap.timeline({ paused: true });
+
+      /* L3: Wave drift — runs full duration (already visible at t=0) */
+      tl.fromTo(S+".wave-wrapper",
+        { x: 0, scale: 1 },
+        { x: 40, scale: 1.02, duration: 3.4, ease: "sine.inOut" },
+        0
+      );
+
+      /* L5: Gradient sweep pans across full duration */
+      tl.fromTo(S+".gradient-sweep",
+        { left: "-40%" },
+        { left: "120%", duration: 3.4, ease: "sine.inOut" },
+        0
+      );
+
+      /* L4: Stripe logo fade in at t=0.1 */
+      tl.fromTo(S+".stripe-logo",
+        { opacity: 0, y: -15 },
+        { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
+        0.1
+      );
+
+      /* L2: Characters cascade in from above with rotation */
+      tl.fromTo(S+".char",
+        { y: -120, opacity: 0, rotationX: -90 },
+        { y: 0, opacity: 1, rotationX: 0,
+          duration: 0.3,
+          stagger: { each: 0.06, ease: "power2.in" },
+          ease: "back.out(1.7)" },
+        0.3
+      );
+
+      /* L5: SVG underline draws at t=0.7 */
+      tl.to(S+".underline-path",
+        { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" },
+        0.7
+      );
+
+      /* L2: "processed in 2025" slides in at t=0.9 */
+      tl.fromTo(S+".stat-label",
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, duration: 0.4, ease: "power2.out" },
+        0.9
+      );
+
+      /* L2: Scale punch after characters land */
+      tl.fromTo(S+".stat-number",
+        { scale: 1 },
+        { scale: 1.05, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1 },
+        0.65
+      );
+
+      /* Exit: blur through at t=3.1 */
+      tl.to(S+".scene",
+        { opacity: 0, filter: "blur(20px)", duration: 0.3, ease: "power2.in" },
+        3.1
+      );
+
+      window.__timelines["beat-1-hook"] = tl;
+    </script>
+  </div>
+</template>

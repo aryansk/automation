@@ -1,0 +1,968 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - img "HyperFrames" [ref=e5] [cursor=pointer]
+    - generic [ref=e6]:
+      - link "URL → Video" [ref=e7] [cursor=pointer]:
+        - /url: /website
+        - text: URL → Video
+      - button "Switch to light theme" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+      - link "Create frame.md" [ref=e16] [cursor=pointer]:
+        - /url: /design
+      - button "New video" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: New video
+      - link "Log in" [ref=e21] [cursor=pointer]:
+        - /url: /api/auth/login?return_to=/
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - heading "Community Playground" [level=1] [ref=e27]
+          - link "Star us" [ref=e28] [cursor=pointer]:
+            - /url: https://github.com/heygen-com/hyperframes
+            - img [ref=e29]
+            - text: Star us
+          - link "Prompt guide" [ref=e31] [cursor=pointer]:
+            - /url: https://hyperframes.heygen.com/guides/prompting
+            - img [ref=e32]
+            - text: Prompt guide
+          - link "Contribute" [ref=e35] [cursor=pointer]:
+            - /url: https://hyperframes.heygen.com/contributing/catalog
+            - img [ref=e36]
+            - text: Contribute
+        - generic [ref=e38]:
+          - img "HyperFrames" [ref=e39]
+          - generic [ref=e40]: Made with HyperFrames
+      - generic [ref=e42]:
+        - button "Examples" [ref=e43] [cursor=pointer]
+        - button "Catalog86" [active] [ref=e44] [cursor=pointer]
+        - button "Community" [ref=e45] [cursor=pointer]
+      - generic [ref=e247]:
+        - button "All" [ref=e248] [cursor=pointer]
+        - button "Showcase20" [ref=e249] [cursor=pointer]
+        - button "Captions15" [ref=e250] [cursor=pointer]
+        - button "VFX12" [ref=e251] [cursor=pointer]
+        - button "Transitions30" [ref=e252] [cursor=pointer]
+        - button "Social9" [ref=e253] [cursor=pointer]
+        - button "Data7" [ref=e254] [cursor=pointer]
+        - button "Effects5" [ref=e255] [cursor=pointer]
+        - button "Overlays9" [ref=e256] [cursor=pointer]
+      - generic [ref=e257]:
+        - button "App Showcase App Showcase Fitness app product showcase with three floating smartphone screens showcase app 3d Try it" [ref=e258] [cursor=pointer]:
+          - img "App Showcase" [ref=e260]
+          - generic [ref=e262]:
+            - generic [ref=e263]:
+              - paragraph [ref=e264]: App Showcase
+              - paragraph [ref=e265]: Fitness app product showcase with three floating smartphone screens
+              - generic [ref=e266]:
+                - generic [ref=e267]: showcase
+                - generic [ref=e268]: app
+                - generic [ref=e269]: 3d
+            - generic [ref=e270]: Try it
+        - button "Apple Money Count Apple Money Count Apple-style finance counter that counts from $0 to $10,000, flashes green, and bursts money icons with sound. showcase finance kinetic Try it" [ref=e271] [cursor=pointer]:
+          - img "Apple Money Count" [ref=e273]
+          - generic [ref=e275]:
+            - generic [ref=e276]:
+              - paragraph [ref=e277]: Apple Money Count
+              - paragraph [ref=e278]: Apple-style finance counter that counts from $0 to $10,000, flashes green, and bursts money icons with sound.
+              - generic [ref=e279]:
+                - generic [ref=e280]: showcase
+                - generic [ref=e281]: finance
+                - generic [ref=e282]: kinetic
+            - generic [ref=e283]: Try it
+        - button "Blue Sweater Intro Video Blue Sweater Intro Video Warm AI creator intro sequence that resolves into an X follow card for @_blue_sweater_. showcase ai creator Try it" [ref=e284] [cursor=pointer]:
+          - img "Blue Sweater Intro Video" [ref=e286]
+          - generic [ref=e288]:
+            - generic [ref=e289]:
+              - paragraph [ref=e290]: Blue Sweater Intro Video
+              - paragraph [ref=e291]: Warm AI creator intro sequence that resolves into an X follow card for @_blue_sweater_.
+              - generic [ref=e292]:
+                - generic [ref=e293]: showcase
+                - generic [ref=e294]: ai
+                - generic [ref=e295]: creator
+            - generic [ref=e296]: Try it
+        - 'button "Blend Difference Blend Difference Auto-inverting text using mix-blend-mode: difference — flips between white and black per-pixel against the background text effect blend-mode Try it" [ref=e297] [cursor=pointer]':
+          - img "Blend Difference" [ref=e299]
+          - generic [ref=e301]:
+            - generic [ref=e302]:
+              - paragraph [ref=e303]: Blend Difference
+              - paragraph [ref=e304]: "Auto-inverting text using mix-blend-mode: difference — flips between white and black per-pixel against the background"
+              - generic [ref=e305]:
+                - generic [ref=e306]: text
+                - generic [ref=e307]: effect
+                - generic [ref=e308]: blend-mode
+            - generic [ref=e309]: Try it
+        - button "Clip Wipe Clip Wipe Left-to-right clip-path wipe reveal per word captions caption-style wipe Try it" [ref=e310] [cursor=pointer]:
+          - img "Clip Wipe" [ref=e312]
+          - generic [ref=e314]:
+            - generic [ref=e315]:
+              - paragraph [ref=e316]: Clip Wipe
+              - paragraph [ref=e317]: Left-to-right clip-path wipe reveal per word
+              - generic [ref=e318]:
+                - generic [ref=e319]: captions
+                - generic [ref=e320]: caption-style
+                - generic [ref=e321]: wipe
+            - generic [ref=e322]: Try it
+        - button "Editorial Emphasis Editorial Emphasis Dual-font system with dramatic size contrast for emphasis words captions caption-style editorial Try it" [ref=e323] [cursor=pointer]:
+          - img "Editorial Emphasis" [ref=e325]
+          - generic [ref=e327]:
+            - generic [ref=e328]:
+              - paragraph [ref=e329]: Editorial Emphasis
+              - paragraph [ref=e330]: Dual-font system with dramatic size contrast for emphasis words
+              - generic [ref=e331]:
+                - generic [ref=e332]: captions
+                - generic [ref=e333]: caption-style
+                - generic [ref=e334]: editorial
+            - generic [ref=e335]: Try it
+        - button "Emoji Pop Emoji Pop Emoji integration with stroked text and horizontal squeeze entrance captions caption-style emoji Try it" [ref=e336] [cursor=pointer]:
+          - img "Emoji Pop" [ref=e338]
+          - generic [ref=e340]:
+            - generic [ref=e341]:
+              - paragraph [ref=e342]: Emoji Pop
+              - paragraph [ref=e343]: Emoji integration with stroked text and horizontal squeeze entrance
+              - generic [ref=e344]:
+                - generic [ref=e345]: captions
+                - generic [ref=e346]: caption-style
+                - generic [ref=e347]: emoji
+            - generic [ref=e348]: Try it
+        - button "Glitch RGB Glitch RGB RGB chromatic aberration with CRT scanline overlay captions caption-style glitch Try it" [ref=e349] [cursor=pointer]:
+          - img "Glitch RGB" [ref=e351]
+          - generic [ref=e353]:
+            - generic [ref=e354]:
+              - paragraph [ref=e355]: Glitch RGB
+              - paragraph [ref=e356]: RGB chromatic aberration with CRT scanline overlay
+              - generic [ref=e357]:
+                - generic [ref=e358]: captions
+                - generic [ref=e359]: caption-style
+                - generic [ref=e360]: glitch
+            - generic [ref=e361]: Try it
+        - button "Gradient Fill Gradient Fill Gradient-clipped text with elastic bounce entrance captions caption-style gradient Try it" [ref=e362] [cursor=pointer]:
+          - img "Gradient Fill" [ref=e364]
+          - generic [ref=e366]:
+            - generic [ref=e367]:
+              - paragraph [ref=e368]: Gradient Fill
+              - paragraph [ref=e369]: Gradient-clipped text with elastic bounce entrance
+              - generic [ref=e370]:
+                - generic [ref=e371]: captions
+                - generic [ref=e372]: caption-style
+                - generic [ref=e373]: gradient
+            - generic [ref=e374]: Try it
+        - button "Highlight Highlight Red background sweep behind each active word, TikTok-style captions caption-style highlight Try it" [ref=e375] [cursor=pointer]:
+          - img "Highlight" [ref=e377]
+          - generic [ref=e379]:
+            - generic [ref=e380]:
+              - paragraph [ref=e381]: Highlight
+              - paragraph [ref=e382]: Red background sweep behind each active word, TikTok-style
+              - generic [ref=e383]:
+                - generic [ref=e384]: captions
+                - generic [ref=e385]: caption-style
+                - generic [ref=e386]: highlight
+            - generic [ref=e387]: Try it
+        - button "Kinetic Slam Kinetic Slam Full-screen single-word display with alternating entrance directions captions caption-style kinetic Try it" [ref=e388] [cursor=pointer]:
+          - img "Kinetic Slam" [ref=e390]
+          - generic [ref=e392]:
+            - generic [ref=e393]:
+              - paragraph [ref=e394]: Kinetic Slam
+              - paragraph [ref=e395]: Full-screen single-word display with alternating entrance directions
+              - generic [ref=e396]:
+                - generic [ref=e397]: captions
+                - generic [ref=e398]: caption-style
+                - generic [ref=e399]: kinetic
+            - generic [ref=e400]: Try it
+        - button "Matrix Decode Matrix Decode Character scramble animation before text reveal captions caption-style matrix Try it" [ref=e401] [cursor=pointer]:
+          - img "Matrix Decode" [ref=e403]
+          - generic [ref=e405]:
+            - generic [ref=e406]:
+              - paragraph [ref=e407]: Matrix Decode
+              - paragraph [ref=e408]: Character scramble animation before text reveal
+              - generic [ref=e409]:
+                - generic [ref=e410]: captions
+                - generic [ref=e411]: caption-style
+                - generic [ref=e412]: matrix
+            - generic [ref=e413]: Try it
+        - button "Neon Accent Neon Accent Multi-color neon glow accents with wiggle drift animation captions caption-style neon Try it" [ref=e414] [cursor=pointer]:
+          - img "Neon Accent" [ref=e416]
+          - generic [ref=e418]:
+            - generic [ref=e419]:
+              - paragraph [ref=e420]: Neon Accent
+              - paragraph [ref=e421]: Multi-color neon glow accents with wiggle drift animation
+              - generic [ref=e422]:
+                - generic [ref=e423]: captions
+                - generic [ref=e424]: caption-style
+                - generic [ref=e425]: neon
+            - generic [ref=e426]: Try it
+        - button "Neon Glow Neon Glow Cyan and magenta neon glow with keyword accent colors captions caption-style neon Try it" [ref=e427] [cursor=pointer]:
+          - img "Neon Glow" [ref=e429]
+          - generic [ref=e431]:
+            - generic [ref=e432]:
+              - paragraph [ref=e433]: Neon Glow
+              - paragraph [ref=e434]: Cyan and magenta neon glow with keyword accent colors
+              - generic [ref=e435]:
+                - generic [ref=e436]: captions
+                - generic [ref=e437]: caption-style
+                - generic [ref=e438]: neon
+            - generic [ref=e439]: Try it
+        - button "Parallax Layers Parallax Layers Behind-subject 3D text layering with vertical stretch effect captions caption-style parallax Try it" [ref=e440] [cursor=pointer]:
+          - img "Parallax Layers" [ref=e442]
+          - generic [ref=e444]:
+            - generic [ref=e445]:
+              - paragraph [ref=e446]: Parallax Layers
+              - paragraph [ref=e447]: Behind-subject 3D text layering with vertical stretch effect
+              - generic [ref=e448]:
+                - generic [ref=e449]: captions
+                - generic [ref=e450]: caption-style
+                - generic [ref=e451]: parallax
+            - generic [ref=e452]: Try it
+        - button "Particle Burst Particle Burst Keyword words trigger colored particle explosions captions caption-style particles Try it" [ref=e453] [cursor=pointer]:
+          - img "Particle Burst" [ref=e455]
+          - generic [ref=e457]:
+            - generic [ref=e458]:
+              - paragraph [ref=e459]: Particle Burst
+              - paragraph [ref=e460]: Keyword words trigger colored particle explosions
+              - generic [ref=e461]:
+                - generic [ref=e462]: captions
+                - generic [ref=e463]: caption-style
+                - generic [ref=e464]: particles
+            - generic [ref=e465]: Try it
+        - button "Pill Karaoke Pill Karaoke Pill-shaped container with per-word karaoke color highlight captions caption-style karaoke Try it" [ref=e466] [cursor=pointer]:
+          - img "Pill Karaoke" [ref=e468]
+          - generic [ref=e470]:
+            - generic [ref=e471]:
+              - paragraph [ref=e472]: Pill Karaoke
+              - paragraph [ref=e473]: Pill-shaped container with per-word karaoke color highlight
+              - generic [ref=e474]:
+                - generic [ref=e475]: captions
+                - generic [ref=e476]: caption-style
+                - generic [ref=e477]: karaoke
+            - generic [ref=e478]: Try it
+        - button "Texture Texture Flowing texture mask over large uppercase text — ships with 6 textures (lava, marble, metal, wood, concrete, rock), configurable via the texture variable captions caption-style texture Try it" [ref=e479] [cursor=pointer]:
+          - img "Texture" [ref=e481]
+          - generic [ref=e483]:
+            - generic [ref=e484]:
+              - paragraph [ref=e485]: Texture
+              - paragraph [ref=e486]: Flowing texture mask over large uppercase text — ships with 6 textures (lava, marble, metal, wood, concrete, rock), configurable via the texture variable
+              - generic [ref=e487]:
+                - generic [ref=e488]: captions
+                - generic [ref=e489]: caption-style
+                - generic [ref=e490]: texture
+            - generic [ref=e491]: Try it
+        - button "Weight Shift Weight Shift Elegant font-weight transition between caption lines captions caption-style minimal Try it" [ref=e492] [cursor=pointer]:
+          - img "Weight Shift" [ref=e494]
+          - generic [ref=e496]:
+            - generic [ref=e497]:
+              - paragraph [ref=e498]: Weight Shift
+              - paragraph [ref=e499]: Elegant font-weight transition between caption lines
+              - generic [ref=e500]:
+                - generic [ref=e501]: captions
+                - generic [ref=e502]: caption-style
+                - generic [ref=e503]: minimal
+            - generic [ref=e504]: Try it
+        - button "Chromatic Radial Split Chromatic Radial Split Shader transition with chromatic aberration radial split transition shader Try it" [ref=e505] [cursor=pointer]:
+          - img "Chromatic Radial Split" [ref=e507]
+          - generic [ref=e509]:
+            - generic [ref=e510]:
+              - paragraph [ref=e511]: Chromatic Radial Split
+              - paragraph [ref=e512]: Shader transition with chromatic aberration radial split
+              - generic [ref=e513]:
+                - generic [ref=e514]: transition
+                - generic [ref=e515]: shader
+            - generic [ref=e516]: Try it
+        - button "Cinematic Zoom Cinematic Zoom Shader transition with dramatic zoom blur transition shader Try it" [ref=e517] [cursor=pointer]:
+          - img "Cinematic Zoom" [ref=e519]
+          - generic [ref=e521]:
+            - generic [ref=e522]:
+              - paragraph [ref=e523]: Cinematic Zoom
+              - paragraph [ref=e524]: Shader transition with dramatic zoom blur
+              - generic [ref=e525]:
+                - generic [ref=e526]: transition
+                - generic [ref=e527]: shader
+            - generic [ref=e528]: Try it
+        - button "Cross Warp Morph Cross Warp Morph Shader transition with cross-warped morphing transition shader Try it" [ref=e529] [cursor=pointer]:
+          - img "Cross Warp Morph" [ref=e531]
+          - generic [ref=e533]:
+            - generic [ref=e534]:
+              - paragraph [ref=e535]: Cross Warp Morph
+              - paragraph [ref=e536]: Shader transition with cross-warped morphing
+              - generic [ref=e537]:
+                - generic [ref=e538]: transition
+                - generic [ref=e539]: shader
+            - generic [ref=e540]: Try it
+        - button "Data Chart Data Chart Animated bar + line chart with staggered reveal, NYT-style typography, and value labels data chart statistics Try it" [ref=e541] [cursor=pointer]:
+          - img "Data Chart" [ref=e543]
+          - generic [ref=e545]:
+            - generic [ref=e546]:
+              - paragraph [ref=e547]: Data Chart
+              - paragraph [ref=e548]: Animated bar + line chart with staggered reveal, NYT-style typography, and value labels
+              - generic [ref=e549]:
+                - generic [ref=e550]: data
+                - generic [ref=e551]: chart
+                - generic [ref=e552]: statistics
+            - generic [ref=e553]: Try it
+        - button "Domain Warp Dissolve Domain Warp Dissolve Shader transition with fractal noise domain warping transition shader Try it" [ref=e554] [cursor=pointer]:
+          - img "Domain Warp Dissolve" [ref=e556]
+          - generic [ref=e558]:
+            - generic [ref=e559]:
+              - paragraph [ref=e560]: Domain Warp Dissolve
+              - paragraph [ref=e561]: Shader transition with fractal noise domain warping
+              - generic [ref=e562]:
+                - generic [ref=e563]: transition
+                - generic [ref=e564]: shader
+            - generic [ref=e565]: Try it
+        - button "Flash Through White Flash Through White Shader transition with white flash crossfade transition shader Try it" [ref=e566] [cursor=pointer]:
+          - img "Flash Through White" [ref=e568]
+          - generic [ref=e570]:
+            - generic [ref=e571]:
+              - paragraph [ref=e572]: Flash Through White
+              - paragraph [ref=e573]: Shader transition with white flash crossfade
+              - generic [ref=e574]:
+                - generic [ref=e575]: transition
+                - generic [ref=e576]: shader
+            - generic [ref=e577]: Try it
+        - button "Flowchart Flowchart Animated decision tree with SVG connectors, sticky-note nodes, cursor interaction, and typing correction diagram flowchart interactive Try it" [ref=e578] [cursor=pointer]:
+          - img "Flowchart" [ref=e580]
+          - generic [ref=e582]:
+            - generic [ref=e583]:
+              - paragraph [ref=e584]: Flowchart
+              - paragraph [ref=e585]: Animated decision tree with SVG connectors, sticky-note nodes, cursor interaction, and typing correction
+              - generic [ref=e586]:
+                - generic [ref=e587]: diagram
+                - generic [ref=e588]: flowchart
+                - generic [ref=e589]: interactive
+            - generic [ref=e590]: Try it
+        - button "Glitch Glitch Shader transition with digital glitch artifacts transition shader Try it" [ref=e591] [cursor=pointer]:
+          - img "Glitch" [ref=e593]
+          - generic [ref=e595]:
+            - generic [ref=e596]:
+              - paragraph [ref=e597]: Glitch
+              - paragraph [ref=e598]: Shader transition with digital glitch artifacts
+              - generic [ref=e599]:
+                - generic [ref=e600]: transition
+                - generic [ref=e601]: shader
+            - generic [ref=e602]: Try it
+        - button "Grain Overlay Grain Overlay Animated film grain texture overlay using CSS keyframes — adds warmth and analog character to any composition texture grain overlay Try it" [ref=e603] [cursor=pointer]:
+          - img "Grain Overlay" [ref=e605]
+          - generic [ref=e607]:
+            - generic [ref=e608]:
+              - paragraph [ref=e609]: Grain Overlay
+              - paragraph [ref=e610]: Animated film grain texture overlay using CSS keyframes — adds warmth and analog character to any composition
+              - generic [ref=e611]:
+                - generic [ref=e612]: texture
+                - generic [ref=e613]: grain
+                - generic [ref=e614]: overlay
+            - generic [ref=e615]: Try it
+        - button "Gravitational Lens Gravitational Lens Shader transition with gravitational lensing distortion transition shader Try it" [ref=e616] [cursor=pointer]:
+          - img "Gravitational Lens" [ref=e618]
+          - generic [ref=e620]:
+            - generic [ref=e621]:
+              - paragraph [ref=e622]: Gravitational Lens
+              - paragraph [ref=e623]: Shader transition with gravitational lensing distortion
+              - generic [ref=e624]:
+                - generic [ref=e625]: transition
+                - generic [ref=e626]: shader
+            - generic [ref=e627]: Try it
+        - button "Grid Pixelate Wipe Grid Pixelate Wipe Transition effect where the screen dissolves into a grid of squares that fade out with staggered timing — use between scenes transition wipe grid Try it" [ref=e628] [cursor=pointer]:
+          - img "Grid Pixelate Wipe" [ref=e630]
+          - generic [ref=e632]:
+            - generic [ref=e633]:
+              - paragraph [ref=e634]: Grid Pixelate Wipe
+              - paragraph [ref=e635]: Transition effect where the screen dissolves into a grid of squares that fade out with staggered timing — use between scenes
+              - generic [ref=e636]:
+                - generic [ref=e637]: transition
+                - generic [ref=e638]: wipe
+                - generic [ref=e639]: grid
+            - generic [ref=e640]: Try it
+        - button "Motion Blur Motion Blur Velocity-driven motion blur — samples element position each frame and scales CSS blur + horizontal stretch proportionally to speed effect motion-blur velocity Try it" [ref=e641] [cursor=pointer]:
+          - img "Motion Blur" [ref=e643]
+          - generic [ref=e645]:
+            - generic [ref=e646]:
+              - paragraph [ref=e647]: Motion Blur
+              - paragraph [ref=e648]: Velocity-driven motion blur — samples element position each frame and scales CSS blur + horizontal stretch proportionally to speed
+              - generic [ref=e649]:
+                - generic [ref=e650]: effect
+                - generic [ref=e651]: motion-blur
+                - generic [ref=e652]: velocity
+            - generic [ref=e653]: Try it
+        - button "Instagram Follow Instagram Follow Animated Instagram follow overlay with profile card and follow button social overlay instagram Try it" [ref=e654] [cursor=pointer]:
+          - img "Instagram Follow" [ref=e656]
+          - generic [ref=e658]:
+            - generic [ref=e659]:
+              - paragraph [ref=e660]: Instagram Follow
+              - paragraph [ref=e661]: Animated Instagram follow overlay with profile card and follow button
+              - generic [ref=e662]:
+                - generic [ref=e663]: social
+                - generic [ref=e664]: overlay
+                - generic [ref=e665]: instagram
+            - generic [ref=e666]: Try it
+        - button "iOS 26 Liquid Glass Home Screen iOS 26 Liquid Glass Home Screen 3D iPhone with a normal iOS 26 home screen, liquid glass app icons, shader wallpaper, dock, and fluid glass notifications that drop from the status area onto a GLTF device model. liquid-glass-html-in-canvas webgpu 3d Try it" [ref=e667] [cursor=pointer]:
+          - img "iOS 26 Liquid Glass Home Screen" [ref=e669]
+          - generic [ref=e671]:
+            - generic [ref=e672]:
+              - paragraph [ref=e673]: iOS 26 Liquid Glass Home Screen
+              - paragraph [ref=e674]: 3D iPhone with a normal iOS 26 home screen, liquid glass app icons, shader wallpaper, dock, and fluid glass notifications that drop from the status area onto a GLTF device model.
+              - generic [ref=e675]:
+                - generic [ref=e676]: liquid-glass-html-in-canvas
+                - generic [ref=e677]: webgpu
+                - generic [ref=e678]: 3d
+            - generic [ref=e679]: Try it
+        - button "Light Leak Light Leak Shader transition with cinematic light leak overlay transition shader Try it" [ref=e680] [cursor=pointer]:
+          - img "Light Leak" [ref=e682]
+          - generic [ref=e684]:
+            - generic [ref=e685]:
+              - paragraph [ref=e686]: Light Leak
+              - paragraph [ref=e687]: Shader transition with cinematic light leak overlay
+              - generic [ref=e688]:
+                - generic [ref=e689]: transition
+                - generic [ref=e690]: shader
+            - generic [ref=e691]: Try it
+        - button "Liquid Glass Context Menu Liquid Glass Context Menu Frosted glass context menu panel drifting over an aurora shader background html-in-canvas liquid-glass-html-in-canvas webgpu Try it" [ref=e692] [cursor=pointer]:
+          - img "Liquid Glass Context Menu" [ref=e694]
+          - generic [ref=e696]:
+            - generic [ref=e697]:
+              - paragraph [ref=e698]: Liquid Glass Context Menu
+              - paragraph [ref=e699]: Frosted glass context menu panel drifting over an aurora shader background
+              - generic [ref=e700]:
+                - generic [ref=e701]: html-in-canvas
+                - generic [ref=e702]: liquid-glass-html-in-canvas
+                - generic [ref=e703]: webgpu
+            - generic [ref=e704]: Try it
+        - button "Liquid Glass Media Controls Liquid Glass Media Controls Frosted glass media control panels spreading over an aurora shader background html-in-canvas liquid-glass-html-in-canvas webgpu Try it" [ref=e705] [cursor=pointer]:
+          - img "Liquid Glass Media Controls" [ref=e707]
+          - generic [ref=e709]:
+            - generic [ref=e710]:
+              - paragraph [ref=e711]: Liquid Glass Media Controls
+              - paragraph [ref=e712]: Frosted glass media control panels spreading over an aurora shader background
+              - generic [ref=e713]:
+                - generic [ref=e714]: html-in-canvas
+                - generic [ref=e715]: liquid-glass-html-in-canvas
+                - generic [ref=e716]: webgpu
+            - generic [ref=e717]: Try it
+        - button "Liquid Glass Notification Liquid Glass Notification Frosted glass notification cards floating over an aurora shader background html-in-canvas liquid-glass-html-in-canvas webgpu Try it" [ref=e718] [cursor=pointer]:
+          - img "Liquid Glass Notification" [ref=e720]
+          - generic [ref=e722]:
+            - generic [ref=e723]:
+              - paragraph [ref=e724]: Liquid Glass Notification
+              - paragraph [ref=e725]: Frosted glass notification cards floating over an aurora shader background
+              - generic [ref=e726]:
+                - generic [ref=e727]: html-in-canvas
+                - generic [ref=e728]: liquid-glass-html-in-canvas
+                - generic [ref=e729]: webgpu
+            - generic [ref=e730]: Try it
+        - button "Liquid Glass Widgets Liquid Glass Widgets Frosted glass stat cards, showcase panel and pill chips over an aurora shader background html-in-canvas liquid-glass-html-in-canvas webgpu Try it" [ref=e731] [cursor=pointer]:
+          - img "Liquid Glass Widgets" [ref=e733]
+          - generic [ref=e735]:
+            - generic [ref=e736]:
+              - paragraph [ref=e737]: Liquid Glass Widgets
+              - paragraph [ref=e738]: Frosted glass stat cards, showcase panel and pill chips over an aurora shader background
+              - generic [ref=e739]:
+                - generic [ref=e740]: html-in-canvas
+                - generic [ref=e741]: liquid-glass-html-in-canvas
+                - generic [ref=e742]: webgpu
+            - generic [ref=e743]: Try it
+        - button "Logo Outro Logo Outro Cinematic logo reveal with piece-by-piece assembly, glow bloom, tagline fade-in, and URL pill branding outro logo Try it" [ref=e744] [cursor=pointer]:
+          - img "Logo Outro" [ref=e746]
+          - generic [ref=e748]:
+            - generic [ref=e749]:
+              - paragraph [ref=e750]: Logo Outro
+              - paragraph [ref=e751]: Cinematic logo reveal with piece-by-piece assembly, glow bloom, tagline fade-in, and URL pill
+              - generic [ref=e752]:
+                - generic [ref=e753]: branding
+                - generic [ref=e754]: outro
+                - generic [ref=e755]: logo
+            - generic [ref=e756]: Try it
+        - button "macOS Notification macOS Notification Animated macOS-style notification banner with app icon and message social overlay notification Try it" [ref=e757] [cursor=pointer]:
+          - img "macOS Notification" [ref=e759]
+          - generic [ref=e761]:
+            - generic [ref=e762]:
+              - paragraph [ref=e763]: macOS Notification
+              - paragraph [ref=e764]: Animated macOS-style notification banner with app icon and message
+              - generic [ref=e765]:
+                - generic [ref=e766]: social
+                - generic [ref=e767]: overlay
+                - generic [ref=e768]: notification
+            - generic [ref=e769]: Try it
+        - button "macOS Tahoe Liquid Glass Desktop macOS Tahoe Liquid Glass Desktop 3D MacBook with a macOS Tahoe-style desktop, glass menu bar, Finder window, dock, and cinematic device camera move. html-in-canvas 3d macos Try it" [ref=e770] [cursor=pointer]:
+          - img "macOS Tahoe Liquid Glass Desktop" [ref=e772]
+          - generic [ref=e774]:
+            - generic [ref=e775]:
+              - paragraph [ref=e776]: macOS Tahoe Liquid Glass Desktop
+              - paragraph [ref=e777]: 3D MacBook with a macOS Tahoe-style desktop, glass menu bar, Finder window, dock, and cinematic device camera move.
+              - generic [ref=e778]:
+                - generic [ref=e779]: html-in-canvas
+                - generic [ref=e780]: 3d
+                - generic [ref=e781]: macos
+            - generic [ref=e782]: Try it
+        - button "North Korea Locked Down North Korea Locked Down Realistic map zoom into North Korea with a red scribble circle, locked-down pop-up label, and reddish editorial wash. showcase map annotation Try it" [ref=e783] [cursor=pointer]:
+          - img "North Korea Locked Down" [ref=e785]
+          - generic [ref=e787]:
+            - generic [ref=e788]:
+              - paragraph [ref=e789]: North Korea Locked Down
+              - paragraph [ref=e790]: Realistic map zoom into North Korea with a red scribble circle, locked-down pop-up label, and reddish editorial wash.
+              - generic [ref=e791]:
+                - generic [ref=e792]: showcase
+                - generic [ref=e793]: map
+                - generic [ref=e794]: annotation
+            - generic [ref=e795]: Try it
+        - button "NYC Paris Flight NYC Paris Flight Apple-style realistic map animation with a plane flying from New York to Paris, marker circle, landing pop, and sound effects. showcase travel map Try it" [ref=e796] [cursor=pointer]:
+          - img "NYC Paris Flight" [ref=e798]
+          - generic [ref=e800]:
+            - generic [ref=e801]:
+              - paragraph [ref=e802]: NYC Paris Flight
+              - paragraph [ref=e803]: Apple-style realistic map animation with a plane flying from New York to Paris, marker circle, landing pop, and sound effects.
+              - generic [ref=e804]:
+                - generic [ref=e805]: showcase
+                - generic [ref=e806]: travel
+                - generic [ref=e807]: map
+            - generic [ref=e808]: Try it
+        - button "Parallax Unzoom Parallax Unzoom Reveal transition — focus card scales down from full frame as siblings parallax in to form a grid (reverse of parallax-zoom) transition reveal unzoom Try it" [ref=e809] [cursor=pointer]:
+          - img "Parallax Unzoom" [ref=e811]
+          - generic [ref=e813]:
+            - generic [ref=e814]:
+              - paragraph [ref=e815]: Parallax Unzoom
+              - paragraph [ref=e816]: Reveal transition — focus card scales down from full frame as siblings parallax in to form a grid (reverse of parallax-zoom)
+              - generic [ref=e817]:
+                - generic [ref=e818]: transition
+                - generic [ref=e819]: reveal
+                - generic [ref=e820]: unzoom
+            - generic [ref=e821]: Try it
+        - button "Parallax Zoom Parallax Zoom Center card scales up to fill the frame while siblings parallax outward — inspired by the eBay Playbook hero transition transition zoom parallax Try it" [ref=e822] [cursor=pointer]:
+          - img "Parallax Zoom" [ref=e824]
+          - generic [ref=e826]:
+            - generic [ref=e827]:
+              - paragraph [ref=e828]: Parallax Zoom
+              - paragraph [ref=e829]: Center card scales up to fill the frame while siblings parallax outward — inspired by the eBay Playbook hero transition
+              - generic [ref=e830]:
+                - generic [ref=e831]: transition
+                - generic [ref=e832]: zoom
+                - generic [ref=e833]: parallax
+            - generic [ref=e834]: Try it
+        - button "Reddit Post Card Reddit Post Card Animated Reddit post card overlay with upvotes and comments social overlay reddit Try it" [ref=e835] [cursor=pointer]:
+          - img "Reddit Post Card" [ref=e837]
+          - generic [ref=e839]:
+            - generic [ref=e840]:
+              - paragraph [ref=e841]: Reddit Post Card
+              - paragraph [ref=e842]: Animated Reddit post card overlay with upvotes and comments
+              - generic [ref=e843]:
+                - generic [ref=e844]: social
+                - generic [ref=e845]: overlay
+                - generic [ref=e846]: reddit
+            - generic [ref=e847]: Try it
+        - button "Ridged Burn Ridged Burn Shader transition with ridged turbulence burn effect transition shader Try it" [ref=e848] [cursor=pointer]:
+          - img "Ridged Burn" [ref=e850]
+          - generic [ref=e852]:
+            - generic [ref=e853]:
+              - paragraph [ref=e854]: Ridged Burn
+              - paragraph [ref=e855]: Shader transition with ridged turbulence burn effect
+              - generic [ref=e856]:
+                - generic [ref=e857]: transition
+                - generic [ref=e858]: shader
+            - generic [ref=e859]: Try it
+        - button "Ripple Waves Ripple Waves Shader transition with concentric ripple wave distortion transition shader Try it" [ref=e860] [cursor=pointer]:
+          - img "Ripple Waves" [ref=e862]
+          - generic [ref=e864]:
+            - generic [ref=e865]:
+              - paragraph [ref=e866]: Ripple Waves
+              - paragraph [ref=e867]: Shader transition with concentric ripple wave distortion
+              - generic [ref=e868]:
+                - generic [ref=e869]: transition
+                - generic [ref=e870]: shader
+            - generic [ref=e871]: Try it
+        - button "SDF Iris SDF Iris Shader transition with signed distance field iris reveal transition shader Try it" [ref=e872] [cursor=pointer]:
+          - img "SDF Iris" [ref=e874]
+          - generic [ref=e876]:
+            - generic [ref=e877]:
+              - paragraph [ref=e878]: SDF Iris
+              - paragraph [ref=e879]: Shader transition with signed distance field iris reveal
+              - generic [ref=e880]:
+                - generic [ref=e881]: transition
+                - generic [ref=e882]: shader
+            - generic [ref=e883]: Try it
+        - button "Shimmer Sweep Shimmer Sweep Animated light sweep across text or elements using a CSS gradient mask — ideal for AI accents and premium reveals text shimmer highlight Try it" [ref=e884] [cursor=pointer]:
+          - img "Shimmer Sweep" [ref=e886]
+          - generic [ref=e888]:
+            - generic [ref=e889]:
+              - paragraph [ref=e890]: Shimmer Sweep
+              - paragraph [ref=e891]: Animated light sweep across text or elements using a CSS gradient mask — ideal for AI accents and premium reveals
+              - generic [ref=e892]:
+                - generic [ref=e893]: text
+                - generic [ref=e894]: shimmer
+                - generic [ref=e895]: highlight
+            - generic [ref=e896]: Try it
+        - button "Spain Map Spain Map Animated Spain choropleth by autonomous community with staggered reveals and gradient legend — D3 conic conformal projection data map geography Try it" [ref=e897] [cursor=pointer]:
+          - img "Spain Map" [ref=e899]
+          - generic [ref=e901]:
+            - generic [ref=e902]:
+              - paragraph [ref=e903]: Spain Map
+              - paragraph [ref=e904]: Animated Spain choropleth by autonomous community with staggered reveals and gradient legend — D3 conic conformal projection
+              - generic [ref=e905]:
+                - generic [ref=e906]: data
+                - generic [ref=e907]: map
+                - generic [ref=e908]: geography
+            - generic [ref=e909]: Try it
+        - button "Spotify Now Playing Spotify Now Playing Animated Spotify now-playing card with album art and progress bar social overlay spotify Try it" [ref=e910] [cursor=pointer]:
+          - img "Spotify Now Playing" [ref=e912]
+          - generic [ref=e914]:
+            - generic [ref=e915]:
+              - paragraph [ref=e916]: Spotify Now Playing
+              - paragraph [ref=e917]: Animated Spotify now-playing card with album art and progress bar
+              - generic [ref=e918]:
+                - generic [ref=e919]: social
+                - generic [ref=e920]: overlay
+                - generic [ref=e921]: spotify
+            - generic [ref=e922]: Try it
+        - button "Swirl Vortex Swirl Vortex Shader transition with swirling vortex distortion transition shader Try it" [ref=e923] [cursor=pointer]:
+          - img "Swirl Vortex" [ref=e925]
+          - generic [ref=e927]:
+            - generic [ref=e928]:
+              - paragraph [ref=e929]: Swirl Vortex
+              - paragraph [ref=e930]: Shader transition with swirling vortex distortion
+              - generic [ref=e931]:
+                - generic [ref=e932]: transition
+                - generic [ref=e933]: shader
+            - generic [ref=e934]: Try it
+        - button "Texture Mask Text Texture Mask Text CSS luminance masks that cut holes through letterforms - 66 pre-built texture masks from ambientCG PBR color maps text texture mask Try it" [ref=e935] [cursor=pointer]:
+          - img "Texture Mask Text" [ref=e937]
+          - generic [ref=e939]:
+            - generic [ref=e940]:
+              - paragraph [ref=e941]: Texture Mask Text
+              - paragraph [ref=e942]: CSS luminance masks that cut holes through letterforms - 66 pre-built texture masks from ambientCG PBR color maps
+              - generic [ref=e943]:
+                - generic [ref=e944]: text
+                - generic [ref=e945]: texture
+                - generic [ref=e946]: mask
+            - generic [ref=e947]: Try it
+        - button "Thermal Distortion Thermal Distortion Shader transition with heat haze thermal distortion transition shader Try it" [ref=e948] [cursor=pointer]:
+          - img "Thermal Distortion" [ref=e950]
+          - generic [ref=e952]:
+            - generic [ref=e953]:
+              - paragraph [ref=e954]: Thermal Distortion
+              - paragraph [ref=e955]: Shader transition with heat haze thermal distortion
+              - generic [ref=e956]:
+                - generic [ref=e957]: transition
+                - generic [ref=e958]: shader
+            - generic [ref=e959]: Try it
+        - button "TikTok Follow TikTok Follow Animated TikTok follow overlay with profile card and follow button social overlay tiktok Try it" [ref=e960] [cursor=pointer]:
+          - img "TikTok Follow" [ref=e962]
+          - generic [ref=e964]:
+            - generic [ref=e965]:
+              - paragraph [ref=e966]: TikTok Follow
+              - paragraph [ref=e967]: Animated TikTok follow overlay with profile card and follow button
+              - generic [ref=e968]:
+                - generic [ref=e969]: social
+                - generic [ref=e970]: overlay
+                - generic [ref=e971]: tiktok
+            - generic [ref=e972]: Try it
+        - button "3D Transitions 3D Transitions Showcase of 3D perspective flip and rotate transitions transition showcase Try it" [ref=e973] [cursor=pointer]:
+          - img "3D Transitions" [ref=e975]
+          - generic [ref=e977]:
+            - generic [ref=e978]:
+              - paragraph [ref=e979]: 3D Transitions
+              - paragraph [ref=e980]: Showcase of 3D perspective flip and rotate transitions
+              - generic [ref=e981]:
+                - generic [ref=e982]: transition
+                - generic [ref=e983]: showcase
+            - generic [ref=e984]: Try it
+        - button "Blur Transitions Blur Transitions Showcase of blur-based transitions between scenes transition showcase Try it" [ref=e985] [cursor=pointer]:
+          - img "Blur Transitions" [ref=e987]
+          - generic [ref=e989]:
+            - generic [ref=e990]:
+              - paragraph [ref=e991]: Blur Transitions
+              - paragraph [ref=e992]: Showcase of blur-based transitions between scenes
+              - generic [ref=e993]:
+                - generic [ref=e994]: transition
+                - generic [ref=e995]: showcase
+            - generic [ref=e996]: Try it
+        - button "Cover Transitions Cover Transitions Showcase of cover/uncover slide transitions transition showcase Try it" [ref=e997] [cursor=pointer]:
+          - img "Cover Transitions" [ref=e999]
+          - generic [ref=e1001]:
+            - generic [ref=e1002]:
+              - paragraph [ref=e1003]: Cover Transitions
+              - paragraph [ref=e1004]: Showcase of cover/uncover slide transitions
+              - generic [ref=e1005]:
+                - generic [ref=e1006]: transition
+                - generic [ref=e1007]: showcase
+            - generic [ref=e1008]: Try it
+        - button "Destruction Transitions Destruction Transitions Showcase of destructive break-apart transitions transition showcase Try it" [ref=e1009] [cursor=pointer]:
+          - img "Destruction Transitions" [ref=e1011]
+          - generic [ref=e1013]:
+            - generic [ref=e1014]:
+              - paragraph [ref=e1015]: Destruction Transitions
+              - paragraph [ref=e1016]: Showcase of destructive break-apart transitions
+              - generic [ref=e1017]:
+                - generic [ref=e1018]: transition
+                - generic [ref=e1019]: showcase
+            - generic [ref=e1020]: Try it
+        - button "Dissolve Transitions Dissolve Transitions Showcase of dissolve and fade transitions transition showcase Try it" [ref=e1021] [cursor=pointer]:
+          - img "Dissolve Transitions" [ref=e1023]
+          - generic [ref=e1025]:
+            - generic [ref=e1026]:
+              - paragraph [ref=e1027]: Dissolve Transitions
+              - paragraph [ref=e1028]: Showcase of dissolve and fade transitions
+              - generic [ref=e1029]:
+                - generic [ref=e1030]: transition
+                - generic [ref=e1031]: showcase
+            - generic [ref=e1032]: Try it
+        - button "Distortion Transitions Distortion Transitions Showcase of warp and distortion transitions transition showcase Try it" [ref=e1033] [cursor=pointer]:
+          - img "Distortion Transitions" [ref=e1035]
+          - generic [ref=e1037]:
+            - generic [ref=e1038]:
+              - paragraph [ref=e1039]: Distortion Transitions
+              - paragraph [ref=e1040]: Showcase of warp and distortion transitions
+              - generic [ref=e1041]:
+                - generic [ref=e1042]: transition
+                - generic [ref=e1043]: showcase
+            - generic [ref=e1044]: Try it
+        - button "Grid Transitions Grid Transitions Showcase of grid-based tile transitions transition showcase Try it" [ref=e1045] [cursor=pointer]:
+          - img "Grid Transitions" [ref=e1047]
+          - generic [ref=e1049]:
+            - generic [ref=e1050]:
+              - paragraph [ref=e1051]: Grid Transitions
+              - paragraph [ref=e1052]: Showcase of grid-based tile transitions
+              - generic [ref=e1053]:
+                - generic [ref=e1054]: transition
+                - generic [ref=e1055]: showcase
+            - generic [ref=e1056]: Try it
+        - button "Light Transitions Light Transitions Showcase of light-based glow and flash transitions transition showcase Try it" [ref=e1057] [cursor=pointer]:
+          - img "Light Transitions" [ref=e1059]
+          - generic [ref=e1061]:
+            - generic [ref=e1062]:
+              - paragraph [ref=e1063]: Light Transitions
+              - paragraph [ref=e1064]: Showcase of light-based glow and flash transitions
+              - generic [ref=e1065]:
+                - generic [ref=e1066]: transition
+                - generic [ref=e1067]: showcase
+            - generic [ref=e1068]: Try it
+        - button "Mechanical Transitions Mechanical Transitions Showcase of mechanical shutter and iris transitions transition showcase Try it" [ref=e1069] [cursor=pointer]:
+          - img "Mechanical Transitions" [ref=e1071]
+          - generic [ref=e1073]:
+            - generic [ref=e1074]:
+              - paragraph [ref=e1075]: Mechanical Transitions
+              - paragraph [ref=e1076]: Showcase of mechanical shutter and iris transitions
+              - generic [ref=e1077]:
+                - generic [ref=e1078]: transition
+                - generic [ref=e1079]: showcase
+            - generic [ref=e1080]: Try it
+        - button "Other Transitions Other Transitions Showcase of miscellaneous creative transitions transition showcase Try it" [ref=e1081] [cursor=pointer]:
+          - img "Other Transitions" [ref=e1083]
+          - generic [ref=e1085]:
+            - generic [ref=e1086]:
+              - paragraph [ref=e1087]: Other Transitions
+              - paragraph [ref=e1088]: Showcase of miscellaneous creative transitions
+              - generic [ref=e1089]:
+                - generic [ref=e1090]: transition
+                - generic [ref=e1091]: showcase
+            - generic [ref=e1092]: Try it
+        - button "Push Transitions Push Transitions Showcase of push and slide transitions transition showcase Try it" [ref=e1093] [cursor=pointer]:
+          - img "Push Transitions" [ref=e1095]
+          - generic [ref=e1097]:
+            - generic [ref=e1098]:
+              - paragraph [ref=e1099]: Push Transitions
+              - paragraph [ref=e1100]: Showcase of push and slide transitions
+              - generic [ref=e1101]:
+                - generic [ref=e1102]: transition
+                - generic [ref=e1103]: showcase
+            - generic [ref=e1104]: Try it
+        - button "Radial Transitions Radial Transitions Showcase of radial wipe and reveal transitions transition showcase Try it" [ref=e1105] [cursor=pointer]:
+          - img "Radial Transitions" [ref=e1107]
+          - generic [ref=e1109]:
+            - generic [ref=e1110]:
+              - paragraph [ref=e1111]: Radial Transitions
+              - paragraph [ref=e1112]: Showcase of radial wipe and reveal transitions
+              - generic [ref=e1113]:
+                - generic [ref=e1114]: transition
+                - generic [ref=e1115]: showcase
+            - generic [ref=e1116]: Try it
+        - button "Scale Transitions Scale Transitions Showcase of scale and zoom transitions transition showcase Try it" [ref=e1117] [cursor=pointer]:
+          - img "Scale Transitions" [ref=e1119]
+          - generic [ref=e1121]:
+            - generic [ref=e1122]:
+              - paragraph [ref=e1123]: Scale Transitions
+              - paragraph [ref=e1124]: Showcase of scale and zoom transitions
+              - generic [ref=e1125]:
+                - generic [ref=e1126]: transition
+                - generic [ref=e1127]: showcase
+            - generic [ref=e1128]: Try it
+        - button "3D UI Reveal 3D UI Reveal Perspective 3D reveal animation for UI elements showcase 3d reveal Try it" [ref=e1129] [cursor=pointer]:
+          - img "3D UI Reveal" [ref=e1131]
+          - generic [ref=e1133]:
+            - generic [ref=e1134]:
+              - paragraph [ref=e1135]: 3D UI Reveal
+              - paragraph [ref=e1136]: Perspective 3D reveal animation for UI elements
+              - generic [ref=e1137]:
+                - generic [ref=e1138]: showcase
+                - generic [ref=e1139]: 3d
+                - generic [ref=e1140]: reveal
+            - generic [ref=e1141]: Try it
+        - button "US Map US Map Animated US choropleth map with staggered state reveals, value labels, and gradient legend — pure inline SVG with GSAP data map geography Try it" [ref=e1142] [cursor=pointer]:
+          - img "US Map" [ref=e1144]
+          - generic [ref=e1146]:
+            - generic [ref=e1147]:
+              - paragraph [ref=e1148]: US Map
+              - paragraph [ref=e1149]: Animated US choropleth map with staggered state reveals, value labels, and gradient legend — pure inline SVG with GSAP
+              - generic [ref=e1150]:
+                - generic [ref=e1151]: data
+                - generic [ref=e1152]: map
+                - generic [ref=e1153]: geography
+            - generic [ref=e1154]: Try it
+        - button "US Bubble Map US Bubble Map Animated US bubble map with proportional city markers, value callouts, and connection lines — composable with us-map data map geography Try it" [ref=e1155] [cursor=pointer]:
+          - img "US Bubble Map" [ref=e1157]
+          - generic [ref=e1159]:
+            - generic [ref=e1160]:
+              - paragraph [ref=e1161]: US Bubble Map
+              - paragraph [ref=e1162]: Animated US bubble map with proportional city markers, value callouts, and connection lines — composable with us-map
+              - generic [ref=e1163]:
+                - generic [ref=e1164]: data
+                - generic [ref=e1165]: map
+                - generic [ref=e1166]: geography
+            - generic [ref=e1167]: Try it
+        - button "US Flow Map US Flow Map Animated connection arcs between US cities over a base map — composable origin-destination flow visualization data map geography Try it" [ref=e1168] [cursor=pointer]:
+          - img "US Flow Map" [ref=e1170]
+          - generic [ref=e1172]:
+            - generic [ref=e1173]:
+              - paragraph [ref=e1174]: US Flow Map
+              - paragraph [ref=e1175]: Animated connection arcs between US cities over a base map — composable origin-destination flow visualization
+              - generic [ref=e1176]:
+                - generic [ref=e1177]: data
+                - generic [ref=e1178]: map
+                - generic [ref=e1179]: geography
+            - generic [ref=e1180]: Try it
+        - button "US Hex Grid Map US Hex Grid Map Animated hexagonal tile grid map — each state as an equal-weight hex with data fill and abbreviation label data map geography Try it" [ref=e1181] [cursor=pointer]:
+          - img "US Hex Grid Map" [ref=e1183]
+          - generic [ref=e1185]:
+            - generic [ref=e1186]:
+              - paragraph [ref=e1187]: US Hex Grid Map
+              - paragraph [ref=e1188]: Animated hexagonal tile grid map — each state as an equal-weight hex with data fill and abbreviation label
+              - generic [ref=e1189]:
+                - generic [ref=e1190]: data
+                - generic [ref=e1191]: map
+                - generic [ref=e1192]: geography
+            - generic [ref=e1193]: Try it
+        - button "iPhone & MacBook 3D Showcase iPhone & MacBook 3D Showcase Real GLTF iPhone 15 Pro Max and MacBook Pro models with live HTML-in-Canvas screen content, morphing glass lens, product review camera choreography, and 360° turntable. html-in-canvas 3d device Try it" [ref=e1194] [cursor=pointer]:
+          - img "iPhone & MacBook 3D Showcase" [ref=e1196]
+          - generic [ref=e1198]:
+            - generic [ref=e1199]:
+              - paragraph [ref=e1200]: iPhone & MacBook 3D Showcase
+              - paragraph [ref=e1201]: Real GLTF iPhone 15 Pro Max and MacBook Pro models with live HTML-in-Canvas screen content, morphing glass lens, product review camera choreography, and 360° turntable.
+              - generic [ref=e1202]:
+                - generic [ref=e1203]: html-in-canvas
+                - generic [ref=e1204]: 3d
+                - generic [ref=e1205]: device
+            - generic [ref=e1206]: Try it
+        - button "Liquid Background Liquid Background Organic liquid simulation with vertex displacement on a subdivided plane. HTML content floats above rippling fluid surface with real-time wave dynamics. html-in-canvas liquid webgl Try it" [ref=e1207] [cursor=pointer]:
+          - img "Liquid Background" [ref=e1209]
+          - generic [ref=e1211]:
+            - generic [ref=e1212]:
+              - paragraph [ref=e1213]: Liquid Background
+              - paragraph [ref=e1214]: Organic liquid simulation with vertex displacement on a subdivided plane. HTML content floats above rippling fluid surface with real-time wave dynamics.
+              - generic [ref=e1215]:
+                - generic [ref=e1216]: html-in-canvas
+                - generic [ref=e1217]: liquid
+                - generic [ref=e1218]: webgl
+            - generic [ref=e1219]: Try it
+        - button "Magnetic Magnetic VFX composition block html-in-canvas webgl Try it" [ref=e1220] [cursor=pointer]:
+          - img "Magnetic" [ref=e1222]
+          - generic [ref=e1224]:
+            - generic [ref=e1225]:
+              - paragraph [ref=e1226]: Magnetic
+              - paragraph [ref=e1227]: VFX composition block
+              - generic [ref=e1228]:
+                - generic [ref=e1229]: html-in-canvas
+                - generic [ref=e1230]: webgl
+            - generic [ref=e1231]: Try it
+        - button "Portal Portal VFX composition block html-in-canvas webgl Try it" [ref=e1232] [cursor=pointer]:
+          - img "Portal" [ref=e1234]
+          - generic [ref=e1236]:
+            - generic [ref=e1237]:
+              - paragraph [ref=e1238]: Portal
+              - paragraph [ref=e1239]: VFX composition block
+              - generic [ref=e1240]:
+                - generic [ref=e1241]: html-in-canvas
+                - generic [ref=e1242]: webgl
+            - generic [ref=e1243]: Try it
+        - button "Shatter Shatter VFX composition block html-in-canvas webgl Try it" [ref=e1244] [cursor=pointer]:
+          - img "Shatter" [ref=e1246]
+          - generic [ref=e1248]:
+            - generic [ref=e1249]:
+              - paragraph [ref=e1250]: Shatter
+              - paragraph [ref=e1251]: VFX composition block
+              - generic [ref=e1252]:
+                - generic [ref=e1253]: html-in-canvas
+                - generic [ref=e1254]: webgl
+            - generic [ref=e1255]: Try it
+        - button "VFX Text Cursor VFX Text Cursor Dramatic text reveal with cursor glow, chromatic shadow rays, and directional lighting on a black stage. Canvas-based shader post-processing with spectral color edges. html-in-canvas text shader Try it" [ref=e1256] [cursor=pointer]:
+          - img "VFX Text Cursor" [ref=e1258]
+          - generic [ref=e1260]:
+            - generic [ref=e1261]:
+              - paragraph [ref=e1262]: VFX Text Cursor
+              - paragraph [ref=e1263]: Dramatic text reveal with cursor glow, chromatic shadow rays, and directional lighting on a black stage. Canvas-based shader post-processing with spectral color edges.
+              - generic [ref=e1264]:
+                - generic [ref=e1265]: html-in-canvas
+                - generic [ref=e1266]: text
+                - generic [ref=e1267]: shader
+            - generic [ref=e1268]: Try it
+        - button "Vignette Vignette Cinematic radial vignette overlay using a pure-CSS gradient — darkens the edges to pull focus toward the center vignette overlay cinematic Try it" [ref=e1269] [cursor=pointer]:
+          - img "Vignette" [ref=e1271]
+          - generic [ref=e1273]:
+            - generic [ref=e1274]:
+              - paragraph [ref=e1275]: Vignette
+              - paragraph [ref=e1276]: Cinematic radial vignette overlay using a pure-CSS gradient — darkens the edges to pull focus toward the center
+              - generic [ref=e1277]:
+                - generic [ref=e1278]: vignette
+                - generic [ref=e1279]: overlay
+                - generic [ref=e1280]: cinematic
+            - generic [ref=e1281]: Try it
+        - button "VPN YouTube Spot VPN YouTube Spot Snappy Apple-style YouTube insert showing a phone finding and installing a friendly VPN app with sound effects. app showcase youtube Try it" [ref=e1282] [cursor=pointer]:
+          - img "VPN YouTube Spot" [ref=e1284]
+          - generic [ref=e1286]:
+            - generic [ref=e1287]:
+              - paragraph [ref=e1288]: VPN YouTube Spot
+              - paragraph [ref=e1289]: Snappy Apple-style YouTube insert showing a phone finding and installing a friendly VPN app with sound effects.
+              - generic [ref=e1290]:
+                - generic [ref=e1291]: app
+                - generic [ref=e1292]: showcase
+                - generic [ref=e1293]: youtube
+            - generic [ref=e1294]: Try it
+        - button "Whip Pan Whip Pan Shader transition simulating a fast camera whip pan transition shader Try it" [ref=e1295] [cursor=pointer]:
+          - img "Whip Pan" [ref=e1297]
+          - generic [ref=e1299]:
+            - generic [ref=e1300]:
+              - paragraph [ref=e1301]: Whip Pan
+              - paragraph [ref=e1302]: Shader transition simulating a fast camera whip pan
+              - generic [ref=e1303]:
+                - generic [ref=e1304]: transition
+                - generic [ref=e1305]: shader
+            - generic [ref=e1306]: Try it
+        - button "World Map World Map Animated world choropleth with country-by-country reveal, tooltip labels, and rotating globe inset — D3 Natural Earth projection data map geography Try it" [ref=e1307] [cursor=pointer]:
+          - img "World Map" [ref=e1309]
+          - generic [ref=e1311]:
+            - generic [ref=e1312]:
+              - paragraph [ref=e1313]: World Map
+              - paragraph [ref=e1314]: Animated world choropleth with country-by-country reveal, tooltip labels, and rotating globe inset — D3 Natural Earth projection
+              - generic [ref=e1315]:
+                - generic [ref=e1316]: data
+                - generic [ref=e1317]: map
+                - generic [ref=e1318]: geography
+            - generic [ref=e1319]: Try it
+        - button "X Post Card X Post Card Animated X/Twitter post card overlay with engagement metrics social overlay twitter Try it" [ref=e1320] [cursor=pointer]:
+          - img "X Post Card" [ref=e1322]
+          - generic [ref=e1324]:
+            - generic [ref=e1325]:
+              - paragraph [ref=e1326]: X Post Card
+              - paragraph [ref=e1327]: Animated X/Twitter post card overlay with engagement metrics
+              - generic [ref=e1328]:
+                - generic [ref=e1329]: social
+                - generic [ref=e1330]: overlay
+                - generic [ref=e1331]: twitter
+            - generic [ref=e1332]: Try it
+        - button "YouTube Lower Third YouTube Lower Third Animated YouTube subscribe lower third with avatar and channel info social overlay youtube Try it" [ref=e1333] [cursor=pointer]:
+          - img "YouTube Lower Third" [ref=e1335]
+          - generic [ref=e1337]:
+            - generic [ref=e1338]:
+              - paragraph [ref=e1339]: YouTube Lower Third
+              - paragraph [ref=e1340]: Animated YouTube subscribe lower third with avatar and channel info
+              - generic [ref=e1341]:
+                - generic [ref=e1342]: social
+                - generic [ref=e1343]: overlay
+                - generic [ref=e1344]: youtube
+            - generic [ref=e1345]: Try it
+  - alert [ref=e214]

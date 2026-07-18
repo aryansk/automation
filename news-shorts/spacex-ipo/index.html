@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html data-resolution="portrait">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face { font-family:'Bungee'; font-style:normal; font-weight:400;
+    src:url('capture/assets/fonts/bungee-latin.woff2') format('woff2'); }
+  @font-face { font-family:'Barlow Condensed'; font-style:normal; font-weight:700;
+    src:url('capture/assets/fonts/barlow-condensed-700-latin.woff2') format('woff2'); }
+  @font-face { font-family:'Barlow Condensed'; font-style:normal; font-weight:900;
+    src:url('capture/assets/fonts/barlow-condensed-900-latin.woff2') format('woff2'); }
+  @font-face { font-family:'Newsreader'; font-style:normal; font-weight:200 800;
+    src:url('capture/assets/fonts/newsreader-800-latin.woff2') format('woff2'); }
+  @font-face { font-family:'Newsreader'; font-style:italic; font-weight:200 800;
+    src:url('capture/assets/fonts/newsreader-800-italic-latin.woff2') format('woff2'); }
+  @font-face { font-family:'Spline Sans Mono'; font-style:normal; font-weight:300 700;
+    src:url('capture/assets/fonts/spline-sans-mono-latin.woff2') format('woff2'); }
+  @font-face { font-family:'Hanken Grotesk'; font-style:normal; font-weight:100 900;
+    src:url('capture/assets/fonts/hanken-grotesk-latin.woff2') format('woff2'); }
+
+  #root {
+    --yellow:  #F4C542;
+    --yshadow: #C98A1E;
+    --ydark:   #8B5E0A;
+    --cream:   #F5EFE3;
+    --navy:    #1A2D4F;
+    --blue:    #2E5BAC;
+    --red:     #D44A3A;
+    --charcoal:#1A1A1A;
+    --muted:   rgba(245,239,227,0.5);
+    background: linear-gradient(175deg, #2E5BAC 0%, #1A2D4F 100%);
+    font-family: "Barlow Condensed", system-ui, sans-serif;
+  }
+
+  /* Shared scene utilities */
+  .scene-bg {
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; pointer-events:none;
+  }
+  .scene-grad {
+    position:absolute; inset:0; pointer-events:none;
+    background: linear-gradient(
+      to bottom,
+      rgba(26,45,79,0.88) 0%,
+      rgba(26,45,79,0.22) 28%,
+      rgba(26,45,79,0.22) 68%,
+      rgba(26,45,79,0.92) 100%
+    );
+  }
+  /* Clean borderless cutout — natural composite, grounding shadow only */
+  .cutout {
+    position:absolute; pointer-events:none; z-index:8;
+    filter:
+      drop-shadow(0 30px 44px rgba(8,14,30,0.62))
+      drop-shadow(0 6px 14px rgba(8,14,30,0.45));
+  }
+  /* Soft contact/ground shadow ellipse placed under a bottom-anchored subject */
+  .ground-shadow {
+    position:absolute; pointer-events:none; z-index:7;
+    border-radius:50%;
+    background:radial-gradient(ellipse at center, rgba(6,10,24,0.6) 0%, rgba(6,10,24,0.28) 45%, transparent 72%);
+    filter:blur(8px);
+  }
+  /* ── Editorial framing (from california-news example) ── */
+  .hairline {
+    position:absolute; left:60px; right:60px; height:2px;
+    background:rgba(244,197,66,0.4); transform-origin:left center; z-index:11;
+  }
+  .corner-mark { position:absolute; width:30px; height:30px; opacity:0.5; z-index:11; }
+  .corner-mark::before, .corner-mark::after { content:''; position:absolute; background:var(--yellow); }
+  .corner-mark::before { width:2px; height:30px; left:14px; top:0; }
+  .corner-mark::after  { width:30px; height:2px; left:0; top:14px; }
+  .amb-glow {
+    position:absolute; border-radius:50%; pointer-events:none; z-index:1;
+    background:radial-gradient(circle, rgba(244,197,66,0.16) 0%, rgba(244,197,66,0.04) 55%, transparent 75%);
+  }
+  /* 3D Bungee wordmarks */
+  .bungee-3d {
+    font-family:"Bungee", sans-serif;
+    font-weight:400; color:var(--yellow);
+    text-shadow:
+      3px 3px 0 var(--yshadow),
+      6px 6px 0 var(--ydark),
+      9px 9px 0 rgba(0,0,0,0.4);
+    line-height:0.87; letter-spacing:-0.01em;
+  }
+  /* CTA pill */
+  .cta-pill {
+    display:inline-block;
+    background:var(--yellow); color:var(--charcoal);
+    font-family:"Barlow Condensed", sans-serif;
+    font-weight:900; font-size:40px; letter-spacing:0.07em;
+    text-transform:uppercase; padding:24px 68px; border-radius:999px;
+    box-shadow:4px 4px 0 var(--yshadow);
+  }
+  /* Red rule */
+  .rule-red {
+    height:4px; background:var(--red);
+    transform-origin:left; width:0;
+  }
+  /* BREAKING badge */
+  .breaking-badge {
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--red); color:#fff;
+    font-family:"Barlow Condensed", sans-serif;
+    font-weight:900; font-size:26px;
+    letter-spacing:0.14em; text-transform:uppercase;
+    padding:10px 24px; border-radius:5px;
+    box-shadow:3px 3px 0 rgba(0,0,0,0.45);
+  }
+  .badge-dot { width:9px; height:9px; border-radius:50%; background:#fff; }
+  /* Bottom info strip */
+  .strip {
+    position:absolute; bottom:0; left:0; right:0;
+    padding:22px 60px;
+    font-family:"Spline Sans Mono", monospace;
+    font-size:16px; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--cream);
+    opacity:0.38; text-align:center; z-index:12;
+    border-top:1px solid rgba(245,239,227,0.1);
+  }
+</style>
+
+<!-- Film grain SVG filter -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <filter id="gf" x="0%" y="0%" width="100%" height="100%">
+      <feturbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch" result="n" />
+      <fecolormatrix type="saturate" values="0" in="n" result="g" />
+      <feblend in="SourceGraphic" in2="g" mode="overlay" result="out" />
+    </filter>
+  </defs>
+</svg>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script data-hyperframes-preview-runtime="1" src="https://cdn.jsdelivr.net/npm/@hyperframes/core/dist/hyperframe.runtime.iife.js"></script>
+</head>
+<body>
+<div data-hf-id="hf-tsem" data-composition-id="root" data-duration="26.8" data-height="1920" data-start="0" data-width="1080" id="root" style="position:relative; width:1080px; height:1920px; overflow:hidden;">
+
+<!-- Global grain + vignette layers -->
+<svg data-hf-id="hf-o9g8" data-layout-ignore="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:902;pointer-events:none;opacity:0.14;mix-blend-mode:overlay">
+  <rect data-hf-id="hf-9h0o" width="100%" height="100%" filter="url(#gf)" />
+</svg>
+<div data-hf-id="hf-5cop" data-layout-ignore="" style="position:absolute;inset:0;z-index:903;pointer-events:none;
+  background:radial-gradient(ellipse 108% 112% at 50% 50%,transparent 50%,rgba(10,18,40,0.58) 100%);"></div>
+
+<!-- ═══════════════════════════════════════════
+     SCENE 1 · 0–6.72s · BIGGEST IPO IN HISTORY
+═══════════════════════════════════════════ -->
+<div data-hf-id="hf-jlh9" id="scene_01" style="position:absolute;top:0;left:0;width:1080px;height:1920px;overflow:hidden;">
+<style>
+  #scene_01 .hf-tx { background:linear-gradient(175deg,#2E5BAC 0%,#1A2D4F 100%); }
+  #scene_01 .content {
+    position:absolute; inset:0; z-index:10;
+    display:flex; flex-direction:column; align-items:center;
+    padding:128px 72px 0; box-sizing:border-box; text-align:center;
+  }
+  #scene_01 .intro-tag {
+    font-family:"Spline Sans Mono",monospace; font-size:22px;
+    color:var(--yellow); letter-spacing:0.18em; text-transform:uppercase;
+    opacity:0.85; margin-bottom:18px;
+  }
+  #scene_01 .h-big  { font-size:172px; margin-bottom:-12px; }
+  #scene_01 .h-mid  { font-size:172px; margin-bottom:14px;  }
+  #scene_01 .h-sub  {
+    font-family:"Barlow Condensed",sans-serif; font-weight:900;
+    font-size:56px; color:var(--cream); letter-spacing:0.04em;
+    text-transform:uppercase;
+  }
+</style>
+<div data-hf-id="hf-mei6" class="hf-tx" style="width:100%;height:100%;">
+  <img data-hf-id="hf-egc5" class="scene-bg" src="capture/assets/images/s1-bg-rocket.jpeg" style="opacity:0.72;">
+  <div data-hf-id="hf-2lz5" class="scene-grad"></div>
+  <!-- Ambient glow + editorial framing -->
+  <div data-hf-id="hf-m96w" class="amb-glow" id="s1-glow" style="width:820px;height:820px;left:130px;bottom:120px;"></div>
+  <div data-hf-id="hf-jgzo" class="hairline" id="s1-hl-top" style="top:104px;"></div>
+  <div data-hf-id="hf-h5e5" class="corner-mark" style="top:88px;left:44px;"></div>
+  <div data-hf-id="hf-q5mm" class="corner-mark" style="top:88px;right:44px;"></div>
+  <!-- Hero cutout: businessman, large, bottom-anchored, chest-up framing -->
+  <div data-hf-id="hf-od16" class="ground-shadow" id="s1-gs" style="width:560px;height:90px;left:50%;transform:translateX(-50%);bottom:160px;"></div>
+  <img data-hf-id="hf-iuei" class="cutout" id="s1-hero" src="capture/assets/images/cut-businessman.png" style="width:880px;left:50%;bottom:120px;transform:translateX(-50%);">
+  <div data-hf-id="hf-mcm7" class="content">
+    <div data-hf-id="hf-2agx" class="breaking-badge" id="s1-badge" style="margin-bottom:30px;">
+      <div data-hf-id="hf-dmxj" class="badge-dot" id="s1-dot"></div>BREAKING
+    </div>
+    <div data-hf-id="hf-5sz2" class="intro-tag" id="s1-tag">SpaceX · IPO · June 13, 2026</div>
+    <div data-hf-id="hf-97ee" class="bungee-3d h-big" id="s1-h1">BIGGEST</div>
+    <div data-hf-id="hf-2660" class="bungee-3d h-mid" id="s1-h2">IPO</div>
+    <div data-hf-id="hf-8gx6" class="h-sub" id="s1-sub">in History</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SCENE 2 · 6.72–13.0s · $SPCX / $75B
+═══════════════════════════════════════════ -->
+<div data-hf-id="hf-q1uc" id="scene_02" style="position:absolute;top:0;left:0;width:1080px;height:1920px;overflow:hidden;opacity:0;z-index:2;">
+<style>
+  #scene_02 .hf-tx { background:linear-gradient(175deg,#2E5BAC 0%,#1A2D4F 100%); }
+  #scene_02 .content {
+    position:absolute; inset:0; z-index:10;
+    display:flex; flex-direction:column; align-items:center;
+    justify-content:center; text-align:center;
+    padding:120px 60px; box-sizing:border-box;
+  }
+  #scene_02 .lbl {
+    font-family:"Barlow Condensed",sans-serif; font-weight:900;
+    font-size:30px; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--cream); opacity:0.65; margin-bottom:16px;
+  }
+  #scene_02 .ticker { font-size:216px; margin-bottom:40px; }
+  #scene_02 .divider {
+    width:0; height:5px; background:var(--red);
+    margin:0 auto 52px; transform-origin:center;
+  }
+  #scene_02 .raised-lbl {
+    font-family:"Barlow Condensed",sans-serif; font-weight:900;
+    font-size:36px; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--cream); opacity:0.65; margin-bottom:8px;
+  }
+  #scene_02 .raised-val { font-size:248px; margin-bottom:36px; }
+  #scene_02 .footnote {
+    font-family:"Newsreader",Georgia,serif; font-style:italic;
+    font-size:38px; color:var(--cream); opacity:0.75;
+  }
+</style>
+<div data-hf-id="hf-laeq" class="hf-tx" style="width:100%;height:100%;">
+  <img data-hf-id="hf-1xl5" class="scene-bg" src="capture/assets/images/s2-bg-trading.png" style="opacity:0.62;">
+  <div data-hf-id="hf-vljp" class="scene-grad"></div>
+  <div data-hf-id="hf-i7rz" class="content">
+    <div data-hf-id="hf-qv8y" class="lbl" id="s2-label">Nasdaq Listing</div>
+    <div data-hf-id="hf-job6" class="bungee-3d ticker" id="s2-ticker">$SPCX</div>
+    <div data-hf-id="hf-zh1s" class="divider" id="s2-div"></div>
+    <div data-hf-id="hf-qyi7" class="raised-lbl" id="s2-rlbl">Raised Day One</div>
+    <div data-hf-id="hf-nw6n" class="bungee-3d raised-val" id="s2-val">$75B</div>
+    <div data-hf-id="hf-1qgk" class="footnote" id="s2-note">June 13, 2026</div>
+  </div>
+  <!-- Editorial framing -->
+  <div data-hf-id="hf-7vwt" class="hairline" id="s2-hl" style="top:104px;"></div>
+  <div data-hf-id="hf-x1hd" class="corner-mark" style="top:88px;left:44px;"></div>
+  <div data-hf-id="hf-9882" class="corner-mark" style="top:88px;right:44px;"></div>
+  <!-- Clean shuttle cutout launching up the right edge -->
+  <img data-hf-id="hf-4kmy" class="cutout" id="s2-rocket" src="capture/assets/images/cut-shuttle.png" style="width:340px; right:-40px; bottom:0;">
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SCENE 3 · 13.0–23.2s · $1.77 TRILLION
+═══════════════════════════════════════════ -->
+<div data-hf-id="hf-1fe0" id="scene_03" style="position:absolute;top:0;left:0;width:1080px;height:1920px;overflow:hidden;opacity:0;z-index:3;">
+<style>
+  #scene_03 .hf-tx { background:linear-gradient(175deg,#2E5BAC 0%,#1A2D4F 100%); }
+  #scene_03 .content {
+    position:absolute; inset:0; z-index:10;
+    display:flex; flex-direction:column; align-items:center;
+    justify-content:center; text-align:center;
+    padding:100px 60px; box-sizing:border-box;
+  }
+  #scene_03 .val-lbl {
+    font-family:"Barlow Condensed",sans-serif; font-weight:900;
+    font-size:30px; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--cream); opacity:0.65; margin-bottom:20px;
+  }
+  #scene_03 .val-intro {
+    font-family:"Newsreader",Georgia,serif; font-style:italic;
+    font-size:68px; color:var(--cream); opacity:0.9; margin-bottom:12px;
+  }
+  #scene_03 .val-num  { font-size:296px; margin-bottom:0; }
+  #scene_03 .val-unit {
+    font-family:"Barlow Condensed",sans-serif; font-weight:900;
+    font-size:96px; color:var(--cream); letter-spacing:0.05em;
+    text-transform:uppercase; margin-bottom:52px;
+  }
+  #scene_03 .tagline {
+    font-family:"Spline Sans Mono",monospace; font-size:24px;
+    letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--yellow); margin-bottom:52px;
+  }
+  #scene_03 .bars { width:880px; }
+  #scene_03 .bar-row { display:flex; align-items:center; gap:16px; margin-bottom:18px; }
+  #scene_03 .bar-name {
+    font-family:"Spline Sans Mono",monospace; font-size:19px;
+    color:var(--muted); width:136px; text-align:right; flex-shrink:0;
+  }
+  #scene_03 .bar-track {
+    flex:1; height:14px; background:rgba(255,255,255,0.08);
+    border-radius:7px; overflow:hidden;
+  }
+  #scene_03 .bar-fill { height:100%; border-radius:7px; width:0; }
+  #scene_03 .bar-fill.sx { background:var(--yellow); }
+  #scene_03 .bar-fill.ca { background:rgba(245,239,227,0.35); }
+  #scene_03 .bar-fill.de { background:rgba(245,239,227,0.18); }
+  #scene_03 .bar-val {
+    font-family:"Barlow Condensed",sans-serif; font-weight:700;
+    font-size:22px; color:var(--cream); width:68px;
+  }
+</style>
+<div data-hf-id="hf-lopr" class="hf-tx" style="width:100%;height:100%;">
+  <img data-hf-id="hf-g4wm" class="scene-bg" src="capture/assets/images/s3-bg-earth.png" style="opacity:0.70;">
+  <div data-hf-id="hf-wsgs" class="scene-grad"></div>
+  <div data-hf-id="hf-htgy" class="content">
+    <div data-hf-id="hf-dh48" class="val-lbl" id="s3-label">Valuation</div>
+    <div data-hf-id="hf-hw4p" class="val-intro" id="s3-intro">A staggering</div>
+    <div data-hf-id="hf-vnfu" class="bungee-3d val-num" id="s3-num">$1.77</div>
+    <div data-hf-id="hf-260e" class="val-unit" id="s3-unit">Trillion</div>
+    <div data-hf-id="hf-ekfl" class="tagline" id="s3-tag">Largest IPO Ever Recorded</div>
+    <div data-hf-id="hf-v9i9" class="bars" id="s3-bars">
+      <div data-hf-id="hf-vxho" class="bar-row">
+        <div data-hf-id="hf-j2rv" class="bar-name">SpaceX</div>
+        <div data-hf-id="hf-2kxp" class="bar-track"><div data-hf-id="hf-o2wr" class="bar-fill sx" id="bar-sx"></div></div>
+        <div data-hf-id="hf-e59i" class="bar-val">$1.77T</div>
+      </div>
+      <div data-hf-id="hf-x17o" class="bar-row">
+        <div data-hf-id="hf-b6uq" class="bar-name">Canada GDP</div>
+        <div data-hf-id="hf-dok1" class="bar-track"><div data-hf-id="hf-g8nz" class="bar-fill ca" id="bar-ca"></div></div>
+        <div data-hf-id="hf-3hyy" class="bar-val">$2.1T</div>
+      </div>
+      <div data-hf-id="hf-vual" class="bar-row">
+        <div data-hf-id="hf-m4en" class="bar-name">Germany GDP</div>
+        <div data-hf-id="hf-evh4" class="bar-track"><div data-hf-id="hf-gqav" class="bar-fill de" id="bar-de"></div></div>
+        <div data-hf-id="hf-f5jd" class="bar-val">$4.4T</div>
+      </div>
+    </div>
+  </div>
+  <!-- Editorial framing -->
+  <div data-hf-id="hf-1e8k" class="hairline" id="s3-hl" style="top:104px;"></div>
+  <div data-hf-id="hf-y8eg" class="corner-mark" style="top:88px;left:44px;"></div>
+  <div data-hf-id="hf-9mj3" class="corner-mark" style="top:88px;right:44px;"></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SCENE 4 · 23.2–26.8s · CTA
+═══════════════════════════════════════════ -->
+<div data-hf-id="hf-ayes" id="scene_04" style="position:absolute;top:0;left:0;width:1080px;height:1920px;overflow:hidden;opacity:0;z-index:4;">
+<style>
+  #scene_04 .hf-tx { background:linear-gradient(175deg,#2E5BAC 0%,#1A2D4F 100%); }
+  #scene_04 .content {
+    position:absolute; inset:0; z-index:10;
+    display:flex; flex-direction:column; align-items:center;
+    justify-content:flex-end; text-align:center;
+    padding:0 60px 286px; box-sizing:border-box;
+  }
+  #scene_04 .brand  { font-size:142px; margin-bottom:40px; }
+</style>
+<div data-hf-id="hf-m30s" class="hf-tx" style="width:100%;height:100%;">
+  <img data-hf-id="hf-1com" class="scene-bg" src="capture/assets/images/s4-bg-galaxy.jpeg" style="opacity:0.76;">
+  <div data-hf-id="hf-we5r" class="scene-grad"></div>
+  <!-- Ambient glow + framing -->
+  <div data-hf-id="hf-rjou" class="amb-glow" id="s4-glow" style="width:900px;height:900px;left:90px;top:160px;"></div>
+  <div data-hf-id="hf-079b" class="hairline" id="s4-hl" style="top:104px;"></div>
+  <div data-hf-id="hf-xu3f" class="corner-mark" style="top:88px;left:44px;"></div>
+  <div data-hf-id="hf-a0u4" class="corner-mark" style="top:88px;right:44px;"></div>
+  <!-- Astronaut clean hero cutout, bottom-anchored above the CTA -->
+  <div data-hf-id="hf-n1jg" class="ground-shadow" id="s4-gs" style="width:420px;height:78px;left:50%;transform:translateX(-50%);bottom:566px;"></div>
+  <img data-hf-id="hf-1rip" class="cutout" id="s4-astro" src="capture/assets/images/cut-astronaut.png" style="width:520px; left:50%; bottom:540px; transform:translateX(-50%);">
+  <div data-hf-id="hf-hf5x" class="content">
+    <div data-hf-id="hf-ulje" class="bungee-3d brand" id="s4-brand">SpaceX</div>
+    <div data-hf-id="hf-o562" class="cta-pill" id="s4-cta">Follow for Tech News</div>
+  </div>
+  <div data-hf-id="hf-q6a1" class="strip">SpaceX · Est. 2002 · Biggest IPO in History · $SPCX</div>
+</div>
+</div>
+
+<!-- Audio voiceover -->
+<audio data-hf-id="hf-jzni" id="voiceover" class="clip" data-start="0" data-duration="26.8" data-track-index="10" data-volume="1.0" src="narration.wav"></audio>
+
+<!-- Captions -->
+<div data-hf-id="hf-rfcm" data-composition-id="captions" id="captions" style="position:absolute;left:0;right:0;bottom:7%;z-index:950;pointer-events:none;text-align:center;">
+  <div data-hf-id="hf-onum" id="caption-stage" style="display:block; position:relative; width:1080px; height:140px;"></div>
+</div>
+
+<script>
+window.CAPTION_DATA = {
+  "scenes": { "all": { "start": 0.0, "words": [
+    {"text":"SpaceX","start":0.14,"end":0.46},
+    {"text":"just","start":0.53,"end":0.76},
+    {"text":"pulled","start":0.85,"end":1.2},
+    {"text":"off","start":1.33,"end":1.52},
+    {"text":"the","start":1.52,"end":1.76},
+    {"text":"biggest","start":1.76,"end":2.32},
+    {"text":"IPO","start":2.32,"end":2.56},
+    {"text":"in","start":2.56,"end":2.66},
+    {"text":"history.","start":2.71,"end":3.34},
+    {"text":"Elon","start":3.48,"end":3.6},
+    {"text":"Musk's","start":3.6,"end":3.99},
+    {"text":"rocket","start":3.99,"end":4.38},
+    {"text":"company","start":4.39,"end":4.88},
+    {"text":"is","start":4.88,"end":4.99},
+    {"text":"officially","start":4.99,"end":5.58},
+    {"text":"on","start":5.58,"end":5.82},
+    {"text":"NASDAQ,","start":5.82,"end":6.58},
+    {"text":"trading","start":6.72,"end":7.28},
+    {"text":"under","start":7.28,"end":7.78},
+    {"text":"ticker","start":7.78,"end":8.35},
+    {"text":"SPCX.","start":8.4,"end":9.07},
+    {"text":"They","start":9.24,"end":9.44},
+    {"text":"raised","start":9.44,"end":9.86},
+    {"text":"a","start":9.95,"end":10.04},
+    {"text":"massive","start":10.04,"end":10.64},
+    {"text":"$75","start":10.65,"end":11.25},
+    {"text":"billion","start":11.25,"end":11.85},
+    {"text":"on","start":11.85,"end":12.02},
+    {"text":"day","start":12.03,"end":12.28},
+    {"text":"one.","start":12.49,"end":12.86},
+    {"text":"The","start":13.0,"end":13.13},
+    {"text":"valuation,","start":13.13,"end":14.06},
+    {"text":"a","start":14.19,"end":14.24},
+    {"text":"staggering","start":14.24,"end":15.24},
+    {"text":"$1.77","start":15.24,"end":16.54},
+    {"text":"trillion.","start":16.54,"end":17.66},
+    {"text":"That's","start":17.8,"end":18.12},
+    {"text":"more","start":18.12,"end":18.42},
+    {"text":"than","start":18.57,"end":18.74},
+    {"text":"most","start":18.74,"end":19.05},
+    {"text":"countries'","start":19.05,"end":19.82},
+    {"text":"GDPs,","start":19.82,"end":20.32},
+    {"text":"the","start":20.48,"end":20.63},
+    {"text":"largest","start":20.63,"end":21.3},
+    {"text":"IPO","start":21.3,"end":21.54},
+    {"text":"ever","start":21.67,"end":21.97},
+    {"text":"recorded.","start":21.97,"end":23.0},
+    {"text":"Follow","start":23.2,"end":23.47},
+    {"text":"for","start":23.47,"end":23.63},
+    {"text":"daily","start":23.69,"end":24.02},
+    {"text":"tech","start":24.02,"end":24.26},
+    {"text":"news","start":24.39,"end":24.6},
+    {"text":"and","start":24.6,"end":24.76},
+    {"text":"stay","start":24.81,"end":24.99},
+    {"text":"ahead","start":24.99,"end":25.27},
+    {"text":"of","start":25.27,"end":25.38},
+    {"text":"the","start":25.38,"end":25.54},
+    {"text":"curve.","start":25.54,"end":25.98}
+  ]}},
+  "total_duration_s": 26.8
+};
+
+gsap.defaults({ overwrite: "auto" });
+
+/* Caption renderer */
+(function(){
+  var data = window.CAPTION_DATA;
+  if (!data) return;
+
+  var ALL = [];
+  Object.keys(data.scenes).forEach(function(sid){
+    var s = data.scenes[sid];
+    var off = s.start || 0;
+    (s.words || []).forEach(function(w){
+      ALL.push({text:w.text, start:w.start+off, end:w.end+off});
+    });
+  });
+
+  var GROUPS = [];
+  var cur = [];
+  ALL.forEach(function(w, i){
+    cur.push(w);
+    var nw = ALL[i+1];
+    var pause = nw ? nw.start - w.end : 0;
+    var punc  = /[.!?]$/.test(w.text);
+    if (cur.length >= 4 || !nw || punc || pause >= 0.35) {
+      GROUPS.push({words:cur.slice(), start:cur[0].start, end:cur[cur.length-1].end});
+      cur = [];
+    }
+  });
+
+  var stage = document.getElementById("caption-stage");
+  var tl = gsap.timeline({paused:true});
+
+  GROUPS.forEach(function(g, gi){
+    var el = document.createElement("div");
+    el.id = "cg-" + gi;
+    el.style.cssText = [
+      "position:absolute; left:50%; transform:translateX(-50%); bottom:0;",
+      "padding:2px 20px;",
+      "color:#FFFFFF;",
+      "font-family:'Barlow Condensed',sans-serif;",
+      "font-weight:900; font-size:46px; line-height:1.15;",
+      "letter-spacing:0.04em; text-transform:uppercase;",
+      "text-align:center; max-width:94%; box-sizing:border-box;",
+      "text-shadow:0 3px 14px rgba(0,0,0,0.95), 0 1px 4px rgba(0,0,0,0.9);",
+      "white-space:normal; opacity:0;"
+    ].join(" ");
+    el.textContent = g.words.map(function(w){ return w.text; }).join(" ");
+    stage.appendChild(el);
+
+    var nextStart  = GROUPS[gi+1] ? GROUPS[gi+1].start : (g.end + 0.4);
+    var gap        = nextStart - g.end;
+    var visibleEnd = (gap > 0 && gap <= 0.8) ? nextStart : Math.min(nextStart, g.end + 0.3);
+
+    tl.fromTo(el, {opacity:0}, {opacity:1, duration:0.12, ease:"power1.out", overwrite:"auto"}, g.start);
+    tl.to(el, {opacity:0, duration:0.1, ease:"power1.in", overwrite:"auto"}, Math.max(g.start+0.12, visibleEnd));
+  });
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["captions"] = tl;
+})();
+
+/* Master timeline */
+(function(){
+  window.__timelines = window.__timelines || {};
+  var tl = gsap.timeline({paused:true});
+  var D = 26.8;
+  var T2 = 6.72, T3 = 13.0, T4 = 23.2;
+  var s1="#scene_01 ", s2="#scene_02 ", s3="#scene_03 ", s4="#scene_04 ";
+
+  /* ─── SCENE 1 ─── */
+  tl.fromTo(s1+"#s1-hl-top",  {scaleX:0},                 {scaleX:1,duration:0.8,ease:"power2.out"},                0.15);
+  tl.fromTo(s1+"#s1-glow",    {scale:1},                  {scale:1.34,duration:1.6,ease:"sine.inOut",yoyo:true,repeat:Math.floor(T2/1.6)}, 0);
+  tl.fromTo(s1+"#s1-gs",      {opacity:0,scaleX:0.7},     {opacity:1,scaleX:1,duration:0.7,ease:"power2.out"},      0.55);
+  tl.fromTo(s1+"#s1-hero",    {y:120,opacity:0},          {y:0,opacity:1,duration:0.95,ease:"power3.out"},          0.4);
+  tl.fromTo(s1+"#s1-badge",   {y:-30,opacity:0},          {y:0,opacity:1,duration:0.52,ease:"expo.out"},            0.2);
+  tl.fromTo(s1+"#s1-dot",     {scale:1},                  {scale:1.6,opacity:0.5,duration:0.65,ease:"sine.inOut",yoyo:true,repeat:Math.floor(T2/0.65)-1}, 0.6);
+  tl.fromTo(s1+"#s1-tag",     {opacity:0,y:14},           {opacity:1,y:0,duration:0.45,ease:"power2.out"},          0.35);
+  tl.fromTo(s1+"#s1-h1",      {y:-110,opacity:0},         {y:0,opacity:1,duration:0.72,ease:"expo.out"},            0.45);
+  tl.fromTo(s1+"#s1-h2",      {y:-110,opacity:0},         {y:0,opacity:1,duration:0.68,ease:"expo.out"},            0.62);
+  tl.fromTo(s1+"#s1-sub",     {y:50,opacity:0,scale:0.88},{y:0,opacity:1,scale:1,duration:0.62,ease:"back.out(1.4)"},0.85);
+
+  /* ─── TRANSITION 1→2 ─── */
+  tl.set("#scene_02",         {opacity:1},                T2);
+  tl.set("#scene_02 .hf-tx",  {xPercent:100},             T2);
+  tl.to("#scene_01 .hf-tx",   {xPercent:-100,duration:0.5,ease:"power2.inOut"}, T2);
+  tl.to("#scene_02 .hf-tx",   {xPercent:0,   duration:0.5,ease:"power2.inOut"}, T2);
+  tl.set("#scene_01",         {opacity:0},                T2+0.5);
+
+  /* ─── SCENE 2 ─── */
+  tl.fromTo(s2+"#s2-label",   {opacity:0,y:18},           {opacity:1,y:0,duration:0.42,ease:"power2.out"},          T2+0.1);
+  tl.fromTo(s2+"#s2-ticker",  {opacity:0,scale:0.65,rotationX:85},{opacity:1,scale:1,rotationX:0,duration:0.95,ease:"back.out(1.5)"}, T2+0.28);
+  tl.fromTo(s2+"#s2-div",     {width:"0%"},               {width:"70%",duration:0.68,ease:"expo.out"},              T2+0.88);
+  tl.fromTo(s2+"#s2-rlbl",    {opacity:0,y:14},           {opacity:1,y:0,duration:0.42,ease:"power2.out"},          T2+1.05);
+  tl.fromTo(s2+"#s2-val",     {opacity:0,y:70,scale:0.78},{opacity:1,y:0,scale:1,duration:0.85,ease:"expo.out"},   T2+1.3);
+  tl.fromTo(s2+"#s2-note",    {opacity:0},                {opacity:1,duration:0.5,ease:"power1.out"},               T2+2.1);
+  tl.fromTo(s2+"#s2-hl",      {scaleX:0},                 {scaleX:1,duration:0.8,ease:"power2.out"},                T2+0.1);
+  tl.fromTo(s2+"#s2-rocket",  {y:520,opacity:0},          {y:0,opacity:1,duration:1.3,ease:"power2.out"},           T2+0.35);
+
+  /* ─── TRANSITION 2→3 ─── */
+  tl.set("#scene_03",         {opacity:1},                T3);
+  tl.set("#scene_03 .hf-tx",  {xPercent:100},             T3);
+  tl.to("#scene_02 .hf-tx",   {xPercent:-100,duration:0.5,ease:"power2.inOut"}, T3);
+  tl.to("#scene_03 .hf-tx",   {xPercent:0,   duration:0.5,ease:"power2.inOut"}, T3);
+  tl.set("#scene_02",         {opacity:0},                T3+0.5);
+
+  /* ─── SCENE 3 ─── */
+  tl.fromTo(s3+"#s3-label",   {opacity:0,y:18},           {opacity:1,y:0,duration:0.42,ease:"power2.out"},          T3+0.12);
+  tl.fromTo(s3+"#s3-intro",   {opacity:0,y:14},           {opacity:1,y:0,duration:0.48,ease:"power2.out"},          T3+0.3);
+  tl.fromTo(s3+"#s3-num",     {opacity:0,scale:0.52,y:90},{opacity:1,scale:1,y:0,duration:1.05,ease:"expo.out"},   T3+0.48);
+  tl.fromTo(s3+"#s3-unit",    {opacity:0,x:56},           {opacity:1,x:0,duration:0.62,ease:"power3.out"},          T3+0.95);
+  tl.fromTo(s3+"#s3-tag",     {opacity:0,y:14},           {opacity:1,y:0,duration:0.5,ease:"power2.out"},           T3+1.45);
+  tl.fromTo(s3+"#bar-sx",     {width:"0%"},               {width:"40%",duration:0.72,ease:"expo.out"},              T3+2.0);
+  tl.fromTo(s3+"#bar-ca",     {width:"0%"},               {width:"48%",duration:0.72,ease:"expo.out"},              T3+2.32);
+  tl.fromTo(s3+"#bar-de",     {width:"0%"},               {width:"100%",duration:0.72,ease:"expo.out"},             T3+2.64);
+  tl.fromTo(s3+"#s3-hl",      {scaleX:0},                 {scaleX:1,duration:0.8,ease:"power2.out"},                T3+0.1);
+
+  /* ─── TRANSITION 3→4 ─── */
+  tl.set("#scene_04",         {opacity:1},                T4);
+  tl.set("#scene_04 .hf-tx",  {xPercent:100},             T4);
+  tl.to("#scene_03 .hf-tx",   {xPercent:-100,duration:0.5,ease:"power2.inOut"}, T4);
+  tl.to("#scene_04 .hf-tx",   {xPercent:0,   duration:0.5,ease:"power2.inOut"}, T4);
+  tl.set("#scene_03",         {opacity:0},                T4+0.5);
+
+  /* ─── SCENE 4 ─── */
+  tl.fromTo(s4+"#s4-hl",      {scaleX:0},                 {scaleX:1,duration:0.8,ease:"power2.out"},                 T4+0.1);
+  tl.fromTo(s4+"#s4-glow",    {scale:0.85,opacity:0},     {scale:1,opacity:1,duration:1.0,ease:"power2.out"},        T4+0.05);
+  tl.fromTo(s4+"#s4-gs",      {opacity:0,scaleX:0.7},     {opacity:1,scaleX:1,duration:0.7,ease:"power2.out"},       T4+0.25);
+  tl.fromTo(s4+"#s4-astro",   {y:130,opacity:0,scale:0.9},{y:0,opacity:1,scale:1,duration:1.1,ease:"power3.out"},   T4+0.05);
+  tl.fromTo(s4+"#s4-brand",   {opacity:0,scale:0.65,letterSpacing:"0.3em"},{opacity:1,scale:1,letterSpacing:"-0.01em",duration:1.05,ease:"back.out(1.4)"}, T4+0.45);
+  tl.fromTo(s4+"#s4-cta",     {y:90,opacity:0},           {y:0,opacity:1,duration:0.82,ease:"power3.out"},           T4+0.95);
+
+  window.__timelines["root"] = tl;
+})();
+</script>
+</div></body>
+</html>

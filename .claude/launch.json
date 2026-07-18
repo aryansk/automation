@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "news-short-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["hyperframes", "preview", "--port", "3002"],
+      "cwd": "news-shorts/anthropic-30b",
+      "port": 3002
+    }
+  ]
+}

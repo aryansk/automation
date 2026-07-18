@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+    </style>
+  </head>
+  <body>
+    <div data-composition-id="main" data-width="1920" data-height="1080" data-start="0" data-duration="25">
+
+      <!-- Beat 1: The Number (0.00 – 3.40s) -->
+      <div id="beat-1" data-composition-id="beat-1-hook" data-composition-src="compositions/beat-1-hook.html" data-start="0" data-duration="3.4" data-track-index="1" data-width="1920" data-height="1080"></div>
+
+      <!-- Beat 2: The Product (3.40 – 12.00s) -->
+      <div id="beat-2" data-composition-id="beat-2-product" data-composition-src="compositions/beat-2-product.html" data-start="3.4" data-duration="8.6" data-track-index="1" data-width="1920" data-height="1080"></div>
+
+      <!-- Beat 3: The Proof (12.00 – 19.30s) -->
+      <div id="beat-3" data-composition-id="beat-3-proof" data-composition-src="compositions/beat-3-proof.html" data-start="12.0" data-duration="7.3" data-track-index="1" data-width="1920" data-height="1080"></div>
+
+      <!-- Beat 4: The Trust (19.30 – 23.00s) -->
+      <div id="beat-4" data-composition-id="beat-4-trust" data-composition-src="compositions/beat-4-trust.html" data-start="19.3" data-duration="3.7" data-track-index="1" data-width="1920" data-height="1080"></div>
+
+      <!-- Beat 5: The CTA (23.00 – 25.00s) -->
+      <div id="beat-5" data-composition-id="beat-5-cta" data-composition-src="compositions/beat-5-cta.html" data-start="23.0" data-duration="2.0" data-track-index="1" data-width="1920" data-height="1080"></div>
+
+      <!-- Narration: full script, all beats -->
+      <audio id="narration" data-start="0" data-duration="24.92" data-track-index="0" data-volume="1" src="narration.wav"></audio>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

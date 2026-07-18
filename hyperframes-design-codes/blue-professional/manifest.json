@@ -1,0 +1,43 @@
+{
+  "slug": "blue-professional",
+  "name": "Blue Professional",
+  "tagline": "Corporate parchment + cobalt primary, Space Grotesk display, Inter body",
+  "scheme": "light",
+  "density": "medium",
+  "tokens": {
+    "consumes": [
+      "primary",
+      "secondary",
+      "tertiary",
+      "accent"
+    ]
+  },
+  "defaultPalette": "blue-professional-default",
+  "defaultFontPairId": "space-grotesk-inter",
+  "supportedTones": [
+    "editorial",
+    "technical"
+  ],
+  "fonts": {
+    "headline": "Space Grotesk",
+    "body": "Inter"
+  },
+  "frames": {
+    "landscape": [],
+    "portrait": []
+  },
+  "colorTokens": [
+    {
+      "name": "light",
+      "label": "Light text"
+    },
+    {
+      "name": "positive",
+      "label": "Positive"
+    },
+    {
+      "name": "negative",
+      "label": "Negative"
+    }
+  ]
+}

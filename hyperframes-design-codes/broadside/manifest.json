@@ -1,0 +1,44 @@
+{
+  "slug": "broadside",
+  "name": "Broadside",
+  "tagline": "Industrial newsprint poster \u2014 raw cream on ink, Barlow display, fire-orange register",
+  "scheme": "light",
+  "density": "high",
+  "tokens": {
+    "consumes": [
+      "primary",
+      "secondary",
+      "tertiary",
+      "accent"
+    ]
+  },
+  "defaultPalette": "broadside-default",
+  "defaultFontPairId": "barlow-ibm-mono",
+  "supportedTones": [
+    "bold",
+    "editorial",
+    "technical"
+  ],
+  "fonts": {
+    "headline": "Barlow",
+    "body": "IBM Plex Mono"
+  },
+  "frames": {
+    "landscape": [],
+    "portrait": []
+  },
+  "colorTokens": [
+    {
+      "name": "ink-alt",
+      "label": "Ink alt"
+    },
+    {
+      "name": "cream-muted",
+      "label": "Cream muted"
+    },
+    {
+      "name": "cream-hint",
+      "label": "Cream hint"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+<template id="captions-template">
+  <div data-composition-id="captions" data-width="1080" data-height="1080" data-start="0">
+
+    <div class="cap-stage" id="cap-stage"></div>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+      [data-composition-id="captions"] {
+        position: absolute; inset: 0;
+        width: 1080px; height: 1080px;
+        pointer-events: none;
+        background: transparent;
+      }
+      [data-composition-id="captions"] .cap-stage {
+        position: absolute;
+        left: 50%;
+        bottom: 88px;
+        transform: translateX(-50%);
+        width: 940px;
+        height: 90px;
+        display: block;
+        overflow: hidden;
+      }
+      [data-composition-id="captions"] .cap-group {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        will-change: transform, opacity;
+        white-space: nowrap;
+        text-align: center;
+      }
+      [data-composition-id="captions"] .cap-text {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-weight: 500;
+        font-size: 42px;
+        letter-spacing: 0.04em;
+        color: #D4E2D0;
+        /* Layered shadow: tight black for readability against busy bg,
+           plus phosphor glow that ties to the parade's green palette. */
+        text-shadow:
+          0 0 2px rgba(0,0,0,0.85),
+          0 0 6px rgba(0,0,0,0.65),
+          0 0 14px rgba(0,0,0,0.45),
+          0 0 1px rgba(124,180,132,0.55),
+          0 0 18px rgba(124,180,132,0.22);
+      }
+      /* subtle universal glitch pulse (CSS, deterministic via animation-delay
+         not used — kept off so timeline remains the single source of truth). */
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        window.__timelines = window.__timelines || {};
+
+        const COMP_ID = 'captions';
+        const TOTAL_DUR = 41.0;
+
+        // Caption groups — sentence-level chunks driven by the VO transcript.
+        // start/end are master-time seconds. Each group has a hard kill at end.
+        const GROUPS = [
+          { text: "Hermes has a new skill.",            start: 0.00,  end: 1.40 },
+          { text: "Hyperframes.",                        start: 2.84,  end: 3.70 },
+          { text: "Open source.",                        start: 7.24,  end: 8.10 },
+          { text: "HTML to video.",                      start: 8.50,  end: 9.85 },
+          { text: "GSAP time.",                          start: 11.48, end: 12.40 },
+          { text: "Easings.",                            start: 13.04, end: 13.80 },
+          { text: "Stagger.",                            start: 14.34, end: 15.00 },
+          { text: "Motion paths.",                       start: 15.55, end: 16.42 },
+          { text: "Animation —",                         start: 16.46, end: 17.10 },
+          { text: "the way the web does it.",            start: 17.12, end: 18.20 },
+          { text: "Live WebGL shaders.",                 start: 19.84, end: 21.30 },
+          { text: "Lottie.",                             start: 23.22, end: 23.90 },
+          { text: "Word-synced captions.",               start: 24.26, end: 25.40 },
+          { text: "Templates and registry.",             start: 25.88, end: 27.10 },
+          // (no caption for "hermes skills install hyperframes." — the
+          // visible install command in beat 17 already shows the text.)
+          { text: "Then just ask",                       start: 33.10, end: 34.12 },
+          { text: "for what you want to create.",        start: 34.18, end: 35.75 },
+          { text: "Now native to Hermes.",               start: 37.14, end: 38.95 },
+          { text: "Build something.",                    start: 39.20, end: 40.40 },
+        ];
+
+        const MAX_WIDTH = 900;
+        const BASE_FONT = 42;
+        const MIN_FONT = 26;
+
+        // Build group elements
+        const root = document.querySelector('[data-composition-id="captions"]');
+        const stage = root.querySelector('#cap-stage');
+        const groupEls = [];
+
+        GROUPS.forEach(function (g, gi) {
+          const groupEl = document.createElement('div');
+          groupEl.className = 'cap-group';
+          groupEl.id = 'cg-' + gi;
+
+          const textEl = document.createElement('span');
+          textEl.className = 'cap-text';
+          textEl.textContent = g.text;
+
+          // Fit measurement — prefer hyperframes utility when available
+          let fitSize = BASE_FONT;
+          if (window.__hyperframes && typeof window.__hyperframes.fitTextFontSize === 'function') {
+            const fit = window.__hyperframes.fitTextFontSize(g.text, {
+              fontFamily: 'JetBrains Mono',
+              fontWeight: 600,
+              maxWidth: MAX_WIDTH,
+              baseFontSize: BASE_FONT,
+              minFontSize: MIN_FONT,
+              step: 2,
+            });
+            fitSize = fit.fontSize;
+          }
+          textEl.style.fontSize = fitSize + 'px';
+
+          groupEl.appendChild(textEl);
+          stage.appendChild(groupEl);
+          groupEls.push(groupEl);
+        });
+
+        // Master timeline
+        const tl = gsap.timeline({ paused: true });
+        // Anchor proxy tween over the full duration so the timeline has length.
+        tl.to({}, { duration: TOTAL_DUR, ease: 'none' }, 0);
+
+        GROUPS.forEach(function (g, gi) {
+          const el = groupEls[gi];
+          const inDur = 0.18;
+          const outDur = 0.14;
+
+          // Entrance: fade + tiny scale-pop, lands ~80ms before first word
+          tl.fromTo(el,
+            { opacity: 0, scale: 0.96, y: 6 },
+            { opacity: 1, scale: 1, y: 0, duration: inDur, ease: 'power3.out' },
+            Math.max(0, g.start - 0.08)
+          );
+
+          // Exit: fade + tiny scale-down, just before group.end
+          tl.to(el,
+            { opacity: 0, scale: 0.97, y: -3, duration: outDur, ease: 'power2.in' },
+            Math.max(0, g.end - outDur)
+          );
+
+          // Hard kill at group.end — guarantees invisible regardless of
+          // tween conflicts or timeline scrubbing.
+          tl.set(el, { opacity: 0, visibility: 'hidden' }, g.end);
+
+          // Re-show right before the next entrance (set visibility back so
+          // the next fromTo can fade it in). This runs immediately before
+          // the entrance tween so it doesn't flash old content.
+          tl.set(el, { visibility: 'visible' }, Math.max(0, g.start - 0.10));
+        });
+
+        // Self-lint: ensure every group is hidden at group.end
+        let lintWarnings = 0;
+        GROUPS.forEach(function (g, gi) {
+          const el = groupEls[gi];
+          tl.seek(g.end + 0.01);
+          const cs = window.getComputedStyle(el);
+          if (cs.opacity !== '0' && cs.visibility !== 'hidden') {
+            console.warn('[captions-lint] group ' + gi + ' (\"' + g.text + '\") still visible at t=' + (g.end + 0.01).toFixed(2) + 's');
+            lintWarnings++;
+          }
+        });
+        tl.seek(0);
+        if (lintWarnings === 0) console.log('[captions-lint] all ' + GROUPS.length + ' groups hard-killed correctly');
+
+        window.__timelines[COMP_ID] = tl;
+      })();
+    </script>
+  </div>
+</template>

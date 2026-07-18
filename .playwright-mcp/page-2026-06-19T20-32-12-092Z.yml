@@ -1,0 +1,50 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - img "HyperFrames" [ref=e5] [cursor=pointer]
+    - generic [ref=e6]:
+      - link "URL → Video" [ref=e7] [cursor=pointer]:
+        - /url: /website
+        - text: URL → Video
+      - button "Switch to light theme" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+      - link "Create frame.md" [ref=e16] [cursor=pointer]:
+        - /url: /design
+      - button "New video" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: New video
+      - link "Log in" [ref=e21] [cursor=pointer]:
+        - /url: /api/auth/login?return_to=/
+  - generic [ref=e23]:
+    - button "Browse premade frames" [ref=e25] [cursor=pointer]:
+      - generic [ref=e26]: Browse premade frames
+      - generic [ref=e27]: →
+    - generic [ref=e28]:
+      - paragraph [ref=e29]: Built for motion design
+      - heading "Introducing FRAME.MD" [level=1] [ref=e30]
+      - paragraph [ref=e31]:
+        - code [ref=e32]: design.md
+        - text: describes the brand.
+        - code [ref=e33]: frame.md
+        - text: directs the composition. Paste your spec and HyperFrames translates it for the 16:9 frame — pacing, scale, dwell, motion. Drop the returned
+        - code [ref=e34]: frame.md
+        - text: into a HyperFrames project; the showcase is just a preview.
+    - paragraph [ref=e35]: Convert from design.md
+    - button "Upload a design.md file" [ref=e36] [cursor=pointer]:
+      - button "Choose File" [ref=e37]
+      - generic [ref=e38]:
+        - img [ref=e40]
+        - generic [ref=e43]:
+          - paragraph [ref=e44]: Upload a design.md
+          - paragraph [ref=e45]: Drag & drop or click to browse
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - img [ref=e49]
+          - generic [ref=e52]: design.md
+        - button "Paste a sample" [ref=e53] [cursor=pointer]
+      - 'textbox "# Aurora Labs launch ## Palette - Background #06141F - Accent #00E3FF ## Type - Headline: Space Grotesk - Body: Space Mono" [ref=e54]':
+        - /placeholder: "# Aurora Labs launch\n\n## Palette\n- Background #06141F\n- Accent #00E3FF\n\n## Type\n- Headline: Space Grotesk\n- Body: Space Mono\n"
+    - button "Submit" [disabled] [ref=e56]:
+      - text: Submit
+      - generic [ref=e57]: →
+  - alert [ref=e58]

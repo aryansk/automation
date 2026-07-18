@@ -1,0 +1,1367 @@
+<template id="parade-template">
+  <div data-composition-id="parade" data-width="1080" data-height="1080" data-start="0">
+
+    <canvas class="bg-canvas" id="parade-bg"></canvas>
+    <canvas class="ana-canvas" id="parade-ana" style="display:none"></canvas>
+
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee&family=Bungee+Shade&family=Cinzel:wght@400;700&family=JetBrains+Mono:wght@400;500;700&family=Major+Mono+Display&family=VT323&display=block');
+
+      [data-composition-id="parade"] {
+        width: 1080px; height: 1080px;
+        position: relative; background: #000; overflow: hidden;
+      }
+      [data-composition-id="parade"] canvas.bg-canvas,
+      [data-composition-id="parade"] canvas.ana-canvas {
+        position: absolute; inset: 0;
+        width: 100%; height: 100%;
+        display: block;
+        image-rendering: auto;
+      }
+      [data-composition-id="parade"] .scanlines {
+        position: absolute; inset: 0; z-index: 80; pointer-events: none;
+        background: repeating-linear-gradient(to bottom,
+          transparent 0, transparent 5px,
+          rgba(0,0,0,0.18) 5px, rgba(0,0,0,0.18) 9px);
+      }
+      [data-composition-id="parade"] .vignette {
+        position: absolute; inset: 0; z-index: 85; pointer-events: none;
+        background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.55) 100%);
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (async function () {
+        window.__timelines = window.__timelines || {};
+
+        // ---- Setup canvases ----
+        // 2D canvas renders all non-anamorphic beats. We use 480x480 native
+        // (CSS-scaled to 1080x1080) to preserve the chunky CRT aesthetic.
+        const root = document.querySelector('[data-composition-id="parade"]');
+        const bgCanvas = root.querySelector('.bg-canvas');
+        const anaCanvas = root.querySelector('.ana-canvas');
+
+        const W = 480, H = 480;
+        bgCanvas.width = W; bgCanvas.height = H;
+        const ctx = bgCanvas.getContext('2d');
+
+        // 3D canvas for beat 3 anamorphic — full resolution for crisp 3D
+        const ANA_W = 1080, ANA_H = 1080;
+        anaCanvas.width = ANA_W; anaCanvas.height = ANA_H;
+
+        // ---- Color palettes (4 distinct accents on black) ----
+        const COLORS = {
+          green:  { dim:'#0e1a12', mid:'#4a8a5a', accent:'#7CB484', hi:'#D4E2D0' },
+          purple: { dim:'#170a26', mid:'#6a4a8a', accent:'#9966CC', hi:'#D8C8E8' },
+          blue:   { dim:'#0c1626', mid:'#3e5e8a', accent:'#5599DD', hi:'#C8DCEC' },
+          brown:  { dim:'#1a0e06', mid:'#7a5a3a', accent:'#A87850', hi:'#E0D0B8' },
+        };
+
+        // ---- Helpers ----
+        function rng(s){let x=s>>>0;return()=>{x=(x*1664525+1013904223)>>>0;return x/0xffffffff;};}
+        function hash2(ix,iy){let n=(ix*374761393+iy*668265263)|0;n=((n^(n>>>13))*1274126177)|0;return((n^(n>>>16))>>>0)/0xffffffff;}
+        function smooth(v){return v*v*v*(v*(v*6-15)+10);}
+        function vn(x,y){
+          const ix=Math.floor(x),iy=Math.floor(y);
+          const fx=smooth(x-ix),fy=smooth(y-iy);
+          const n00=hash2(ix,iy),n10=hash2(ix+1,iy),n01=hash2(ix,iy+1),n11=hash2(ix+1,iy+1);
+          return (n00*(1-fx)+n10*fx)*(1-fy)+(n01*(1-fx)+n11*fx)*fy;
+        }
+        function fbm(x,y,oct){oct=oct||4;let v=0,a=1,fx=1,fy=0.85,m=0;for(let i=0;i<oct;i++){v+=vn(x*fx+i*13.7,y*fy+i*27.3)*a;m+=a;a*=0.5;fx*=2;fy*=2;}return v/m;}
+
+        function bg(){ ctx.fillStyle='#000'; ctx.fillRect(0,0,W,H); }
+        function tx(t,x,y,c,fs,family){
+          ctx.fillStyle=c; ctx.font=(fs||11)+'px "'+(family||'VT323')+'", monospace';
+          ctx.textBaseline='top'; ctx.fillText(t,x,y);
+        }
+        function txC(t,x,y,c,fs,family){
+          ctx.fillStyle=c; ctx.font=(fs||11)+'px "'+(family||'VT323')+'", monospace';
+          ctx.textBaseline='top'; ctx.textAlign='center'; ctx.fillText(t,x,y); ctx.textAlign='left';
+        }
+        function alpha(hex,a){
+          const m=hex.replace('#','');
+          const r=parseInt(m.substr(0,2),16),g=parseInt(m.substr(2,2),16),b=parseInt(m.substr(4,2),16);
+          return 'rgba('+r+','+g+','+b+','+a+')';
+        }
+        // Animated chromatic aberration on hero text — minimal, oscillating
+        function chromaTextC(text,x,y,color,fs,family,t,intensity,weight){
+          const wob = Math.sin(t*0.8)*1.2;
+          const ints = intensity || 1.5;
+          const w = weight || '';
+          const f = (w?w+' ':'')+fs+'px "'+family+'", monospace';
+          ctx.font=f; ctx.textBaseline='top'; ctx.textAlign='center';
+          ctx.fillStyle='rgba(220,40,80,0.30)'; ctx.fillText(text, x-ints-wob, y);
+          ctx.fillStyle='rgba(40,140,220,0.30)'; ctx.fillText(text, x+ints+wob, y);
+          ctx.fillStyle=color; ctx.fillText(text, x, y);
+          ctx.textAlign='left';
+        }
+        function chromaText(text,x,y,color,fs,family,t,intensity,weight){
+          const wob = Math.sin(t*0.8)*1.2;
+          const ints = intensity || 1.5;
+          const w = weight || '';
+          const f = (w?w+' ':'')+fs+'px "'+family+'", monospace';
+          ctx.font=f; ctx.textBaseline='top';
+          ctx.fillStyle='rgba(220,40,80,0.30)'; ctx.fillText(text, x-ints-wob, y);
+          ctx.fillStyle='rgba(40,140,220,0.30)'; ctx.fillText(text, x+ints+wob, y);
+          ctx.fillStyle=color; ctx.fillText(text, x, y);
+        }
+
+        // ---- ASCII shader background (FBM-driven density ramp) ----
+        // Renders a flowing ASCII field by sampling fbm() per cell, mapping
+        // density to a character ramp. Time-animated, deterministic.
+        const ASCII_RAMP = ' .·:-=+*#%@';
+        function asciiBg(t, p, opts){
+          opts = opts || {};
+          const cols = opts.cols || 60;
+          const rows = opts.rows || 20;
+          const cw = W/cols, ch = H/rows;
+          const speed = opts.speed != null ? opts.speed : 0.35;
+          const scale = opts.scale != null ? opts.scale : 0.18;
+          const baseAlpha = opts.alpha != null ? opts.alpha : 0.35;
+          const fontSize = opts.fontSize || 12;
+          ctx.font = fontSize + 'px "VT323", monospace';
+          ctx.textBaseline = 'top';
+          ctx.textAlign = 'left';
+          for(let y=0; y<rows; y++){
+            for(let x=0; x<cols; x++){
+              const v = fbm(x*scale + t*speed, y*scale*0.85 + t*speed*0.5, 4);
+              const idx = Math.floor(v * (ASCII_RAMP.length - 1));
+              const c = ASCII_RAMP[Math.max(0, Math.min(ASCII_RAMP.length-1, idx))];
+              if(c === ' ') continue;
+              const a = baseAlpha * (0.25 + v*0.85);
+              const col = v > 0.65 ? p.accent : p.mid;
+              ctx.fillStyle = alpha(col, a);
+              ctx.fillText(c, x*cw, y*ch);
+            }
+          }
+        }
+
+        // ---- Universal glitch (deterministic) ----
+        // Fires every 3.5s of master time for 80ms. Seeded by the cycle index.
+        function applyGlitch(masterT, p) {
+          const period = 3.5, dur = 0.08;
+          const phase = masterT % period;
+          if (phase >= dur) return;
+          const seed = Math.floor(masterT / period) * 1009;
+          const bandY = ((seed*131)&0xff)/255 * (H-20) | 0;
+          const bandH = 6 + ((seed*47)&0xf);
+          const dx = ((((seed*7)&0xff)/255)-0.5)*14 | 0;
+          try {
+            const slice = ctx.getImageData(0, bandY, W, bandH);
+            ctx.putImageData(slice, dx, bandY);
+          } catch(e){}
+          ctx.fillStyle = 'rgba(220,40,80,0.07)'; ctx.fillRect(0,0,W,H);
+          ctx.fillStyle = 'rgba(40,140,220,0.07)'; ctx.fillRect(2,0,W,H);
+          ctx.fillStyle = alpha(p.hi, 0.12); ctx.fillRect(0, bandY-2, W, bandH+4);
+        }
+
+        // =========================================================
+        // BEAT RENDERERS
+        // =========================================================
+
+        // 01 — BIOS BOOT (green) — rapid-fill Hermes flow over ASCII shader bg
+        function b01(t,p,_,__,___,mT){
+          bg();
+          asciiBg(mT, p, {cols:64, rows:22, speed:0.30, scale:0.22, alpha:0.28});
+          const lines=[
+            ['$ hermes',                              p.hi,    13],
+            ['[skills] scanning ~/.hermes/skills/',   p.mid,   12],
+            ['[skills] sync: agentskills.io ✓',       p.mid,   12],
+            ['[skills] register: /hyperframes',       p.mid,   12],
+            ['[skills] mount: composition engine',    p.mid,   12],
+            ['[skills] mount: webgl bridge',          p.mid,   12],
+            ['[skills] mount: deterministic capture', p.mid,   12],
+            ['[skills] new: hyperframes ★',           p.accent,13],
+            ['hermes> ready · 668 skills',            p.hi,    12],
+          ];
+          // Rapid-fill: 9 lines in ~1.3s (each 0.14s apart, type 0.10s).
+          for(let i=0;i<lines.length;i++){
+            const L=lines[i];
+            const lineStart = 0.05 + i*0.14;
+            if(t < lineStart) continue;
+            const prog = Math.min(1, (t-lineStart)/0.10);
+            const v = Math.floor(L[0].length * prog);
+            tx(L[0].substring(0,v), 13, 14+i*16, L[1], L[2], 'JetBrains Mono');
+          }
+          // Highlight pulse on the "new: hyperframes" line after it lands.
+          const newLineY = 14 + 7*16;
+          const newLineT = 0.05 + 7*0.14 + 0.10;
+          if(t > newLineT){
+            const pulse = 0.4 + 0.6*Math.abs(Math.sin((t-newLineT)*7));
+            ctx.fillStyle = alpha(p.accent, 0.18*pulse);
+            ctx.fillRect(8, newLineY-2, W-16, 16);
+          }
+          // Blinking cursor on last line.
+          if(t > 1.4 && Math.floor(t*4)%2===0){
+            ctx.fillStyle=p.accent; ctx.fillRect(13+ctx.measureText('hermes> ready · 668 skills').width+2, 14+8*16, 5, 11);
+          }
+          applyGlitch(mT,p);
+        }
+
+        // 02 — NEW SKILL DETECTED (purple, Bungee Shade alarm)
+        function b02(t,p,_,__,___,mT){
+          bg();
+          const pulse = Math.max(0, 1 - t*0.7);
+          ctx.fillStyle = alpha(p.accent, 0.06 + pulse*0.10); ctx.fillRect(0,0,W,H);
+          const sc = Math.min(1, t*3);
+          const bw = 380*sc, bh = 64*sc;
+          const bx = (W-bw)/2, by = (H-bh)/2;
+          ctx.strokeStyle = p.accent; ctx.lineWidth = 1.5; ctx.strokeRect(bx,by,bw,bh);
+          if(t > 0.2){
+            chromaTextC('[ NEW SKILL DETECTED ]', W/2, H/2-9, p.hi, 18, 'Bungee Shade', t, 2);
+          }
+          ctx.fillStyle=p.accent;
+          ctx.fillRect(28,H/2-22,2,44); ctx.fillRect(W-30,H/2-22,2,44);
+          txC('> halt boot. fork registry.',W/2,H-26,alpha(p.mid,0.7),12);
+          applyGlitch(mT,p);
+        }
+
+        // 03 — ANAMORPHIC — handled by three.js (separate canvas).
+        // This 2D function is a no-op fallback while three.js loads.
+        function b03(t,p,_,__,___,mT){
+          bg();
+          // Subtle loading state if three.js not ready
+          tx('· · ·', W/2-20, H/2-6, alpha(p.mid,0.4), 12, 'JetBrains Mono');
+        }
+
+        // 04 — OPEN SOURCE STAMP — centered, framed by brackets, animated
+        // ASCII shader background. Latter half adds a slow multicolor binary
+        // rain that falls from the top and acts as the transition out.
+        function b04(t,p,p2,p3,p4,mT){
+          bg();
+          asciiBg(mT, p, {cols:60, rows:20, speed:0.40, scale:0.22, alpha:0.32});
+          // Stack the three lines centered on screen.
+          const cy = H/2;
+          const yOpen = cy - 36;   // "OPEN SOURCE"
+          const yHtml = cy - 6;    // "HTML → VIDEO"
+          const yMit  = cy + 26;   // "MIT LICENSE · NATIVE SKILL"
+          // Gate appearance to spoken time (beat starts 6.7s in master).
+          // VO: "Open" 7.82 (1.12 local), "HTML" 9.14 (2.44 local), "video" ends 10.06 (3.36 local).
+          if(t > 1.10){
+            const a = Math.min(1,(t-1.10)/0.15);
+            chromaTextC('OPEN SOURCE',W/2,yOpen,alpha(p.accent,a),18,'Major Mono Display',t,1.5,'700');
+          }
+          if(t > 2.40){
+            const a = Math.min(1,(t-2.40)/0.15);
+            chromaTextC('HTML → VIDEO',W/2,yHtml,alpha(p.hi,a),26,'Cinzel',t,1.8,'700');
+          }
+          if(t > 3.40){
+            const a = Math.min(1,(t-3.40)/0.15);
+            txC('APACHE 2.0 · NATIVE SKILL',W/2,yMit,alpha(p.mid,a*0.7),12);
+          }
+          // Bracket frame around the centered stack — top + bottom corners.
+          const bxL = 40, bxR = W-58;
+          const byT = yOpen - 16, byB = yMit + 18;
+          ctx.fillStyle = p.accent;
+          // top-left
+          ctx.fillRect(bxL, byT, 18, 2);     ctx.fillRect(bxL, byT, 2, 18);
+          // top-right
+          ctx.fillRect(bxR, byT, 18, 2);     ctx.fillRect(bxR+16, byT, 2, 18);
+          // bottom-left
+          ctx.fillRect(bxL, byB, 18, 2);     ctx.fillRect(bxL, byB-16, 2, 18);
+          // bottom-right
+          ctx.fillRect(bxR, byB, 18, 2);     ctx.fillRect(bxR+16, byB-16, 2, 18);
+          applyGlitch(mT,p);
+          // Multicolor binary rain — drawn LAST so it lands on top of
+          // everything. Each column's WAKE extends from y=0 down to the
+          // current head position. Cells never fade once drawn — they stay
+          // at fixed brightness, building a permanent trail that fills the
+          // frame by the end of the beat.
+          const rainStart = 2.4;
+          const rainEnd = 3.98;
+          const rainWindow = rainEnd - rainStart;
+          if(t > rainStart){
+            const rainT = t - rainStart;
+            const palettes = [p, p2||p, p3||p, p4||p];
+            const cols = 90, colW = W/cols;
+            const cellH = 6, charW = 7;
+            const r = rng(241);
+            for(let c=0; c<cols; c++){
+              const colStartDelay = r()*0.55;
+              if(rainT < colStartDelay) { r(); r(); continue; }
+              const localR = rainT - colStartDelay;
+              const remaining = rainWindow - colStartDelay;
+              const minSpeedToFinish = (H + 80) / Math.max(0.25, remaining);
+              const sp = minSpeedToFinish * (1.0 + r()*0.9);
+              const head = localR * sp;
+              const pal = palettes[c % palettes.length];
+              const x = c*colW + colW/2;
+              const numCells = Math.min(Math.floor(H/cellH)+2, Math.ceil(head/cellH));
+              for(let i=0; i<numCells; i++){
+                const y = i * cellH;
+                if(y > H+4) break;
+                // Char is deterministic by column+cell — never changes,
+                // so the trail visually freezes once it's drawn.
+                const ch = (((c*131 + i*97) >>> 0) & 1) ? '1' : '0';
+                const distFromHead = numCells - 1 - i;
+                let col;
+                if(distFromHead === 0)      col = pal.hi;
+                else if(distFromHead < 3)   col = pal.accent;
+                else                        col = pal.mid;
+                // opaque black backing wipes the underlying text/brackets
+                ctx.fillStyle = 'rgba(0,0,0,0.92)';
+                ctx.fillRect(x-charW/2, y-1, charW, cellH+5);
+                tx(ch, x-3, y, col, 11);
+              }
+            }
+          }
+        }
+
+        // 05 — ★ BINARY CASCADE (multicolor rainbow rainfall — full screen, fast)
+        function b05(t,p1,p2,p3,p4,mT){
+          bg();
+          const palettes = [p1, p2, p3, p4];
+          const cols=110, colW=W/cols, r=rng(99);
+          for(let c=0;c<cols;c++){
+            const x=c*colW+colW/2;
+            const sp=1.4+r()*1.8;
+            const len=14+Math.floor(r()*28);
+            const off = ((t*180*sp + r()*60) % (H+len*6));
+            const pal = palettes[c % palettes.length];
+            for(let i=0;i<len;i++){
+              const y=off-i*6;
+              if(y<0||y>H) continue;
+              const f=Math.max(0.08,1-i/len);
+              const ch=r()<0.5?'1':'0';
+              const col = i===0 ? pal.hi : (i<3 ? pal.accent : pal.mid);
+              tx(ch,x-3,y,alpha(col,f*0.95),10);
+            }
+          }
+          applyGlitch(mT,p1);
+        }
+
+        // 06 — GSAP TIME — full-width timeline with multi-track lanes,
+        // big playhead, value tickers cascading.
+        function b06(t,p,_,__,___,mT){
+          bg();
+          const blockH = 178;
+          const blockY = Math.floor((H - blockH) / 2);
+          // Header strip
+          ctx.fillStyle = alpha(p.mid, 0.18);
+          ctx.fillRect(0, blockY, W, 18);
+          ctx.fillStyle = p.accent;
+          tx('GSAP.TIMELINE',  20, blockY + 4, p.hi, 14, 'JetBrains Mono');
+          tx('//  scrub · seek · scale',  170, blockY + 5, alpha(p.mid,0.7), 11, 'JetBrains Mono');
+          // Tracks — 5 lanes, each animating their own clip
+          const trackY0 = blockY + 36, trackH = 22, trackGap = 6;
+          const xL = 60, xR = W-30, trackW = xR-xL;
+          const tracks = [
+            {label:'.title',    start:0.05, dur:0.55, col:p.accent},
+            {label:'.body',     start:0.20, dur:0.50, col:p.hi},
+            {label:'.bg',       start:0.30, dur:0.55, col:p.mid},
+            {label:'.cta',      start:0.55, dur:0.30, col:p.accent},
+            {label:'.particle', start:0.70, dur:0.25, col:p.hi},
+          ];
+          // Playhead progress over beat duration (1.4s)
+          const ph = Math.min(1, t/1.40);
+          const phx = xL + trackW*ph;
+          for(let i=0;i<tracks.length;i++){
+            const tr = tracks[i];
+            const y = trackY0 + i*(trackH+trackGap);
+            // lane background
+            ctx.fillStyle = alpha(p.mid, 0.10);
+            ctx.fillRect(xL, y, trackW, trackH);
+            // label gutter
+            tx(tr.label, 12, y+6, alpha(p.mid,0.85), 10, 'JetBrains Mono');
+            // clip on the lane
+            const clipX = xL + trackW*tr.start;
+            const clipW = trackW*tr.dur;
+            ctx.fillStyle = alpha(tr.col, 0.30);
+            ctx.fillRect(clipX, y+2, clipW, trackH-4);
+            ctx.strokeStyle = alpha(tr.col, 0.85);
+            ctx.lineWidth = 1.2;
+            ctx.strokeRect(clipX+0.5, y+2.5, clipW-1, trackH-5);
+            // active glow if playhead in clip
+            if(ph >= tr.start && ph <= tr.start+tr.dur){
+              const innerProg = (ph-tr.start)/tr.dur;
+              ctx.fillStyle = alpha(tr.col, 0.65);
+              ctx.fillRect(clipX, y+2, clipW*innerProg, trackH-4);
+              ctx.fillStyle = tr.col;
+              tx(tr.label.toUpperCase().slice(1), clipX+6, y+6, tr.col, 10, 'JetBrains Mono');
+            }
+          }
+          // Ruler beneath the lanes
+          const rulerY = trackY0 + tracks.length*(trackH+trackGap) + 6;
+          ctx.fillStyle = alpha(p.mid, 0.5); ctx.fillRect(xL, rulerY, trackW, 1);
+          for(let i=0;i<=10;i++){
+            const x = xL + trackW*(i/10);
+            const tickH = (i%5===0) ? 8 : 4;
+            ctx.fillStyle = alpha(p.mid, 0.7); ctx.fillRect(x-0.5, rulerY, 1, tickH);
+            if(i%5===0) tx((i*0.1).toFixed(1)+'s', x-7, rulerY+10, alpha(p.mid,0.6), 8, 'JetBrains Mono');
+          }
+          // Big playhead — vertical line spanning all lanes
+          ctx.fillStyle = p.accent;
+          ctx.fillRect(phx-1, trackY0-6, 2, rulerY-trackY0+12);
+          // playhead head triangle
+          ctx.beginPath();
+          ctx.moveTo(phx-7, trackY0-6); ctx.lineTo(phx+7, trackY0-6); ctx.lineTo(phx, trackY0+2);
+          ctx.closePath(); ctx.fillStyle=p.hi; ctx.fill();
+          // Time readout on the right
+          tx(ph.toFixed(2)+' / 1.00', xR-58, blockY + 4, p.hi, 12, 'JetBrains Mono');
+          applyGlitch(mT,p);
+        }
+
+        // 07 — EASING — large quad grid of 4 curves, each with a moving sample
+        // dot that rides the curve to demonstrate the easing in action.
+        function b07(t,p,_,__,___,mT){
+          bg();
+          const fns=[
+            {n:'power3.out',  f:function(t){return 1-Math.pow(1-t,3);}},
+            {n:'elastic.out', f:function(t){return Math.sin(-13*(t+1)*Math.PI/2)*Math.pow(2,-10*t)+1;}},
+            {n:'expo.inOut',  f:function(t){return t===0?0:t===1?1:t<0.5?Math.pow(2,20*t-10)/2:(2-Math.pow(2,-20*t+10))/2;}},
+            {n:'bounce.out',  f:function(t){const n1=7.5625,d1=2.75;
+              if(t<1/d1)return n1*t*t;
+              if(t<2/d1){t-=1.5/d1;return n1*t*t+0.75;}
+              if(t<2.5/d1){t-=2.25/d1;return n1*t*t+0.9375;}
+              t-=2.625/d1;return n1*t*t+0.984375;}},
+          ];
+          // 2x2 grid layout, centered in the square frame
+          const padX=30, gap=12;
+          const gridH = 308;
+          const padY = Math.floor((H - gridH) / 2);
+          const cellW = (W - padX*2 - gap)/2;
+          const cellH = (gridH - gap)/2;
+          const sampleProg = (t % 1.0); // 1s sample loop riding each curve
+          for(let i=0;i<4;i++){
+            const cx = padX + (i%2)*(cellW+gap);
+            const cy = padY + Math.floor(i/2)*(cellH+gap);
+            const cu = fns[i];
+            // panel bg
+            ctx.fillStyle = alpha(p.mid, 0.06);
+            ctx.fillRect(cx, cy, cellW, cellH);
+            ctx.strokeStyle = alpha(p.mid, 0.30);
+            ctx.lineWidth = 1; ctx.strokeRect(cx+0.5, cy+0.5, cellW-1, cellH-1);
+            // axes
+            const ax = cx + 14, ay = cy + cellH - 14;
+            const aw = cellW - 22, ah = cellH - 28;
+            ctx.fillStyle = alpha(p.mid, 0.35);
+            ctx.fillRect(ax, ay, aw, 1);
+            ctx.fillRect(ax, cy+10, 1, ay-cy-10);
+            // label
+            ctx.font='10px "JetBrains Mono", monospace'; ctx.textBaseline='top'; ctx.textAlign='left';
+            ctx.fillStyle = p.hi; ctx.fillText(cu.n, cx+12, cy+8);
+            // draw curve
+            const drawProg = Math.max(0, Math.min(1, (t - i*0.08)/0.50));
+            if(drawProg <= 0) continue;
+            ctx.strokeStyle = p.accent; ctx.lineWidth = 2.0; ctx.lineCap='round';
+            ctx.beginPath();
+            const N = 60;
+            for(let k=0;k<=Math.floor(N*drawProg);k++){
+              const u = k/N;
+              const v = Math.max(-0.20, Math.min(1.20, cu.f(u)));
+              const x = ax + aw*u;
+              const y = ay - ah*v;
+              if(k===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+            }
+            ctx.stroke();
+            // sample dot riding the curve once curve fully drawn
+            if(drawProg >= 1){
+              const u = sampleProg;
+              const v = Math.max(-0.20, Math.min(1.20, cu.f(u)));
+              const x = ax + aw*u, y = ay - ah*v;
+              // trail
+              for(let s=0;s<6;s++){
+                const su = Math.max(0, u - s*0.04);
+                const sv = Math.max(-0.20, Math.min(1.20, cu.f(su)));
+                const sx = ax + aw*su, sy = ay - ah*sv;
+                ctx.fillStyle = alpha(p.hi, (1-s/6)*0.5);
+                ctx.beginPath(); ctx.arc(sx, sy, 2.2-s*0.2, 0, Math.PI*2); ctx.fill();
+              }
+              ctx.fillStyle = p.hi;
+              ctx.beginPath(); ctx.arc(x, y, 4, 0, Math.PI*2); ctx.fill();
+              // value readout
+              ctx.font='9px "JetBrains Mono", monospace'; ctx.textAlign='right';
+              tx(v.toFixed(2), cx+cellW-14, cy+8, alpha(p.mid,0.85), 9, 'JetBrains Mono');
+              ctx.textAlign='left';
+            }
+          }
+          applyGlitch(mT,p);
+        }
+
+        // 08 — STAGGER (blue) — no big label
+        function b08(t,p,_,__,___,mT){
+          bg();
+          const N=24;
+          const x0=40,x1=W-40,total=x1-x0,gap=2,bw=(total-(N-1)*gap)/N;
+          const baseY=H*0.78;
+          for(let i=0;i<N;i++){
+            const x=x0+i*(bw+gap);
+            const startT = i*0.04;
+            const prog = Math.max(0, Math.min(1, (t-startT)/0.4));
+            const naturalH = 18 + Math.abs(Math.sin(i*0.3))*60;
+            const peakH = naturalH * (1 + (i===9?0.3:0));
+            let bh;
+            if(prog < 0.5) bh = peakH * (prog/0.5);
+            else bh = peakH - (peakH-naturalH) * ((prog-0.5)/0.5);
+            if(bh<1) continue;
+            const grad = ctx.createLinearGradient(0,baseY-bh,0,baseY);
+            grad.addColorStop(0, p.hi); grad.addColorStop(0.5, p.accent); grad.addColorStop(1, p.mid);
+            ctx.fillStyle = (Math.abs(i-9)<2) ? grad : alpha(p.accent, 0.7);
+            ctx.fillRect(x,baseY-bh,bw,bh);
+            ctx.fillStyle = 'rgba(0,0,0,0.25)';
+            for(let y=baseY-bh; y<baseY; y+=2) ctx.fillRect(x,y,bw,1);
+            ctx.fillStyle = p.hi; ctx.fillRect(x,baseY-bh,bw,1);
+          }
+          ctx.fillStyle=p.accent; ctx.fillRect(x0-6,baseY,total+12,1);
+          txC("gsap.to('.cell', { stagger: 0.04 })",W/2,28,alpha(p.mid,0.6),10,'JetBrains Mono');
+          applyGlitch(mT,p);
+        }
+
+        // 09 — MOTION PATHS — multi-path particle flow field. 5 intersecting
+        // bezier curves, 6 particles per path streaming with trails. Full screen.
+        function b09(t,p,_,__,___,mT){
+          bg();
+          const paths = [
+            [{x:20,y:H*0.5},{x:W*0.30,y:20},{x:W*0.70,y:H-20},{x:W-20,y:H*0.5}],
+            [{x:W-20,y:H*0.5},{x:W*0.70,y:20},{x:W*0.30,y:H-20},{x:20,y:H*0.5}],
+            [{x:W*0.5,y:18},{x:W*0.18,y:H*0.5},{x:W*0.82,y:H*0.5},{x:W*0.5,y:H-18}],
+            [{x:24,y:24},{x:W*0.85,y:H*0.40},{x:W*0.15,y:H*0.60},{x:W-24,y:H-24}],
+            [{x:W-24,y:24},{x:W*0.15,y:H*0.40},{x:W*0.85,y:H*0.60},{x:24,y:H-24}],
+          ];
+          function bez(P,u){
+            const o=1-u, o2=o*o, o3=o2*o, u2=u*u, u3=u2*u;
+            return {
+              x: o3*P[0].x + 3*o2*u*P[1].x + 3*o*u2*P[2].x + u3*P[3].x,
+              y: o3*P[0].y + 3*o2*u*P[1].y + 3*o*u2*P[2].y + u3*P[3].y,
+            };
+          }
+          // Draw all paths as faint dashed guides (fade in over first 0.6s)
+          const guideA = Math.min(1, t/0.6);
+          ctx.strokeStyle = alpha(p.mid, 0.22*guideA);
+          ctx.lineWidth = 1; ctx.setLineDash([2,4]);
+          for(const P of paths){
+            ctx.beginPath();
+            const N=50;
+            for(let i=0;i<=N;i++){
+              const pt = bez(P, i/N);
+              if(i===0) ctx.moveTo(pt.x,pt.y); else ctx.lineTo(pt.x,pt.y);
+            }
+            ctx.stroke();
+          }
+          ctx.setLineDash([]);
+          // Particles flowing along each path with trails
+          const PARTS = 6, CYCLE = 1.6;
+          const liveAfter = 0.20; // staggered start
+          for(let pi=0; pi<paths.length; pi++){
+            if(t < liveAfter + pi*0.08) continue;
+            const P = paths[pi];
+            const localT = t - (liveAfter + pi*0.08);
+            for(let i=0; i<PARTS; i++){
+              const offset = i / PARTS;
+              const u = ((localT / CYCLE) + offset) % 1.0;
+              // trail
+              for(let s=8; s>=1; s--){
+                const su = u - s*0.020;
+                if(su < 0) continue;
+                const sp = bez(P, su);
+                const fade = (1 - s/8);
+                const sz = 1.4 + fade*2.0;
+                ctx.fillStyle = alpha(p.accent, fade*0.55);
+                ctx.beginPath(); ctx.arc(sp.x, sp.y, sz, 0, Math.PI*2); ctx.fill();
+              }
+              // head
+              const pt = bez(P, u);
+              ctx.fillStyle = p.hi;
+              ctx.beginPath(); ctx.arc(pt.x, pt.y, 3.2, 0, Math.PI*2); ctx.fill();
+              // glow ring (every 2nd particle for variety)
+              if(i % 2 === 0){
+                ctx.strokeStyle = alpha(p.accent, 0.55);
+                ctx.lineWidth = 1;
+                ctx.beginPath(); ctx.arc(pt.x, pt.y, 5.5, 0, Math.PI*2); ctx.stroke();
+              }
+            }
+          }
+          applyGlitch(mT, p);
+        }
+
+        // 10 — ★ KALEIDOSCOPE (multi-color, full-screen 12-fold mirror)
+        function b10(t,p1,p2,p3,p4,mT){
+          bg();
+          const cx=W/2, cy=H/2;
+          const folds = 12;
+          const wedge = (Math.PI*2)/folds;
+          const baseRot = t * 0.45;
+          const r=rng(11);
+          const items=[];
+          for(let i=0;i<70;i++){
+            items.push({
+              type: r()<0.65 ? 'glyph' : (r()<0.7 ? 'dot' : 'streak'),
+              radius: 18 + r()*295,
+              ang: r()*wedge,
+              ch: '01·•◦°★✦+*░▒▓█'[Math.floor(r()*13)],
+              sz: 6 + r()*11,
+              colIdx: Math.floor(r()*4),
+            });
+          }
+          const palettes = [p1, p2, p3, p4];
+          for(let f=0;f<folds;f++){
+            ctx.save();
+            ctx.translate(cx,cy);
+            ctx.rotate(baseRot + f*wedge);
+            if(f%2===1) ctx.scale(1,-1);
+            for(let j=0;j<items.length;j++){
+              const item=items[j];
+              const wob = Math.sin(t*2.5 + item.radius*0.04) * 0.05;
+              const x = item.radius * Math.cos(item.ang + wob);
+              const y = item.radius * Math.sin(item.ang + wob);
+              const pal = palettes[item.colIdx];
+              if(item.type==='glyph'){
+                ctx.fillStyle=alpha(pal.accent, 0.85);
+                ctx.font = item.sz+'px "VT323", monospace';
+                ctx.textBaseline='top';
+                ctx.fillText(item.ch, x, y);
+              } else if(item.type==='dot'){
+                ctx.fillStyle=alpha(pal.hi, 0.9);
+                ctx.beginPath(); ctx.arc(x,y, 2.5+item.sz*0.25, 0, Math.PI*2); ctx.fill();
+              } else {
+                ctx.strokeStyle=alpha(pal.hi,0.6); ctx.lineWidth=1.5;
+                ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x+item.sz*1.5,y); ctx.stroke();
+              }
+            }
+            ctx.strokeStyle=alpha(palettes[f%4].hi, 0.55);
+            ctx.lineWidth=1.5; ctx.beginPath();
+            for(let i=0;i<=30;i++){
+              const u=i/30;
+              const rr=u*290;
+              const aa=u*wedge*0.35 + Math.sin(t*3 + u*6)*0.08;
+              const x=rr*Math.cos(aa), y=rr*Math.sin(aa);
+              if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+            }
+            ctx.stroke();
+            ctx.restore();
+          }
+          const corePulse = 0.6 + Math.sin(t*7)*0.3;
+          const grad = ctx.createRadialGradient(cx,cy,0,cx,cy,45);
+          grad.addColorStop(0, 'rgba(255,255,255,'+(corePulse*0.85)+')');
+          grad.addColorStop(0.45, alpha(p1.hi, 0.35));
+          grad.addColorStop(1, 'rgba(0,0,0,0)');
+          ctx.fillStyle=grad; ctx.fillRect(0,0,W,H);
+          ctx.fillStyle='#fff';
+          ctx.beginPath(); ctx.arc(cx,cy,4,0,Math.PI*2); ctx.fill();
+          applyGlitch(mT,p1);
+        }
+
+        // 11 — WEBGL SHADERS (green + purple) — no big label
+        function b11(t,p,p2,_,__,mT){
+          bg();
+          const FS=10,CW=6;
+          const COLS=Math.floor(W/CW),ROWS=Math.floor(H/FS);
+          ctx.font=FS+'px "VT323", monospace'; ctx.textBaseline='top';
+          const F=0.045, WP=14, SP=0.20;
+          const PAL=' ·•░▒▓█';
+          for(let r=0;r<ROWS;r++){
+            for(let c=0;c<COLS;c++){
+              const wx=(vn(c*F*1.3+t*SP, r*F+7.1)-0.5)*WP;
+              const wy=(vn(c*F+t*SP*0.7+3.2, r*F*1.1-11.8)-0.5)*WP;
+              const v=fbm((c+wx)*F*0.85+t*SP*0.5, (r+wy)*F*0.75-t*SP*0.3);
+              if(v<0.15) continue;
+              const ch=PAL[Math.min(PAL.length-1, Math.floor(v*PAL.length))];
+              if(ch===' ') continue;
+              const useP2 = (c + Math.sin(r*0.1+t*0.3)*5) > COLS*0.5;
+              const pp = useP2 ? p2 : p;
+              const col = v>0.85 ? pp.hi : (v>0.55 ? pp.accent : pp.mid);
+              ctx.fillStyle = alpha(col, Math.min(0.9, 0.3+v*0.65));
+              ctx.fillText(ch, c*CW, r*FS);
+            }
+          }
+          // GLSL code panel only
+          ctx.fillStyle='rgba(0,0,0,0.7)';
+          ctx.fillRect(8,8,210,72);
+          ctx.strokeStyle=alpha(p.mid,0.4); ctx.lineWidth=1;
+          ctx.strokeRect(8,8,210,72);
+          const code=['vec3 col = palette(','  fbm(p + fbm(p))',');','col *= 0.85 + 0.15 *','       cos(u_time*0.3);'];
+          for(let i=0;i<code.length;i++){
+            tx(code[i],16,18+i*12,p.accent,10,'JetBrains Mono');
+          }
+          applyGlitch(mT,p);
+        }
+
+        // 12 — ★ MEGA MONTAGE (all 4 colors)
+        function b12(t,p1,p2,p3,p4,mT){
+          bg();
+          // 4 shots across the 1.8s beat — 0.45s each, no loop-back.
+          const shotDur = 0.45;
+          const shot = Math.min(3, Math.floor(t/shotDur));
+          if(shot===0){
+            // Spirograph
+            const cx=W/2,cy=H/2;
+            const phaseSpeed = 8;
+            const colors = [p1, p2, p3, p4];
+            for(let arm=0; arm<5; arm++){
+              const armPhase = arm/5*Math.PI*2;
+              ctx.strokeStyle = alpha(colors[arm%4].accent, 0.8);
+              ctx.lineWidth = 1.5; ctx.beginPath();
+              const N=80;
+              for(let i=0;i<=N;i++){
+                const u = i/N*Math.PI*4;
+                const r1 = 60, r2 = 25;
+                const x = cx + (r1-r2)*Math.cos(u + armPhase) + r2*Math.cos((r1-r2)/r2 * u + t*phaseSpeed);
+                const y = cy + (r1-r2)*Math.sin(u + armPhase) - r2*Math.sin((r1-r2)/r2 * u + t*phaseSpeed);
+                if(i===0)ctx.moveTo(x,y); else ctx.lineTo(x,y);
+              }
+              ctx.stroke();
+            }
+            ctx.fillStyle = COLORS.green.hi;
+            ctx.beginPath(); ctx.arc(cx,cy,4,0,Math.PI*2); ctx.fill();
+          }
+          else if(shot===1){
+            // Glitch barcode
+            const numBars = 32, r = rng(101 + Math.floor(t*60));
+            for(let i=0;i<numBars;i++){
+              const x = i*(W/numBars), w = W/numBars-0.5;
+              const h = 30 + r()*(H-60);
+              const yOff = ((Math.sin(i*0.5+t*5))*0.5+0.5) * (H-h);
+              const colors = [p1, p2, p3, p4];
+              const col = colors[i%4];
+              ctx.fillStyle = alpha(col.accent, 0.8);
+              ctx.fillRect(x, yOff, w, h);
+              ctx.fillStyle = 'rgba(220,40,80,0.20)'; ctx.fillRect(x-1.5, yOff, w, h);
+              ctx.fillStyle = 'rgba(40,140,220,0.20)'; ctx.fillRect(x+1.5, yOff, w, h);
+            }
+            chromaTextC('0xDEADBEEF', W/2, H/2-10, COLORS.green.hi, 18, 'Bungee', t, 2.5);
+          }
+          else if(shot===2){
+            // Vortex particles
+            const cx=W/2,cy=H/2;
+            for(let i=0;i<160;i++){
+              const ringIdx = i%5, armIdx = Math.floor(i/5)%30;
+              const ringR = 20 + ringIdx*22;
+              const baseAng = armIdx/30*Math.PI*2;
+              const ang = baseAng + t * (3 - ringIdx*0.4);
+              const x = cx + Math.cos(ang)*ringR;
+              const y = cy + Math.sin(ang)*ringR*0.55;
+              const colors = [p1, p2, p3, p4];
+              const col = colors[ringIdx%4];
+              const sz = 2 + (4-ringIdx)*0.4;
+              ctx.fillStyle = alpha(col.accent, 0.85);
+              ctx.beginPath(); ctx.arc(x,y,sz,0,Math.PI*2); ctx.fill();
+            }
+            ctx.fillStyle = COLORS.green.hi;
+            ctx.beginPath(); ctx.arc(cx,cy,5,0,Math.PI*2); ctx.fill();
+          }
+          else {
+            // Cellular grid
+            const cx=W/2,cy=H/2;
+            const cellSize = 16;
+            const gridW = Math.floor(W/cellSize), gridH = Math.floor(H/cellSize);
+            for(let gx=0;gx<gridW;gx++){
+              for(let gy=0;gy<gridH;gy++){
+                const px = gx*cellSize + cellSize/2;
+                const py = gy*cellSize + cellSize/2;
+                const dist = Math.sqrt((px-cx)*(px-cx) + (py-cy)*(py-cy));
+                const wave = Math.sin(dist*0.05 - t*15)*0.5+0.5;
+                if(wave < 0.4) continue;
+                const colors = [p1, p2, p3, p4];
+                const col = colors[(gx+gy)%4];
+                const sz = wave * (cellSize*0.35);
+                ctx.fillStyle = alpha(col.accent, wave*0.85);
+                ctx.fillRect(px-sz, py-sz, sz*2, sz*2);
+              }
+            }
+          }
+          applyGlitch(mT,p1);
+        }
+
+        // 13 — LOTTIE (purple) — no big label
+        function b13(t,p,_,__,___,mT){
+          bg();
+          const frameW = W - 235;
+          const frameH = 220;
+          const frameX = 220;
+          const frameY = Math.floor((H - frameH) / 2);
+          const bx=120,by=H/2;
+          for(let i=0;i<4;i++){
+            const ringT = (t - i*0.4) % 2.0;
+            if(ringT<0||ringT>1.6)continue;
+            const r = ringT*60;
+            const a = 1-ringT/2;
+            ctx.strokeStyle=alpha(p.accent,a*0.7); ctx.lineWidth=1.2;
+            ctx.beginPath(); ctx.arc(bx,by,r,0,Math.PI*2); ctx.stroke();
+          }
+          ctx.save();
+          ctx.translate(bx,by-40);
+          ctx.rotate(Math.sin(t*3.5)*0.18);
+          ctx.translate(-bx,-(by-40));
+          ctx.fillStyle=alpha(p.accent,0.3);
+          ctx.beginPath();
+          ctx.moveTo(bx-32,by+16); ctx.quadraticCurveTo(bx-32,by-30,bx,by-32);
+          ctx.quadraticCurveTo(bx+32,by-30,bx+32,by+16); ctx.closePath(); ctx.fill();
+          ctx.strokeStyle=p.hi; ctx.lineWidth=1.2; ctx.stroke();
+          ctx.beginPath(); ctx.arc(bx,by-40,5,0,Math.PI*2); ctx.stroke();
+          ctx.fillStyle=p.hi;
+          ctx.beginPath(); ctx.arc(bx+4,by+8,4,0,Math.PI*2); ctx.fill();
+          ctx.restore();
+          ctx.strokeStyle=alpha(p.mid,0.4); ctx.lineWidth=0.5;
+          ctx.strokeRect(frameX,frameY,frameW,frameH);
+          const json=[['"op": ','140,'],['"fr": ','30,'],['"layers":','['],['  { "ty":',' 4,'],['    "nm":',' "bell"'],['  }',']']];
+          for(let i=0;i<json.length;i++){
+            tx(json[i][0],frameX+12,frameY+22+i*16,p.accent,11,'JetBrains Mono');
+            tx(json[i][1],frameX+76,frameY+22+i*16,p.hi,11,'JetBrains Mono');
+          }
+          tx('// proxy.frame 0→140',frameX+12,frameY+146,alpha(p.mid,0.5),10,'JetBrains Mono');
+          applyGlitch(mT,p);
+        }
+
+        // 14 — CAPTIONS (green) — no big label, fixed highlight box
+        function b14(t,p,_,__,___,mT){
+          bg();
+          const y=H*0.40;
+          const words=['your ','code ','renders ','to ','video'];
+          const activeIdx = Math.floor(t/0.40)%5;
+          ctx.font='bold 16px "JetBrains Mono", monospace';
+          const widths = words.map(function(w){return ctx.measureText(w).width;});
+          const totW = widths.reduce(function(a,b){return a+b;}, 0);
+          let x = (W - totW) / 2;
+          for(let i=0;i<words.length;i++){
+            const wW = widths[i];
+            if(i===activeIdx){
+              const pad = 4;
+              const grad = ctx.createLinearGradient(0, y-14, 0, y+10);
+              grad.addColorStop(0, p.hi); grad.addColorStop(0.5, p.accent); grad.addColorStop(1, p.mid);
+              ctx.fillStyle = grad; ctx.fillRect(x - pad, y - 14, wW + pad*2 - 2, 24);
+              ctx.fillStyle = 'rgba(0,0,0,0.25)';
+              for(let yy = y-14; yy < y+10; yy += 2) ctx.fillRect(x-pad, yy, wW+pad*2-2, 1);
+            }
+            ctx.font='bold 16px "JetBrains Mono", monospace';
+            ctx.textBaseline='top';
+            ctx.fillStyle = i===activeIdx ? '#000' : alpha(p.mid, 0.7);
+            ctx.fillText(words[i], x, y);
+            x += wW;
+          }
+          // waveform
+          const wfY=H*0.62, wfW=W-80, wfX=40, bars=60, r=rng(21);
+          for(let i=0;i<bars;i++){
+            const baseH=4+r()*32;
+            const phase = Math.sin(t*4 + i*0.4)*0.3+0.7;
+            const h=baseH*phase;
+            ctx.fillStyle=alpha(p.accent,0.55);
+            ctx.fillRect(wfX+i*(wfW/bars), wfY-h/2, Math.max(1,wfW/bars-1), h);
+          }
+          const mx=wfX+wfW*0.42;
+          ctx.fillStyle=p.hi;
+          ctx.fillRect(mx-1,wfY-22,2,44);
+          ctx.fillRect(mx-3,wfY-22,6,2); ctx.fillRect(mx-3,wfY+20,6,2);
+          applyGlitch(mT,p);
+        }
+
+        // 15 — TEMPLATES (brown) — no big label
+        function b15(t,p,_,__,___,mT){
+          bg();
+          const activeIdx = Math.floor(t/0.8)%3;
+          const cardStackTop = Math.floor((H - 232) / 2);
+          const cards=[
+            {x:60,y:cardStackTop,name:'product-launch'},
+            {x:120,y:cardStackTop+60,name:'swiss-grid'},
+            {x:180,y:cardStackTop+120,name:'dev-demo'},
+          ];
+          for(let i=0;i<cards.length;i++){
+            const c=cards[i];
+            const cw=240,ch=72,sk=20;
+            ctx.fillStyle='rgba(0,15,5,0.85)';
+            ctx.beginPath();
+            ctx.moveTo(c.x,c.y); ctx.lineTo(c.x+cw,c.y);
+            ctx.lineTo(c.x+cw-sk,c.y+ch); ctx.lineTo(c.x-sk,c.y+ch);
+            ctx.closePath(); ctx.fill();
+            ctx.strokeStyle=p.accent; ctx.lineWidth=0.8; ctx.stroke();
+            ctx.fillStyle = i===activeIdx ? p.hi : p.accent;
+            ctx.fillRect(c.x+8,c.y+8,52,56);
+            tx(c.name,c.x+72-i*5,c.y+24,p.hi,12,'JetBrains Mono');
+            tx('npx hyperframes init',c.x+72-i*5,c.y+40,alpha(p.mid,0.6),9,'JetBrains Mono');
+            tx('--template '+c.name,c.x+72-i*5,c.y+54,alpha(p.mid,0.5),9,'JetBrains Mono');
+            if(i===activeIdx){
+              ctx.fillStyle=p.hi; ctx.fillRect(c.x-2,c.y+28,cw+4,2);
+            }
+          }
+          applyGlitch(mT,p);
+        }
+
+        // 16 — ★ LISSAJOUS (blue)
+        function b16(t,p,_,__,___,mT){
+          bg();
+          const cx=W/2,cy=H/2;
+          const draw1 = Math.min(1, t/(0.5*0.7));
+          const draw2 = Math.max(0, Math.min(1, (t-0.1)/(0.5*0.7)));
+          ctx.strokeStyle=p.hi; ctx.lineWidth=1.6; ctx.beginPath();
+          const N=320;
+          for(let i=0;i<=N*draw1;i++){
+            const u=i/N*Math.PI*2;
+            const xi=cx+Math.sin(3*u+0.7)*100;
+            const yi=cy+Math.sin(4*u)*70;
+            if(i===0) ctx.moveTo(xi,yi); else ctx.lineTo(xi,yi);
+          }
+          ctx.stroke();
+          if(draw2>0){
+            ctx.strokeStyle=alpha(p.accent,0.7); ctx.lineWidth=1.4; ctx.beginPath();
+            for(let i=0;i<=N*draw2;i++){
+              const u=i/N*Math.PI*2;
+              const xi=cx+Math.sin(5*u)*120;
+              const yi=cy+Math.sin(4*u+1.0)*60;
+              if(i===0) ctx.moveTo(xi,yi); else ctx.lineTo(xi,yi);
+            }
+            ctx.stroke();
+          }
+          const ticks=[[cx-130,cy],[cx+130,cy],[cx,cy-85],[cx,cy+85]];
+          for(let i=0;i<ticks.length;i++){
+            const tk=ticks[i];
+            ctx.fillStyle=alpha(p.mid,0.6);
+            ctx.fillRect(tk[0]-3,tk[1]-0.5,6,1);
+            ctx.fillRect(tk[0]-0.5,tk[1]-3,1,6);
+          }
+          applyGlitch(mT,p);
+        }
+
+        // 17 — INSTALL CMD (green) — VT323 large header
+        function b17(t,p,_,__,___,mT){
+          bg();
+          const r=rng(15);
+          for(let i=0;i<80;i++){
+            tx('·',r()*W,r()*H,alpha(p.mid,0.10+r()*0.13),9);
+          }
+          const px=20,pw=W-40,ph=78;
+          const titleY = Math.floor(H/2 - 72);
+          const py = Math.floor(H/2 - 30);
+          ctx.fillStyle='rgba(0,15,5,0.85)';
+          ctx.fillRect(px,py,pw,ph);
+          ctx.strokeStyle=alpha(p.accent,0.4); ctx.lineWidth=1;
+          ctx.strokeRect(px,py,pw,ph);
+          ctx.fillStyle=alpha(p.accent,0.10); ctx.fillRect(px,py,pw,16);
+          const dots=['#FF5F57','#FEBC2E','#28C840'];
+          for(let i=0;i<dots.length;i++){
+            ctx.fillStyle=dots[i];
+            ctx.beginPath(); ctx.arc(px+10+i*12,py+8,3,0,Math.PI*2); ctx.fill();
+          }
+          const cmd = 'hermes skills install hyperframes';
+          const typeStart = 0.4;
+          if(t>typeStart){
+            const prog = Math.min(1, (t-typeStart)/0.7);
+            const v = Math.floor(cmd.length*prog);
+            tx('$',px+12,py+44,alpha(p.mid,0.6),16,'JetBrains Mono');
+            const argSplit = cmd.indexOf('hyperframes');
+            const visible = cmd.substring(0,v);
+            if(v <= argSplit){
+              chromaText(visible,px+26,py+44,p.accent,15,'JetBrains Mono',t,1.0,'700');
+            } else {
+              chromaText(visible.substring(0,argSplit),px+26,py+44,p.accent,15,'JetBrains Mono',t,1.0,'700');
+              ctx.font='700 15px "JetBrains Mono", monospace';
+              const argX = px+26+ctx.measureText(cmd.substring(0,argSplit)).width;
+              chromaText(visible.substring(argSplit),argX,py+44,p.hi,15,'JetBrains Mono',t,1.0,'700');
+            }
+            if(t>typeStart && Math.floor(t*4)%2===0){
+              ctx.font='700 15px "JetBrains Mono", monospace';
+              const cursorX = px+26+ctx.measureText(visible).width+1;
+              // Cursor sits ON the typed line, not above. Text is at py+44 (top),
+              // so cursor block sits at py+44 with the same 16px height.
+              ctx.fillStyle=p.hi; ctx.fillRect(cursorX,py+44,7,16);
+            }
+          }
+          if(t>1.6){
+            const a=Math.min(1,(t-1.6)/0.3);
+            tx('> resolving · 667 skills · ready',px+12,py+66,alpha(p.mid,0.45*a),11,'JetBrains Mono');
+          }
+          txC('ONE COMMAND TO INSTALL',W/2,titleY,p.hi,22,'VT323');
+          applyGlitch(mT,p);
+        }
+
+        // 18 — SLASH CMD — centered command palette modal (blue). All
+        // coordinates rounded to integers; right-aligned text uses measureText
+        // so nothing overflows.
+        function b18(t,p,p2,_,__,mT){
+          bg();
+          // Subtle dotted bg field for depth
+          const r=rng(33);
+          for(let i=0;i<60;i++){
+            tx('·',r()*W,r()*H,alpha(p.mid,0.08+r()*0.10),9);
+          }
+          // Centered modal
+          const mw = 420, mh = 200;
+          const mx = Math.floor((W-mw)/2), my = Math.floor((H-mh)/2);
+          // Body + outline (1px integer-aligned)
+          ctx.fillStyle='rgba(4,10,18,0.92)';
+          ctx.fillRect(mx,my,mw,mh);
+          ctx.fillStyle = alpha(p.accent,0.55);
+          ctx.fillRect(mx,my,mw,1);             // top
+          ctx.fillRect(mx,my+mh-1,mw,1);        // bottom
+          ctx.fillRect(mx,my,1,mh);             // left
+          ctx.fillRect(mx+mw-1,my,1,mh);        // right
+          // Header strip
+          const hdrH = 22;
+          ctx.fillStyle = alpha(p.accent, 0.16);
+          ctx.fillRect(mx+1, my+1, mw-2, hdrH-1);
+          // 3 dot decoration
+          ['#5599DD','#9966CC','#5DC9C9'].forEach(function(c,i){
+            ctx.fillStyle=c;
+            ctx.beginPath(); ctx.arc(mx+10+i*10, my+11, 2.5, 0, Math.PI*2); ctx.fill();
+          });
+          tx('hermes ⌘ palette', mx+44, my+6, p.hi, 11, 'JetBrains Mono');
+          // right-align "esc"
+          ctx.font='10px "JetBrains Mono", monospace';
+          const escW = ctx.measureText('esc').width;
+          tx('esc', mx+mw-10-escW, my+7, alpha(p.mid,0.6), 10, 'JetBrains Mono');
+          // Input row — single line, integer y
+          const inX = mx+10, inY = my + hdrH + 8, inW = mw-20, inH = 36;
+          ctx.fillStyle = alpha(p.mid, 0.20);
+          ctx.fillRect(inX, inY, inW, inH);
+          ctx.fillStyle = alpha(p.accent, 0.7);
+          ctx.fillRect(inX, inY, inW, 1);
+          ctx.fillRect(inX, inY+inH-1, inW, 1);
+          ctx.fillRect(inX, inY, 1, inH);
+          ctx.fillRect(inX+inW-1, inY, 1, inH);
+          // caret
+          tx('›', inX+8, inY+9, p.accent, 18, 'JetBrains Mono');
+          // slash command
+          ctx.font = '700 15px "JetBrains Mono", monospace';
+          const slashW = ctx.measureText('/hyperframes').width;
+          if(t > 0.3){
+            const a = Math.min(1,(t-0.3)/0.25);
+            chromaText('/hyperframes', inX+26, inY+11, alpha(p.hi,a), 15, 'JetBrains Mono', t, 1.0, '700');
+          }
+          // natural language continuation
+          const nat = 'create a product launch video';
+          const natX = inX + 26 + slashW + 10;
+          if(t > 0.9){
+            const prog = Math.min(1, (t-0.9)/1.4);
+            const v = Math.floor(nat.length * prog);
+            ctx.font = '13px "JetBrains Mono", monospace';
+            tx(nat.substring(0,v), natX, inY+13, alpha(p2.accent, 0.95), 13, 'JetBrains Mono');
+            if(Math.floor(t*4)%2 === 0){
+              const w = ctx.measureText(nat.substring(0,v)).width;
+              ctx.fillStyle = p2.accent;
+              ctx.fillRect(natX + w + 1, inY+13, 2, 14);
+            }
+          }
+          // Suggestions
+          const listY = inY + inH + 10;
+          const items = [
+            {label:'/hyperframes', desc:'compose video from natural language', active:true},
+            {label:'/hermes',      desc:'invoke a registered agent skill',     active:false},
+            {label:'/clip',        desc:'extract a moment from any composition', active:false},
+          ];
+          for(let i=0; i<items.length; i++){
+            const itY = listY + i*22;
+            ctx.font = '11px "JetBrains Mono", monospace';
+            const descW = ctx.measureText(items[i].desc).width;
+            const descX = mx + 138;
+            const hiliteRight = Math.min(mx+mw-8, descX + descW + 8);
+            if(items[i].active){
+              ctx.fillStyle = alpha(p.accent, 0.18);
+              ctx.fillRect(inX, itY-2, hiliteRight - inX, 20);
+              ctx.fillStyle = p.accent;
+              ctx.fillRect(inX, itY-2, 2, 20);
+            }
+            tx(items[i].label, inX+12, itY+3,
+               items[i].active ? p.hi : alpha(p.mid, 0.85),
+               12, 'JetBrains Mono');
+            tx(items[i].desc, descX, itY+4,
+               items[i].active ? alpha(p2.accent, 0.85) : alpha(p.mid, 0.5),
+               11, 'JetBrains Mono');
+          }
+          // Footer (right-aligned text now uses measureText so it never overflows)
+          const ftY = my + mh - 18;
+          ctx.fillStyle = alpha(p.mid, 0.30);
+          ctx.fillRect(inX, ftY-4, inW, 1);
+          tx('↵ generate', inX+8, ftY, alpha(p.hi, 0.85), 10, 'JetBrains Mono');
+          ctx.font = '10px "Audiowide", monospace';
+          const tagW = ctx.measureText('one slash to create').width;
+          tx('one slash to create', mx+mw-10-tagW, ftY, alpha(p2.accent, 0.7), 10, 'Audiowide');
+          applyGlitch(mT, p);
+        }
+
+        // 19 — LOCKUP (blue + brown) — Cinzel + Major Mono Display split
+        function b19(t,p,p2,_,__,mT){
+          bg();
+          const cyL = H*0.43;
+          const cxL=W*0.32, cxR=W*0.68;
+          function shadedSphere(cx,cy,rr,colorSet){
+            const grad=ctx.createRadialGradient(cx-rr*0.3,cy-rr*0.3,5,cx,cy,rr);
+            grad.addColorStop(0,colorSet.hi); grad.addColorStop(0.5,colorSet.accent); grad.addColorStop(1,colorSet.dim);
+            ctx.fillStyle=grad;
+            ctx.beginPath(); ctx.arc(cx,cy,rr,0,Math.PI*2); ctx.fill();
+            ctx.strokeStyle=colorSet.accent; ctx.lineWidth=1;
+            ctx.beginPath(); ctx.arc(cx,cy,rr,0,Math.PI*2); ctx.stroke();
+          }
+          shadedSphere(cxL,cyL,46,p);
+          shadedSphere(cxR,cyL,46,p2);
+          chromaTextC('</>', cxL, cyL-13, '#000', 26, 'Major Mono Display', t, 1.2, '700');
+          chromaTextC('NOUS', cxR, cyL-16, '#000', 18, 'Cinzel', t, 1.0, '700');
+          txC('RESEARCH', cxR, cyL+8, alpha('#000',0.75), 9, 'Cinzel');
+          txC('×', W*0.5, cyL-8, alpha('#fff',0.4), 24, 'VT323');
+          const labelY = cyL + 112;
+          txC('HYPERFRAMES', cxL, labelY, p.hi, 13, 'Major Mono Display');
+          txC('HERMES AGENT', cxR, labelY, p2.hi, 12, 'Cinzel');
+          applyGlitch(mT,p);
+        }
+
+        // 20 — FINALE (all 4 colors) — Bungee NOW BUILD
+        function b20(t,p1,p2,p3,p4,mT){
+          bg();
+          const cx=W/2,cy=H/2,r=rng(101);
+          const colors = [p1, p2, p3, p4];
+          for(let i=0;i<200;i++){
+            const ang=r()*Math.PI*2;
+            const radEnd = 30+r()*180;
+            const conv = Math.min(1, t/2);
+            const radius = radEnd * conv;
+            const x = cx + Math.cos(ang)*radius;
+            const y = cy + Math.sin(ang)*radius*0.55;
+            if(x<5||x>W-5||y<5||y>H-5) continue;
+            const a = Math.max(0.10, 1 - radius/200);
+            const col = colors[Math.floor(r()*4)];
+            const lum = radius < 50 ? col.hi : (radius < 110 ? col.accent : col.mid);
+            tx('░▒▓·•◦+*'[Math.floor(r()*8)],x,y,alpha(lum,a*0.85),9+r()*3);
+          }
+          const grad=ctx.createRadialGradient(cx,cy,0,cx,cy,80);
+          grad.addColorStop(0,'rgba(255,255,255,0.5)');
+          grad.addColorStop(0.4,alpha(p1.accent,0.20));
+          grad.addColorStop(1,'rgba(0,0,0,0)');
+          ctx.fillStyle=grad; ctx.fillRect(0,0,W,H);
+          if(t>0.5){
+            const a=Math.min(1,(t-0.5)/0.5);
+            chromaTextC('NOW BUILD',cx,cy-12,alpha('#fff',a),28,'Bungee',t,1.8);
+          }
+          applyGlitch(mT,p1);
+        }
+
+        // =========================================================
+        // BEAT SCHEDULE
+        // =========================================================
+        // Beats aligned to VO transcription (assets/vo.mp3, 39.86s).
+        // Beat 4 absorbs the binary rain overlay (transition into beat 6) and
+        // beat 5 has been removed. Beats 6+ all shifted -0.5s after VO compress.
+        const BEATS = [
+          {n:1,  start:0.0,  dur:1.9, render:b01, palettes:[COLORS.green]},
+          {n:2,  start:1.9,  dur:0.8, render:b02, palettes:[COLORS.purple]},
+          {n:3,  start:2.7,  dur:4.12,render:b03, palettes:[COLORS.blue, COLORS.brown]},
+          {n:4,  start:6.82, dur:3.98,render:b04, palettes:[COLORS.green, COLORS.purple, COLORS.blue, COLORS.brown]},
+          {n:6,  start:10.8, dur:1.6, render:b06, palettes:[COLORS.green]},
+          {n:7,  start:12.4, dur:1.3, render:b07, palettes:[COLORS.purple]},
+          {n:8,  start:13.7, dur:1.1, render:b08, palettes:[COLORS.blue]},
+          {n:9,  start:14.8, dur:2.2, render:b09, palettes:[COLORS.brown]},
+          {n:10, start:17.0, dur:2.7, render:b10, palettes:[COLORS.green, COLORS.purple, COLORS.blue, COLORS.brown]},
+          {n:11, start:19.7, dur:1.8, render:b11, palettes:[COLORS.green, COLORS.purple]},
+          {n:12, start:21.5, dur:1.8, render:b12, palettes:[COLORS.green, COLORS.purple, COLORS.blue, COLORS.brown]},
+          {n:13, start:23.3, dur:0.9, render:b13, palettes:[COLORS.purple]},
+          {n:14, start:24.2, dur:1.7, render:b14, palettes:[COLORS.green]},
+          {n:15, start:25.9, dur:1.6, render:b15, palettes:[COLORS.purple]},
+          {n:16, start:27.5, dur:0.5, render:b16, palettes:[COLORS.blue]},
+          {n:17, start:28.0, dur:4.5, render:b17, palettes:[COLORS.green]},
+          {n:18, start:32.5, dur:3.2, render:b18, palettes:[COLORS.blue, COLORS.purple]},
+          {n:19, start:35.7, dur:1.3, render:b19, palettes:[COLORS.blue, COLORS.brown]},
+          {n:20, start:37.0, dur:4.0, render:b20, palettes:[COLORS.green, COLORS.purple, COLORS.blue, COLORS.brown]},
+        ];
+        const TOTAL_DUR = 41.0;
+
+        // =========================================================
+        // THREE.JS ANAMORPHIC SETUP (loads async; renders during beat 3)
+        // =========================================================
+        let anaReady = false;
+        let anaScene, anaCamera, anaRenderer, anaStage;
+        (async function setupAnamorphic(){
+          try {
+            const glContext = anaCanvas.getContext('webgl2') || anaCanvas.getContext('webgl');
+            if (!glContext) {
+              console.warn('[parade] anamorphic setup skipped: WebGL unavailable');
+              return;
+            }
+            const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.165.0/+esm');
+            const { FontLoader } = await import('https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/loaders/FontLoader.js/+esm');
+            const { TextGeometry } = await import('https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/geometries/TextGeometry.js/+esm');
+            const { Brush, Evaluator, INTERSECTION } = await import('https://cdn.jsdelivr.net/npm/three-bvh-csg@0.0.18/+esm');
+
+            anaRenderer = new THREE.WebGLRenderer({ canvas: anaCanvas, context: glContext, antialias: true, alpha: false });
+            anaRenderer.setPixelRatio(1);
+            anaRenderer.setSize(ANA_W, ANA_H, false);
+            anaRenderer.setClearColor(0x000000, 1);
+
+            anaScene = new THREE.Scene();
+            anaScene.background = new THREE.Color(0x000000);
+            anaCamera = new THREE.OrthographicCamera(
+              -700, 700,
+              700, -700,
+              -5000, 5000
+            );
+            anaCamera.position.set(0, 0, 1000);
+            anaCamera.lookAt(0, 0, 0);
+
+            anaScene.add(new THREE.AmbientLight(0xaec3b0, 0.7));
+            const keyLight = new THREE.DirectionalLight(0xeff6e0, 1.2);
+            keyLight.position.set(400, 600, 800);
+            anaScene.add(keyLight);
+            const fillLight = new THREE.DirectionalLight(0x778DA9, 0.5);
+            fillLight.position.set(-500, -200, 400);
+            anaScene.add(fillLight);
+
+            const material = new THREE.MeshStandardMaterial({
+              color: 0xE5E1DD, metalness: 0.15, roughness: 0.45,
+            });
+
+            anaStage = new THREE.Group();
+            anaScene.add(anaStage);
+
+            const WORD1 = 'HYPERFRAMES';
+            const WORD2 = 'HERMES';
+            const TEXT_SIZE = 200;
+            const FONT_URL = 'https://cdn.jsdelivr.net/npm/three@0.165.0/examples/fonts/helvetiker_bold.typeface.json';
+            const font = await new Promise(function(resolve, reject){
+              new FontLoader().load(FONT_URL, resolve, undefined, reject);
+            });
+
+            const word1Stripped = WORD1.replace(/\s/g, '');
+            const word2Stripped = WORD2.replace(/\s/g, '');
+
+            function pairWords(shorter, longer){
+              if(shorter.length > longer.length){
+                return pairWords(longer, shorter).map(function(p){return [p[1], p[0]];});
+              }
+              const result = [];
+              const m = shorter.length, n = longer.length;
+              let prev = 0;
+              for(let i = 1; i <= m; i++){
+                const next = Math.round((i * n) / m);
+                const group = longer.slice(prev, next);
+                result.push([[shorter[i - 1]], group]);
+                prev = next;
+              }
+              return result;
+            }
+            function measureChunk(text){
+              const shapes = font.generateShapes(text, TEXT_SIZE);
+              const geom = new THREE.ShapeGeometry(shapes);
+              geom.computeBoundingBox();
+              const bb = geom.boundingBox;
+              geom.dispose();
+              return { text, width:bb.max.x-bb.min.x, minX:bb.min.x, minY:bb.min.y, maxY:bb.max.y };
+            }
+            const advanceScale = TEXT_SIZE / font.data.resolution;
+            function advanceOf(text){
+              let total = 0;
+              for(const c of text){ const g = font.data.glyphs[c]; if(g) total += g.ha; }
+              return total * advanceScale;
+            }
+            function computeMeasurements(chunks){
+              const result = [];
+              let cumulative = 0;
+              for(const chunk of chunks){
+                const text = chunk.join('');
+                const m = measureChunk(text);
+                result.push(Object.assign({}, m, { position: cumulative, advance: advanceOf(text) }));
+                cumulative += advanceOf(text);
+              }
+              return result;
+            }
+            function makeExtrudedText(text, depth){
+              return new TextGeometry(text, {
+                font, size: TEXT_SIZE, depth, curveSegments: 4, bevelEnabled: false
+              });
+            }
+
+            const pairs = pairWords(word1Stripped.split(''), word2Stripped.split(''));
+            const chunks1 = pairs.map(function(p){return p[0];});
+            const chunks2 = pairs.map(function(p){return p[1];});
+            const m1Arr = computeMeasurements(chunks1);
+            const m2Arr = computeMeasurements(chunks2);
+            const fullM1 = measureChunk(word1Stripped);
+            const totalWidth1 = advanceOf(word1Stripped);
+            const totalWidth2 = advanceOf(word2Stripped);
+            const extrudeMargin = 30;
+            const charHeight = fullM1.maxY - fullM1.minY;
+            const aspect = ANA_W / ANA_H;
+            const depthSpan = totalWidth2 + extrudeMargin * 2;
+            const rotatingSpan = Math.sqrt(totalWidth1 * totalWidth1 + depthSpan * depthSpan);
+            const fittedCamWidth = Math.max(rotatingSpan * 1.14, charHeight * 2.4);
+            const fittedCamHeight = fittedCamWidth / aspect;
+            anaCamera.left = -fittedCamWidth / 2;
+            anaCamera.right = fittedCamWidth / 2;
+            anaCamera.top = fittedCamHeight / 2;
+            anaCamera.bottom = -fittedCamHeight / 2;
+            anaCamera.updateProjectionMatrix();
+
+            const evaluator = new Evaluator();
+            evaluator.useGroups = false;
+
+            for(let i = 0; i < pairs.length; i++){
+              const c1 = m1Arr[i], c2 = m2Arr[i];
+              const g1 = makeExtrudedText(c1.text, totalWidth2 + extrudeMargin);
+              g1.translate(0, 0, -(totalWidth2 + extrudeMargin)/2);
+              const g2 = makeExtrudedText(c2.text, totalWidth1 + extrudeMargin);
+              g2.translate(0, 0, -(totalWidth1 + extrudeMargin)/2);
+              const brush1 = new Brush(g1); brush1.updateMatrixWorld();
+              const brush2 = new Brush(g2);
+              brush2.rotation.y = Math.PI/2;
+              brush2.updateMatrixWorld();
+              try {
+                const intersected = evaluator.evaluate(brush1, brush2, INTERSECTION);
+                intersected.material = material;
+                intersected.position.set(
+                  c1.position - totalWidth1/2,
+                  0,
+                  -c2.position + totalWidth2/2
+                );
+                anaStage.add(intersected);
+              } catch(err){ console.warn('CSG failed for pair', i, err.message); }
+            }
+            anaStage.position.set(0, -charHeight/2 - fullM1.minY, 0);
+
+            anaReady = true;
+          } catch(err) {
+            console.warn('[parade] anamorphic setup failed:', err);
+          }
+        })();
+
+        function renderAnamorphic(localT){
+          if(!anaReady) return;
+          let rot;
+          if(localT < 0.4) rot = 0;
+          else if(localT > 3.6) rot = -Math.PI/2;
+          else {
+            const u = (localT - 0.4) / 3.2;
+            const eased = u < 0.5 ? 2*u*u : 1 - Math.pow(-2*u+2, 2)/2;
+            rot = -eased * Math.PI/2;
+          }
+          anaStage.rotation.y = rot;
+          anaRenderer.render(anaScene, anaCamera);
+        }
+
+        // =========================================================
+        // MASTER TIMELINE — paused; HF runtime drives time
+        // =========================================================
+        const tl = gsap.timeline({ paused: true });
+        const masterTime = { t: 0 };
+        tl.to(masterTime, {
+          t: TOTAL_DUR,
+          duration: TOTAL_DUR,
+          ease: 'none',
+          onUpdate: function(){
+            const tNow = masterTime.t;
+            // Find active beat
+            let active = BEATS[0];
+            for(let i=0;i<BEATS.length;i++){
+              if(tNow >= BEATS[i].start) active = BEATS[i];
+            }
+            const localT = Math.max(0, tNow - active.start);
+            // Toggle canvas visibility for anamorphic vs 2D
+            if(active.n === 3){
+              if(anaCanvas.style.display === 'none'){
+                anaCanvas.style.display = 'block';
+                bgCanvas.style.display = 'none';
+              }
+              renderAnamorphic(localT);
+            } else {
+              if(bgCanvas.style.display === 'none'){
+                bgCanvas.style.display = 'block';
+                anaCanvas.style.display = 'none';
+              }
+              const pals = active.palettes;
+              active.render(localT, pals[0], pals[1]||pals[0], pals[2]||pals[0], pals[3]||pals[0], tNow);
+            }
+          }
+        }, 0);
+
+        window.__timelines["parade"] = tl;
+      })();
+    </script>
+  </div>
+</template>

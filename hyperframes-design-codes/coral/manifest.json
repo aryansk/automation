@@ -1,0 +1,47 @@
+{
+  "slug": "coral",
+  "name": "Coral",
+  "tagline": "Bebas Neue uppercase headlines + coral on cream, Inter reading",
+  "scheme": "light",
+  "density": "medium",
+  "tokens": {
+    "consumes": [
+      "primary",
+      "secondary",
+      "tertiary",
+      "accent"
+    ]
+  },
+  "defaultPalette": "coral-default",
+  "defaultFontPairId": "bebas-inter",
+  "supportedTones": [
+    "bold",
+    "editorial"
+  ],
+  "fonts": {
+    "headline": "Bebas Neue",
+    "body": "Inter"
+  },
+  "frames": {
+    "landscape": [],
+    "portrait": []
+  },
+  "colorTokens": [
+    {
+      "name": "coral-dark",
+      "label": "Coral dark"
+    },
+    {
+      "name": "cream-dark",
+      "label": "Cream dark"
+    },
+    {
+      "name": "light-gray",
+      "label": "Light gray"
+    },
+    {
+      "name": "white",
+      "label": "White"
+    }
+  ]
+}
