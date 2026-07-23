@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "remotion studio",
     "render": "remotion render Short out/video.mp4",
+    "render-news": "remotion render News out/news-video.mp4",
     "upgrade": "remotion upgrade"
   },
   "dependencies": {

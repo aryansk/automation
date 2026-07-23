@@ -1,0 +1,263 @@
+{
+  "fps": 30,
+  "total": 2361,
+  "scenes": [
+    {
+      "n": 1,
+      "from": 0,
+      "dur": 120,
+      "words": [
+        {"text": "Tech", "startF": 15, "endF": 27},
+        {"text": "News", "startF": 28, "endF": 40},
+        {"text": "Brief.", "startF": 41, "endF": 53},
+        {"text": "July", "startF": 54, "endF": 66},
+        {"text": "21,", "startF": 67, "endF": 75},
+        {"text": "2026.", "startF": 76, "endF": 90}
+      ]
+    },
+    {
+      "n": 2,
+      "from": 120,
+      "dur": 150,
+      "words": [
+        {"text": "Here", "startF": 135, "endF": 147},
+        {"text": "are", "startF": 148, "endF": 155},
+        {"text": "the", "startF": 156, "endF": 162},
+        {"text": "top", "startF": 163, "endF": 170},
+        {"text": "technology", "startF": 171, "endF": 195},
+        {"text": "stories", "startF": 196, "endF": 210},
+        {"text": "today.", "startF": 211, "endF": 225}
+      ]
+    },
+    {
+      "n": 3,
+      "from": 270,
+      "dur": 210,
+      "words": [
+        {"text": "Story", "startF": 285, "endF": 300},
+        {"text": "1.", "startF": 301, "endF": 310},
+        {"text": "AI", "startF": 311, "endF": 320},
+        {"text": "minister", "startF": 321, "endF": 345},
+        {"text": "role", "startF": 346, "endF": 360},
+        {"text": "boosted", "startF": 361, "endF": 380},
+        {"text": "but", "startF": 381, "endF": 390},
+        {"text": "tech", "startF": 391, "endF": 400},
+        {"text": "department", "startF": 401, "endF": 430},
+        {"text": "axed", "startF": 431, "endF": 445},
+        {"text": "in", "startF": 446, "endF": 452},
+        {"text": "Burnham", "startF": 453, "endF": 475},
+        {"text": "shake-up", "startF": 476, "endF": 500}
+      ]
+    },
+    {
+      "n": 4,
+      "from": 480,
+      "dur": 210,
+      "words": [
+        {"text": "Kanishka", "startF": 495, "endF": 515},
+        {"text": "Narayan", "startF": 516, "endF": 535},
+        {"text": "will", "startF": 536, "endF": 550},
+        {"text": "attend", "startF": 551, "endF": 570},
+        {"text": "cabinet,", "startF": 571, "endF": 595},
+        {"text": "but", "startF": 596, "endF": 605},
+        {"text": "no", "startF": 606, "endF": 615},
+        {"text": "longer", "startF": 616, "endF": 635},
+        {"text": "have", "startF": 636, "endF": 650},
+        {"text": "the", "startF": 651, "endF": 660},
+        {"text": "leadership", "startF": 661, "endF": 690},
+        {"text": "of", "startF": 691, "endF": 700},
+        {"text": "a", "startF": 701, "endF": 708},
+        {"text": "technology", "startF": 709, "endF": 735},
+        {"text": "secretary.", "startF": 736, "endF": 760}
+      ]
+    },
+    {
+      "n": 5,
+      "from": 690,
+      "dur": 210,
+      "words": [
+        {"text": "Story", "startF": 705, "endF": 720},
+        {"text": "2.", "startF": 721, "endF": 730},
+        {"text": "Thousands", "startF": 731, "endF": 760},
+        {"text": "of", "startF": 761, "endF": 770},
+        {"text": "websites", "startF": 771, "endF": 800},
+        {"text": "taken", "startF": 801, "endF": 820},
+        {"text": "down", "startF": 821, "endF": 840},
+        {"text": "for", "startF": 841, "endF": 850},
+        {"text": "illegal", "startF": 851, "endF": 875},
+        {"text": "World", "startF": 876, "endF": 895},
+        {"text": "Cup", "startF": 896, "endF": 910},
+        {"text": "streams", "startF": 911, "endF": 935}
+      ]
+    },
+    {
+      "n": 6,
+      "from": 900,
+      "dur": 210,
+      "words": [
+        {"text": "More", "startF": 915, "endF": 935},
+        {"text": "than", "startF": 936, "endF": 955},
+        {"text": "1,000", "startF": 956, "endF": 980},
+        {"text": "illegal", "startF": 981, "endF": 1005},
+        {"text": "streaming", "startF": 1006, "endF": 1035},
+        {"text": "sites", "startF": 1036, "endF": 1055},
+        {"text": "were", "startF": 1056, "endF": 1070},
+        {"text": "shut", "startF": 1071, "endF": 1090},
+        {"text": "down", "startF": 1091, "endF": 1110},
+        {"text": "in", "startF": 1111, "endF": 1120},
+        {"text": "the", "startF": 1121, "endF": 1130},
+        {"text": "US", "startF": 1131, "endF": 1150},
+        {"text": "during", "startF": 1151, "endF": 1175},
+        {"text": "the", "startF": 1176, "endF": 1185},
+        {"text": "tournament,", "startF": 1186, "endF": 1210},
+        {"text": "with", "startF": 1211, "endF": 1225},
+        {"text": "a", "startF": 1226, "endF": 1233},
+        {"text": "similar", "startF": 1234, "endF": 1260},
+        {"text": "amount", "startF": 1261, "endF": 1280},
+        {"text": "blocked", "startF": 1281, "endF": 1305},
+        {"text": "in", "startF": 1306, "endF": 1315},
+        {"text": "Colombia.", "startF": 1316, "endF": 1340}
+      ]
+    },
+    {
+      "n": 7,
+      "from": 1110,
+      "dur": 210,
+      "words": [
+        {"text": "Story", "startF": 1125, "endF": 1140},
+        {"text": "3.", "startF": 1141, "endF": 1150},
+        {"text": "Ofcom", "startF": 1151, "endF": 1175},
+        {"text": "unable", "startF": 1176, "endF": 1200},
+        {"text": "to", "startF": 1201, "endF": 1210},
+        {"text": "take", "startF": 1211, "endF": 1230},
+        {"text": "further", "startF": 1231, "endF": 1255},
+        {"text": "legal", "startF": 1256, "endF": 1275},
+        {"text": "action", "startF": 1276, "endF": 1300},
+        {"text": "against", "startF": 1301, "endF": 1325},
+        {"text": "suicide", "startF": 1326, "endF": 1350},
+        {"text": "forum", "startF": 1351, "endF": 1370}
+      ]
+    },
+    {
+      "n": 8,
+      "from": 1320,
+      "dur": 210,
+      "words": [
+        {"text": "The", "startF": 1335, "endF": 1345},
+        {"text": "regulator", "startF": 1346, "endF": 1375},
+        {"text": "said", "startF": 1376, "endF": 1395},
+        {"text": "it", "startF": 1396, "endF": 1405},
+        {"text": "had", "startF": 1406, "endF": 1420},
+        {"text": "no", "startF": 1421, "endF": 1430},
+        {"text": "further", "startF": 1431, "endF": 1455},
+        {"text": "legal", "startF": 1456, "endF": 1475},
+        {"text": "routes", "startF": 1476, "endF": 1500},
+        {"text": "available", "startF": 1501, "endF": 1530},
+        {"text": "under", "startF": 1531, "endF": 1550},
+        {"text": "the", "startF": 1551, "endF": 1560},
+        {"text": "Online", "startF": 1561, "endF": 1590},
+        {"text": "Safety", "startF": 1591, "endF": 1615},
+        {"text": "Act.", "startF": 1616, "endF": 1635}
+      ]
+    },
+    {
+      "n": 9,
+      "from": 1530,
+      "dur": 210,
+      "words": [
+        {"text": "Story", "startF": 1545, "endF": 1560},
+        {"text": "4.", "startF": 1561, "endF": 1570},
+        {"text": "AliExpress", "startF": 1571, "endF": 1605},
+        {"text": "fined", "startF": 1606, "endF": 1625},
+        {"text": "record", "startF": 1626, "endF": 1650},
+        {"text": "550", "startF": 1651, "endF": 1670},
+        {"text": "million", "startF": 1671, "endF": 1695},
+        {"text": "euros", "startF": 1696, "endF": 1720},
+        {"text": "by", "startF": 1721, "endF": 1730},
+        {"text": "EU", "startF": 1731, "endF": 1750},
+        {"text": "for", "startF": 1751, "endF": 1760},
+        {"text": "allowing", "startF": 1761, "endF": 1790},
+        {"text": "sale", "startF": 1791, "endF": 1810},
+        {"text": "of", "startF": 1811, "endF": 1820},
+        {"text": "illegal", "startF": 1821, "endF": 1845},
+        {"text": "goods", "startF": 1846, "endF": 1870}
+      ]
+    },
+    {
+      "n": 10,
+      "from": 1740,
+      "dur": 210,
+      "words": [
+        {"text": "The", "startF": 1755, "endF": 1765},
+        {"text": "Chinese", "startF": 1766, "endF": 1795},
+        {"text": "retailer", "startF": 1796, "endF": 1820},
+        {"text": "allowed", "startF": 1821, "endF": 1845},
+        {"text": "unsafe", "startF": 1846, "endF": 1870},
+        {"text": "toys", "startF": 1871, "endF": 1890},
+        {"text": "and", "startF": 1891, "endF": 1900},
+        {"text": "counterfeit", "startF": 1901, "endF": 1935},
+        {"text": "clothes", "startF": 1936, "endF": 1960},
+        {"text": "to", "startF": 1961, "endF": 1970},
+        {"text": "be", "startF": 1971, "endF": 1985},
+        {"text": "sold", "startF": 1986, "endF": 2005},
+        {"text": "on", "startF": 2006, "endF": 2015},
+        {"text": "its", "startF": 2016, "endF": 2025},
+        {"text": "site,", "startF": 2026, "endF": 2045},
+        {"text": "says", "startF": 2046, "endF": 2065},
+        {"text": "the", "startF": 2066, "endF": 2075},
+        {"text": "EU.", "startF": 2076, "endF": 2095}
+      ]
+    },
+    {
+      "n": 11,
+      "from": 1950,
+      "dur": 210,
+      "words": [
+        {"text": "Story", "startF": 1965, "endF": 1980},
+        {"text": "5.", "startF": 1981, "endF": 1990},
+        {"text": "China's", "startF": 1991, "endF": 2015},
+        {"text": "Moonshot", "startF": 2016, "endF": 2045},
+        {"text": "AI", "startF": 2046, "endF": 2060},
+        {"text": "claims", "startF": 2061, "endF": 2085},
+        {"text": "Kimi", "startF": 2086, "endF": 2110},
+        {"text": "K3", "startF": 2111, "endF": 2130},
+        {"text": "can", "startF": 2131, "endF": 2145},
+        {"text": "rival", "startF": 2146, "endF": 2170},
+        {"text": "OpenAI", "startF": 2171, "endF": 2200},
+        {"text": "and", "startF": 2201, "endF": 2210},
+        {"text": "Anthropic", "startF": 2211, "endF": 2245}
+      ]
+    },
+    {
+      "n": 12,
+      "from": 2160,
+      "dur": 150,
+      "words": [
+        {"text": "The", "startF": 2175, "endF": 2185},
+        {"text": "company", "startF": 2186, "endF": 2215},
+        {"text": "has", "startF": 2216, "endF": 2230},
+        {"text": "unveiled", "startF": 2231, "endF": 2260},
+        {"text": "a", "startF": 2261, "endF": 2268},
+        {"text": "massive", "startF": 2269, "endF": 2295},
+        {"text": "new", "startF": 2296, "endF": 2310},
+        {"text": "artificial", "startF": 2311, "endF": 2340},
+        {"text": "intelligence", "startF": 2341, "endF": 2375},
+        {"text": "model", "startF": 2376, "endF": 2400}
+      ]
+    },
+    {
+      "n": 13,
+      "from": 2310,
+      "dur": 120,
+      "words": [
+        {"text": "That's", "startF": 2325, "endF": 2345},
+        {"text": "all", "startF": 2346, "endF": 2360},
+        {"text": "for", "startF": 2361, "endF": 2370},
+        {"text": "today's", "startF": 2371, "endF": 2395},
+        {"text": "tech", "startF": 2396, "endF": 2410},
+        {"text": "news", "startF": 2411, "endF": 2430},
+        {"text": "brief.", "startF": 2431, "endF": 2455}
+      ]
+    }
+  ]
+}
