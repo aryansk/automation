@@ -1,0 +1,16 @@
+{
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Washington D.C.",
+  "region": "North America",
+  "kicker": "Trade · Global Economy",
+  "headline": "Trump imposes sweeping tariffs on sixty trading partners",
+  "summary": "New duties of ten or twelve point five percent hit economies behind nearly all U.S. imports as partners protest and markets react.",
+  "script": "President Trump has imposed new tariffs on sixty trading partners. Duties of ten or twelve point five percent cover economies behind nearly all U.S. imports. Washington says the move targets weak forced-labor bans while major partners are objecting and warning of retaliation.",
+  "source": "USTR AP Reuters",
+  "edition": "25 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/trump-tariffs-global.wav",
+  "storyNumber": "02"
+}

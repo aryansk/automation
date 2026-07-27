@@ -1,0 +1,16 @@
+{
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "New York City",
+  "region": "North America",
+  "kicker": "Space · Markets",
+  "headline": "A new private space race is taking shape",
+  "summary": "Launch schedules, capital plans and satellite demand are converging into a pivotal year for the commercial space economy.",
+  "script": "A new private space race is taking shape. Launch schedules, capital plans and satellite demand are converging. The coming year could determine which companies turn ambitious plans into a durable commercial space economy.",
+  "source": "Daily Brief",
+  "edition": "24 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/us-space.wav",
+  "storyNumber": "01"
+}

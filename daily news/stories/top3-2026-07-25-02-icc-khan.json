@@ -1,0 +1,21 @@
+{
+  "countryCode": "NL",
+  "countryName": "Netherlands",
+  "cityName": "The Hague",
+  "region": "Europe",
+  "urgency": "breaking",
+  "storyType": "statistics",
+  "kicker": "Breaking · Justice",
+  "headline": "World court removes its chief prosecutor for the first time",
+  "summary": "International Criminal Court member states voted eighty two to thirteen to remove chief prosecutor Karim Khan over sexual misconduct allegations he denies.",
+  "script": "International Criminal Court members voted eighty two to thirteen to dismiss chief prosecutor Karim Khan over sexual misconduct allegations. It is the first removal in the court's twenty four year history. Khan denies all wrongdoing.",
+  "statValue": "82",
+  "statLabel": "Of 125 states voted to remove him",
+  "statPeriod": "24 Jul 2026",
+  "source": "Reuters · UN News",
+  "edition": "25 Jul 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/sample-secondary.jpg",
+  "imageTwo": "assets/sample-primary.jpg",
+  "narrationAudio": "assets/narration/top3-2026-07-25-02-icc-khan.wav"
+}

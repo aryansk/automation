@@ -1,0 +1,275 @@
+/* ============================================================
+   IndieHouse.io News — globe tour
+   One continuous film. The globe holds the frame throughout; type is
+   deliberately sparse so it never competes with it.
+   ============================================================ */
+
+@font-face {
+  font-family: "League Gothic";
+  src: url("fonts/league-gothic-400.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("fonts/ibm-plex-mono-400.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("fonts/ibm-plex-mono-600.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("fonts/ibm-plex-mono-700.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+}
+
+:root {
+  --ink: #08131f;
+  --paper: #f3ecd8;
+  --muted: #93a8b2;
+  --signal: #f4b860;
+  --alert: #ff5347;
+  --pad-x: 76px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 1080px;
+  height: 1920px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+body {
+  color: var(--paper);
+  font-family: "IBM Plex Mono", monospace;
+  text-rendering: geometricPrecision;
+}
+
+#root {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 34%, #123048 0%, #0a1a28 46%, #06101a 100%);
+}
+
+#space-layer,
+#globe-layer {
+  position: absolute;
+  inset: 0;
+  width: 1080px;
+  height: 1920px;
+  display: block;
+}
+
+#space-layer {
+  z-index: 0;
+  opacity: 0.85;
+}
+
+#globe-layer {
+  z-index: 1;
+}
+
+/* ---------- top rail ---------- */
+
+.rail {
+  position: absolute;
+  top: 78px;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.rail__desk {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--paper);
+}
+
+.rail__dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--alert);
+  box-shadow: 0 0 0 6px rgba(255, 83, 71, 0.18);
+}
+
+.rail__rule {
+  position: absolute;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  top: 128px;
+  z-index: 6;
+  height: 2px;
+  background: linear-gradient(90deg, var(--signal), rgba(244, 184, 96, 0));
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* ---------- cold open ---------- */
+
+.opener {
+  position: absolute;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  top: 690px;
+  z-index: 7;
+  text-align: center;
+}
+
+.opener__line {
+  margin: 0;
+  font-family: "League Gothic", sans-serif;
+  font-size: 150px;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-shadow: 0 4px 26px rgba(3, 10, 18, 0.85);
+}
+
+.opener__line em {
+  font-style: normal;
+  color: var(--signal);
+}
+
+.opener__sub {
+  margin: 26px 0 0;
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- headline card ----------
+   Headline only. No summary, no stat, no thumbnail. */
+
+.card {
+  position: absolute;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  top: 1268px;
+  z-index: 8;
+  padding: 34px 40px 38px;
+  background: rgba(7, 17, 27, 0.82);
+  border-left: 5px solid var(--signal);
+  border-radius: 4px;
+  opacity: 0;
+}
+
+.card__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+
+.card__meta-spacer {
+  flex: 1;
+}
+
+.card__meta span:last-child {
+  color: var(--muted);
+  letter-spacing: 0.18em;
+}
+
+.card__headline {
+  margin: 0;
+  font-family: "League Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 104px;
+  line-height: 0.94;
+  letter-spacing: 0.004em;
+  text-transform: uppercase;
+  color: var(--paper);
+}
+
+/* ---------- location label under the globe ---------- */
+
+.locator {
+  position: absolute;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  top: 1180px;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0;
+}
+
+.locator__tick {
+  width: 34px;
+  height: 2px;
+  background: var(--signal);
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  position: absolute;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  bottom: 108px;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(147, 168, 178, 0.7);
+  opacity: 0;
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  z-index: 12;
+  pointer-events: none;
+  opacity: 0.09;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+}

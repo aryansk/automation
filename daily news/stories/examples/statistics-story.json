@@ -1,0 +1,21 @@
+{
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "London",
+  "region": "Europe",
+  "storyType": "statistics",
+  "kicker": "Business · Data",
+  "headline": "Survey finds hiring plans rising across technology firms",
+  "summary": "The statistic card identifies the measure, direction, comparison period and source without hiding the supporting story.",
+  "script": "A new demonstration survey shows technology hiring plans rising. Sixty-eight percent of participating firms expect to add roles, nine points above the prior period. The visual names the measure, direction, comparison window and source.",
+  "source": "Demo Survey",
+  "edition": "25 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/silence.wav",
+  "storyNumber": "03",
+  "statValue": "68%",
+  "statLabel": "firms planning to hire",
+  "statDelta": "+9 pts",
+  "statPeriod": "versus prior period"
+}

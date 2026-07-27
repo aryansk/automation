@@ -1,0 +1,892 @@
+:root {
+  --ani-ink: #08131f;
+  --ani-panel: #0b1c2a;
+  --ani-line: #7895a5;
+  --ani-paper: #f3ecd8;
+  --ani-muted: #b8c6c9;
+  --ani-accent: #f4b860;
+}
+
+.news-animation {
+  --ani-accent: #f4b860;
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+  color: var(--ani-paper);
+  background: var(--ani-panel);
+  border: 2px solid rgba(120, 149, 165, 0.64);
+  font-family: "IBM Plex Mono", monospace;
+  isolation: isolate;
+}
+
+.news-animation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.34;
+  background-image:
+    linear-gradient(rgba(120, 149, 165, 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 149, 165, 0.11) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.news-animation h3 {
+  max-width: 88%;
+  margin: 10px 0 0;
+  font-family: "League Gothic", sans-serif;
+  font-size: clamp(44px, 6vw, 76px);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.ani-eyebrow,
+.ani-source span,
+.ani-location small,
+.ani-location-card span,
+.ani-source-card small,
+.ani-weather small,
+.ani-election small,
+.ani-divider span,
+.ani-chapter span,
+.ani-story-end span,
+.ani-outro small,
+.ani-cta span {
+  color: var(--ani-accent);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.ani-source {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(120, 149, 165, 0.66);
+  font-size: 14px;
+}
+
+.ani-source strong {
+  overflow: hidden;
+  color: var(--ani-muted);
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ani-headline,
+.ani-breaking {
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.ani-headline .ani-rule {
+  width: 72%;
+  height: 5px;
+  margin-top: 24px;
+  background: var(--ani-accent);
+  transform-origin: left center;
+}
+
+.ani-breaking {
+  justify-content: center;
+  background: var(--ani-accent);
+  color: var(--ani-ink);
+}
+
+.ani-breaking > span {
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  padding: 7px 11px;
+  color: var(--ani-paper);
+  background: var(--ani-ink);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ani-breaking .ani-eyebrow {
+  color: rgba(8, 19, 31, 0.72);
+}
+
+.ani-breaking .ani-scanline {
+  position: absolute;
+  right: 30px;
+  bottom: 32px;
+  width: 124px;
+  height: 10px;
+  border-top: 2px solid var(--ani-ink);
+  border-bottom: 2px solid var(--ani-ink);
+}
+
+.ani-lower-third,
+.ani-presenter {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  min-height: 106px;
+  padding: 22px 24px;
+  background: rgba(8, 19, 31, 0.93);
+  border-top: 4px solid var(--ani-accent);
+}
+
+.ani-lower-third {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.ani-lower-third span,
+.ani-presenter span {
+  color: var(--ani-muted);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ani-lower-third strong,
+.ani-presenter strong {
+  font-size: 24px;
+  line-height: 1.12;
+}
+
+.ani-presenter {
+  gap: 18px;
+}
+
+.ani-presenter > div:last-child {
+  display: grid;
+  gap: 7px;
+}
+
+.ani-avatar {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  color: var(--ani-ink);
+  background: var(--ani-accent);
+  font-family: "League Gothic", sans-serif;
+  font-size: 34px;
+}
+
+.ani-quote {
+  min-height: 280px;
+  padding: 28px 30px 62px;
+}
+
+.ani-quote b {
+  display: block;
+  height: 66px;
+  color: var(--ani-accent);
+  font-family: "League Gothic", sans-serif;
+  font-size: 92px;
+  line-height: 1;
+}
+
+.ani-quote blockquote {
+  max-width: 92%;
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 30px;
+  line-height: 1.08;
+}
+
+.ani-quote cite {
+  display: block;
+  margin-top: 22px;
+  color: var(--ani-muted);
+  font-size: 15px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.ani-stat {
+  display: grid;
+  min-height: 280px;
+  align-content: center;
+  padding: 28px 30px 64px;
+}
+
+.ani-stat strong {
+  color: var(--ani-accent);
+  font-family: "League Gothic", sans-serif;
+  font-size: 112px;
+  font-weight: 400;
+  line-height: 0.82;
+}
+
+.ani-stat span {
+  max-width: 84%;
+  margin-top: 18px;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ani-stat small {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  padding: 8px 10px;
+  color: var(--ani-ink);
+  background: var(--ani-accent);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ani-percent {
+  display: grid;
+  min-height: 280px;
+  place-items: center;
+}
+
+.ani-percent::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border: 18px solid rgba(120, 149, 165, 0.24);
+  border-radius: 50%;
+}
+
+.ani-percent::after {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border: 18px solid var(--ani-accent);
+  border-right-color: transparent;
+  border-bottom-color: color-mix(in srgb, var(--ani-accent) calc(var(--value) * 1%), transparent);
+  border-radius: 50%;
+  transform: rotate(-28deg);
+}
+
+.ani-percent > div {
+  z-index: 1;
+  display: grid;
+  text-align: center;
+}
+
+.ani-percent strong {
+  font-family: "League Gothic", sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+}
+
+.ani-percent span {
+  color: var(--ani-muted);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.news-animation--comparison-chart {
+  padding: 26px 28px 58px;
+}
+
+.news-animation--comparison-chart h3 {
+  font-size: 44px;
+}
+
+.ani-comparison {
+  display: grid;
+  gap: 17px;
+  margin-top: 24px;
+}
+
+.ani-comparison > div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  padding-bottom: 13px;
+  overflow: hidden;
+}
+
+.ani-comparison span {
+  color: var(--ani-muted);
+  text-transform: uppercase;
+}
+
+.ani-comparison b {
+  color: var(--ani-accent);
+  font-size: 20px;
+}
+
+.ani-comparison i {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background: rgba(120, 149, 165, 0.26);
+}
+
+.ani-comparison i::after {
+  content: "";
+  display: block;
+  width: calc(var(--bar) * 100%);
+  height: 100%;
+  background: var(--ani-accent);
+}
+
+.news-animation--timeline {
+  padding: 26px 28px;
+}
+
+.news-animation--timeline h3 {
+  font-size: 42px;
+}
+
+.ani-timeline {
+  display: grid;
+  gap: 0;
+  margin-top: 24px;
+  border-left: 3px solid var(--ani-accent);
+}
+
+.ani-timeline div {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 16px;
+  padding: 9px 0 9px 18px;
+}
+
+.ani-timeline time {
+  color: var(--ani-accent);
+  font-weight: 700;
+}
+
+.ani-timeline span {
+  color: var(--ani-muted);
+}
+
+.ani-globe {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.ani-earth {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(243, 236, 216, 0.18), transparent 28%),
+    radial-gradient(circle at 58% 50%, #365d4a 0 17%, #244b5b 18% 33%, #0d2638 34% 100%);
+  border: 2px solid rgba(184, 198, 201, 0.7);
+  border-radius: 50%;
+  box-shadow: 0 0 44px rgba(75, 166, 220, 0.32);
+}
+
+.ani-earth::before,
+.ani-earth::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px solid rgba(184, 198, 201, 0.34);
+  border-radius: 50%;
+}
+
+.ani-earth::after {
+  inset: 34% -10%;
+}
+
+.ani-target {
+  position: absolute;
+  top: calc(50% - 44px);
+  left: calc(50% + 42px);
+  width: 34px;
+  height: 34px;
+  border: 4px solid var(--ani-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(244, 184, 96, 0.18);
+}
+
+.ani-route {
+  position: absolute;
+  width: 160px;
+  height: 70px;
+  border-top: 4px solid var(--ani-accent);
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+
+.ani-location {
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+  left: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 2px solid var(--ani-accent);
+  padding-top: 12px;
+}
+
+.ani-location strong {
+  font-family: "League Gothic", sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.ani-location-card,
+.ani-source-card {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  display: grid;
+  gap: 10px;
+  padding: 24px;
+  background: rgba(8, 19, 31, 0.9);
+  border-top: 4px solid var(--ani-accent);
+}
+
+.ani-location-card strong,
+.ani-source-card strong {
+  font-family: "League Gothic", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.ani-location-card small,
+.ani-source-card span {
+  color: var(--ani-muted);
+}
+
+.ani-map-route {
+  display: grid;
+  min-height: 280px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 36px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ani-map-route i {
+  position: relative;
+  height: 2px;
+  background: var(--ani-accent);
+}
+
+.ani-map-route i::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -5px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid var(--ani-accent);
+}
+
+.ani-media-frame {
+  position: absolute;
+  inset: 18px;
+  overflow: hidden;
+  border: 2px solid rgba(120, 149, 165, 0.72);
+}
+
+.ani-media-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.ani-media-frame::after {
+  content: "";
+  position: absolute;
+  inset: 52% 0 0;
+  background: linear-gradient(transparent, rgba(8, 19, 31, 0.9));
+}
+
+.ani-media-frame span {
+  position: absolute;
+  right: 18px;
+  bottom: 15px;
+  z-index: 1;
+  left: 18px;
+  color: var(--ani-paper);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ani-video-frame {
+  position: absolute;
+  inset: 18px;
+  display: grid;
+  align-content: end;
+  gap: 8px;
+  padding: 24px;
+  background:
+    linear-gradient(transparent 42%, rgba(8, 19, 31, 0.92)),
+    repeating-linear-gradient(135deg, #18374a 0 16px, #0d2638 16px 32px);
+  border: 2px solid rgba(120, 149, 165, 0.72);
+}
+
+.ani-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  color: var(--ani-ink);
+  background: var(--ani-accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ani-video-frame strong {
+  font-size: 22px;
+}
+
+.ani-video-frame span {
+  color: var(--ani-muted);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.ani-split,
+.ani-before-after {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ani-split > div,
+.ani-before-after > div {
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  background: #18374a;
+}
+
+.ani-split > div:last-child,
+.ani-before-after > div:last-child {
+  background: #2f4d3c;
+  border-left: 4px solid var(--ani-accent);
+}
+
+.ani-split strong,
+.ani-before-after span {
+  padding: 7px 10px;
+  color: var(--ani-ink);
+  background: var(--ani-accent);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.ani-before-after i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 2px);
+  width: 4px;
+  background: var(--ani-accent);
+}
+
+.ani-social {
+  position: absolute;
+  inset: 24px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 18px;
+  padding: 24px;
+  background: #f3ecd8;
+  color: #08131f;
+}
+
+.ani-social header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.ani-social header span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: var(--ani-paper);
+  background: var(--ani-ink);
+}
+
+.ani-social p {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 24px;
+  line-height: 1.18;
+}
+
+.ani-social footer {
+  padding-top: 12px;
+  color: #45606c;
+  border-top: 1px solid rgba(8, 19, 31, 0.3);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.ani-market {
+  min-height: 280px;
+  padding: 26px 28px 58px;
+}
+
+.ani-market header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--ani-muted);
+}
+
+.ani-market header strong {
+  color: var(--ani-paper);
+}
+
+.ani-market > b {
+  display: block;
+  margin-top: 24px;
+  font-family: "League Gothic", sans-serif;
+  font-size: 78px;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.ani-market > i {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--ani-accent);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.ani-market > i.down::before {
+  content: "↓ ";
+}
+
+.ani-market > i.up::before {
+  content: "↑ ";
+}
+
+.ani-market svg {
+  position: absolute;
+  right: 28px;
+  bottom: 56px;
+  width: 48%;
+  overflow: visible;
+}
+
+.ani-market path {
+  fill: none;
+  stroke: var(--ani-accent);
+  stroke-width: 5;
+  vector-effect: non-scaling-stroke;
+}
+
+.ani-weather,
+.ani-election {
+  display: flex;
+  min-height: 280px;
+  align-items: center;
+  gap: 28px;
+  padding: 34px;
+}
+
+.ani-weather-icon {
+  display: grid;
+  width: 118px;
+  height: 118px;
+  place-items: center;
+  color: var(--ani-ink);
+  background: var(--ani-accent);
+  border-radius: 50%;
+  font-size: 68px;
+}
+
+.ani-weather > div,
+.ani-election > div:last-child {
+  display: grid;
+  gap: 8px;
+}
+
+.ani-weather strong {
+  font-family: "League Gothic", sans-serif;
+  font-size: 78px;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.ani-weather span:last-child,
+.ani-election span {
+  color: var(--ani-muted);
+}
+
+.ani-election {
+  align-items: stretch;
+}
+
+.ani-map-shape {
+  flex: 0 0 46%;
+  background:
+    linear-gradient(38deg, transparent 44%, rgba(8, 19, 31, 0.5) 45% 51%, transparent 52%),
+    conic-gradient(from 28deg, #f4b860, #d49b4b 35%, #7895a5 36% 66%, #18374a 67%);
+  clip-path: polygon(24% 4%, 82% 12%, 96% 46%, 72% 92%, 18% 82%, 4% 38%);
+}
+
+.ani-election > div:last-child {
+  align-content: center;
+}
+
+.ani-election strong {
+  font-family: "League Gothic", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.ani-divider,
+.ani-story-end {
+  display: grid;
+  min-height: 280px;
+  align-content: center;
+  padding: 34px;
+}
+
+.ani-divider strong,
+.ani-story-end strong {
+  margin-top: 10px;
+  font-family: "League Gothic", sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.ani-divider i,
+.ani-story-end i {
+  width: 66%;
+  height: 5px;
+  margin-top: 24px;
+  background: var(--ani-accent);
+}
+
+.ani-chapter {
+  display: grid;
+  min-height: 280px;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 28px;
+  padding: 34px;
+}
+
+.ani-chapter > b {
+  color: var(--ani-accent);
+  font-family: "League Gothic", sans-serif;
+  font-size: 126px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.ani-chapter > div {
+  display: grid;
+  gap: 8px;
+  padding-left: 24px;
+  border-left: 3px solid var(--ani-accent);
+}
+
+.ani-chapter strong {
+  font-family: "League Gothic", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.ani-outro,
+.ani-cta {
+  display: grid;
+  min-height: 280px;
+  place-content: center;
+  gap: 15px;
+  padding: 32px;
+  text-align: center;
+}
+
+.ani-outro strong {
+  color: var(--ani-paper);
+  font-family: "League Gothic", sans-serif;
+  font-size: 68px;
+  font-weight: 400;
+  line-height: 0.78;
+  text-transform: uppercase;
+}
+
+.ani-outro span {
+  color: var(--ani-muted);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.ani-cta strong {
+  max-width: 420px;
+  font-family: "League Gothic", sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.ani-cta button {
+  justify-self: center;
+  min-width: 140px;
+  padding: 13px 22px;
+  color: var(--ani-ink);
+  background: var(--ani-accent);
+  border: 0;
+  border-radius: 0;
+  font: 700 15px "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .news-animation *,
+  .news-animation *::before,
+  .news-animation *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

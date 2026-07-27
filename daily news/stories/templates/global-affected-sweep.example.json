@@ -1,0 +1,19 @@
+{
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "D.C.",
+  "region": "Global",
+  "affectedCountryCodes": "US IN DE JP BR",
+  "affectedCount": 5,
+  "sweepLabel": "Replace with one sourced statistic",
+  "kicker": "Global · Developing Story",
+  "headline": "Replace this with the verified multi-country headline",
+  "summary": "Explain the shared development, its scale, and the immediate consequence in one concise sentence.",
+  "script": "State the verified multi-country development. Add the most important shared detail. Explain why it matters and identify the next confirmed step.",
+  "source": "Verified Sources",
+  "edition": "24 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/silence.wav",
+  "storyNumber": "01"
+}

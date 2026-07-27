@@ -1,0 +1,18 @@
+{
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Washington",
+  "region": "North America",
+  "storyType": "breaking",
+  "urgency": "breaking",
+  "kicker": "Breaking · Policy",
+  "headline": "Officials schedule an emergency policy briefing",
+  "summary": "The breaking treatment increases urgency through pace and contrast while keeping the language factual and restrained.",
+  "script": "Officials have scheduled an emergency policy briefing in Washington. The agenda has not yet been released. Hygen's breaking treatment uses sharper pacing and stronger contrast while keeping the on-screen language factual, sourced and deliberately unsensational.",
+  "source": "Demo Desk",
+  "edition": "25 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/silence.wav",
+  "storyNumber": "02"
+}

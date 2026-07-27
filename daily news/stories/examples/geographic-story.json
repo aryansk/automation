@@ -1,0 +1,19 @@
+{
+  "countryCode": "IN",
+  "countryName": "India",
+  "cityName": "Delhi",
+  "region": "South Asia",
+  "storyType": "geographic",
+  "highlightStyle": "outline-pulse",
+  "cameraAngle": "editorial",
+  "kicker": "Geography · Policy",
+  "headline": "Delhi opens a new regional technology forum",
+  "summary": "The demonstration shows how a location-led story keeps national and regional context visible before the headline.",
+  "script": "Delhi is hosting a new regional technology forum. The gathering brings public officials and industry leaders together. The demonstration shows how Hygen keeps the city, country and surrounding geography visible before moving into the wider story.",
+  "source": "Demo Desk",
+  "edition": "25 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/silence.wav",
+  "storyNumber": "01"
+}

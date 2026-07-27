@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #000;
+      }
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      .scene-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.4) contrast(1.1);
+      }
+      .scene-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(10,10,30,0.85) 100%);
+      }
+      .headline {
+        position: absolute;
+        top: 280px;
+        left: 80px;
+        right: 80px;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #fff;
+        text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        z-index: 10;
+      }
+      .story-number {
+        position: absolute;
+        top: 180px;
+        left: 80px;
+        right: 80px;
+        font-size: 48px;
+        font-weight: 800;
+        color: #fff;
+        z-index: 10;
+      }
+      .story-number .num {
+        color: #4fc3f7;
+      }
+      .caption-rail {
+        position: absolute;
+        bottom: 200px;
+        left: 80px;
+        right: 80px;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.3;
+        color: rgba(255,255,255,0.9);
+        text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+        z-index: 10;
+        min-height: 140px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+      }
+      .caption-rail .word {
+        margin-right: 8px;
+        margin-bottom: 8px;
+      }
+      .caption-rail .word.active {
+        color: #4fc3f7;
+        text-shadow: 0 0 12px rgba(79,195,247,0.8);
+      }
+      .title-text {
+        position: absolute;
+        top: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 64px;
+        font-weight: 800;
+        line-height: 1.1;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 6px 30px rgba(0,0,0,0.7);
+        z-index: 10;
+        max-width: 800px;
+      }
+      .title-text .num {
+        color: #4fc3f7;
+      }
+      .date-text {
+        position: absolute;
+        top: 620px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        font-weight: 400;
+        color: rgba(255,255,255,0.7);
+        z-index: 10;
+      }
+      .vignette {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 5;
+        background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.5) 100%);
+      }
+      .story1-bg { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop stop-color="%23ff6b6b"/><stop offset="0.5" stop-color="%23ff8e53"/><stop offset="1" stop-color="%23ff4757"/></linearGradient></defs><rect width="1080" height="1920" fill="url(%23g)"/><path d="M200,400 Q400,300 600,450 T1000,350" stroke="%23ffffff20" stroke-width="3" fill="none"/><path d="M100,700 Q300,600 500,750 T900,650" stroke="%23ffffff15" stroke-width="2" fill="none"/></svg>'); }
+      .story2-bg { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="%231a237e"/><stop offset="0.5" stop-color="%23283593"/><stop offset="1" stop-color="%23303f93"/></linearGradient></defs><rect width="1080" height="1920" fill="url(%23g2)"/><path d="M100,300 L1000,200 L1000,400 L100,300Z" stroke="%23ffffff30" stroke-width="1" fill="%23ffffff10"/><path d="M200,600 L900,500 L900,700 L200,600Z" stroke="%23ffffff20" stroke-width="1" fill="%23ffffff08"/><circle cx="540" cy="1000" r="80" fill="%23ff5252" opacity="0.3"/><circle cx="300" cy="1200" r="40" fill="%23536dfe" opacity="0.2"/></svg>'); }
+      .story3-bg { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920"><defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop stop-color="%234a148c"/><stop offset="0.5" stop-color="%236a1b9a"/><stop offset="1" stop-color="%237b1fa2"/></linearGradient></defs><rect width="1080" height="1920" fill="url(%23g3)"/><path d="M100,400 L1000,400 L1000,500 L100,500Z" fill="%23ffffff15"/><path d="M200,700 L900,700 L900,800 L200,800Z" fill="%23ffffff10"/><path d="M300,1100 L800,1100 L800,1200 L300,1200Z" fill="%23ffffff08"/></svg>'); }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="1992"
+      data-width="1080"
+      data-height="1920"
+    >
+      <!-- Audio is a direct child of the host root, framework owns playback -->
+      <audio
+        id="narration"
+        src="public/audio/narration.wav"
+        data-start="0"
+        data-duration="1992"
+        preload="auto"
+      ></audio>
+
+      <!-- Scene 1: Title Card (frames 0-168, 5.6s) -->
+      <div id="scene1" class="clip" data-start="0" data-duration="168" data-track-index="1" style="opacity:1">
+        <div class="scene-bg story1-bg"></div>
+        <div class="scene-overlay"></div>
+        <div class="title-text">
+          <span class="num">Top 3</span> World News<br />Today
+        </div>
+        <div class="date-text">July 24th, 2026</div>
+        <div class="caption-rail" id="captions1"></div>
+        <div class="vignette"></div>
+      </div>
+
+      <!-- Scene 2: Story 1 - Wildfires (frames 168-792, 20.8s) -->
+      <div id="scene2" class="clip" data-start="168" data-duration="624" data-track-index="2" style="opacity:0">
+        <div class="scene-bg story1-bg"></div>
+        <div class="scene-overlay"></div>
+        <div class="story-number"><span class="num">1</span> Wildfires rage across Spain and southern France</div>
+        <div class="headline">Over 65,000 evacuated as fires tear through tourist areas near Madrid. Spain declares national emergency.</div>
+        <div class="caption-rail" id="captions2"></div>
+        <div class="vignette"></div>
+      </div>
+
+      <!-- Scene 3: Story 2 - US-Iran (frames 792-1452, 22.0s) -->
+      <div id="scene3" class="clip" data-start="792" data-duration="660" data-track-index="3" style="opacity:0">
+        <div class="scene-bg story2-bg"></div>
+        <div class="scene-overlay"></div>
+        <div class="story-number"><span class="num">2</span> US and Iran exchange strikes across the Gulf</div>
+        <div class="headline">Conflict spreads to Red Sea and Strait of Hormuz. Oil prices surge past $100 a barrel.</div>
+        <div class="caption-rail" id="captions3"></div>
+        <div class="vignette"></div>
+      </div>
+
+      <!-- Scene 4: Story 3 - Ukraine (frames 1452-1932, 16.0s) -->
+      <div id="scene4" class="clip" data-start="1452" data-duration="480" data-track-index="4" style="opacity:0">
+        <div class="scene-bg story3-bg"></div>
+        <div class="scene-overlay"></div>
+        <div class="story-number"><span class="num">3</span> Zelenskyy replaces Ukraine's top military commander</div>
+        <div class="headline">General Syrskyi replaced by General Drapatyi amid protests and intensified Russian offensives.</div>
+        <div class="caption-rail" id="captions4"></div>
+        <div class="vignette"></div>
+      </div>
+
+      <!-- Scene 5: Outro (frames 1932-1992, 2.0s) -->
+      <div id="scene5" class="clip" data-start="1932" data-duration="60" data-track-index="5" style="opacity:0">
+        <div class="scene-bg story1-bg"></div>
+        <div class="scene-overlay"></div>
+        <div class="title-text" style="font-size: 48px; top: 600px;">
+          That's all for today's brief.
+        </div>
+        <div class="caption-rail" id="captions5"></div>
+        <div class="vignette"></div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+
+      // Inlined timing data (avoids fetch issues in render context)
+      const TIMING = {"fps":30,"total":1992,"scenes":[
+        {"n":1,"from":0,"dur":168,"words":[
+          {"text":"Top","startF":0,"endF":12},{"text":"3","startF":12,"endF":24},
+          {"text":"World","startF":24,"endF":36},{"text":"News","startF":36,"endF":48},
+          {"text":"Today.","startF":48,"endF":60},{"text":"It's","startF":60,"endF":72},
+          {"text":"July","startF":72,"endF":84},{"text":"24th,","startF":84,"endF":96},
+          {"text":"2026.","startF":96,"endF":108},{"text":"Here","startF":108,"endF":120},
+          {"text":"are","startF":120,"endF":132},{"text":"the","startF":132,"endF":144},
+          {"text":"top","startF":144,"endF":156},{"text":"stories.","startF":156,"endF":168}
+        ]},
+        {"n":2,"from":168,"dur":624,"words":[
+          {"text":"Story","startF":168,"endF":180},{"text":"1:","startF":180,"endF":192},
+          {"text":"Wildfires","startF":192,"endF":204},{"text":"rage","startF":204,"endF":216},
+          {"text":"across","startF":216,"endF":228},{"text":"Spain","startF":228,"endF":240},
+          {"text":"and","startF":240,"endF":252},{"text":"southern","startF":252,"endF":264},
+          {"text":"France.","startF":264,"endF":276},{"text":"Over","startF":276,"endF":288},
+          {"text":"65,000","startF":288,"endF":300},{"text":"people","startF":300,"endF":312},
+          {"text":"have","startF":312,"endF":324},{"text":"been","startF":324,"endF":336},
+          {"text":"evacuated","startF":336,"endF":348},{"text":"as","startF":348,"endF":360},
+          {"text":"fires","startF":360,"endF":372},{"text":"tear","startF":372,"endF":384},
+          {"text":"through","startF":384,"endF":396},{"text":"tourist","startF":396,"endF":408},
+          {"text":"areas","startF":408,"endF":420},{"text":"near","startF":420,"endF":432},
+          {"text":"Madrid.","startF":432,"endF":444},{"text":"Spain","startF":444,"endF":456},
+          {"text":"has","startF":456,"endF":468},{"text":"declared","startF":468,"endF":480},
+          {"text":"a","startF":480,"endF":492},{"text":"national","startF":492,"endF":504},
+          {"text":"emergency,","startF":504,"endF":516},{"text":"and","startF":516,"endF":528},
+          {"text":"France","startF":528,"endF":540},{"text":"has","startF":540,"endF":552},
+          {"text":"deployed","startF":552,"endF":564},{"text":"boats","startF":564,"endF":576},
+          {"text":"to","startF":576,"endF":588},{"text":"evacuate","startF":588,"endF":600},
+          {"text":"the","startF":600,"endF":612},{"text":"Cap","startF":612,"endF":624},
+          {"text":"Ferret","startF":624,"endF":636},{"text":"peninsula.","startF":636,"endF":648},
+          {"text":"The","startF":648,"endF":660},{"text":"fires","startF":660,"endF":672},
+          {"text":"are","startF":672,"endF":684},{"text":"fueled","startF":684,"endF":696},
+          {"text":"by","startF":696,"endF":708},{"text":"an","startF":708,"endF":720},
+          {"text":"intense","startF":720,"endF":732},{"text":"heat","startF":732,"endF":744},
+          {"text":"wave","startF":744,"endF":756},{"text":"sweeping","startF":756,"endF":768},
+          {"text":"the","startF":768,"endF":780},{"text":"Mediterranean.","startF":780,"endF":792}
+        ]},
+        {"n":3,"from":792,"dur":660,"words":[
+          {"text":"Story","startF":792,"endF":804},{"text":"2:","startF":804,"endF":816},
+          {"text":"The","startF":816,"endF":828},{"text":"United","startF":828,"endF":840},
+          {"text":"States","startF":840,"endF":852},{"text":"and","startF":852,"endF":864},
+          {"text":"Iran","startF":864,"endF":876},{"text":"are","startF":876,"endF":888},
+          {"text":"exchanging","startF":888,"endF":900},{"text":"strikes","startF":900,"endF":912},
+          {"text":"across","startF":912,"endF":924},{"text":"the","startF":924,"endF":936},
+          {"text":"Gulf.","startF":936,"endF":948},{"text":"The","startF":948,"endF":960},
+          {"text":"conflict","startF":960,"endF":972},{"text":"has","startF":972,"endF":984},
+          {"text":"spread","startF":984,"endF":996},{"text":"to","startF":996,"endF":1008},
+          {"text":"the","startF":1008,"endF":1020},{"text":"Red","startF":1020,"endF":1032},
+          {"text":"Sea","startF":1032,"endF":1044},{"text":"and","startF":1044,"endF":1056},
+          {"text":"the","startF":1056,"endF":1068},{"text":"strategic","startF":1068,"endF":1080},
+          {"text":"Strait","startF":1080,"endF":1092},{"text":"of","startF":1092,"endF":1104},
+          {"text":"Hormuz.","startF":1104,"endF":1116},{"text":"President","startF":1116,"endF":1128},
+          {"text":"Trump","startF":1128,"endF":1140},{"text":"has","startF":1140,"endF":1152},
+          {"text":"threatened","startF":1152,"endF":1164},{"text":"a","startF":1164,"endF":1176},
+          {"text":"massive","startF":1176,"endF":1188},{"text":"attack,","startF":1188,"endF":1200},
+          {"text":"while","startF":1200,"endF":1212},{"text":"Iran","startF":1212,"endF":1224},
+          {"text":"warns","startF":1224,"endF":1236},{"text":"it","startF":1236,"endF":1248},
+          {"text":"will","startF":1248,"endF":1260},{"text":"target","startF":1260,"endF":1272},
+          {"text":"US","startF":1272,"endF":1284},{"text":"bases","startF":1284,"endF":1296},
+          {"text":"across","startF":1296,"endF":1308},{"text":"the","startF":1308,"endF":1320},
+          {"text":"Middle","startF":1320,"endF":1332},{"text":"East.","startF":1332,"endF":1344},
+          {"text":"Oil","startF":1344,"endF":1356},{"text":"prices","startF":1356,"endF":1368},
+          {"text":"have","startF":1368,"endF":1380},{"text":"surged","startF":1380,"endF":1392},
+          {"text":"past","startF":1392,"endF":1404},{"text":"100","startF":1404,"endF":1416},
+          {"text":"dollars","startF":1416,"endF":1428},{"text":"a","startF":1428,"endF":1440},
+          {"text":"barrel.","startF":1440,"endF":1452}
+        ]},
+        {"n":4,"from":1452,"dur":480,"words":[
+          {"text":"Story","startF":1452,"endF":1464},{"text":"3:","startF":1464,"endF":1476},
+          {"text":"Ukraine's","startF":1476,"endF":1488},{"text":"President","startF":1488,"endF":1500},
+          {"text":"Zelenskyy","startF":1500,"endF":1512},{"text":"has","startF":1512,"endF":1524},
+          {"text":"replaced","startF":1524,"endF":1536},{"text":"the","startF":1536,"endF":1548},
+          {"text":"country's","startF":1548,"endF":1560},{"text":"top","startF":1560,"endF":1572},
+          {"text":"military","startF":1572,"endF":1584},{"text":"commander.","startF":1584,"endF":1596},
+          {"text":"The","startF":1596,"endF":1608},{"text":"move","startF":1608,"endF":1620},
+          {"text":"comes","startF":1620,"endF":1632},{"text":"after","startF":1632,"endF":1644},
+          {"text":"days","startF":1644,"endF":1656},{"text":"of","startF":1656,"endF":1668},
+          {"text":"protests","startF":1668,"endF":1680},{"text":"and","startF":1680,"endF":1692},
+          {"text":"growing","startF":1692,"endF":1704},{"text":"pressure","startF":1704,"endF":1716},
+          {"text":"over","startF":1716,"endF":1728},{"text":"the","startF":1728,"endF":1740},
+          {"text":"war","startF":1740,"endF":1752},{"text":"effort.","startF":1752,"endF":1764},
+          {"text":"General","startF":1764,"endF":1776},{"text":"Syrskyi","startF":1776,"endF":1788},
+          {"text":"is","startF":1788,"endF":1800},{"text":"out,","startF":1800,"endF":1812},
+          {"text":"replaced","startF":1812,"endF":1824},{"text":"by","startF":1824,"endF":1836},
+          {"text":"General","startF":1836,"endF":1848},{"text":"Drapatyi,","startF":1848,"endF":1860},
+          {"text":"as","startF":1860,"endF":1872},{"text":"Kyiv","startF":1872,"endF":1884},
+          {"text":"faces","startF":1884,"endF":1896},{"text":"intensified","startF":1896,"endF":1908},
+          {"text":"Russian","startF":1908,"endF":1920},{"text":"offensives.","startF":1920,"endF":1932}
+        ]},
+        {"n":5,"from":1932,"dur":60,"words":[
+          {"text":"That's","startF":1932,"endF":1944},{"text":"all","startF":1944,"endF":1956},
+          {"text":"for","startF":1956,"endF":1968},{"text":"today's","startF":1968,"endF":1980},
+          {"text":"brief.","startF":1980,"endF":1992}
+        ]}
+      ]};
+
+      // Build caption elements for each scene
+      const sceneCaptions = {};
+      TIMING.scenes.forEach(scene => {
+        const el = document.getElementById('captions' + scene.n);
+        const words = [];
+        scene.words.forEach(w => {
+          const span = document.createElement('span');
+          span.className = 'word';
+          span.textContent = w.text;
+          span.dataset.startF = w.startF;
+          span.dataset.endF = w.endF;
+          el.appendChild(span);
+          words.push(span);
+        });
+        sceneCaptions[scene.n] = words;
+      });
+
+      // Flatten all words for frame lookup
+      const allWords = [];
+      TIMING.scenes.forEach(scene => {
+        scene.words.forEach(w => allWords.push(w));
+      });
+
+      // Caption update function
+      function updateCaptions(frame) {
+        // Clear active
+        Object.values(sceneCaptions).forEach(words => {
+          words.forEach(w => w.classList.remove('active'));
+        });
+        // Highlight active word
+        allWords.forEach(w => {
+          if (frame >= w.startF && frame < w.endF) {
+            const sceneNum = TIMING.scenes.findIndex(s =>
+              s.words.some(sw => sw.startF === w.startF)
+            ) + 1;
+            const cap = sceneCaptions[sceneNum];
+            if (cap) {
+              const el = cap.find(wl => parseInt(wl.dataset.startF) === w.startF);
+              if (el) el.classList.add('active');
+            }
+          }
+        });
+      }
+
+      // GSAP ticker for caption sync
+      gsap.ticker.add(() => {
+        const progress = tl.progress();
+        const frame = Math.floor(progress * TIMING.total);
+        updateCaptions(frame);
+      });
+
+      // Build the timeline with scoped selectors
+      const root = document.getElementById('root');
+      const fps = 30;
+
+      // Scene 1: Title (0-168) - already visible
+      tl.to({}, { duration: 168 / fps });
+
+      // Scene 2: Story 1 (168-792)
+      tl.to("#scene2", { opacity: 1, duration: 0.5 }, 168 / fps);
+
+      // Scene 3: Story 2 (792-1452)
+      tl.to("#scene3", { opacity: 1, duration: 0.5 }, 792 / fps);
+
+      // Scene 4: Story 3 (1452-1932)
+      tl.to("#scene4", { opacity: 1, duration: 0.5 }, 1452 / fps);
+
+      // Scene 5: Outro (1932-1992)
+      tl.to("#scene5", { opacity: 1, duration: 0.5 }, 1932 / fps);
+    </script>
+  </body>
+</html>

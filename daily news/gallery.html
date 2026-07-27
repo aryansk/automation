@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IndieHouse.io News — Animation Library</title>
+    <link rel="stylesheet" href="assets/news.css">
+    <link rel="stylesheet" href="assets/animations/library.css">
+    <link rel="stylesheet" href="assets/gallery.css">
+  </head>
+  <body class="gallery-page">
+    <header class="gallery-hero">
+      <div>
+        <span class="gallery-kicker">IndieHouse.io News / Developer preview</span>
+        <h1>Animation<br>library</h1>
+      </div>
+      <div class="gallery-intro">
+        <p>Reusable, deterministic news visuals with one shared API, vertical-safe defaults, source fields, and reduced-motion support.</p>
+        <code>getAnimation({ type: "country-globe-reveal", country: "India", duration: 5 })</code>
+      </div>
+    </header>
+
+    <nav class="gallery-controls" aria-label="Animation filters">
+      <div id="category-filters"></div>
+      <label>
+        <span>Find animation</span>
+        <input id="animation-search" type="search" placeholder="Type, title, category">
+      </label>
+    </nav>
+
+    <main>
+      <div class="gallery-summary">
+        <strong id="visible-count">0</strong>
+        <span>reusable animations</span>
+      </div>
+      <section id="animation-gallery" class="gallery-grid" aria-live="polite"></section>
+    </main>
+
+    <footer class="gallery-footer">
+      <span>Registry API v1</span>
+      <a href="docs/ANIMATION_LIBRARY.md">Open developer documentation</a>
+    </footer>
+
+    <script type="module" src="assets/gallery.js"></script>
+  </body>
+</html>

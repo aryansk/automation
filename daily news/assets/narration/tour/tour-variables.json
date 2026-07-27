@@ -1,0 +1,10 @@
+{
+  "deskName": "IndieHouse.io News",
+  "edition": "25 Jul 2026",
+  "openerLine": "Good morning, bad news.",
+  "openerSub": "3 stories · 25 Jul 2026",
+  "openerEnd": 2.608,
+  "tour": "[{\"countryCode\":\"US\",\"countryName\":\"United States\",\"locationName\":\"Washington\",\"kicker\":\"Trade · Markets\",\"headline\":\"New tariffs now reach almost all of US trade\",\"coordinates\":[-77.03637,38.89511],\"travelStart\":0.9,\"speakAt\":3.208,\"arrive\":2.858,\"holdUntil\":17.793},{\"countryCode\":\"IR\",\"countryName\":\"Iran\",\"locationName\":\"Tehran\",\"kicker\":\"Breaking · Iran war\",\"headline\":\"Oil tops $100 as strikes on Iran enter a fourteenth night\",\"coordinates\":[51.42151,35.69439],\"travelStart\":15.423,\"speakAt\":17.973,\"arrive\":17.623,\"holdUntil\":31.277},{\"countryCode\":\"NL\",\"countryName\":\"Netherlands\",\"locationName\":\"The Hague\",\"kicker\":\"Breaking · Justice\",\"headline\":\"World court removes its chief prosecutor for the first time\",\"coordinates\":[4.29861,52.07667],\"travelStart\":28.907,\"speakAt\":31.457,\"arrive\":31.107,\"holdUntil\":47.002}]",
+  "narrationAudio": "assets/narration/globe-tour.wav",
+  "footerNote": "Context first"
+}

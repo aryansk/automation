@@ -1,0 +1,16 @@
+{
+  "countryCode": "DE",
+  "countryName": "Germany",
+  "cityName": "Berlin",
+  "region": "Europe",
+  "kicker": "Technology · Policy",
+  "headline": "Berlin sets out a new technology policy agenda",
+  "summary": "The latest proposals put infrastructure, investment and industrial competitiveness at the center of the debate.",
+  "script": "Berlin has set out a new technology policy agenda. The proposals focus on infrastructure, investment and industrial competitiveness. Officials say the next phase will determine how quickly the plans move from consultation into implementation.",
+  "source": "Daily Brief",
+  "edition": "24 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/silence.wav",
+  "storyNumber": "03"
+}

@@ -1,0 +1,16 @@
+{
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "D.C.",
+  "region": "North America",
+  "kicker": "Trade · Global Economy",
+  "headline": "U.S. hits 60 trade partners with new tariffs",
+  "summary": "New duties of 10% or 12.5% cover economies responsible for 99.4% of U.S. imports, with product exemptions.",
+  "script": "The United States has imposed new tariffs on sixty trading partners. Duties of ten or twelve point five percent cover economies behind nearly all U.S. imports. Washington says the move targets weak forced-labor bans, while major partners are objecting.",
+  "source": "USTR · AP",
+  "edition": "24 Jul 2026",
+  "imageOne": "assets/stories/2026-07-24/us-tariffs/primary.jpg",
+  "imageTwo": "assets/stories/2026-07-24/us-tariffs/secondary.jpg",
+  "narrationAudio": "assets/narration/today-us-tariffs.wav",
+  "storyNumber": "05"
+}

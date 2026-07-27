@@ -1,0 +1,20 @@
+{
+  "countryCode": "DE",
+  "countryName": "Germany",
+  "cityName": "Berlin",
+  "region": "Europe",
+  "storyType": "quote",
+  "kicker": "Climate · Industry",
+  "headline": "Minister says execution will define the energy transition",
+  "summary": "The quote treatment separates the speaker's exact words from surrounding context and keeps attribution visible.",
+  "script": "A demonstration briefing in Berlin focused on delivery. The minister said execution, not promises, would define the next phase. Hygen separates the exact quote from surrounding context and keeps the speaker and source visibly attributed.",
+  "source": "Demo Briefing",
+  "edition": "25 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/silence.wav",
+  "storyNumber": "05",
+  "quoteText": "Execution, not promises, will define the next phase.",
+  "quoteAttribution": "Elena Fischer",
+  "quoteRole": "Energy minister"
+}

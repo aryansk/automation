@@ -1,0 +1,16 @@
+{
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "D.C.",
+  "region": "North America",
+  "kicker": "Policy · Economy",
+  "headline": "Washington turns its attention to a new economic package",
+  "summary": "Negotiations are moving toward the questions of timing, implementation and the likely impact on households and industry.",
+  "script": "Washington is turning its attention to a new economic package. Negotiators are focused on timing, implementation and the likely impact on households and industry. The remaining disputes will decide whether the proposal can advance this session.",
+  "source": "Daily Brief",
+  "edition": "24 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/silence.wav",
+  "storyNumber": "04"
+}

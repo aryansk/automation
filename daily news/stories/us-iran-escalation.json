@@ -1,0 +1,16 @@
+{
+  "countryCode": "IR",
+  "countryName": "Iran",
+  "cityName": "Tehran",
+  "region": "Middle East",
+  "kicker": "Conflict · Escalation",
+  "headline": "US and Iran trade strikes across Gulf for thirteenth night",
+  "summary": "Fresh American strikes deep inside Iran widen the crisis as tanker traffic drops and Brent crude pushes above one hundred dollars.",
+  "script": "The US and Iran traded strikes for a thirteenth night. Fresh American attacks reached deep inside Iran while tanker traffic through Hormuz plummeted. Brent crude surged above one hundred dollars as markets priced in wider disruption.",
+  "source": "Reuters BBC AJ",
+  "edition": "25 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/us-iran-escalation.wav",
+  "storyNumber": "01"
+}

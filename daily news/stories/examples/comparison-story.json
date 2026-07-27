@@ -1,0 +1,21 @@
+{
+  "countryCode": "JP",
+  "countryName": "Japan",
+  "cityName": "Tokyo",
+  "region": "East Asia",
+  "storyType": "comparison",
+  "kicker": "Industry · Compare",
+  "headline": "Two launch providers reveal sharply different capacity plans",
+  "summary": "A paired comparison keeps labels, values and scale visible so the viewer can understand the difference immediately.",
+  "script": "Two demonstration launch providers have outlined different capacity plans. One targets sixty-eight missions while the other targets forty-two. Hygen places both values on the same scale so the comparison is clear without competing with the narration.",
+  "source": "Demo Filings",
+  "edition": "25 Jul 2026",
+  "imageOne": "assets/sample-primary.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "narrationAudio": "assets/narration/silence.wav",
+  "storyNumber": "04",
+  "comparisonLeftLabel": "Provider A",
+  "comparisonLeftValue": "68",
+  "comparisonRightLabel": "Provider B",
+  "comparisonRightValue": "42"
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"countryCode","type":"string","label":"Country ISO code","default":"US"},
+    {"id":"countryName","type":"string","label":"Country display name","default":"United States"},
+    {"id":"cityName","type":"string","label":"City target (blank for country)","default":"New York City"},
+    {"id":"coordinates","type":"string","label":"Optional [longitude,latitude] JSON override","default":""},
+    {"id":"region","type":"string","label":"Region","default":"North America"},
+    {"id":"affectedCountryCodes","type":"string","label":"Affected ISO codes for globe sweep","default":""},
+    {"id":"affectedCount","type":"number","label":"Affected economy count","default":0},
+    {"id":"sweepLabel","type":"string","label":"Global sweep label","default":""},
+    {"id":"highlightStyle","type":"string","label":"Globe highlight style","default":"outline-pulse"},
+    {"id":"cameraAngle","type":"string","label":"Globe camera angle","default":"editorial"},
+    {"id":"storyType","type":"string","label":"Story type or auto","default":"auto"},
+    {"id":"visualType","type":"string","label":"Animation registry name override","default":""},
+    {"id":"urgency","type":"string","label":"standard or breaking","default":"standard"},
+    {"id":"kicker","type":"string","label":"Story category","default":"Space · Markets"},
+    {"id":"headline","type":"string","label":"Headline","default":"A new private space race is taking shape"},
+    {"id":"summary","type":"string","label":"Summary","default":"Launch schedules, capital plans and satellite demand are converging into a pivotal year for the commercial space economy."},
+    {"id":"script","type":"string","label":"TTS narration script","default":"A new private space race is taking shape. Launch schedules, capital plans and satellite demand are converging. The coming year could determine which companies turn ambitious plans into a durable commercial space economy."},
+    {"id":"source","type":"string","label":"Source","default":"Daily Brief"},
+    {"id":"edition","type":"string","label":"Edition","default":"24 Jul 2026"},
+    {"id":"imageOne","type":"string","label":"Primary image path","default":"assets/sample-primary.jpg"},
+    {"id":"imageTwo","type":"string","label":"Secondary image path","default":"assets/sample-secondary.jpg"},
+    {"id":"narrationAudio","type":"string","label":"TTS narration audio path","default":"assets/narration/silence.wav"},
+    {"id":"storyNumber","type":"string","label":"Story number","default":"01"},
+    {"id":"statValue","type":"string","label":"Statistic display value","default":""},
+    {"id":"statLabel","type":"string","label":"Statistic label","default":""},
+    {"id":"statUnit","type":"string","label":"Statistic unit","default":""},
+    {"id":"statDelta","type":"string","label":"Statistic directional change","default":""},
+    {"id":"statPeriod","type":"string","label":"Statistic period","default":""},
+    {"id":"comparisonLeftLabel","type":"string","label":"Comparison left label","default":""},
+    {"id":"comparisonLeftValue","type":"string","label":"Comparison left value","default":""},
+    {"id":"comparisonRightLabel","type":"string","label":"Comparison right label","default":""},
+    {"id":"comparisonRightValue","type":"string","label":"Comparison right value","default":""},
+    {"id":"quoteText","type":"string","label":"Quote text","default":""},
+    {"id":"quoteAttribution","type":"string","label":"Quote attribution","default":""},
+    {"id":"quoteRole","type":"string","label":"Quote role","default":""},
+    {"id":"marketSymbol","type":"string","label":"Market symbol","default":""},
+    {"id":"marketValue","type":"string","label":"Market value","default":""},
+    {"id":"marketChange","type":"string","label":"Market change","default":""},
+    {"id":"marketPeriod","type":"string","label":"Market period","default":""},
+    {"id":"chartData","type":"string","label":"Chart data JSON","default":""},
+    {"id":"timelineEvents","type":"string","label":"Timeline events JSON","default":""}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <link rel="preload" as="font" href="assets/fonts/league-gothic-400.ttf" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/ibm-plex-mono-700.ttf" crossorigin>
+    <link rel="stylesheet" href="assets/news.css">
+    <link rel="stylesheet" href="assets/animations/library.css">
+    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/vendor/d3.min.js"></script>
+    <script src="assets/data/world-data.js"></script>
+    <script src="assets/data/city-data.js"></script>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="daily-news"
+      data-start="0"
+      data-duration="18"
+      data-width="1080"
+      data-height="1920"
+      data-urgency="standard"
+    >
+      <div class="frame-fill"></div>
+      <canvas id="space-layer" width="1080" height="1920" aria-hidden="true" data-layout-ignore></canvas>
+      <canvas id="globe-layer" width="1080" height="1920" aria-hidden="true" data-layout-ignore></canvas>
+      <div class="world-atmosphere" data-layout-ignore></div>
+
+      <section id="scene-scan" class="scene" data-layout-allow-overflow>
+        <div class="scene-content scan-layout">
+          <header class="topbar" id="scan-topbar">
+            <div class="desk"><span class="live-dot"></span> IndieHouse.io News</div>
+            <div class="edition" data-bind="edition"></div>
+          </header>
+        </div>
+
+        <div class="scan-heading" id="scan-heading">
+          <span class="scan-heading__number" data-bind="storyNumber"></span>
+          <div class="scan-heading__copy">
+            <span>Global context</span>
+            <strong>Finding the story</strong>
+          </div>
+        </div>
+
+        <div class="sweep-banner" id="sweep-banner">
+          <span class="sweep-mode">Global impact scan</span>
+          <strong class="sweep-count" id="sweep-count">0 economies</strong>
+          <span class="sweep-detail" data-bind="sweepLabel"></span>
+        </div>
+
+        <div class="globe-hud" id="globe-hud" data-layout-ignore>
+          <div class="globe-hud__arc"></div>
+          <div class="globe-hud__status"><span id="renderer-mode">3D Earth / loading</span></div>
+          <div class="globe-hud__mode"><strong id="target-mode">Country scan</strong> / satellite context</div>
+        </div>
+
+        <div class="lock-panel" id="lock-panel">
+          <div class="lock-panel__eyebrow">
+            <span>Target acquired / <strong data-bind="region"></strong></span>
+            <span>Location / verified</span>
+          </div>
+          <h1 class="country-name" id="scan-country"></h1>
+          <div class="country-code" id="scan-code" data-bind="countryCode"></div>
+          <div class="coord-rail" id="coord-rail">
+            <span id="coord-lat">LAT 00.0</span>
+            <span id="coord-lon">LON 000.0</span>
+            <span>LOCK / 100%</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="scene-story" class="scene" data-layout-allow-overflow>
+        <div class="story-surface" data-layout-allow-occlusion></div>
+        <div class="scene-content story-layout">
+          <header class="topbar" id="story-topbar">
+            <div class="desk"><span class="live-dot"></span> IndieHouse.io News</div>
+            <div class="edition" data-bind="edition"></div>
+          </header>
+
+          <div class="media-stage">
+            <div class="primary-frame" id="photo-primary-wrap" data-layout-allow-overflow>
+              <img id="photo-primary" src="assets/sample-primary.jpg" alt="">
+              <div class="location-tag" id="location-tag"></div>
+              <div class="media-credit">Editorial context / local asset</div>
+            </div>
+            <div class="secondary-frame" id="photo-secondary-wrap" data-layout-allow-overflow>
+              <img id="photo-secondary" src="assets/sample-secondary.jpg" alt="">
+            </div>
+            <div id="adaptive-visual" class="adaptive-visual" data-layout-allow-overflow></div>
+          </div>
+
+          <div class="story-copy">
+            <div class="kicker-row" id="kicker-row">
+              <span><span class="urgency-chip" id="urgency-chip">Breaking</span> <span data-bind="kicker"></span></span>
+              <span class="story-index">Story / <span data-bind="storyNumber"></span></span>
+            </div>
+            <div class="headline-rule" id="headline-rule"></div>
+            <h2 class="headline" id="story-headline" data-bind="headline"></h2>
+            <p class="summary" id="story-summary" data-bind="summary"></p>
+            <div class="source-row" id="source-row">
+              <span>Source / <span data-bind="source"></span></span>
+              <span class="source-edition" data-bind="edition"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <audio
+        id="narration-track"
+        class="clip"
+        data-start="0"
+        data-duration="18"
+        data-track-index="10"
+        data-volume="1"
+        src="assets/narration/silence.wav"
+      ></audio>
+
+      <div class="caption-rail" id="caption-rail">
+        <span class="caption-rail__label">Narration</span>
+        <div class="caption-rail__copy" id="caption-copy">
+          <span class="caption-segment" data-caption-index="0"></span>
+          <span class="caption-segment" data-caption-index="1"></span>
+          <span class="caption-segment" data-caption-index="2"></span>
+        </div>
+      </div>
+
+      <div class="progress-rail" data-layout-ignore>
+        <div class="progress-rail__fill" id="progress-fill"></div>
+      </div>
+
+      <div class="story-wipe" id="story-wipe" data-layout-ignore data-layout-allow-occlusion></div>
+
+      <div class="outro-card" id="outro-card" data-layout-allow-occlusion>
+        <span class="outro-card__edition" data-bind="edition"></span>
+        <strong class="outro-card__brand">IndieHouse.io<br>News</strong>
+        <div class="outro-card__line"></div>
+        <span class="outro-card__cta">Context first / Follow tomorrow’s brief</span>
+      </div>
+
+      <div class="broadcast-frame" data-layout-ignore></div>
+      <div class="grain" data-layout-ignore></div>
+      <div class="corner-index corner-index--left" data-layout-ignore>HY / 24H</div>
+      <div class="corner-index corner-index--right" data-layout-ignore>1080 × 1920</div>
+      <div class="renderer-status" id="renderer-status" data-layout-ignore>Renderer / initializing</div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["daily-news"] = gsap.timeline({
+        paused: true,
+        defaults: { ease: "power3.out" },
+      });
+      window.__dailyNewsVariables = window.__hyperframes.getVariables();
+    </script>
+    <script type="module" src="assets/news-renderer.js"></script>
+    <script type="module" src="assets/space-orbit.js"></script>
+  </body>
+</html>
