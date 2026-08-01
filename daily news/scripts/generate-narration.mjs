@@ -77,7 +77,7 @@ if (provider === "kokoro") {
   const kokoroVoice = voice || "af_heart";
   const commandArgs = [
     "--yes",
-    "hyperframes@0.7.70",
+    "hyperframes@0.7.85",
     "tts",
     textPath,
     "--output",

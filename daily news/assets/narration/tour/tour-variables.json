@@ -1,10 +1,10 @@
 {
   "deskName": "IndieHouse.io News",
-  "edition": "25 Jul 2026",
+  "edition": "02 Aug 2026",
   "openerLine": "Good morning, bad news.",
-  "openerSub": "3 stories · 25 Jul 2026",
-  "openerEnd": 2.608,
-  "tour": "[{\"countryCode\":\"US\",\"countryName\":\"United States\",\"locationName\":\"Washington\",\"kicker\":\"Trade · Markets\",\"headline\":\"New tariffs now reach almost all of US trade\",\"coordinates\":[-77.03637,38.89511],\"travelStart\":0.9,\"speakAt\":3.208,\"arrive\":2.858,\"holdUntil\":17.793},{\"countryCode\":\"IR\",\"countryName\":\"Iran\",\"locationName\":\"Tehran\",\"kicker\":\"Breaking · Iran war\",\"headline\":\"Oil tops $100 as strikes on Iran enter a fourteenth night\",\"coordinates\":[51.42151,35.69439],\"travelStart\":15.423,\"speakAt\":17.973,\"arrive\":17.623,\"holdUntil\":31.277},{\"countryCode\":\"NL\",\"countryName\":\"Netherlands\",\"locationName\":\"The Hague\",\"kicker\":\"Breaking · Justice\",\"headline\":\"World court removes its chief prosecutor for the first time\",\"coordinates\":[4.29861,52.07667],\"travelStart\":28.907,\"speakAt\":31.457,\"arrive\":31.107,\"holdUntil\":47.002}]",
+  "openerSub": "3 stories · 02 Aug 2026",
+  "openerEnd": 2.587,
+  "tour": "[{\"countryCode\":\"IR\",\"countryName\":\"Iran\",\"locationName\":\"Tehran\",\"kicker\":\"Conflict · Shipping\",\"headline\":\"Iran warns of retaliation as strikes and shipping disruption spread\",\"source\":\"AP · Al Jazeera\",\"imagePath\":\"assets/news-images/2026-08-02/iran-energy-aljazeera.jpg\",\"imageAlt\":\"Iranian missile displays and flags at a public exhibition in Tehran.\",\"imageCredit\":\"Reuters / Al Jazeera\",\"focusZoom\":14.9,\"coordinates\":[51.42151,35.69439],\"travelStart\":0.9,\"speakAt\":3.187,\"arrive\":2.837,\"holdUntil\":20.523},{\"countryCode\":\"ES\",\"countryName\":\"Spain\",\"locationName\":\"Ceuta\",\"kicker\":\"Migration · Border\",\"headline\":\"Ceuta border crisis leaves 67 dead as most migrants return\",\"source\":\"AP · Al Jazeera\",\"imagePath\":\"assets/news-images/2026-08-02/ceuta-border-ap.jpg\",\"imageAlt\":\"Spanish soldiers assist a migrant on a beach in Ceuta.\",\"imageCredit\":\"AP Photo / Antonio Sempere\",\"focusZoom\":14.2,\"coordinates\":[-5.32042,35.88919],\"travelStart\":17.753,\"speakAt\":20.703,\"arrive\":20.353,\"holdUntil\":35.757},{\"countryCode\":\"JP\",\"countryName\":\"Japan\",\"locationName\":\"Kumamoto\",\"kicker\":\"Disaster · Recovery\",\"headline\":\"Japan quake rescue ends at mall as death toll reaches 34\",\"source\":\"AP · Kumamoto Pref.\",\"imagePath\":\"assets/news-images/2026-08-02/japan-quake-ap.jpg\",\"imageAlt\":\"A damaged street and collapsed tiled roofs in Kumamoto after the earthquake.\",\"imageCredit\":\"Kyodo News via AP\",\"focusZoom\":14.9,\"coordinates\":[130.69181,32.80589],\"travelStart\":32.987,\"speakAt\":35.937,\"arrive\":35.587,\"holdUntil\":51.781}]",
   "narrationAudio": "assets/narration/globe-tour.wav",
   "footerNote": "Context first"
 }

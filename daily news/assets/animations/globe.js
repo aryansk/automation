@@ -102,7 +102,7 @@ export function countryFillTexture(feature, { fill, glow }) {
   return texture;
 }
 
-function borderGeometry(features, radius = EARTH_RADIUS + 0.014) {
+export function borderGeometry(features, radius = EARTH_RADIUS + 0.014) {
   const positions = [];
   features.forEach((feature) => {
     geometryRings(feature).forEach((ring) => {

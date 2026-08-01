@@ -1,0 +1,22 @@
+{
+  "countryCode": "JP",
+  "countryName": "Japan",
+  "cityName": "Kumamoto",
+  "coordinates": [130.69181, 32.80589],
+  "region": "East Asia",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Disaster · Recovery",
+  "headline": "Japan quake rescue ends at mall as death toll reaches 34",
+  "summary": "Authorities ended the five-day search at a collapsed mall, while more than 9,000 people remained in shelters and water shortages affected the region.",
+  "script": "Japan ended the five-day rescue operation at a collapsed mall after a magnitude seven point one quake killed thirty-four people. More than nine thousand survivors remained in shelters, while water shortages and extreme heat complicated recovery.",
+  "source": "AP · Kumamoto Pref.",
+  "edition": "02 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-02/japan-quake-ap.jpg",
+  "imageTwo": "assets/news-images/2026-07-31/japan-quake-ap.jpg",
+  "imageAlt": "A damaged street and collapsed tiled roofs in Kumamoto after the earthquake.",
+  "imageCredit": "Kyodo News via AP",
+  "focusZoom": 14.9,
+  "narrationAudio": "assets/narration/tour/top3-2026-08-02-03-japan-quake.wav"
+}

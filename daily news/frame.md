@@ -11,18 +11,29 @@
 
 ## Concept
 
-A live world desk finds the country or city first, then turns geographic context into an editorial news front page. The globe behaves like a broadcast instrument: always moving, precise at lock-on, and never decorative-only. The Earth is a textured Three.js sphere with satellite imagery, normal/specular relief, clouds, atmosphere, accurate Natural Earth borders and an animated country or city target. A real 3D sun and cratered moon pass behind it.
+A live world desk finds the country or city first, then turns geographic context into an editorial news front page. The globe behaves like a broadcast instrument: always moving, precise at lock-on, and never decorative-only. The Earth combines a physical topographic relief model with a printed paper atlas: warm parchment terrain, muted sage oceans, raking-light mountain relief, engraved Natural Earth borders, fine graticules, contour bands, restrained cartographic hatching, and a warm brass country lock. The composition sits on a deep green drafting-mat field with measured grid lines, registration marks, and tactile print grain.
 
 ## Palette
 
-- Ink background: `#08131F`
-- Ocean: `#0D2638`
-- Land: `#18374A`
-- Land outline: `#7895A5`
-- Newsprint foreground: `#F3ECD8`
-- Muted copy: `#B8C6C9`
-- Signal accent: `#F4B860`
-- Deep panel: `#0B1C2A`
+- Drafting-mat background: `#2D4B3C`
+- Drafting-mat shadow: `#20372D`
+- Ocean: `#A9B9AA`
+- Land: `#E5DFC9`
+- Land outline: `#617B6E`
+- Engraved border: `#587267`
+- Model shadow: `#30493E`
+- Newsprint foreground: `#EEE9D8`
+- Bright paper: `#F5F0DF`
+- Cloud relief: `#F3EDDB`
+- Warm key light: `#FFF3D6`
+- Ambient light: `#F4EFD8`
+- Ambient ground: `#3F5E50`
+- Pressed ink: `#17372F`
+- Mat copy: `#D8E1D4`
+- Paper copy: `#526D64`
+- Signal accent: `#D49352`
+- Live indicator: `#E37568`
+- Deep panel: `#19352D`
 
 Use the signal accent for the selected country, live indicators, and one key phrase only. Do not introduce additional accent hues.
 
@@ -37,9 +48,9 @@ Use the signal accent for the selected country, live indicators, and one key phr
 
 - Corners: clipped editorial geometry; 0–18 px radius only
 - Borders: 2–3 px, visible at phone scale
-- Depth: layered panels, hard offset shadows, restrained amber glow around the country lock
-- Texture: satellite Earth, cloud shell, registration ticks, coordinate readouts, subtle deterministic grain
-- Space layer: seek-safe Three.js Earth, sun and moon using only local licensed or procedural materials
+- Depth: layered paper panels, hard offset shadows, restrained brass glow around the country lock
+- Texture: raking-light terrain relief, paper fibers, engraved borders, contour bands, cartographic hatching, drafting grid, registration ticks, coordinate readouts, and deterministic print grain
+- Space layer: seek-safe Three.js architectural Earth using only local licensed or procedural materials
 
 ## Motion
 
@@ -62,6 +73,7 @@ Use the signal accent for the selected country, live indicators, and one key phr
 ## Do Not
 
 - No cyan/purple neon gradients.
+- No glossy blue-marble satellite treatment.
 - No centered web-card stack.
 - No tiny UI labels.
 - No flags as the primary location cue.

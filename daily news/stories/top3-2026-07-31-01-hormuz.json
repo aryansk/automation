@@ -1,0 +1,21 @@
+{
+  "countryCode": "OM",
+  "countryName": "Oman",
+  "cityName": "Muscat",
+  "region": "Middle East",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Diplomacy",
+  "headline": "Hormuz diplomacy stalls as new fronts open across the Middle East",
+  "summary": "The waterway between Iran and Oman remains at the center of a widening conflict that is disrupting regional security and energy shipping.",
+  "script": "Diplomacy over the Strait of Hormuz is stalling as the conflict widens. The Associated Press reports new fighting involving Iran-backed groups, Saudi Arabia and U.S. forces, while shipping through the waterway remains sharply reduced. More talks are uncertain.",
+  "source": "AP · Reuters",
+  "edition": "31 Jul 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-07-31/hormuz-ap.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "imageAlt": "A child rests his head on the coffin of an Iraqi fighter during a funeral in Najaf.",
+  "imageCredit": "AP Photo / Anmar Khalil",
+  "focusZoom": 14.9,
+  "narrationAudio": "assets/narration/tour/top3-2026-07-31-01-hormuz.wav"
+}

@@ -1,0 +1,21 @@
+{
+  "countryCode": "JP",
+  "countryName": "Japan",
+  "cityName": "Kumamoto",
+  "region": "East Asia",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Disaster · Rescue",
+  "headline": "Japan quake kills at least 23 as rescuers search Kumamoto",
+  "summary": "The magnitude 7.1 quake triggered an explosion at a mall, damaged homes and left thousands without power or water in southwestern Japan.",
+  "script": "A magnitude seven point one earthquake hit Japan's Kyushu island on Tuesday. At least twenty-three people were confirmed dead, while a higher police tally included cases still under investigation. Rescuers continued searching damaged buildings as shelters filled.",
+  "source": "AP · Japan Gov",
+  "edition": "31 Jul 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-07-31/japan-quake-ap.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "imageAlt": "Homes lie collapsed after an earthquake in southwestern Japan.",
+  "imageCredit": "AP Photo / Hiro Komae",
+  "focusZoom": 14.9,
+  "narrationAudio": "assets/narration/tour/top3-2026-07-31-03-japan-quake.wav"
+}

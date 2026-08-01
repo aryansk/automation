@@ -1,0 +1,22 @@
+{
+  "countryCode": "ES",
+  "countryName": "Spain",
+  "cityName": "Ceuta",
+  "coordinates": [-5.32042, 35.88919],
+  "region": "Europe · North Africa",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Migration · Border",
+  "headline": "Ceuta border crisis leaves 67 dead as most migrants return",
+  "summary": "Spain says about 60,000 people crossed from Morocco, most have returned, and a sea barrier is being installed after deadly attempts to enter the enclave.",
+  "script": "Spain says most of roughly sixty thousand migrants who crossed into Ceuta from Morocco have returned. At least sixty-seven died in the surge, and a new sea barrier is being installed as European governments plan a coordinated response.",
+  "source": "AP · Al Jazeera",
+  "edition": "02 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-02/ceuta-border-ap.jpg",
+  "imageTwo": "assets/news-images/2026-08-02/ceuta-border-aljazeera.jpg",
+  "imageAlt": "Spanish soldiers assist a migrant on a beach in Ceuta.",
+  "imageCredit": "AP Photo / Antonio Sempere",
+  "focusZoom": 14.2,
+  "narrationAudio": "assets/narration/tour/top3-2026-08-02-02-ceuta-border.wav"
+}

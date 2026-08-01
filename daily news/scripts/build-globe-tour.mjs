@@ -7,7 +7,7 @@
        --output renders/globe-tour-2026-07-25.mp4
 
    Steps:
-     1. narrate the cold open and each story separately with Kokoro
+     1. narrate the cold open and each story separately with the selected TTS provider
      2. ffprobe every clip and lay them out on one continuous timeline,
         so the globe arrives at a country exactly as its line starts
      3. concatenate the clips into one narration track
@@ -20,9 +20,12 @@
    Flags:
      --skip-narrate   reuse existing wavs
      --gap            silence between stories, default 0.45s
-     --travel         seconds the globe spends rotating, default 2.2
+     --travel         seconds the globe spends rotating, default 2.6
      --lead           seconds the globe settles before the line, default 0.35
      --opener         cold open line
+     --provider       kokoro | heygen | elevenlabs (default kokoro)
+     --voice          provider-specific voice id
+     --speed          narration speed, default 1.0
      --fps            default 30
      --quality        draft | standard | high (default high)
    ============================================================ */
@@ -52,12 +55,14 @@ const die = (message) => {
   process.exit(1);
 };
 
-const HF = option("hyperframes", "0.7.71");
-const VOICE = option("voice", "af_heart");
+const HF = option("hyperframes", "0.7.86");
+const PROVIDER = option("provider", "kokoro").toLowerCase();
+const VOICE = option("voice", PROVIDER === "kokoro" ? "af_heart" : "");
+const SPEED = option("speed", "1.0");
 const FPS = option("fps", "30");
 const QUALITY = option("quality", "high");
 const GAP = Number(option("gap", "0.45"));
-const TRAVEL = Number(option("travel", "2.2"));
+const TRAVEL = Number(option("travel", "2.6"));
 const LEAD = Number(option("lead", "0.35"));
 const OPENER = option("opener", "Good morning, bad news.");
 /* Space around the cold open: a beat before it speaks, and a longer
@@ -160,11 +165,16 @@ const openerPath = resolve(narrationDir, "00-opener.wav");
 if (!flag("skip-narrate") || !existsSync(openerPath)) {
   const openerStory = resolve(narrationDir, "00-opener.json");
   writeFileSync(openerStory, JSON.stringify({ script: OPENER, narrationAudio: `assets/narration/tour/00-opener.wav` }, null, 2));
+  const openerNarrationArgs = [
+    "run", "narrate", "--", "--story", openerStory,
+    "--provider", PROVIDER, "--speed", SPEED,
+  ];
+  if (VOICE) openerNarrationArgs.push("--voice", VOICE);
+  openerNarrationArgs.push("--output", "assets/narration/tour/00-opener.wav");
   run(
     "npm",
-    ["run", "narrate", "--", "--story", openerStory, "--provider", "kokoro", "--voice", VOICE,
-      "--output", "assets/narration/tour/00-opener.wav"],
-    "narrate cold open",
+    openerNarrationArgs,
+    `narrate cold open (${PROVIDER})`,
   );
 }
 if (!existsSync(openerPath)) die(`cold open narration missing: ${openerPath}`);
@@ -184,11 +194,16 @@ for (const story of stories) {
       scratch,
       JSON.stringify({ script: story.data.script, narrationAudio: `assets/narration/tour/${story.slug}.wav` }, null, 2),
     );
+    const storyNarrationArgs = [
+      "run", "narrate", "--", "--story", scratch,
+      "--provider", PROVIDER, "--speed", SPEED,
+    ];
+    if (VOICE) storyNarrationArgs.push("--voice", VOICE);
+    storyNarrationArgs.push("--output", `assets/narration/tour/${story.slug}.wav`);
     run(
       "npm",
-      ["run", "narrate", "--", "--story", scratch, "--provider", "kokoro", "--voice", VOICE,
-        "--output", `assets/narration/tour/${story.slug}.wav`],
-      `narrate ${story.slug}`,
+      storyNarrationArgs,
+      `narrate ${story.slug} (${PROVIDER})`,
     );
   }
   if (!existsSync(target)) die(`narration missing: ${target}`);
@@ -221,6 +236,11 @@ const tour = stories.map((story, index) => {
     locationName: story.data.cityName || story.data.countryName || "",
     kicker: story.data.kicker || "",
     headline: story.data.headline || "",
+    source: story.data.source || "",
+    imagePath: story.data.imageOne || "",
+    imageAlt: story.data.imageAlt || "",
+    imageCredit: story.data.imageCredit || story.data.source || "",
+    focusZoom: Number(story.data.focusZoom || 14.9),
     coordinates: resolveCoordinates(story.data),
     travelStart: round(travelStart),
     speakAt: round(speakAt),
@@ -278,6 +298,12 @@ let html = readFileSync(compositionPath, "utf8");
 html = html.replace(/(id="root"[\s\S]*?data-duration=")[\d.]+(")/, `$1${totalDuration}$2`);
 html = html.replace(/(id="narration-track"[\s\S]*?data-duration=")[\d.]+(")/, `$1${totalDuration}$2`);
 html = html.replace(/(id="narration-track"[\s\S]*?src=")[^"]*(")/, `$1assets/narration/globe-tour.wav$2`);
+stories.forEach((story, index) => {
+  const imagePath = String(story.data.imageOne || "").trim();
+  if (!imagePath) return;
+  const slot = new RegExp(`(data-story-image-slot="${index}"[^>]*\\ssrc=")[^"]*(")`);
+  html = html.replace(slot, `$1${imagePath}$2`);
+});
 
 const renderComposition = "index-globe.__render.html";
 const renderCompositionPath = resolve(projectRoot, renderComposition);

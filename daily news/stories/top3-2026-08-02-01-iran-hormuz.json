@@ -1,0 +1,22 @@
+{
+  "countryCode": "IR",
+  "countryName": "Iran",
+  "cityName": "Tehran",
+  "coordinates": [51.42151, 35.69439],
+  "region": "Middle East",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Shipping",
+  "headline": "Iran warns of retaliation as strikes and shipping disruption spread",
+  "summary": "Trump threatened more strikes, Kuwait reported drone attacks, and a tanker was hit near Oman as Iran’s war keeps the Strait of Hormuz under pressure.",
+  "script": "Iran is warning of retaliation as the war threatens energy infrastructure. The Associated Press reports drone attacks on Kuwait and a tanker hit near Oman, while Al Jazeera says Iran is restricting passage through Hormuz. Shipping markets remain at risk.",
+  "source": "AP · Al Jazeera",
+  "edition": "02 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-02/iran-energy-aljazeera.jpg",
+  "imageTwo": "assets/news-images/2026-07-31/hormuz-ap.jpg",
+  "imageAlt": "Iranian missile displays and flags at a public exhibition in Tehran.",
+  "imageCredit": "Reuters / Al Jazeera",
+  "focusZoom": 14.9,
+  "narrationAudio": "assets/narration/tour/top3-2026-08-02-01-iran-hormuz.wav"
+}

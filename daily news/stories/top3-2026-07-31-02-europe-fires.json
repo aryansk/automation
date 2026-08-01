@@ -1,0 +1,21 @@
+{
+  "countryCode": "FR",
+  "countryName": "France",
+  "cityName": "Bordeaux",
+  "region": "Europe",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Climate · Wildfires",
+  "headline": "France sends evacuees home as wildfires flare across Europe",
+  "summary": "Cooler weather helped southwest France, but fires continued in Spain, Greece and elsewhere after mass evacuations across the region.",
+  "script": "France allowed eighty-four thousand evacuees to return as crews contained parts of a major southwest wildfire. But fires still burned across Spain, Britain, Germany, Greece and Turkey. At the peak, a third of a million people fled France and Spain.",
+  "source": "AP · Reuters",
+  "edition": "31 Jul 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-07-31/europe-fires-ap.jpg",
+  "imageTwo": "assets/sample-secondary.jpg",
+  "imageAlt": "A firefighter carries equipment through a wildfire near Blagon, France.",
+  "imageCredit": "AP Photo / Emma Da Silva",
+  "focusZoom": 14.2,
+  "narrationAudio": "assets/narration/tour/top3-2026-07-31-02-europe-fires.wav"
+}
