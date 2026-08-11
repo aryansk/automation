@@ -1,0 +1,149 @@
+{
+  "eventId": "thailand-nonthaburi-school-shooting-2026-08-07",
+  "tone": "bad",
+  "countryCode": "TH",
+  "countryName": "Thailand",
+  "cityName": "Nonthaburi",
+  "region": "Asia",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Society · Tragedy",
+  "headline": "Student gunman kills 7 in school and home shooting near Bangkok",
+  "summary": "A 14-year-old killed his grandparents, then shot staff at Debsirin Nonthaburi School, killing five and wounding 23 before taking his own life.",
+  "script": "A fourteen year old student shot and killed five school staff in Thailand, then turned the gun on himself. Police say he also killed his grandparents at home first. More than twenty people were wounded in the attack outside Bangkok.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-07-bad/thailand-school-shooting/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-bad/thailand-school-shooting/secondary.jpg",
+  "imageAlt": "A schoolgirl cries outside her school after a shooting in Thailand's Nonthaburi province.",
+  "imageAltTwo": "A student is guided away from the scene after the shooting at Debsirin Nonthaburi School.",
+  "imageCredit": "AP Photo/Sakchai Lalit",
+  "imageCreditTwo": "AP Photo/Sakchai Lalit",
+  "narrationAudio": "assets/narration/bad11-2026-08-07-01-thailand-school-shooting.wav",
+  "captions": [
+    {
+      "lines": [
+        "Student gunman kills 7",
+        "near Bangkok."
+      ],
+      "highlights": [
+        "kills 7"
+      ]
+    },
+    {
+      "lines": [
+        "14-year-old shot",
+        "school staff first."
+      ],
+      "highlights": [
+        "14-year-old"
+      ]
+    },
+    {
+      "lines": [
+        "23 wounded, gunman",
+        "took his own life."
+      ],
+      "highlights": [
+        "23 wounded"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Student gunman kills at least 7 people at a high school and a home outside Bangkok, officials say",
+      "url": "https://apnews.com/article/thailand-nonthaburi-school-shooting-7939000dbad098198a9fc77169028762",
+      "published": "2026-08-07",
+      "usedFor": [
+        "shooting details",
+        "death and injury tolls",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Police respond to a school shooting in Thailand, in photos",
+      "url": "https://apnews.com/photo-gallery/thailand-nonthaburi-school-shooting-photos-27a1d076a07c82b5153a6830cc443a96",
+      "published": "2026-08-07",
+      "usedFor": [
+        "secondary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Breaking tragedy with national significance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the tragedy in Thailand.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "TH",
+            "coordinates": [
+              100.5,
+              13.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Nonthaburi, northwest of Bangkok.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Nonthaburi",
+            "coordinates": [
+              100.515,
+              13.862
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the high rate of gun ownership in the region.",
+        "start": 9.5,
+        "animationId": "regional-choropleth",
+        "mapSource": "AP News / 07 Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "TH",
+            "MY",
+            "PH",
+            "ID"
+          ],
+          "values": {
+            "TH": 15.1,
+            "MY": 0.9,
+            "PH": 4.6,
+            "ID": 0.5
+          }
+        }
+      }
+    ]
+  }
+}

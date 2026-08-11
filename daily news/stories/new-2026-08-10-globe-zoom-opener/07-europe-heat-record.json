@@ -1,0 +1,61 @@
+{
+  "eventId": "western-europe-temperature-record-2026-08-10",
+  "tone": "bad",
+  "countryCode": "HU",
+  "countryName": "Hungary",
+  "cityName": "Budapest",
+  "coordinates": [
+    19.0402,
+    47.4979
+  ],
+  "region": "Europe",
+  "urgency": "breaking",
+  "storyType": "editorial",
+  "kicker": "Climate · Heat",
+  "headline": "Western Europe sets temperature record as heat waves hit",
+  "summary": "June and July averaged a record 21.62°C across Western Europe, with drought, wildfires and low rivers adding pressure.",
+  "script": "Western Europe has set a new temperature record. June and July averaged twenty-one point six two degrees Celsius, while heat waves drove drought, wildfires and dangerously low rivers across the region.",
+  "source": "AP News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "07",
+  "imageOne": "assets/stories/2026-08-10/europe-heat-record/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-10/europe-heat-record/secondary.jpg",
+  "imageAlt": "People walk on a newly exposed sandbar beneath Budapest’s Margareth Bridge.",
+  "imageAltTwo": "A second view of the exposed Danube riverbed during Europe’s heat and drought.",
+  "imageCredit": "AP Photo",
+  "imageCreditTwo": "AP Photo",
+  "narrationAudio": "assets/narration/new-2026-08-10/europe-heat-record.wav",
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Western Europe sets new temperature record as heat waves pummel the region",
+      "url": "https://apnews.com/article/europe-weather-climate-change-f4f6ecf0953d423e0a70b74cd477c81a",
+      "published": "2026-08-10",
+      "usedFor": [
+        "21.62°C average",
+        "drought, wildfire and low-river impacts"
+      ]
+    },
+    {
+      "publisher": "Copernicus Climate Change Service",
+      "title": "European climate monitoring and temperature context",
+      "url": "https://climate.copernicus.eu/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "climate monitoring context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 7,
+    "basis": "A high-consequence regional record with a visually obvious drought signal; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

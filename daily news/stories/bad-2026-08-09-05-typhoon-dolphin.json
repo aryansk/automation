@@ -1,0 +1,163 @@
+{
+  "eventId": "typhoon-dolphin-china-landfall-2026-08-09",
+  "tone": "bad",
+  "countryCode": "CN",
+  "countryName": "China",
+  "cityName": "",
+  "region": "East Asia",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Weather \u00b7 Disaster",
+  "headline": "Typhoon Dolphin set to hit China's east coast as floods loom",
+  "summary": "The storm was expected to make landfall overnight Sunday with torrential rain and powerful winds, as authorities in eastern China prepared for flooding and landslides.",
+  "script": "Typhoon Dolphin is bearing down on China's east coast. Forecasters expect landfall overnight Sunday with torrential rain and powerful winds. Authorities across the east are bracing for flooding and landslides as the storm moves inland.",
+  "source": "Reuters",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-09-bad/typhoon-dolphin/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-09-bad/typhoon-dolphin/secondary.jpg",
+  "imageAlt": "Satellite image of Typhoon Dolphin approaching China's east coast.",
+  "imageAltTwo": "Storm clouds gathering over a coastal city in eastern China.",
+  "imageCredit": "NOAA",
+  "imageCreditTwo": "Reuters",
+  "narrationAudio": "assets/narration/bad-2026-08-09-05-typhoon-dolphin.wav",
+  "captions": [
+    {
+      "lines": [
+        "Typhoon Dolphin heads",
+        "for China's east coast."
+      ],
+      "highlights": [
+        "Typhoon Dolphin"
+      ]
+    },
+    {
+      "lines": [
+        "Landfall overnight with",
+        "rain and powerful winds."
+      ],
+      "highlights": [
+        "landfall overnight"
+      ]
+    },
+    {
+      "lines": [
+        "Flood and landslide",
+        "warnings across the east."
+      ],
+      "highlights": [
+        "flood and landslide"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Typhoon Dolphin set to hit China's east coast as authorities prepare for flooding",
+      "url": "https://anewz.tv/world/world-news/23089/typhoon-dolphin-set-to-hit-chinas-east-coast/news",
+      "published": "2026-08-09",
+      "usedFor": [
+        "expected landfall overnight Sunday",
+        "torrential rain and strong winds",
+        "flood and landslide preparation"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "China braces for Typhoon Dolphin",
+      "url": "https://www.reuters.com/world/china/",
+      "published": "2026-08-09",
+      "usedFor": [
+        "corroboration of storm track",
+        "regional impact"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major storm threatening millions along China's coast; ranking is editorial, not an objective trend metric.",
+    "researchDate": "09 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Set the storm's position over the western Pacific.",
+        "start": 0,
+        "animationId": "world-orbit",
+        "mapSource": "Reuters / 09 Aug 2026"
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on China's east coast landfall zone.",
+        "start": 4.5,
+        "animationId": "region-dive",
+        "mapSource": "Reuters / 09 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "East China coast",
+            "coordinates": [
+              121.5,
+              30
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the storm's path across eastern China.",
+        "start": 9.5,
+        "animationId": "storm-track",
+        "mapSource": "Reuters / 09 Aug 2026",
+        "mapData": {
+          "track": [
+            {
+              "coordinates": [
+                128,
+                26
+              ],
+              "status": "observed",
+              "label": "SAT"
+            },
+            {
+              "coordinates": [
+                123.5,
+                28.5
+              ],
+              "status": "observed",
+              "label": "NOW"
+            },
+            {
+              "coordinates": [
+                119,
+                30.5
+              ],
+              "status": "forecast",
+              "label": "+12"
+            },
+            {
+              "coordinates": [
+                115,
+                32.5
+              ],
+              "status": "forecast",
+              "label": "+24"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

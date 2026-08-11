@@ -1,0 +1,159 @@
+{
+  "eventId": "antarctica-midwinter-medevac-2026-08-07",
+  "tone": "good",
+  "countryCode": "AU",
+  "countryName": "Australia",
+  "cityName": "Hobart",
+  "region": "Antarctica",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Aviation · Rescue",
+  "headline": "Australian crew carries out daring midwinter Antarctica rescue",
+  "summary": "A medevac Airbus landed at McMurdo Station in total darkness and -43C cold to evacuate a US expedition member, who is now recovering.",
+  "script": "An Australian aviation crew pulled off a daring midwinter rescue in Antarctica. Their medical plane landed at McMurdo Station in total darkness and forty three degrees below zero to evacuate a US expedition member, who is now recovering well.",
+  "source": "BBC News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-07-good/antarctica-medevac/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-good/antarctica-medevac/secondary.jpg",
+  "imageAlt": "A large plane sits on Antarctic snow in the dark with clouds of vapour around it.",
+  "imageAltTwo": "An aeroplane sits on Antarctic snow with the moon visible through clouds.",
+  "imageCredit": "Skytraders",
+  "imageCreditTwo": "Skytraders",
+  "narrationAudio": "assets/narration/good9-2026-08-07-02-antarctica-medevac.wav",
+  "captions": [
+    {
+      "lines": [
+        "Midwinter rescue",
+        "in total darkness."
+      ],
+      "highlights": [
+        "midwinter rescue"
+      ]
+    },
+    {
+      "lines": [
+        "Medevac plane lands at",
+        "-43°C McMurdo Station."
+      ],
+      "highlights": [
+        "-43°C"
+      ]
+    },
+    {
+      "lines": [
+        "Patient evacuated and",
+        "now recovering well."
+      ],
+      "highlights": [
+        "recovering well"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Australian aviation crew carries out daring midwinter Antarctica rescue",
+      "url": "https://www.bbc.com/news/articles/c89nqlz5p4qo",
+      "published": "2026-08-07",
+      "usedFor": [
+        "medevac flight details",
+        "-43C and darkness conditions",
+        "patient recovering",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "Skytraders",
+      "title": "Skytraders medevac operation (company statement)",
+      "url": "https://www.skytraders.com.au/",
+      "published": "2026-08-07",
+      "usedFor": [
+        "company confirmation of operation",
+        "plane configuration details"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Extraordinary feat of aviation and logistics in extreme conditions; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Establish Australia's role in the mission.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "AU",
+            "coordinates": [
+              135,
+              -25
+            ]
+          }
+        }
+      },
+      {
+        "id": "route",
+        "scriptSection": "location",
+        "scriptCue": "Show the flight from Hobart to McMurdo Station.",
+        "start": 5.5,
+        "animationId": "great-circle-route",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "route": [
+            {
+              "name": "Hobart",
+              "country": "Australia",
+              "code": "AU",
+              "coordinates": [
+                147.327,
+                -42.882
+              ]
+            },
+            {
+              "name": "McMurdo Station",
+              "country": "Antarctica",
+              "code": "AQ",
+              "coordinates": [
+                166.669,
+                -77.841
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the extreme winter condition that made this exceptional.",
+        "start": 10.5,
+        "animationId": "city-lock",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "McMurdo Station",
+            "coordinates": [
+              166.669,
+              -77.841
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

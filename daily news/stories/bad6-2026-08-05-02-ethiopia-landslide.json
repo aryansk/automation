@@ -1,0 +1,94 @@
+{
+  "eventId": "ethiopia-monastery-landslide-2026-08-05",
+  "tone": "bad",
+  "countryCode": "ET",
+  "countryName": "Ethiopia",
+  "cityName": "Amhara",
+  "coordinates": [
+    37.5,
+    11.5
+  ],
+  "region": "Africa",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Disaster · Landslide",
+  "headline": "Landslide kills 14 at Ethiopia monastery during prayer service",
+  "summary": "A hillside collapsed onto the Tsadqane Debre Mitmaq St Mary Monastery in Amhara, where worshippers had gathered overnight.",
+  "script": "A landslide in northern Ethiopia has killed fourteen people at a mountain monastery. The hillside collapsed during an overnight prayer service, and rescue efforts for anyone still trapped have now been halted.",
+  "source": "BBC · AP",
+  "edition": "05 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-05-bad6/ethiopia/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-bad6/ethiopia/secondary.jpg",
+  "imageAlt": "Coffins draped in cloth laid before Orthodox clergy after the landslide at the monastery.",
+  "imageAltTwo": "Grieving relatives and worshippers gather at the monastery following the disaster.",
+  "imageCredit": "North Showa Zone Police",
+  "imageCreditTwo": "North Showa Zone Police",
+  "narrationAudio": "assets/narration/bad6-2026-08-05-02-ethiopia-landslide.wav",
+  "captions": [
+    {
+      "lines": [
+        "Landslide kills 14",
+        "at a monastery."
+      ],
+      "highlights": [
+        "Landslide",
+        "14"
+      ]
+    },
+    {
+      "lines": [
+        "Hillside collapsed during",
+        "an overnight prayer."
+      ],
+      "highlights": [
+        "Hillside",
+        "prayer"
+      ]
+    },
+    {
+      "lines": [
+        "Heavy rain triggered",
+        "the disaster."
+      ],
+      "highlights": [
+        "Heavy rain",
+        "disaster"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Deadly landslide hits Ethiopia mountain monastery during prayer service",
+      "url": "https://www.bbc.co.uk/news/articles/c2lqpx1qd8lo",
+      "published": "2026-08-04",
+      "usedFor": [
+        "casualty figure",
+        "monastery context",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "Associated Press",
+      "title": "Landslide at Ethiopian monastery kills worshippers",
+      "url": "https://apnews.com",
+      "published": "2026-08-04",
+      "usedFor": [
+        "independent corroboration",
+        "victim details"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Breaking disaster with regional significance and BBC Africa reporting; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

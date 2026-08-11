@@ -1,0 +1,1041 @@
+{
+  "version": 1,
+  "description": "Persistent newsroom ledger used to prevent a story event, headline or source page from returning in a later Short.",
+  "entries": [
+    {
+      "eventId": "legacy:bad-2026-08-03-greece-helicopter-collision",
+      "titleKey": "Two firefighting crew die in Greek helicopter collision",
+      "sourceUrls": [
+        "https://apnews.com/article/726b55a6fe6c51de1fb086b437eb28de",
+        "https://www.bbc.co.uk/news/articles/c1417713ve6o"
+      ],
+      "file": "stories/bad-2026-08-03-greece-helicopter-collision.json",
+      "tone": "bad",
+      "edition": "03 Aug 2026"
+    },
+    {
+      "eventId": "legacy:good-2026-08-03-pharmacy-access",
+      "titleKey": "England expands free pharmacy access to emergency contraception",
+      "sourceUrls": [
+        "https://www.england.nhs.uk/2026/07/hundreds-thousands-women-access-free-morning-after-pill-nhs-pharmacies-first-5-months/",
+        "https://www.bbc.co.uk/news/articles/cn9n1rg3n81o"
+      ],
+      "file": "stories/good-2026-08-03-pharmacy-access.json",
+      "tone": "good",
+      "edition": "03 Aug 2026"
+    },
+    {
+      "eventId": "legacy:good3-2026-08-02-01-mangrove-recovery",
+      "titleKey": "Mangrove forests are making a comeback as restoration gains rise",
+      "sourceUrls": [],
+      "file": "stories/good3-2026-08-02-01-mangrove-recovery.json",
+      "tone": "good",
+      "edition": "02 Aug 2026"
+    },
+    {
+      "eventId": "legacy:good3-2026-08-02-02-commonwealth-games",
+      "titleKey": "Glasgow closes Commonwealth Games after a 74-nation celebration",
+      "sourceUrls": [],
+      "file": "stories/good3-2026-08-02-02-commonwealth-games.json",
+      "tone": "good",
+      "edition": "02 Aug 2026"
+    },
+    {
+      "eventId": "legacy:good3-2026-08-02-03-turtle-release",
+      "titleKey": "Florida loggerhead release puts a satellite-tracked turtle back at sea",
+      "sourceUrls": [],
+      "file": "stories/good3-2026-08-02-03-turtle-release.json",
+      "tone": "good",
+      "edition": "02 Aug 2026"
+    },
+    {
+      "eventId": "legacy:top3-2026-08-02-01-iran-hormuz",
+      "titleKey": "Iran warns of retaliation as shipping through Hormuz faces disruption",
+      "sourceUrls": [],
+      "file": "stories/top3-2026-08-02-01-iran-hormuz.json",
+      "tone": "bad",
+      "edition": "02 Aug 2026"
+    },
+    {
+      "eventId": "legacy:top3-2026-08-02-02-ceuta-border",
+      "titleKey": "Spain says most Ceuta arrivals returned; at least 67 died",
+      "sourceUrls": [],
+      "file": "stories/top3-2026-08-02-02-ceuta-border.json",
+      "tone": "bad",
+      "edition": "02 Aug 2026"
+    },
+    {
+      "eventId": "legacy:top3-2026-08-02-03-japan-quake",
+      "titleKey": "Kumamoto quake aftermath: mall rescue ends as death toll reaches 34",
+      "sourceUrls": [],
+      "file": "stories/top3-2026-08-02-03-japan-quake.json",
+      "tone": "bad",
+      "edition": "02 Aug 2026"
+    },
+    {
+      "eventId": "legacy:top3-2026-07-31-01-hormuz",
+      "titleKey": "Hormuz diplomacy stalls as new fronts open across the Middle East",
+      "sourceUrls": [],
+      "file": "stories/top3-2026-07-31-01-hormuz.json",
+      "tone": "bad",
+      "edition": "31 Jul 2026"
+    },
+    {
+      "eventId": "legacy:top3-2026-07-31-02-europe-fires",
+      "titleKey": "France sends evacuees home as wildfires flare across Europe",
+      "sourceUrls": [],
+      "file": "stories/top3-2026-07-31-02-europe-fires.json",
+      "tone": "bad",
+      "edition": "31 Jul 2026"
+    },
+    {
+      "eventId": "legacy:top3-2026-07-31-03-japan-quake",
+      "titleKey": "Japan quake kills at least 23 as rescuers search Kumamoto",
+      "sourceUrls": [],
+      "file": "stories/top3-2026-07-31-03-japan-quake.json",
+      "tone": "bad",
+      "edition": "31 Jul 2026"
+    },
+    {
+      "eventId": "legacy:top3-2026-07-25-01-iran-oil",
+      "titleKey": "Oil tops $100 as strikes on Iran enter a fourteenth night",
+      "sourceUrls": [],
+      "file": "stories/top3-2026-07-25-01-iran-oil.json",
+      "tone": "bad",
+      "edition": "25 Jul 2026"
+    },
+    {
+      "eventId": "legacy:top3-2026-07-25-02-icc-khan",
+      "titleKey": "World court removes its chief prosecutor for the first time",
+      "sourceUrls": [],
+      "file": "stories/top3-2026-07-25-02-icc-khan.json",
+      "tone": "bad",
+      "edition": "25 Jul 2026"
+    },
+    {
+      "eventId": "legacy:top3-2026-07-25-03-us-tariffs",
+      "titleKey": "New tariffs now reach almost all of US trade",
+      "sourceUrls": [],
+      "file": "stories/top3-2026-07-25-03-us-tariffs.json",
+      "tone": "bad",
+      "edition": "25 Jul 2026"
+    },
+    {
+      "eventId": "legacy:longform-2026-08-03-hormuz",
+      "titleKey": "Why the Strait of Hormuz is still the pressure point in the Iran deal",
+      "sourceUrls": [
+        "https://apnews.com/article/trump-iran-strait-hormuz-israel-gaza-mideast-f4c225f6667d9fd171616304701825a0",
+        "https://apnews.com/article/iran-us-war-interim-peace-deal-explainer-246fec7874bd4d9a270de32642b6f19c",
+        "https://apnews.com/article/iraq-turkey-oil-pipeline-agreement-f930588c201d6cb36c1cedb26a1f9331",
+        "https://www.eia.gov/outlooks/steo/report/energysecurity/article.php"
+      ],
+      "file": "stories/longform-2026-08-03-hormuz.json",
+      "tone": "legacy",
+      "edition": "03 Aug 2026"
+    },
+    {
+      "eventId": "legacy:india-tunnel-protests",
+      "titleKey": "Tunnel collapse kills twenty two as protests shake capital",
+      "sourceUrls": [],
+      "file": "stories/india-tunnel-protests.json",
+      "tone": "legacy",
+      "edition": "25 Jul 2026"
+    },
+    {
+      "eventId": "legacy:india-space",
+      "titleKey": "India expands its commercial launch ambitions",
+      "sourceUrls": [],
+      "file": "stories/india-space.json",
+      "tone": "legacy",
+      "edition": "24 Jul 2026"
+    },
+    {
+      "eventId": "legacy:today-us-tariffs",
+      "titleKey": "U.S. hits 60 trade partners with new tariffs",
+      "sourceUrls": [],
+      "file": "stories/today-us-tariffs.json",
+      "tone": "legacy",
+      "edition": "24 Jul 2026"
+    },
+    {
+      "eventId": "legacy:trump-tariffs-global",
+      "titleKey": "Trump imposes sweeping tariffs on sixty trading partners",
+      "sourceUrls": [],
+      "file": "stories/trump-tariffs-global.json",
+      "tone": "legacy",
+      "edition": "25 Jul 2026"
+    },
+    {
+      "eventId": "legacy:us-iran-escalation",
+      "titleKey": "US and Iran trade strikes across Gulf for thirteenth night",
+      "sourceUrls": [],
+      "file": "stories/us-iran-escalation.json",
+      "tone": "legacy",
+      "edition": "25 Jul 2026"
+    },
+    {
+      "eventId": "legacy:us-space",
+      "titleKey": "A new private space race is taking shape",
+      "sourceUrls": [],
+      "file": "stories/us-space.json",
+      "tone": "legacy",
+      "edition": "24 Jul 2026"
+    },
+    {
+      "eventId": "legacy:berlin-tech",
+      "titleKey": "Berlin sets out a new technology policy agenda",
+      "sourceUrls": [],
+      "file": "stories/berlin-tech.json",
+      "tone": "legacy",
+      "edition": "24 Jul 2026"
+    },
+    {
+      "eventId": "legacy:dc-policy",
+      "titleKey": "Washington turns its attention to a new economic package",
+      "sourceUrls": [],
+      "file": "stories/dc-policy.json",
+      "tone": "legacy",
+      "edition": "24 Jul 2026"
+    },
+    {
+      "eventId": "spiderman-brand-new-day-opening-2026-08-02",
+      "titleKey": "Spider-Man film posts second-biggest global opening ever",
+      "sourceUrls": [
+        "https://apnews.com/article/a2c2efb863263ce50bcee1e7db822574",
+        "https://www.bbc.co.uk/news/articles/c3w052le2elo?at_medium=RSS&at_campaign=rss"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good3-2026-08-03-01-spiderman-opening.json",
+      "tone": "good",
+      "edition": "03 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-03-three-story/good-2026-08-03.mp4",
+      "recordedAt": "2026-08-03T11:41:36.375Z"
+    },
+    {
+      "eventId": "snapchat-spotlight-ai-video-policy-2026-08-01",
+      "titleKey": "Snapchat moves to limit wholly AI-generated videos in Spotlight",
+      "sourceUrls": [
+        "https://newsroom.snap.com/still-spotlight-but-still-real?careersEnableJobDetailPage=kwlw6&lang=de-DE",
+        "https://values.snap.com/policy/content-guidelines-recommendation-eligibility/recommendation-eligibility/quality?lang=en-GB&useContentAccordionItems=myy81",
+        "https://www.bbc.co.uk/news/articles/c77g6dm5pr8o?at_medium=RSS&at_campaign=rss"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good3-2026-08-03-02-ai-slop-cutback.json",
+      "tone": "good",
+      "edition": "03 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-03-three-story/good-2026-08-03.mp4",
+      "recordedAt": "2026-08-03T11:41:36.375Z"
+    },
+    {
+      "eventId": "india-local-strawberry-varieties-2026-07-30",
+      "titleKey": "Indian growers work toward home-grown strawberry varieties",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c8x274xxxpwo?at_medium=RSS&at_campaign=rss",
+        "https://www.frontiersin.org/journals/agronomy/articles/10.3389/fagro.2026.1781888/full",
+        "https://economictimes.indiatimes.com/news/new-updates/how-a-fruit-born-out-of-1992-experiment-is-helping-farmers-earn-rs-1012-lakh-per-acre/articleshow/131850137.cms"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good3-2026-08-03-03-india-strawberry-research.json",
+      "tone": "good",
+      "edition": "03 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-03-three-story/good-2026-08-03.mp4",
+      "recordedAt": "2026-08-03T11:41:36.375Z"
+    },
+    {
+      "eventId": "rawalakot-kashmir-deadly-protests-2026-08-03",
+      "titleKey": "Deadly protests deepen crisis in Pakistan-administered Kashmir",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c5yvqk69enko?at_medium=RSS&at_campaign=rss",
+        "https://apnews.com/article/f2965b19818c8beed8f39ac10e711bbc"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad3-2026-08-03-01-kashmir-protests.json",
+      "tone": "bad",
+      "edition": "03 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-03-three-story/bad-2026-08-03.mp4",
+      "recordedAt": "2026-08-03T11:44:49.772Z"
+    },
+    {
+      "eventId": "gaza-strikes-disarmament-talks-2026-08-02",
+      "titleKey": "Fresh Gaza strikes shadow fragile disarmament talks",
+      "sourceUrls": [
+        "https://apnews.com/article/72b1493ca75bb9d4cf195f325d8dc425",
+        "https://www.bbc.co.uk/news/articles/czjlvvkzj20o?at_medium=RSS&at_campaign=rss"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad3-2026-08-03-02-gaza-strikes.json",
+      "tone": "bad",
+      "edition": "03 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-03-three-story/bad-2026-08-03.mp4",
+      "recordedAt": "2026-08-03T11:44:49.772Z"
+    },
+    {
+      "eventId": "italy-heat-alert-2026-08-03",
+      "titleKey": "Italy places almost all major cities on highest heat alert",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/cr7k4gdrgljo?at_medium=RSS&at_campaign=rss",
+        "https://www.ansa.it/english/news/general_news/2026/07/21/italys-latest-heatwave-peaks-with-18-cities-on-red-alert_4ae92d81-794f-4d2d-bf43-e941e5a71abf.html",
+        "https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad3-2026-08-03-03-italy-heat-alert.json",
+      "tone": "bad",
+      "edition": "03 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-03-three-story/bad-2026-08-03.mp4",
+      "recordedAt": "2026-08-03T11:44:49.772Z"
+    },
+    {
+      "eventId": "sophie-woods-via-alpina-record-2026-08-03",
+      "titleKey": "Ultra-runner Sophie Woods smashes the Alps crossing record",
+      "sourceUrls": [
+        "https://www.bbc.com/sport/articles/cg7mdjkrr22o",
+        "https://edition.cnn.com/2026/08/03/world/new-record-for-via-alpina-intl-hnk"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good4-2026-08-04-01-sophie-woods-alps.json",
+      "tone": "good",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-three-story/good-2026-08-04.mp4",
+      "recordedAt": "2026-08-03T19:59:52.494Z"
+    },
+    {
+      "eventId": "suu-kyi-icrc-visit-2026-08-03",
+      "titleKey": "Aung San Suu Kyi appears healthy in first outside contact in years",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c1e1d5j6660o",
+        "https://www.reuters.com/world/asia-pacific/myanmars-aung-san-suu-kyi-meets-red-cross-official-government-says-2026-08-03/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good4-2026-08-04-02-suu-kyi-icrc-visit.json",
+      "tone": "good",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-three-story/good-2026-08-04.mp4",
+      "recordedAt": "2026-08-03T19:59:52.494Z"
+    },
+    {
+      "eventId": "fifa-drops-world-cup-stakes-plan-2026-07-31",
+      "titleKey": "FIFA abandons plan to sell World Cup revenue stakes",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/videos/cvgj0vldr1mo",
+        "https://usa-today-news.com/news/fifa-president-gianni-infantino-drops-plans-to-sell-world-cup-profits-to-private-equity/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good4-2026-08-04-03-fifa-drops-world-cup-stakes-plan.json",
+      "tone": "good",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-three-story/good-2026-08-04.mp4",
+      "recordedAt": "2026-08-03T19:59:52.494Z"
+    },
+    {
+      "eventId": "russia-beach-drone-strike-2026-08-03",
+      "titleKey": "Drone hits busy Russian beach, killing seven including children",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/cr7kmnyrdn7o",
+        "https://english.nv.ua/nation/drones-attack-krasnodar-krai-with-people-killed-on-beach-near-gelendzhik-50629527.html"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad4-2026-08-04-01-russia-beach-drone-strike.json",
+      "tone": "bad",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-three-story/bad-2026-08-04.mp4",
+      "recordedAt": "2026-08-03T20:32:04.173Z"
+    },
+    {
+      "eventId": "europe-river-drought-record-lows-2026-08-03",
+      "titleKey": "Rhine falls to record low as drought strains Europe's rivers",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c78gn8zvrx4o",
+        "https://gcaptain.com/europes-shrinking-rivers-curb-power-output-transport-and-company-earnings/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad4-2026-08-04-02-europe-river-drought-record-lows.json",
+      "tone": "bad",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-three-story/bad-2026-08-04.mp4",
+      "recordedAt": "2026-08-03T20:32:04.173Z"
+    },
+    {
+      "eventId": "iran-oman-hormuz-talks-2026-08-03",
+      "titleKey": "Iran and Oman hold talks on reopening the Strait of Hormuz",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c23579jzv08o",
+        "https://www.reuters.com/world/asia-pacific/gulf-states-back-plan-let-iran-collect-voluntary-fees-use-hormuz-2026-07-28/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad4-2026-08-04-03-iran-oman-hormuz-talks.json",
+      "tone": "bad",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-three-story/bad-2026-08-04.mp4",
+      "recordedAt": "2026-08-03T20:32:04.173Z"
+    },
+    {
+      "eventId": "broad-peak-avalanche-purja-2026-08-05",
+      "titleKey": "Famed climber Nirmal Purja among 10 killed in Broad Peak avalanche",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c07rvy4e7mno",
+        "https://apnews.com/article/pakistan-missing-climbers-search-resumed-broad-peak-2dae7b8a316072a82b84d27189795ec5"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad5-2026-08-05-01-purja-avalanche.json",
+      "tone": "bad",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-05-three-story/bad-2026-08-05.mp4",
+      "recordedAt": "2026-08-03T21:04:21.799Z"
+    },
+    {
+      "eventId": "moscow-restaurant-bomb-2026-08-05",
+      "titleKey": "Bomb kills three at a Moscow restaurant, state media say",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c86n4ljxp63o",
+        "https://www.bbc.com/news/articles/cdx8qp451lko"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad5-2026-08-05-02-moscow-restaurant-bomb.json",
+      "tone": "bad",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-05-three-story/bad-2026-08-05.mp4",
+      "recordedAt": "2026-08-03T21:04:21.799Z"
+    },
+    {
+      "eventId": "kumamoto-aeon-mall-blast-2026-08-05",
+      "titleKey": "Two workers die in blast after re-entering quake-hit Japanese mall on boss's order",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c24mr09r99eo",
+        "https://www.bbc.co.uk/news/articles/cdrv36kv7pzo"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad5-2026-08-05-03-kumamoto-aeon-mall-blast.json",
+      "tone": "bad",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-05-three-story/bad-2026-08-05.mp4",
+      "recordedAt": "2026-08-03T21:04:21.799Z"
+    },
+    {
+      "eventId": "fetal-surgery-theo-gastroschisis-2026-08-03",
+      "titleKey": "British baby thrives after pioneering womb surgery",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c86ngegz9qno",
+        "https://clinicaltrials.gov/study/NCT05704257",
+        "https://www.texaschildrens.org/departments/fetal-center/research"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good5-2026-08-04-01-fetal-surgery.json",
+      "tone": "good",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-09-slot-good.mp4",
+      "recordedAt": "2026-08-04T06:37:34.699Z"
+    },
+    {
+      "eventId": "uk-railcard-extension-18-year-olds-2026-08-03",
+      "titleKey": "Half-price rail travel extended to 18-year-olds",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/cy0jyln07r7o",
+        "https://www.16-17saver.co.uk/",
+        "https://www.nationalrail.co.uk/railcards/national-railcards/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good5-2026-08-04-02-railcard-extension.json",
+      "tone": "good",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-09-slot-good.mp4",
+      "recordedAt": "2026-08-04T06:37:34.699Z"
+    },
+    {
+      "eventId": "pink-zebra-seaweed-new-species-2026-07-31",
+      "titleKey": "Rare pink-zebra seaweed confirmed as new species",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/czrxepy3vn3o",
+        "https://publications.naturalengland.org.uk/publication/5561639456473088",
+        "https://www.nhm.ac.uk/discover/new-species.html"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good5-2026-08-04-03-pink-zebra-seaweed.json",
+      "tone": "good",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-09-slot-good.mp4",
+      "recordedAt": "2026-08-04T06:37:34.699Z"
+    },
+    {
+      "eventId": "us-states-tariff-lawsuit-2026-08-04",
+      "titleKey": "Twenty-five US states sue over new Trump tariffs",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/cy4kp8jd0ppo",
+        "https://apnews.com/article/120895adbee7ae06157cd5f4bf5c7583",
+        "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/july/fact-sheet-ustr-section-301-action-response-failure-60-economies-ban-imports-produced-forced-labor"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad6-2026-08-04-01-tariff-lawsuit.json",
+      "tone": "bad",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-09-slot-bad.mp4",
+      "recordedAt": "2026-08-04T06:40:21.425Z"
+    },
+    {
+      "eventId": "uk-breast-risk-screening-gap-2026-08-04",
+      "titleKey": "NHS checks miss most high-risk women under 50",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/ckgv652r625o",
+        "https://www.repository.cam.ac.uk/items/e5c809fa-dd83-4db5-bab5-2926013d0aa0",
+        "https://www.nature.com/articles/s41416-025-03329-2"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad6-2026-08-04-02-breast-risk-gap.json",
+      "tone": "bad",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-09-slot-bad.mp4",
+      "recordedAt": "2026-08-04T06:40:21.425Z"
+    },
+    {
+      "eventId": "xbox-console-price-rise-2026-08-03",
+      "titleKey": "Xbox prices jump as memory chip costs surge",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/czjlvrd9e43o",
+        "https://news.xbox.com/en-us/2026/06/25/xbox-console-price-update/amp/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad6-2026-08-04-03-xbox-price-rise.json",
+      "tone": "bad",
+      "edition": "04 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-04-09-slot-bad.mp4",
+      "recordedAt": "2026-08-04T06:40:21.425Z"
+    },
+    {
+      "eventId": "colombia-fgm-ban-2026-08-05",
+      "titleKey": "Colombia becomes first Latin American country to ban FGM",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c3r0vp7n0pro",
+        "https://www.aljazeera.com/features/longform/2026/6/14/making-history-the-fight-to-end-female-genital-mutilation-in-colombia"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good5-2026-08-05-01-colombia-fgm-ban.json",
+      "tone": "good",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/good5-2026-08-05.mp4",
+      "recordedAt": "2026-08-05T07:09:01.239Z"
+    },
+    {
+      "eventId": "exmoor-white-tailed-eagles-2026-08-05",
+      "titleKey": "White-tailed eagles return to Exmoor after 200 years",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c74g0jz3d4yo",
+        "https://www.forestryengland.uk"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good5-2026-08-05-02-exmoor-eagles.json",
+      "tone": "good",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/good5-2026-08-05.mp4",
+      "recordedAt": "2026-08-05T07:09:01.239Z"
+    },
+    {
+      "eventId": "faize-noore-olya-crew-rescued-2026-08-05",
+      "titleKey": "All 14 crew rescued after Indian ship sinks off Yemen coast",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/cly84we1y37o",
+        "https://www.reuters.com/world/middle-east/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good5-2026-08-05-03-india-ship-rescue.json",
+      "tone": "good",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/good5-2026-08-05.mp4",
+      "recordedAt": "2026-08-05T07:09:01.239Z"
+    },
+    {
+      "eventId": "elmley-curlew-return-2026-08-05",
+      "titleKey": "Curlews return to nest at Kent reserve where they hatched",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/cly54v48n0zo",
+        "https://www.bto.org"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good6-2026-08-05-01-curlew-return.json",
+      "tone": "good",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/good6-2026-08-05.mp4",
+      "recordedAt": "2026-08-05T08:38:55.405Z"
+    },
+    {
+      "eventId": "channel-boat-fire-rescue-2026-08-05",
+      "titleKey": "More than 170 migrants rescued after boat catches fire in Channel",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c4gkpeppjyqo",
+        "https://www.premar-manche.gouv.fr"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good6-2026-08-05-02-channel-rescue.json",
+      "tone": "good",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/good6-2026-08-05.mp4",
+      "recordedAt": "2026-08-05T08:38:55.405Z"
+    },
+    {
+      "eventId": "leeds-play-streets-2026-08-05",
+      "titleKey": "Leeds closes streets so children can play outside safely",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c8jnmzekx0ro",
+        "https://www.playengland.org.uk"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good6-2026-08-05-03-leeds-play-streets.json",
+      "tone": "good",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/good6-2026-08-05.mp4",
+      "recordedAt": "2026-08-05T08:38:55.405Z"
+    },
+    {
+      "eventId": "kyiv-missile-strike-2026-08-05",
+      "titleKey": "Russian strike kills at least 17 in Kyiv, officials say",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c330pxyvzzyo",
+        "https://www.reuters.com/world/europe/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad6-2026-08-05-01-kyiv-strike.json",
+      "tone": "bad",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/bad6-2026-08-05.mp4",
+      "recordedAt": "2026-08-05T09:17:57.563Z"
+    },
+    {
+      "eventId": "ethiopia-monastery-landslide-2026-08-05",
+      "titleKey": "Landslide kills 14 at Ethiopia monastery during prayer service",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c2lqpx1qd8lo",
+        "https://apnews.com"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad6-2026-08-05-02-ethiopia-landslide.json",
+      "tone": "bad",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/bad6-2026-08-05.mp4",
+      "recordedAt": "2026-08-05T09:17:57.563Z"
+    },
+    {
+      "eventId": "seoul-starbucks-raid-2026-08-05",
+      "titleKey": "Police raid Starbucks Korea over 'Tank Day' promotion fiasco",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c0kmd4xpr46o",
+        "https://www.reuters.com/world/asia-pacific/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad6-2026-08-05-03-seoul-starbucks-raid.json",
+      "tone": "bad",
+      "edition": "05 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/bad6-2026-08-05.mp4",
+      "recordedAt": "2026-08-05T09:17:57.563Z"
+    },
+    {
+      "eventId": "moderna-mrna-flu-vaccine-fda-2026-08-05",
+      "titleKey": "US approves first mRNA flu vaccine from Moderna",
+      "sourceUrls": [
+        "https://www.reuters.com/business/healthcare-pharmaceuticals/us-fda-approves-first-mrna-flu-shot-moderna-2026-08-06/",
+        "https://www.cnn.com/2026/08/05/health/moderna-mrna-flu-vaccine"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good7-2026-08-06-01-moderna-mrna-flu.json",
+      "tone": "good",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-three-story/good-2026-08-06.mp4",
+      "recordedAt": "2026-08-06T09:39:44.219Z"
+    },
+    {
+      "eventId": "avon-farm-climate-resilient-reserve-2026-08-05",
+      "titleKey": "Former dairy farm to become climate-resilient nature reserve",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/cpd76vep8yqo",
+        "https://www.avonwildlifetrust.org.uk/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good7-2026-08-06-02-avon-farm-reserve.json",
+      "tone": "good",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-three-story/good-2026-08-06.mp4",
+      "recordedAt": "2026-08-06T09:39:44.219Z"
+    },
+    {
+      "eventId": "england-walk-in-mental-health-centres-2026-08-05",
+      "titleKey": "Walk-in mental health centres to open in banks and libraries",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/cpd76e737ljo",
+        "https://www.england.nhs.uk/mental-health/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good7-2026-08-06-03-mental-health-centres.json",
+      "tone": "good",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-three-story/good-2026-08-06.mp4",
+      "recordedAt": "2026-08-06T09:39:44.219Z"
+    },
+    {
+      "eventId": "canada-climate-fires-wwa-2026-08-06",
+      "titleKey": "Climate crisis made Canada's wildfires twice as likely, study finds",
+      "sourceUrls": [
+        "https://www.theguardian.com/world/2026/aug/06/canada-wildfires-climate-crisis",
+        "https://www.worldweatherattribution.org/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad7-2026-08-06-01-canada-fires.json",
+      "tone": "bad",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-three-story/bad-2026-08-06.mp4",
+      "recordedAt": "2026-08-06T09:43:37.584Z"
+    },
+    {
+      "eventId": "houthi-saudi-tanker-attack-2026-08-05",
+      "titleKey": "Houthis strike Saudi oil tanker off Red Sea port Yanbu",
+      "sourceUrls": [
+        "https://www.reuters.com/world/middle-east/yemens-houthis-say-they-attacked-saudi-oil-tanker-red-sea-2026-08-05/",
+        "https://www.nytimes.com/2026/08/05/world/middleeast/houthis-claim-attack-saudi-arabia-tanker.html"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad7-2026-08-06-02-houthi-tanker.json",
+      "tone": "bad",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-three-story/bad-2026-08-06.mp4",
+      "recordedAt": "2026-08-06T09:43:37.584Z"
+    },
+    {
+      "eventId": "israel-lebanon-strikes-soldiers-killed-2026-08-06",
+      "titleKey": "Israel strikes south Lebanon after two soldiers killed",
+      "sourceUrls": [
+        "https://www.reuters.com/world/middle-east/two-israeli-soldiers-killed-southern-lebanon-israeli-military-says-2026-08-06/",
+        "https://www.bbc.co.uk/news/articles/c998711dyjvo"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad7-2026-08-06-03-lebanon-strikes.json",
+      "tone": "bad",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-three-story/bad-2026-08-06.mp4",
+      "recordedAt": "2026-08-06T09:43:37.584Z"
+    },
+    {
+      "eventId": "saltram-park-expansion-2026-08-05",
+      "titleKey": "National Trust opens new 32-hectare park at Saltram",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/cvgvmmv3nr1o",
+        "https://www.nationaltrust.org.uk/visit/devon/saltram/future-saltram"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good8-2026-08-06-01-saltram-park.json",
+      "tone": "good",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-batch2/good-2026-08-06-b2.mp4",
+      "recordedAt": "2026-08-06T13:11:39.125Z"
+    },
+    {
+      "eventId": "zoox-las-vegas-paid-robotaxi-2026-08-10",
+      "titleKey": "Amazon's Zoox launches paid robotaxi rides in Las Vegas",
+      "sourceUrls": [
+        "https://www.reuters.com/business/autos-transportation/amazons-zoox-start-paid-robotaxi-rides-vegas-next-week-2026-08-05/",
+        "https://www.cnbc.com/2026/08/05/amazon-zoox-paid-robotaxi-rides-las-vegas.html"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good8-2026-08-06-02-zoox-vegas.json",
+      "tone": "good",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-batch2/good-2026-08-06-b2.mp4",
+      "recordedAt": "2026-08-06T13:11:39.125Z"
+    },
+    {
+      "eventId": "chester-zoo-secretarybird-chicks-2026-08-04",
+      "titleKey": "Five endangered secretarybird chicks hatch at Chester Zoo",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/cr59elzpdygo",
+        "https://www.chesterzoo.org/news/five-highly-endangered-secretarybird-chicks-hatch-at-chester-zoo"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good8-2026-08-06-03-chester-secretarybirds.json",
+      "tone": "good",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-batch2/good-2026-08-06-b2.mp4",
+      "recordedAt": "2026-08-06T13:11:39.125Z"
+    },
+    {
+      "eventId": "iran-threatens-gulf-states-2026-08-05",
+      "titleKey": "Iran warns Gulf states it will hit energy sites if US strikes",
+      "sourceUrls": [
+        "https://www.reuters.com/world/middle-east/iran-threatens-hit-gulf-states-if-us-launches-new-strikes-2026-08-05/",
+        "https://www.al-monitor.com/originals/2026/08/iran-threatens-hit-gulf-states-if-us-launches-new-strikes"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad8-2026-08-06-01-iran-gulf.json",
+      "tone": "bad",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-batch2/bad-2026-08-06-b2.mp4",
+      "recordedAt": "2026-08-06T13:15:18.507Z"
+    },
+    {
+      "eventId": "congo-copper-cobalt-export-ban-2026-08-06",
+      "titleKey": "Congo bans exports of copper and cobalt concentrates",
+      "sourceUrls": [
+        "https://www.reuters.com/world/africa/congo-bans-exports-copper-cobalt-concentrates-official-order-says-2026-08-06/",
+        "https://www.miningweekly.com/article/congo-bans-exports-of-copper-cobalt-concentrates-official-order-says-2026-08-06"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad8-2026-08-06-02-congo-minerals.json",
+      "tone": "bad",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-batch2/bad-2026-08-06-b2.mp4",
+      "recordedAt": "2026-08-06T13:15:18.507Z"
+    },
+    {
+      "eventId": "south-korea-heatwave-farmers-drones-2026-08-06",
+      "titleKey": "South Korea deploys drones to warn farmers amid deadly heat",
+      "sourceUrls": [
+        "https://www.reuters.com/business/environment/south-korea-province-deploys-drones-warn-elderly-farmers-amid-heatwave-2026-08-06/",
+        "https://www.theguardian.com/world/2026/aug/04/south-korea-heatwave-seoul-heat-warning"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad8-2026-08-06-03-korea-heat.json",
+      "tone": "bad",
+      "edition": "06 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-06-batch2/bad-2026-08-06-b2.mp4",
+      "recordedAt": "2026-08-06T13:15:18.507Z"
+    },
+    {
+      "eventId": "nigeria-largest-rescue-2026-08-05",
+      "titleKey": "Nigeria frees 308 kidnap victims in largest single-day rescue",
+      "sourceUrls": [
+        "https://apnews.com/article/nigeria-rescue-bandits-abductions-cd608d04349161aa1664714ba42af4b6",
+        "https://apnews.com/article/nigeria-school-kidnapping-oyo-children-735c92cd5f6155499c3ea464757613c"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good9-2026-08-07-01-nigeria-rescue.json",
+      "tone": "good",
+      "edition": "07 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-07-three-story/good-2026-08-07.mp4",
+      "recordedAt": "2026-08-07T03:51:35.275Z"
+    },
+    {
+      "eventId": "antarctica-midwinter-medevac-2026-08-07",
+      "titleKey": "Australian crew carries out daring midwinter Antarctica rescue",
+      "sourceUrls": [
+        "https://www.bbc.com/news/articles/c89nqlz5p4qo",
+        "https://www.skytraders.com.au/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good9-2026-08-07-02-antarctica-medevac.json",
+      "tone": "good",
+      "edition": "07 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-07-three-story/good-2026-08-07.mp4",
+      "recordedAt": "2026-08-07T03:51:35.275Z"
+    },
+    {
+      "eventId": "nintendo-switch2-profit-2026-08-06",
+      "titleKey": "Nintendo profit jumps 53.5% as Switch 2 demand stays strong",
+      "sourceUrls": [
+        "https://apnews.com/article/nintendo-games-super-mario-japan-earnings-switch-63e5fa48c9b516a36823ae8857effdb8",
+        "https://apnews.com/article/softbank-technology-ai-japan-earnings-robotics-6f49a9a3afec4df2fb24bb89444c29ba"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good9-2026-08-07-03-nintendo-profit.json",
+      "tone": "good",
+      "edition": "07 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-07-three-story/good-2026-08-07.mp4",
+      "recordedAt": "2026-08-07T03:51:35.275Z"
+    },
+    {
+      "eventId": "kyiv-missile-barrage-17-killed-2026-08-06",
+      "titleKey": "Russian missile barrage kills 17 in Ukraine's capital region",
+      "sourceUrls": [
+        "https://apnews.com/article/ukraine-war-russia-kyiv-patriot-ballistic-missile-64f8e53f9650d4104bb7375361abd990",
+        "https://apnews.com/article/russia-ukraine-war-ballistic-missiles-patriots-drones-30447169b0145caa2e48ebf22b235c7a"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad9-2026-08-07-01-kyiv-barrage.json",
+      "tone": "bad",
+      "edition": "07 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-07-three-story/bad-2026-08-07.mp4",
+      "recordedAt": "2026-08-07T03:54:35.095Z"
+    },
+    {
+      "eventId": "spokane-wildfire-arson-2026-08-06",
+      "titleKey": "Spokane wildfire arson suspect waited for dry, windy day to start blaze",
+      "sourceUrls": [
+        "https://www.bbc.com/news/articles/cy0j5nyxk68o",
+        "https://apnews.com/article/wildfires-spokane-washington-suspect-arson-charges-f9e3d98df0c20a16d2f9b083efd99ab3"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad9-2026-08-07-02-spokane-wildfire.json",
+      "tone": "bad",
+      "edition": "07 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-07-three-story/bad-2026-08-07.mp4",
+      "recordedAt": "2026-08-07T03:54:35.095Z"
+    },
+    {
+      "eventId": "houthi-attacks-yemen-troops-2026-08-06",
+      "titleKey": "Houthi attacks reportedly kill at least 30 Yemeni government forces",
+      "sourceUrls": [
+        "https://www.bbc.com/news/articles/ckgdmdr0lmgo",
+        "https://apnews.com/article/houthi-rebel-attacks-marib-hadhramaut-c1cbd145c5e740b93a4731980ec4e697"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad9-2026-08-07-03-yemen-houthis.json",
+      "tone": "bad",
+      "edition": "07 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-07-three-story/bad-2026-08-07.mp4",
+      "recordedAt": "2026-08-07T03:54:35.095Z"
+    },
+    {
+      "eventId": "meta-child-safety-ruling-2026-08-06",
+      "titleKey": "Meta ordered to pay $567m in largest child safety ruling",
+      "sourceUrls": [
+        "https://www.bbc.com/news/articles/cd7lz3wr2rlo",
+        "https://apnews.com/article/meta-court-ruling-mental-health-online-platforms-21b425faf745d0f736b310ebd8bc6b89"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good10-2026-08-07-01-meta-child-safety.json",
+      "tone": "good",
+      "edition": "07 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-07-standalone/good-good10-2026-08-07-01-meta-child-safety.mp4",
+      "recordedAt": "2026-08-07T04:02:10.000Z"
+    },
+    {
+      "eventId": "amsterdam-pride-mass-wedding-2026-08-06",
+      "titleKey": "Dozens marry for a day at Amsterdam Pride's pink church",
+      "sourceUrls": [
+        "https://apnews.com/article/pride-lgbtqi-amsterdam-wedding-marriage-a37f60c46c36c8c20e72a07fa4087c3b",
+        "https://apnews.com/article/pride-lgbtqi-amsterdam-canals-security-jetten-4b1d7cca31a9e89d29666f730e1c3cf3"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good10-2026-08-07-02-amsterdam-pride.json",
+      "tone": "good",
+      "edition": "07 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-07-standalone/good-good10-2026-08-07-02-amsterdam-pride.mp4",
+      "recordedAt": "2026-08-07T04:02:10.000Z"
+    },
+    {
+      "eventId": "romania-danube-nuclear-barges-2026-08-06",
+      "titleKey": "Romania sinks barges in Danube to keep nuclear plant running",
+      "sourceUrls": [
+        "https://apnews.com/article/romania-europe-nuclear-danube-drought-1ddb89604f06026c938363d57da53071",
+        "https://apnews.com/article/danube-drought-energy-crisis-hungary-romania-serbia-229e089c30821889548354d7da289084"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad10-2026-08-07-01-romania-danube.json",
+      "tone": "bad",
+      "edition": "07 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-07-standalone/bad-bad10-2026-08-07-01-romania-danube.mp4",
+      "recordedAt": "2026-08-07T04:02:10.000Z"
+    },
+    {
+      "eventId": "michoacan-avocado-inspections-suspended-2026-08-05",
+      "titleKey": "US suspends avocado inspections in Mexican state over threat",
+      "sourceUrls": [
+        "https://apnews.com/article/mexico-united-states-avocado-exports-threats-c5cf0ef4a260e6a517fae615c08a1f8b",
+        "https://apnews.com/article/mexico-us-avocados-suspended-michoacan-cartels-sheinbaum-trump-689d89d4934a405882785205cc0f8c22"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad10-2026-08-07-02-michoacan-avocado.json",
+      "tone": "bad",
+      "edition": "07 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-07-standalone/bad-bad10-2026-08-07-02-michoacan-avocado.mp4",
+      "recordedAt": "2026-08-07T04:02:10.000Z"
+    },
+    {
+      "eventId": "tudriqev-melanoma-approval-2026-08-06",
+      "titleKey": "FDA approves engineered virus therapy for hard-to-treat melanoma",
+      "sourceUrls": [
+        "https://www.statnews.com/2026/08/06/replimune-melanoma-drug-rp1-fda-approves-phase-3-confirmatory-trial/",
+        "https://www.biopharmadive.com/news/replimune-tudriqev-fda-approve-melanoma-rp1/827226/"
+      ],
+      "file": "stories/good11-2026-08-07-01-tudriqev-melanoma.json",
+      "tone": "good",
+      "edition": "07 Aug 2026",
+      "output": "renders/2026-08-07-standalone-b2/good-good11-2026-08-07-01-tudriqev-melanoma.mp4",
+      "recordedAt": "2026-08-07T12:56:13.097Z"
+    },
+    {
+      "eventId": "moderna-mrna-flu-vaccine-2026-08-05",
+      "titleKey": "FDA approves first mRNA flu shot, Moderna's mFlusiva",
+      "sourceUrls": [
+        "https://apnews.com/article/flu-vaccine-moderna-mrna-fda-mflusiva-59d991a6bf70c26e2f0c210cc8ca87f1",
+        "https://apnews.com/article/moderna-flu-vaccine-mrna-fda-advisers-mflusiva-488c68fe39244ca5ebad441a815b4ba2"
+      ],
+      "file": "stories/good11-2026-08-07-02-mrna-flu-vaccine.json",
+      "tone": "good",
+      "edition": "07 Aug 2026",
+      "output": "renders/2026-08-07-standalone-b2/good-good11-2026-08-07-02-mrna-flu-vaccine.mp4",
+      "recordedAt": "2026-08-07T12:56:13.102Z"
+    },
+    {
+      "eventId": "hypoallergenic-beagle-crispr-2026-08-05",
+      "titleKey": "Gene-edited beagle offers hope for people with dog allergies",
+      "sourceUrls": [
+        "https://apnews.com/article/hypoallergenic-dogs-crispr-pet-allergies-f5bd8cb438dfd1a9d1cccd4a1d46fd2a",
+        "https://www.liebertpub.com/doi/10.1089/crispr.2026.0001"
+      ],
+      "file": "stories/good11-2026-08-07-03-hypoallergenic-beagle.json",
+      "tone": "good",
+      "edition": "07 Aug 2026",
+      "output": "renders/2026-08-07-standalone-b2/good-good11-2026-08-07-03-hypoallergenic-beagle.mp4",
+      "recordedAt": "2026-08-07T12:56:13.102Z"
+    },
+    {
+      "eventId": "thailand-nonthaburi-school-shooting-2026-08-07",
+      "titleKey": "Student gunman kills 7 in school and home shooting near Bangkok",
+      "sourceUrls": [
+        "https://apnews.com/article/thailand-nonthaburi-school-shooting-7939000dbad098198a9fc77169028762",
+        "https://apnews.com/photo-gallery/thailand-nonthaburi-school-shooting-photos-27a1d076a07c82b5153a6830cc443a96"
+      ],
+      "file": "stories/bad11-2026-08-07-01-thailand-school-shooting.json",
+      "tone": "bad",
+      "edition": "07 Aug 2026",
+      "output": "renders/2026-08-07-standalone-b2/bad-bad11-2026-08-07-01-thailand-school-shooting.mp4",
+      "recordedAt": "2026-08-07T12:56:13.102Z"
+    },
+    {
+      "eventId": "kenya-amboseli-elephants-cyanide-2026-08-07",
+      "titleKey": "16 elephants die from suspected cyanide near Kenya's Amboseli park",
+      "sourceUrls": [
+        "https://apnews.com/article/kenya-amboseli-elephants-dead-cyanide-farms-0b2af9a859cf4bb6d0d60413dceb1026",
+        "https://apnews.com/article/kenya-elephants-poisoning-cyanide-16472f80a3b345db6d476fc3bf4ef57b"
+      ],
+      "file": "stories/bad11-2026-08-07-02-kenya-elephants.json",
+      "tone": "bad",
+      "edition": "07 Aug 2026",
+      "output": "renders/2026-08-07-standalone-b2/bad-bad11-2026-08-07-02-kenya-elephants.mp4",
+      "recordedAt": "2026-08-07T12:56:13.102Z"
+    },
+    {
+      "eventId": "russia-warehouse-drone-fire-2026-08-05",
+      "titleKey": "Drone attack sets fire to Russian retail giant's warehouse",
+      "sourceUrls": [
+        "https://apnews.com/article/russia-ukraine-war-wildberries-ballistic-missiles-6101ca4702e1f66e8cb8a15819cd5931",
+        "https://apnews.com/article/russia-ukraine-war-ballistic-missiles-patriots-drones-30447169b0145caa2e48ebf22b235c7a"
+      ],
+      "file": "stories/bad11-2026-08-07-03-russia-warehouse-drone.json",
+      "tone": "bad",
+      "edition": "07 Aug 2026",
+      "output": "renders/2026-08-07-standalone-b2/bad-bad11-2026-08-07-03-russia-warehouse-drone.mp4",
+      "recordedAt": "2026-08-07T12:56:13.102Z"
+    },
+    {
+      "eventId": "hormuz-talks-positive-oman-iran-2026-08-08",
+      "titleKey": "Oman says Hormuz shipping talks with Iran are positive",
+      "sourceUrls": [
+        "https://www.bbc.com/news/articles/c934j5y2lq9o",
+        "https://apnews.com/article/yemen-houthis-turkey-kurdish-peace-mideast-roundup-aug-8-2026-feb75871fb82c44b3f7fd0ee02bb24b4"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good-2026-08-08-01-hormuz-talks.json",
+      "tone": "good",
+      "edition": "08 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-08-three-story/good-2026-08-08.mp4",
+      "recordedAt": "2026-08-08T19:53:16.642Z"
+    },
+    {
+      "eventId": "numbat-iucn-downlist-2026-08-08",
+      "titleKey": "Numbat comes off endangered list after decades of work",
+      "sourceUrls": [
+        "https://www.bbc.com/news/articles/c9q94lxqrzzo",
+        "https://news.mongabay.com/short-article/2026/07/once-endangered-australias-numbat-is-making-a-hopeful-recovery/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good-2026-08-08-02-numbat-recovery.json",
+      "tone": "good",
+      "edition": "08 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-08-three-story/good-2026-08-08.mp4",
+      "recordedAt": "2026-08-08T19:53:16.642Z"
+    },
+    {
+      "eventId": "south-africa-womens-march-70th-anniversary-2026-08-08",
+      "titleKey": "South Africa marks 70 years since the Women's March",
+      "sourceUrls": [
+        "https://apnews.com/article/south-africa-women-anniversary-apartheid-democracy-protest-0c0ee7d109eaaf8094570da7258acd85",
+        "https://apnews.com/hub/south-africa"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good-2026-08-08-03-south-africa-women-march.json",
+      "tone": "good",
+      "edition": "08 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-08-three-story/good-2026-08-08.mp4",
+      "recordedAt": "2026-08-08T19:53:16.642Z"
+    },
+    {
+      "eventId": "congo-adf-banana-ecole-attack-2026-08-08",
+      "titleKey": "IS-linked militants kill at least 13 in Congo village",
+      "sourceUrls": [
+        "https://apnews.com/article/congo-adf-attack-islamic-state-group-9aa74dd808f76180ab00046f7943e358",
+        "https://apnews.com/article/congo-ebola-outbreak-ituri-protest-health-workers-1de45c3ecedabb974dce0b176f0dcc3f"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad-2026-08-08-01-congo-adf-attack.json",
+      "tone": "bad",
+      "edition": "08 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-08-three-story/bad-2026-08-08.mp4",
+      "recordedAt": "2026-08-08T19:56:31.249Z"
+    },
+    {
+      "eventId": "spain-italy-border-controls-ceuta-row-2026-08-08",
+      "titleKey": "Spain and Italy impose border checks in migration row",
+      "sourceUrls": [
+        "https://www.bbc.com/news/articles/c5yv5l6yr5ko",
+        "https://apnews.com/article/spain-italy-ceuta-migrants-schengen-border-controls-f3fc82cadf7dce39d553126a47d61fd7"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad-2026-08-08-02-ceuta-border-row.json",
+      "tone": "bad",
+      "edition": "08 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-08-three-story/bad-2026-08-08.mp4",
+      "recordedAt": "2026-08-08T19:56:31.249Z"
+    },
+    {
+      "eventId": "bc-okanagan-wildfire-evacuations-2026-08-08",
+      "titleKey": "Fast-moving wildfire forces 20,000 to evacuate in BC",
+      "sourceUrls": [
+        "https://apnews.com/article/wildfire-canada-evacuation-british-columbia-okanagan-61002c95f641a4060b78195b016fbea3",
+        "https://www.bbc.com/news/articles/cx25dkwk3e3o"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad-2026-08-08-03-bc-wildfire.json",
+      "tone": "bad",
+      "edition": "08 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-08-three-story/bad-2026-08-08.mp4",
+      "recordedAt": "2026-08-08T19:56:31.249Z"
+    }
+  ]
+}

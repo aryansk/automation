@@ -1,0 +1,93 @@
+{
+  "eventId": "elmley-curlew-return-2026-08-05",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Isle of Sheppey",
+  "coordinates": [
+    0.9,
+    51.39
+  ],
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Nature · Conservation",
+  "headline": "Curlews return to nest at Kent reserve where they hatched",
+  "summary": "Birds from previous releases have paired up and returned to Elmley Nature Reserve, in a boost for the at-risk species.",
+  "script": "Rare curlews have returned to nest at the nature reserve where they hatched. Thirty-three birds were released this year on the Isle of Sheppey, and earlier releases have now come back to raise their own young.",
+  "source": "BBC News",
+  "edition": "05 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-05-good6/curlew/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-good6/curlew/secondary.jpg",
+  "imageAlt": "A curlew walks across a field of yellow grass at Elmley Nature Reserve.",
+  "imageAltTwo": "Curlew keeper Simon Higgs stands in a field with a bird enclosure behind him.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/good6-2026-08-05-01-curlew-return.wav",
+  "captions": [
+    {
+      "lines": [
+        "Curlews return to",
+        "nest in Kent."
+      ],
+      "highlights": [
+        "Curlews return",
+        "nest in Kent"
+      ]
+    },
+    {
+      "lines": [
+        "33 birds released",
+        "this year."
+      ],
+      "highlights": [
+        "33 birds",
+        "released"
+      ]
+    },
+    {
+      "lines": [
+        "A boost for the",
+        "at-risk species."
+      ],
+      "highlights": [
+        "at-risk species"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Curlew revival continues at Elmley nature reserve in Kent",
+      "url": "https://www.bbc.co.uk/news/articles/cly54v48n0zo",
+      "published": "2026-08-04",
+      "usedFor": [
+        "33 released",
+        "returning to nest",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "British Trust for Ornithology",
+      "title": "Curlew conservation status",
+      "url": "https://www.bto.org",
+      "published": "2026-08-04",
+      "usedFor": [
+        "red list status",
+        "decline context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Fresh conservation milestone with clear positive outcome for a red-listed species; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

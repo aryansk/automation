@@ -1,0 +1,61 @@
+{
+  "eventId": "katalyst-link-swift-rescue-progress-2026-08-10",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Greenbelt",
+  "coordinates": [
+    -76.8755,
+    38.9998
+  ],
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Space · Rescue",
+  "headline": "Katalyst works to recover Swift rescue spacecraft LINK",
+  "summary": "The servicing craft is being stabilized before it can help lift NASA’s Swift telescope.",
+  "script": "Katalyst Space is working to recover LINK, the spacecraft meant to rescue NASA’s Swift telescope. Engineers are trying to stabilize the servicing craft before it can rendezvous and raise Swift’s orbit.",
+  "source": "NASA · Space.com",
+  "edition": "10 Aug 2026",
+  "storyNumber": "06",
+  "imageOne": "assets/stories/2026-08-10/katalyst-swift-rescue/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-10/katalyst-swift-rescue/secondary.jpg",
+  "imageAlt": "NASA image of the Katalyst spacecraft in an integration facility.",
+  "imageAltTwo": "NASA illustration of the Swift space observatory in orbit.",
+  "imageCredit": "NASA",
+  "imageCreditTwo": "NASA",
+  "narrationAudio": "assets/narration/new-2026-08-10/katalyst-swift-rescue.wav",
+  "sources": [
+    {
+      "publisher": "NASA",
+      "title": "Katalyst mission to boost Swift spacecraft’s orbit",
+      "url": "https://www.nasa.gov/news-release/nasa-to-preview-katalyst-mission-to-boost-swift-spacecrafts-orbit/",
+      "published": "2026-06-11",
+      "usedFor": [
+        "mission purpose",
+        "Swift rescue context"
+      ]
+    },
+    {
+      "publisher": "Space.com",
+      "title": "Engineers race to save stricken LINK rescue spacecraft",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/engineers-race-to-save-stricken-link-rescue-spacecraft-before-its-too-late",
+      "published": "2026-08-07",
+      "usedFor": [
+        "current stabilization effort"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 6,
+    "basis": "A current space-rescue effort with strong hardware imagery and cautious forward progress; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

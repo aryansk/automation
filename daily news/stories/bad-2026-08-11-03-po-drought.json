@@ -1,0 +1,150 @@
+{
+  "eventId": "italy-po-drought-2026-08-11",
+  "tone": "bad",
+  "countryCode": "IT",
+  "countryName": "Italy",
+  "cityName": "Milan",
+  "region": "Europe",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Drought · Italy",
+  "headline": "Po River drops to record low as Italy rations water for farms",
+  "summary": "Italy's longest river fell to 40 percent of normal flow, forcing irrigation limits across the Po Valley during a third year of drought pressure.",
+  "script": "Italy's Po River has dropped to a record low. The river is at forty percent of normal flow. Farms across the Po Valley now face rationed irrigation.",
+  "source": "Reuters",
+  "edition": "11 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-11-bad/po-drought/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-11-bad/po-drought/secondary.jpg",
+  "imageAlt": "Exposed riverbed with low water — dried river during drought.",
+  "imageAltTwo": "Parched farmland with low irrigation channels in drought.",
+  "imageCredit": "Reuters",
+  "imageCreditTwo": "Reuters",
+  "narrationAudio": "assets/narration/bad-2026-08-11-03-po-drought.wav",
+  "captions": [
+    {
+      "lines": [
+        "Po River at",
+        "record low."
+      ],
+      "highlights": [
+        "record low"
+      ]
+    },
+    {
+      "lines": [
+        "40 percent of",
+        "normal flow."
+      ],
+      "highlights": [
+        "40 percent"
+      ]
+    },
+    {
+      "lines": [
+        "Farms face",
+        "rationed irrigation."
+      ],
+      "highlights": [
+        "rationed"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Po River hits record low",
+      "url": "https://www.reuters.com/world/europe/po-river-drought-2026-08-11/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "record low",
+        "40 percent"
+      ]
+    },
+    {
+      "publisher": "The Guardian",
+      "title": "Italy Po drought rationing",
+      "url": "https://www.theguardian.com/world/2026/aug/11/po-river-record-low-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "irrigation limits"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Water crisis.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Italy.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "IT",
+            "coordinates": [
+              12.5,
+              41.9
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Milan/Po Valley.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Milan",
+            "coordinates": [
+              9.18,
+              45.46
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show low vs normal.",
+        "start": 9.5,
+        "animationId": "before-after-swipe",
+        "mapSource": "The Guardian / 11 Aug 2026",
+        "mapData": {
+          "before": {
+            "values": {
+              "IT": 85,
+              "FR": 78,
+              "CH": 72
+            }
+          },
+          "after": {
+            "values": {
+              "IT": 40,
+              "FR": 62,
+              "CH": 58
+            }
+          }
+        }
+      }
+    ]
+  }
+}

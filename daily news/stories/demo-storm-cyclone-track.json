@@ -1,0 +1,84 @@
+{
+  "slug": "demo-storm-cyclone-track",
+  "edition": "DEMO EDITION / ILLUSTRATIVE",
+  "deskName": "godandbaddaily / Landscape Desk",
+  "openerTitle": "STORM / TRACK?",
+  "openerSub": "Demo composition · illustrative weather data, clearly labeled",
+  "headline": "Demo: tracking a cyclone's observed and forecast path",
+  "summary": "A clearly labeled demonstration of automatic storm-track map selection. The track and forecast points below are illustrative placeholders, not reporting.",
+  "kicker": "DEMO · WEATHER · ILLUSTRATIVE",
+  "region": "Bay of Bengal",
+  "scriptFile": "assets/narration/demo-storm-cyclone-track-script.txt",
+  "narrationAudio": "assets/narration/silence.wav",
+  "captionFile": "assets/narration/demo-storm-cyclone-track.vtt",
+  "globeCaption": "Demo map · illustrative track only",
+  "routeLabel": "ILLUSTRATIVE TRACK / OBSERVED + FORECAST",
+  "mapAnimation": "storm-track",
+  "mapSource": "Illustrative demo source — not reporting",
+  "mapLabel": "ILLUSTRATIVE TRACK / OBSERVED → FORECAST",
+  "mapData": {
+    "track": [
+      { "coordinates": [88.5, 13.2], "status": "observed", "label": "T-24" },
+      { "coordinates": [86.9, 14.8], "status": "observed", "label": "NOW" },
+      { "coordinates": [85.2, 16.4], "status": "forecast", "label": "+24" },
+      { "coordinates": [83.4, 18.1], "status": "forecast", "label": "+48" }
+    ]
+  },
+  "sources": [
+    { "label": "ILLUSTRATIVE / DEMO ONLY", "url": "https://example.com/demo-storm-track" }
+  ],
+  "chapters": [
+    {
+      "kicker": "01 / THE SYSTEM",
+      "title": "Demo: a cyclone forming in the Bay of Bengal",
+      "body": "Illustrative demo chapter: a storm system gathering over warm water. The center, track and intensity are placeholders for pipeline demonstration only.",
+      "tag": "ILLUSTRATIVE / DEMO SYSTEM",
+      "graphic": "letter",
+      "focus": { "codes": "BAY OF BENGAL", "label": "CYCLONE / DEMO", "coordinates": "15° N / 87° E" },
+      "globe": {
+        "countryCode": "IN",
+        "countryName": "India",
+        "city": "Chennai",
+        "event": "Demo · storm system",
+        "coordinates": [80.27, 13.08],
+        "cameraZ": 7.0,
+        "mentionedCountryCodes": ["BD", "LK"],
+        "routePoints": [
+          { "label": "OBSERVED", "country": "Bay of Bengal", "location": "Sea", "coordinates": [86.9, 14.8] },
+          { "label": "FORECAST", "country": "Bay of Bengal", "location": "Sea", "coordinates": [83.4, 18.1] }
+        ]
+      },
+      "photos": [
+        { "src": "assets/news-images/2026-08-04-trade/map.jpg", "country": "Bay of Bengal", "location": "Regional map", "caption": "Illustrative demo image", "credit": "Illustrative demo · source credit in manifest" },
+        { "src": "assets/news-images/2026-08-04-trade/port.jpg", "country": "Bay of Bengal", "location": "Coastal port", "caption": "Illustrative demo image", "credit": "Illustrative demo · source credit in manifest" }
+      ]
+    },
+    {
+      "kicker": "02 / THE TRACK",
+      "title": "Demo: observed positions and the forecast cone",
+      "body": "Illustrative demo chapter: the map separates observed and forecast positions so the uncertainty of the path is visible. All points are placeholders.",
+      "tag": "OBSERVED → FORECAST / DEMO",
+      "graphic": "route",
+      "focus": { "codes": "OBSERVED → FORECAST", "label": "ILLUSTRATIVE TRACK", "coordinates": "DEMO" },
+      "globe": {
+        "countryCode": "IN",
+        "countryName": "India",
+        "city": "Chennai",
+        "event": "Demo · storm track",
+        "coordinates": [85.2, 16.4],
+        "cameraZ": 8.6,
+        "mentionedCountryCodes": ["BD", "LK"],
+        "routePoints": [
+          { "label": "OBSERVED", "country": "Bay of Bengal", "location": "Sea", "coordinates": [88.5, 13.2] },
+          { "label": "OBSERVED", "country": "Bay of Bengal", "location": "Sea", "coordinates": [86.9, 14.8] },
+          { "label": "FORECAST", "country": "Bay of Bengal", "location": "Sea", "coordinates": [85.2, 16.4] },
+          { "label": "FORECAST", "country": "Bay of Bengal", "location": "Sea", "coordinates": [83.4, 18.1] }
+        ]
+      },
+      "photos": [
+        { "src": "assets/news-images/2026-08-04-trade/port.jpg", "country": "Bay of Bengal", "location": "Coastal port", "caption": "Illustrative demo image", "credit": "Illustrative demo · source credit in manifest" },
+        { "src": "assets/news-images/2026-08-04-trade/containers.jpg", "country": "Global", "location": "Port operations", "caption": "Illustrative demo image", "credit": "Illustrative demo · source credit in manifest" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "eventId": "broad-peak-avalanche-purja-2026-08-05",
+  "tone": "bad",
+  "countryCode": "PK",
+  "countryName": "Pakistan",
+  "cityName": "Broad Peak",
+  "coordinates": [
+    76.56,
+    35.81
+  ],
+  "region": "South Asia",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Disaster · Mountaineering",
+  "headline": "Famed climber Nirmal Purja among 10 killed in Broad Peak avalanche",
+  "summary": "An avalanche swept a 10-member expedition on Pakistan's Broad Peak; all 10 were confirmed dead, including the celebrated Nepali mountaineer Nimsdai.",
+  "script": "The mountaineering world is mourning Nirmal Purja, known as Nims. He was among all ten climbers confirmed dead after an avalanche swept Broad Peak in Pakistan. Tributes are pouring out across Nepal.",
+  "source": "BBC · AP",
+  "edition": "05 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-05-bad/purja/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-bad/purja/secondary.jpg",
+  "imageAlt": "Schoolgirls light candles at a vigil for the climber Nirmal Purja.",
+  "imageAltTwo": "Students and teachers hold candles at a memorial gathering on a school lawn.",
+  "imageCredit": "BBC News image",
+  "imageCreditTwo": "BBC News image",
+  "narrationAudio": "assets/narration/tour/bad5-2026-08-05-01-purja-avalanche.wav",
+  "captions": [
+    {
+      "lines": [
+        "Nirmal Purja, known as Nims,",
+        "has died on Broad Peak."
+      ],
+      "highlights": [
+        "Nirmal Purja",
+        "died"
+      ]
+    },
+    {
+      "lines": [
+        "All ten climbers were",
+        "swept by the avalanche."
+      ],
+      "highlights": [
+        "ten climbers",
+        "avalanche"
+      ]
+    },
+    {
+      "lines": [
+        "Nepal mourns the",
+        "legendary mountaineer."
+      ],
+      "highlights": [
+        "Nepal mourns",
+        "mountaineer"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "'Your legacy will live forever': Nepal mourns climber Nirmal Purja",
+      "url": "https://www.bbc.co.uk/news/articles/c07rvy4e7mno",
+      "published": "2026-08-03",
+      "usedFor": [
+        "mourning and tribute context",
+        "primary image",
+        "secondary image"
+      ]
+    },
+    {
+      "publisher": "Associated Press",
+      "title": "Avalanche in Pakistan claims lives of Nirmal Purja and fellow climbers",
+      "url": "https://apnews.com/article/pakistan-missing-climbers-search-resumed-broad-peak-2dae7b8a316072a82b84d27189795ec5",
+      "published": "2026-08-01",
+      "usedFor": [
+        "independent confirmation of deaths",
+        "rescue and recovery details"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Global prominence of the Broad Peak tragedy and worldwide tributes; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

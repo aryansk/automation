@@ -1,0 +1,140 @@
+{
+  "eventId": "hungary-baka-president-election-2026-08-11",
+  "tone": "good",
+  "countryCode": "HU",
+  "countryName": "Hungary",
+  "cityName": "Budapest",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Politics · Democracy",
+  "headline": "Hungary elects former supreme court head András Baka as president",
+  "summary": "Parliament chose the ex-chief justice, nominated by the governing Tisza party, in a shift away from the Orbán era.",
+  "script": "Hungary has elected a new president. Parliament chose Andras Baka, a former head of the Supreme Court. The vote marks a shift from the Orban era.",
+  "source": "Reuters",
+  "edition": "11 Aug 2026",
+  "storyNumber": "05",
+  "imageOne": "assets/news-images/2026-08-12-good/hungary-president-baka/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-12-good/hungary-president-baka/secondary.jpg",
+  "imageAlt": "András Baka addressing Hungary's parliament during the presidential vote.",
+  "imageAltTwo": "Hungarian parliament building in Budapest.",
+  "imageCredit": "Reuters / Bernadett Szabó",
+  "imageCreditTwo": "Reuters / Attila Kisbenedek",
+  "narrationAudio": "assets/narration/good-05-hungary-baka.wav",
+  "captions": [
+    {
+      "lines": [
+        "Hungary picks",
+        "new president."
+      ],
+      "highlights": [
+        "new president"
+      ]
+    },
+    {
+      "lines": [
+        "Ex-chief justice",
+        "András Baka."
+      ],
+      "highlights": [
+        "András Baka"
+      ]
+    },
+    {
+      "lines": [
+        "A shift from",
+        "the Orbán era."
+      ],
+      "highlights": [
+        "shift"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Hungary parliament elects former supreme court head Andras Baka as president",
+      "url": "https://www.reuters.com/world/hungary-parliament-elects-former-supreme-court-head-andras-baka-president-2026-08-11/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "election outcome",
+        "Tisza nomination"
+      ]
+    },
+    {
+      "publisher": "Bloomberg",
+      "title": "Hungary Elects New President in Shift From Orban's Political Era",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-11/hungary-elects-new-president-in-shift-from-orban-s-political-era",
+      "published": "2026-08-11",
+      "usedFor": [
+        "political shift context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 5,
+    "basis": "Notable democratic transition.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Hungary.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "HU",
+            "coordinates": [
+              19,
+              47.2
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Parliament in Budapest.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Budapest",
+            "coordinates": [
+              19.04,
+              47.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Parliamentary vote result.",
+        "start": 7.5,
+        "animationId": "country-fill",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "HU",
+            "name": "Hungary"
+          }
+        }
+      }
+    ]
+  }
+}

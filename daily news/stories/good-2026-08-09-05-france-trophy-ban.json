@@ -1,0 +1,153 @@
+{
+  "eventId": "france-trophy-import-ban-2026-08-04",
+  "tone": "good",
+  "countryCode": "FR",
+  "countryName": "France",
+  "cityName": "Paris",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Wildlife \u00b7 Policy",
+  "headline": "France moves to end imports of hunting trophies from protected species",
+  "summary": "The government announced a total ban on importing trophies from endangered species, suspending all permit applications and closing one of Europe's biggest trophy markets.",
+  "script": "France has moved to end imports of hunting trophies from protected species. The government confirmed a total ban on trophies from endangered animals and suspended all import permits. France was one of Europe's largest markets for trophies.",
+  "source": "Humane World",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-09-good/france-trophy-ban/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-09-good/france-trophy-ban/secondary.jpg",
+  "imageAlt": "The French flag flying outside the National Assembly in Paris.",
+  "imageAltTwo": "A savanna elephant walking across open grassland in Africa.",
+  "imageCredit": "Getty Images",
+  "imageCreditTwo": "Getty Images",
+  "narrationAudio": "assets/narration/good-2026-08-09-05-france-trophy-ban.wav",
+  "captions": [
+    {
+      "lines": [
+        "France moves to end trophy",
+        "imports from protected species."
+      ],
+      "highlights": [
+        "end trophy imports"
+      ]
+    },
+    {
+      "lines": [
+        "Total ban, permits",
+        "suspended immediately."
+      ],
+      "highlights": [
+        "total ban"
+      ]
+    },
+    {
+      "lines": [
+        "Milestone for wildlife",
+        "conservation in Europe."
+      ],
+      "highlights": [
+        "milestone",
+        "conservation"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Humane World for Animals",
+      "title": "France commits to end imports of hunting trophies from threatened species",
+      "url": "https://www.humaneworld.org/en/news/france-commits-end-imports-hunting-from-threatened-species",
+      "published": "2026-08-04",
+      "usedFor": [
+        "total ban announced",
+        "import permits suspended",
+        "Europe's largest trophy market"
+      ]
+    },
+    {
+      "publisher": "Born Free",
+      "title": "France bans hunting trophy imports",
+      "url": "https://www.bornfree.org.uk/news/france-bans-hunting-trophy-imports/",
+      "published": "2026-08",
+      "usedFor": [
+        "immediate suspension corroboration",
+        "endangered species coverage"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Significant policy win closing a major trophy market; ranking is editorial, not an objective trend metric.",
+    "researchDate": "09 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the decision in France.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Humane World / 04 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "FR",
+            "coordinates": [
+              2.2,
+              46.6
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Paris where the policy was announced.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Humane World / 04 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Paris",
+            "coordinates": [
+              2.35,
+              48.85
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Updated engaging beat: multi-country-sweep",
+        "start": 9.5,
+        "animationId": "multi-country-sweep",
+        "mapSource": "Born Free / Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "FR",
+            "KE",
+            "TZ",
+            "ZA",
+            "NA"
+          ],
+          "target": {
+            "code": "FR",
+            "coordinates": [
+              2.35,
+              48.85
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

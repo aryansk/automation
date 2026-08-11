@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head></head>
+  <body>
+    <template>
+      <style>
+        #scene02-root { position:absolute; inset:0; overflow:hidden; background:#0e7189; color:#f2eee1; font-family:"IBM Plex Mono", monospace; }
+        #scene02-root .plate { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+        #scene02-root .blue-haze { position:absolute; inset:0; background:radial-gradient(circle at 30% 34%, rgba(242,238,225,.24), transparent 28%), linear-gradient(180deg, transparent 44%, rgba(7,27,42,.35)); opacity:.7; }
+        #scene02-root .caption { position:absolute; opacity:0; color:#514f4b; font-family:"EB Garamond", serif; font-size:74px; line-height:.84; font-style:italic; letter-spacing:-.04em; white-space:nowrap; }
+        #scene02-root .caption.yellow { color:#554b2a; }
+        #scene02-root .label { position:absolute; left:82px; top:172px; color:#41403d; font-size:22px; letter-spacing:4px; opacity:0; }
+        #scene02-root .annotation { position:absolute; left:186px; top:600px; width:320px; height:180px; border:6px solid #d96d58; border-radius:50%; opacity:0; }
+        #scene02-root .arrow { position:absolute; left:500px; top:824px; width:150px; height:6px; background:#d96d58; transform-origin:left center; opacity:0; }
+        #scene02-root .arrow::after { content:""; position:absolute; right:-3px; top:-14px; border-left:26px solid #d96d58; border-top:17px solid transparent; border-bottom:17px solid transparent; }
+        #scene02-root .bubble { position:absolute; width:18px; height:18px; border:3px solid #f2eee1; border-radius:50%; opacity:0; }
+      </style>
+      <div data-hf-id="hf-s5k9" id="scene02-root" data-composition-id="scene02" data-width="1080" data-height="1920" data-duration="6.5">
+        <img data-hf-id="hf-7nh5" id="scene02-art" class="plate" src="assets/illustrations/coral-reef.svg" alt="">
+        <div data-hf-id="hf-d1ys" id="scene02-haze" class="blue-haze"></div>
+        <div data-hf-id="hf-oci8" id="scene02-label" class="label">OCEAN PLATE / 02</div>
+        <div data-hf-id="hf-rw2a" id="scene02-caption-a" class="caption" style="left:86px;top:480px;">the ocean</div>
+        <div data-hf-id="hf-eqbl" id="scene02-caption-b" class="caption yellow" style="left:360px;top:585px;">remembers</div>
+        <div data-hf-id="hf-4ki9" id="scene02-annotation" class="annotation"></div>
+        <div data-hf-id="hf-1bzt" id="scene02-arrow" class="arrow"></div>
+        <div data-hf-id="hf-k021" id="scene02-bubble-a" class="bubble" style="left:740px;top:410px;"></div>
+        <div data-hf-id="hf-xj22" id="scene02-bubble-b" class="bubble" style="left:830px;top:526px;"></div>
+      </div>
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+        tl.fromTo("#scene02-art", { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: .7 }, 0);
+        tl.fromTo("#scene02-haze", { opacity: 0 }, { opacity: .72, duration: .8, ease: "sine.out" }, 0);
+        tl.fromTo("#scene02-label", { opacity: 0, x: -30 }, { opacity: .76, x: 0, duration: .46 }, .14);
+        tl.fromTo("#scene02-caption-a", { opacity: 0, x: -42, rotation: -4 }, { opacity: 1, x: 0, rotation: -2, duration: .5 }, .58);
+        tl.fromTo("#scene02-caption-b", { opacity: 0, x: 46, rotation: 5 }, { opacity: 1, x: 0, rotation: 2, duration: .56 }, 1.02);
+        tl.fromTo("#scene02-annotation", { opacity: 0, scale: .6, rotation: -9 }, { opacity: .9, scale: 1, rotation: -4, duration: .52 }, 1.58);
+        tl.fromTo("#scene02-arrow", { opacity: 0, scaleX: 0 }, { opacity: .9, scaleX: 1, duration: .44 }, 2.02);
+        tl.fromTo("#scene02-bubble-a, #scene02-bubble-b", { opacity: 0, y: 20, scale: .4 }, { opacity: .72, y: 0, scale: 1, duration: .46, stagger: .24, ease: "back.out(1.2)" }, 2.38);
+        tl.to("#scene02-art", { scale: 1.035, duration: 3.1, ease: "sine.inOut" }, 2.55);
+        tl.to("#scene02-caption-a, #scene02-caption-b", { y: 12, duration: 2.7, ease: "sine.inOut" }, 2.55);
+        window.__timelines["scene02"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

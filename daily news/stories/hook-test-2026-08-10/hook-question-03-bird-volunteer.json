@@ -1,0 +1,59 @@
+{
+  "eventId": "longest-serving-bird-volunteer-2026-08-09",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Wildlife · Conservation",
+  "headline": "Longest-serving volunteer helps boost bird numbers",
+  "summary": "A charity's longest-serving volunteer is helping species recovery, showing how conservation gains can be built through decades of local work.",
+  "script": "A charity's longest-serving volunteer is helping increase bird numbers, turning decades of local knowledge into conservation work. The charity says his long service has helped support species recovery over time.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [0.7, 52.2],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/question-03-bird-volunteer/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/question-03-bird-volunteer/secondary.jpg",
+  "imageAlt": "A bird used to illustrate a long-running volunteer-led conservation effort.",
+  "imageAltTwo": "A second bird image connected to species recovery work.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/question-03-bird-volunteer.wav",
+  "openingStyle": "question-contrast",
+  "openingText": "Can one volunteer change bird numbers",
+  "openingSub": "QUESTION / CONTRAST · One story · 10 Aug 2026",
+  "captions": [
+    { "lines": ["Can one volunteer", "change bird numbers?"], "highlights": ["one volunteer"] },
+    { "lines": ["Decades of local", "knowledge add up."], "highlights": ["Decades"] },
+    { "lines": ["Long service supports", "species recovery."], "highlights": ["species recovery"] }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Longest serving volunteer helps boost bird numbers",
+      "url": "https://www.bbc.co.uk/news/articles/cewr8y8e55vo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-09",
+      "usedFor": ["volunteer story", "bird-number recovery", "long-service claim"]
+    },
+    {
+      "publisher": "RSPB",
+      "title": "Bird conservation context",
+      "url": "https://www.rspb.org.uk/",
+      "published": "2026-08-10",
+      "usedFor": ["bird conservation context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "The question-versus-outcome contrast gives a hopeful conservation story a clear testable hook; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

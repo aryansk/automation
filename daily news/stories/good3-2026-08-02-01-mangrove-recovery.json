@@ -1,0 +1,50 @@
+{
+  "countryCode": "KE",
+  "countryName": "Kenya",
+  "cityName": "Lamu",
+  "coordinates": [40.902, -2.27],
+  "region": "Africa · Global",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Environment · Recovery",
+  "headline": "Mangrove forests are making a comeback as restoration gains rise",
+  "summary": "A global satellite study found mangrove losses slowing and gains increasing, while projects in Kenya, Costa Rica, Benin and Viet Nam restore coastlines.",
+  "script": "Restored mangroves can reduce coastal flooding, protect fish nurseries, and store carbon. UNEP says satellite data show global losses slowing while gains rise, with projects in Kenya, Costa Rica, Benin, and Viet Nam. Healthier shorelines give coastal communities more natural protection.",
+  "source": "UNEP · Science",
+  "edition": "02 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-02-good/mangrove-restoration-editorial.png",
+  "imageTwo": "assets/news-images/2026-08-02-good/mangrove-restoration-editorial-detail.png",
+  "imageAlt": "Editorial illustration of community mangrove restoration at sunrise.",
+  "imageAltTwo": "Editorial crop of community volunteers working among mangrove roots.",
+  "imageCredit": "Editorial illustration · AI-generated",
+  "imageCreditTwo": "Editorial illustration · AI-generated",
+  "narrationAudio": "assets/narration/tour/good3-2026-08-02-01-mangrove-recovery.wav",
+  "routeLabel": "Kenya → Costa Rica → Benin → Viet Nam",
+  "mentionedCountryCodes": ["CR", "BJ", "VN"],
+  "routePoints": [
+    { "label": "Kenya", "coordinates": [40.902, -2.27] },
+    { "label": "Costa Rica", "coordinates": [-83.5, 8.5] },
+    { "label": "Benin", "coordinates": [2.3, 6.4] },
+    { "label": "Viet Nam", "coordinates": [105.8, 16.5] }
+  ],
+  "captions": [
+    {
+      "lines": ["Mangrove forests are showing", "a rare global recovery."],
+      "highlights": ["Mangrove forests", "global recovery"]
+    },
+    {
+      "lines": ["Losses are slowing and gains are rising", "across the world's coastlines."],
+      "highlights": ["Losses are slowing", "gains are rising"]
+    },
+    {
+      "lines": ["Kenya, Costa Rica, Benin and Viet Nam", "are restoring mangroves."],
+      "highlights": ["Kenya", "Costa Rica", "Benin", "Viet Nam"]
+    },
+    {
+      "lines": ["Community-led conservation", "is helping nature return."],
+      "highlights": ["Community-led conservation"]
+    }
+  ],
+  "focusZoom": 14.6
+}

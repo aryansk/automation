@@ -1,0 +1,162 @@
+{
+  "eventId": "wales-tidal-lagoon-2026-08-11",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Swansea",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Energy · Infrastructure",
+  "headline": "Wales approves first tidal lagoon to power 150,000 homes",
+  "summary": "The Swansea Bay scheme will be the world's first large tidal lagoon, delivering predictable clean power and creating hundreds of jobs in South Wales.",
+  "script": "Wales has approved the world's first large tidal lagoon. The Swansea Bay scheme will power one hundred and fifty thousand homes. It will bring predictable clean power and hundreds of jobs.",
+  "source": "BBC News",
+  "edition": "11 Aug 2026",
+  "storyNumber": "04",
+  "imageOne": "assets/news-images/2026-08-11-good/wales-tidal/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-11-good/wales-tidal/secondary.jpg",
+  "imageAlt": "Panoramic aerial view of Swansea Bay where the tidal lagoon will be built.",
+  "imageAltTwo": "Aberavon Beach view toward Swansea Bay — the South Wales coast for the tidal lagoon.",
+  "imageCredit": "Wikimedia Commons (CC BY-SA 3.0)",
+  "imageCreditTwo": "Wikimedia Commons (CC BY-SA 4.0)",
+  "narrationAudio": "assets/narration/good-2026-08-11-04-wales-tidal.wav",
+  "captions": [
+    {
+      "lines": [
+        "Wales approves world's",
+        "first tidal lagoon."
+      ],
+      "highlights": [
+        "first tidal lagoon"
+      ]
+    },
+    {
+      "lines": [
+        "Power for 150,000",
+        "homes in Swansea Bay."
+      ],
+      "highlights": [
+        "150,000 homes"
+      ]
+    },
+    {
+      "lines": [
+        "Clean power and",
+        "hundreds of jobs."
+      ],
+      "highlights": [
+        "hundreds of jobs"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Wales approves Swansea tidal lagoon",
+      "url": "https://www.bbc.com/news/uk-wales-tidal-lagoon-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "approval",
+        "150,000 homes"
+      ]
+    },
+    {
+      "publisher": "The Guardian",
+      "title": "Swansea tidal lagoon gets go-ahead",
+      "url": "https://www.theguardian.com/environment/2026/aug/11/wales-tidal-lagoon-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "world first"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Infrastructure first.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in UK.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "GB",
+            "coordinates": [
+              -3.4,
+              55.3
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Swansea.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Swansea",
+            "coordinates": [
+              -3.94,
+              51.62
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Sweep UK context.",
+        "start": 9.5,
+        "animationId": "proportional-bubbles",
+        "mapSource": "The Guardian / 11 Aug 2026",
+        "mapData": {
+          "points": [
+            {
+              "name": "Swansea",
+              "coordinates": [
+                -3.94,
+                51.62
+              ],
+              "value": 150
+            },
+            {
+              "name": "Cardiff",
+              "coordinates": [
+                -3.18,
+                51.48
+              ],
+              "value": 85
+            },
+            {
+              "name": "London",
+              "coordinates": [
+                -0.12,
+                51.5
+              ],
+              "value": 45
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

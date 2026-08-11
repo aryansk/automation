@@ -1,0 +1,89 @@
+{
+  "eventId": "congo-copper-cobalt-export-ban-2026-08-06",
+  "tone": "bad",
+  "countryCode": "CD",
+  "countryName": "DR Congo",
+  "cityName": "",
+  "region": "Africa",
+  "urgency": "breaking",
+  "storyType": "editorial",
+  "kicker": "Economy · Mining",
+  "headline": "Congo bans exports of copper and cobalt concentrates",
+  "summary": "A government order reviewed by Reuters blocks concentrate exports to force domestic processing, shaking global battery-metal supply chains.",
+  "script": "The Democratic Republic of Congo has banned exports of copper and cobalt concentrate. The government order aims to force more domestic processing of the battery metals. The move is shaking global supply chains, with copper prices moving on the news.",
+  "source": "Reuters",
+  "edition": "06 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-06-bad/congo-minerals/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-06-bad/congo-minerals/secondary.jpg",
+  "imageAlt": "An aerial view of a large open-pit copper and cobalt mine in DR Congo.",
+  "imageAltTwo": "Heavy trucks haul ore on terraced levels of an open-pit mine.",
+  "imageCredit": "Reuters",
+  "imageCreditTwo": "Reuters",
+  "narrationAudio": "assets/narration/bad8-2026-08-06-02-congo-minerals.wav",
+  "captions": [
+    {
+      "lines": [
+        "Congo bans copper and",
+        "cobalt concentrate exports."
+      ],
+      "highlights": [
+        "Congo bans",
+        "concentrate exports"
+      ]
+    },
+    {
+      "lines": [
+        "Push to process",
+        "metals at home."
+      ],
+      "highlights": [
+        "process at home"
+      ]
+    },
+    {
+      "lines": [
+        "Battery-metal supply",
+        "chains affected."
+      ],
+      "highlights": [
+        "battery-metal supply chains"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "EXCLUSIVE: Congo bans copper and cobalt concentrates exports",
+      "url": "https://www.reuters.com/world/africa/congo-bans-exports-copper-cobalt-concentrates-official-order-says-2026-08-06/",
+      "published": "2026-08-06",
+      "usedFor": [
+        "export ban order",
+        "domestic processing drive",
+        "supply-chain impact"
+      ]
+    },
+    {
+      "publisher": "Mining Weekly",
+      "title": "Congo bans exports of copper, cobalt concentrates, official order says",
+      "url": "https://www.miningweekly.com/article/congo-bans-exports-of-copper-cobalt-concentrates-official-order-says-2026-08-06",
+      "published": "2026-08-06",
+      "usedFor": [
+        "independent corroboration",
+        "mining industry context",
+        "primary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Major supply-side shock for critical battery metals; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

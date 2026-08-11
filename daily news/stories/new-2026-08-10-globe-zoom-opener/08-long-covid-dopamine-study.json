@@ -1,0 +1,62 @@
+{
+  "eventId": "long-covid-dopamine-brain-signal-2026-08-10",
+  "tone": "bad",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "New York",
+  "coordinates": [
+    -74.006,
+    40.7128
+  ],
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Health · Research",
+  "headline": "Study links long COVID to lower dopamine-related brain signal",
+  "summary": "Brain scans found lower VMAT2 binding in people with long COVID, alongside links to apathy, slowed movement and memory decline.",
+  "script": "A brain-imaging study found lower dopamine-related signal in people with long COVID. It also linked the finding to apathy, slowed movement and memory problems—but researchers say it is not proof of permanent damage.",
+  "source": "PubMed",
+  "edition": "10 Aug 2026",
+  "storyNumber": "08",
+  "imageOne": "assets/stories/2026-08-10/long-covid-dopamine/primary.png",
+  "imageTwo": "assets/stories/2026-08-10/long-covid-dopamine/secondary.jpg",
+  "imageAlt": "A research brain-imaging figure used as illustrative context for long-COVID neuroscience.",
+  "imageAltTwo": "A brain scan figure from related long-COVID research, used as illustrative context.",
+  "imageCredit": "Scientific Reports",
+  "imageCreditTwo": "PMC / Diagnostics",
+  "narrationAudio": "assets/narration/new-2026-08-10/long-covid-dopamine-study.wav",
+  "sources": [
+    {
+      "publisher": "PubMed",
+      "title": "Long COVID and dopamine-related nerve-terminal integrity",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42431745/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "24-person matched study",
+        "lower VMAT2 binding",
+        "symptom correlations"
+      ]
+    },
+    {
+      "publisher": "Scientific Reports",
+      "title": "Impaired brain intrinsic connectivity in long COVID",
+      "url": "https://www.nature.com/articles/s41598-026-36986-1",
+      "published": "2026-08-10",
+      "usedFor": [
+        "illustrative brain-imaging context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 8,
+    "basis": "A timely health finding with careful uncertainty language and a strong brain-scan visual; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

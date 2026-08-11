@@ -1,0 +1,142 @@
+{
+  "eventId": "egypt-ismailia-workers-crash-2026-08-11",
+  "tone": "bad",
+  "countryCode": "EG",
+  "countryName": "Egypt",
+  "cityName": "Ismailia",
+  "region": "Middle East",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Accident · Road safety",
+  "headline": "Pickup truck crash in Egypt's Ismailia kills 15 workers, injures 32",
+  "summary": "A truck carrying workers rolled over on a road in Ismailia Governorate, with ambulances rushing the injured to hospital, the health ministry said.",
+  "script": "Fifteen workers have died in a truck crash in Egypt. The pickup rolled over in Ismailia Governorate, injuring thirty two more. Health teams rushed the wounded to hospital.",
+  "source": "Reuters",
+  "edition": "11 Aug 2026",
+  "storyNumber": "04",
+  "imageOne": "assets/news-images/2026-08-12-bad/egypt-ismailia-crash/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-12-bad/egypt-ismailia-crash/secondary.jpg",
+  "imageAlt": "Emergency responders at the scene of a road accident in Egypt.",
+  "imageAltTwo": "Road in Ismailia Governorate where the crash occurred.",
+  "imageCredit": "AP / Reuters",
+  "imageCreditTwo": "Ahram Online",
+  "narrationAudio": "assets/narration/bad-04-egypt-crash.wav",
+  "captions": [
+    {
+      "lines": [
+        "15 workers die",
+        "in Egypt crash."
+      ],
+      "highlights": [
+        "15 workers"
+      ]
+    },
+    {
+      "lines": [
+        "Truck rolls over",
+        "in Ismailia."
+      ],
+      "highlights": [
+        "rolls over"
+      ]
+    },
+    {
+      "lines": [
+        "32 injured",
+        "rushed to hospital."
+      ],
+      "highlights": [
+        "32 injured"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Pickup truck accident in Egypt's Ismailia leaves 15 dead, health ministry says",
+      "url": "https://www.reuters.com/world/middle-east/pickup-truck-accident-egypts-ismailia-leaves-15-dead-health-ministry-says-2026-08-11/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "15 dead",
+        "32 injured",
+        "workers"
+      ]
+    },
+    {
+      "publisher": "Ahram Online",
+      "title": "15 killed, 32 injured as pickup carrying workers overturns in Ismailia",
+      "url": "https://english.ahram.org.eg/News/574404.aspx",
+      "published": "2026-08-11",
+      "usedFor": [
+        "location",
+        "health ministry"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 4,
+    "basis": "Deadly road disaster.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Egypt.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "EG",
+            "coordinates": [
+              30,
+              26.8
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Crash site in Ismailia Governorate.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Ismailia",
+            "coordinates": [
+              32.26,
+              30.6
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Crash impact at the site.",
+        "start": 9.5,
+        "animationId": "country-fill",
+        "mapSource": "Ahram Online / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "EG",
+            "name": "Egypt"
+          }
+        }
+      }
+    ]
+  }
+}

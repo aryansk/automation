@@ -1,0 +1,65 @@
+In June 2026, China did something small that changed a very big market.
+
+It added two American companies to its export-control list: MP Materials and USA Rare Earth.
+
+Those two names matter because they are the centre of America's plan to build a rare-earth supply chain outside China. By naming them, Beijing was not banning anything outright. It was showing exactly where the leverage sits.
+
+This is the question we are going to unpack: why can a small set of chokepoints affect cars, chips, and even defence?
+
+The short answer is that the world's rare-earth supply runs through a gate — and one country holds the keys.
+
+Start with the materials themselves.
+
+Rare earths are a family of seventeen elements you have probably never heard of, but they are inside almost everything electric: the magnets in electric-vehicle motors, the turbines in wind farms, the guidance systems in defence hardware, the vibration motor in your phone.
+
+They are called rare, but they are not actually scarce in the ground. The leverage is not in the mining. It is in the processing.
+
+Here is the number that matters. China mines a large share of the world's rare earths — around seventy percent. But it processes an even bigger share: roughly ninety percent of global separation capacity, and close to ninety-nine percent of the heavy rare earths used in the most demanding magnets.
+
+So when a country exports raw ore and imports refined magnets, it has already passed through one gate. That gate is Chinese separation capacity.
+
+This is the definition we need: a chokepoint is not the mine. It is the gate after the mine — the refinery, the separator, the magnet maker — where a handful of facilities concentrate world supply.
+
+Think of the chain as four steps.
+
+First, the mine: ore comes out of the ground in California, Australia, Myanmar, and elsewhere.
+
+Second, the refinery: that ore is crushed, separated, and turned into individual oxides. This is the hard, dirty, capital-intensive step, and it is where China holds its position.
+
+Third, the magnet: the oxides become the permanent magnets inside motors and generators.
+
+Fourth, the factory: those magnets go into cars, wind turbines, robots, and weapons.
+
+Each step passes value to the next. And at step two, most of the world's ore stops for processing.
+
+Here is what that concentration looks like in prices.
+
+Neodymium-praseodymium oxide — the key feedstock for permanent magnets — opened 2026 near fifty-three dollars a kilogram. By July, spot quotes were above one hundred and ten dollars.
+
+China's Rare Earth Price Index reached 270.5 on 24 July 2026 — about one hundred and seventy percent above its 2010 baseline. Prices stopped being a market story and became a policy story.
+
+That is why markets care. The sectors that depend on these magnets are enormous. The International Energy Agency has pointed to the huge value of output that is directly exposed to magnet supply — on the order of six and a half trillion dollars.
+
+A shock at the chokepoint does not stay in the mining sector. It ripples into electric vehicles, into wind energy, into the cost of the energy transition, and into defence procurement.
+
+So what is the West doing about it?
+
+In February 2026, the United States launched FORGE, a fifty-four-nation alliance, backed by Project Vault, a twelve-billion-dollar fund, to rebuild critical-minerals supply chains outside China. MP Materials has a partnership with the Department of Defense to build domestic magnet production.
+
+That is the plan. Here is the honest uncertainty.
+
+Rebuilding separation capacity is not like reopening a mine. It takes years — analysts say a realistic timeline for meaningful Western separation runs to the end of the decade, and full independence could take twenty to thirty years. The infrastructure, the chemistry, and the skilled labour all have to be built from a small base.
+
+So the race is not against a deadline. It is against a gate that already exists.
+
+The signal to watch is not the headline price. It is the behaviour underneath it.
+
+Watch whether new separation plants outside China actually come online. Watch whether Western automakers and defence buyers sign long-term magnet contracts at higher prices, or keep buying spot. Watch whether the entity list grows — from ten American firms in June to fourteen European firms in July — because that tells you the chokepoint is being used deliberately.
+
+The mine was never the story. The gate was always the story.
+
+One country, a small set of facilities, and a seventeen-element family of metals that the modern economy cannot build without.
+
+That is the leverage. And in 2026, it has a price tag.
+
+The question for the next phase of the global economy is not whether rare earths matter. It is whether the world can build a second gate before the first one closes.

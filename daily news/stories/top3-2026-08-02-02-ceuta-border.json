@@ -7,9 +7,9 @@
   "urgency": "breaking",
   "storyType": "breaking",
   "kicker": "Migration · Border",
-  "headline": "Ceuta border crisis leaves 67 dead as most migrants return",
+  "headline": "Spain says most Ceuta arrivals returned; at least 67 died",
   "summary": "Spain says about 60,000 people crossed from Morocco, most have returned, and a sea barrier is being installed after deadly attempts to enter the enclave.",
-  "script": "Spain says most of roughly sixty thousand migrants who crossed into Ceuta from Morocco have returned. At least sixty-seven died in the surge, and a new sea barrier is being installed as European governments plan a coordinated response.",
+  "script": "Ceuta's crossing shows how a border emergency becomes a humanitarian crisis. Spain says about sixty thousand people arrived from Morocco, most have returned, and at least sixty-seven died. A sea barrier may slow crossings, but it cannot address why people take risks.",
   "source": "AP · Al Jazeera",
   "edition": "02 Aug 2026",
   "storyNumber": "02",
@@ -17,6 +17,24 @@
   "imageTwo": "assets/news-images/2026-08-02/ceuta-border-aljazeera.jpg",
   "imageAlt": "Spanish soldiers assist a migrant on a beach in Ceuta.",
   "imageCredit": "AP Photo / Antonio Sempere",
+  "imageCreditTwo": "Adri Salido / Getty Images",
+  "locatorInset": true,
+  "routeLabel": "Spain ↔ Morocco",
+  "mentionedCountryCodes": ["MA"],
+  "captions": [
+    {
+      "lines": ["Spain says roughly 60,000 migrants", "crossed into Ceuta from Morocco."],
+      "highlights": ["Spain says", "60,000 migrants", "Ceuta"]
+    },
+    {
+      "lines": ["Most have returned. At least 67 died", "in the surge."],
+      "highlights": ["67 died"]
+    },
+    {
+      "lines": ["A new sea barrier is being installed", "as governments plan a response."],
+      "highlights": ["sea barrier"]
+    }
+  ],
   "focusZoom": 14.2,
   "narrationAudio": "assets/narration/tour/top3-2026-08-02-02-ceuta-border.wav"
 }

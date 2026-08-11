@@ -1,0 +1,135 @@
+{
+  "eventId": "uk-railcard-extension-18-year-olds-2026-08-03",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "",
+  "coordinates": [
+    -1.5,
+    52.5
+  ],
+  "region": "Western Europe",
+  "urgency": "current",
+  "storyType": "product",
+  "kicker": "Money · Transport",
+  "headline": "Half-price rail travel extended to 18-year-olds",
+  "summary": "From 17 August, eligible teenagers can buy the 16-17 Saver for a full year after purchase, keeping its 50% discount on most train fares into adulthood.",
+  "script": "Eighteen-year-olds in Britain will soon qualify for a full year of half-price rail travel through the 16-17 Saver. From 17 August, eligible teenagers can buy it until the day before turning 18, extending the benefit into their first year as adults.",
+  "source": "BBC · Railcard",
+  "edition": "04 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-04-good/railcard/train.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-good/railcard/railcard.jpg",
+  "imageAlt": "A young passenger listens to music on a British train.",
+  "imageAltTwo": "A young traveller smiles on the official 16-17 Saver website hero image.",
+  "imageCredit": "Getty Images via BBC News",
+  "imageCreditTwo": "16-17 Saver / Rail Delivery Group",
+  "narrationAudio": "assets/narration/tour/good5-2026-08-04-02-railcard-extension.wav",
+  "captions": [
+    {
+      "lines": [
+        "Half-price rail travel",
+        "extended to 18-year-olds."
+      ],
+      "highlights": [
+        "Half-price",
+        "18-year-olds"
+      ]
+    },
+    {
+      "lines": [
+        "50% off most",
+        "train fares."
+      ],
+      "highlights": [
+        "50% off",
+        "train fares"
+      ]
+    },
+    {
+      "lines": [
+        "Change begins",
+        "17 August."
+      ],
+      "highlights": [
+        "17 August"
+      ]
+    }
+  ],
+  "mentionedCountryCodes": [
+    "GB"
+  ],
+  "affectedCountryCodes": [
+    "GB"
+  ],
+  "locatorInset": false,
+  "focusZoom": 14.2,
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Half-price rail travel extended to 18-year-olds",
+      "url": "https://www.bbc.co.uk/news/articles/cy0jyln07r7o",
+      "published": "2026-08-03T23:34:13.044Z",
+      "usedFor": [
+        "17 August start date",
+        "eligibility change",
+        "£35 price",
+        "50% discount"
+      ]
+    },
+    {
+      "publisher": "16-17 Saver / Rail Delivery Group",
+      "title": "16-17 Saver: half price travel",
+      "url": "https://www.16-17saver.co.uk/",
+      "published": "2026",
+      "usedFor": [
+        "product terms",
+        "50% discount",
+        "one-year validity"
+      ]
+    },
+    {
+      "publisher": "National Rail",
+      "title": "National Railcards",
+      "url": "https://www.nationalrail.co.uk/railcards/national-railcards/",
+      "published": "2026",
+      "usedFor": [
+        "official railcard system context"
+      ]
+    }
+  ],
+  "imageSources": [
+    {
+      "articleUrl": "https://www.bbc.co.uk/news/articles/cy0jyln07r7o",
+      "assetUrl": "https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/c6b7/live/f96ea650-8f50-11f1-99e6-95543b07d23d.jpg",
+      "localPath": "assets/news-images/2026-08-04-good/railcard/train.jpg",
+      "caption": "A teenage girl sitting on a train listening to headphones.",
+      "credit": "Getty Images",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized source-image workflow; publisher rights were not independently cleared."
+    },
+    {
+      "articleUrl": "https://www.16-17saver.co.uk/",
+      "assetUrl": "https://www.16-17saver.co.uk/clientfiles/images/hero_images/16-17-RC-image-Dec-25.jpg",
+      "localPath": "assets/news-images/2026-08-04-good/railcard/railcard.jpg",
+      "caption": "Official 16-17 Saver website hero image.",
+      "credit": "16-17 Saver / Rail Delivery Group",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized first-party source-image workflow; reuse terms were not independently cleared."
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Fresh BBC Business top-story coverage with a clear nationwide consumer benefit; editorial rank reflects recency, prominence and constructive audience interest, not a platform-wide trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "assetLicense": "BBC and first-party Railcard source images used under the authorized newsroom workflow.",
+    "assetCredit": "Getty Images via BBC News; 16-17 Saver / Rail Delivery Group.",
+    "commercialEditorialRightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

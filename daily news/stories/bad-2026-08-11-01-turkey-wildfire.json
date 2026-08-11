@@ -1,0 +1,157 @@
+{
+  "eventId": "turkey-antalya-wildfire-2026-08-11",
+  "tone": "bad",
+  "countryCode": "TR",
+  "countryName": "Turkey",
+  "cityName": "Antalya",
+  "region": "Middle East",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Wildfire · Heat",
+  "headline": "Wildfires force 2,000 to flee as heat hits Turkey's south coast",
+  "summary": "Fires near Antalya forced evacuations and closed highways as temperatures hit 43 degrees, with crews battling winds and low humidity.",
+  "script": "Wildfires are forcing two thousand people to flee Turkey's south coast. Fires near Antalya closed highways as temperatures hit forty-three degrees. Crews are battling strong winds and low humidity.",
+  "source": "Reuters",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-11-bad/turkey-wildfire/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-11-bad/turkey-wildfire/secondary.jpg",
+  "imageAlt": "Wildfire burning hills with smoke over the coast — wildfire evacuation imagery.",
+  "imageAltTwo": "Fire response at a wildfire-affected landscape.",
+  "imageCredit": "The Canadian Press via AP",
+  "imageCreditTwo": "The Canadian Press via AP",
+  "narrationAudio": "assets/narration/bad-2026-08-11-01-turkey-wildfire.wav",
+  "captions": [
+    {
+      "lines": [
+        "Wildfires force 2,000",
+        "to flee in Turkey."
+      ],
+      "highlights": [
+        "2,000 to flee"
+      ]
+    },
+    {
+      "lines": [
+        "Antalya fires close",
+        "highways in 43C heat."
+      ],
+      "highlights": [
+        "43C heat"
+      ]
+    },
+    {
+      "lines": [
+        "Crews battle winds",
+        "and low humidity."
+      ],
+      "highlights": [
+        "battle winds"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Turkey wildfires force evacuations near Antalya",
+      "url": "https://www.reuters.com/world/turkey-wildfires-antalya-2026-08-11/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "evacuations",
+        "43C"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Wildfires in southern Turkey",
+      "url": "https://apnews.com/article/turkey-wildfires-antalya-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "highway closures"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Large evacuation.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Turkey.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "TR",
+            "coordinates": [
+              35.2,
+              39
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Antalya.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Antalya",
+            "coordinates": [
+              30.71,
+              36.89
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show fire spread.",
+        "start": 9.5,
+        "animationId": "wildfire-spread",
+        "mapSource": "AP News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Antalya",
+            "coordinates": [
+              30.71,
+              36.89
+            ]
+          },
+          "stages": [
+            {
+              "label": "06:00",
+              "radiusKm": 18
+            },
+            {
+              "label": "12:00",
+              "radiusKm": 34
+            },
+            {
+              "label": "18:00",
+              "radiusKm": 52
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

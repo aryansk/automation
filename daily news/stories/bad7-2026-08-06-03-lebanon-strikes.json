@@ -1,0 +1,90 @@
+{
+  "eventId": "israel-lebanon-strikes-soldiers-killed-2026-08-06",
+  "tone": "bad",
+  "countryCode": "LB",
+  "countryName": "Lebanon",
+  "cityName": "Tibnin",
+  "region": "Middle East",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Strikes",
+  "headline": "Israel strikes south Lebanon after two soldiers killed",
+  "summary": "Two Israeli soldiers died in an explosion during a sweep; retaliatory strikes hit Tibnin, killing one person and wounding 12, as Rome talks continued.",
+  "script": "Israel has carried out strikes on southern Lebanon after two of its soldiers were killed by an explosion. Lebanese authorities say at least one person died in the strikes, which came as the two countries held talks in Rome.",
+  "source": "Reuters · BBC",
+  "edition": "06 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-06-bad/lebanon-strikes/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-06-bad/lebanon-strikes/secondary.jpg",
+  "imageAlt": "The aftermath of an Israeli strike in southern Lebanon shows a cratered, debris-covered field.",
+  "imageAltTwo": "Smoke rises over a hillside village in southern Lebanon after Israeli strikes.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/bad7-2026-08-06-03-lebanon-strikes.wav",
+  "captions": [
+    {
+      "lines": [
+        "Israel strikes",
+        "southern Lebanon."
+      ],
+      "highlights": [
+        "Israel strikes",
+        "Lebanon"
+      ]
+    },
+    {
+      "lines": [
+        "Two soldiers killed",
+        "in an explosion."
+      ],
+      "highlights": [
+        "two soldiers killed"
+      ]
+    },
+    {
+      "lines": [
+        "Rome talks",
+        "continue."
+      ],
+      "highlights": [
+        "Rome talks"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Israel strikes south Lebanon after soldiers killed, talks continue in Rome",
+      "url": "https://www.reuters.com/world/middle-east/two-israeli-soldiers-killed-southern-lebanon-israeli-military-says-2026-08-06/",
+      "published": "2026-08-06",
+      "usedFor": [
+        "two soldiers killed by explosion",
+        "retaliatory strikes",
+        "Tibnin casualty figures",
+        "Rome talks"
+      ]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Israel strikes south Lebanon after two soldiers killed by explosion",
+      "url": "https://www.bbc.co.uk/news/articles/c998711dyjvo",
+      "published": "2026-08-06",
+      "usedFor": [
+        "independent corroboration",
+        "strike details",
+        "primary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Significant flare-up in a fragile ceasefire with diplomatic talks ongoing; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

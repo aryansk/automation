@@ -1,0 +1,159 @@
+{
+  "eventId": "romania-danube-nuclear-barges-2026-08-06",
+  "tone": "bad",
+  "countryCode": "RO",
+  "countryName": "Romania",
+  "cityName": "Cernavoda",
+  "region": "Europe",
+  "urgency": "breaking",
+  "storyType": "weather",
+  "kicker": "Climate · Energy",
+  "headline": "Romania sinks barges in Danube to keep nuclear plant running",
+  "summary": "Record-low river levels forced the military to blast rock and sink four barges to redirect water to the Cernavoda nuclear plant before a second reactor shutdown.",
+  "script": "Romania's military sank four barges in the Danube to keep its nuclear plant running. Record low water levels have already forced one reactor offline, and engineers raced to redirect the shrinking river to save the second.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-07-bad/romania-danube/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-bad/romania-danube/secondary.jpg",
+  "imageAlt": "A dredger ship operates on the Danube River after a controlled demolition of submerged rocks.",
+  "imageAltTwo": "A woman pauses while walking through a water mist machine during extreme heat in Bucharest.",
+  "imageCredit": "AP Photo/Vadim Ghirda",
+  "imageCreditTwo": "AP Photo/Vadim Ghirda",
+  "narrationAudio": "assets/narration/bad10-2026-08-07-01-romania-danube.wav",
+  "captions": [
+    {
+      "lines": [
+        "Military sinks 4 barges",
+        "in the Danube."
+      ],
+      "highlights": [
+        "sinks 4 barges"
+      ]
+    },
+    {
+      "lines": [
+        "Record-low water levels",
+        "threaten nuclear plant."
+      ],
+      "highlights": [
+        "record-low water levels"
+      ]
+    },
+    {
+      "lines": [
+        "One reactor already",
+        "forced offline."
+      ],
+      "highlights": [
+        "one reactor offline"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Romania rushes to sink 4 barges in the Danube to keep a nuclear power plant's second reactor running",
+      "url": "https://apnews.com/article/romania-europe-nuclear-danube-drought-1ddb89604f06026c938363d57da53071",
+      "published": "2026-08-06",
+      "usedFor": [
+        "barges sunk",
+        "reactor shutdown threat",
+        "record-low river levels",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Record low Danube levels push some countries in Eastern Europe to the brink of energy emergency",
+      "url": "https://apnews.com/article/danube-drought-energy-crisis-hungary-romania-serbia-229e089c30821889548354d7da289084",
+      "published": "2026-08-06",
+      "usedFor": [
+        "regional drought context",
+        "energy emergency framing"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Climate-driven energy emergency with regional implications; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the story in Romania.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "RO",
+            "coordinates": [
+              25,
+              45.9
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Cernavoda, where the nuclear plant sits on the Danube.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Cernavoda",
+            "coordinates": [
+              27.908,
+              44.345
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the Danube's low-flow path toward the plant.",
+        "start": 9.5,
+        "animationId": "great-circle-route",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "route": [
+            {
+              "name": "Bala Canal",
+              "country": "Romania",
+              "code": "RO",
+              "coordinates": [
+                27.2,
+                44.3
+              ]
+            },
+            {
+              "name": "Cernavoda",
+              "country": "Romania",
+              "code": "RO",
+              "coordinates": [
+                27.908,
+                44.345
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

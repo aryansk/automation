@@ -1,0 +1,146 @@
+{
+  "eventId": "kenya-amboseli-elephants-cyanide-2026-08-07",
+  "tone": "bad",
+  "countryCode": "KE",
+  "countryName": "Kenya",
+  "cityName": "Kimana",
+  "region": "East Africa",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Nature · Wildlife",
+  "headline": "16 elephants die from suspected cyanide near Kenya's Amboseli park",
+  "summary": "The animals died over a month after eating tomatoes from farms, with tests detecting cyanide; the deaths spotlight rising human-wildlife conflict.",
+  "script": "Sixteen elephants have died in Kenya's Amboseli region in a suspected poisoning. Wildlife officials found tomatoes in their stomachs and tests detected cyanide. The deaths renew concern over conflict as farms spread closer to the park.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-07-bad/kenya-elephants/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-bad/kenya-elephants/secondary.jpg",
+  "imageAlt": "Farmers spray pesticides at a tomato farm on the outskirts of Amboseli National Park in Kenya.",
+  "imageAltTwo": "A herd of elephants walks across Amboseli National Park in Kajiado County, Kenya.",
+  "imageCredit": "AP Photo/Andrew Kasuku",
+  "imageCreditTwo": "AP Photo/Andrew Kasuku",
+  "narrationAudio": "assets/narration/bad11-2026-08-07-02-kenya-elephants.wav",
+  "captions": [
+    {
+      "lines": [
+        "16 elephants die",
+        "in suspected poisoning."
+      ],
+      "highlights": [
+        "16 elephants die"
+      ]
+    },
+    {
+      "lines": [
+        "Cyanide detected",
+        "in initial tests."
+      ],
+      "highlights": [
+        "cyanide detected"
+      ]
+    },
+    {
+      "lines": [
+        "Farmland creeps closer",
+        "to Amboseli park."
+      ],
+      "highlights": [
+        "farmland creeps closer"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Farmers in Kenya dispute that cyanide poisoning could have killed 16 elephants",
+      "url": "https://apnews.com/article/kenya-amboseli-elephants-dead-cyanide-farms-0b2af9a859cf4bb6d0d60413dceb1026",
+      "published": "2026-08-07",
+      "usedFor": [
+        "16 elephants",
+        "cyanide detection",
+        "tomatoes in stomachs",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Kenya's Amboseli elephant poisoning: 15 elephants die in one month",
+      "url": "https://apnews.com/article/kenya-elephants-poisoning-cyanide-16472f80a3b345db6d476fc3bf4ef57b",
+      "published": "2026-07",
+      "usedFor": [
+        "context on the deaths",
+        "Kenya elephant population recovery"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Wildlife conservation setback with regional implications; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the story in Kenya.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "KE",
+            "coordinates": [
+              37.9,
+              -0.1
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on the Amboseli ecosystem.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Amboseli",
+            "coordinates": [
+              37.25,
+              -2.65
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show Kenya's elephant recovery and the conflict zones.",
+        "start": 9.5,
+        "animationId": "spotlight-dim",
+        "mapSource": "AP News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "KE",
+            "coordinates": [
+              37.25,
+              -2.65
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

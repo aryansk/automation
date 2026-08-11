@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "last_scan_at": "2026-08-11T10:18:09Z",
+  "last_scan_mode": "delta",
+  "last_scan_prs": [
+    "https://github.com/apple/swift-distributed-tracing/pull/235",
+    "https://github.com/apple/swift-system/pull/378",
+    "https://github.com/apple/swift-system/pull/379",
+    "https://github.com/atomize-lab/citeseal/pull/17",
+    "https://github.com/grpc/grpc-go/pull/9296",
+    "https://github.com/jupyter-server/jupyter_server/pull/1689",
+    "https://github.com/jupyterlab/jupyterlab/pull/19255",
+    "https://github.com/launchpad-26/rhizomorph/pull/279",
+    "https://github.com/mggg/VoteKit/pull/383",
+    "https://github.com/midhunkrishna/marginalia/pull/16",
+    "https://github.com/numpy/numpy/pull/32230",
+    "https://github.com/open-telemetry/opentelemetry-specification/pull/5259",
+    "https://github.com/open-telemetry/opentelemetry-specification/pull/5260",
+    "https://github.com/open-telemetry/opentelemetry-specification/pull/5261",
+    "https://github.com/pointfreeco/swift-composable-architecture/pull/3961",
+    "https://github.com/vercel-labs/skills/pull/1919",
+    "https://github.com/virgiliojr94/book-to-skill/pull/112"
+  ],
+  "processed_item_ids": [
+    "IC_kwDOAA3dP88AAAABOHVUPg",
+    "IC_kwDOAGuhRc8AAAABOFmqjQ",
+    "IC_kwDOAacf888AAAABOMH_xA",
+    "IC_kwDOAacf888AAAABOOcFag",
+    "IC_kwDOBJUbrs8AAAABOFAC0Q",
+    "IC_kwDOBJUbrs8AAAABOFAHog",
+    "IC_kwDOCv6yE88AAAABOINA6g",
+    "IC_kwDOQ5_BBc8AAAABOFKivQ",
+    "IC_kwDOQ5_BBc8AAAABOQKDbg",
+    "IC_kwDOR0Qq2s8AAAABN_hQEw",
+    "IC_kwDOSRUoT88AAAABOHqAvQ",
+    "IC_kwDOSRUoT88AAAABOI2vDg",
+    "IC_kwDOSzJ8lM8AAAABOGmtlQ",
+    "IC_kwDOSzJ8lM8AAAABONhxSA",
+    "IC_kwDOSzJ8lM8AAAABONlsxw",
+    "IC_kwDOTBRgNM8AAAABOJH2iA",
+    "IC_kwDOTtZZ9c8AAAABOMc-rw",
+    "PRRC_kwDOA5k_I87feoeC",
+    "PRRC_kwDOCv6yE87fmnmC",
+    "PRRC_kwDOCv6yE87fmuS9",
+    "PRRC_kwDOEcjaY87fWJfc",
+    "PRRC_kwDOEcjaY87fevym",
+    "PRR_kwDOABpTD88AAAABI8Wh5w",
+    "PRR_kwDOBBqROs8AAAABI42A0Q",
+    "PRR_kwDOBJUbrs8AAAABI8XIIQ",
+    "PRR_kwDOJx-Aac8AAAABJCCvqA",
+    "PRR_kwDOPoV0Qc8AAAABI8nHZg",
+    "PRR_kwDOSzJ8lM8AAAABI-tqdg",
+    "PRR_kwDOSzJ8lM8AAAABI49mrw",
+    "PRR_kwDOTtZZ9c8AAAABJC1p2w",
+    "PRR_kwDOTtZZ9c8AAAABJC_Qpg"
+  ],
+  "updated_at": "2026-08-11T10:18:09Z",
+  "unresolved_items": [
+    {
+      "id": "PRRC_kwDOEcjaY87fWJfc",
+      "pr": "https://github.com/apple/swift-distributed-tracing/pull/235",
+      "reason": "Maintainer clarified that MultiplexInstrument must not receive special treatment in the core tracing accessor. Architecture/API boundary is unresolved; reply asks for the supported ownership boundary before changing code."
+    },
+    {
+      "id": "PRR_kwDOBBqROs8AAAABI42A0Q",
+      "pr": "https://github.com/jupyter-server/jupyter_server/pull/1689",
+      "reason": "Maintainer requested removal of repository-local issue templates; the files were removed and the reply is posted, but CHANGES_REQUESTED remains pending maintainer re-review."
+    }
+  ]
+}

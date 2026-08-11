@@ -1,0 +1,59 @@
+{
+  "eventId": "rwe-us-wind-project-payout-2026-08-07",
+  "tone": "bad",
+  "countryCode": "US",
+  "countryName": "United States",
+  "region": "North America",
+  "urgency": "high",
+  "storyType": "editorial",
+  "kicker": "Energy · Policy",
+  "headline": "US to pay German firm $1.2bn to halt wind projects",
+  "summary": "The Trump administration is reported to be paying RWE $1.2bn to cancel US wind-project deals.",
+  "script": "The Trump administration plans to pay German energy company RWE one point two billion dollars to halt US wind projects. The deal adds to a wider push against new wind development.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [-100, 39],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/number-03-rwe-wind-payout/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/number-03-rwe-wind-payout/secondary.jpg",
+  "imageAlt": "Wind turbines used to illustrate the US wind-project payout story.",
+  "imageAltTwo": "A second wind-energy image connected to the project cancellations.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/number-03-rwe-wind-payout.wav",
+  "openingStyle": "number-first",
+  "openingText": "One point two billion dollars to stop wind",
+  "openingSub": "NUMBER FIRST · One story · 10 Aug 2026",
+  "captions": [
+    { "lines": ["$1.2 billion", "to stop wind."], "highlights": ["$1.2 billion"] },
+    { "lines": ["A German firm is", "being paid to halt projects."], "highlights": ["paid to halt"] },
+    { "lines": ["US wind development", "faces a policy turn."], "highlights": ["policy turn"] }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Trump administration to pay German firm $1.2bn",
+      "url": "https://www.bbc.co.uk/news/articles/c1e1vg0gjl5o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-07",
+      "usedFor": ["$1.2bn payout", "RWE", "US wind projects"]
+    },
+    {
+      "publisher": "RWE",
+      "title": "Company energy and renewables context",
+      "url": "https://www.rwe.com/en/",
+      "published": "2026-08-10",
+      "usedFor": ["RWE company context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Large dollar amount and clear policy consequence make the number-first test legible; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

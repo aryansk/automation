@@ -1,0 +1,145 @@
+{
+  "eventId": "us-states-tariff-lawsuit-2026-08-04",
+  "tone": "bad",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Washington DC",
+  "coordinates": [
+    -77.0369,
+    38.9072
+  ],
+  "region": "North America",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Trade · Legal fight",
+  "headline": "Twenty-five US states sue over new Trump tariffs",
+  "summary": "A coalition sued to block 10–12.5% duties on goods from 60 trading partners, including the UK, China and the European Union.",
+  "script": "Twenty-five US states are suing to block new Trump tariffs on goods from dozens of trading partners. The duties, ranging from ten to twelve-point-five percent, affect the UK, China and the European Union as the legal fight begins.",
+  "source": "BBC · AP News",
+  "edition": "04 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-04-bad/tariffs/cargo.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-bad/tariffs/trump.jpg",
+  "imageAlt": "A cargo ship docked at the Port of Los Angeles.",
+  "imageAltTwo": "President Donald Trump speaking at a White House tariff event.",
+  "imageCredit": "AFP via Getty Images via BBC News",
+  "imageCreditTwo": "AP Photo / Mark Schiefelbein",
+  "narrationAudio": "assets/narration/tour/bad6-2026-08-04-01-tariff-lawsuit.wav",
+  "captions": [
+    {
+      "lines": [
+        "Twenty-five states",
+        "sue over tariffs."
+      ],
+      "highlights": [
+        "Twenty-five states",
+        "tariffs"
+      ]
+    },
+    {
+      "lines": [
+        "Duties reach",
+        "12.5 percent."
+      ],
+      "highlights": [
+        "12.5 percent"
+      ]
+    },
+    {
+      "lines": [
+        "Trade partners face",
+        "a legal fight."
+      ],
+      "highlights": [
+        "Trade partners",
+        "legal fight"
+      ]
+    }
+  ],
+  "mentionedCountryCodes": [
+    "US",
+    "GB",
+    "CN",
+    "JP",
+    "BR",
+    "TW"
+  ],
+  "affectedCountryCodes": [
+    "US",
+    "GB",
+    "CN",
+    "JP",
+    "BR",
+    "TW"
+  ],
+  "locatorInset": true,
+  "focusZoom": 12.6,
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "US states sue to block Trump tariffs impacting dozens of countries",
+      "url": "https://www.bbc.co.uk/news/articles/cy4kp8jd0ppo",
+      "published": "2026-08-04T02:00:00.318Z",
+      "usedFor": [
+        "25-state lawsuit",
+        "10–12.5% rates",
+        "60 trading partners",
+        "Section 301"
+      ]
+    },
+    {
+      "publisher": "The Associated Press",
+      "title": "25 U.S. states sue Trump administration over new tariffs",
+      "url": "https://apnews.com/article/120895adbee7ae06157cd5f4bf5c7583",
+      "published": "2026-08-03",
+      "usedFor": [
+        "independent lawsuit corroboration",
+        "trade-policy context"
+      ]
+    },
+    {
+      "publisher": "Office of the US Trade Representative",
+      "title": "Fact sheet: Section 301 action relating to forced-labor claims",
+      "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/july/fact-sheet-ustr-section-301-action-response-failure-60-economies-ban-imports-produced-forced-labor",
+      "published": "2026-07",
+      "usedFor": [
+        "official tariff policy context",
+        "affected economies"
+      ]
+    }
+  ],
+  "imageSources": [
+    {
+      "articleUrl": "https://www.bbc.co.uk/news/articles/cy4kp8jd0ppo",
+      "assetUrl": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/e5d5/live/ea554540-8fb7-11f1-a7ab-8b30adf0800a.jpg",
+      "localPath": "assets/news-images/2026-08-04-bad/tariffs/cargo.jpg",
+      "caption": "A cargo ship is docked at the Port of Los Angeles in San Pedro, California.",
+      "credit": "AFP via Getty Images",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized source-image workflow; publisher rights were not independently cleared."
+    },
+    {
+      "articleUrl": "https://apnews.com/article/120895adbee7ae06157cd5f4bf5c7583",
+      "assetUrl": "https://dims.apnews.com/dims4/default/db1c236/2147483647/strip/true/crop/3829x2551+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F1a%2F6d%2F9264a18dbe8934c3b19106d37f5e%2F4a33280e2f1243f18d18780a3f147daa",
+      "localPath": "assets/news-images/2026-08-04-bad/tariffs/trump.jpg",
+      "caption": "President Donald Trump speaks during a tariff event in the White House Rose Garden.",
+      "credit": "AP Photo / Mark Schiefelbein",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized source-image workflow; publisher rights were not independently cleared."
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Fresh BBC World and Business lead with AP corroboration and direct US policy impact; editorial rank reflects recency, prominence and adverse audience interest, not a platform-wide trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "assetLicense": "BBC and AP source photographs used under the authorized newsroom workflow.",
+    "assetCredit": "AFP via Getty Images via BBC News; AP Photo / Mark Schiefelbein.",
+    "commercialEditorialRightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

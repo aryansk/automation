@@ -3,7 +3,16 @@
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, isAbsolute, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { animationRegistry } from "../assets/animations/registry.js";
+import {
+  getGlobeMapAnimation,
+  validateProductionGlobeMapAnimationConfig,
+} from "../assets/animations/globe-map-library.js";
+import {
+  getExplicitGlobeMapAnimationId,
+  isMapDisabled,
+  selectStoryMapAnimation,
+} from "../assets/animations/globe-map-selector.js";
+import { normalizeGlobeMapPlan } from "../assets/animations/globe-map-plan.js";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -16,6 +25,15 @@ function option(name, fallback = "") {
 function fail(message) {
   console.error(`✗ ${message}`);
   process.exitCode = 1;
+}
+
+function getGlobeMapAnimationSafe(id) {
+  try {
+    getGlobeMapAnimation(id);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 const storyArg = option("story") || args.find((arg) => !arg.startsWith("--"));
@@ -65,9 +83,24 @@ const limits = {
   marketPeriod: { words: 4, chars: 24, optional: true },
 };
 
+const requestedScriptWordLimit = Number(story.scriptMaxWords);
+const requestedScriptCharLimit = Number(story.scriptMaxChars);
+const validationLimits = {
+  ...limits,
+  script: {
+    ...limits.script,
+    words: Number.isInteger(requestedScriptWordLimit) && requestedScriptWordLimit > 0
+      ? requestedScriptWordLimit
+      : limits.script.words,
+    chars: Number.isInteger(requestedScriptCharLimit) && requestedScriptCharLimit > 0
+      ? requestedScriptCharLimit
+      : limits.script.chars,
+  },
+};
+
 const countWords = (value) => String(value || "").trim().split(/\s+/).filter(Boolean).length;
 
-for (const [field, limit] of Object.entries(limits)) {
+for (const [field, limit] of Object.entries(validationLimits)) {
   const value = String(story[field] ?? "").trim();
   if (!value && !limit.optional) {
     fail(`${field} is required`);
@@ -107,8 +140,60 @@ if (!storyTypes.has(storyType)) {
   fail(`storyType must be one of: ${[...storyTypes].join(", ")}`);
 }
 
-if (story.visualType && !animationRegistry.has(story.visualType)) {
-  fail(`visualType is not registered: ${story.visualType}`);
+const explicitMapAnimation = getExplicitGlobeMapAnimationId(story);
+if (explicitMapAnimation && !isMapDisabled(story) && !getGlobeMapAnimationSafe(explicitMapAnimation)) {
+  fail(`globe animation is not a registered globe/map animation: ${explicitMapAnimation}`);
+}
+if (story.mapEvidence !== undefined) {
+  if (!story.mapEvidence || typeof story.mapEvidence !== "object" || Array.isArray(story.mapEvidence)) {
+    fail("mapEvidence must be an object when provided");
+  } else {
+    const evidenceId = String(story.mapEvidence.animationId || story.mapEvidence.animation || story.mapEvidence.mapAnimation || "").trim();
+    if (!evidenceId || !getGlobeMapAnimationSafe(evidenceId)) {
+      fail(`mapEvidence.animationId is not a registered globe/map animation: ${evidenceId || "(missing)"}`);
+    }
+    if (!story.mapEvidence.data || typeof story.mapEvidence.data !== "object" || Array.isArray(story.mapEvidence.data)) {
+      fail("mapEvidence.data must be an object when provided");
+    }
+  }
+}
+
+/* A story that selects a globe/map animation must carry verified geographic
+   data and a real source — the production gate never borrows illustrative
+   sample values. Explicit "none"/"disabled" disables maps entirely. */
+if (explicitMapAnimation && !isMapDisabled(story)) {
+  const selected = selectStoryMapAnimation(story, { format: "landscape", mode: "production" });
+  if (selected.animationId) {
+    if (!String(story.mapSource || story.mapEvidence?.source || story.source || "").trim()) {
+      fail("mapAnimation requires a verified mapSource (or source) attribution");
+    }
+    if (story.mapData) {
+      const gate = validateProductionGlobeMapAnimationConfig(selected.animationId, {
+        ...selected.data,
+        ...story.mapData,
+      });
+      if (!gate.valid) {
+        fail(`mapData for ${selected.animationId} is invalid: ${[...gate.missing.map((m) => `missing ${m}`), ...gate.issues].join("; ")}`);
+      }
+    }
+  } else if (selected.reason !== "disabled") {
+    fail(`globe animation ${explicitMapAnimation} could not be satisfied with verified geographic data (${selected.reason}); provide mapData with a source, or disable maps`);
+  }
+}
+
+/* New automatic evidence is opt-in and strict. Explicit mapAnimation,
+   animationId or visualType remains authoritative, so an accompanying
+   mapEvidence envelope is ignored by this branch when an explicit choice exists. */
+if (story.mapEvidence && !explicitMapAnimation) {
+  const selected = selectStoryMapAnimation(story, { format: "landscape", mode: "production" });
+  if (!selected.animationId) {
+    fail(`mapEvidence could not be satisfied with verified geographic data (${selected.reason || "invalid evidence"})`);
+  } else {
+    const gate = validateProductionGlobeMapAnimationConfig(selected.animationId, selected.data);
+    if (!gate.valid) {
+      fail(`mapEvidence for ${selected.animationId} is invalid: ${[...gate.missing.map((m) => `missing ${m}`), ...gate.issues].join("; ")}`);
+    }
+  }
 }
 
 if (story.coordinates) {
@@ -159,6 +244,29 @@ if (
   fail("financial stories require marketValue (or statValue) and marketChange");
 }
 
+/* The plan is optional for backwards-compatible story JSON: when omitted, the
+   renderers materialize one automatic globe-map-library beat. When authored,
+   every segment must be a catalog choice and claim-bearing choices must
+   resolve against this story's verified data before narration/rendering. */
+const authoredPlan = story.animationPlan ?? story.visualPlan;
+if (authoredPlan !== undefined) {
+  const plan = normalizeGlobeMapPlan(authoredPlan, { duration: 18, requireLibrary: true });
+  plan.errors.forEach((error) => fail(error));
+  plan.segments.forEach((segment) => {
+    if (["auto", "inherit"].includes(segment.animationId)) return;
+    const candidate = {
+      ...story,
+      mapAnimation: segment.animationId,
+      ...(segment.mapData !== undefined ? { mapData: segment.mapData } : {}),
+      ...(segment.mapSource ? { mapSource: segment.mapSource } : {}),
+    };
+    const selected = selectStoryMapAnimation(candidate, { format: "portrait", mode: "production" });
+    if (!selected.animationId) {
+      fail(`animationPlan segment ${segment.id} could not be resolved (${selected.reason || "insufficient verified data"})`);
+    }
+  });
+}
+
 for (const field of ["imageOne", "imageTwo", "narrationAudio"]) {
   const value = String(story[field] || "").trim();
   if (!value) {
@@ -180,6 +288,6 @@ if (String(story.summary || "").trim().replace(/[.!?]+$/, "") === String(story.h
 if (!process.exitCode) {
   console.log(`✓ ${storyArg} passes the Daily News text and asset limits`);
   console.log(
-    `  headline ${countWords(story.headline)}/14 words · summary ${countWords(story.summary)}/30 words · script ${countWords(story.script)}/42 words`,
+    `  headline ${countWords(story.headline)}/14 words · summary ${countWords(story.summary)}/30 words · script ${countWords(story.script)}/${validationLimits.script.words} words`,
   );
 }

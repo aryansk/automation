@@ -1,0 +1,90 @@
+{
+  "eventId": "ireland-eclipse-perseids-2026-08-09",
+  "tone": "good",
+  "countryCode": "IE",
+  "countryName": "Ireland",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Science · Sky",
+  "headline": "Ireland prepares for partial solar eclipse and Perseid peak",
+  "summary": "A deep partial solar eclipse and the Perseid meteor shower are both expected to put on a show across Ireland next week.",
+  "script": "Skywatchers in Ireland are preparing for two big events next week: a deep partial solar eclipse and the peak of the Perseid meteor shower. The first is expected Wednesday evening.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [
+    -8,
+    53.4
+  ],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/number-04-ireland-sky-events/primary.png",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/number-04-ireland-sky-events/secondary.png",
+  "imageAlt": "A partial solar eclipse image used for the Ireland sky-events story.",
+  "imageAltTwo": "A second sky image connected to the eclipse and meteor shower forecast.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/number-04-ireland-sky-events.wav",
+  "captions": [
+    {
+      "lines": [
+        "Two sky events",
+        "arrive next week."
+      ],
+      "highlights": [
+        "Two sky events"
+      ]
+    },
+    {
+      "lines": [
+        "A deep partial",
+        "solar eclipse."
+      ],
+      "highlights": [
+        "partial solar eclipse"
+      ]
+    },
+    {
+      "lines": [
+        "Then the Perseids",
+        "reach their peak."
+      ],
+      "highlights": [
+        "Perseids"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Most of sun to be eclipsed across island of Ireland",
+      "url": "https://www.bbc.co.uk/news/articles/c39epmz7ex4o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-09",
+      "usedFor": [
+        "partial eclipse",
+        "Ireland visibility",
+        "Perseid timing"
+      ]
+    },
+    {
+      "publisher": "Royal Astronomical Society",
+      "title": "Astronomy observation context",
+      "url": "https://ras.ac.uk/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "astronomy context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 4,
+    "basis": "Two countable sky events create a clean, optimistic number-first test; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

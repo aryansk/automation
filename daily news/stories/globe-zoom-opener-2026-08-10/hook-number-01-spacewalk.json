@@ -1,0 +1,91 @@
+{
+  "eventId": "iss-spacewalk-solar-array-hardware-2026-08-06",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Houston",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Space · Science",
+  "headline": "NASA astronauts complete 6.5-hour spacewalk outside ISS",
+  "summary": "Anil Menon and Jessica Meir installed mounting hardware for future solar arrays during a 6.5-hour spacewalk.",
+  "script": "NASA astronauts Anil Menon and Jessica Meir spent six and a half hours outside the International Space Station. They installed hardware for future solar arrays, extending the station's power infrastructure.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [
+    -95.7,
+    29.8
+  ],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/number-01-spacewalk/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/number-01-spacewalk/secondary.jpg",
+  "imageAlt": "Astronauts conducting a spacewalk outside the International Space Station.",
+  "imageAltTwo": "A second spacewalk image showing work outside the station.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/number-01-spacewalk.wav",
+  "captions": [
+    {
+      "lines": [
+        "6.5 hours",
+        "in space."
+      ],
+      "highlights": [
+        "6.5 hours"
+      ]
+    },
+    {
+      "lines": [
+        "Two astronauts worked",
+        "outside the ISS."
+      ],
+      "highlights": [
+        "Two astronauts"
+      ]
+    },
+    {
+      "lines": [
+        "Solar-array hardware",
+        "is now installed."
+      ],
+      "highlights": [
+        "installed"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Nasa astronauts conduct 6.5-hour spacewalk outside ISS",
+      "url": "https://www.bbc.co.uk/news/videos/c89n8940vq8o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-06",
+      "usedFor": [
+        "6.5-hour spacewalk",
+        "astronaut names",
+        "solar-array hardware"
+      ]
+    },
+    {
+      "publisher": "NASA",
+      "title": "International Space Station mission context",
+      "url": "https://www.nasa.gov/international-space-station/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "ISS context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "A single memorable duration makes the number-first hook easy to isolate against strong space visuals; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

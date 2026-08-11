@@ -1,0 +1,38 @@
+{
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Melbourne Beach",
+  "coordinates": [-80.58, 28.0],
+  "region": "North America · Atlantic",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Environment · Wildlife",
+  "headline": "Florida loggerhead release puts a satellite-tracked turtle back at sea",
+  "summary": "The Sea Turtle Conservancy scheduled an August 2 release from Florida's Archie Carr Refuge as part of Tour de Turtles conservation and tracking.",
+  "script": "A rehabilitated loggerhead is returning to Florida's Atlantic with a satellite transmitter. The Sea Turtle Conservancy will track its route through the Tour de Turtles program, turning one release into public science. That data can show where ocean wildlife needs protection.",
+  "source": "Sea Turtle Conservancy",
+  "edition": "02 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-02-good/loggerhead-release-editorial.png",
+  "imageTwo": "assets/news-images/2026-08-02-good/loggerhead-release-editorial-detail.png",
+  "imageAlt": "Editorial illustration of a satellite-tracked loggerhead turtle entering Florida surf.",
+  "imageAltTwo": "Editorial crop of a loggerhead turtle moving through shallow coastal water.",
+  "imageCredit": "Editorial illustration · AI-generated",
+  "imageCreditTwo": "Editorial illustration · AI-generated",
+  "narrationAudio": "assets/narration/tour/good3-2026-08-02-03-turtle-release.wav",
+  "captions": [
+    {
+      "lines": ["Florida's Archie Carr Refuge", "hosts a loggerhead release."],
+      "highlights": ["Florida", "Archie Carr Refuge"]
+    },
+    {
+      "lines": ["The turtle carries", "a satellite transmitter."],
+      "highlights": ["satellite transmitter"]
+    },
+    {
+      "lines": ["One recovery becomes", "public conservation and research."],
+      "highlights": ["conservation", "research"]
+    }
+  ],
+  "focusZoom": 14.8
+}

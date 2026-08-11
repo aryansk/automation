@@ -7,9 +7,9 @@
   "urgency": "breaking",
   "storyType": "breaking",
   "kicker": "Conflict · Shipping",
-  "headline": "Iran warns of retaliation as strikes and shipping disruption spread",
+  "headline": "Iran warns of retaliation as shipping through Hormuz faces disruption",
   "summary": "Trump threatened more strikes, Kuwait reported drone attacks, and a tanker was hit near Oman as Iran’s war keeps the Strait of Hormuz under pressure.",
-  "script": "Iran is warning of retaliation as the war threatens energy infrastructure. The Associated Press reports drone attacks on Kuwait and a tanker hit near Oman, while Al Jazeera says Iran is restricting passage through Hormuz. Shipping markets remain at risk.",
+  "script": "Because the Strait of Hormuz is a major energy route, any disruption can ripple into fuel and shipping prices. AP reports drone attacks on Kuwait and a tanker hit near Oman, while Iran is restricting passage. Markets face delay and insurance risks.",
   "source": "AP · Al Jazeera",
   "edition": "02 Aug 2026",
   "storyNumber": "01",
@@ -17,6 +17,33 @@
   "imageTwo": "assets/news-images/2026-07-31/hormuz-ap.jpg",
   "imageAlt": "Iranian missile displays and flags at a public exhibition in Tehran.",
   "imageCredit": "Reuters / Al Jazeera",
+  "imageCreditTwo": "Context image · AP",
+  "routeLabel": "Iran → Kuwait → Oman → Hormuz",
+  "mentionedCountryCodes": ["KW", "OM"],
+  "routePoints": [
+    { "label": "Iran", "coordinates": [51.42151, 35.69439] },
+    { "label": "Kuwait", "coordinates": [47.4818, 29.3759] },
+    { "label": "Oman", "coordinates": [58.4059, 23.588] },
+    { "label": "Hormuz", "coordinates": [56.45, 26.56] }
+  ],
+  "captions": [
+    {
+      "lines": ["Iran warns of retaliation as", "energy infrastructure is under threat."],
+      "highlights": ["Iran", "retaliation"]
+    },
+    {
+      "lines": ["AP reports drone attacks on", "Kuwait and a tanker hit near Oman."],
+      "highlights": ["Kuwait", "Oman"]
+    },
+    {
+      "lines": ["Iran is restricting passage through", "the Strait of Hormuz."],
+      "highlights": ["Iran", "Hormuz"]
+    },
+    {
+      "lines": ["Shipping markets remain", "at risk."],
+      "highlights": ["Shipping markets"]
+    }
+  ],
   "focusZoom": 14.9,
   "narrationAudio": "assets/narration/tour/top3-2026-08-02-01-iran-hormuz.wav"
 }

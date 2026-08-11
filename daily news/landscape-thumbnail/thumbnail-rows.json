@@ -1,0 +1,64 @@
+{
+  "rows": [
+    {
+      "name": "red-sea-reopen",
+      "globeFrame": "assets/thumbnails/landscape-2026-08-06-red-sea-reopen-globe-highlight.jpg",
+      "headlineTop": "RED SEA",
+      "headlineBottom": "STILL CLOSED?",
+      "subhead": "WHY SHIPS STILL DETOUR",
+      "routeLabel": "SUEZ → BAB EL-MANDEB",
+      "routeCountries": "EGYPT · YEMEN · SAUDI ARABIA",
+      "edition": "06 AUG 2026"
+    },
+    {
+      "name": "ai-electricity",
+      "globeFrame": "assets/thumbnails/landscape-2026-08-06-ai-electricity-globe-highlight.jpg",
+      "headlineTop": "AI BOOM",
+      "headlineBottom": "GRID BOTTLENECK?",
+      "subhead": "THE GRID IS THE BOTTLENECK",
+      "routeLabel": "PJM → DATA CENTRES",
+      "routeCountries": "UNITED STATES · CHINA · GLOBAL GRID",
+      "edition": "06 AUG 2026"
+    },
+    {
+      "name": "rare-earth-leverage",
+      "globeFrame": "assets/thumbnails/landscape-2026-08-05-rare-earth-leverage-globe-highlight.jpg",
+      "headlineTop": "RARE EARTHS",
+      "headlineBottom": "ONE GATE?",
+      "subhead": "WHY PROCESSING HOLDS THE POWER",
+      "routeLabel": "MINE → REFINERY → MAGNET",
+      "routeCountries": "CHINA · UNITED STATES · JAPAN",
+      "edition": "05 AUG 2026"
+    },
+    {
+      "name": "trade-trust",
+      "globeFrame": "assets/thumbnails/landscape-2026-08-04-trade-trust-globe-highlight.jpg",
+      "headlineTop": "MORE TRADE",
+      "headlineBottom": "LESS TRUST?",
+      "subhead": "WHY THE MAP IS REDRAWING",
+      "routeLabel": "PORTS → FACTORIES → TARIFFS",
+      "routeCountries": "UNITED STATES · CHINA · MEXICO",
+      "edition": "04 AUG 2026"
+    },
+    {
+      "name": "open-models-markets",
+      "globeFrame": "assets/thumbnails/landscape-2026-08-03-open-models-markets-globe-highlight.jpg",
+      "headlineTop": "OPEN MODELS",
+      "headlineBottom": "CLOSED PROFITS?",
+      "subhead": "WHO OWNS THE AI UPSIDE?",
+      "routeLabel": "WASHINGTON → SHANGHAI",
+      "routeCountries": "UNITED STATES · CHINA · TAIWAN",
+      "edition": "03 AUG 2026"
+    },
+    {
+      "name": "hormuz",
+      "globeFrame": "assets/thumbnails/landscape-2026-08-03-hormuz-globe-highlight.jpg",
+      "headlineTop": "HORMUZ",
+      "headlineBottom": "WHY IT MATTERS",
+      "subhead": "THE GATEWAY ISN'T NORMAL",
+      "routeLabel": "GULF → HORMUZ → OCEAN",
+      "routeCountries": "IRAN · OMAN · INDIA",
+      "edition": "03 AUG 2026"
+    }
+  ]
+}

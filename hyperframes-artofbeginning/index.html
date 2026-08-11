@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>The Room Before the First Mark</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      :root {
+        --paper: #f3f1eb;
+        --paper-shadow: #dfddd7;
+        --ink: #111113;
+        --red: #e52b2f;
+        --red-deep: #a71820;
+        --slate: #7d8188;
+        --blue: #4b78c8;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0d0d0f;
+      }
+
+      body {
+        color: var(--paper);
+        font-family: "IBM Plex Mono", monospace;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0d0d0f;
+      }
+
+      .clip {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      .scene-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .scene--white .scene-bg { background: var(--paper); }
+      .scene--dark .scene-bg { background: #101114; }
+      .scene--red .scene-bg { background: var(--red-deep); }
+      .scene--black .scene-bg { background: #070708; }
+
+      .grain {
+        position: absolute;
+        inset: -20px;
+        z-index: 90;
+        pointer-events: none;
+        opacity: 0.07;
+        mix-blend-mode: multiply;
+        background-image:
+          radial-gradient(circle at 20% 30%, rgba(0,0,0,.35) 0 1px, transparent 1px),
+          radial-gradient(circle at 70% 60%, rgba(255,255,255,.24) 0 1px, transparent 1px);
+        background-size: 5px 5px, 7px 7px;
+      }
+
+      .film-vignette {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        pointer-events: none;
+        background: radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,.52) 100%);
+      }
+
+      .film-matte {
+        position: absolute;
+        inset: 68px 82px;
+        z-index: 4;
+        border: 2px solid rgba(255,255,255,.12);
+        pointer-events: none;
+      }
+
+      .paper-rule {
+        position: absolute;
+        z-index: 2;
+        height: 2px;
+        background: var(--ink);
+        opacity: .12;
+        transform-origin: left center;
+      }
+
+      .paper-rule.rule-a { width: 510px; left: 110px; top: 164px; }
+      .paper-rule.rule-b { width: 330px; right: 116px; bottom: 142px; transform-origin: right center; }
+      .paper-rule.rule-c { width: 2px; height: 450px; left: 150px; top: 278px; opacity: .07; }
+
+      .white-content {
+        position: relative;
+        z-index: 8;
+        width: 100%;
+        height: 100%;
+        padding: 92px 128px;
+      }
+
+      .micro-label {
+        position: absolute;
+        left: 132px;
+        top: 94px;
+        color: var(--ink);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 22px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+
+      .micro-label::before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 14px;
+        background: var(--red);
+        border-radius: 50%;
+      }
+
+      .corner-copy {
+        position: absolute;
+        left: 132px;
+        bottom: 108px;
+        max-width: 470px;
+        color: var(--ink);
+        padding-left: 22px;
+        border-left: 3px solid var(--red);
+        font-size: 28px;
+        line-height: 1.24;
+        letter-spacing: -.035em;
+      }
+
+      .corner-copy.right {
+        left: auto;
+        right: 132px;
+        padding-left: 0;
+        padding-right: 22px;
+        border-left: 0;
+        border-right: 3px solid var(--red);
+        text-align: right;
+      }
+
+      .corner-copy .copy-line {
+        display: block;
+        margin-top: 8px;
+      }
+
+      .corner-copy .copy-line:first-child {
+        margin-top: 0;
+        font-family: "EB Garamond", serif;
+        font-size: 36px;
+        line-height: 1;
+      }
+
+      .doc-card {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        color: var(--ink);
+        transform: translate(-50%, -50%);
+      }
+
+      .doc-glyph {
+        position: relative;
+        width: 116px;
+        height: 142px;
+        border: 7px solid var(--blue);
+        background: rgba(255,255,255,.55);
+        box-shadow: 14px 14px 0 rgba(17,17,19,.08);
+      }
+
+      .doc-glyph::before,
+      .doc-glyph::after {
+        content: "";
+        position: absolute;
+        left: 21px;
+        right: 21px;
+        height: 7px;
+        background: var(--blue);
+      }
+
+      .doc-glyph::before { top: 43px; box-shadow: 0 23px 0 var(--blue), 0 46px 0 var(--blue); }
+      .doc-glyph::after { width: 25px; left: auto; right: -7px; top: -7px; height: 25px; background: var(--paper); border-left: 7px solid var(--blue); border-bottom: 7px solid var(--blue); }
+
+      .doc-name {
+        font-size: 25px;
+        letter-spacing: .02em;
+      }
+
+      .doc-name span { color: var(--slate); }
+
+      .display-block {
+        position: absolute;
+        left: 132px;
+        top: 354px;
+        max-width: 1200px;
+        color: var(--ink);
+      }
+
+      .display-block.right {
+        left: auto;
+        right: 132px;
+        text-align: right;
+      }
+
+      .display-block .display-line {
+        display: block;
+        font-family: "Archivo Black", sans-serif;
+        font-size: 112px;
+        line-height: .93;
+        letter-spacing: -.055em;
+        text-transform: uppercase;
+      }
+
+      .display-block .display-line.red { color: var(--red); }
+
+      .display-block .sub-line {
+        display: block;
+        margin-top: 24px;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 27px;
+        line-height: 1.35;
+        letter-spacing: -.035em;
+      }
+
+      .document-lines {
+        position: absolute;
+        left: 132px;
+        top: 292px;
+        width: 760px;
+        color: var(--ink);
+      }
+
+      .document-lines .doc-line {
+        display: block;
+        width: 100%;
+        padding: 16px 0 14px;
+        border-bottom: 2px solid rgba(17,17,19,.16);
+        font-size: 31px;
+        letter-spacing: -.05em;
+      }
+
+      .document-lines .doc-line small {
+        color: var(--slate);
+        font-size: 18px;
+        margin-left: 14px;
+      }
+
+      .cinema-copy {
+        position: absolute;
+        z-index: 8;
+        left: 148px;
+        bottom: 112px;
+        max-width: 1110px;
+        padding: 28px 38px 32px 40px;
+        border-left: 4px solid var(--red);
+        background: linear-gradient(90deg, rgba(5,5,8,.54), rgba(5,5,8,.2) 76%, rgba(5,5,8,0));
+        color: #f7f4ec;
+        text-shadow: 0 3px 18px rgba(0,0,0,.45);
+      }
+
+      .cinema-copy.center {
+        left: 50%;
+        bottom: 50%;
+        width: 1240px;
+        max-width: 1240px;
+        padding: 30px 52px 36px;
+        border-top: 3px solid var(--red);
+        background: linear-gradient(180deg, rgba(5,5,8,.46), rgba(5,5,8,.08));
+        text-align: center;
+        transform: translate(-50%, 50%);
+      }
+
+      .cinema-copy.right {
+        left: auto;
+        right: 148px;
+        padding: 28px 40px 32px 38px;
+        border-left: 0;
+        border-right: 4px solid var(--red);
+        background: linear-gradient(270deg, rgba(5,5,8,.54), rgba(5,5,8,.2) 76%, rgba(5,5,8,0));
+        text-align: right;
+      }
+
+      .caption-kicker {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 20px;
+        color: var(--red);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: .18em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .caption-kicker .kicker-dot {
+        display: block;
+        width: 10px;
+        height: 10px;
+        flex: 0 0 10px;
+        background: currentColor;
+      }
+
+      .caption-kicker .kicker-rule {
+        display: block;
+        width: 84px;
+        height: 2px;
+        flex: 0 0 84px;
+        background: currentColor;
+        opacity: .72;
+        transform-origin: left center;
+      }
+
+      .cinema-copy.center .caption-kicker { justify-content: center; }
+      .cinema-copy.right .caption-kicker { justify-content: flex-end; }
+
+      .cinema-copy .caption-line {
+        display: block;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 38px;
+        line-height: 1.14;
+        letter-spacing: -.045em;
+      }
+
+      .cinema-copy .caption-line + .caption-line {
+        margin-top: 16px;
+      }
+
+      .cinema-copy .caption-line.lead {
+        font-family: "EB Garamond", serif;
+        font-size: 78px;
+        line-height: .94;
+        letter-spacing: -.045em;
+      }
+
+      .cinema-copy .caption-line.support {
+        max-width: 1020px;
+        color: rgba(247,244,236,.88);
+        font-size: 30px;
+        line-height: 1.22;
+        letter-spacing: -.04em;
+      }
+
+      .cinema-copy .caption-line.emphasis {
+        font-family: "Archivo Black", sans-serif;
+        font-size: 112px;
+        line-height: .96;
+        letter-spacing: -.06em;
+        text-transform: uppercase;
+      }
+
+      .cinema-copy .caption-line.serif {
+        font-family: "EB Garamond", serif;
+        font-size: 82px;
+        line-height: 1;
+        letter-spacing: -.04em;
+      }
+
+      .cinema-copy .caption-line.lead.serif {
+        font-size: 88px;
+        line-height: .92;
+      }
+
+      .caption-word.accent { color: var(--red); }
+      .scene--red .cinema-copy { border-color: var(--paper); }
+      .scene--red .caption-kicker { color: var(--paper); }
+      .scene--red .caption-word.accent { color: var(--paper); }
+
+      .caption-progress {
+        position: absolute;
+        left: 40px;
+        right: 38px;
+        bottom: 11px;
+        height: 3px;
+        overflow: hidden;
+        background: rgba(247,244,236,.24);
+      }
+
+      .caption-progress > span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: var(--red);
+        transform-origin: left center;
+      }
+
+      .cinema-copy.center .caption-progress {
+        left: 52px;
+        right: 52px;
+      }
+
+      .scene--red .caption-progress { background: rgba(243,241,235,.28); }
+      .scene--red .caption-progress > span { background: var(--paper); }
+
+      .caption-word {
+        display: inline-block;
+        margin-right: .22em;
+      }
+
+      .caption-word:last-child { margin-right: 0; }
+
+      /* The earlier reference used the words themselves as the focal object:
+         no caption card, just a centered line-by-line build. */
+      .cinema-copy,
+      .corner-copy { display: none; }
+
+      #kinetic-caption-layer {
+        position: absolute;
+        inset: 0;
+        z-index: 80;
+        pointer-events: none;
+      }
+
+      .kinetic-caption-phrase {
+        position: absolute;
+        left: 50%;
+        top: 73%;
+        width: 1640px;
+        min-height: 132px;
+        padding: 0 12px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        gap: 14px 20px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0;
+      }
+
+      .kinetic-caption-word {
+        display: inline-flex;
+        align-items: baseline;
+        color: #f7f4ec;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 42px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -.055em;
+        text-shadow: 0 3px 18px rgba(0,0,0,.45);
+        opacity: 0;
+        will-change: transform, opacity;
+      }
+
+      .kinetic-caption-word.accent {
+        color: var(--red);
+        font-family: "Arial Black", "Archivo Black", sans-serif;
+        font-size: 82px;
+        font-weight: 900;
+        line-height: .86;
+        letter-spacing: -.075em;
+        text-transform: uppercase;
+      }
+
+      .kinetic-caption-phrase.paper .kinetic-caption-word {
+        color: var(--ink);
+        text-shadow: none;
+      }
+
+      .kinetic-caption-phrase.paper .kinetic-caption-word.accent {
+        color: var(--red);
+      }
+
+      .kinetic-caption-phrase.red .kinetic-caption-word,
+      .kinetic-caption-phrase.dark .kinetic-caption-word {
+        color: #f7f4ec;
+      }
+
+      .kinetic-caption-phrase.red .kinetic-caption-word.accent {
+        color: var(--paper);
+      }
+
+      .kinetic-caption-phrase.dark .kinetic-caption-word.accent {
+        color: var(--red);
+      }
+
+      .shot {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: saturate(.84) contrast(1.08) brightness(.92);
+      }
+
+      .shot.warm { filter: saturate(.86) contrast(1.1) brightness(.84) sepia(.08); }
+      .shot.red { filter: saturate(1.2) contrast(1.18) brightness(.76); }
+      .shot.mono { filter: grayscale(1) contrast(1.12) brightness(.88); }
+
+      .red-wash {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        background: rgba(112, 0, 10, .24);
+        mix-blend-mode: multiply;
+      }
+
+      .soft-black {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        background: rgba(0,0,0,.22);
+      }
+
+      .scan-mark {
+        position: absolute;
+        z-index: 8;
+        top: 84px;
+        right: 132px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: rgba(255,255,255,.7);
+        font-size: 18px;
+        letter-spacing: .08em;
+      }
+
+      .scan-mark::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: var(--red);
+        border-radius: 50%;
+      }
+
+      .red-signal {
+        position: absolute;
+        z-index: 7;
+        top: 88px;
+        left: 130px;
+        color: #f7f4ec;
+        font-size: 20px;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+
+      .red-signal::after {
+        content: "";
+        display: inline-block;
+        width: 60px;
+        height: 2px;
+        margin: 0 0 6px 16px;
+        background: rgba(247,244,236,.7);
+      }
+
+      .tiny-dot {
+        position: absolute;
+        z-index: 8;
+        width: 12px;
+        height: 12px;
+        background: var(--red);
+        border-radius: 50%;
+      }
+
+      .tiny-dot.one { left: 145px; bottom: 145px; }
+      .tiny-dot.two { right: 150px; top: 210px; background: var(--blue); }
+
+      .end-mark {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: var(--ink);
+        font-family: "EB Garamond", serif;
+        font-size: 102px;
+        line-height: .88;
+        letter-spacing: -.07em;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+      }
+
+      .end-mark small {
+        display: block;
+        margin-top: 34px;
+        color: var(--slate);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 22px;
+        letter-spacing: .08em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .last-dot {
+        position: absolute;
+        left: calc(50% - 9px);
+        bottom: 160px;
+        width: 18px;
+        height: 18px;
+        background: var(--red);
+        border-radius: 50%;
+      }
+
+      .audio-clip { display: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="163">
+      <div id="grain" class="grain" data-layout-ignore></div>
+      <div id="kinetic-caption-layer" data-layout-allow-caption-zone data-layout-allow-overflow aria-hidden="true"></div>
+
+      <section id="opening-card" class="clip scene scene--white" data-start="0" data-duration="7" data-track-index="1">
+        <div class="scene-bg" data-layout-ignore></div>
+        <div class="paper-rule rule-a" data-layout-ignore></div>
+        <div class="paper-rule rule-b" data-layout-ignore></div>
+        <div class="doc-card">
+          <div class="doc-glyph" aria-hidden="true"></div>
+          <div class="doc-name">untitled <span>· 01</span></div>
+        </div>
+        <div class="corner-copy reveal">There is a version of beginning that looks almost invisible.</div>
+        <div class="tiny-dot one" data-layout-ignore></div>
+      </section>
+
+      <section id="document-card" class="clip scene scene--white" data-start="7" data-duration="6" data-track-index="1">
+        <div class="scene-bg" data-layout-ignore></div>
+        <div class="paper-rule rule-c" data-layout-ignore></div>
+        <div class="doc-card">
+          <div class="doc-glyph" aria-hidden="true"></div>
+          <div class="doc-name">blank page <span>· waiting</span></div>
+        </div>
+        <div class="corner-copy right reveal"><span class="copy-line">a cursor</span><span class="copy-line">a hand hovering</span><span class="copy-line">the first mark</span></div>
+      </section>
+
+      <section id="blank-page" class="clip scene scene--dark" data-start="13" data-duration="11" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot warm" src="assets/images/blank-page-night.png" alt="A blank page on a laptop at night" data-layout-allow-overflow />
+        <div class="soft-black" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="film-matte" data-layout-ignore></div>
+        <div class="scan-mark">quiet / 01</div>
+        <div class="cinema-copy reveal">
+          <div class="caption-kicker"><span class="kicker-dot"></span><span>the first mark</span><span class="kicker-rule"></span></div>
+          <span class="caption-line lead"><span class="caption-word">Nothing</span><span class="caption-word">has</span><span class="caption-word">happened</span><span class="caption-word">yet.</span></span>
+          <span class="caption-line support"><span class="caption-word">The</span><span class="caption-word">whole</span><span class="caption-word accent">day</span><span class="caption-word">is</span><span class="caption-word">waiting.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="typing-night" class="clip scene scene--dark" data-start="24" data-duration="11" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot warm" src="assets/images/hands-typing-night.png" alt="Hands typing slowly at night" data-layout-allow-overflow />
+        <div class="soft-black" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="cinema-copy right reveal">
+          <div class="caption-kicker"><span class="kicker-rule"></span><span>the pretend work</span><span class="kicker-dot"></span></div>
+          <span class="caption-line lead"><span class="caption-word">We</span><span class="caption-word">tell</span><span class="caption-word">ourselves</span></span>
+          <span class="caption-line support"><span class="caption-word">we're</span><span class="caption-word accent">getting</span><span class="caption-word">ready.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="prep-card" class="clip scene scene--white" data-start="35" data-duration="7" data-track-index="1">
+        <div class="scene-bg" data-layout-ignore></div>
+        <div class="paper-rule rule-a" data-layout-ignore></div>
+        <div class="document-lines reveal">
+          <span class="doc-line">another reference <small>open</small></span>
+          <span class="doc-line">another tutorial <small>watch</small></span>
+          <span class="doc-line">another reason <small>later</small></span>
+        </div>
+        <div class="display-block right reveal">
+          <span class="display-line">PREPARE</span>
+          <span class="sub-line">because the word sounds responsible.</span>
+        </div>
+      </section>
+
+      <section id="red-wait" class="clip scene scene--red" data-start="42" data-duration="10" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot red" src="assets/images/red-walk.png" alt="A silhouette in a red hallway" data-layout-allow-overflow />
+        <div class="red-wash" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="red-signal">the useful coat</div>
+        <div class="cinema-copy center">
+          <div class="caption-kicker"><span class="kicker-dot"></span><span>the excuse</span><span class="kicker-rule"></span></div>
+          <span class="caption-line emphasis"><span class="caption-word">Sometimes</span></span>
+          <span class="caption-line lead"><span class="caption-word accent">fear</span><span class="caption-word">wears</span><span class="caption-word">a</span><span class="caption-word">useful</span><span class="caption-word">coat.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="sleeping-desk" class="clip scene scene--dark" data-start="52" data-duration="10" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot warm" src="assets/images/asleep-at-desk.png" alt="A person asleep beside books at a desk" data-layout-allow-overflow />
+        <div class="soft-black" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="cinema-copy reveal">
+          <div class="caption-kicker"><span class="kicker-dot"></span><span>the safe version</span><span class="kicker-rule"></span></div>
+          <span class="caption-line lead"><span class="caption-word">It</span><span class="caption-word">keeps</span><span class="caption-word">the</span><span class="caption-word">work</span><span class="caption-word">clean.</span></span>
+          <span class="caption-line support"><span class="caption-word">Untouched.</span><span class="caption-word accent">Impossible</span><span class="caption-word">to</span><span class="caption-word">judge.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="brilliant-card" class="clip scene scene--white" data-start="62" data-duration="7" data-track-index="1">
+        <div class="scene-bg" data-layout-ignore></div>
+        <div class="paper-rule rule-b" data-layout-ignore></div>
+        <div class="display-block reveal">
+          <span class="display-line">BRILLIANT</span>
+          <span class="sub-line">as long as it stays inside your head.</span>
+        </div>
+        <div class="corner-copy right reveal"><span class="copy-line">the moment it becomes a sentence</span><span class="copy-line">it can become ordinary.</span></div>
+      </section>
+
+      <section id="charcoal" class="clip scene scene--dark" data-start="69" data-duration="11" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot mono" src="assets/images/anonymous-writer-charcoal.png" alt="An anonymous writer drawn in charcoal" data-layout-allow-overflow />
+        <div class="soft-black" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="scan-mark">archive / 02</div>
+        <div class="cinema-copy right reveal">
+          <div class="caption-kicker"><span class="kicker-rule"></span><span>version 01</span><span class="kicker-dot"></span></div>
+          <span class="caption-line lead serif"><span class="caption-word">The</span><span class="caption-word">first</span><span class="caption-word">version</span></span>
+          <span class="caption-line support"><span class="caption-word">may</span><span class="caption-word">lean</span><span class="caption-word accent">too</span><span class="caption-word">far</span><span class="caption-word">to</span><span class="caption-word">one</span><span class="caption-word">side.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="red-good" class="clip scene scene--red" data-start="80" data-duration="8" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot red" src="assets/images/red-walk.png" alt="A solitary silhouette in red" data-layout-allow-overflow />
+        <div class="red-wash" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="cinema-copy center">
+          <div class="caption-kicker"><span class="kicker-dot"></span><span>the turn</span><span class="kicker-rule"></span></div>
+          <span class="caption-line emphasis"><span class="caption-word">Good.</span></span>
+          <span class="caption-line lead"><span class="caption-word">Now</span><span class="caption-word">the</span><span class="caption-word">thing</span><span class="caption-word">is</span><span class="caption-word accent">real.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="first-line" class="clip scene scene--dark" data-start="88" data-duration="12" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot warm" src="assets/images/first-line.png" alt="A hand making the first line of ink" data-layout-allow-overflow />
+        <div class="soft-black" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="cinema-copy reveal">
+          <div class="caption-kicker"><span class="kicker-dot"></span><span>the mark</span><span class="kicker-rule"></span></div>
+          <span class="caption-line lead"><span class="caption-word">You</span><span class="caption-word">can</span><span class="caption-word accent">point</span><span class="caption-word">to</span><span class="caption-word">it.</span></span>
+          <span class="caption-line support"><span class="caption-word">You</span><span class="caption-word">can</span><span class="caption-word accent">change</span><span class="caption-word">it.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="change-card" class="clip scene scene--white" data-start="100" data-duration="5" data-track-index="1">
+        <div class="scene-bg" data-layout-ignore></div>
+        <div class="doc-card">
+          <div class="doc-glyph" aria-hidden="true"></div>
+          <div class="doc-name">version 01 <span>· editable</span></div>
+        </div>
+        <div class="corner-copy reveal"><span class="copy-line">clarity doesn't arrive first.</span><span class="copy-line">it arrives because the work gives you something real to answer.</span></div>
+      </section>
+
+      <section id="clarity-archive" class="clip scene scene--dark" data-start="105" data-duration="9" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot mono" src="assets/images/anonymous-writer-charcoal.png" alt="Charcoal drawing of a writer at a desk" data-layout-allow-overflow />
+        <div class="soft-black" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="cinema-copy center">
+          <div class="caption-kicker"><span class="kicker-dot"></span><span>the after</span><span class="kicker-rule"></span></div>
+          <span class="caption-line lead serif"><span class="caption-word accent">Clarity</span><span class="caption-word">is</span><span class="caption-word">made</span></span>
+          <span class="caption-line support"><span class="caption-word">after</span><span class="caption-word">the</span><span class="caption-word accent">mark.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="action-return" class="clip scene scene--dark" data-start="114" data-duration="10" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot warm" src="assets/images/hands-typing-night.png" alt="Hands returning to the keyboard" data-layout-allow-overflow />
+        <div class="soft-black" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="cinema-copy right reveal">
+          <div class="caption-kicker"><span class="kicker-rule"></span><span>the method</span><span class="kicker-dot"></span></div>
+          <span class="caption-line lead"><span class="caption-word">Action</span><span class="caption-word">isn't</span><span class="caption-word">the</span><span class="caption-word">reward.</span></span>
+          <span class="caption-line emphasis"><span class="caption-word">It</span><span class="caption-word">is</span><span class="caption-word">how</span><span class="caption-word">we</span><span class="caption-word">know.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="action-card" class="clip scene scene--white" data-start="124" data-duration="7" data-track-index="1">
+        <div class="scene-bg" data-layout-ignore></div>
+        <div class="paper-rule rule-a" data-layout-ignore></div>
+        <div class="display-block reveal">
+          <span class="display-line red">ACTION</span>
+          <span class="sub-line">is how understanding is made.</span>
+        </div>
+        <div class="corner-copy right reveal"><span class="copy-line">one paragraph</span><span class="copy-line">one bad shape</span><span class="copy-line">one minute</span></div>
+      </section>
+
+      <section id="red-choice" class="clip scene scene--red" data-start="131" data-duration="8" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot red" src="assets/images/red-walk.png" alt="A person moving through red light" data-layout-allow-overflow />
+        <div class="red-wash" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="red-signal">the next motion</div>
+        <div class="cinema-copy center">
+          <div class="caption-kicker"><span class="kicker-dot"></span><span>the only rule</span><span class="kicker-rule"></span></div>
+          <span class="caption-line emphasis"><span class="caption-word">Move.</span></span>
+          <span class="caption-line lead"><span class="caption-word">while</span><span class="caption-word accent">fear</span><span class="caption-word">is</span><span class="caption-word">still</span><span class="caption-word">talking.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="doorway" class="clip scene scene--dark" data-start="139" data-duration="14" data-track-index="1" data-layout-allow-overflow>
+        <div class="scene-bg" data-layout-ignore></div>
+        <img class="shot warm" src="assets/images/open-door-morning.png" alt="An open door leading to a morning path" data-layout-allow-overflow />
+        <div class="soft-black" data-layout-ignore></div>
+        <div class="film-vignette" data-layout-ignore></div>
+        <div class="film-matte" data-layout-ignore></div>
+        <div class="scan-mark">exit / 03</div>
+        <div class="cinema-copy reveal">
+          <div class="caption-kicker"><span class="kicker-dot"></span><span>the exit</span><span class="kicker-rule"></span></div>
+          <span class="caption-line lead serif"><span class="caption-word">Eventually,</span><span class="caption-word">the</span><span class="caption-word">dark</span><span class="caption-word">room</span></span>
+          <span class="caption-line support"><span class="caption-word">becomes</span><span class="caption-word">a</span><span class="caption-word accent">doorway.</span></span>
+          <div class="caption-progress" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section id="begin-card" class="clip scene scene--white" data-start="153" data-duration="7" data-track-index="1">
+        <div class="scene-bg" data-layout-ignore></div>
+        <div class="paper-rule rule-b" data-layout-ignore></div>
+        <div class="display-block reveal">
+          <span class="display-line">BEGIN</span>
+          <span class="display-line red">THERE.</span>
+        </div>
+        <div class="corner-copy right reveal"><span class="copy-line">not a promise to finish</span><span class="copy-line">just evidence that you entered the room.</span></div>
+      </section>
+
+      <section id="end-card" class="clip scene scene--white" data-start="160" data-duration="3" data-track-index="1">
+        <div class="scene-bg" data-layout-ignore></div>
+        <div class="end-mark">then begin again.<small>the room is still yours.</small></div>
+        <div class="last-dot" data-layout-ignore></div>
+      </section>
+
+      <audio id="voiceover" class="audio-clip" src="assets/audio/voiceover.wav" data-start="0" data-duration="149.37" data-track-index="50" data-volume="1"></audio>
+      <audio id="music-bed" class="audio-clip" src="assets/audio/music-bed.wav" data-start="0" data-duration="163" data-track-index="51" data-volume="1"></audio>
+
+      <audio id="sfx-key" class="audio-clip" src="assets/sfx/key-press.mp3" data-start="4.1" data-duration="0.4" data-track-index="60" data-volume="0.22"></audio>
+      <audio id="sfx-typing" class="audio-clip" src="assets/sfx/typing.mp3" data-start="25.2" data-duration="1.5" data-track-index="60" data-volume="0.18"></audio>
+      <audio id="sfx-impact" class="audio-clip" src="assets/sfx/impact-bass-1.mp3" data-start="42" data-duration="2.12" data-track-index="60" data-volume="0.16"></audio>
+      <audio id="sfx-whoosh-short" class="audio-clip" src="assets/sfx/whoosh-short.mp3" data-start="80" data-duration="0.57" data-track-index="60" data-volume="0.2"></audio>
+      <audio id="sfx-click" class="audio-clip" src="assets/sfx/click-soft.mp3" data-start="100.6" data-duration="0.37" data-track-index="60" data-volume="0.18"></audio>
+      <audio id="sfx-whoosh-cinematic" class="audio-clip" src="assets/sfx/whoosh-cinematic.mp3" data-start="118" data-duration="5.54" data-track-index="60" data-volume="0.13"></audio>
+      <audio id="sfx-riser" class="audio-clip" src="assets/sfx/riser.mp3" data-start="143" data-duration="10.03" data-track-index="60" data-volume="0.1"></audio>
+      <audio id="sfx-chime" class="audio-clip" src="assets/sfx/chime.mp3" data-start="160" data-duration="2.5" data-track-index="60" data-volume="0.16"></audio>
+    </div>
+
+    <script src="assets/audio/transcript-cues.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      const sceneSpecs = [
+        ["opening-card", 0, 7], ["document-card", 7, 6], ["blank-page", 13, 11],
+        ["typing-night", 24, 11], ["prep-card", 35, 7], ["red-wait", 42, 10],
+        ["sleeping-desk", 52, 10], ["brilliant-card", 62, 7], ["charcoal", 69, 11],
+        ["red-good", 80, 8], ["first-line", 88, 12], ["change-card", 100, 5],
+        ["clarity-archive", 105, 9], ["action-return", 114, 10], ["action-card", 124, 7],
+        ["red-choice", 131, 8], ["doorway", 139, 14], ["begin-card", 153, 7], ["end-card", 160, 3]
+      ];
+
+      const captionLayer = document.getElementById("kinetic-caption-layer");
+      const transcriptCues = window.__transcriptCues || [];
+      const accentWords = new Set([
+        "beginning", "invisible", "first", "mark", "ready", "preparation", "fear", "useful",
+        "brilliant", "sentence", "ordinary", "real", "change", "clarity", "action", "understanding",
+        "small", "attempt", "clumsy", "teach", "move", "motion", "important", "perfect", "doubt",
+        "doorway", "begin", "again", "enough"
+      ]);
+
+      const sceneForTime = (time) => {
+        const match = sceneSpecs.find(([, start, duration]) => time >= start && time < start + duration);
+        return match ? match[0] : "end-card";
+      };
+
+      const captionSegments = [];
+      let activeWords = [];
+      let activeSceneId = null;
+      const flushCaptionSegment = () => {
+        if (activeWords.length) {
+          captionSegments.push({ sceneId: activeSceneId, words: activeWords });
+          activeWords = [];
+          activeSceneId = null;
+        }
+      };
+
+      transcriptCues.forEach((cue) => {
+        const sceneId = sceneForTime(cue.start);
+        if (activeWords.length && sceneId !== activeSceneId) flushCaptionSegment();
+        if (!activeSceneId) activeSceneId = sceneId;
+        activeWords.push(cue);
+        if (/[.!?]$/.test(cue.text)) flushCaptionSegment();
+      });
+      flushCaptionSegment();
+
+      captionSegments.forEach((segment) => {
+        const scene = document.getElementById(segment.sceneId);
+        const phrase = document.createElement("div");
+        const tone = scene.classList.contains("scene--white")
+          ? "paper"
+          : scene.classList.contains("scene--red")
+            ? "red"
+            : "dark";
+        phrase.className = `kinetic-caption-phrase ${tone}`;
+        phrase.setAttribute("data-layout-allow-overflow", "");
+
+        segment.wordElements = segment.words.map((cue) => {
+          const word = document.createElement("span");
+          const normalized = cue.text.toLowerCase().replace(/[^a-z]/g, "");
+          word.className = `kinetic-caption-word${accentWords.has(normalized) ? " accent" : ""}`;
+          word.textContent = cue.text;
+          word.setAttribute("data-layout-allow-overflow", "");
+          phrase.appendChild(word);
+          return word;
+        });
+
+        segment.phrase = phrase;
+        captionLayer.appendChild(phrase);
+      });
+
+      tl.to("#grain", { x: 18, y: -12, duration: 163, ease: "none" }, 0);
+
+      sceneSpecs.forEach(([id, start, duration], index) => {
+        const scene = document.getElementById(id);
+        const shot = scene.querySelector(".shot");
+        const reveal = scene.querySelectorAll(".reveal:not(.cinema-copy)");
+        const rules = scene.querySelectorAll(".paper-rule");
+
+        if (shot) {
+          tl.fromTo(shot, { scale: 1.08, opacity: 0, x: index % 2 ? 12 : -10, y: 8 }, { scale: 1, opacity: 1, x: 0, y: 0, duration: 0.72, ease: "power3.out" }, start + 0.08);
+          tl.to(shot, { scale: 1.045, x: index % 2 ? -8 : 8, y: -5, duration: Math.max(1.1, duration - 0.9), ease: "sine.inOut" }, start + 0.8);
+        }
+
+        if (reveal.length) {
+          tl.fromTo(reveal, { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.58, stagger: 0.08, ease: "power3.out" }, start + 0.2);
+        }
+
+        if (rules.length) {
+          tl.fromTo(rules, { scaleX: 0 }, { scaleX: 1, duration: 0.72, stagger: 0.1, ease: "power3.out" }, start + 0.15);
+        }
+
+        const dot = scene.querySelector(".tiny-dot");
+        if (dot) {
+          tl.fromTo(dot, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.7)" }, start + 0.55);
+        }
+      });
+
+      captionSegments.forEach((segment, segmentIndex) => {
+        const firstCue = segment.words[0];
+        const lastCue = segment.words[segment.words.length - 1];
+        const nextStart = captionSegments[segmentIndex + 1]?.words[0]?.start ?? 149.8;
+        const phraseStart = Math.max(0, firstCue.start - 0.04);
+        let phraseEnd = Math.min(nextStart - 0.06, lastCue.end + 0.42);
+        if (phraseEnd < lastCue.end + 0.14) phraseEnd = lastCue.end + 0.14;
+
+        tl.set(segment.phrase, { visibility: "visible" }, phraseStart);
+        tl.fromTo(segment.phrase,
+          { opacity: 0 },
+          { opacity: 1, duration: 0.14, ease: "power2.out" },
+          phraseStart
+        );
+
+        segment.words.forEach((cue, wordIndex) => {
+          const word = segment.wordElements[wordIndex];
+          const isAccent = word.classList.contains("accent");
+          tl.fromTo(word,
+            { y: isAccent ? 18 : 24, opacity: 0, scale: isAccent ? 0.86 : 0.94 },
+            { y: 0, opacity: 1, scale: 1, duration: isAccent ? 0.28 : 0.24, ease: "back.out(1.45)" },
+            cue.start
+          );
+        });
+
+        tl.to(segment.phrase, { opacity: 0, duration: 0.18, ease: "power2.in" }, phraseEnd);
+        tl.set(segment.phrase, { opacity: 0, visibility: "hidden" }, phraseEnd + 0.18);
+      });
+
+      document.querySelectorAll(".doc-card").forEach((card) => {
+        const scene = card.closest(".scene");
+        const start = Number(scene.dataset.start || 0);
+        tl.fromTo(card, { opacity: 0 }, { opacity: 1, duration: 0.55, ease: "power2.out" }, start + 0.18);
+      });
+
+      tl.fromTo("#end-card .end-mark", { opacity: 0 }, { opacity: 1, duration: 0.55, ease: "power2.out" }, 160.15);
+      tl.fromTo("#end-card .last-dot", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }, 161.7);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

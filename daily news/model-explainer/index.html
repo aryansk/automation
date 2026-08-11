@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"deskName","type":"string","label":"Desk name","default":"godandbaddaily / Landscape Desk"},
+    {"id":"edition","type":"string","label":"Edition date","default":"07 Aug 2026"},
+    {"id":"openerTop","type":"string","label":"Opening title top","default":"THE MODEL IS NOT"},
+    {"id":"openerBottom","type":"string","label":"Opening title bottom","default":"THE PRODUCT"},
+    {"id":"openerSub","type":"string","label":"Opening sub-label","default":"One question · the durable moat when models become interchangeable"},
+    {"id":"story","type":"string","label":"Story JSON","default":"{}"},
+    {"id":"chapters","type":"string","label":"Chapter JSON","default":"[]"},
+    {"id":"chapterStarts","type":"string","label":"Chapter timing JSON","default":"[]"},
+    {"id":"globeAnimationId","type":"string","label":"Globe preset override (optional; use animations:list)","default":"auto"},
+    {"id":"globeAnimationPlan","type":"string","label":"Globe animation plan JSON (optional)","default":"{}"},
+    {"id":"globeMapData","type":"string","label":"Verified globe payload JSON (optional)","default":"{}"},
+    {"id":"globeMapSource","type":"string","label":"Verified globe source (optional)","default":""},
+    {"id":"captions","type":"string","label":"Caption JSON","default":"[]"},
+    {"id":"openerEnd","type":"number","label":"Opener end","default":6},
+    {"id":"endCardStart","type":"number","label":"End card start","default":340.896},
+    {"id":"endCardReveal","type":"number","label":"End card reveal","default":341.146},
+    {"id":"narrationAudio","type":"string","label":"Narration audio","default":"assets/narration/landscape-2026-08-07-model-not-product.wav"},
+    {"id":"footerNote","type":"string","label":"Footer note","default":"One question / context first"},
+    {"id":"ctaLine","type":"string","label":"End-card line","default":"The moat is the system, not the model."},
+    {"id":"ctaSource","type":"string","label":"End-card source note","default":"Sources in description · research refreshed 07 Aug 2026"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <link rel="preload" as="font" href="assets/fonts/league-gothic-400.ttf" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/ibm-plex-mono-700.ttf" crossorigin>
+    <link rel="stylesheet" href="assets/story-explainer-landscape.css">
+    <link rel="stylesheet" href="topic.css">
+    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/vendor/d3.min.js"></script>
+    <script src="assets/data/world-data.js"></script>
+    <script src="topic-data.js"></script>
+  </head>
+  <body>
+    <div id="root" data-composition-id="model-explainer" data-start="0" data-duration="224.768" data-width="1920" data-height="1080">
+      <div class="paper-grid" data-layout-ignore></div>
+      <canvas id="space-layer" width="1920" height="1080" aria-hidden="true" data-layout-ignore></canvas>
+      <canvas id="globe-layer" width="1920" height="1080" aria-hidden="true" data-layout-ignore></canvas>
+      <canvas id="map-layer" width="1920" height="1080" aria-hidden="true" data-layout-ignore></canvas>
+      <div class="rail" id="rail">
+        <span class="rail__desk"><span class="rail__dot"></span><span data-bind="deskName"></span></span>
+        <span class="rail__edition" data-bind="edition"></span>
+      </div>
+      <div class="rail__rule" id="rail-rule" data-layout-ignore></div>
+
+      <div class="opener" id="opener" data-layout-allow-overlap>
+        <div class="opener__eyebrow">LANDSCAPE / ONE QUESTION</div>
+        <h1 class="opener__title" id="opener-title"><span id="opener-title-top">THE MODEL IS NOT</span><span id="opener-title-bottom">THE PRODUCT</span></h1>
+        <p class="opener__sub" data-bind="openerSub"></p>
+      </div>
+
+      <div class="globe-hud" id="globe-hud">
+        <div class="globe-hud__topline"><span>GLOBE / LIVE CONTEXT</span><span id="globe-focus-codes">US · POLICY</span></div>
+        <div class="globe-hud__rule"></div>
+        <div class="globe-hud__bottomline"><span id="globe-focus-label">WASHINGTON / MARKET SIGNAL</span><span id="globe-focus-coordinates">38.9° N / 77.0° W</span></div>
+      </div>
+      <div class="globe-caption" id="globe-caption"><span class="globe-caption__tick"></span><span class="globe-caption__copy">The model is becoming the cheapest part of the stack — the moat is what surrounds it</span></div>
+
+      <main class="explainer" id="explainer">
+        <div class="chapter-nav" id="chapter-nav">
+          <span class="chapter-nav__line"></span>
+          <span class="chapter-nav__item" data-chapter-nav="0">01</span>
+          <span class="chapter-nav__item" data-chapter-nav="1">02</span>
+          <span class="chapter-nav__item" data-chapter-nav="2">03</span>
+          <span class="chapter-nav__item" data-chapter-nav="3">04</span>
+          <span class="chapter-nav__item" data-chapter-nav="4">05</span>
+          <span class="chapter-nav__label">CHAPTERS / ONE QUESTION</span>
+        </div>
+
+        <div class="topic-photo-dock" id="topic-photo-dock" data-layout-ignore>
+          <div class="topic-photo-dock__header"><span>FIELD NOTE / PRIMARY IMAGE</span><span id="topic-photo-index">01 / 05</span></div>
+          <figure class="topic-photo-card topic-photo-card--primary" id="topic-photo-card-a"><img id="topic-photo-a" src="assets/news-images/2026-08-03-open-models/us-capitol.jpg" alt="United States / Washington, D.C."><figcaption><b id="topic-photo-a-label">United States / Washington, D.C.</b><span id="topic-photo-a-caption">The policy signal.</span></figcaption></figure>
+          <figure class="topic-photo-card topic-photo-card--secondary" id="topic-photo-card-b"><img id="topic-photo-b" src="assets/news-images/2026-08-03-open-models/data-center.jpg" alt="Global / Data-centre campus"><figcaption><b id="topic-photo-b-label">Global / Data-centre campus</b><span id="topic-photo-b-caption">The compute behind the models.</span></figcaption></figure>
+          <div class="topic-photo-dock__credit" id="topic-photo-credit">Context image · source credit in story manifest</div>
+        </div>
+
+        <div class="topic-graphic-stage" id="topic-graphic-stage">
+
+          <div class="topic-graphic" id="graphic-letter">
+            <div class="topic-graphic__eyebrow">THE NEW SIGNAL / JULY 2026</div>
+            <div class="letter-lockup"><span class="letter-lockup__small">270+</span><strong>SIGNATORIES</strong><span class="letter-lockup__slash">/</span><span class="letter-lockup__small">OPEN</span><strong>WEIGHTS</strong></div>
+            <div class="letter-rail"><span class="letter-rail__dot"></span><span>MODEL → DISTRIBUTION → WORKFLOW → CONTEXT</span></div>
+          </div>
+
+          <div class="topic-graphic" id="graphic-definition">
+            <div class="topic-graphic__eyebrow">THE DEFINITION / THE STACK</div>
+            <div class="definition-axis"><div class="definition-node definition-node--open"><span class="definition-node__dot"></span><strong>MODEL</strong><em>interchangeable input</em></div><div class="definition-line"><i id="definition-line-fill"></i><span id="definition-arrow">→</span></div><div class="definition-node definition-node--closed"><span class="definition-node__dot"></span><strong>SYSTEM</strong><em>workflow · data · trust</em></div></div>
+            <div class="definition-note"><span class="definition-note__mark">≠</span><span>An open-weight model is software you can run anywhere — the moat is what surrounds it.</span></div>
+          </div>
+
+          <div class="topic-graphic" id="graphic-stack">
+            <div class="topic-graphic__eyebrow">FOLLOW THE STACK / WHERE THE MONEY LANDS</div>
+            <div class="stack-layout"><div class="stack-column"><div class="stack-layer stack-layer--model"><b>MODEL</b><span>commodity · falling price</span></div><div class="stack-layer stack-layer--data"><b>CLOUD</b><span>distribution layer</span></div><div class="stack-layer stack-layer--compute"><b>APPS</b><span>workflow · data</span></div><div class="stack-layer stack-layer--power"><b>ENTERPRISE</b><span>context · trust</span></div></div><div class="stack-arrow"><span>VALUE</span><i id="stack-arrow-line"></i><strong>UP / OUT</strong></div><div class="stack-callout"><div class="stack-callout__number">2.59</div><div class="stack-callout__unit">TRILLION USD</div><p>Gartner's 2026 worldwide AI spending forecast — up 47% year over year.</p></div></div>
+          </div>
+
+          <div class="topic-graphic" id="graphic-market">
+            <div class="topic-graphic__eyebrow">WHY MARKETS CARE / THE MARGIN SIGNAL</div>
+            <div class="market-layout"><svg id="market-chart" viewBox="0 0 470 220" aria-label="Illustrative model and application value chart"><path class="market-chart__grid" d="M18 34H452 M18 88H452 M18 142H452 M18 196H452"></path><path class="market-chart__axis" d="M18 12V196H452"></path><path class="market-chart__expected" id="market-expected" d="M24 182 C118 163 167 148 230 118 C300 85 354 65 446 25"></path><path class="market-chart__reality" id="market-reality" d="M24 182 C118 177 166 168 230 151 C301 132 355 121 446 105"></path><circle class="market-chart__point" id="market-point" cx="446" cy="25" r="7"></circle><text x="28" y="20">MODEL VALUE / FALLING</text><text x="28" y="214">TIME →</text></svg><div class="market-legend"><div class="market-legend__item"><i class="market-legend__line market-legend__line--expected"></i><span>MODEL VALUE</span></div><div class="market-legend__item"><i class="market-legend__line market-legend__line--reality"></i><span>APP + CONTEXT</span></div><div class="market-warning"><span class="market-warning__dot"></span><strong>MARGIN SQUEEZE</strong><em>Token costs plunge; the scarce layers capture the toll.</em></div></div></div>
+          </div>
+
+          <div class="topic-graphic" id="graphic-verdict">
+            <div class="topic-graphic__eyebrow">THE VERDICT / THE DURABLE MOAT</div>
+            <div class="verdict-lanes"><div class="verdict-lane"><span class="verdict-lane__index">01</span><strong>DISTRIBUTION</strong><em>reach at scale</em><i></i></div><div class="verdict-lane"><span class="verdict-lane__index">02</span><strong>WORKFLOW</strong><em>owned process</em><i></i></div><div class="verdict-lane"><span class="verdict-lane__index">03</span><strong>CONTEXT</strong><em>data + trust</em><i></i></div></div><div class="verdict-stamp" id="verdict-stamp">THE MOAT IS THE SYSTEM,<br>NOT THE MODEL</div>
+          </div>
+        </div>
+
+        <section class="chapter-panel" id="chapter-0"><div class="chapter__kicker" id="chapter-kicker-0"></div><h2 class="chapter__title" id="chapter-title-0"></h2><p class="chapter__body" id="chapter-body-0"></p><div class="chapter__tag" id="chapter-tag-0"></div></section>
+        <section class="chapter-panel" id="chapter-1"><div class="chapter__kicker" id="chapter-kicker-1"></div><h2 class="chapter__title" id="chapter-title-1"></h2><p class="chapter__body" id="chapter-body-1"></p><div class="chapter__tag" id="chapter-tag-1"></div></section>
+        <section class="chapter-panel" id="chapter-2"><div class="chapter__kicker" id="chapter-kicker-2"></div><h2 class="chapter__title" id="chapter-title-2"></h2><p class="chapter__body" id="chapter-body-2"></p><div class="chapter__tag" id="chapter-tag-2"></div></section>
+        <section class="chapter-panel" id="chapter-3"><div class="chapter__kicker" id="chapter-kicker-3"></div><h2 class="chapter__title" id="chapter-title-3"></h2><p class="chapter__body" id="chapter-body-3"></p><div class="chapter__tag" id="chapter-tag-3"></div></section>
+        <section class="chapter-panel" id="chapter-4"><div class="chapter__kicker" id="chapter-kicker-4"></div><h2 class="chapter__title" id="chapter-title-4"></h2><p class="chapter__body" id="chapter-body-4"></p><div class="chapter__tag" id="chapter-tag-4"></div></section>
+        <div class="topic-live-captions" id="live-captions" aria-hidden="true"><span class="topic-live-captions__label">LIVE CAPTIONS / NARRATION</span></div>
+        <div class="chapter-progress" id="chapter-progress"><span></span></div>
+      </main>
+
+      <div class="source-card" id="source-card"><div class="source-card__eyebrow">SOURCES / REPORTING + DATA</div><div class="source-card__links" id="source-card-links"></div><div class="source-card__note">Current reporting refreshed 07 Aug 2026 · analysis is not investment advice</div></div>
+      <div class="end-card" id="end-card"><span class="end-card__eyebrow">GODANDBADDAILY / LANDSCAPE</span><strong class="end-card__title" data-bind="ctaLine"></strong><span class="end-card__source" data-bind="ctaSource"></span></div>
+      <div class="footer" id="footer"><span data-bind="footerNote"></span><span data-bind="deskName"></span></div>
+      <audio id="narration-track" class="clip" data-start="0" data-duration="224.768" data-track-index="10" data-volume="1" src="assets/narration/landscape-2026-08-07-model-not-product.wav"></audio>
+      <div class="grain" data-layout-ignore></div>
+    </div>
+    <script>window.__timelines = window.__timelines || {}; gsap.defaults({ lazy: false }); window.__timelines["model-explainer"] = gsap.timeline({ paused: true, defaults: { ease: "power3.out", lazy: false } }); window.__trendVariables = window.__hyperframes.getVariables();</script>
+    <script type="module" src="renderer.js"></script>
+  </body>
+</html>

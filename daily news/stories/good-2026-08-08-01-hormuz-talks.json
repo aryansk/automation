@@ -1,0 +1,152 @@
+{
+  "eventId": "hormuz-talks-positive-oman-iran-2026-08-08",
+  "tone": "good",
+  "countryCode": "OM",
+  "countryName": "Oman",
+  "cityName": "",
+  "region": "Middle East",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Diplomacy · Shipping",
+  "headline": "Oman says Hormuz shipping talks with Iran are positive",
+  "summary": "Both sides signal progress toward reopening the vital strait, though Iran says a full restart still depends on other conditions.",
+  "script": "Oman says talks with Iran over the Strait of Hormuz are positive. The waterway carries about a fifth of the world's oil and gas. Iran says a deal is close, but the strait will not fully reopen until other conditions are met.",
+  "source": "BBC News",
+  "edition": "08 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-08-good/hormuz-talks/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-08-good/hormuz-talks/secondary.jpg",
+  "imageAlt": "Cargo ships anchored near the Strait of Hormuz off the coast of the United Arab Emirates.",
+  "imageAltTwo": "Aerial view of a large tanker transiting the Strait of Hormuz waterway.",
+  "imageCredit": "Getty Images",
+  "imageCreditTwo": "Getty Images",
+  "narrationAudio": "assets/narration/good-2026-08-08-01-hormuz-talks.wav",
+  "captions": [
+    {
+      "lines": [
+        "Hormuz talks are",
+        "positive, Oman says."
+      ],
+      "highlights": [
+        "positive",
+        "Oman says"
+      ]
+    },
+    {
+      "lines": [
+        "Strait carries a fifth of",
+        "the world's oil and gas."
+      ],
+      "highlights": [
+        "a fifth",
+        "oil and gas"
+      ]
+    },
+    {
+      "lines": [
+        "Iran: full reopening still",
+        "needs other conditions."
+      ],
+      "highlights": [
+        "full reopening",
+        "other conditions"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Hormuz talks positive, Oman says, as Iran warns deal would not open strait",
+      "url": "https://www.bbc.com/news/articles/c934j5y2lq9o",
+      "published": "2026-08-08",
+      "usedFor": [
+        "positive talks",
+        "Iran conditions",
+        "a fifth of world oil and gas"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Iran makes dramatic new demands around Strait of Hormuz",
+      "url": "https://apnews.com/article/yemen-houthis-turkey-kurdish-peace-mideast-roundup-aug-8-2026-feb75871fb82c44b3f7fd0ee02bb24b4",
+      "published": "2026-08-08",
+      "usedFor": [
+        "independent corroboration",
+        "negotiation status",
+        "shipping context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Significant diplomatic development affecting global energy shipping; ranking is editorial, not an objective trend metric.",
+    "researchDate": "08 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orientation",
+        "scriptSection": "opener",
+        "scriptCue": "The story opens by placing the talks at the global shipping chokepoint.",
+        "start": 0,
+        "animationId": "world-orbit"
+      },
+      {
+        "id": "location",
+        "scriptSection": "verified-location",
+        "scriptCue": "The narration names Oman and the Strait of Hormuz.",
+        "start": 2.6,
+        "animationId": "chokepoint-focus",
+        "mapSource": "BBC News 08 Aug 2026; AP News 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Strait of Hormuz",
+            "country": "Oman / Iran",
+            "code": "OM",
+            "coordinates": [56.5, 26.5]
+          },
+          "routes": [
+            {
+              "points": [[4.4777, 51.9244], [32.55, 30.45], [56.5, 26.5], [103.8198, 1.3521]],
+              "value": 72
+            },
+            {
+              "points": [[4.4777, 51.9244], [32.55, 30.45], [56.5, 26.5], [103.8198, 1.3521], [-79.68, 9.08]],
+              "value": 48
+            }
+          ]
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "claim-and-consequence",
+        "scriptCue": "The script explains the shipping route and the oil flow through the strait.",
+        "start": 7.2,
+        "animationId": "shipping-lanes",
+        "mapSource": "BBC News 08 Aug 2026; AP News 08 Aug 2026",
+        "mapData": {
+          "routes": [
+            {
+              "points": [[4.4777, 51.9244], [32.55, 30.45], [56.5, 26.5], [103.8198, 1.3521]],
+              "value": 75
+            },
+            {
+              "points": [[4.4777, 51.9244], [32.55, 30.45], [56.5, 26.5], [103.8198, 1.3521], [-79.68, 9.08]],
+              "value": 55
+            }
+          ],
+          "points": [[32.55, 30.45], [56.5, 26.5], [-79.68, 9.08]]
+        }
+      }
+    ]
+  }
+}

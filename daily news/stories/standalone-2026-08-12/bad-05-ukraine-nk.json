@@ -1,0 +1,153 @@
+{
+  "eventId": "ukraine-zaporizhzhia-nk-missiles-2026-08-10",
+  "tone": "bad",
+  "countryCode": "UA",
+  "countryName": "Ukraine",
+  "cityName": "Zaporizhzhia",
+  "region": "Europe",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "War · Conflict",
+  "headline": "Russia used North Korean missiles in Zaporizhzhia strike, Zelensky says",
+  "summary": "Ukraine's president said the overnight attack that killed at least six and injured 19 used ballistic missiles from Russia's ally North Korea.",
+  "script": "Ukraine says Russia used North Korean missiles in a new attack. The strike hit Zaporizhzhia, killing at least six people and injuring nineteen. President Zelensky says the missiles came from North Korea.",
+  "source": "BBC News",
+  "edition": "11 Aug 2026",
+  "storyNumber": "05",
+  "imageOne": "assets/news-images/2026-08-12-bad/ukraine-nk-missiles/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-12-bad/ukraine-nk-missiles/secondary.jpg",
+  "imageAlt": "Firefighters at the site of a missile strike in Zaporizhzhia, Ukraine.",
+  "imageAltTwo": "Damaged residential area after the overnight attack.",
+  "imageCredit": "Reuters / AFP",
+  "imageCreditTwo": "AP News",
+  "narrationAudio": "assets/narration/bad-05-ukraine-nk.wav",
+  "captions": [
+    {
+      "lines": [
+        "Russia strikes",
+        "Zaporizhzhia."
+      ],
+      "highlights": [
+        "strikes"
+      ]
+    },
+    {
+      "lines": [
+        "At least 6 dead,",
+        "19 injured."
+      ],
+      "highlights": [
+        "6 dead"
+      ]
+    },
+    {
+      "lines": [
+        "North Korean missiles",
+        "used, Zelensky says."
+      ],
+      "highlights": [
+        "North Korean"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Russia using North Korean missiles to strike Ukraine, Zelensky says",
+      "url": "https://www.bbc.com/news/articles/c151dpzwnvxo",
+      "published": "2026-08-11",
+      "usedFor": [
+        "Zaporizhzhia strike",
+        "6 dead, 19 injured",
+        "NK missiles"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "Russia uses North Korean missiles in attack that killed six in Ukraine, Zelenskiy says",
+      "url": "https://www.reuters.com/world/russian-attack-kyiv-triggers-fires-officials-say-2026-08-10/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "NK missile claim"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 5,
+    "basis": "Escalating foreign involvement.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Ukraine.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "UA",
+            "coordinates": [
+              31.5,
+              49
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Strike in Zaporizhzhia.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Zaporizhzhia",
+            "coordinates": [
+              35.14,
+              47.84
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Missile source from North Korea.",
+        "start": 9.5,
+        "animationId": "great-circle-route",
+        "mapSource": "Reuters / 10 Aug 2026",
+        "mapData": {
+          "route": [
+            {
+              "name": "North Korea",
+              "coordinates": [
+                127,
+                40
+              ]
+            },
+            {
+              "name": "Zaporizhzhia",
+              "coordinates": [
+                35.14,
+                47.84
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

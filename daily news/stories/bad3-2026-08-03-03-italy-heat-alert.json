@@ -1,0 +1,74 @@
+{
+  "eventId": "italy-heat-alert-2026-08-03",
+  "tone": "bad",
+  "countryCode": "IT",
+  "countryName": "Italy",
+  "cityName": "Rome",
+  "coordinates": [12.4964, 41.9028],
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "weather",
+  "kicker": "Weather · Health",
+  "headline": "Italy places almost all major cities on highest heat alert",
+  "summary": "The BBC reports 19 major cities, including Rome, Milan and Naples, on red alert as extreme heat strains health and infrastructure.",
+  "script": "Italy placed almost all major cities under its highest heat alert as a severe summer heatwave peaked. Nineteen cities are affected, raising risks for health and daily life.",
+  "source": "BBC · ANSA",
+  "edition": "03 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-03-real/italy-heat/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-03-real/italy-heat/ansa.jpg",
+  "imageAlt": "Two people walk in bright heat, one using a hand fan.",
+  "imageAltTwo": "A person cools off at a fountain in Rome.",
+  "imageCredit": "BBC News image",
+  "imageCreditTwo": "ANSA image",
+  "narrationAudio": "assets/narration/tour/bad3-2026-08-03-03-italy-heat-alert.wav",
+  "statValue": "19",
+  "statLabel": "cities on red alert",
+  "statPeriod": "heatwave peak",
+  "captions": [
+    {
+      "lines": ["Italy puts 19 cities", "on red heat alert."],
+      "highlights": ["19 cities", "red heat alert"]
+    },
+    {
+      "lines": ["Rome, Milan and Naples", "are among those affected."],
+      "highlights": ["Rome", "Milan", "Naples"]
+    },
+    {
+      "lines": ["Extreme heat raises", "health and infrastructure risks."],
+      "highlights": ["health", "infrastructure risks"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Italy heatwave puts 19 cities on red alert",
+      "url": "https://www.bbc.co.uk/news/articles/cr7k4gdrgljo?at_medium=RSS&at_campaign=rss",
+      "usedFor": ["city count", "current heat-alert context", "primary image"]
+    },
+    {
+      "publisher": "ANSA",
+      "title": "Italy's latest heatwave peaks with 18 cities on red alert",
+      "url": "https://www.ansa.it/english/news/general_news/2026/07/21/italys-latest-heatwave-peaks-with-18-cities-on-red-alert_4ae92d81-794f-4d2d-bf43-e941e5a71abf.html",
+      "published": "2026-07-21",
+      "usedFor": ["independent heat-alert context", "secondary image"]
+    },
+    {
+      "publisher": "Italian Ministry of Health",
+      "title": "Heat-wave bulletins",
+      "url": "https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/",
+      "usedFor": ["official alert system context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Current BBC world-feed prominence plus official and agency heat-alert context; ranking is editorial, not an objective trend metric.",
+    "researchDate": "03 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

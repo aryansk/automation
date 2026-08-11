@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"deskName","type":"string","label":"Desk name in the top rail","default":"IndieHouse.io News"},
+    {"id":"edition","type":"string","label":"Edition date","default":"02 Aug 2026"},
+    {"id":"openerTitle","type":"string","label":"Opening title","default":"Good morning, bad news"},
+    {"id":"openerLine","type":"string","label":"Cold open line","default":"Good morning, bad news—shipping through Hormuz is under pressure."},
+    {"id":"openerSub","type":"string","label":"Cold open sub-label","default":"Global brief · 02 Aug 2026"},
+    {"id":"openerEnd","type":"number","label":"When the cold open leaves","default":4.135},
+    {"id":"endCardStart","type":"number","label":"When the end card enters","default":55.778},
+    {"id":"endCardReveal","type":"number","label":"When the end card is readable","default":55.998},
+    {"id":"tour","type":"string","label":"JSON array of stops with timings","default":"[]"},
+    {"id":"narrationAudio","type":"string","label":"Continuous narration track","default":"assets/narration/silence.wav"},
+    {"id":"footerNote","type":"string","label":"Footer left text","default":"Context first"},
+    {"id":"ctaLine","type":"string","label":"End-card follow line","default":"Follow for tomorrow’s global brief."},
+    {"id":"ctaSource","type":"string","label":"End-card source reminder","default":"Sources in description."}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <link rel="preload" as="font" href="assets/fonts/league-gothic-400.ttf" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/ibm-plex-mono-700.ttf" crossorigin>
+    <link rel="stylesheet" href="assets/globe-tour.css">
+    <link rel="stylesheet" href="assets/globe-tour-landscape.css">
+    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/vendor/d3.min.js"></script>
+    <script src="assets/data/world-data.js"></script>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="globe-tour-landscape"
+      data-start="0"
+      data-duration="58.6"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div class="paper-grid" data-layout-ignore></div>
+      <canvas id="space-layer" width="1920" height="1080" aria-hidden="true" data-layout-ignore></canvas>
+      <canvas id="globe-layer" width="1920" height="1080" aria-hidden="true" data-layout-ignore></canvas>
+      <canvas id="map-layer" width="1920" height="1080" aria-hidden="true" data-layout-ignore></canvas>
+
+      <div class="rail" id="rail">
+        <span class="rail__desk"><span class="rail__dot"></span> <span data-bind="deskName"></span></span>
+        <span data-bind="edition"></span>
+      </div>
+      <div class="rail__rule" id="rail-rule" data-layout-ignore></div>
+
+      <div class="opener" id="opener">
+        <h1 class="opener__line" id="opener-line">
+          <span id="opener-line-first"></span>
+          <span id="opener-line-second"></span>
+        </h1>
+        <p class="opener__sub" data-bind="openerSub"></p>
+      </div>
+
+      <div class="locator" id="locator-0">
+        <span class="locator__tick"></span>
+        <span id="locator-name-0"></span>
+      </div>
+      <div class="locator" id="locator-1">
+        <span class="locator__tick"></span>
+        <span id="locator-name-1"></span>
+      </div>
+      <div class="locator" id="locator-2">
+        <span class="locator__tick"></span>
+        <span id="locator-name-2"></span>
+      </div>
+
+      <div class="story-media" id="story-media" aria-label="News photograph">
+        <div class="story-media__topline" data-layout-ignore>
+          <span>NEWSROOM / FIELD IMAGE</span>
+          <span>PHOTO ESSAY / 02 BEATS</span>
+        </div>
+        <div class="story-media__frame">
+          <div class="story-media__beat" id="story-beat-0-primary">
+            <img id="story-image-0-primary" class="story-media__image" data-story-image-slot="0-primary" src="assets/news-images/2026-08-02/iran-energy-aljazeera.jpg" alt="" loading="eager" decoding="sync" aria-hidden="true">
+            <span class="story-media__beat-index">PHOTO 01 / 02</span>
+            <span class="story-media__beat-credit" id="story-credit-0-primary"></span>
+          </div>
+          <div class="story-media__beat" id="story-beat-0-secondary">
+            <img id="story-image-0-secondary" class="story-media__image" data-story-image-slot="0-secondary" src="assets/news-images/2026-07-31/hormuz-ap.jpg" alt="" loading="eager" decoding="sync" aria-hidden="true">
+            <span class="story-media__beat-index">PHOTO 02 / 02</span>
+            <span class="story-media__beat-credit" id="story-credit-0-secondary"></span>
+          </div>
+          <div class="story-media__beat" id="story-beat-1-primary">
+            <img id="story-image-1-primary" class="story-media__image" data-story-image-slot="1-primary" src="assets/news-images/2026-08-02/ceuta-border-ap.jpg" alt="" loading="eager" decoding="sync" aria-hidden="true">
+            <span class="story-media__beat-index">PHOTO 01 / 02</span>
+            <span class="story-media__beat-credit" id="story-credit-1-primary"></span>
+          </div>
+          <div class="story-media__beat" id="story-beat-1-secondary">
+            <img id="story-image-1-secondary" class="story-media__image" data-story-image-slot="1-secondary" src="assets/news-images/2026-08-02/ceuta-border-aljazeera.jpg" alt="" loading="eager" decoding="sync" aria-hidden="true">
+            <span class="story-media__beat-index">PHOTO 02 / 02</span>
+            <span class="story-media__beat-credit" id="story-credit-1-secondary"></span>
+          </div>
+          <div class="story-media__beat" id="story-beat-2-primary">
+            <img id="story-image-2-primary" class="story-media__image" data-story-image-slot="2-primary" src="assets/news-images/2026-08-02/japan-quake-ap.jpg" alt="" loading="eager" decoding="sync" aria-hidden="true">
+            <span class="story-media__beat-index">PHOTO 01 / 02</span>
+            <span class="story-media__beat-credit" id="story-credit-2-primary"></span>
+          </div>
+          <div class="story-media__beat" id="story-beat-2-secondary">
+            <img id="story-image-2-secondary" class="story-media__image" data-story-image-slot="2-secondary" src="assets/news-images/2026-07-31/japan-quake-ap.jpg" alt="" loading="eager" decoding="sync" aria-hidden="true">
+            <span class="story-media__beat-index">PHOTO 02 / 02</span>
+            <span class="story-media__beat-credit" id="story-credit-2-secondary"></span>
+          </div>
+          <div class="story-media__wash" data-layout-ignore></div>
+          <div class="story-media__scrim" data-layout-ignore></div>
+          <div class="story-media__corner" data-layout-ignore></div>
+        </div>
+      </div>
+
+      <div class="card" id="card-0">
+        <div class="card__meta">
+          <span id="card-kicker-0"></span>
+          <span class="card__meta-spacer"></span>
+          <span id="card-index-0"></span>
+        </div>
+        <h2 class="card__headline" id="card-headline-0"></h2>
+        <p class="card__deck" id="card-deck-0"></p>
+        <div class="card__source" id="card-source-0"></div>
+      </div>
+      <div class="card" id="card-1">
+        <div class="card__meta">
+          <span id="card-kicker-1"></span>
+          <span class="card__meta-spacer"></span>
+          <span id="card-index-1"></span>
+        </div>
+        <h2 class="card__headline" id="card-headline-1"></h2>
+        <p class="card__deck" id="card-deck-1"></p>
+        <div class="card__source" id="card-source-1"></div>
+      </div>
+      <div class="card" id="card-2">
+        <div class="card__meta">
+          <span id="card-kicker-2"></span>
+          <span class="card__meta-spacer"></span>
+          <span id="card-index-2"></span>
+        </div>
+        <h2 class="card__headline" id="card-headline-2"></h2>
+        <p class="card__deck" id="card-deck-2"></p>
+        <div class="card__source" id="card-source-2"></div>
+      </div>
+
+      <div class="end-card" id="end-card">
+        <span class="end-card__eyebrow">IndieHouse.io News / Next edition</span>
+        <strong class="end-card__title" data-bind="ctaLine"></strong>
+        <span class="end-card__source" data-bind="ctaSource"></span>
+      </div>
+
+      <div class="footer" id="footer">
+        <span data-bind="footerNote"></span>
+        <span data-bind="deskName"></span>
+      </div>
+
+      <audio id="narration-track" class="clip" data-start="0" data-duration="58.6" data-track-index="10" data-volume="1" src="assets/narration/globe-tour.wav"></audio>
+      <div class="grain" data-layout-ignore></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      gsap.defaults({ lazy: false });
+      window.__timelines["globe-tour-landscape"] = gsap.timeline({
+        paused: true,
+        defaults: { ease: "power3.out", lazy: false },
+      });
+      window.__globeTourVariables = window.__hyperframes.getVariables();
+    </script>
+    <script type="module" src="assets/globe-tour-renderer.js"></script>
+  </body>
+</html>

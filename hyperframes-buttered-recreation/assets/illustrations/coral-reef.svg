@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#53c7df"/><stop offset=".58" stop-color="#147995"/><stop offset="1" stop-color="#083c54"/></linearGradient>
+    <pattern id="grain" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="8" cy="14" r="2" fill="#fff" opacity=".2"/><circle cx="25" cy="29" r="1.5" fill="#f2d476" opacity=".28"/></pattern>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#water)"/>
+  <path d="M120 0C250 300 180 490 320 760s180 400 85 780" stroke="#c0f4ef" stroke-width="36" opacity=".12" fill="none"/>
+  <path d="M720 0C590 260 690 492 560 760s-62 480 60 960" stroke="#fff" stroke-width="24" opacity=".1" fill="none"/>
+  <g fill="#d96d58" stroke="#f2d476" stroke-width="4">
+    <path d="M0 1660c45-240 18-380 74-430 52-45 88 35 91 165 10-213 36-356 91-355 54 1 40 190 42 321 20-182 53-308 105-284 55 26 9 198 18 347H0z"/>
+    <path d="M610 1800c25-220 7-366 64-400 51-31 77 50 79 182 9-219 38-334 87-315 50 19 24 188 30 323 28-156 55-260 106-232 47 27 5 168 24 342H610z" fill="#e28b68"/>
+  </g>
+  <g fill="#f2d476" opacity=".92">
+    <ellipse cx="130" cy="1530" rx="48" ry="22"/><ellipse cx="270" cy="1690" rx="36" ry="18"/><ellipse cx="772" cy="1610" rx="52" ry="20"/><ellipse cx="930" cy="1760" rx="30" ry="15"/>
+  </g>
+  <g fill="none" stroke="#eaf9f1" stroke-width="6" opacity=".75"><path d="M180 1250c34-58 76-58 108 0s74 58 108 0"/><path d="M610 1210c42-66 90-66 132 0s84 66 126 0"/></g>
+  <g fill="#f2eee1" opacity=".83"><circle cx="848" cy="422" r="12"/><circle cx="880" cy="470" r="7"/><circle cx="214" cy="354" r="9"/><circle cx="258" cy="408" r="6"/></g>
+  <path d="M268 690c62-46 144-46 202 3-29 74-128 84-202-3z" fill="#6f9d62" stroke="#24252b" stroke-width="7"/>
+  <path d="M448 694l49-29 24 18-40 28z" fill="#6f9d62" stroke="#24252b" stroke-width="7"/>
+  <circle cx="306" cy="676" r="7" fill="#24252b"/>
+  <rect width="1080" height="1920" fill="url(#grain)"/>
+  <text x="84" y="1780" fill="#f2eee1" font-family="EB Garamond, serif" font-size="82" font-style="italic">the ocean remembers</text>
+</svg>

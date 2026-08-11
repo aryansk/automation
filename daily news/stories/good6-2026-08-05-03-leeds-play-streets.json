@@ -1,0 +1,93 @@
+{
+  "eventId": "leeds-play-streets-2026-08-05",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Leeds",
+  "coordinates": [
+    -1.55,
+    53.8
+  ],
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Community · Children",
+  "headline": "Leeds closes streets so children can play outside safely",
+  "summary": "Play Streets are being rolled out in poorer areas, giving kids a rare chance to play together away from traffic.",
+  "script": "A city in England is closing residential streets so children can play outside safely. The Play Streets scheme in Leeds gives kids a rare chance to play together away from traffic, and is being expanded into poorer neighbourhoods.",
+  "source": "BBC News",
+  "edition": "05 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-05-good6/leeds-play/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-good6/leeds-play/secondary.jpg",
+  "imageAlt": "Children play on scooters in a residential street closed to traffic in Leeds.",
+  "imageAltTwo": "Children make bubbles together on the closed street, watched by a parent in a high-vis vest.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/good6-2026-08-05-03-leeds-play-streets.wav",
+  "captions": [
+    {
+      "lines": [
+        "Leeds closes streets",
+        "so kids can play."
+      ],
+      "highlights": [
+        "Leeds",
+        "kids can play"
+      ]
+    },
+    {
+      "lines": [
+        "Play Streets target",
+        "poorer areas."
+      ],
+      "highlights": [
+        "Play Streets",
+        "poorer areas"
+      ]
+    },
+    {
+      "lines": [
+        "Children get a safe",
+        "space to play."
+      ],
+      "highlights": [
+        "safe space",
+        "to play"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Leeds: The city closing down streets so children can play",
+      "url": "https://www.bbc.co.uk/news/articles/c8jnmzekx0ro",
+      "published": "2026-08-05",
+      "usedFor": [
+        "Play Streets rollout",
+        "community impact",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "Play England",
+      "title": "Open letter urging national play strategy",
+      "url": "https://www.playengland.org.uk",
+      "published": "2026-08-05",
+      "usedFor": [
+        "national play strategy context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Fresh community-positive story with national policy relevance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

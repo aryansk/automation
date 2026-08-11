@@ -1,0 +1,94 @@
+{
+  "eventId": "faize-noore-olya-crew-rescued-2026-08-05",
+  "tone": "good",
+  "countryCode": "IN",
+  "countryName": "India",
+  "cityName": "Mumbai",
+  "coordinates": [
+    72.8777,
+    19.076
+  ],
+  "region": "South Asia",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Maritime · Rescue",
+  "headline": "All 14 crew rescued after Indian ship sinks off Yemen coast",
+  "summary": "The MSV Faize Noore Oliya capsized after being hit by a projectile; 13 Indian crew and one other were saved.",
+  "script": "All fourteen crew members have been safely rescued after an Indian ship sank off the coast of Yemen. Thirteen of them are Indian nationals. Officials condemned the attack and called for safe passage for commercial shipping in the region.",
+  "source": "BBC · Reuters",
+  "edition": "05 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-05-good/india-ship-rescue/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-good/india-ship-rescue/secondary.jpg",
+  "imageAlt": "The MSV Faize Noore Oliya, an Indian-flagged vessel, seen at sea.",
+  "imageAltTwo": "A file image of ships at a Yemeni port, illustrating the region's busy shipping lanes.",
+  "imageCredit": "AFP via Getty Images",
+  "imageCreditTwo": "AFP via Getty Images",
+  "narrationAudio": "assets/narration/good5-2026-08-05-03-india-ship-rescue.wav",
+  "captions": [
+    {
+      "lines": [
+        "All 14 crew rescued",
+        "after ship sinks."
+      ],
+      "highlights": [
+        "All 14 crew",
+        "rescued"
+      ]
+    },
+    {
+      "lines": [
+        "Vessel hit by a projectile",
+        "off Yemen's coast."
+      ],
+      "highlights": [
+        "projectile",
+        "Yemen"
+      ]
+    },
+    {
+      "lines": [
+        "India condemns the attack",
+        "on commercial shipping."
+      ],
+      "highlights": [
+        "India condemns",
+        "attack"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Projectile sinks Indian-flagged ship off Yemen coast",
+      "url": "https://www.bbc.co.uk/news/articles/cly84we1y37o",
+      "published": "2026-08-05",
+      "usedFor": [
+        "rescue confirmation",
+        "vessel name",
+        "primary context"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "India says crew rescued after ship hit off Yemen",
+      "url": "https://www.reuters.com/world/middle-east/",
+      "published": "2026-08-05",
+      "usedFor": [
+        "independent corroboration",
+        "shipping ministry statement"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Positive human-outcome rescue story amid regional shipping disruption; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

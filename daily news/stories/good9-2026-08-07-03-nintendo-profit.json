@@ -1,0 +1,158 @@
+{
+  "eventId": "nintendo-switch2-profit-2026-08-06",
+  "tone": "good",
+  "countryCode": "JP",
+  "countryName": "Japan",
+  "cityName": "Kyoto",
+  "region": "Asia",
+  "urgency": "standard",
+  "storyType": "financial",
+  "kicker": "Business · Gaming",
+  "headline": "Nintendo profit jumps 53.5% as Switch 2 demand stays strong",
+  "summary": "The Kyoto company's first-quarter profit hit $933 million, helped by Switch 2 console sales and the Super Mario Galaxy movie.",
+  "script": "Nintendo's quarterly profit jumped more than fifty percent. The Kyoto game maker sold nearly four million Switch 2 consoles worldwide, while the Super Mario Galaxy movie filled cinemas. Its shares rose nearly three percent in Tokyo trading.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-07-good/nintendo-profit/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-good/nintendo-profit/secondary.jpg",
+  "imageAlt": "A Nintendo logo is displayed on a video screen.",
+  "imageAltTwo": "The logo of Japanese technology company SoftBank is seen at its Tokyo shop.",
+  "imageCredit": "AP Photo/George Walker IV",
+  "imageCreditTwo": "AP Photo/Shuji Kajiyama",
+  "narrationAudio": "assets/narration/good9-2026-08-07-03-nintendo-profit.wav",
+  "marketSymbol": "NTDOY",
+  "marketValue": "$933M",
+  "marketChange": "+53.5%",
+  "marketPeriod": "Q1 2026",
+  "captions": [
+    {
+      "lines": [
+        "Nintendo profit up",
+        "53.5% in one quarter."
+      ],
+      "highlights": [
+        "up 53.5%"
+      ]
+    },
+    {
+      "lines": [
+        "Switch 2 sales near",
+        "4 million consoles."
+      ],
+      "highlights": [
+        "4 million consoles"
+      ]
+    },
+    {
+      "lines": [
+        "Super Mario Galaxy movie",
+        "fills cinemas."
+      ],
+      "highlights": [
+        "Super Mario Galaxy"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Japanese game company Nintendo reports a jump in profit on the popularity of its Switch 2",
+      "url": "https://apnews.com/article/nintendo-games-super-mario-japan-earnings-switch-63e5fa48c9b516a36823ae8857effdb8",
+      "published": "2026-08-06",
+      "usedFor": [
+        "53.5% profit jump",
+        "147.4 billion yen figure",
+        "3.82 million Switch 2 sales",
+        "share rise",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Japanese tech company SoftBank Group sees profit drop despite AI investments",
+      "url": "https://apnews.com/article/softbank-technology-ai-japan-earnings-robotics-6f49a9a3afec4df2fb24bb89444c29ba",
+      "published": "2026-08-06",
+      "usedFor": [
+        "Japanese earnings context",
+        "secondary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Major company earnings milestone with broad consumer relevance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the story in Japan.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "JP",
+            "coordinates": [
+              138,
+              36
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Kyoto, Nintendo's home.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Kyoto",
+            "coordinates": [
+              135.768,
+              35.011
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show global console demand spreading outward.",
+        "start": 9.5,
+        "animationId": "multi-country-sweep",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "JP",
+            "US",
+            "GB",
+            "DE",
+            "FR"
+          ],
+          "target": {
+            "code": "JP",
+            "coordinates": [
+              135.768,
+              35.011
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

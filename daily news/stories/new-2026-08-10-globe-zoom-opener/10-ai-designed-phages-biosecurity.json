@@ -1,0 +1,61 @@
+{
+  "eventId": "ai-designed-phages-biosecurity-2026-08-09",
+  "tone": "bad",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Palo Alto",
+  "coordinates": [
+    -122.143,
+    37.4419
+  ],
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "AI · Biosecurity",
+  "headline": "AI-designed phages kill lab bacteria, raising biosecurity questions",
+  "summary": "Researchers tested AI-generated bacteriophages against non-pathogenic E. coli while emphasizing safety constraints and the need for governance.",
+  "script": "AI-designed bacteriophages killed laboratory E. coli. The work used non-pathogenic bacteria, but it raises a bigger question: can biosecurity rules keep pace with synthetic biology?",
+  "source": "Arc Institute",
+  "edition": "10 Aug 2026",
+  "storyNumber": "10",
+  "imageOne": "assets/stories/2026-08-10/ai-designed-phages/primary.png",
+  "imageTwo": "assets/stories/2026-08-10/ai-designed-phages/secondary.png",
+  "imageAlt": "Arc Institute diagram showing the design template for an engineered bacteriophage.",
+  "imageAltTwo": "Arc Institute diagram showing laboratory testing of an engineered phage.",
+  "imageCredit": "Arc Institute",
+  "imageCreditTwo": "Arc Institute",
+  "narrationAudio": "assets/narration/new-2026-08-10/ai-designed-phages-biosecurity.wav",
+  "sources": [
+    {
+      "publisher": "Arc Institute",
+      "title": "First synthetic phages designed by a language model",
+      "url": "https://arcinstitute.org/news/hie-king-first-synthetic-phage",
+      "published": "2026-08-06",
+      "usedFor": [
+        "285 designs and 16 functional phages",
+        "non-pathogenic E. coli safety boundary"
+      ]
+    },
+    {
+      "publisher": "Stanford HAI",
+      "title": "AI and synthetic-biology governance context",
+      "url": "https://hai.stanford.edu/",
+      "published": "2026-08-09",
+      "usedFor": [
+        "biosecurity governance context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 10,
+    "basis": "A genuinely new lab capability with an explicit safety boundary and a consequential governance question; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

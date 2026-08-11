@@ -1,0 +1,153 @@
+{
+  "eventId": "meta-child-safety-ruling-2026-08-06",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Santa Fe",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Technology · Justice",
+  "headline": "Meta ordered to pay $567m in largest child safety ruling",
+  "summary": "A New Mexico judge ruled the Instagram and Facebook parent is a 'public nuisance' and ordered it to fund programs treating online harms to children.",
+  "script": "A New Mexico judge ordered Meta to pay five hundred sixty seven million dollars for failing to protect children online. Calling the company a public nuisance, the judge said the money must fund treatment and prevention programs.",
+  "source": "BBC News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-07-good/meta-child-safety/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-good/meta-child-safety/secondary.jpg",
+  "imageAlt": "Meta CEO Mark Zuckerberg wears black sunglasses and a dark polo shirt outdoors.",
+  "imageAltTwo": "A Meta logo is shown on a video screen at an AI developer conference.",
+  "imageCredit": "Reuters via BBC",
+  "imageCreditTwo": "AP Photo/Jeff Chiu",
+  "narrationAudio": "assets/narration/good10-2026-08-07-01-meta-child-safety.wav",
+  "captions": [
+    {
+      "lines": [
+        "Meta ordered to pay",
+        "$567m for child safety."
+      ],
+      "highlights": [
+        "$567m"
+      ]
+    },
+    {
+      "lines": [
+        "Judge calls company a",
+        "'public nuisance'."
+      ],
+      "highlights": [
+        "public nuisance"
+      ]
+    },
+    {
+      "lines": [
+        "Money funds treatment and",
+        "prevention programs."
+      ],
+      "highlights": [
+        "prevention programs"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Meta fined $567m in largest child safety ruling against social media giant",
+      "url": "https://www.bbc.com/news/articles/cd7lz3wr2rlo",
+      "published": "2026-08-07",
+      "usedFor": [
+        "$567m fine",
+        "public nuisance finding",
+        "fund for treatment and prevention",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Court orders Instagram and Facebook's Meta to pay $567M to address kids' mental health online",
+      "url": "https://apnews.com/article/meta-court-ruling-mental-health-online-platforms-21b425faf745d0f736b310ebd8bc6b89",
+      "published": "2026-08-06",
+      "usedFor": [
+        "corroboration of ruling",
+        "secondary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Landmark consumer-protection ruling with broad societal relevance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the ruling in the United States.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -98,
+              39
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on New Mexico, where the case was decided.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Santa Fe",
+            "coordinates": [
+              -105.937,
+              35.687
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the national reach of Meta's platforms.",
+        "start": 9.5,
+        "animationId": "multi-country-sweep",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "US",
+            "GB",
+            "DE",
+            "FR",
+            "BR"
+          ],
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -105.937,
+              35.687
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

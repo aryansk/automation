@@ -1,21 +1,15 @@
 import * as THREE from "../vendor/three.module.js";
+import { clamp, clamp01, easeOutQuint, mix, smooth } from "./animation-math.js";
 
+export { clamp, clamp01, easeOutQuint, mix, smooth };
 export const DEG = Math.PI / 180;
 export const EARTH_RADIUS = 2.08;
 export const TEXTURES = Object.freeze({
-  day: "assets/textures/earth-day.jpg",
-  clouds: "assets/textures/earth-clouds.jpg",
-  normal: "assets/textures/earth-normal.png",
-  specular: "assets/textures/earth-specular.png",
+  day: new URL("../textures/earth-day.jpg", import.meta.url).href,
+  clouds: new URL("../textures/earth-clouds.jpg", import.meta.url).href,
+  normal: new URL("../textures/earth-normal.png", import.meta.url).href,
+  specular: new URL("../textures/earth-specular.png", import.meta.url).href,
 });
-
-const clamp01 = (value) => Math.max(0, Math.min(1, value));
-const mix = (from, to, progress) => from + (to - from) * progress;
-const smooth = (value) => {
-  const next = clamp01(value);
-  return next * next * (3 - 2 * next);
-};
-const easeOutQuint = (value) => 1 - Math.pow(1 - clamp01(value), 5);
 
 export function latLonVector(longitude, latitude, radius = EARTH_RADIUS) {
   const phi = (Number(longitude) + 180) * DEG;

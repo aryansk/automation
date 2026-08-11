@@ -1,0 +1,152 @@
+{
+  "eventId": "australia-humpback-self-release-kgari-2026-08-09",
+  "tone": "good",
+  "countryCode": "AU",
+  "countryName": "Australia",
+  "cityName": "K'gari",
+  "region": "Oceania",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Wildlife · Conservation",
+  "headline": "Humpback whale frees itself after stranding on Australian island beach",
+  "summary": "A young girl found the whale at Wathumba Creek on K'gari and it self-released as the tide rose, wildlife authorities said.",
+  "script": "A humpback whale has freed itself after stranding on an Australian beach. A young girl found it at Wathumba Creek on K'gari island. The whale swam away as the tide rose.",
+  "source": "BBC News",
+  "edition": "11 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-12-good/whale-self-release/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-12-good/whale-self-release/secondary.jpg",
+  "imageAlt": "Humpback whale surfacing near the Queensland coast.",
+  "imageAltTwo": "Beach at Wathumba Creek on K'gari where the whale stranded.",
+  "imageCredit": "Queensland Department of Environment via BBC",
+  "imageCreditTwo": "Tourism Queensland",
+  "narrationAudio": "assets/narration/good-02-australia-whale.wav",
+  "captions": [
+    {
+      "lines": [
+        "Girl finds whale",
+        "stranded on beach."
+      ],
+      "highlights": [
+        "stranded"
+      ]
+    },
+    {
+      "lines": [
+        "Humpback self-releases",
+        "as tide rises."
+      ],
+      "highlights": [
+        "self-releases"
+      ]
+    },
+    {
+      "lines": [
+        "Whale swims free",
+        "off K'gari."
+      ],
+      "highlights": [
+        "swims free"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Young girl finds whale stranded on Australian beach",
+      "url": "https://www.bbc.com/news/videos/c1w148g9e5vo",
+      "published": "2026-08-11",
+      "usedFor": [
+        "stranding location",
+        "self-release"
+      ]
+    },
+    {
+      "publisher": "Queensland Department of the Environment, Tourism, Science and Innovation",
+      "title": "Marine wildlife stranding guidance",
+      "url": "https://www.qld.gov.au/environment/plants-animals/animals/living-with/marine-strandings",
+      "published": "2026-08-11",
+      "usedFor": [
+        "self-release confirmation"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Uplifting wildlife outcome.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Australia.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "AU",
+            "coordinates": [
+              133,
+              -25
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on K'gari island.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "K'gari",
+            "coordinates": [
+              153.1,
+              -25.2
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Whale swims free.",
+        "start": 9.5,
+        "animationId": "great-circle-route",
+        "mapSource": "Queensland DETSI / 11 Aug 2026",
+        "mapData": {
+          "route": [
+            {
+              "name": "Wathumba Creek",
+              "coordinates": [
+                153.02,
+                -25.08
+              ]
+            },
+            {
+              "name": "Open water",
+              "coordinates": [
+                153.5,
+                -24.9
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

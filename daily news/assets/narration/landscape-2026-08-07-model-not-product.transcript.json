@@ -1,0 +1,3002 @@
+[
+  {
+    "text": "On",
+    "start": 0.03,
+    "end": 0.19
+  },
+  {
+    "text": "July",
+    "start": 0.19,
+    "end": 0.54
+  },
+  {
+    "text": "24th,",
+    "start": 0.61,
+    "end": 1.53
+  },
+  {
+    "text": "2026,",
+    "start": 1.53,
+    "end": 2.92
+  },
+  {
+    "text": "more",
+    "start": 2.96,
+    "end": 3.21
+  },
+  {
+    "text": "than",
+    "start": 3.21,
+    "end": 3.5
+  },
+  {
+    "text": "270",
+    "start": 3.5,
+    "end": 4.16
+  },
+  {
+    "text": "companies",
+    "start": 4.16,
+    "end": 4.84
+  },
+  {
+    "text": "and",
+    "start": 4.87,
+    "end": 5.03
+  },
+  {
+    "text": "organizations",
+    "start": 5.03,
+    "end": 5.85
+  },
+  {
+    "text": "signed",
+    "start": 5.85,
+    "end": 5.93
+  },
+  {
+    "text": "an",
+    "start": 6.29,
+    "end": 6.36
+  },
+  {
+    "text": "open",
+    "start": 6.36,
+    "end": 6.6
+  },
+  {
+    "text": "letter",
+    "start": 6.6,
+    "end": 6.96
+  },
+  {
+    "text": "to",
+    "start": 6.96,
+    "end": 7.15
+  },
+  {
+    "text": "Washington.",
+    "start": 7.15,
+    "end": 8.44
+  },
+  {
+    "text": "Microsoft,",
+    "start": 8.47,
+    "end": 9.5
+  },
+  {
+    "text": "Nvidia,",
+    "start": 9.5,
+    "end": 10.26
+  },
+  {
+    "text": "Meta,",
+    "start": 10.27,
+    "end": 10.79
+  },
+  {
+    "text": "and",
+    "start": 10.79,
+    "end": 10.97
+  },
+  {
+    "text": "a",
+    "start": 10.97,
+    "end": 11.03
+  },
+  {
+    "text": "long",
+    "start": 11.03,
+    "end": 11.07
+  },
+  {
+    "text": "list",
+    "start": 11.4,
+    "end": 11.52
+  },
+  {
+    "text": "of",
+    "start": 11.52,
+    "end": 11.64
+  },
+  {
+    "text": "others",
+    "start": 11.64,
+    "end": 11.94
+  },
+  {
+    "text": "urged",
+    "start": 12.03,
+    "end": 12.38
+  },
+  {
+    "text": "policymakers",
+    "start": 12.38,
+    "end": 13.09
+  },
+  {
+    "text": "not",
+    "start": 13.45,
+    "end": 13.5
+  },
+  {
+    "text": "to",
+    "start": 13.52,
+    "end": 13.66
+  },
+  {
+    "text": "restrict",
+    "start": 13.66,
+    "end": 14.2
+  },
+  {
+    "text": "open-weight",
+    "start": 14.28,
+    "end": 15.26
+  },
+  {
+    "text": "AI",
+    "start": 15.3,
+    "end": 15.47
+  },
+  {
+    "text": "models.",
+    "start": 15.47,
+    "end": 16.26
+  },
+  {
+    "text": "The",
+    "start": 16.35,
+    "end": 16.53
+  },
+  {
+    "text": "letter",
+    "start": 16.53,
+    "end": 16.95
+  },
+  {
+    "text": "is",
+    "start": 16.95,
+    "end": 17.09
+  },
+  {
+    "text": "about",
+    "start": 17.09,
+    "end": 17.41
+  },
+  {
+    "text": "policy,",
+    "start": 17.77,
+    "end": 17.88
+  },
+  {
+    "text": "but",
+    "start": 17.91,
+    "end": 18.09
+  },
+  {
+    "text": "it",
+    "start": 18.09,
+    "end": 18.23
+  },
+  {
+    "text": "is",
+    "start": 18.23,
+    "end": 18.36
+  },
+  {
+    "text": "really",
+    "start": 18.4,
+    "end": 18.8
+  },
+  {
+    "text": "a",
+    "start": 18.8,
+    "end": 18.87
+  },
+  {
+    "text": "market",
+    "start": 18.87,
+    "end": 18.97
+  },
+  {
+    "text": "signal.",
+    "start": 19.33,
+    "end": 20
+  },
+  {
+    "text": "It",
+    "start": 20.03,
+    "end": 20.12
+  },
+  {
+    "text": "is",
+    "start": 20.12,
+    "end": 20.24
+  },
+  {
+    "text": "telling",
+    "start": 20.24,
+    "end": 20.65
+  },
+  {
+    "text": "you",
+    "start": 20.65,
+    "end": 20.77
+  },
+  {
+    "text": "where",
+    "start": 20.87,
+    "end": 21.06
+  },
+  {
+    "text": "the",
+    "start": 21.06,
+    "end": 21.09
+  },
+  {
+    "text": "profit",
+    "start": 21.45,
+    "end": 21.48
+  },
+  {
+    "text": "is",
+    "start": 21.48,
+    "end": 21.59
+  },
+  {
+    "text": "moving",
+    "start": 21.65,
+    "end": 22.08
+  },
+  {
+    "text": "in",
+    "start": 22.11,
+    "end": 22.33
+  },
+  {
+    "text": "the",
+    "start": 22.33,
+    "end": 22.7
+  },
+  {
+    "text": "AI",
+    "start": 22.7,
+    "end": 22.85
+  },
+  {
+    "text": "economy,",
+    "start": 22.95,
+    "end": 23.95
+  },
+  {
+    "text": "and",
+    "start": 23.95,
+    "end": 24.12
+  },
+  {
+    "text": "it",
+    "start": 24.12,
+    "end": 24.23
+  },
+  {
+    "text": "is",
+    "start": 24.23,
+    "end": 24.3
+  },
+  {
+    "text": "not",
+    "start": 24.36,
+    "end": 24.49
+  },
+  {
+    "text": "staying",
+    "start": 24.57,
+    "end": 24.7
+  },
+  {
+    "text": "in",
+    "start": 24.7,
+    "end": 25.04
+  },
+  {
+    "text": "the",
+    "start": 25.04,
+    "end": 25.19
+  },
+  {
+    "text": "models.",
+    "start": 25.19,
+    "end": 25.75
+  },
+  {
+    "text": "That",
+    "start": 25.79,
+    "end": 26
+  },
+  {
+    "text": "is",
+    "start": 26,
+    "end": 26.12
+  },
+  {
+    "text": "the",
+    "start": 26.12,
+    "end": 26.3
+  },
+  {
+    "text": "question",
+    "start": 26.3,
+    "end": 26.79
+  },
+  {
+    "text": "we",
+    "start": 26.79,
+    "end": 26.85
+  },
+  {
+    "text": "are",
+    "start": 26.85,
+    "end": 27.21
+  },
+  {
+    "text": "going",
+    "start": 27.21,
+    "end": 27.35
+  },
+  {
+    "text": "to",
+    "start": 27.41,
+    "end": 27.51
+  },
+  {
+    "text": "unpack.",
+    "start": 27.51,
+    "end": 27.92
+  },
+  {
+    "text": "If",
+    "start": 27.95,
+    "end": 28.06
+  },
+  {
+    "text": "capable",
+    "start": 28.06,
+    "end": 28.56
+  },
+  {
+    "text": "AI",
+    "start": 28.56,
+    "end": 28.69
+  },
+  {
+    "text": "models",
+    "start": 28.79,
+    "end": 29.01
+  },
+  {
+    "text": "become",
+    "start": 29.37,
+    "end": 29.51
+  },
+  {
+    "text": "open-weight,",
+    "start": 29.57,
+    "end": 30.36
+  },
+  {
+    "text": "who",
+    "start": 30.39,
+    "end": 30.58
+  },
+  {
+    "text": "keeps",
+    "start": 30.58,
+    "end": 30.9
+  },
+  {
+    "text": "the",
+    "start": 30.97,
+    "end": 31.13
+  },
+  {
+    "text": "profit?",
+    "start": 31.23,
+    "end": 31.88
+  },
+  {
+    "text": "Here",
+    "start": 31.91,
+    "end": 32.1
+  },
+  {
+    "text": "is",
+    "start": 32.1,
+    "end": 32.21
+  },
+  {
+    "text": "the",
+    "start": 32.21,
+    "end": 32.36
+  },
+  {
+    "text": "short",
+    "start": 32.4,
+    "end": 32.65
+  },
+  {
+    "text": "answer.",
+    "start": 32.75,
+    "end": 33.2
+  },
+  {
+    "text": "Value",
+    "start": 33.23,
+    "end": 33.52
+  },
+  {
+    "text": "migrates,",
+    "start": 33.52,
+    "end": 34.14
+  },
+  {
+    "text": "it",
+    "start": 34.14,
+    "end": 34.26
+  },
+  {
+    "text": "does",
+    "start": 34.26,
+    "end": 34.3
+  },
+  {
+    "text": "not",
+    "start": 34.65,
+    "end": 34.7
+  },
+  {
+    "text": "disappear.",
+    "start": 34.7,
+    "end": 35.52
+  },
+  {
+    "text": "The",
+    "start": 35.55,
+    "end": 35.7
+  },
+  {
+    "text": "model",
+    "start": 35.7,
+    "end": 35.99
+  },
+  {
+    "text": "itself",
+    "start": 35.99,
+    "end": 36.28
+  },
+  {
+    "text": "is",
+    "start": 36.39,
+    "end": 36.44
+  },
+  {
+    "text": "becoming",
+    "start": 36.44,
+    "end": 36.61
+  },
+  {
+    "text": "the",
+    "start": 36.61,
+    "end": 36.97
+  },
+  {
+    "text": "cheapest",
+    "start": 36.97,
+    "end": 37.35
+  },
+  {
+    "text": "part",
+    "start": 37.36,
+    "end": 37.6
+  },
+  {
+    "text": "of",
+    "start": 37.6,
+    "end": 37.74
+  },
+  {
+    "text": "the",
+    "start": 37.8,
+    "end": 37.93
+  },
+  {
+    "text": "stack.",
+    "start": 38.01,
+    "end": 38.64
+  },
+  {
+    "text": "The",
+    "start": 38.67,
+    "end": 38.79
+  },
+  {
+    "text": "money",
+    "start": 38.81,
+    "end": 39.1
+  },
+  {
+    "text": "is",
+    "start": 39.1,
+    "end": 39.19
+  },
+  {
+    "text": "moving",
+    "start": 39.25,
+    "end": 39.56
+  },
+  {
+    "text": "to",
+    "start": 39.56,
+    "end": 39.67
+  },
+  {
+    "text": "distribution,",
+    "start": 39.67,
+    "end": 40.54
+  },
+  {
+    "text": "workflow",
+    "start": 40.54,
+    "end": 41.02
+  },
+  {
+    "text": "ownership,",
+    "start": 41.03,
+    "end": 41.72
+  },
+  {
+    "text": "proprietary",
+    "start": 41.75,
+    "end": 42.48
+  },
+  {
+    "text": "context,",
+    "start": 42.59,
+    "end": 43.17
+  },
+  {
+    "text": "and",
+    "start": 43.17,
+    "end": 43.39
+  },
+  {
+    "text": "trust.",
+    "start": 43.39,
+    "end": 43.94
+  },
+  {
+    "text": "Start",
+    "start": 44.03,
+    "end": 44.34
+  },
+  {
+    "text": "with",
+    "start": 44.34,
+    "end": 44.54
+  },
+  {
+    "text": "the",
+    "start": 44.61,
+    "end": 44.77
+  },
+  {
+    "text": "definition",
+    "start": 44.87,
+    "end": 45.5
+  },
+  {
+    "text": "we",
+    "start": 45.5,
+    "end": 45.59
+  },
+  {
+    "text": "need.",
+    "start": 45.65,
+    "end": 46.16
+  },
+  {
+    "text": "An",
+    "start": 46.19,
+    "end": 46.28
+  },
+  {
+    "text": "open-weight",
+    "start": 46.28,
+    "end": 46.92
+  },
+  {
+    "text": "model",
+    "start": 47.03,
+    "end": 47.25
+  },
+  {
+    "text": "is",
+    "start": 47.25,
+    "end": 47.61
+  },
+  {
+    "text": "software",
+    "start": 47.61,
+    "end": 47.92
+  },
+  {
+    "text": "you",
+    "start": 47.92,
+    "end": 48.1
+  },
+  {
+    "text": "can",
+    "start": 48.17,
+    "end": 48.34
+  },
+  {
+    "text": "download,",
+    "start": 48.34,
+    "end": 49.08
+  },
+  {
+    "text": "inspect,",
+    "start": 49.11,
+    "end": 49.63
+  },
+  {
+    "text": "modify,",
+    "start": 49.69,
+    "end": 50.15
+  },
+  {
+    "text": "and",
+    "start": 50.15,
+    "end": 50.18
+  },
+  {
+    "text": "run",
+    "start": 50.18,
+    "end": 50.53
+  },
+  {
+    "text": "on",
+    "start": 50.53,
+    "end": 50.65
+  },
+  {
+    "text": "your",
+    "start": 50.65,
+    "end": 50.88
+  },
+  {
+    "text": "own",
+    "start": 50.9,
+    "end": 51.02
+  },
+  {
+    "text": "infrastructure.",
+    "start": 51.09,
+    "end": 52.24
+  },
+  {
+    "text": "That",
+    "start": 52.27,
+    "end": 52.53
+  },
+  {
+    "text": "means",
+    "start": 52.53,
+    "end": 52.9
+  },
+  {
+    "text": "the",
+    "start": 52.9,
+    "end": 53.12
+  },
+  {
+    "text": "model",
+    "start": 53.12,
+    "end": 53.33
+  },
+  {
+    "text": "is",
+    "start": 53.33,
+    "end": 53.69
+  },
+  {
+    "text": "interchangeable.",
+    "start": 53.69,
+    "end": 54.87
+  },
+  {
+    "text": "If",
+    "start": 55.01,
+    "end": 55.1
+  },
+  {
+    "text": "you",
+    "start": 55.1,
+    "end": 55.28
+  },
+  {
+    "text": "can",
+    "start": 55.28,
+    "end": 55.46
+  },
+  {
+    "text": "run",
+    "start": 55.46,
+    "end": 55.64
+  },
+  {
+    "text": "the",
+    "start": 55.64,
+    "end": 55.75
+  },
+  {
+    "text": "same",
+    "start": 55.85,
+    "end": 56.06
+  },
+  {
+    "text": "capability",
+    "start": 56.06,
+    "end": 56.67
+  },
+  {
+    "text": "anywhere,",
+    "start": 56.67,
+    "end": 57.32
+  },
+  {
+    "text": "the",
+    "start": 57.35,
+    "end": 57.51
+  },
+  {
+    "text": "model",
+    "start": 57.51,
+    "end": 57.8
+  },
+  {
+    "text": "stops",
+    "start": 57.84,
+    "end": 58.08
+  },
+  {
+    "text": "being",
+    "start": 58.19,
+    "end": 58.41
+  },
+  {
+    "text": "a",
+    "start": 58.41,
+    "end": 58.77
+  },
+  {
+    "text": "product",
+    "start": 58.77,
+    "end": 59
+  },
+  {
+    "text": "and",
+    "start": 59,
+    "end": 59.24
+  },
+  {
+    "text": "becomes",
+    "start": 59.24,
+    "end": 59.73
+  },
+  {
+    "text": "a",
+    "start": 59.81,
+    "end": 59.87
+  },
+  {
+    "text": "raw",
+    "start": 59.87,
+    "end": 59.95
+  },
+  {
+    "text": "input.",
+    "start": 60.28,
+    "end": 60.76
+  },
+  {
+    "text": "The",
+    "start": 60.79,
+    "end": 60.98
+  },
+  {
+    "text": "product",
+    "start": 60.98,
+    "end": 61.51
+  },
+  {
+    "text": "is",
+    "start": 61.51,
+    "end": 61.66
+  },
+  {
+    "text": "the",
+    "start": 61.66,
+    "end": 61.85
+  },
+  {
+    "text": "system",
+    "start": 62.21,
+    "end": 62.33
+  },
+  {
+    "text": "around",
+    "start": 62.33,
+    "end": 62.78
+  },
+  {
+    "text": "it,",
+    "start": 62.78,
+    "end": 63.12
+  },
+  {
+    "text": "the",
+    "start": 63.15,
+    "end": 63.33
+  },
+  {
+    "text": "workflow",
+    "start": 63.33,
+    "end": 63.88
+  },
+  {
+    "text": "that",
+    "start": 63.99,
+    "end": 64.2
+  },
+  {
+    "text": "turns",
+    "start": 64.2,
+    "end": 64.21
+  },
+  {
+    "text": "the",
+    "start": 64.57,
+    "end": 64.71
+  },
+  {
+    "text": "model",
+    "start": 64.77,
+    "end": 65.06
+  },
+  {
+    "text": "into",
+    "start": 65.13,
+    "end": 65.34
+  },
+  {
+    "text": "a",
+    "start": 65.42,
+    "end": 65.49
+  },
+  {
+    "text": "result,",
+    "start": 65.49,
+    "end": 66.12
+  },
+  {
+    "text": "the",
+    "start": 66.15,
+    "end": 66.31
+  },
+  {
+    "text": "data",
+    "start": 66.31,
+    "end": 66.56
+  },
+  {
+    "text": "that",
+    "start": 66.56,
+    "end": 66.81
+  },
+  {
+    "text": "makes",
+    "start": 66.81,
+    "end": 67.13
+  },
+  {
+    "text": "the",
+    "start": 67.13,
+    "end": 67.21
+  },
+  {
+    "text": "result",
+    "start": 67.57,
+    "end": 67.7
+  },
+  {
+    "text": "worth",
+    "start": 67.7,
+    "end": 68.02
+  },
+  {
+    "text": "something,",
+    "start": 68.02,
+    "end": 68.74
+  },
+  {
+    "text": "the",
+    "start": 68.79,
+    "end": 68.96
+  },
+  {
+    "text": "distribution",
+    "start": 68.96,
+    "end": 69.77
+  },
+  {
+    "text": "that",
+    "start": 69.77,
+    "end": 69.85
+  },
+  {
+    "text": "puts",
+    "start": 70.21,
+    "end": 70.31
+  },
+  {
+    "text": "it",
+    "start": 70.31,
+    "end": 70.44
+  },
+  {
+    "text": "in",
+    "start": 70.44,
+    "end": 70.56
+  },
+  {
+    "text": "front",
+    "start": 70.57,
+    "end": 70.9
+  },
+  {
+    "text": "of",
+    "start": 70.9,
+    "end": 70.98
+  },
+  {
+    "text": "a",
+    "start": 71.06,
+    "end": 71.09
+  },
+  {
+    "text": "user,",
+    "start": 71.09,
+    "end": 71.4
+  },
+  {
+    "text": "and",
+    "start": 71.43,
+    "end": 71.59
+  },
+  {
+    "text": "the",
+    "start": 71.59,
+    "end": 71.78
+  },
+  {
+    "text": "trust",
+    "start": 71.78,
+    "end": 72.1
+  },
+  {
+    "text": "that",
+    "start": 72.1,
+    "end": 72.36
+  },
+  {
+    "text": "keeps",
+    "start": 72.36,
+    "end": 72.49
+  },
+  {
+    "text": "them",
+    "start": 72.85,
+    "end": 72.94
+  },
+  {
+    "text": "coming",
+    "start": 72.94,
+    "end": 73.32
+  },
+  {
+    "text": "back.",
+    "start": 73.33,
+    "end": 73.81
+  },
+  {
+    "text": "Now",
+    "start": 73.87,
+    "end": 74.02
+  },
+  {
+    "text": "follow",
+    "start": 74.02,
+    "end": 74.38
+  },
+  {
+    "text": "the",
+    "start": 74.38,
+    "end": 74.57
+  },
+  {
+    "text": "money.",
+    "start": 74.57,
+    "end": 74.93
+  },
+  {
+    "text": "Gartner",
+    "start": 75.11,
+    "end": 75.56
+  },
+  {
+    "text": "forecasts",
+    "start": 75.6,
+    "end": 76.17
+  },
+  {
+    "text": "worldwide",
+    "start": 76.53,
+    "end": 76.83
+  },
+  {
+    "text": "AI",
+    "start": 76.83,
+    "end": 76.97
+  },
+  {
+    "text": "spending",
+    "start": 76.97,
+    "end": 77.49
+  },
+  {
+    "text": "will",
+    "start": 77.59,
+    "end": 77.93
+  },
+  {
+    "text": "reach",
+    "start": 77.93,
+    "end": 78.32
+  },
+  {
+    "text": "$2.59",
+    "start": 78.43,
+    "end": 79.6
+  },
+  {
+    "text": "trillion",
+    "start": 79.6,
+    "end": 80.18
+  },
+  {
+    "text": "in",
+    "start": 80.18,
+    "end": 80.52
+  },
+  {
+    "text": "2026,",
+    "start": 80.52,
+    "end": 81.68
+  },
+  {
+    "text": "up",
+    "start": 81.71,
+    "end": 81.86
+  },
+  {
+    "text": "47%",
+    "start": 81.86,
+    "end": 82.45
+  },
+  {
+    "text": "from",
+    "start": 82.55,
+    "end": 82.77
+  },
+  {
+    "text": "a",
+    "start": 82.77,
+    "end": 83.13
+  },
+  {
+    "text": "year",
+    "start": 83.13,
+    "end": 83.27
+  },
+  {
+    "text": "earlier.",
+    "start": 83.33,
+    "end": 84.26
+  },
+  {
+    "text": "But",
+    "start": 84.29,
+    "end": 84.47
+  },
+  {
+    "text": "that",
+    "start": 84.47,
+    "end": 84.74
+  },
+  {
+    "text": "spending",
+    "start": 84.78,
+    "end": 85.34
+  },
+  {
+    "text": "is",
+    "start": 85.34,
+    "end": 85.36
+  },
+  {
+    "text": "not",
+    "start": 85.36,
+    "end": 85.71
+  },
+  {
+    "text": "landing",
+    "start": 85.71,
+    "end": 86.18
+  },
+  {
+    "text": "evenly.",
+    "start": 86.19,
+    "end": 86.88
+  },
+  {
+    "text": "The",
+    "start": 86.91,
+    "end": 87.03
+  },
+  {
+    "text": "thing",
+    "start": 87.05,
+    "end": 87.33
+  },
+  {
+    "text": "to",
+    "start": 87.33,
+    "end": 87.43
+  },
+  {
+    "text": "watch",
+    "start": 87.49,
+    "end": 87.65
+  },
+  {
+    "text": "is",
+    "start": 87.75,
+    "end": 87.83
+  },
+  {
+    "text": "the",
+    "start": 87.83,
+    "end": 87.97
+  },
+  {
+    "text": "price",
+    "start": 87.97,
+    "end": 88.33
+  },
+  {
+    "text": "of",
+    "start": 88.33,
+    "end": 88.47
+  },
+  {
+    "text": "a",
+    "start": 88.53,
+    "end": 88.6
+  },
+  {
+    "text": "token,",
+    "start": 88.6,
+    "end": 89.27
+  },
+  {
+    "text": "the",
+    "start": 89.31,
+    "end": 89.51
+  },
+  {
+    "text": "unit",
+    "start": 89.51,
+    "end": 89.76
+  },
+  {
+    "text": "that",
+    "start": 89.8,
+    "end": 90.05
+  },
+  {
+    "text": "AI",
+    "start": 90.15,
+    "end": 90.26
+  },
+  {
+    "text": "companies",
+    "start": 90.26,
+    "end": 90.95
+  },
+  {
+    "text": "sell.",
+    "start": 90.95,
+    "end": 91.5
+  },
+  {
+    "text": "Token",
+    "start": 91.55,
+    "end": 91.92
+  },
+  {
+    "text": "costs",
+    "start": 91.92,
+    "end": 92.28
+  },
+  {
+    "text": "are",
+    "start": 92.39,
+    "end": 92.56
+  },
+  {
+    "text": "plunging.",
+    "start": 92.56,
+    "end": 93.44
+  },
+  {
+    "text": "Open-weight",
+    "start": 93.47,
+    "end": 93.98
+  },
+  {
+    "text": "models",
+    "start": 94.05,
+    "end": 94.37
+  },
+  {
+    "text": "are",
+    "start": 94.37,
+    "end": 94.53
+  },
+  {
+    "text": "flooding",
+    "start": 94.53,
+    "end": 94.98
+  },
+  {
+    "text": "the",
+    "start": 94.98,
+    "end": 95.14
+  },
+  {
+    "text": "market,",
+    "start": 95.14,
+    "end": 95.64
+  },
+  {
+    "text": "and",
+    "start": 95.67,
+    "end": 95.84
+  },
+  {
+    "text": "every",
+    "start": 95.84,
+    "end": 96.12
+  },
+  {
+    "text": "model",
+    "start": 96.16,
+    "end": 96.41
+  },
+  {
+    "text": "provider",
+    "start": 96.51,
+    "end": 96.73
+  },
+  {
+    "text": "is",
+    "start": 97.09,
+    "end": 97.14
+  },
+  {
+    "text": "being",
+    "start": 97.16,
+    "end": 97.43
+  },
+  {
+    "text": "forced",
+    "start": 97.43,
+    "end": 97.83
+  },
+  {
+    "text": "to",
+    "start": 97.87,
+    "end": 97.99
+  },
+  {
+    "text": "cut",
+    "start": 98.01,
+    "end": 98.25
+  },
+  {
+    "text": "prices",
+    "start": 98.25,
+    "end": 98.75
+  },
+  {
+    "text": "to",
+    "start": 98.75,
+    "end": 98.91
+  },
+  {
+    "text": "keep",
+    "start": 98.91,
+    "end": 98.93
+  },
+  {
+    "text": "up.",
+    "start": 99.29,
+    "end": 99.7
+  },
+  {
+    "text": "That",
+    "start": 99.73,
+    "end": 99.94
+  },
+  {
+    "text": "is",
+    "start": 99.94,
+    "end": 100.06
+  },
+  {
+    "text": "the",
+    "start": 100.06,
+    "end": 100.24
+  },
+  {
+    "text": "margin",
+    "start": 100.24,
+    "end": 100.59
+  },
+  {
+    "text": "squeeze.",
+    "start": 100.59,
+    "end": 101.2
+  },
+  {
+    "text": "The",
+    "start": 101.23,
+    "end": 101.35
+  },
+  {
+    "text": "model",
+    "start": 101.37,
+    "end": 101.66
+  },
+  {
+    "text": "layer",
+    "start": 101.66,
+    "end": 101.95
+  },
+  {
+    "text": "is",
+    "start": 101.95,
+    "end": 101.96
+  },
+  {
+    "text": "getting",
+    "start": 102.07,
+    "end": 102.29
+  },
+  {
+    "text": "cheaper",
+    "start": 102.65,
+    "end": 102.88
+  },
+  {
+    "text": "by",
+    "start": 102.88,
+    "end": 102.99
+  },
+  {
+    "text": "the",
+    "start": 102.99,
+    "end": 103.14
+  },
+  {
+    "text": "quarter,",
+    "start": 103.21,
+    "end": 103.64
+  },
+  {
+    "text": "while",
+    "start": 103.67,
+    "end": 103.93
+  },
+  {
+    "text": "the",
+    "start": 103.93,
+    "end": 104.11
+  },
+  {
+    "text": "layers",
+    "start": 104.11,
+    "end": 104.4
+  },
+  {
+    "text": "around",
+    "start": 104.51,
+    "end": 104.73
+  },
+  {
+    "text": "it",
+    "start": 104.73,
+    "end": 105.09
+  },
+  {
+    "text": "capture",
+    "start": 105.09,
+    "end": 105.34
+  },
+  {
+    "text": "more",
+    "start": 105.34,
+    "end": 105.58
+  },
+  {
+    "text": "of",
+    "start": 105.58,
+    "end": 105.7
+  },
+  {
+    "text": "the",
+    "start": 105.7,
+    "end": 105.86
+  },
+  {
+    "text": "value.",
+    "start": 105.92,
+    "end": 106.27
+  },
+  {
+    "text": "Here",
+    "start": 106.43,
+    "end": 106.66
+  },
+  {
+    "text": "is",
+    "start": 106.66,
+    "end": 106.79
+  },
+  {
+    "text": "where",
+    "start": 106.79,
+    "end": 107.11
+  },
+  {
+    "text": "the",
+    "start": 107.11,
+    "end": 107.3
+  },
+  {
+    "text": "market",
+    "start": 107.3,
+    "end": 107.49
+  },
+  {
+    "text": "comes",
+    "start": 107.85,
+    "end": 107.99
+  },
+  {
+    "text": "in.",
+    "start": 108.05,
+    "end": 108.34
+  },
+  {
+    "text": "Forbes",
+    "start": 108.39,
+    "end": 108.76
+  },
+  {
+    "text": "reported",
+    "start": 108.76,
+    "end": 109.3
+  },
+  {
+    "text": "in",
+    "start": 109.3,
+    "end": 109.43
+  },
+  {
+    "text": "July",
+    "start": 109.43,
+    "end": 109.46
+  },
+  {
+    "text": "that",
+    "start": 109.81,
+    "end": 109.95
+  },
+  {
+    "text": "token",
+    "start": 110.01,
+    "end": 110.3
+  },
+  {
+    "text": "costs",
+    "start": 110.37,
+    "end": 110.72
+  },
+  {
+    "text": "are",
+    "start": 110.72,
+    "end": 110.86
+  },
+  {
+    "text": "falling",
+    "start": 110.86,
+    "end": 110.99
+  },
+  {
+    "text": "so",
+    "start": 111.32,
+    "end": 111.47
+  },
+  {
+    "text": "fast",
+    "start": 111.47,
+    "end": 111.98
+  },
+  {
+    "text": "that",
+    "start": 112.01,
+    "end": 112.24
+  },
+  {
+    "text": "model",
+    "start": 112.24,
+    "end": 112.52
+  },
+  {
+    "text": "providers",
+    "start": 112.59,
+    "end": 113.07
+  },
+  {
+    "text": "face",
+    "start": 113.07,
+    "end": 113.43
+  },
+  {
+    "text": "a",
+    "start": 113.43,
+    "end": 113.48
+  },
+  {
+    "text": "new",
+    "start": 113.5,
+    "end": 113.69
+  },
+  {
+    "text": "margin",
+    "start": 113.69,
+    "end": 114.09
+  },
+  {
+    "text": "squeeze,",
+    "start": 114.09,
+    "end": 114.6
+  },
+  {
+    "text": "while",
+    "start": 114.63,
+    "end": 114.85
+  },
+  {
+    "text": "enterprise",
+    "start": 114.85,
+    "end": 115.36
+  },
+  {
+    "text": "buyers",
+    "start": 115.36,
+    "end": 115.66
+  },
+  {
+    "text": "are",
+    "start": 115.66,
+    "end": 115.69
+  },
+  {
+    "text": "shifting",
+    "start": 116.05,
+    "end": 116.19
+  },
+  {
+    "text": "their",
+    "start": 116.25,
+    "end": 116.47
+  },
+  {
+    "text": "spending",
+    "start": 116.47,
+    "end": 116.92
+  },
+  {
+    "text": "toward",
+    "start": 116.95,
+    "end": 117.32
+  },
+  {
+    "text": "the",
+    "start": 117.32,
+    "end": 117.46
+  },
+  {
+    "text": "application",
+    "start": 117.53,
+    "end": 118.01
+  },
+  {
+    "text": "layer.",
+    "start": 118.37,
+    "end": 118.8
+  },
+  {
+    "text": "The",
+    "start": 118.83,
+    "end": 118.99
+  },
+  {
+    "text": "workflow",
+    "start": 118.99,
+    "end": 119.5
+  },
+  {
+    "text": "and",
+    "start": 119.5,
+    "end": 119.69
+  },
+  {
+    "text": "the",
+    "start": 119.69,
+    "end": 119.88
+  },
+  {
+    "text": "data",
+    "start": 119.88,
+    "end": 119.9
+  },
+  {
+    "text": "live",
+    "start": 120.25,
+    "end": 120.38
+  },
+  {
+    "text": "there.",
+    "start": 120.38,
+    "end": 120.92
+  },
+  {
+    "text": "That",
+    "start": 120.95,
+    "end": 121.21
+  },
+  {
+    "text": "is",
+    "start": 121.21,
+    "end": 121.35
+  },
+  {
+    "text": "the",
+    "start": 121.35,
+    "end": 121.57
+  },
+  {
+    "text": "durable",
+    "start": 121.57,
+    "end": 122.01
+  },
+  {
+    "text": "moat.",
+    "start": 122.23,
+    "end": 122.64
+  },
+  {
+    "text": "Distribution",
+    "start": 122.67,
+    "end": 123.55
+  },
+  {
+    "text": "is",
+    "start": 123.55,
+    "end": 123.7
+  },
+  {
+    "text": "scarce.",
+    "start": 123.7,
+    "end": 124.4
+  },
+  {
+    "text": "Workflow",
+    "start": 124.43,
+    "end": 124.87
+  },
+  {
+    "text": "ownership",
+    "start": 124.87,
+    "end": 125.4
+  },
+  {
+    "text": "is",
+    "start": 125.4,
+    "end": 125.49
+  },
+  {
+    "text": "scarce.",
+    "start": 125.85,
+    "end": 126.08
+  },
+  {
+    "text": "Proprietary",
+    "start": 126.11,
+    "end": 127
+  },
+  {
+    "text": "context",
+    "start": 127,
+    "end": 127.58
+  },
+  {
+    "text": "is",
+    "start": 127.6,
+    "end": 127.76
+  },
+  {
+    "text": "scarce.",
+    "start": 127.76,
+    "end": 128.49
+  },
+  {
+    "text": "The",
+    "start": 128.59,
+    "end": 128.75
+  },
+  {
+    "text": "weights",
+    "start": 128.75,
+    "end": 129.2
+  },
+  {
+    "text": "are",
+    "start": 129.2,
+    "end": 129.33
+  },
+  {
+    "text": "not.",
+    "start": 129.43,
+    "end": 129.65
+  },
+  {
+    "text": "So",
+    "start": 129.83,
+    "end": 129.94
+  },
+  {
+    "text": "what",
+    "start": 129.94,
+    "end": 130.22
+  },
+  {
+    "text": "is",
+    "start": 130.22,
+    "end": 130.34
+  },
+  {
+    "text": "the",
+    "start": 130.35,
+    "end": 130.57
+  },
+  {
+    "text": "honest",
+    "start": 130.57,
+    "end": 130.89
+  },
+  {
+    "text": "uncertainty?",
+    "start": 131.25,
+    "end": 132
+  },
+  {
+    "text": "The",
+    "start": 132.03,
+    "end": 132.2
+  },
+  {
+    "text": "uncertainty",
+    "start": 132.2,
+    "end": 132.96
+  },
+  {
+    "text": "is",
+    "start": 132.96,
+    "end": 133.09
+  },
+  {
+    "text": "not",
+    "start": 133.09,
+    "end": 133.1
+  },
+  {
+    "text": "whether",
+    "start": 133.45,
+    "end": 133.59
+  },
+  {
+    "text": "the",
+    "start": 133.65,
+    "end": 133.8
+  },
+  {
+    "text": "model",
+    "start": 133.82,
+    "end": 134.18
+  },
+  {
+    "text": "gets",
+    "start": 134.18,
+    "end": 134.41
+  },
+  {
+    "text": "commoditized.",
+    "start": 134.5,
+    "end": 135.6
+  },
+  {
+    "text": "That",
+    "start": 135.63,
+    "end": 135.87
+  },
+  {
+    "text": "is",
+    "start": 135.87,
+    "end": 136
+  },
+  {
+    "text": "already",
+    "start": 136,
+    "end": 136.48
+  },
+  {
+    "text": "happening.",
+    "start": 136.48,
+    "end": 137.32
+  },
+  {
+    "text": "The",
+    "start": 137.35,
+    "end": 137.5
+  },
+  {
+    "text": "uncertainty",
+    "start": 137.5,
+    "end": 138.08
+  },
+  {
+    "text": "is",
+    "start": 138.19,
+    "end": 138.28
+  },
+  {
+    "text": "which",
+    "start": 138.28,
+    "end": 138.41
+  },
+  {
+    "text": "of",
+    "start": 138.41,
+    "end": 138.77
+  },
+  {
+    "text": "the",
+    "start": 138.77,
+    "end": 138.88
+  },
+  {
+    "text": "surrounding",
+    "start": 138.88,
+    "end": 139.52
+  },
+  {
+    "text": "layers",
+    "start": 139.52,
+    "end": 139.92
+  },
+  {
+    "text": "turns",
+    "start": 139.95,
+    "end": 140.31
+  },
+  {
+    "text": "out",
+    "start": 140.31,
+    "end": 140.54
+  },
+  {
+    "text": "to",
+    "start": 140.54,
+    "end": 140.69
+  },
+  {
+    "text": "be",
+    "start": 140.69,
+    "end": 140.84
+  },
+  {
+    "text": "the",
+    "start": 140.84,
+    "end": 141.01
+  },
+  {
+    "text": "durable",
+    "start": 141.37,
+    "end": 141.62
+  },
+  {
+    "text": "one.",
+    "start": 141.62,
+    "end": 142.14
+  },
+  {
+    "text": "Distribution",
+    "start": 142.17,
+    "end": 142.9
+  },
+  {
+    "text": "could",
+    "start": 143.01,
+    "end": 143.23
+  },
+  {
+    "text": "consolidate",
+    "start": 143.59,
+    "end": 144
+  },
+  {
+    "text": "around",
+    "start": 144,
+    "end": 144.35
+  },
+  {
+    "text": "a",
+    "start": 144.44,
+    "end": 144.46
+  },
+  {
+    "text": "few",
+    "start": 144.46,
+    "end": 144.66
+  },
+  {
+    "text": "platforms.",
+    "start": 144.66,
+    "end": 145.48
+  },
+  {
+    "text": "Workflow",
+    "start": 145.51,
+    "end": 145.93
+  },
+  {
+    "text": "could",
+    "start": 145.93,
+    "end": 146.21
+  },
+  {
+    "text": "be",
+    "start": 146.21,
+    "end": 146.24
+  },
+  {
+    "text": "owned",
+    "start": 146.35,
+    "end": 146.57
+  },
+  {
+    "text": "by",
+    "start": 146.57,
+    "end": 146.93
+  },
+  {
+    "text": "incumbents",
+    "start": 146.93,
+    "end": 147.3
+  },
+  {
+    "text": "who",
+    "start": 147.35,
+    "end": 147.51
+  },
+  {
+    "text": "already",
+    "start": 147.51,
+    "end": 147.97
+  },
+  {
+    "text": "sit",
+    "start": 147.97,
+    "end": 148.09
+  },
+  {
+    "text": "inside",
+    "start": 148.19,
+    "end": 148.41
+  },
+  {
+    "text": "the",
+    "start": 148.41,
+    "end": 148.77
+  },
+  {
+    "text": "enterprise.",
+    "start": 148.77,
+    "end": 149.44
+  },
+  {
+    "text": "Or",
+    "start": 149.47,
+    "end": 149.56
+  },
+  {
+    "text": "new",
+    "start": 149.56,
+    "end": 149.75
+  },
+  {
+    "text": "context",
+    "start": 149.75,
+    "end": 150.19
+  },
+  {
+    "text": "advantages",
+    "start": 150.19,
+    "end": 150.53
+  },
+  {
+    "text": "could",
+    "start": 150.89,
+    "end": 151.15
+  },
+  {
+    "text": "emerge",
+    "start": 151.15,
+    "end": 151.56
+  },
+  {
+    "text": "from",
+    "start": 151.56,
+    "end": 151.82
+  },
+  {
+    "text": "the",
+    "start": 151.82,
+    "end": 152.03
+  },
+  {
+    "text": "data",
+    "start": 152.03,
+    "end": 152.06
+  },
+  {
+    "text": "that",
+    "start": 152.35,
+    "end": 152.58
+  },
+  {
+    "text": "only",
+    "start": 152.58,
+    "end": 152.8
+  },
+  {
+    "text": "a",
+    "start": 152.84,
+    "end": 152.87
+  },
+  {
+    "text": "specific",
+    "start": 152.93,
+    "end": 153.41
+  },
+  {
+    "text": "business",
+    "start": 153.77,
+    "end": 153.91
+  },
+  {
+    "text": "can",
+    "start": 153.97,
+    "end": 154.14
+  },
+  {
+    "text": "collect.",
+    "start": 154.16,
+    "end": 154.88
+  },
+  {
+    "text": "No",
+    "start": 154.91,
+    "end": 155.02
+  },
+  {
+    "text": "one",
+    "start": 155.02,
+    "end": 155.23
+  },
+  {
+    "text": "knows",
+    "start": 155.23,
+    "end": 155.59
+  },
+  {
+    "text": "which",
+    "start": 155.59,
+    "end": 155.95
+  },
+  {
+    "text": "one",
+    "start": 155.95,
+    "end": 155.98
+  },
+  {
+    "text": "compounds",
+    "start": 156.33,
+    "end": 156.8
+  },
+  {
+    "text": "fastest.",
+    "start": 156.81,
+    "end": 157.5
+  },
+  {
+    "text": "That",
+    "start": 157.59,
+    "end": 157.86
+  },
+  {
+    "text": "is",
+    "start": 157.86,
+    "end": 158.01
+  },
+  {
+    "text": "the",
+    "start": 158.01,
+    "end": 158.24
+  },
+  {
+    "text": "bet.",
+    "start": 158.24,
+    "end": 158.65
+  },
+  {
+    "text": "The",
+    "start": 158.75,
+    "end": 158.92
+  },
+  {
+    "text": "signal",
+    "start": 158.92,
+    "end": 159.26
+  },
+  {
+    "text": "to",
+    "start": 159.33,
+    "end": 159.46
+  },
+  {
+    "text": "watch",
+    "start": 159.46,
+    "end": 159.8
+  },
+  {
+    "text": "is",
+    "start": 159.8,
+    "end": 159.81
+  },
+  {
+    "text": "not",
+    "start": 159.81,
+    "end": 160.17
+  },
+  {
+    "text": "the",
+    "start": 160.17,
+    "end": 160.31
+  },
+  {
+    "text": "benchmark",
+    "start": 160.37,
+    "end": 160.92
+  },
+  {
+    "text": "scores.",
+    "start": 160.92,
+    "end": 161.6
+  },
+  {
+    "text": "It",
+    "start": 161.63,
+    "end": 161.72
+  },
+  {
+    "text": "is",
+    "start": 161.72,
+    "end": 161.84
+  },
+  {
+    "text": "the",
+    "start": 161.84,
+    "end": 162.03
+  },
+  {
+    "text": "behavior",
+    "start": 162.03,
+    "end": 162.54
+  },
+  {
+    "text": "underneath",
+    "start": 162.54,
+    "end": 163.18
+  },
+  {
+    "text": "them.",
+    "start": 163.18,
+    "end": 163.66
+  },
+  {
+    "text": "Watch",
+    "start": 163.69,
+    "end": 163.95
+  },
+  {
+    "text": "whether",
+    "start": 163.95,
+    "end": 164.36
+  },
+  {
+    "text": "enterprises",
+    "start": 164.36,
+    "end": 164.75
+  },
+  {
+    "text": "keep",
+    "start": 165.11,
+    "end": 165.23
+  },
+  {
+    "text": "paying",
+    "start": 165.23,
+    "end": 165.6
+  },
+  {
+    "text": "for",
+    "start": 165.6,
+    "end": 165.86
+  },
+  {
+    "text": "model",
+    "start": 165.86,
+    "end": 166.28
+  },
+  {
+    "text": "access",
+    "start": 166.62,
+    "end": 166.84
+  },
+  {
+    "text": "or",
+    "start": 166.87,
+    "end": 166.96
+  },
+  {
+    "text": "start",
+    "start": 166.96,
+    "end": 167.27
+  },
+  {
+    "text": "running",
+    "start": 167.27,
+    "end": 167.6
+  },
+  {
+    "text": "open",
+    "start": 167.71,
+    "end": 167.93
+  },
+  {
+    "text": "weights",
+    "start": 168.29,
+    "end": 168.42
+  },
+  {
+    "text": "on",
+    "start": 168.42,
+    "end": 168.55
+  },
+  {
+    "text": "their",
+    "start": 168.55,
+    "end": 168.89
+  },
+  {
+    "text": "own",
+    "start": 168.89,
+    "end": 169.06
+  },
+  {
+    "text": "infrastructure.",
+    "start": 169.14,
+    "end": 170.26
+  },
+  {
+    "text": "Watch",
+    "start": 170.29,
+    "end": 170.58
+  },
+  {
+    "text": "where",
+    "start": 170.58,
+    "end": 170.9
+  },
+  {
+    "text": "the",
+    "start": 170.9,
+    "end": 171.03
+  },
+  {
+    "text": "application",
+    "start": 171.13,
+    "end": 171.79
+  },
+  {
+    "text": "vendors",
+    "start": 171.79,
+    "end": 172.2
+  },
+  {
+    "text": "put",
+    "start": 172.27,
+    "end": 172.42
+  },
+  {
+    "text": "their",
+    "start": 172.42,
+    "end": 172.67
+  },
+  {
+    "text": "margins.",
+    "start": 172.76,
+    "end": 173.38
+  },
+  {
+    "text": "Watch",
+    "start": 173.43,
+    "end": 173.66
+  },
+  {
+    "text": "whether",
+    "start": 173.66,
+    "end": 174.03
+  },
+  {
+    "text": "the",
+    "start": 174.03,
+    "end": 174.17
+  },
+  {
+    "text": "biggest",
+    "start": 174.27,
+    "end": 174.49
+  },
+  {
+    "text": "winners",
+    "start": 174.85,
+    "end": 174.96
+  },
+  {
+    "text": "are",
+    "start": 174.96,
+    "end": 175.08
+  },
+  {
+    "text": "the",
+    "start": 175.08,
+    "end": 175.25
+  },
+  {
+    "text": "ones",
+    "start": 175.25,
+    "end": 175.48
+  },
+  {
+    "text": "who",
+    "start": 175.51,
+    "end": 175.63
+  },
+  {
+    "text": "own",
+    "start": 175.65,
+    "end": 175.82
+  },
+  {
+    "text": "the",
+    "start": 175.82,
+    "end": 175.96
+  },
+  {
+    "text": "workflow,",
+    "start": 176,
+    "end": 176.56
+  },
+  {
+    "text": "the",
+    "start": 176.56,
+    "end": 176.58
+  },
+  {
+    "text": "distribution,",
+    "start": 176.93,
+    "end": 177.63
+  },
+  {
+    "text": "and",
+    "start": 177.63,
+    "end": 177.81
+  },
+  {
+    "text": "the",
+    "start": 177.81,
+    "end": 177.98
+  },
+  {
+    "text": "data,",
+    "start": 177.98,
+    "end": 178.24
+  },
+  {
+    "text": "rather",
+    "start": 178.27,
+    "end": 178.68
+  },
+  {
+    "text": "than",
+    "start": 178.68,
+    "end": 178.97
+  },
+  {
+    "text": "the",
+    "start": 178.97,
+    "end": 179.19
+  },
+  {
+    "text": "model",
+    "start": 179.19,
+    "end": 179.33
+  },
+  {
+    "text": "itself.",
+    "start": 179.69,
+    "end": 180.18
+  },
+  {
+    "text": "The",
+    "start": 180.27,
+    "end": 180.44
+  },
+  {
+    "text": "AI",
+    "start": 180.44,
+    "end": 180.57
+  },
+  {
+    "text": "race",
+    "start": 180.57,
+    "end": 180.78
+  },
+  {
+    "text": "was",
+    "start": 180.85,
+    "end": 181.01
+  },
+  {
+    "text": "about",
+    "start": 181.11,
+    "end": 181.33
+  },
+  {
+    "text": "building",
+    "start": 181.69,
+    "end": 181.93
+  },
+  {
+    "text": "the",
+    "start": 181.93,
+    "end": 182.13
+  },
+  {
+    "text": "best",
+    "start": 182.13,
+    "end": 182.4
+  },
+  {
+    "text": "model.",
+    "start": 182.4,
+    "end": 182.87
+  },
+  {
+    "text": "Then",
+    "start": 183.03,
+    "end": 183.23
+  },
+  {
+    "text": "it",
+    "start": 183.23,
+    "end": 183.34
+  },
+  {
+    "text": "was",
+    "start": 183.34,
+    "end": 183.48
+  },
+  {
+    "text": "about",
+    "start": 183.52,
+    "end": 183.77
+  },
+  {
+    "text": "the",
+    "start": 183.87,
+    "end": 183.97
+  },
+  {
+    "text": "cheapest",
+    "start": 183.97,
+    "end": 184.09
+  },
+  {
+    "text": "model.",
+    "start": 184.45,
+    "end": 184.92
+  },
+  {
+    "text": "Now",
+    "start": 184.95,
+    "end": 185.12
+  },
+  {
+    "text": "it",
+    "start": 185.12,
+    "end": 185.25
+  },
+  {
+    "text": "is",
+    "start": 185.25,
+    "end": 185.38
+  },
+  {
+    "text": "about",
+    "start": 185.38,
+    "end": 185.68
+  },
+  {
+    "text": "the",
+    "start": 185.79,
+    "end": 185.91
+  },
+  {
+    "text": "system",
+    "start": 185.91,
+    "end": 186.01
+  },
+  {
+    "text": "that",
+    "start": 186.37,
+    "end": 186.59
+  },
+  {
+    "text": "makes",
+    "start": 186.59,
+    "end": 186.86
+  },
+  {
+    "text": "the",
+    "start": 186.93,
+    "end": 187.12
+  },
+  {
+    "text": "model",
+    "start": 187.12,
+    "end": 187.45
+  },
+  {
+    "text": "useful.",
+    "start": 187.45,
+    "end": 188.08
+  },
+  {
+    "text": "That",
+    "start": 188.11,
+    "end": 188.4
+  },
+  {
+    "text": "is",
+    "start": 188.4,
+    "end": 188.56
+  },
+  {
+    "text": "the",
+    "start": 188.56,
+    "end": 188.8
+  },
+  {
+    "text": "tension.",
+    "start": 188.8,
+    "end": 189.6
+  },
+  {
+    "text": "And",
+    "start": 189.63,
+    "end": 189.85
+  },
+  {
+    "text": "in",
+    "start": 189.85,
+    "end": 190.02
+  },
+  {
+    "text": "2026,",
+    "start": 190.02,
+    "end": 191.19
+  },
+  {
+    "text": "it",
+    "start": 191.19,
+    "end": 191.36
+  },
+  {
+    "text": "has",
+    "start": 191.36,
+    "end": 191.54
+  },
+  {
+    "text": "a",
+    "start": 191.61,
+    "end": 191.69
+  },
+  {
+    "text": "number",
+    "start": 191.69,
+    "end": 192.2
+  },
+  {
+    "text": "attached.",
+    "start": 192.56,
+    "end": 192.92
+  },
+  {
+    "text": "$2.59",
+    "start": 192.95,
+    "end": 194.01
+  },
+  {
+    "text": "trillion",
+    "start": 194.01,
+    "end": 194.69
+  },
+  {
+    "text": "of",
+    "start": 194.69,
+    "end": 194.86
+  },
+  {
+    "text": "spending,",
+    "start": 194.86,
+    "end": 195.55
+  },
+  {
+    "text": "a",
+    "start": 195.55,
+    "end": 195.88
+  },
+  {
+    "text": "flood",
+    "start": 195.88,
+    "end": 196.18
+  },
+  {
+    "text": "of",
+    "start": 196.22,
+    "end": 196.36
+  },
+  {
+    "text": "open",
+    "start": 196.36,
+    "end": 196.67
+  },
+  {
+    "text": "weights,",
+    "start": 196.67,
+    "end": 197.24
+  },
+  {
+    "text": "and",
+    "start": 197.27,
+    "end": 197.45
+  },
+  {
+    "text": "a",
+    "start": 197.45,
+    "end": 197.52
+  },
+  {
+    "text": "margin",
+    "start": 197.52,
+    "end": 197.94
+  },
+  {
+    "text": "squeeze",
+    "start": 197.94,
+    "end": 198.33
+  },
+  {
+    "text": "that",
+    "start": 198.33,
+    "end": 198.51
+  },
+  {
+    "text": "is",
+    "start": 198.51,
+    "end": 198.69
+  },
+  {
+    "text": "telling",
+    "start": 198.69,
+    "end": 199
+  },
+  {
+    "text": "you",
+    "start": 199,
+    "end": 199.14
+  },
+  {
+    "text": "exactly",
+    "start": 199.14,
+    "end": 199.76
+  },
+  {
+    "text": "where",
+    "start": 199.79,
+    "end": 200.02
+  },
+  {
+    "text": "the",
+    "start": 200.02,
+    "end": 200.18
+  },
+  {
+    "text": "value",
+    "start": 200.18,
+    "end": 200.44
+  },
+  {
+    "text": "is",
+    "start": 200.44,
+    "end": 200.53
+  },
+  {
+    "text": "going.",
+    "start": 200.63,
+    "end": 200.85
+  },
+  {
+    "text": "The",
+    "start": 201.03,
+    "end": 201.15
+  },
+  {
+    "text": "question",
+    "start": 201.16,
+    "end": 201.62
+  },
+  {
+    "text": "for",
+    "start": 201.62,
+    "end": 201.77
+  },
+  {
+    "text": "the",
+    "start": 201.87,
+    "end": 201.96
+  },
+  {
+    "text": "next",
+    "start": 201.96,
+    "end": 202.09
+  },
+  {
+    "text": "phase",
+    "start": 202.45,
+    "end": 202.48
+  },
+  {
+    "text": "of",
+    "start": 202.48,
+    "end": 202.68
+  },
+  {
+    "text": "the",
+    "start": 202.68,
+    "end": 202.94
+  },
+  {
+    "text": "AI",
+    "start": 203.01,
+    "end": 203.18
+  },
+  {
+    "text": "economy",
+    "start": 203.18,
+    "end": 203.62
+  },
+  {
+    "text": "is",
+    "start": 203.91,
+    "end": 204
+  },
+  {
+    "text": "not",
+    "start": 204.01,
+    "end": 204.21
+  },
+  {
+    "text": "whether",
+    "start": 204.21,
+    "end": 204.64
+  },
+  {
+    "text": "the",
+    "start": 204.75,
+    "end": 204.88
+  },
+  {
+    "text": "models",
+    "start": 204.88,
+    "end": 204.97
+  },
+  {
+    "text": "get",
+    "start": 205.33,
+    "end": 205.47
+  },
+  {
+    "text": "better.",
+    "start": 205.53,
+    "end": 206.1
+  },
+  {
+    "text": "It",
+    "start": 206.13,
+    "end": 206.25
+  },
+  {
+    "text": "is",
+    "start": 206.27,
+    "end": 206.42
+  },
+  {
+    "text": "who",
+    "start": 206.42,
+    "end": 206.64
+  },
+  {
+    "text": "owns",
+    "start": 206.71,
+    "end": 206.98
+  },
+  {
+    "text": "the",
+    "start": 206.98,
+    "end": 207.19
+  },
+  {
+    "text": "layers",
+    "start": 207.55,
+    "end": 207.69
+  },
+  {
+    "text": "around",
+    "start": 207.75,
+    "end": 208.18
+  },
+  {
+    "text": "them.",
+    "start": 208.18,
+    "end": 208.72
+  },
+  {
+    "text": "The",
+    "start": 208.79,
+    "end": 208.98
+  },
+  {
+    "text": "moat",
+    "start": 208.98,
+    "end": 209.24
+  },
+  {
+    "text": "is",
+    "start": 209.28,
+    "end": 209.4
+  },
+  {
+    "text": "the",
+    "start": 209.4,
+    "end": 209.53
+  },
+  {
+    "text": "system,",
+    "start": 209.63,
+    "end": 210.2
+  },
+  {
+    "text": "not",
+    "start": 210.21,
+    "end": 210.42
+  },
+  {
+    "text": "the",
+    "start": 210.42,
+    "end": 210.64
+  },
+  {
+    "text": "model.",
+    "start": 210.64,
+    "end": 211.17
+  }
+]

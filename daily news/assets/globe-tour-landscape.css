@@ -1,0 +1,183 @@
+/* Landscape companion for the globe-tour brief. The vertical composition
+   keeps assets/globe-tour.css unchanged; these rules reframe the same
+   instrument into a 16:9 editorial desk with the globe at left and the
+   human-scale story treatment at right. */
+
+html,
+body {
+  width: 1920px;
+  height: 1080px;
+}
+
+#root {
+  width: 1920px;
+  height: 1080px;
+}
+
+#space-layer,
+#globe-layer,
+#map-layer {
+  width: 1920px;
+  height: 1080px;
+}
+
+#globe-layer {
+  inset: auto;
+  top: 0;
+  left: -320px;
+}
+
+.rail {
+  top: 46px;
+  left: 96px;
+  right: 96px;
+  font-size: 20px;
+  letter-spacing: 0.19em;
+}
+
+.rail__rule {
+  left: 96px;
+  right: 96px;
+  top: 91px;
+}
+
+.opener {
+  left: 1050px;
+  right: 110px;
+  top: 330px;
+  text-align: left;
+}
+
+.opener__line {
+  max-width: 750px;
+  margin: 0;
+  font-size: 132px;
+  line-height: 0.84;
+}
+
+.opener__line span + span {
+  margin-top: 28px;
+}
+
+.opener__sub {
+  max-width: 680px;
+  margin: 42px 0 0;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+}
+
+.story-media {
+  left: auto;
+  right: 96px;
+  top: 154px;
+  width: 760px;
+  height: 418px;
+}
+
+.story-media__topline {
+  font-size: 15px;
+  letter-spacing: 0.18em;
+}
+
+.story-media__frame {
+  top: 32px;
+  height: 350px;
+}
+
+.story-media__beat-index,
+.story-media__beat-credit {
+  font-size: 14px;
+  letter-spacing: 0.12em;
+}
+
+.story-media__beat-credit {
+  left: 16px;
+  right: 16px;
+  bottom: 13px;
+}
+
+.story-media__corner {
+  right: 25px;
+  bottom: 24px;
+  width: 46px;
+  height: 46px;
+}
+
+.card {
+  left: auto;
+  right: 96px;
+  top: 594px;
+  width: 760px;
+  min-height: 260px;
+  padding: 20px 26px 22px;
+}
+
+.card__meta {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+}
+
+.card__headline {
+  font-size: 58px;
+  line-height: 0.9;
+}
+
+.card__deck {
+  max-width: 690px;
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.card__source {
+  margin-top: 14px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.locator {
+  left: 96px;
+  right: auto;
+  top: 870px;
+  width: 800px;
+  font-size: 20px;
+  letter-spacing: 0.18em;
+}
+
+.locator__tick {
+  width: 46px;
+}
+
+.end-card {
+  left: auto;
+  right: 96px;
+  top: 594px;
+  width: 760px;
+  padding: 26px 28px 28px;
+}
+
+.end-card__eyebrow,
+.end-card__source {
+  font-size: 15px;
+  letter-spacing: 0.14em;
+}
+
+.end-card__title {
+  font-size: 68px;
+}
+
+.end-card__source {
+  margin-top: 16px;
+}
+
+.footer {
+  left: 96px;
+  right: 96px;
+  bottom: 36px;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+}

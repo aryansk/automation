@@ -1,0 +1,62 @@
+{
+  "eventId": "kinahan-extradition-irish-criminal-organization-charge-2026-08-09",
+  "tone": "bad",
+  "countryCode": "IE",
+  "countryName": "Ireland",
+  "cityName": "Dublin",
+  "coordinates": [
+    -6.2603,
+    53.3498
+  ],
+  "region": "Europe",
+  "urgency": "breaking",
+  "storyType": "editorial",
+  "kicker": "Crime · Court",
+  "headline": "Alleged Irish crime boss extradited to face charge in Dublin",
+  "summary": "Daniel Kinahan was brought from Dubai to Ireland and faces a criminal-organization charge; he has not been convicted.",
+  "script": "Alleged Irish crime boss Daniel Kinahan has been extradited from Dubai to Ireland. He faces a charge of directing a criminal organization. These are allegations, and the case remains before the courts.",
+  "source": "AP News · BBC",
+  "edition": "10 Aug 2026",
+  "storyNumber": "12",
+  "imageOne": "assets/stories/2026-08-10/kinahan-extradition/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-10/kinahan-extradition/secondary.jpg",
+  "imageAlt": "Archive BBC News portrait of Daniel Kinahan.",
+  "imageAltTwo": "The same archive BBC News portrait used for courtroom-news context.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/new-2026-08-10/kinahan-extradition.wav",
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Suspected Irish crime boss lands in Dublin after extradition",
+      "url": "https://apnews.com/article/britain-ireland-underworld-crime-boss-991fa92c757c8c5cb78ee7fc91eef6ee",
+      "published": "2026-08-09",
+      "usedFor": [
+        "extradition from Dubai",
+        "charge and court status"
+      ]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Daniel Kinahan says drug-gang claims are a campaign against him",
+      "url": "https://www.bbc.com/news/uk-55990051",
+      "published": "2021-02-09",
+      "usedFor": [
+        "identity context",
+        "allegation wording"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 12,
+    "basis": "A current court development that requires precise allegation language and a restrained visual treatment; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

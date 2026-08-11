@@ -1,0 +1,170 @@
+{
+  "eventId": "kenya-coral-nurseries-2026-08-11",
+  "tone": "good",
+  "countryCode": "KE",
+  "countryName": "Kenya",
+  "cityName": "Mombasa",
+  "region": "Africa",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Environment · Oceans",
+  "headline": "Kenya doubles coral nurseries off Mombasa as reefs recover",
+  "summary": "Scientists planted 10,000 fragments off the Kenyan coast and report coral cover up 30 percent in two years after community-led protection.",
+  "script": "Kenya has doubled its coral nurseries off Mombasa. Scientists planted ten thousand fragments in two years. Coral cover is up thirty percent and fish are returning to the reefs.",
+  "source": "BBC News",
+  "edition": "11 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-11-good/kenya-coral/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-11-good/kenya-coral/secondary.jpg",
+  "imageAlt": "Protected marine area at Mombasa where coral nurseries are located.",
+  "imageAltTwo": "Vibrant underwater coral reef with fish — reef recovery off the Kenyan coast.",
+  "imageCredit": "Jessekekule / Wikimedia Commons (CC BY-SA 4.0)",
+  "imageCreditTwo": "Wikimedia Commons (CC BY-SA 4.0)",
+  "narrationAudio": "assets/narration/good-2026-08-11-02-kenya-coral.wav",
+  "captions": [
+    {
+      "lines": [
+        "Kenya doubles coral",
+        "nurseries off Mombasa."
+      ],
+      "highlights": [
+        "doubles coral"
+      ]
+    },
+    {
+      "lines": [
+        "10,000 fragments",
+        "planted in two years."
+      ],
+      "highlights": [
+        "10,000 fragments"
+      ]
+    },
+    {
+      "lines": [
+        "Reefs up 30 percent,",
+        "fish returning."
+      ],
+      "highlights": [
+        "30 percent"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Kenya coral nurseries double as reefs recover off Mombasa",
+      "url": "https://www.bbc.com/news/world-africa-kenya-coral-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "nursery doubling",
+        "coral cover rise"
+      ]
+    },
+    {
+      "publisher": "The Guardian",
+      "title": "Kenya reef recovery after community protection",
+      "url": "https://www.theguardian.com/environment/2026/aug/11/kenya-coral-recovery-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "10,000 fragments"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Notable ocean recovery.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Kenya.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "KE",
+            "coordinates": [
+              37.9,
+              -0.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Mombasa coast.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Mombasa",
+            "coordinates": [
+              39.66,
+              -4.04
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Bloom reefs across coast.",
+        "start": 9.5,
+        "animationId": "heatmap-bloom",
+        "mapSource": "The Guardian / 11 Aug 2026",
+        "mapData": {
+          "points": [
+            {
+              "name": "Mombasa",
+              "coordinates": [
+                39.66,
+                -4.04
+              ],
+              "value": 72
+            },
+            {
+              "name": "Malindi",
+              "coordinates": [
+                40.1,
+                -3.2
+              ],
+              "value": 58
+            },
+            {
+              "name": "Diani",
+              "coordinates": [
+                39.57,
+                -4.28
+              ],
+              "value": 64
+            },
+            {
+              "name": "Watamu",
+              "coordinates": [
+                40.02,
+                -3.35
+              ],
+              "value": 41
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

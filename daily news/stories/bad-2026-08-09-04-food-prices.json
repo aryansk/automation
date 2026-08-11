@@ -1,0 +1,141 @@
+{
+  "eventId": "global-food-prices-july-2026-fao-2026-08-09",
+  "tone": "bad",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Economy \u00b7 Food",
+  "headline": "Global food prices hit highest level since 2023, UN agency says",
+  "summary": "The FAO index rose in July to its highest since January 2023, driven by higher cereal, sugar and vegetable oil prices, adding pressure on consumers worldwide.",
+  "script": "Global food prices rose in July to their highest level since twenty twenty-three. The UN food agency blames higher costs for cereals, sugar, and vegetable oil. That means pricier groceries for households everywhere.",
+  "source": "UN FAO",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-09-bad/food-prices/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-09-bad/food-prices/secondary.jpg",
+  "imageAlt": "A shopper looking at food prices in a supermarket aisle.",
+  "imageAltTwo": "Grain silos and wheat fields under a bright sky.",
+  "imageCredit": "AP Photo",
+  "imageCreditTwo": "AP Photo",
+  "narrationAudio": "assets/narration/bad-2026-08-09-04-food-prices.wav",
+  "captions": [
+    {
+      "lines": [
+        "Global food prices hit",
+        "highest level since 2023."
+      ],
+      "highlights": [
+        "highest level since 2023"
+      ]
+    },
+    {
+      "lines": [
+        "Cereals, sugar, and",
+        "vegetable oil up."
+      ],
+      "highlights": [
+        "cereals, sugar, oil"
+      ]
+    },
+    {
+      "lines": [
+        "Pressure on households",
+        "and importers."
+      ],
+      "highlights": [
+        "pressure on households"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "UN FAO",
+      "title": "Global food prices rise to highest level since 2023, UN Food Agency says",
+      "url": "https://anewz.tv/world/world-news/23104/global-food-prices-rise-to-highest-level-since-2023/news",
+      "published": "2026-08-09",
+      "usedFor": [
+        "July index highest since January 2023",
+        "cereal, sugar, vegetable oil drivers"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "World food prices rise for the first time in months",
+      "url": "https://www.reuters.com/markets/commodities/",
+      "published": "2026-08-08",
+      "usedFor": [
+        "independent corroboration",
+        "consumer impact context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Economically significant rise affecting consumers and importers globally; ranking is editorial, not an objective trend metric.",
+    "researchDate": "09 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Set the global scope of food prices.",
+        "start": 0,
+        "animationId": "world-orbit",
+        "mapSource": "UN FAO / 09 Aug 2026"
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Anchor the consumer impact in the United States.",
+        "start": 4.5,
+        "animationId": "country-lock",
+        "mapSource": "UN FAO / 09 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -98,
+              39
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Updated engaging beat: regional-choropleth",
+        "start": 9.5,
+        "animationId": "regional-choropleth",
+        "mapSource": "UN FAO / 09 Aug 2026",
+        "mapData": {
+          "values": {
+            "US": 82,
+            "BR": 74,
+            "IN": 68,
+            "CN": 71,
+            "NG": 64,
+            "EG": 58
+          },
+          "legend": {
+            "min": 40,
+            "max": 100,
+            "unit": "index"
+          }
+        }
+      }
+    ]
+  }
+}

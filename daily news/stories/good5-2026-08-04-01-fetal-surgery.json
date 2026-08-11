@@ -1,0 +1,155 @@
+{
+  "eventId": "fetal-surgery-theo-gastroschisis-2026-08-03",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Houston",
+  "coordinates": [
+    -95.3698,
+    29.7604
+  ],
+  "region": "North America",
+  "urgency": "current",
+  "storyType": "auto",
+  "kicker": "Health · Fetal surgery",
+  "headline": "British baby thrives after pioneering womb surgery",
+  "summary": "Theo was treated at 26 weeks in a clinical trial after doctors found complex gastroschisis; he was born in Texas and is now thriving at five months.",
+  "script": "Baby Theo is thriving after surgeons in Texas repaired complex gastroschisis before birth. At 26 weeks, they used keyhole surgery to move his intestines back inside the womb. The British family later returned home after a successful delivery.",
+  "source": "BBC · Clinical trial",
+  "edition": "04 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-04-good/fetal-surgery/theo.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-good/fetal-surgery/operation.jpg",
+  "imageAlt": "Baby Theo smiling at the camera after pioneering fetal surgery.",
+  "imageAltTwo": "Fetal surgery staff in an operating theatre at Texas Children's Hospital.",
+  "imageCredit": "Maisie Savage via BBC News",
+  "imageCreditTwo": "Texas Children's Hospital via BBC News",
+  "narrationAudio": "assets/narration/tour/good5-2026-08-04-01-fetal-surgery.wav",
+  "captions": [
+    {
+      "lines": [
+        "British baby thrives",
+        "after womb surgery."
+      ],
+      "highlights": [
+        "British baby",
+        "womb surgery"
+      ]
+    },
+    {
+      "lines": [
+        "Intestines repaired",
+        "before birth."
+      ],
+      "highlights": [
+        "Intestines repaired",
+        "before birth"
+      ]
+    },
+    {
+      "lines": [
+        "Now five months",
+        "old and thriving."
+      ],
+      "highlights": [
+        "five months",
+        "thriving"
+      ]
+    }
+  ],
+  "routeLabel": "London → Houston",
+  "routePoints": [
+    {
+      "label": "London",
+      "coordinates": [
+        -0.1276,
+        51.5072
+      ]
+    },
+    {
+      "label": "Houston",
+      "coordinates": [
+        -95.3698,
+        29.7604
+      ]
+    }
+  ],
+  "mentionedCountryCodes": [
+    "GB",
+    "US",
+    "BE"
+  ],
+  "affectedCountryCodes": [
+    "GB"
+  ],
+  "locatorInset": true,
+  "focusZoom": 14.9,
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Woman has pioneering surgery for unborn baby with intestines outside its body",
+      "url": "https://www.bbc.co.uk/news/articles/c86ngegz9qno",
+      "published": "2026-08-03T05:02:25.179Z",
+      "usedFor": [
+        "Theo's outcome",
+        "26-week timing",
+        "procedure",
+        "family and location"
+      ]
+    },
+    {
+      "publisher": "ClinicalTrials.gov",
+      "title": "Fetal Repair of Complex Gastroschisis: A Safety and Feasibility Trial",
+      "url": "https://clinicaltrials.gov/study/NCT05704257",
+      "published": "2026-04-23",
+      "usedFor": [
+        "trial design",
+        "gastroschisis context",
+        "Houston study location"
+      ]
+    },
+    {
+      "publisher": "Texas Children's Hospital",
+      "title": "Fetal Center Research",
+      "url": "https://www.texaschildrens.org/departments/fetal-center/research",
+      "published": "2026",
+      "usedFor": [
+        "institutional fetal-surgery context"
+      ]
+    }
+  ],
+  "imageSources": [
+    {
+      "articleUrl": "https://www.bbc.co.uk/news/articles/c86ngegz9qno",
+      "assetUrl": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/f492/live/14736980-8f11-11f1-a7ab-8b30adf0800a.jpg",
+      "localPath": "assets/news-images/2026-08-04-good/fetal-surgery/theo.jpg",
+      "caption": "Baby Theo smiling at the camera.",
+      "credit": "Maisie Savage",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized source-image workflow; publisher rights were not independently cleared."
+    },
+    {
+      "articleUrl": "https://www.bbc.co.uk/news/articles/c86ngegz9qno",
+      "assetUrl": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/a0cc/live/cf01c750-8c3d-11f1-b8ee-9b3c26ad07bb.jpg",
+      "localPath": "assets/news-images/2026-08-04-good/fetal-surgery/operation.jpg",
+      "caption": "Fetal surgery staff in an operating theatre.",
+      "credit": "Texas Children's Hospital",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized source-image workflow; publisher rights were not independently cleared."
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Fresh BBC Health top-story coverage with a first-of-its-kind clinical-trial result; editorial rank reflects recency, prominence and constructive audience interest, not a platform-wide trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "assetLicense": "Publisher and hospital source images used under the authorized newsroom workflow.",
+    "assetCredit": "Maisie Savage; Texas Children's Hospital; both via BBC News.",
+    "commercialEditorialRightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

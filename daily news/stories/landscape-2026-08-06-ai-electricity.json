@@ -1,0 +1,436 @@
+{
+  "slug": "landscape-2026-08-06-ai-electricity",
+  "edition": "06 Aug 2026",
+  "deskName": "godandbaddaily / Landscape Desk",
+  "openerTitle": "MORE MODELS / MORE MEGAWATTS?",
+  "openerSub": "One question · the grid behind the AI boom",
+  "headline": "Can grids grow as quickly as model demand?",
+  "summary": "From record capacity auctions in Pennsylvania to gigawatt-scale nuclear deals in Virginia and beyond, the AI race is now a race for electricity — and the grid is the bottleneck.",
+  "kicker": "ENERGY · AI · MARKETS · WORLD",
+  "region": "Global AI electricity system",
+  "scriptFile": "assets/narration/landscape-2026-08-06-ai-electricity-script.txt",
+  "narrationAudio": "assets/narration/landscape-2026-08-06-ai-electricity.wav",
+  "captionFile": "assets/narration/landscape-2026-08-06-ai-electricity.vtt",
+  "globeCaption": "Every model needs a machine — and every machine needs a grid",
+  "routeLabel": "MINE → REFINERY → MAGNET → FACTORY",
+  "sources": [
+    {
+      "label": "IEA / ENERGY AND AI / APR 2026",
+      "url": "https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai"
+    },
+    {
+      "label": "IEA / ENERGY SUPPLY FOR AI / BASE CASE",
+      "url": "https://www.iea.org/reports/energy-and-ai/energy-supply-for-ai"
+    },
+    {
+      "label": "S&P GLOBAL / IEA DATA CENTRE POWER 2030",
+      "url": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/041025-global-data-center-power-demand-to-double-by-2030-on-ai-surge-iea"
+    },
+    {
+      "label": "MGRID / PJM 2026/2027 CAPACITY $329",
+      "url": "https://mgrid.org/2026/02/27/pjm-2026-2027-capacity-prices-reach-329-mw-day-as-data-centers-drive-first-ever-system-wide-reliability-shortfall/"
+    },
+    {
+      "label": "MGRID / DATA CENTRES $6.3B / 38% AUCTION",
+      "url": "https://mgrid.org/2026/07/23/data-centers-drove-6-3-billion-of-pjms-latest-capacity-auction-cost-market-monitor-says/"
+    },
+    {
+      "label": "NEXT WAVES / INTERCONNECTION QUEUE 2,600 GW",
+      "url": "https://nextwavesinsight.com/data-center-power-crisis-nuclear-grid-2026/"
+    },
+    {
+      "label": "SMR INTELL / NUCLEAR DATA-CENTRE DEALS 2026",
+      "url": "https://smrintel.com/nuclear-data-center-deals/"
+    }
+  ],
+  "chapters": [
+    {
+      "kicker": "01 / THE NEW SIGNAL",
+      "title": "A capacity auction just showed what AI costs the grid",
+      "body": "On 26 February 2026, PJM's capacity auction cleared at a record $329 per megawatt-day — the first-ever system-wide reliability shortfall. Data centres drove $6.3 billion of the $16.4 billion auction cost.",
+      "tag": "PJM / $329 / MW-DAY / FIRST SHORTFALL",
+      "graphic": "letter",
+      "focus": {
+        "codes": "UNITED STATES / GRID",
+        "label": "PENNSYLVANIA, USA / THE CAPACITY SIGNAL",
+        "coordinates": "40.3° N / 75.4° W"
+      },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "Valley Forge, PA",
+        "event": "26 Feb 2026 · record PJM capacity auction",
+        "coordinates": [
+          -75.4,
+          40.3
+        ],
+        "cameraZ": 7.2,
+        "mentionedCountryCodes": [
+          "US",
+          "CN"
+        ],
+        "routePoints": [
+          {
+            "label": "CAPACITY AUCTION",
+            "country": "United States",
+            "location": "PJM footprint",
+            "coordinates": [
+              -75.4,
+              40.3
+            ]
+          },
+          {
+            "label": "DATA-CENTRE LOAD",
+            "country": "United States",
+            "location": "Virginia",
+            "coordinates": [
+              -78.6569,
+              37.4316
+            ]
+          },
+          {
+            "label": "GRID QUEUES",
+            "country": "United States",
+            "location": "Nationwide",
+            "coordinates": [
+              -98.5795,
+              39.8283
+            ]
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/grid-towers.jpg",
+          "country": "United States",
+          "location": "Transmission grid",
+          "caption": "The grid is the bottleneck.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/data-centre.jpg",
+          "country": "United States",
+          "location": "Data-centre campus",
+          "caption": "The load is growing fast.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "02 / THE DEFINITION",
+      "title": "A data centre is a city block that only computes",
+      "body": "An AI data centre is a building of thousands of servers running 24/7. One large campus can draw as much power as a small city — around one gigawatt or more — all of it needing a grid built for yesterday's demand.",
+      "tag": "ONE CAMPUS ≈ ONE CITY / ~1 GW",
+      "graphic": "definition",
+      "focus": {
+        "codes": "CAMPUS / CITY",
+        "label": "VIRGINIA, USA / A CITY OF SERVERS",
+        "coordinates": "38.0° N / 78.4° W"
+      },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "Virginia data-centre alley",
+        "event": "The load cluster",
+        "coordinates": [
+          -78.6569,
+          37.4316
+        ],
+        "cameraZ": 6.8,
+        "mentionedCountryCodes": [
+          "US",
+          "IE"
+        ],
+        "routePoints": [
+          {
+            "label": "THE CAMPUS",
+            "country": "United States",
+            "location": "Northern Virginia",
+            "coordinates": [
+              -77.4,
+              38.9
+            ]
+          },
+          {
+            "label": "THE CITY",
+            "country": "United States",
+            "location": "Washington, D.C.",
+            "coordinates": [
+              -77.0365,
+              38.9072
+            ]
+          },
+          {
+            "label": "THE COMPARISON",
+            "country": "Ireland",
+            "location": "Dublin",
+            "coordinates": [
+              -6.2603,
+              53.3498
+            ]
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/servers.jpg",
+          "country": "Global",
+          "location": "Server hall",
+          "caption": "Servers never sleep.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/city.jpg",
+          "country": "Global",
+          "location": "City skyline",
+          "caption": "One campus, city-scale draw.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "03 / FOLLOW THE STACK",
+      "title": "From chip to cable: the stack is really a power chain",
+      "body": "The AI stack runs chips, memory, storage and cooling — all of it electricity. IEA says global data-centre power could roughly double by 2030, from ~500 to ~950 TWh a year, with AI-specific capacity tripling.",
+      "tag": "IEA / ~500 → ~950 TWH / BY 2030",
+      "graphic": "stack",
+      "focus": {
+        "codes": "GLOBAL / POWER CHAIN",
+        "label": "WORLD / THE POWER STACK",
+        "coordinates": "SCHEMATIC"
+      },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "Worldwide",
+        "event": "The power chain",
+        "coordinates": [
+          -98.5795,
+          39.8283
+        ],
+        "cameraZ": 9.5,
+        "mentionedCountryCodes": [
+          "US",
+          "CN",
+          "EU",
+          "JP"
+        ],
+        "routePoints": [
+          {
+            "label": "CHIPS",
+            "country": "United States",
+            "location": "Silicon Valley",
+            "coordinates": [
+              -122.4194,
+              37.7749
+            ]
+          },
+          {
+            "label": "CLOUD",
+            "country": "United States",
+            "location": "Northern Virginia",
+            "coordinates": [
+              -77.4,
+              38.9
+            ]
+          },
+          {
+            "label": "POWER",
+            "country": "China",
+            "location": "Guangdong",
+            "coordinates": [
+              113.2644,
+              23.1291
+            ]
+          },
+          {
+            "label": "GRIDS",
+            "country": "Germany",
+            "location": "Frankfurt",
+            "coordinates": [
+              8.6821,
+              50.1109
+            ]
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/chips.jpg",
+          "country": "Global",
+          "location": "AI accelerators",
+          "caption": "Chips turn watts into answers.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/cables.jpg",
+          "country": "Global",
+          "location": "Power cables",
+          "caption": "The bottleneck is the cable.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "04 / WHY MARKETS CARE",
+      "title": "The grid queue is now a market signal",
+      "body": "The US interconnection queue holds ~2,600 GW of requests, with waits stretching past five years. Utilities and hyperscalers are signing direct deals — nuclear restarts, gas, and behind-the-meter power — to skip the queue.",
+      "tag": "QUEUE ~2,600 GW / NUCLEAR DEALS / 5-YEAR WAITS",
+      "graphic": "market",
+      "focus": {
+        "codes": "QUEUE / DEALS",
+        "label": "NEW YORK, USA / THE POWER MARKET",
+        "coordinates": "40.7° N / 74.0° W"
+      },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "New York",
+        "event": "The power market signal",
+        "coordinates": [
+          -74.006,
+          40.7128
+        ],
+        "cameraZ": 7.4,
+        "mentionedCountryCodes": [
+          "US",
+          "GB"
+        ],
+        "routePoints": [
+          {
+            "label": "QUEUE",
+            "country": "United States",
+            "location": "Washington, D.C.",
+            "coordinates": [
+              -77.0365,
+              38.9072
+            ]
+          },
+          {
+            "label": "NUCLEAR",
+            "country": "United States",
+            "location": "Three Mile Island",
+            "coordinates": [
+              -76.7,
+              40.15
+            ]
+          },
+          {
+            "label": "GAS",
+            "country": "United States",
+            "location": "Texas",
+            "coordinates": [
+              -97.7431,
+              30.2672
+            ]
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/turbine.jpg",
+          "country": "United States",
+          "location": "Gas turbine",
+          "caption": "Fast power, at a price.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/nuclear.jpg",
+          "country": "United States",
+          "location": "Nuclear plant",
+          "caption": "Clean power, slow to build.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/battery.jpg",
+          "country": "Global",
+          "location": "Energy infrastructure",
+          "caption": "The power mix is the story.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "05 / THE VERDICT",
+      "title": "The constraint has moved from chips to cables",
+      "body": "The AI race is no longer only about compute. It is about who can get power fastest — and the honest uncertainty is whether grids, gas, and nuclear can grow fast enough to meet the demand curve.",
+      "tag": "FROM CHIPS TO CABLES / THE POWER RACE",
+      "graphic": "verdict",
+      "focus": {
+        "codes": "WORLD / POWER RACE",
+        "label": "GLOBAL / THE NEXT BOTTLENECK",
+        "coordinates": "SCHEMATIC"
+      },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "Washington, D.C.",
+        "event": "The power race",
+        "coordinates": [
+          -77.0365,
+          38.9072
+        ],
+        "cameraZ": 9.2,
+        "mentionedCountryCodes": [
+          "US",
+          "CN",
+          "EU"
+        ],
+        "routePoints": [
+          {
+            "label": "GRID",
+            "country": "United States",
+            "location": "Washington, D.C.",
+            "coordinates": [
+              -77.0365,
+              38.9072
+            ]
+          },
+          {
+            "label": "NUCLEAR",
+            "country": "United States",
+            "location": "Pennsylvania",
+            "coordinates": [
+              -77.6,
+              40.3
+            ]
+          },
+          {
+            "label": "GAS",
+            "country": "United States",
+            "location": "Texas",
+            "coordinates": [
+              -97.7431,
+              30.2672
+            ]
+          },
+          {
+            "label": "RENEWABLES",
+            "country": "Germany",
+            "location": "Frankfurt",
+            "coordinates": [
+              8.6821,
+              50.1109
+            ]
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/wind.jpg",
+          "country": "Global",
+          "location": "Wind turbines",
+          "caption": "Renewables need time and land.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-06-ai-electricity/solar.jpg",
+          "country": "Global",
+          "location": "Solar farm",
+          "caption": "The supply mix is the story.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    }
+  ]
+}

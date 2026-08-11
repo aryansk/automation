@@ -1,0 +1,61 @@
+{
+  "eventId": "malawi-first-womens-world-cup-qualification-2026-08-10",
+  "tone": "good",
+  "countryCode": "MW",
+  "countryName": "Malawi",
+  "cityName": "Lilongwe",
+  "coordinates": [
+    33.7873,
+    -13.9626
+  ],
+  "region": "Africa",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Football · History",
+  "headline": "Malawi reaches first Women’s World Cup after beating Ghana",
+  "summary": "A 2–1 win sends Malawi into the 2027 Women’s World Cup for the first time.",
+  "script": "Malawi has reached its first Women’s World Cup. A two-one win over Ghana secured the historic qualification, sending the country into the 2027 tournament after a breakthrough night for the She Flames.",
+  "source": "USA Today · CAF",
+  "edition": "10 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/stories/2026-08-10/malawi-womens-world-cup/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-10/malawi-womens-world-cup/secondary.webp",
+  "imageAlt": "Malawi women’s football players celebrate together after a match.",
+  "imageAltTwo": "A second football image used as Malawi tournament context.",
+  "imageCredit": "CAF / Foot-Africa",
+  "imageCreditTwo": "Foot-Africa",
+  "narrationAudio": "assets/narration/new-2026-08-10/malawi-womens-world-cup.wav",
+  "sources": [
+    {
+      "publisher": "USA Today",
+      "title": "Malawi secures first Women’s World Cup qualification",
+      "url": "https://www.usatoday.com/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "2–1 result",
+        "first qualification"
+      ]
+    },
+    {
+      "publisher": "CAF",
+      "title": "Women’s Africa Cup and World Cup qualification context",
+      "url": "https://www.cafonline.com/womens-africa-cup-of-nations/news/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "African football context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "A first-time qualification with a strong human celebration image; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

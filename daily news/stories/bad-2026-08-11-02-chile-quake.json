@@ -1,0 +1,144 @@
+{
+  "eventId": "chile-quake-6p2-2026-08-11",
+  "tone": "bad",
+  "countryCode": "CL",
+  "countryName": "Chile",
+  "cityName": "Santiago",
+  "region": "South America",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Quake · Chile",
+  "headline": "Six-point-two quake rattles central Chile, no tsunami warning issued",
+  "summary": "The offshore quake shook Santiago and Valparaiso, triggering brief evacuations but causing little damage, authorities said after inspections.",
+  "script": "A six point two quake has rattled central Chile. The offshore tremor shook Santiago and Valparaiso. Authorities ordered brief evacuations but report little damage.",
+  "source": "Reuters",
+  "edition": "11 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-11-bad/chile-quake/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-11-bad/chile-quake/secondary.jpg",
+  "imageAlt": "Earthquake damage scene with people gathered outside buildings.",
+  "imageAltTwo": "Street-level quake impact — cracked road and building facade.",
+  "imageCredit": "AP",
+  "imageCreditTwo": "AP",
+  "narrationAudio": "assets/narration/bad-2026-08-11-02-chile-quake.wav",
+  "captions": [
+    {
+      "lines": [
+        "6.2 quake rattles",
+        "central Chile."
+      ],
+      "highlights": [
+        "6.2 quake"
+      ]
+    },
+    {
+      "lines": [
+        "Shakes Santiago and",
+        "Valparaiso."
+      ],
+      "highlights": [
+        "Santiago"
+      ]
+    },
+    {
+      "lines": [
+        "Brief evacuations,",
+        "little damage."
+      ],
+      "highlights": [
+        "little damage"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "6.2 quake rattles central Chile",
+      "url": "https://www.reuters.com/world/americas/chile-quake-2026-08-11/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "6.2 magnitude",
+        "offshore"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Chile quake brief evacuations",
+      "url": "https://apnews.com/article/chile-quake-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "evacuations"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Significant quake.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Chile.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "CL",
+            "coordinates": [
+              -71.5,
+              -35.6
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Santiago.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Santiago",
+            "coordinates": [
+              -70.66,
+              -33.44
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show epicenter ripple.",
+        "start": 9.5,
+        "animationId": "earthquake-ripple",
+        "mapSource": "AP News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Offshore Valparaiso",
+            "coordinates": [
+              -72.1,
+              -33.1
+            ]
+          },
+          "magnitude": 6.2
+        }
+      }
+    ]
+  }
+}

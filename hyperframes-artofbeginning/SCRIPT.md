@@ -1,0 +1,49 @@
+# The room before the first mark
+
+There is a version of beginning that looks almost invisible.
+
+A blank page. A cursor. A hand hovering over the keys.
+
+Nothing has happened yet, but the whole day is already waiting for the first mark.
+
+We tell ourselves we are getting ready. We find another reference, another tutorial, another reason to rearrange the desk. We call this preparation because the word sounds responsible.
+
+And sometimes it is useful.
+
+But sometimes preparation is fear wearing a useful coat. It keeps the work clean. Untouched. Impossible to judge.
+
+As long as the idea remains inside you, it can still be brilliant. The moment it becomes a sentence, it can be ordinary.
+
+That is the part no one can do for you.
+
+The first version will probably be less beautiful than the one you imagined. It may feel borrowed. It may lean too far to one side. It may expose a gap you did not know was there.
+
+Good.
+
+Now the thing is no longer imaginary. You can point to it. You can change it.
+
+Clarity does not arrive before the work. It arrives because the work gives your mind something real to answer.
+
+Action is not the reward for understanding. It is how understanding is made.
+
+This is why the beginning can feel so small and still ask so much from you. One paragraph. One bad shape. One minute that belongs only to the attempt.
+
+Not a promise to finish. Just evidence that you have entered the room.
+
+Let the page be ordinary. Let the first pass be clumsy enough to teach you something.
+
+You do not need to become fearless before you move. You only need to let the next motion be more important than the perfect plan.
+
+Fear can come with you. Doubt can sit in the passenger seat. The work can begin while both are still talking.
+
+Eventually, the dark room becomes a doorway.
+
+The hand turns the handle.
+
+The path is still uncertain, but now it exists outside your head.
+
+And that is enough for today.
+
+Begin there.
+
+Then begin again.

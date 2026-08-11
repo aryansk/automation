@@ -1,0 +1,59 @@
+{
+  "eventId": "rare-turtle-wales-caribbean-return-2026-08-09",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Wildlife · Rescue",
+  "headline": "Rare turtle sent 5,000 miles home after washing up in Wales",
+  "summary": "A rare turtle found washed up in Wales is being flown back to the Caribbean in an emotional conservation journey.",
+  "script": "A rare turtle found washed up in Wales is being flown about five thousand miles back to the Caribbean. Conservation workers say the return is an emotional step toward putting it in warmer home waters.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [-4.5, 53.3],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/result-03-turtle-return/primary.png",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/result-03-turtle-return/secondary.jpg",
+  "imageAlt": "A rare turtle being cared for after washing up on the Welsh coast.",
+  "imageAltTwo": "A sea turtle image connected to the rescue and return journey.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/result-03-turtle-return.wav",
+  "openingStyle": "result-first",
+  "openingText": "A rare turtle is going home",
+  "openingSub": "RESULT FIRST · One story · 10 Aug 2026",
+  "captions": [
+    { "lines": ["A rare turtle", "is going home."], "highlights": ["rare turtle"] },
+    { "lines": ["The journey covers", "5,000 miles."], "highlights": ["5,000 miles"] },
+    { "lines": ["From Wales back to", "Caribbean waters."], "highlights": ["Caribbean waters"] }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Rare turtle to be sent back home in 5,000-mile trip",
+      "url": "https://www.bbc.co.uk/news/articles/c62vd6j5llgo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-09",
+      "usedFor": ["5,000-mile return", "washed-up turtle", "Wales location"]
+    },
+    {
+      "publisher": "Anglesey Sea Zoo",
+      "title": "Rescue-facility context",
+      "url": "https://www.angleseyseazoo.co.uk/",
+      "published": "2026-08-10",
+      "usedFor": ["local rescue context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "High-emotion wildlife result with a concrete visual journey; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

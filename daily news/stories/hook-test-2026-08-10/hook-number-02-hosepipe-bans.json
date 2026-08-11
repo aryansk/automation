@@ -1,0 +1,59 @@
+{
+  "eventId": "england-hosepipe-bans-drought-2026-08-07",
+  "tone": "bad",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "region": "Europe",
+  "urgency": "high",
+  "storyType": "weather",
+  "kicker": "Weather · Drought",
+  "headline": "More than 20 million households face hosepipe bans in drought",
+  "summary": "More than 20 million households are under hosepipe bans as low rainfall and high demand put pressure on supplies.",
+  "script": "More than twenty million households face hosepipe bans after drought was declared in parts of England. Low rainfall and high demand are putting pressure on supplies as summer continues.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [-1.5, 52.5],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/number-02-hosepipe-bans/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/number-02-hosepipe-bans/secondary.jpg",
+  "imageAlt": "A dry landscape illustrating drought and hosepipe restrictions in England.",
+  "imageAltTwo": "A second drought image connected to hosepipe restrictions.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/number-02-hosepipe-bans.wav",
+  "openingStyle": "number-first",
+  "openingText": "Twenty million homes face bans",
+  "openingSub": "NUMBER FIRST · One story · 10 Aug 2026",
+  "captions": [
+    { "lines": ["20 million homes", "face bans."], "highlights": ["20 million homes"] },
+    { "lines": ["Drought has been", "declared in England."], "highlights": ["Drought"] },
+    { "lines": ["Low rain meets", "high demand."], "highlights": ["high demand"] }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Hosepipe bans in force as drought declared",
+      "url": "https://www.bbc.co.uk/news/articles/crk661074ejo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-07",
+      "usedFor": ["20 million households", "hosepipe bans", "drought declaration"]
+    },
+    {
+      "publisher": "Environment Agency",
+      "title": "Official drought and water-restriction context",
+      "url": "https://www.gov.uk/government/organisations/environment-agency",
+      "published": "2026-08-10",
+      "usedFor": ["England water-management context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Large household count gives the number-first opening immediate human scale; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

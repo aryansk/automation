@@ -1,0 +1,89 @@
+{
+  "eventId": "england-walk-in-mental-health-centres-2026-08-05",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "London",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Health · Policy",
+  "headline": "Walk-in mental health centres to open in banks and libraries",
+  "summary": "England plans nearly 200 specialist walk-in services in everyday public buildings to help people facing mental health crises.",
+  "script": "England will open walk-in mental health centres in banks, libraries and community buildings. The government plans nearly two hundred specialist services, so people in crisis can get help without an appointment.",
+  "source": "BBC News",
+  "edition": "06 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-06-good/mental-health/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-06-good/mental-health/secondary.jpg",
+  "imageAlt": "A physician consults with a patient in a healthcare setting.",
+  "imageAltTwo": "A young woman rests on a sofa while looking at her phone at home.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/good7-2026-08-06-03-mental-health-centres.wav",
+  "captions": [
+    {
+      "lines": [
+        "Walk-in mental health centres",
+        "coming to England."
+      ],
+      "highlights": [
+        "Walk-in",
+        "mental health"
+      ]
+    },
+    {
+      "lines": [
+        "Banks, libraries and",
+        "community buildings."
+      ],
+      "highlights": [
+        "banks, libraries"
+      ]
+    },
+    {
+      "lines": [
+        "Nearly 200 services",
+        "without an appointment."
+      ],
+      "highlights": [
+        "nearly 200",
+        "no appointment"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "New walk-in mental health centres to open in banks and libraries across England",
+      "url": "https://www.bbc.co.uk/news/articles/cpd76e737ljo",
+      "published": "2026-08-05",
+      "usedFor": [
+        "nearly 200 centres plan",
+        "bank/library locations",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "NHS England",
+      "title": "NHS mental health crisis services",
+      "url": "https://www.england.nhs.uk/mental-health/",
+      "published": "2026-08-05",
+      "usedFor": [
+        "mental health services context",
+        "secondary corroboration"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Significant public-health access improvement with national coverage; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

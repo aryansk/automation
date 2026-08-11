@@ -1,0 +1,94 @@
+{
+  "eventId": "exmoor-white-tailed-eagles-2026-08-05",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Exmoor",
+  "coordinates": [
+    -3.65,
+    51.14
+  ],
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Nature · Conservation",
+  "headline": "White-tailed eagles return to Exmoor after 200 years",
+  "summary": "Six young eagles were released by Forestry England and the Roy Dennis Wildlife Foundation, with up to 20 more to come.",
+  "script": "Six young white-tailed eagles have been released on Exmoor, two hundred years after the species vanished from the area. Conservationists plan up to twenty more over the next three years, restoring the coastline's native wildlife.",
+  "source": "BBC · Forestry England",
+  "edition": "05 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-05-good/exmoor-eagles/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-good/exmoor-eagles/secondary.jpg",
+  "imageAlt": "A young white-tailed eagle standing on a forest floor with dark and white feathers.",
+  "imageAltTwo": "A white-tailed eagle in flight against a white sky.",
+  "imageCredit": "Forestry England",
+  "imageCreditTwo": "Getty Images",
+  "narrationAudio": "assets/narration/good5-2026-08-05-02-exmoor-eagles.wav",
+  "captions": [
+    {
+      "lines": [
+        "White-tailed eagles return",
+        "to Exmoor."
+      ],
+      "highlights": [
+        "White-tailed eagles",
+        "Exmoor"
+      ]
+    },
+    {
+      "lines": [
+        "First release in",
+        "200 years."
+      ],
+      "highlights": [
+        "First release",
+        "200 years"
+      ]
+    },
+    {
+      "lines": [
+        "Up to 20 more birds",
+        "over three years."
+      ],
+      "highlights": [
+        "20 more birds",
+        "three years"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Young white-tailed eagles released on Exmoor",
+      "url": "https://www.bbc.co.uk/news/articles/c74g0jz3d4yo",
+      "published": "2026-08-04",
+      "usedFor": [
+        "six eagles released",
+        "200-year absence",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "Forestry England",
+      "title": "White-tailed eagle reintroduction programme",
+      "url": "https://www.forestryengland.uk",
+      "published": "2026-08-04",
+      "usedFor": [
+        "reintroduction partnership",
+        "conservation context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Fresh national-park conservation milestone with genuine biodiversity significance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

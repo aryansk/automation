@@ -1,0 +1,141 @@
+{
+  "eventId": "dmd-vamorolone-toddler-trial-2026-08-10",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Binghamton",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Health · Medicine",
+  "headline": "Early drug treatment shows motor gains in toddlers with Duchenne muscular dystrophy",
+  "summary": "Boys under four who took the approved drug Vamorolone for 12 weeks showed clear improvements in gross motor skills in a Binghamton University study.",
+  "script": "A drug is helping toddlers with Duchenne muscular dystrophy move better. Twenty boys under four took Vamorolone for twelve weeks. Their motor skills improved and growth was not harmed.",
+  "source": "Binghamton University / GNN",
+  "edition": "10 Aug 2026",
+  "storyNumber": "04",
+  "imageOne": "assets/news-images/2026-08-12-good/dmd-vamorolone-toddlers/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-12-good/dmd-vamorolone-toddlers/secondary.jpg",
+  "imageAlt": "Microscopic view of muscle tissue — Duchenne muscular dystrophy research.",
+  "imageAltTwo": "Researchers Eric Hoffman and Raju Nagaraju at Binghamton University.",
+  "imageCredit": "Binghamton University",
+  "imageCreditTwo": "Jonathan Cohen / Binghamton University",
+  "narrationAudio": "assets/narration/good-04-dmd-vamorolone.wav",
+  "captions": [
+    {
+      "lines": [
+        "Toddlers with DMD",
+        "gain motor skills."
+      ],
+      "highlights": [
+        "motor skills"
+      ]
+    },
+    {
+      "lines": [
+        "12 weeks on",
+        "Vamorolone."
+      ],
+      "highlights": [
+        "12 weeks"
+      ]
+    },
+    {
+      "lines": [
+        "Improved movement,",
+        "growth unharmed."
+      ],
+      "highlights": [
+        "improved movement"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Binghamton University",
+      "title": "Binghamton University research study advances treatment for Duchenne muscular dystrophy",
+      "url": "https://www.binghamton.edu/news/story/6341/binghamton-university-research-study-advances-treatment-for-duchenne-muscular-dystrophy-dmd",
+      "published": "2026-08-10",
+      "usedFor": [
+        "Phase II results",
+        "motor score improvement"
+      ]
+    },
+    {
+      "publisher": "Good News Network",
+      "title": "New Treatment Shows Remarkable Motor Improvements in Boys With Muscular Dystrophy—in Just 12 Weeks",
+      "url": "https://www.goodnewsnetwork.org/new-treatment-shows-remarkable-motor-improvements-in-boys-with-muscular-dystrophy/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "20 boys aged 2-4",
+        "Bayley III scores"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 4,
+    "basis": "Encouraging early-stage trial.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in the United States.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Binghamton University / 10 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -100,
+              40
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Binghamton University in New York.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Binghamton University / 10 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Binghamton",
+            "coordinates": [
+              -75.9,
+              42.1
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Motor skill improvement at the trial site.",
+        "start": 9.5,
+        "animationId": "country-fill",
+        "mapSource": "Binghamton University / 10 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "US",
+            "name": "United States"
+          }
+        }
+      }
+    ]
+  }
+}

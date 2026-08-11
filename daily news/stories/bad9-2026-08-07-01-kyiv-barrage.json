@@ -1,0 +1,148 @@
+{
+  "eventId": "kyiv-missile-barrage-17-killed-2026-08-06",
+  "tone": "bad",
+  "countryCode": "UA",
+  "countryName": "Ukraine",
+  "cityName": "Kyiv",
+  "region": "Europe",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "War · Ukraine",
+  "headline": "Russian missile barrage kills 17 in Ukraine's capital region",
+  "summary": "Overnight strikes on Kyiv and the surrounding region killed 17 people and wounded dozens, with Ukraine's depleted air defenses unable to stop the missiles.",
+  "script": "A Russian missile barrage killed seventeen people around Ukraine's capital. Officials say the strikes hit a train station, a warehouse and a mail sorting office. Ukraine's air defenses, short on interceptors, failed to stop any incoming missiles.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-07-bad/kyiv-barrage/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-bad/kyiv-barrage/secondary.jpg",
+  "imageAlt": "Firefighters put out a fire after Russian missiles hit a warehouse in Kyiv.",
+  "imageAltTwo": "A residential building damaged following a Russian air attack in Sumy, Ukraine.",
+  "imageCredit": "AP Photo/Dan Bashakov",
+  "imageCreditTwo": "Ukrainian Emergency Service via AP",
+  "narrationAudio": "assets/narration/bad9-2026-08-07-01-kyiv-barrage.wav",
+  "captions": [
+    {
+      "lines": [
+        "17 killed in Kyiv",
+        "missile barrage."
+      ],
+      "highlights": [
+        "17 killed",
+        "missile barrage"
+      ]
+    },
+    {
+      "lines": [
+        "Air defenses could not",
+        "stop any incoming missiles."
+      ],
+      "highlights": [
+        "could not stop any"
+      ]
+    },
+    {
+      "lines": [
+        "Strikes hit a train station,",
+        "warehouse and mail office."
+      ],
+      "highlights": [
+        "train station",
+        "mail office"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Russian barrage in Ukraine's capital region kills 17 as air defenses fall short",
+      "url": "https://apnews.com/article/ukraine-war-russia-kyiv-patriot-ballistic-missile-64f8e53f9650d4104bb7375361abd990",
+      "published": "2026-08-06",
+      "usedFor": [
+        "17 killed",
+        "interceptor shortage",
+        "targets including train station and mail office",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Ukraine strikes more oil facilities deep inside Russia, Zelenskyy says",
+      "url": "https://apnews.com/article/russia-ukraine-war-ballistic-missiles-patriots-drones-30447169b0145caa2e48ebf22b235c7a",
+      "published": "2026-08-06",
+      "usedFor": [
+        "war context",
+        "secondary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "High-casualty attack with strategic significance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Establish Ukraine as the stage for the attack.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "UA",
+            "coordinates": [
+              31,
+              49
+            ]
+          }
+        }
+      },
+      {
+        "id": "target",
+        "scriptSection": "location",
+        "scriptCue": "Lock onto Kyiv, where the barrage landed.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Kyiv",
+            "coordinates": [
+              30.524,
+              50.45
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the region-wide impact around the capital.",
+        "start": 9.5,
+        "animationId": "disaster-radius",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "coordinates": [
+              30.524,
+              50.45
+            ]
+          },
+          "radiusKm": 60
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head></head>
+  <body>
+    <template>
+      <style>
+        #scene04-root { position:absolute; inset:0; overflow:hidden; background:#071b2a; color:#f2eee1; font-family:"IBM Plex Mono", monospace; }
+        #scene04-root .plate { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+        #scene04-root .matte { position:absolute; inset:58px 54px; border:3px solid rgba(242,238,225,.28); opacity:0; }
+        #scene04-root .vignette { position:absolute; inset:0; z-index:1; background:radial-gradient(ellipse at center, transparent 42%, rgba(7,27,42,.68) 100%); opacity:.78; }
+        #scene04-root .phrase { position:absolute; z-index:2; opacity:0; font-family:"EB Garamond", serif; font-style:italic; font-size:102px; line-height:.74; letter-spacing:-.045em; white-space:nowrap; }
+        #scene04-root .phrase.yellow { color:#f2d476; }
+        #scene04-root .label { position:absolute; z-index:2; left:82px; top:162px; font-size:22px; letter-spacing:4px; opacity:0; }
+        #scene04-root .measure { position:absolute; z-index:2; right:92px; top:380px; width:4px; height:0; background:#d96d58; opacity:0; }
+        #scene04-root .measure::after { content:""; position:absolute; left:-16px; bottom:-1px; width:36px; height:4px; background:#d96d58; box-shadow:0 -220px 0 #d96d58, 0 -440px 0 #d96d58; }
+        #scene04-root .tiny { position:absolute; z-index:2; right:82px; bottom:160px; color:#f2d476; font-size:20px; letter-spacing:3px; opacity:0; }
+      </style>
+      <div data-hf-id="hf-cmxb" id="scene04-root" data-composition-id="scene04" data-width="1080" data-height="1920" data-duration="8.5">
+        <img data-hf-id="hf-o7m5" id="scene04-art" class="plate" src="assets/illustrations/reef-city.svg" alt="">
+        <div data-hf-id="hf-6m43" id="scene04-vignette" class="vignette"></div>
+        <div data-hf-id="hf-pusf" id="scene04-matte" class="matte"></div>
+        <div data-hf-id="hf-ycal" id="scene04-label" class="label">REEF CITY / 04</div>
+        <div data-hf-id="hf-5fju" id="scene04-phrase-a" class="phrase" style="left:98px;top:520px;">small</div>
+        <div data-hf-id="hf-jl06" id="scene04-phrase-b" class="phrase yellow" style="left:424px;top:650px;">whole</div>
+        <div data-hf-id="hf-53ch" id="scene04-measure" class="measure"></div>
+        <div data-hf-id="hf-h4vh" id="scene04-tiny" class="tiny">MACRO → WIDE / 04</div>
+      </div>
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+        tl.fromTo("#scene04-art", { opacity: 0, scale: 1.42, x: 28, y: 70 }, { opacity: 1, scale: 1.04, x: 0, y: 0, duration: 1.18, ease: "expo.out" }, 0);
+        tl.fromTo("#scene04-vignette", { opacity: 0 }, { opacity: .78, duration: .72, ease: "sine.out" }, 0);
+        tl.fromTo("#scene04-matte", { opacity: 0, scale: .96 }, { opacity: 1, scale: 1, duration: .6 }, .18);
+        tl.fromTo("#scene04-label", { opacity: 0, x: -30 }, { opacity: .76, x: 0, duration: .46 }, .34);
+        tl.fromTo("#scene04-phrase-a", { opacity: 0, x: -50, rotation: -5 }, { opacity: 1, x: 0, rotation: -2, duration: .62 }, 1.12);
+        tl.fromTo("#scene04-phrase-b", { opacity: 0, x: 56, rotation: 5 }, { opacity: 1, x: 0, rotation: 2, duration: .7 }, 1.7);
+        tl.to("#scene04-measure", { opacity: .84, height: 460, duration: .66, ease: "power4.out" }, 2.18);
+        tl.fromTo("#scene04-tiny", { opacity: 0 }, { opacity: .78, duration: .42 }, 2.8);
+        tl.to("#scene04-art", { scale: 1.075, x: -16, y: -24, duration: 4.6, ease: "sine.inOut" }, 2.6);
+        tl.to("#scene04-phrase-a, #scene04-phrase-b", { y: 14, duration: 4.4, ease: "sine.inOut" }, 3.1);
+        tl.to("#scene04-matte", { opacity: .42, duration: .5 }, 7.28);
+        window.__timelines["scene04"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

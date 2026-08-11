@@ -1,0 +1,144 @@
+{
+  "eventId": "glen-affric-wild-beavers-2026-07-28",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Inverness",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Wildlife \u00b7 Rewilding",
+  "headline": "First wild-born beavers in 400 years spotted in Scottish glen",
+  "summary": "At least two beaver kits were born at Loch Beinn a' Mheadhoin in Glen Affric, part of a rewilding project that reintroduced the animals to the Highlands.",
+  "script": "Scotland's Glen Affric has its first wild-born beavers in more than four hundred years. At least two baby beavers were spotted at Loch Beinn a Mheadhoin. They were born after a rewilding charity released beavers into the glen.",
+  "source": "BBC News",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-09-good/scotland-beavers/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-09-good/scotland-beavers/secondary.jpg",
+  "imageAlt": "A beaver swimming in a Scottish loch surrounded by forested hills.",
+  "imageAltTwo": "View of Glen Affric with its loch and pine forest.",
+  "imageCredit": "Getty Images",
+  "imageCreditTwo": "Getty Images",
+  "narrationAudio": "assets/narration/good-2026-08-09-03-scotland-beavers.wav",
+  "captions": [
+    {
+      "lines": [
+        "First wild-born beavers in",
+        "400 years in Scotland."
+      ],
+      "highlights": [
+        "First wild-born beavers"
+      ]
+    },
+    {
+      "lines": [
+        "At least two kits at",
+        "Loch Beinn a' Mheadhoin."
+      ],
+      "highlights": [
+        "two kits"
+      ]
+    },
+    {
+      "lines": [
+        "Rewilding project brings",
+        "beavers back to Highlands."
+      ],
+      "highlights": [
+        "rewilding project"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Glen Affric sees first wild-born beavers in 400 years",
+      "url": "https://www.bbc.co.uk/news/articles/c4g6k44yk2yo",
+      "published": "2026-07-28",
+      "usedFor": [
+        "first wild-born beavers in 400 years",
+        "Loch Beinn a' Mheadhoin location"
+      ]
+    },
+    {
+      "publisher": "Trees for Life",
+      "title": "First baby beavers in 400 years born in Scotland's 'most beautiful glen'",
+      "url": "https://beavertrust.org/first-baby-beavers-in-400-years-born-in-scotlands-most-beautiful-glen/",
+      "published": "2026-07-29",
+      "usedFor": [
+        "reintroduction context",
+        "at least two kits confirmed"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Charming conservation win marking the return of a native species; ranking is editorial, not an objective trend metric.",
+    "researchDate": "09 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the story in Scotland.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News / 28 Jul 2026",
+        "mapData": {
+          "target": {
+            "code": "GB",
+            "coordinates": [
+              -3.4,
+              56.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on the Highlands near Inverness.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "BBC News / 28 Jul 2026",
+        "mapData": {
+          "target": {
+            "name": "Inverness",
+            "coordinates": [
+              -4.2,
+              57.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Updated engaging beat: spotlight-dim",
+        "start": 9.5,
+        "animationId": "spotlight-dim",
+        "mapSource": "BBC News / 28 Jul 2026",
+        "mapData": {
+          "target": {
+            "code": "GB",
+            "coordinates": [
+              -3.4,
+              56.5
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "eventId": "snapchat-spotlight-ai-video-policy-2026-08-01",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Santa Monica",
+  "coordinates": [-118.4914, 34.0195],
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Platforms · AI policy",
+  "headline": "Snapchat moves to limit wholly AI-generated videos in Spotlight",
+  "summary": "Snap says its ranking will favor authentic, human-made content, joining other platforms responding to low-effort synthetic video.",
+  "script": "Spotlight will favor authentic, human-made videos over wholly AI-generated clips. The change joins a wider platform push to make short-form feeds less repetitive and more trustworthy.",
+  "source": "Snap · BBC",
+  "edition": "03 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-03-real/snapchat/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-03-real/snapchat/snap-official.png",
+  "imageAlt": "Snapchat logo held above a laptop keyboard.",
+  "imageAltTwo": "Snapchat ghost logo on a bright yellow background.",
+  "imageCredit": "BBC News image",
+  "imageCreditTwo": "Snap Inc. newsroom image",
+  "narrationAudio": "assets/narration/tour/good3-2026-08-03-02-ai-slop-cutback.wav",
+  "captions": [
+    {
+      "lines": ["Snapchat is tightening", "its Spotlight feed."],
+      "highlights": ["tightening", "Spotlight feed"]
+    },
+    {
+      "lines": ["Authentic, human-made videos", "get the ranking advantage."],
+      "highlights": ["human-made videos", "ranking advantage"]
+    },
+    {
+      "lines": ["The goal: less AI slop", "and more signal."],
+      "highlights": ["less AI slop", "more signal"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Snap Inc.",
+      "title": "Still Spotlight, but still real",
+      "url": "https://newsroom.snap.com/still-spotlight-but-still-real?careersEnableJobDetailPage=kwlw6&lang=de-DE",
+      "usedFor": ["Spotlight policy statement", "secondary image"]
+    },
+    {
+      "publisher": "Snap Inc.",
+      "title": "Recommendation eligibility: quality",
+      "url": "https://values.snap.com/policy/content-guidelines-recommendation-eligibility/recommendation-eligibility/quality?lang=en-GB&useContentAccordionItems=myy81",
+      "usedFor": ["authentic-content ranking language"]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Platforms join fight against AI slop",
+      "url": "https://www.bbc.co.uk/news/articles/c77g6dm5pr8o?at_medium=RSS&at_campaign=rss",
+      "usedFor": ["wider platform context", "primary image"]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Current BBC technology-feed recency plus a first-party platform policy update; ranking is editorial, not an objective trend metric.",
+    "researchDate": "03 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

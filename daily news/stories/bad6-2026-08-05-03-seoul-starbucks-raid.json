@@ -1,0 +1,92 @@
+{
+  "eventId": "seoul-starbucks-raid-2026-08-05",
+  "tone": "bad",
+  "countryCode": "KR",
+  "countryName": "South Korea",
+  "cityName": "Seoul",
+  "coordinates": [
+    126.978,
+    37.5665
+  ],
+  "region": "East Asia",
+  "urgency": "standard",
+  "storyType": "breaking",
+  "kicker": "Business · Controversy",
+  "headline": "Police raid Starbucks Korea over 'Tank Day' promotion fiasco",
+  "summary": "Officers searched the headquarters after complaints that a free-drink promo made light of the deadly 1980 Gwangju Uprising.",
+  "script": "Police in South Korea have raided Starbucks' headquarters over a promotion that critics say made light of the Gwangju Uprising. The free-drink offer, nicknamed Tank Day, drew complaints from the public and survivors.",
+  "source": "BBC News",
+  "edition": "05 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-05-bad6/starbucks/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-bad6/starbucks/secondary.jpg",
+  "imageAlt": "Police officers enter the Starbucks Korea headquarters in Seoul during the raid.",
+  "imageAltTwo": "A Starbucks storefront in Seoul, illustrating the company's presence across the country.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "Getty Images",
+  "narrationAudio": "assets/narration/bad6-2026-08-05-03-seoul-starbucks-raid.wav",
+  "captions": [
+    {
+      "lines": [
+        "Police raid Starbucks",
+        "Korea headquarters."
+      ],
+      "highlights": [
+        "Police raid",
+        "Starbucks"
+      ]
+    },
+    {
+      "lines": [
+        "Promotion made light of",
+        "the Gwangju Uprising."
+      ],
+      "highlights": [
+        "Gwangju Uprising"
+      ]
+    },
+    {
+      "lines": [
+        "Public complaints triggered",
+        "the investigation."
+      ],
+      "highlights": [
+        "Public complaints"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Police raid Starbucks Korea headquarters over 'Tank Day' fiasco",
+      "url": "https://www.bbc.co.uk/news/articles/c0kmd4xpr46o",
+      "published": "2026-08-05",
+      "usedFor": [
+        "raid details",
+        "promotion controversy",
+        "primary context"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "South Korea police search Starbucks office over promotion row",
+      "url": "https://www.reuters.com/world/asia-pacific/",
+      "published": "2026-08-05",
+      "usedFor": [
+        "independent corroboration",
+        "investigation detail"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Fresh corporate controversy with national sensitivity and international interest; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

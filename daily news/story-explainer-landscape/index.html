@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"deskName","type":"string","label":"Desk name","default":"IndieHouse.io News"},
+    {"id":"edition","type":"string","label":"Edition date","default":"03 Aug 2026"},
+    {"id":"openerTitle","type":"string","label":"Opening title","default":"Why Hormuz matters"},
+    {"id":"openerSub","type":"string","label":"Opening sub-label","default":"One story · a map-led explainer"},
+    {"id":"story","type":"string","label":"Story JSON","default":"{}"},
+    {"id":"chapters","type":"string","label":"Chapter JSON","default":"[]"},
+    {"id":"routeNodes","type":"string","label":"Route node JSON","default":"[]"},
+    {"id":"chapterStarts","type":"string","label":"Chapter timing JSON","default":"[]"},
+    {"id":"globeAnimationId","type":"string","label":"Globe preset override (optional; use animations:list)","default":"auto"},
+    {"id":"globeAnimationPlan","type":"string","label":"Globe animation plan JSON (optional)","default":"{}"},
+    {"id":"globeMapData","type":"string","label":"Verified globe payload JSON (optional)","default":"{}"},
+    {"id":"globeMapSource","type":"string","label":"Verified globe source (optional)","default":""},
+    {"id":"captions","type":"string","label":"Live caption group JSON","default":"[]"},
+    {"id":"openerEnd","type":"number","label":"Opener end","default":5.8},
+    {"id":"endCardStart","type":"number","label":"End card start","default":150},
+    {"id":"endCardReveal","type":"number","label":"End card reveal","default":150.25},
+    {"id":"narrationAudio","type":"string","label":"Narration audio","default":"assets/narration/longform-2026-08-03-hormuz.wav"},
+    {"id":"footerNote","type":"string","label":"Footer note","default":"One story / context first"},
+    {"id":"ctaLine","type":"string","label":"End-card line","default":"One story. More context tomorrow."},
+    {"id":"ctaSource","type":"string","label":"End-card source note","default":"Sources in description · research refreshed 03 Aug 2026"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <link rel="preload" as="font" href="assets/fonts/league-gothic-400.ttf" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/ibm-plex-mono-700.ttf" crossorigin>
+    <link rel="stylesheet" href="assets/story-explainer-landscape.css">
+    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/vendor/d3.min.js"></script>
+    <script src="assets/data/world-data.js"></script>
+  </head>
+  <body>
+    <div id="root" data-composition-id="story-explainer-landscape" data-start="0" data-duration="22" data-width="1920" data-height="1080">
+      <div class="paper-grid" data-layout-ignore></div>
+      <canvas id="space-layer" width="1920" height="1080" aria-hidden="true" data-layout-ignore></canvas>
+      <canvas id="globe-layer" width="1920" height="1080" aria-hidden="true" data-layout-ignore></canvas>
+      <canvas id="map-layer" width="1920" height="1080" aria-hidden="true" data-layout-ignore></canvas>
+
+      <div class="rail" id="rail">
+        <span class="rail__desk"><span class="rail__dot"></span><span data-bind="deskName"></span></span>
+        <span class="rail__edition" data-bind="edition"></span>
+      </div>
+      <div class="rail__rule" id="rail-rule" data-layout-ignore></div>
+
+      <div class="opener" id="opener" data-layout-allow-overlap>
+        <div class="opener__eyebrow">LONG FORM / ONE STORY</div>
+        <h1 class="opener__title" id="opener-title"><span id="opener-title-top">WHY</span><span id="opener-title-bottom">HORMUZ MATTERS</span></h1>
+        <p class="opener__sub" data-bind="openerSub"></p>
+      </div>
+
+      <div class="globe-hud" id="globe-hud">
+        <div class="globe-hud__topline"><span>GLOBE / LIVE CONTEXT</span><span id="globe-focus-codes">IR · OM</span></div>
+        <div class="globe-hud__rule"></div>
+        <div class="globe-hud__bottomline"><span id="globe-focus-label">STRAIT OF HORMUZ</span><span id="globe-focus-coordinates">26.6° N / 56.5° E</span></div>
+      </div>
+
+      <div class="globe-caption" id="globe-caption"><span class="globe-caption__tick"></span><span class="globe-caption__copy">A regional route with global consequences</span></div>
+
+      <main class="explainer" id="explainer">
+        <div class="chapter-nav" id="chapter-nav">
+          <span class="chapter-nav__line"></span>
+          <span class="chapter-nav__item" data-chapter-nav="0">01</span>
+          <span class="chapter-nav__item" data-chapter-nav="1">02</span>
+          <span class="chapter-nav__item" data-chapter-nav="2">03</span>
+          <span class="chapter-nav__item" data-chapter-nav="3">04</span>
+          <span class="chapter-nav__item" data-chapter-nav="4">05</span>
+          <span class="chapter-nav__label">CHAPTERS / ONE STORY</span>
+        </div>
+
+        <section class="chapter-panel" id="chapter-0"><div class="chapter__kicker" id="chapter-kicker-0"></div><h2 class="chapter__title" id="chapter-title-0"></h2><p class="chapter__body" id="chapter-body-0"></p><div class="chapter__tag" id="chapter-tag-0"></div></section>
+        <section class="chapter-panel" id="chapter-1"><div class="chapter__kicker" id="chapter-kicker-1"></div><h2 class="chapter__title" id="chapter-title-1"></h2><p class="chapter__body" id="chapter-body-1"></p><div class="chapter__tag" id="chapter-tag-1"></div></section>
+        <section class="chapter-panel" id="chapter-2"><div class="chapter__kicker" id="chapter-kicker-2"></div><h2 class="chapter__title" id="chapter-title-2"></h2><p class="chapter__body" id="chapter-body-2"></p><div class="chapter__tag" id="chapter-tag-2"></div></section>
+        <section class="chapter-panel" id="chapter-3"><div class="chapter__kicker" id="chapter-kicker-3"></div><h2 class="chapter__title" id="chapter-title-3"></h2><p class="chapter__body" id="chapter-body-3"></p><div class="chapter__tag" id="chapter-tag-3"></div></section>
+        <section class="chapter-panel" id="chapter-4"><div class="chapter__kicker" id="chapter-kicker-4"></div><h2 class="chapter__title" id="chapter-title-4"></h2><p class="chapter__body" id="chapter-body-4"></p><div class="chapter__tag" id="chapter-tag-4"></div></section>
+
+        <div class="live-captions" id="live-captions" aria-hidden="true"><span class="live-captions__label">LIVE CAPTIONS / NARRATION</span></div>
+
+        <div class="graphic-stage" id="graphic-stage">
+          <div class="graphic graphic--location" id="graphic-location">
+            <div class="graphic__eyebrow">THE GATEWAY</div>
+            <div class="location-diagram">
+              <div class="location-diagram__axis location-diagram__axis--lat"></div><div class="location-diagram__axis location-diagram__axis--lon"></div>
+              <svg class="location-diagram__route" viewBox="0 0 820 305" aria-hidden="true"><path class="location-route__ghost" d="M112 214 C230 110 346 92 474 148 C580 194 646 157 742 78"></path><path class="location-route__line" id="location-route-line" d="M112 214 C230 110 346 92 474 148 C580 194 646 157 742 78"></path><circle class="location-route__halo" id="location-route-halo" cx="112" cy="214" r="18"></circle><circle class="location-route__marker" id="location-route-marker" cx="112" cy="214" r="6"></circle></svg>
+              <div class="location-diagram__ring" id="location-ring"></div><div class="location-diagram__core"></div><div class="location-diagram__callout" id="location-callout">IRAN / OMAN</div><div class="location-diagram__sub">PERSIAN GULF → GULF OF OMAN → ARABIAN SEA</div>
+            </div>
+          </div>
+
+          <div class="graphic graphic--route" id="graphic-route">
+            <div class="graphic__eyebrow">ENERGY ROUTE / SCHEMATIC</div>
+            <svg id="route-svg" viewBox="0 0 820 340" role="img" aria-label="Animated route from Iran and Oman through Hormuz toward Asian markets">
+              <path class="route-svg__ghost" d="M72 162 C250 246 426 188 603 238 C676 260 722 206 760 142"></path>
+              <path class="route-svg__glow" id="route-glow-0"></path><path class="route-svg__glow" id="route-glow-1"></path><path class="route-svg__glow" id="route-glow-2"></path><path class="route-svg__glow" id="route-glow-3"></path>
+              <path class="route-svg__dash" id="route-dash-0"></path><path class="route-svg__dash" id="route-dash-1"></path><path class="route-svg__dash" id="route-dash-2"></path><path class="route-svg__dash" id="route-dash-3"></path>
+              <path class="route-svg__segment" id="route-segment-0"></path><path class="route-svg__segment" id="route-segment-1"></path><path class="route-svg__segment" id="route-segment-2"></path><path class="route-svg__segment" id="route-segment-3"></path>
+              <g class="route-svg__node" data-route-node="0"><circle class="route-svg__node-halo" r="24"></circle><circle class="route-svg__node-ring" r="15"></circle><circle class="route-svg__node-core" r="9"></circle><text class="route-svg__label"></text><text class="route-svg__detail"></text></g>
+              <g class="route-svg__node" data-route-node="1"><circle class="route-svg__node-halo" r="24"></circle><circle class="route-svg__node-ring" r="15"></circle><circle class="route-svg__node-core" r="9"></circle><text class="route-svg__label"></text><text class="route-svg__detail"></text></g>
+              <g class="route-svg__node" data-route-node="2"><circle class="route-svg__node-halo" r="24"></circle><circle class="route-svg__node-ring" r="15"></circle><circle class="route-svg__node-core" r="9"></circle><text class="route-svg__label"></text><text class="route-svg__detail"></text></g>
+              <g class="route-svg__node" data-route-node="3"><circle class="route-svg__node-halo" r="24"></circle><circle class="route-svg__node-ring" r="15"></circle><circle class="route-svg__node-core" r="9"></circle><text class="route-svg__label"></text><text class="route-svg__detail"></text></g>
+              <g class="route-svg__node" data-route-node="4"><circle class="route-svg__node-halo" r="24"></circle><circle class="route-svg__node-ring" r="15"></circle><circle class="route-svg__node-core" r="9"></circle><text class="route-svg__label"></text><text class="route-svg__detail"></text></g>
+            </svg>
+            <div class="route-svg__foot">THE SHIPPING LINE IS SHORT. THE DEPENDENCY IS NOT.</div>
+          </div>
+
+          <div class="graphic graphic--incidents" id="graphic-incidents">
+            <div class="graphic__eyebrow">FIELD SIGNALS / REPORTED</div>
+            <div class="incident-layout">
+              <div class="incident-photo"><img id="incident-image" src="assets/news-images/2026-08-03/hormuz-shipping-ap.jpg" alt=""><span id="incident-credit">ARCHIVE VISUAL / RIGHTS REVIEW REQUIRED</span></div>
+              <div class="incident-photo"><img id="incident-image-two" src="assets/news-images/2026-08-03/trump-air-force-one-ap.jpg" alt=""><span id="incident-credit-two">AP · ARCHIVE VISUAL</span></div>
+              <div class="incident-list">
+                <div class="incident-signal" id="incident-signal"><div class="incident-signal__top"><span>AIR SIGNAL / KUWAIT</span><span>REPORTED</span></div><svg class="incident-signal__svg" viewBox="0 0 240 92" aria-label="Stylized drone flight path and impact marker"><path class="incident-signal__grid" d="M8 24H232 M8 46H232 M8 68H232 M52 8V84 M104 8V84 M156 8V84 M208 8V84"></path><path class="incident-signal__flight" id="incident-flight" d="M26 48 C72 18 112 26 148 48 C166 59 182 61 206 47"></path><path class="incident-signal__drone" id="incident-drone" d="M24 48 L36 42 L48 46 L56 41 L64 46 L54 51 L46 48 L36 54 Z"></path><g class="incident-signal__target" id="incident-target"><circle class="incident-signal__target-ring" r="22"></circle><circle class="incident-signal__target-ring incident-signal__target-ring--inner" r="9"></circle><path class="incident-signal__crosshair" d="M-30 0H30 M0 -30V30"></path></g></svg><span class="incident-signal__caption">FLIGHT PATH / IMPACT ZONE</span></div>
+                <div class="incident-row"><span class="incident-row__mark"></span><span><strong>KUWAIT</strong><em>drone attacks reported</em></span></div><div class="incident-row"><span class="incident-row__mark"></span><span><strong>OMAN</strong><em>tanker hit near the route</em></span></div><div class="incident-row"><span class="incident-row__mark"></span><span><strong>IRAQ → TURKEY</strong><em>alternative pipeline plan</em></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="graphic graphic--stats" id="graphic-stats">
+            <div class="graphic__eyebrow">THE SCALE / EIA ESTIMATE</div><div class="stat-number"><span id="stat-value">20</span><small>m b/d</small></div><div class="stat-number__rule"><i></i></div><div class="stat-caption">oil and petroleum liquids through Hormuz in 2024</div>
+            <div class="stat-bars"><div class="stat-bar"><span>GLOBAL PETROLEUM LIQUIDS</span><i><b class="stat-bar__fill" style="--fill: 0.20"></b></i><strong>≈ 20%</strong></div><div class="stat-bar"><span>GLOBAL LNG TRADE</span><i><b class="stat-bar__fill" style="--fill: 0.20"></b></i><strong>≈ 20%</strong></div><div class="stat-bar"><span>FLOW TO ASIA</span><i><b class="stat-bar__fill" style="--fill: 0.84"></b></i><strong>84%</strong></div></div><div class="stat-source">Source / U.S. Energy Information Administration</div>
+          </div>
+
+          <div class="graphic graphic--deal" id="graphic-deal"><div class="graphic__eyebrow">THE NEXT STATE IS NOT SETTLED</div><div class="deal-lane"><div class="deal-state"><span class="deal-state__dot"></span><strong>OPEN</strong><em>proposed</em></div><div class="deal-line"></div><div class="deal-state"><span class="deal-state__dot"></span><strong>RESTRICTED</strong><em>disputed terms</em></div><div class="deal-line"></div><div class="deal-state"><span class="deal-state__dot"></span><strong>DELAYED</strong><em>current risk</em></div></div><div class="deal-note">The route is a negotiating instrument now.<br>Every vessel is also a signal.</div></div>
+        </div>
+        <div class="chapter-progress" id="chapter-progress"><span></span></div>
+      </main>
+
+      <div class="source-card" id="source-card"><div class="source-card__eyebrow">SOURCES / REPORTING + DATA</div><div class="source-card__links" id="source-card-links"></div><div class="source-card__note">Current reporting refreshed 03 Aug 2026 · visual archive rights review remains open</div></div>
+      <div class="end-card" id="end-card"><span class="end-card__eyebrow">INDIEHOUSE.IO NEWS / LONG FORM</span><strong class="end-card__title" data-bind="ctaLine"></strong><span class="end-card__source" data-bind="ctaSource"></span></div>
+      <div class="footer" id="footer"><span data-bind="footerNote"></span><span data-bind="deskName"></span></div>
+      <audio id="narration-track" class="clip" data-start="0" data-duration="22" data-track-index="10" data-volume="1" src="assets/narration/longform-2026-08-03-hormuz.wav"></audio>
+      <div class="grain" data-layout-ignore></div>
+    </div>
+    <script>window.__timelines = window.__timelines || {}; gsap.defaults({ lazy: false }); window.__timelines["story-explainer-landscape"] = gsap.timeline({ paused: true, defaults: { ease: "power3.out", lazy: false } }); window.__storyExplainerVariables = window.__hyperframes.getVariables();</script>
+    <script type="module" src="assets/story-explainer-renderer.js"></script>
+  </body>
+</html>

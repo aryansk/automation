@@ -1,0 +1,69 @@
+{
+  "eventId": "europe-river-drought-record-lows-2026-08-03",
+  "tone": "bad",
+  "countryCode": "DE",
+  "countryName": "Germany",
+  "cityName": "Cologne",
+  "coordinates": [6.9603, 50.9375],
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "weather",
+  "kicker": "Climate · Economy",
+  "headline": "Rhine falls to record low as drought strains Europe's rivers",
+  "summary": "Record-low water levels in the Rhine, Danube and Po are curtailing shipping, cutting power output and squeezing industry.",
+  "script": "Europe's rivers are at record lows. The Rhine, Danube and Po have fallen to levels not seen in decades, forcing ships to carry less cargo and cutting electricity output across the continent.",
+  "source": "BBC · Reuters",
+  "edition": "04 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-04-bad/drought/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-bad/drought/river.jpg",
+  "imageAlt": "A view of the Rhine showing exposed riverbanks at record-low water levels.",
+  "imageAltTwo": "Cargo barges navigating a shallow stretch of the Rhine.",
+  "imageCredit": "Getty via BBC",
+  "imageCreditTwo": "Reuters image",
+  "narrationAudio": "assets/narration/tour/bad4-2026-08-04-02-europe-river-drought-record-lows.wav",
+  "statValue": "25cm",
+  "statLabel": "water depth at Kaub",
+  "statPeriod": "record low",
+  "captions": [
+    {
+      "lines": ["Rhine hits", "record-low levels."],
+      "highlights": ["Rhine", "record-low"]
+    },
+    {
+      "lines": ["Danube and Po", "also at historic lows."],
+      "highlights": ["Danube", "Po", "historic lows"]
+    },
+    {
+      "lines": ["Shipping and power", "output under strain."],
+      "highlights": ["Shipping", "power output"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Rhine falls to record low levels as drought strains Europe's rivers",
+      "url": "https://www.bbc.co.uk/news/articles/c78gn8zvrx4o",
+      "published": "2026-08-03",
+      "usedFor": ["record-low claims", "Kaub depth", "power and shipping impact"]
+    },
+    {
+      "publisher": "Reuters via gCaptain",
+      "title": "Europe's Shrinking Rivers Curb Power Output, Transport and Company Earnings",
+      "url": "https://gcaptain.com/europes-shrinking-rivers-curb-power-output-transport-and-company-earnings/",
+      "published": "2026-07-31",
+      "usedFor": ["independent corroboration", "economic impact"]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Current BBC world-feed prominence plus Reuters economic-impact reporting; ranking is editorial, not an objective trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

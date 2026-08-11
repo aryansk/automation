@@ -1,0 +1,5 @@
+ILLUSTRATIVE DEMO SCRIPT — NOT REPORTING.
+
+This demonstration shows how the pipeline selects and renders a storm-track
+map for a weather story. The track, forecast points and intensity are
+placeholders. Observed positions are solid; forecast positions are dashed.

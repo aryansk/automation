@@ -1,0 +1,173 @@
+{
+  "eventId": "amazon-fires-record-low-2025-mapbiomas-2026-07-22",
+  "tone": "good",
+  "countryCode": "BR",
+  "countryName": "Brazil",
+  "cityName": "",
+  "region": "South America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Environment \u00b7 Climate",
+  "headline": "Amazon forest fires fell to an all-time low in 2025",
+  "summary": "Satellite data shows just 3.1 million hectares burned last year, the smallest area since records began in 1985, as deforestation in Brazil's rainforest also eased.",
+  "script": "Forest fires in the Brazilian Amazon fell to their lowest level since records began in nineteen eighty-five. About three point one million hectares burned last year, after a sharp fall in deforestation.",
+  "source": "Euronews",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-09-good/amazon-fires/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-09-good/amazon-fires/secondary.jpg",
+  "imageAlt": "Aerial view of dense Amazon rainforest canopy in Brazil.",
+  "imageAltTwo": "Satellite view of the Amazon basin showing forested land.",
+  "imageCredit": "Getty Images",
+  "imageCreditTwo": "Getty Images",
+  "narrationAudio": "assets/narration/good-2026-08-09-02-amazon-fires.wav",
+  "captions": [
+    {
+      "lines": [
+        "Amazon fires hit all-time",
+        "low in 2025."
+      ],
+      "highlights": [
+        "all-time low"
+      ]
+    },
+    {
+      "lines": [
+        "3.1 million hectares,",
+        "least since 1985."
+      ],
+      "highlights": [
+        "3.1 million hectares"
+      ]
+    },
+    {
+      "lines": [
+        "Deforestation also eased;",
+        "El Ni\u00f1o could reverse it."
+      ],
+      "highlights": [
+        "El Ni\u00f1o",
+        "reverse"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Euronews",
+      "title": "Amazon forest fires fell to all-time low in 2025 but could a super El Ni\u00f1o halt progress",
+      "url": "https://www.euronews.com/2026/07/22/amazon-forest-fires-fell-to-all-time-low-in-2025-but-could-a-super-el-nino-halt-progress",
+      "published": "2026-07-22",
+      "usedFor": [
+        "record-low 3.1 million hectares",
+        "deforestation easing",
+        "El Ni\u00f1o risk"
+      ]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Brazil's Amazon sees sharp decline of area burned in 2025",
+      "url": "https://www.bbc.com/news/articles/cqx78eplqqlo",
+      "published": "2026-07",
+      "usedFor": [
+        "MapBiomas data corroboration",
+        "national context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major environmental milestone with global climate relevance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "09 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the story in Brazil.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Euronews / 22 Jul 2026",
+        "mapData": {
+          "target": {
+            "code": "BR",
+            "coordinates": [
+              -51.9,
+              -14.2
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Zoom into the Amazon basin.",
+        "start": 4.5,
+        "animationId": "region-dive",
+        "mapSource": "Euronews / 22 Jul 2026",
+        "mapData": {
+          "target": {
+            "name": "Amazon Basin",
+            "coordinates": [
+              -60,
+              -3
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Updated engaging beat: heatmap-bloom",
+        "start": 9.5,
+        "animationId": "heatmap-bloom",
+        "mapSource": "Euronews / 22 Jul 2026",
+        "mapData": {
+          "points": [
+            {
+              "name": "Manaus",
+              "coordinates": [
+                -60.0,
+                -3.1
+              ],
+              "value": 68
+            },
+            {
+              "name": "Belem",
+              "coordinates": [
+                -48.5,
+                -1.4
+              ],
+              "value": 42
+            },
+            {
+              "name": "Porto Velho",
+              "coordinates": [
+                -63.9,
+                -8.7
+              ],
+              "value": 55
+            },
+            {
+              "name": "Santar\u00e9m",
+              "coordinates": [
+                -54.7,
+                -2.4
+              ],
+              "value": 36
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

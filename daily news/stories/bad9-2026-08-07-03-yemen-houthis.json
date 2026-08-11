@@ -1,0 +1,155 @@
+{
+  "eventId": "houthi-attacks-yemen-troops-2026-08-06",
+  "tone": "bad",
+  "countryCode": "YE",
+  "countryName": "Yemen",
+  "cityName": "Marib",
+  "region": "Middle East",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Yemen",
+  "headline": "Houthi attacks reportedly kill at least 30 Yemeni government forces",
+  "summary": "Ballistic missiles and drones struck military camps in Marib and Hadramawt, with the defence ministry vowing to respond to the 'treacherous' attacks.",
+  "script": "Houthi attacks have reportedly killed at least thirty Yemeni government troops. Missiles and drones hit military camps in Marib and Hadramawt. Yemen's defence ministry denounced the assault and vowed to respond at an appropriate time and place.",
+  "source": "BBC News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-07-bad/yemen-houthis/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-bad/yemen-houthis/secondary.jpg",
+  "imageAlt": "Houthi security forces attend a rally in Sanaa, Yemen.",
+  "imageAltTwo": "A satellite image shows the Bab el-Mandeb Strait, a narrow shipping lane.",
+  "imageCredit": "EPA via BBC",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/bad9-2026-08-07-03-yemen-houthis.wav",
+  "captions": [
+    {
+      "lines": [
+        "At least 30 Yemeni troops",
+        "killed in Houthi attacks."
+      ],
+      "highlights": [
+        "at least 30"
+      ]
+    },
+    {
+      "lines": [
+        "Missiles and drones hit",
+        "Marib and Hadramawt camps."
+      ],
+      "highlights": [
+        "Marib and Hadramawt"
+      ]
+    },
+    {
+      "lines": [
+        "Defence ministry vows",
+        "to respond."
+      ],
+      "highlights": [
+        "vows to respond"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Houthi attacks reportedly kill at least 30 Yemeni government forces",
+      "url": "https://www.bbc.com/news/articles/ckgdmdr0lmgo",
+      "published": "2026-08-07",
+      "usedFor": [
+        "at least 30 killed",
+        "Marib and Hadramawt strikes",
+        "defence ministry response",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Saudi military says Houthi attacks left 11 civilians injured near Yemen border",
+      "url": "https://apnews.com/article/houthi-rebel-attacks-marib-hadhramaut-c1cbd145c5e740b93a4731980ec4e697",
+      "published": "2026-08-07",
+      "usedFor": [
+        "regional attack context",
+        "corroboration of escalation"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Significant escalation in a long-running conflict with regional implications; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the story in Yemen.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "YE",
+            "coordinates": [
+              47,
+              15.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "target",
+        "scriptSection": "location",
+        "scriptCue": "Lock onto Marib, site of the attacked camp.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Marib",
+            "coordinates": [
+              45.326,
+              15.462
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the two attacked provinces and the Red Sea context.",
+        "start": 9.5,
+        "animationId": "event-cluster",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "points": [
+            {
+              "name": "Marib",
+              "coordinates": [
+                45.326,
+                15.462
+              ]
+            },
+            {
+              "name": "Hadramawt",
+              "coordinates": [
+                48.5,
+                16
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

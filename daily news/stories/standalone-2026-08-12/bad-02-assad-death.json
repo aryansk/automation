@@ -1,0 +1,140 @@
+{
+  "eventId": "syria-assad-death-sentence-2026-08-11",
+  "tone": "bad",
+  "countryCode": "SY",
+  "countryName": "Syria",
+  "cityName": "Damascus",
+  "region": "Middle East",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Justice · War crimes",
+  "headline": "Syrian court sentences ousted leader Bashar al-Assad to death in absentia",
+  "summary": "A court convicted Assad and his brother Maher of war crimes and crimes against humanity during the country's nearly 14-year civil war.",
+  "script": "A Syrian court has sentenced Bashar al-Assad to death in absentia. The ousted leader was convicted of war crimes and crimes against humanity. His brother Maher was sentenced too.",
+  "source": "AP News",
+  "edition": "11 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-12-bad/assad-death-sentence/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-12-bad/assad-death-sentence/secondary.jpg",
+  "imageAlt": "File photo of Bashar al-Assad speaking during his presidency.",
+  "imageAltTwo": "Courthouse in Damascus where the trial in absentia took place.",
+  "imageCredit": "AFP / Getty",
+  "imageCreditTwo": "AP News",
+  "narrationAudio": "assets/narration/bad-02-assad-death.wav",
+  "captions": [
+    {
+      "lines": [
+        "Assad sentenced",
+        "to death."
+      ],
+      "highlights": [
+        "death"
+      ]
+    },
+    {
+      "lines": [
+        "War crimes conviction",
+        "in absentia."
+      ],
+      "highlights": [
+        "war crimes"
+      ]
+    },
+    {
+      "lines": [
+        "Brother Maher",
+        "also sentenced."
+      ],
+      "highlights": [
+        "Maher"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Former Syrian President Assad sentenced to death in absentia",
+      "url": "https://apnews.com/article/syria-assad-death-trial-d4c486b5d39bbdb41108112b0ddc8e79",
+      "published": "2026-08-11",
+      "usedFor": [
+        "death sentence",
+        "Maher conviction"
+      ]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Ousted Syrian dictator Bashar al-Assad sentenced to death in absentia",
+      "url": "https://www.bbc.com/news/articles/ce34dkpnyg7o",
+      "published": "2026-08-11",
+      "usedFor": [
+        "crimes against humanity",
+        "14-year civil war"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Landmark war-crimes verdict.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Syria.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "SY",
+            "coordinates": [
+              38.5,
+              34.8
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Trial in Damascus.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Damascus",
+            "coordinates": [
+              36.3,
+              33.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Atrocities across the country.",
+        "start": 9.5,
+        "animationId": "conflict-zone-hatch",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "SY"
+          ]
+        }
+      }
+    ]
+  }
+}

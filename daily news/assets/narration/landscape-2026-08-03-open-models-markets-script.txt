@@ -1,0 +1,67 @@
+In late July, an unusual alliance formed in Washington.
+
+Nvidia, Microsoft and other technology heavyweights argued that open-weight artificial intelligence should remain open — a striking position from companies that also sell the chips, cloud and software around it.
+
+That sounds like a policy dispute.
+
+It is also a stock-market story.
+
+Because the question is not simply whether open models are good or bad. The question is more uncomfortable: if capable models become widely available, which part of the AI economy keeps the profit?
+
+Start in the United States. On the twenty-fourth of July, the open-model argument arrived in front of lawmakers. The companies were not promising that openness is free. They were arguing that a wider ecosystem can make the United States more competitive — and keep one gatekeeper from owning every route into artificial intelligence.
+
+Now rotate east.
+
+China is no longer a footnote in this story. On the seventeenth of July, Moonshot AI unveiled Kimi K3, a model it described as the world’s largest open-weight system at 2.8 trillion parameters. Days later, Moonshot temporarily paused new subscriptions after demand strained capacity. Alibaba was previewing its own enormous model before an open-weight release.
+
+That sequence tells us something important. Open access can lower the toll on intelligence and still create a queue at the infrastructure layer.
+
+Here is the vocabulary. Open-weight does not necessarily mean fully open source. It usually means the trained parameters are released so developers can download a model, run it themselves, fine-tune it, or build a private system around it. The training data, the full recipe, the safety process and the expensive infrastructure may still remain closed.
+
+The difference matters.
+
+A closed model is a service you rent. An open-weight model is closer to a machine you can take home and modify. That can weaken a provider’s pricing power. Customers can negotiate harder. Developers can keep sensitive workloads on their own machines. Startups can build without depending on one company’s permission, price or product roadmap.
+
+But cheaper intelligence can create more demand. When a useful capability becomes inexpensive, people usually find more things to do with it: more agents, more automation, more experiments and more inference.
+
+This is where the map rotates from the model to the stack beneath it.
+
+Look at China’s Guangdong province. In May, large data-centre clusters entered electricity spot trading as virtual power plants — a real-world sign that AI demand is becoming a grid problem, not just a software problem.
+
+Then look at Taiwan. The chip factory is part of the AI story before the model ever reaches a customer. The chain continues through Japan’s equipment makers, South Korea’s memory industry, the Netherlands’ lithography ecosystem and American cloud campuses.
+
+The International Energy Agency’s base case puts global data-centre electricity use at about 945 terawatt-hours in 2030. That is not a prediction of one company’s revenue. It is a reminder that every extra layer of software eventually touches a physical system.
+
+Open models can reduce the price of software while increasing the volume of hardware, networking, cooling and electricity required to run it.
+
+Now rotate to New York, Tokyo and Seoul.
+
+Markets do not price possibilities. They price expectations. The IMF says AI-exposed markets in the United States, Japan, South Korea and Taiwan outperformed in the second quarter of 2026. That is a broad market signal, not proof that every AI investment will pay off.
+
+The BIS warning is the other half of the picture. When valuations and earnings expectations are already high, a disappointment in AI revenue, utilization or capital spending can travel quickly through the market.
+
+If open models make applications cheaper and adoption faster, investors may reward the companies that own distribution, data and customer relationships. If model prices collapse before massive infrastructure spending pays back, investors may punish the companies carrying the heaviest expectations.
+
+The same technology can be good for adoption and bad for a particular business model.
+
+So who wins?
+
+Chip and memory suppliers may benefit from wider deployment, but hardware pricing can still compress. Cloud companies may sell more compute, but they also have to finance the data centres. Software companies may gain bargaining power over model providers while facing more competition from smaller teams. Model labs may lose some scarcity and gain a much larger ecosystem built around their architecture.
+
+Now rotate once more, to Germany and Singapore.
+
+Europe has committed five billion euros toward seven AI megafactories, trying to narrow the distance with the United States and China. Singapore is a deployment and finance hub. China is trying to balance the reach of open models with the control of strategically sensitive technology.
+
+The world is not choosing one winner. It is building several interlocking bottlenecks.
+
+That is why the signal to watch is not the loudest announcement. Watch the behaviour underneath it.
+
+Are companies actually deploying open models? Are inference costs falling? Is usage expanding? Are AI revenues growing faster than capital spending? Are customers buying one provider’s intelligence, or building systems they can switch?
+
+The headline is not that open AI will crash the stock market.
+
+It is that open models are redrawing the profit map.
+
+The model may become the commodity layer. Compute, electricity, data, distribution and trust may become the new tollbooths.
+
+That is the market question for the next phase of AI: not who has the cleverest model, but who still owns the bottleneck after everyone else can use one.

@@ -1,0 +1,128 @@
+{
+  "eventId": "xbox-console-price-rise-2026-08-03",
+  "tone": "bad",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Redmond",
+  "coordinates": [
+    -122.1215,
+    47.674
+  ],
+  "region": "North America",
+  "urgency": "current",
+  "storyType": "product",
+  "kicker": "Tech · Consumer cost",
+  "headline": "Xbox prices jump as memory chip costs surge",
+  "summary": "Microsoft raised UK Series X pricing from £500 to £670 and Series S from £300 to £430; it says storage and memory costs have risen sharply.",
+  "script": "Microsoft has raised Xbox prices worldwide. In Britain, Series X jumps from five hundred to six hundred and seventy pounds, while Series S rises to four hundred and thirty. The company blames surging memory and storage costs.",
+  "source": "BBC · Xbox Wire",
+  "edition": "04 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-04-bad/xbox/price.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-bad/xbox/official.png",
+  "imageAlt": "An Xbox logo on a smartphone over a financial chart.",
+  "imageAltTwo": "The Xbox logo glowing against a dark official Xbox Wire background.",
+  "imageCredit": "Getty Images via BBC News",
+  "imageCreditTwo": "Xbox Wire / Microsoft",
+  "narrationAudio": "assets/narration/tour/bad6-2026-08-04-03-xbox-price-rise.wav",
+  "captions": [
+    {
+      "lines": [
+        "Xbox prices jump",
+        "as costs surge."
+      ],
+      "highlights": [
+        "Xbox prices",
+        "costs surge"
+      ]
+    },
+    {
+      "lines": [
+        "Series X reaches",
+        "£670 in Britain."
+      ],
+      "highlights": [
+        "Series X",
+        "£670"
+      ]
+    },
+    {
+      "lines": [
+        "Memory and storage",
+        "costs are rising."
+      ],
+      "highlights": [
+        "Memory",
+        "storage"
+      ]
+    }
+  ],
+  "mentionedCountryCodes": [
+    "US",
+    "GB"
+  ],
+  "affectedCountryCodes": [
+    "US",
+    "GB"
+  ],
+  "locatorInset": false,
+  "focusZoom": 13.5,
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Xbox Series X price hiked by £170 due to rising memory chip costs",
+      "url": "https://www.bbc.co.uk/news/articles/czjlvrd9e43o",
+      "published": "2026-08-03T11:18:10.995Z",
+      "usedFor": [
+        "UK prices",
+        "43% Series S rise",
+        "worldwide increase context"
+      ]
+    },
+    {
+      "publisher": "Xbox Wire",
+      "title": "Updated Xbox Console Prices",
+      "url": "https://news.xbox.com/en-us/2026/06/25/xbox-console-price-update/amp/",
+      "published": "2026-06-25",
+      "usedFor": [
+        "1 August effective date",
+        "worldwide price policy",
+        "memory and storage cost explanation"
+      ]
+    }
+  ],
+  "imageSources": [
+    {
+      "articleUrl": "https://www.bbc.co.uk/news/articles/czjlvrd9e43o",
+      "assetUrl": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/77a2/live/784485e0-8f23-11f1-b5a8-c9ccaae98ebb.jpg",
+      "localPath": "assets/news-images/2026-08-04-bad/xbox/price.jpg",
+      "caption": "Xbox logo on a smartphone in front of a financial chart.",
+      "credit": "Getty Images",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized source-image workflow; publisher rights were not independently cleared."
+    },
+    {
+      "articleUrl": "https://news.xbox.com/en-us/2026/06/25/xbox-console-price-update/amp/",
+      "assetUrl": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/05/Bootup_Wire-9c068aa206c9a72d2b1f-1024x576.png",
+      "localPath": "assets/news-images/2026-08-04-bad/xbox/official.png",
+      "caption": "Official Xbox Wire logo image.",
+      "credit": "Xbox Wire / Microsoft",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized first-party source-image workflow; reuse terms were not independently cleared."
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Recent BBC Technology feed lead with a first-party Microsoft price notice; editorial rank reflects recency, prominence and adverse audience interest, not a platform-wide trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "assetLicense": "BBC and Xbox Wire source images used under the authorized newsroom workflow.",
+    "assetCredit": "Getty Images via BBC News; Xbox Wire / Microsoft.",
+    "commercialEditorialRightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

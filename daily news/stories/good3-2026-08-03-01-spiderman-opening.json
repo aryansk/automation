@@ -1,0 +1,68 @@
+{
+  "eventId": "spiderman-brand-new-day-opening-2026-08-02",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "New York City",
+  "coordinates": [-74.006, 40.7128],
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "statistics",
+  "kicker": "Culture · Film",
+  "headline": "Spider-Man film posts second-biggest global opening ever",
+  "summary": "Brand New Day took $927m worldwide in its opening weekend, with AP reporting $355m in North America and $572m internationally.",
+  "script": "Spider-Man: Brand New Day opened with nine hundred twenty-seven million dollars worldwide. That makes it the second-biggest global opening ever, behind Avengers: Endgame, giving cinemas a major summer lift.",
+  "source": "AP · BBC",
+  "edition": "03 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-03-real/spiderman/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-03-real/spiderman/ap.jpg",
+  "imageAlt": "Spider-Man swings through a city while holding MJ, played by Zendaya.",
+  "imageAltTwo": "Spider-Man sits on a high ledge above a city skyline.",
+  "imageCredit": "BBC News image",
+  "imageCreditTwo": "AP image",
+  "narrationAudio": "assets/narration/tour/good3-2026-08-03-01-spiderman-opening.wav",
+  "statValue": "$927m",
+  "statLabel": "worldwide opening",
+  "statPeriod": "opening weekend",
+  "captions": [
+    {
+      "lines": ["Spider-Man: Brand New Day", "opens to $927 million worldwide."],
+      "highlights": ["$927 million worldwide"]
+    },
+    {
+      "lines": ["The second-biggest global opening", "ever, behind Endgame."],
+      "highlights": ["second-biggest global opening", "Endgame"]
+    },
+    {
+      "lines": ["A blockbuster boost", "for cinemas this summer."],
+      "highlights": ["blockbuster boost", "cinemas"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Associated Press",
+      "title": "Spider-Man: Brand New Day swings to second-biggest global opening ever",
+      "url": "https://apnews.com/article/a2c2efb863263ce50bcee1e7db822574",
+      "published": "2026-08-02",
+      "usedFor": ["opening-weekend total", "North America and international split", "ranking"]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Spider-Man: Brand New Day news image and current coverage",
+      "url": "https://www.bbc.co.uk/news/articles/c3w052le2elo?at_medium=RSS&at_campaign=rss",
+      "usedFor": ["current story context", "primary image"]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Current BBC topic-feed recency plus cross-source prominence; ranking is editorial, not an objective trend metric.",
+    "researchDate": "03 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

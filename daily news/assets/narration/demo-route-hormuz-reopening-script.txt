@@ -1,0 +1,6 @@
+ILLUSTRATIVE DEMO SCRIPT — NOT REPORTING.
+
+This demonstration shows how the pipeline selects and renders a great-circle
+route map for an international shipping story. The route, coordinates and
+labels are placeholders. Hormuz is the narrow passage between Iran and Oman.
+Energy flows from the Gulf toward India and East Asia.

@@ -1,0 +1,45 @@
+{
+  "countryCode": "GR",
+  "countryName": "Greece",
+  "cityName": "Psatha",
+  "coordinates": [
+    23.235,
+    38.145
+  ],
+  "region": "Southern Europe",
+  "kicker": "World · Wildfire",
+  "headline": "Two firefighting crew die in Greek helicopter collision",
+  "summary": "A Danish pilot and Greek coordinator died near Psatha west of Athens; a British pilot and another Greek crew member survived.",
+  "script": "Two crew members died after firefighting helicopters collided near Psatha, west of Athens. AP says the victims were a Danish pilot and a Greek coordinator. A British pilot and another Greek crew member survived.",
+  "source": "AP News / BBC",
+  "edition": "03 Aug 2026",
+  "imageOne": "assets/news-images/2026-08-03-recreated/greece-aerial-fire.png",
+  "imageTwo": "assets/news-images/2026-08-03-recreated/greece-response-base.png",
+  "imageAlt": "A firefighting helicopter drops water over a smoky Mediterranean hillside.",
+  "imageAltTwo": "Firefighters stand beside a grounded water-bombing helicopter near a smoky hillside.",
+  "imageCredit": "AI-generated contextual illustration · no crash imagery",
+  "imageCreditTwo": "AI-generated contextual illustration · no crash imagery",
+  "narrationAudio": "assets/narration/bad-2026-08-03-greece-helicopter-collision.wav",
+  "storyNumber": "01",
+  "storyType": "breaking",
+  "urgency": "breaking",
+  "sources": [
+    {
+      "publisher": "The Associated Press",
+      "title": "2 killed when firefighting helicopters collide near Athens as Europe’s wildfire emergency rages",
+      "url": "https://apnews.com/article/726b55a6fe6c51de1fb086b437eb28de",
+      "published": "02 Aug 2026"
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Two crew killed after firefighting helicopters collide in Greece, as British pilot survives",
+      "url": "https://www.bbc.co.uk/news/articles/c1417713ve6o",
+      "published": "02 Aug 2026"
+    }
+  ],
+  "rights": {
+    "assetLicense": "Generated locally with OpenAI image generation; no external news photography used.",
+    "assetCredit": "AI-generated contextual illustrations by OpenAI image generation; no crash imagery.",
+    "commercialEditorialRightsVerified": true
+  }
+}

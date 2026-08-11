@@ -1,0 +1,11 @@
+{
+  "name": "globe-map-showcase-portrait",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "npx --yes hyperframes@0.7.94 check",
+    "snapshot": "npx --yes hyperframes@0.7.94 snapshot --at 2.0,31.2,60.4,89.6,118.8,155.5",
+    "preview": "npx --yes hyperframes@0.7.94 preview",
+    "render": "npx --yes hyperframes@0.7.94 render"
+  }
+}

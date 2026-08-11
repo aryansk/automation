@@ -1,0 +1,72 @@
+{
+  "eventId": "india-local-strawberry-varieties-2026-07-30",
+  "tone": "good",
+  "countryCode": "IN",
+  "countryName": "India",
+  "cityName": "Mahabaleshwar",
+  "coordinates": [73.656, 17.93],
+  "region": "South Asia",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Agriculture · Research",
+  "headline": "Indian growers work toward home-grown strawberry varieties",
+  "summary": "BBC reports farmers want less reliance on imported US and European varieties; recent Indian research tests protected cultivation and yield improvements.",
+  "script": "Indian growers are testing protected cultivation and local strawberry varieties to reduce reliance on imported plants. The country wants to join the world’s strawberry leaders, while improved growing methods are producing higher yields in trials.",
+  "source": "BBC · Research",
+  "edition": "03 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-03-real/strawberries/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-03-real/strawberries/tubes.jpg",
+  "imageAlt": "Large red strawberries packed in a box.",
+  "imageAltTwo": "Strawberry plants grow in raised grey tubes inside a protected farm.",
+  "imageCredit": "BBC News image",
+  "imageCreditTwo": "BBC News image",
+  "narrationAudio": "assets/narration/tour/good3-2026-08-03-03-india-strawberry-research.wav",
+  "captions": [
+    {
+      "lines": ["Indian growers are testing", "home-grown strawberry varieties."],
+      "highlights": ["Indian growers", "home-grown"]
+    },
+    {
+      "lines": ["Protected cultivation", "can improve yields."],
+      "highlights": ["Protected cultivation", "improve yields"]
+    },
+    {
+      "lines": ["A smaller import bill", "could help local farms."],
+      "highlights": ["smaller import bill", "local farms"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "India wants to join the strawberry superpowers",
+      "url": "https://www.bbc.co.uk/news/articles/c8x274xxxpwo?at_medium=RSS&at_campaign=rss",
+      "usedFor": ["current story context", "primary image"]
+    },
+    {
+      "publisher": "Frontiers in Agronomy",
+      "title": "Protected cultivation and improved strawberry productivity in the north-western Himalayas",
+      "url": "https://www.frontiersin.org/journals/agronomy/articles/10.3389/fagro.2026.1781888/full",
+      "published": "2026-04-06",
+      "usedFor": ["research context", "yield claim"]
+    },
+    {
+      "publisher": "The Economic Times",
+      "title": "How a fruit born out of a 1992 experiment is helping farmers earn",
+      "url": "https://economictimes.indiatimes.com/news/new-updates/how-a-fruit-born-out-of-1992-experiment-is-helping-farmers-earn-rs-1012-lakh-per-acre/articleshow/131850137.cms",
+      "published": "2026-06-19",
+      "usedFor": ["Indian production context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Current BBC science-feed recency plus supporting Indian cultivation research; ranking is editorial, not an objective trend metric.",
+    "researchDate": "03 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "eventId": "colombia-fgm-ban-2026-08-05",
+  "tone": "good",
+  "countryCode": "CO",
+  "countryName": "Colombia",
+  "cityName": "Bogotá",
+  "coordinates": [
+    -74.0721,
+    4.711
+  ],
+  "region": "South America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Rights · Law",
+  "headline": "Colombia becomes first Latin American country to ban FGM",
+  "summary": "Congress passed the ban unanimously, capping a long campaign by Emberá women activists against the practice.",
+  "script": "Colombia has become the first country in Latin America to ban female genital mutilation. Congress passed the law unanimously, after years of campaigning by activists from the Emberá community, where the practice still occurs.",
+  "source": "BBC · AFP",
+  "edition": "05 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-05-good/colombia-fgm/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-good/colombia-fgm/secondary.jpg",
+  "imageAlt": "Activist Carla Quiñonez, an Emberá woman working to end female genital cutting in her community.",
+  "imageAltTwo": "Three generations of Emberá women in traditional dress, representing the community at the heart of the campaign.",
+  "imageCredit": "José Carlos Cueto / BBC Mundo",
+  "imageCreditTwo": "BBC Mundo illustration",
+  "narrationAudio": "assets/narration/good5-2026-08-05-01-colombia-fgm-ban.wav",
+  "captions": [
+    {
+      "lines": [
+        "Colombia bans female",
+        "genital mutilation."
+      ],
+      "highlights": [
+        "Colombia bans",
+        "genital mutilation"
+      ]
+    },
+    {
+      "lines": [
+        "First country in",
+        "Latin America to do so."
+      ],
+      "highlights": [
+        "First country",
+        "Latin America"
+      ]
+    },
+    {
+      "lines": [
+        "Emberá women campaigned",
+        "for years for the law."
+      ],
+      "highlights": [
+        "Emberá women",
+        "campaigned"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "FGM: 'My grandmother subjected my baby to female genital mutilation behind my back'",
+      "url": "https://www.bbc.co.uk/news/articles/c3r0vp7n0pro",
+      "published": "2026-08-04",
+      "usedFor": [
+        "unanimous congressional passage",
+        "Emberá campaign context",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "Al Jazeera",
+      "title": "Inside the fight to end female genital mutilation in Colombia",
+      "url": "https://www.aljazeera.com/features/longform/2026/6/14/making-history-the-fight-to-end-female-genital-mutilation-in-colombia",
+      "published": "2026-06-14",
+      "usedFor": [
+        "independent corroboration",
+        "community campaign context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Landmark rights milestone with global significance and BBC Mundo reporting; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

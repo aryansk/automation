@@ -1,0 +1,93 @@
+{
+  "eventId": "kyiv-missile-strike-2026-08-05",
+  "tone": "bad",
+  "countryCode": "UA",
+  "countryName": "Ukraine",
+  "cityName": "Kyiv",
+  "coordinates": [
+    30.5233,
+    50.4501
+  ],
+  "region": "Europe",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Attack",
+  "headline": "Russian strike kills at least 17 in Kyiv, officials say",
+  "summary": "A ballistic missile attack on the capital and its region killed 17 people; Zelensky said more interceptors could have saved lives.",
+  "script": "A Russian missile strike on Kyiv has killed at least seventeen people. President Zelensky said more air defence interceptors could have saved lives. The attack came as Moscow continues its campaign against the Ukrainian capital.",
+  "source": "BBC News",
+  "edition": "05 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-05-bad6/kyiv/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-bad6/kyiv/secondary.jpg",
+  "imageAlt": "Emergency workers at the scene of the missile strike in the Kyiv region.",
+  "imageAltTwo": "A view of damage in the Kyiv area following the overnight attack.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "Reuters",
+  "narrationAudio": "assets/narration/bad6-2026-08-05-01-kyiv-strike.wav",
+  "captions": [
+    {
+      "lines": [
+        "Missile strike kills",
+        "17 in Kyiv."
+      ],
+      "highlights": [
+        "Missile strike",
+        "17 in Kyiv"
+      ]
+    },
+    {
+      "lines": [
+        "Zelensky says interceptors",
+        "could have saved lives."
+      ],
+      "highlights": [
+        "Zelensky",
+        "saved lives"
+      ]
+    },
+    {
+      "lines": [
+        "Attack targets",
+        "the capital region."
+      ],
+      "highlights": [
+        "capital region"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Russian strike kills at least 17 as Zelensky says interceptors could have saved lives",
+      "url": "https://www.bbc.co.uk/news/articles/c330pxyvzzyo",
+      "published": "2026-08-05",
+      "usedFor": [
+        "casualty figure",
+        "Zelensky statement",
+        "primary context"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "Russian missiles kill 17 in Kyiv region, Ukraine says",
+      "url": "https://www.reuters.com/world/europe/",
+      "published": "2026-08-05",
+      "usedFor": [
+        "independent corroboration",
+        "attack details"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major breaking conflict story with international feed prominence; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

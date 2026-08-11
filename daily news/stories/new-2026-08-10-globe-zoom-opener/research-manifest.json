@@ -1,0 +1,30 @@
+{
+  "batch": "new-2026-08-10-globe-zoom-opener",
+  "researchDate": "2026-08-10",
+  "edition": "10 Aug 2026",
+  "stories": 12,
+  "toneSplit": {
+    "good": 6,
+    "bad": 6
+  },
+  "opener": {
+    "mode": "standard",
+    "good": "Good morning, good news",
+    "bad": "Good morning, bad news"
+  },
+  "globe": {
+    "focusZoom": 9.8,
+    "note": "Lower camera distance than the prior batch for a visibly stronger zoom-in."
+  },
+  "noRepeatAudit": {
+    "storyHistory": "daily news/stories/story-history.json",
+    "priorHookBatches": [
+      "daily news/stories/hook-test-2026-08-10",
+      "daily news/stories/globe-zoom-opener-2026-08-10"
+    ],
+    "eventIdOverlap": [],
+    "distinctFromHistory": true
+  },
+  "researchMethod": "Current Aug 9–10 reporting cross-checked against official or primary context pages where available; Google News RSS was used only for discovery and not treated as the sole authority.",
+  "rightsNote": "Source images are user-authorized for this editorial workflow; rights were not independently cleared."
+}

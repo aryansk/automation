@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="deep" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0d4658"/><stop offset="1" stop-color="#071b2a"/></linearGradient>
+    <pattern id="scan" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 0h8" stroke="#b7ecde" stroke-width="1" opacity=".09"/></pattern>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#deep)"/>
+  <path d="M30 220L520 1720M276 0l186 1920M820 0L586 1920M1080 284L720 1850" stroke="#84e4d5" stroke-width="18" opacity=".07"/>
+  <g fill="#d96d58" stroke="#f2d476" stroke-width="5">
+    <path d="M0 1700c55-260 18-460 100-470 76-10 56 278 117 364 36-216 56-370 130-351 72 19 4 302 61 422H0z"/>
+    <path d="M390 1810c42-256 14-428 92-445 77-17 50 259 118 364 30-224 62-359 128-334 63 24 21 239 57 425H390z" fill="#e9a56c"/>
+    <path d="M760 1776c25-215 7-388 83-395 70-7 54 245 121 345 24-157 58-275 105-252 42 20 2 180 11 426H760z" fill="#5aa0a2"/>
+  </g>
+  <g fill="#f2d476"><circle cx="168" cy="880" r="18"/><circle cx="866" cy="615" r="12"/><circle cx="702" cy="1070" r="9"/><circle cx="382" cy="512" r="11"/></g>
+  <g fill="none" stroke="#f2eee1" stroke-width="7" stroke-linecap="round"><path d="M122 1040c44-35 78-35 121 0s75 35 120 0"/><path d="M600 1180c38-28 70-28 108 0s72 28 112 0"/><path d="M420 760c33-25 64-25 98 0s64 25 98 0"/></g>
+  <rect width="1080" height="1920" fill="url(#scan)"/>
+  <text x="84" y="1760" fill="#f2d476" font-family="EB Garamond, serif" font-size="92" font-style="italic">small / whole</text>
+</svg>

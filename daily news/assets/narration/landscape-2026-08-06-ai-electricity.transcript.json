@@ -1,0 +1,3227 @@
+[
+  {
+    "text": "In",
+    "start": 0.03,
+    "end": 0.1
+  },
+  {
+    "text": "February,",
+    "start": 0.19,
+    "end": 0.96
+  },
+  {
+    "text": "2026,",
+    "start": 0.96,
+    "end": 2.1
+  },
+  {
+    "text": "an",
+    "start": 2.13,
+    "end": 2.22
+  },
+  {
+    "text": "auction",
+    "start": 2.22,
+    "end": 2.67
+  },
+  {
+    "text": "changed",
+    "start": 2.69,
+    "end": 3.15
+  },
+  {
+    "text": "how",
+    "start": 3.21,
+    "end": 3.44
+  },
+  {
+    "text": "the",
+    "start": 3.44,
+    "end": 3.72
+  },
+  {
+    "text": "AI",
+    "start": 3.72,
+    "end": 3.9
+  },
+  {
+    "text": "boom",
+    "start": 3.9,
+    "end": 4.26
+  },
+  {
+    "text": "is",
+    "start": 4.26,
+    "end": 4.44
+  },
+  {
+    "text": "measured.",
+    "start": 4.44,
+    "end": 5.42
+  },
+  {
+    "text": "PJM,",
+    "start": 5.47,
+    "end": 5.84
+  },
+  {
+    "text": "the",
+    "start": 5.84,
+    "end": 6.09
+  },
+  {
+    "text": "grid",
+    "start": 6.09,
+    "end": 6.42
+  },
+  {
+    "text": "operator",
+    "start": 6.42,
+    "end": 7.05
+  },
+  {
+    "text": "for",
+    "start": 7.13,
+    "end": 7.26
+  },
+  {
+    "text": "13",
+    "start": 7.57,
+    "end": 7.82
+  },
+  {
+    "text": "American",
+    "start": 7.88,
+    "end": 8.51
+  },
+  {
+    "text": "states,",
+    "start": 8.51,
+    "end": 9.08
+  },
+  {
+    "text": "held",
+    "start": 9.11,
+    "end": 9.36
+  },
+  {
+    "text": "its",
+    "start": 9.4,
+    "end": 9.62
+  },
+  {
+    "text": "annual",
+    "start": 9.62,
+    "end": 10.08
+  },
+  {
+    "text": "capacity",
+    "start": 10.08,
+    "end": 10.69
+  },
+  {
+    "text": "auction.",
+    "start": 10.77,
+    "end": 11.46
+  },
+  {
+    "text": "The",
+    "start": 11.55,
+    "end": 11.62
+  },
+  {
+    "text": "price",
+    "start": 11.71,
+    "end": 11.95
+  },
+  {
+    "text": "cleared",
+    "start": 11.95,
+    "end": 12.28
+  },
+  {
+    "text": "at",
+    "start": 12.35,
+    "end": 12.44
+  },
+  {
+    "text": "a",
+    "start": 12.44,
+    "end": 12.49
+  },
+  {
+    "text": "record",
+    "start": 12.49,
+    "end": 12.84
+  },
+  {
+    "text": "$329",
+    "start": 12.84,
+    "end": 14.67
+  },
+  {
+    "text": "per",
+    "start": 14.69,
+    "end": 14.84
+  },
+  {
+    "text": "megawatt",
+    "start": 14.84,
+    "end": 15.28
+  },
+  {
+    "text": "day,",
+    "start": 15.28,
+    "end": 15.88
+  },
+  {
+    "text": "the",
+    "start": 15.91,
+    "end": 16.09
+  },
+  {
+    "text": "highest",
+    "start": 16.09,
+    "end": 16.59
+  },
+  {
+    "text": "ever",
+    "start": 16.59,
+    "end": 16.87
+  },
+  {
+    "text": "allowed,",
+    "start": 16.87,
+    "end": 17.49
+  },
+  {
+    "text": "because,",
+    "start": 17.57,
+    "end": 18.12
+  },
+  {
+    "text": "for",
+    "start": 18.15,
+    "end": 18.36
+  },
+  {
+    "text": "the",
+    "start": 18.36,
+    "end": 18.58
+  },
+  {
+    "text": "first",
+    "start": 18.58,
+    "end": 18.95
+  },
+  {
+    "text": "time,",
+    "start": 18.95,
+    "end": 19.28
+  },
+  {
+    "text": "the",
+    "start": 19.31,
+    "end": 19.38
+  },
+  {
+    "text": "grid",
+    "start": 19.47,
+    "end": 19.66
+  },
+  {
+    "text": "could",
+    "start": 19.66,
+    "end": 19.93
+  },
+  {
+    "text": "not",
+    "start": 19.93,
+    "end": 20.04
+  },
+  {
+    "text": "fully",
+    "start": 20.11,
+    "end": 20.38
+  },
+  {
+    "text": "guarantee",
+    "start": 20.38,
+    "end": 20.89
+  },
+  {
+    "text": "the",
+    "start": 20.97,
+    "end": 21.1
+  },
+  {
+    "text": "power",
+    "start": 21.41,
+    "end": 21.52
+  },
+  {
+    "text": "it",
+    "start": 21.55,
+    "end": 21.66
+  },
+  {
+    "text": "promised.",
+    "start": 21.73,
+    "end": 22.56
+  },
+  {
+    "text": "Here",
+    "start": 22.59,
+    "end": 22.78
+  },
+  {
+    "text": "is",
+    "start": 22.78,
+    "end": 22.89
+  },
+  {
+    "text": "the",
+    "start": 22.89,
+    "end": 23.05
+  },
+  {
+    "text": "part",
+    "start": 23.05,
+    "end": 23.27
+  },
+  {
+    "text": "that",
+    "start": 23.27,
+    "end": 23.49
+  },
+  {
+    "text": "surprised",
+    "start": 23.49,
+    "end": 23.98
+  },
+  {
+    "text": "people.",
+    "start": 23.99,
+    "end": 24.39
+  },
+  {
+    "text": "The",
+    "start": 24.57,
+    "end": 24.64
+  },
+  {
+    "text": "auction",
+    "start": 24.73,
+    "end": 25.1
+  },
+  {
+    "text": "monitor",
+    "start": 25.15,
+    "end": 25.53
+  },
+  {
+    "text": "says",
+    "start": 25.53,
+    "end": 25.7
+  },
+  {
+    "text": "data",
+    "start": 25.77,
+    "end": 25.96
+  },
+  {
+    "text": "centers",
+    "start": 26.01,
+    "end": 26.36
+  },
+  {
+    "text": "drove",
+    "start": 26.67,
+    "end": 26.72
+  },
+  {
+    "text": "about",
+    "start": 26.75,
+    "end": 27.14
+  },
+  {
+    "text": "$6.3",
+    "start": 27.14,
+    "end": 27.97
+  },
+  {
+    "text": "billion",
+    "start": 27.97,
+    "end": 28.53
+  },
+  {
+    "text": "of",
+    "start": 28.53,
+    "end": 28.85
+  },
+  {
+    "text": "that",
+    "start": 28.85,
+    "end": 29.06
+  },
+  {
+    "text": "cost,",
+    "start": 29.06,
+    "end": 29.55
+  },
+  {
+    "text": "38%",
+    "start": 29.55,
+    "end": 30.13
+  },
+  {
+    "text": "of",
+    "start": 30.13,
+    "end": 30.3
+  },
+  {
+    "text": "the",
+    "start": 30.3,
+    "end": 30.55
+  },
+  {
+    "text": "entire",
+    "start": 30.55,
+    "end": 31.05
+  },
+  {
+    "text": "bill.",
+    "start": 31.05,
+    "end": 31.53
+  },
+  {
+    "text": "That",
+    "start": 31.83,
+    "end": 31.9
+  },
+  {
+    "text": "is",
+    "start": 31.99,
+    "end": 32.08
+  },
+  {
+    "text": "the",
+    "start": 32.08,
+    "end": 32.26
+  },
+  {
+    "text": "question",
+    "start": 32.26,
+    "end": 32.75
+  },
+  {
+    "text": "we",
+    "start": 32.75,
+    "end": 32.87
+  },
+  {
+    "text": "are",
+    "start": 32.87,
+    "end": 33.05
+  },
+  {
+    "text": "going",
+    "start": 33.05,
+    "end": 33.35
+  },
+  {
+    "text": "to",
+    "start": 33.35,
+    "end": 33.41
+  },
+  {
+    "text": "unpack.",
+    "start": 33.49,
+    "end": 34.04
+  },
+  {
+    "text": "Can",
+    "start": 34.09,
+    "end": 34.16
+  },
+  {
+    "text": "the",
+    "start": 34.25,
+    "end": 34.34
+  },
+  {
+    "text": "world's",
+    "start": 34.38,
+    "end": 34.71
+  },
+  {
+    "text": "grids",
+    "start": 34.71,
+    "end": 34.98
+  },
+  {
+    "text": "grow",
+    "start": 34.98,
+    "end": 35.22
+  },
+  {
+    "text": "as",
+    "start": 35.22,
+    "end": 35.34
+  },
+  {
+    "text": "quickly",
+    "start": 35.34,
+    "end": 35.8
+  },
+  {
+    "text": "as",
+    "start": 35.83,
+    "end": 35.9
+  },
+  {
+    "text": "AI's",
+    "start": 35.99,
+    "end": 36.28
+  },
+  {
+    "text": "demand",
+    "start": 36.28,
+    "end": 36.76
+  },
+  {
+    "text": "for",
+    "start": 36.76,
+    "end": 36.96
+  },
+  {
+    "text": "electricity?",
+    "start": 37.03,
+    "end": 38.16
+  },
+  {
+    "text": "The",
+    "start": 38.19,
+    "end": 38.26
+  },
+  {
+    "text": "short",
+    "start": 38.35,
+    "end": 38.56
+  },
+  {
+    "text": "answer",
+    "start": 38.56,
+    "end": 38.86
+  },
+  {
+    "text": "is",
+    "start": 38.86,
+    "end": 38.92
+  },
+  {
+    "text": "that",
+    "start": 38.99,
+    "end": 39.16
+  },
+  {
+    "text": "the",
+    "start": 39.16,
+    "end": 39.3
+  },
+  {
+    "text": "constraint",
+    "start": 39.3,
+    "end": 39.77
+  },
+  {
+    "text": "on",
+    "start": 39.85,
+    "end": 39.98
+  },
+  {
+    "text": "AI",
+    "start": 39.98,
+    "end": 40.29
+  },
+  {
+    "text": "has",
+    "start": 40.29,
+    "end": 40.54
+  },
+  {
+    "text": "moved.",
+    "start": 40.61,
+    "end": 41.4
+  },
+  {
+    "text": "It",
+    "start": 41.43,
+    "end": 41.5
+  },
+  {
+    "text": "used",
+    "start": 41.59,
+    "end": 41.85
+  },
+  {
+    "text": "to",
+    "start": 41.85,
+    "end": 41.96
+  },
+  {
+    "text": "be",
+    "start": 42.01,
+    "end": 42.15
+  },
+  {
+    "text": "chips.",
+    "start": 42.15,
+    "end": 42.76
+  },
+  {
+    "text": "Now",
+    "start": 42.79,
+    "end": 43.04
+  },
+  {
+    "text": "it",
+    "start": 43.08,
+    "end": 43.24
+  },
+  {
+    "text": "is",
+    "start": 43.24,
+    "end": 43.42
+  },
+  {
+    "text": "cables.",
+    "start": 43.43,
+    "end": 44.32
+  },
+  {
+    "text": "Start",
+    "start": 44.35,
+    "end": 44.71
+  },
+  {
+    "text": "with",
+    "start": 44.71,
+    "end": 45.02
+  },
+  {
+    "text": "the",
+    "start": 45.02,
+    "end": 45.25
+  },
+  {
+    "text": "load",
+    "start": 45.25,
+    "end": 45.48
+  },
+  {
+    "text": "itself.",
+    "start": 45.55,
+    "end": 46.15
+  },
+  {
+    "text": "A",
+    "start": 46.31,
+    "end": 46.35
+  },
+  {
+    "text": "modern",
+    "start": 46.35,
+    "end": 46.82
+  },
+  {
+    "text": "AI",
+    "start": 46.82,
+    "end": 46.94
+  },
+  {
+    "text": "data",
+    "start": 46.97,
+    "end": 47.28
+  },
+  {
+    "text": "center",
+    "start": 47.28,
+    "end": 47.7
+  },
+  {
+    "text": "is",
+    "start": 47.76,
+    "end": 47.89
+  },
+  {
+    "text": "a",
+    "start": 47.89,
+    "end": 47.98
+  },
+  {
+    "text": "building",
+    "start": 47.98,
+    "end": 48.64
+  },
+  {
+    "text": "filled",
+    "start": 48.64,
+    "end": 49.02
+  },
+  {
+    "text": "with",
+    "start": 49.05,
+    "end": 49.24
+  },
+  {
+    "text": "thousands",
+    "start": 49.24,
+    "end": 49.73
+  },
+  {
+    "text": "of",
+    "start": 49.73,
+    "end": 49.78
+  },
+  {
+    "text": "servers",
+    "start": 49.85,
+    "end": 50.18
+  },
+  {
+    "text": "running",
+    "start": 50.25,
+    "end": 50.6
+  },
+  {
+    "text": "around",
+    "start": 50.6,
+    "end": 50.84
+  },
+  {
+    "text": "the",
+    "start": 50.84,
+    "end": 51.15
+  },
+  {
+    "text": "clock,",
+    "start": 51.15,
+    "end": 51.4
+  },
+  {
+    "text": "with",
+    "start": 51.43,
+    "end": 51.66
+  },
+  {
+    "text": "liquid",
+    "start": 51.66,
+    "end": 52.05
+  },
+  {
+    "text": "cooling",
+    "start": 52.05,
+    "end": 52.52
+  },
+  {
+    "text": "and",
+    "start": 52.52,
+    "end": 52.72
+  },
+  {
+    "text": "backup",
+    "start": 52.72,
+    "end": 53.12
+  },
+  {
+    "text": "power",
+    "start": 53.12,
+    "end": 53.22
+  },
+  {
+    "text": "stacked",
+    "start": 53.53,
+    "end": 53.91
+  },
+  {
+    "text": "on",
+    "start": 53.91,
+    "end": 54.04
+  },
+  {
+    "text": "top.",
+    "start": 54.04,
+    "end": 54.48
+  },
+  {
+    "text": "One",
+    "start": 54.51,
+    "end": 54.59
+  },
+  {
+    "text": "large",
+    "start": 54.67,
+    "end": 54.99
+  },
+  {
+    "text": "campus",
+    "start": 54.99,
+    "end": 55.38
+  },
+  {
+    "text": "can",
+    "start": 55.38,
+    "end": 55.57
+  },
+  {
+    "text": "draw",
+    "start": 55.57,
+    "end": 55.83
+  },
+  {
+    "text": "as",
+    "start": 55.83,
+    "end": 55.9
+  },
+  {
+    "text": "much",
+    "start": 55.96,
+    "end": 56.22
+  },
+  {
+    "text": "electricity",
+    "start": 56.22,
+    "end": 56.96
+  },
+  {
+    "text": "as",
+    "start": 56.99,
+    "end": 57.06
+  },
+  {
+    "text": "a",
+    "start": 57.15,
+    "end": 57.2
+  },
+  {
+    "text": "small",
+    "start": 57.2,
+    "end": 57.6
+  },
+  {
+    "text": "city",
+    "start": 57.6,
+    "end": 57.92
+  },
+  {
+    "text": "around",
+    "start": 57.92,
+    "end": 58.38
+  },
+  {
+    "text": "a",
+    "start": 58.47,
+    "end": 58.48
+  },
+  {
+    "text": "gigawatt",
+    "start": 58.48,
+    "end": 59.12
+  },
+  {
+    "text": "or",
+    "start": 59.12,
+    "end": 59.28
+  },
+  {
+    "text": "more.",
+    "start": 59.28,
+    "end": 59.88
+  },
+  {
+    "text": "Northern",
+    "start": 59.91,
+    "end": 60.37
+  },
+  {
+    "text": "Virginia,",
+    "start": 60.37,
+    "end": 61
+  },
+  {
+    "text": "the",
+    "start": 61,
+    "end": 61.17
+  },
+  {
+    "text": "world's",
+    "start": 61.17,
+    "end": 61.49
+  },
+  {
+    "text": "largest",
+    "start": 61.57,
+    "end": 61.7
+  },
+  {
+    "text": "data",
+    "start": 62.01,
+    "end": 62.19
+  },
+  {
+    "text": "center",
+    "start": 62.19,
+    "end": 62.48
+  },
+  {
+    "text": "cluster,",
+    "start": 62.48,
+    "end": 63.12
+  },
+  {
+    "text": "now",
+    "start": 63.15,
+    "end": 63.32
+  },
+  {
+    "text": "consumes",
+    "start": 63.32,
+    "end": 63.86
+  },
+  {
+    "text": "more",
+    "start": 63.86,
+    "end": 64.12
+  },
+  {
+    "text": "power",
+    "start": 64.12,
+    "end": 64.46
+  },
+  {
+    "text": "than",
+    "start": 64.46,
+    "end": 64.73
+  },
+  {
+    "text": "some",
+    "start": 64.73,
+    "end": 64.94
+  },
+  {
+    "text": "small",
+    "start": 65.25,
+    "end": 65.33
+  },
+  {
+    "text": "countries.",
+    "start": 65.33,
+    "end": 66.16
+  },
+  {
+    "text": "The",
+    "start": 66.19,
+    "end": 66.26
+  },
+  {
+    "text": "servers",
+    "start": 66.35,
+    "end": 66.66
+  },
+  {
+    "text": "that",
+    "start": 66.66,
+    "end": 66.86
+  },
+  {
+    "text": "answer",
+    "start": 66.86,
+    "end": 67.16
+  },
+  {
+    "text": "your",
+    "start": 67.16,
+    "end": 67.32
+  },
+  {
+    "text": "prompts",
+    "start": 67.39,
+    "end": 67.72
+  },
+  {
+    "text": "are,",
+    "start": 67.72,
+    "end": 67.96
+  },
+  {
+    "text": "quite",
+    "start": 67.99,
+    "end": 68.34
+  },
+  {
+    "text": "literally,",
+    "start": 68.34,
+    "end": 69.12
+  },
+  {
+    "text": "a",
+    "start": 69.19,
+    "end": 69.26
+  },
+  {
+    "text": "city-sized",
+    "start": 69.26,
+    "end": 69.78
+  },
+  {
+    "text": "machine.",
+    "start": 70.09,
+    "end": 70.84
+  },
+  {
+    "text": "This",
+    "start": 70.87,
+    "end": 71.09
+  },
+  {
+    "text": "is",
+    "start": 71.09,
+    "end": 71.21
+  },
+  {
+    "text": "the",
+    "start": 71.21,
+    "end": 71.4
+  },
+  {
+    "text": "definition",
+    "start": 71.4,
+    "end": 72
+  },
+  {
+    "text": "we",
+    "start": 72.07,
+    "end": 72.16
+  },
+  {
+    "text": "need.",
+    "start": 72.16,
+    "end": 72.64
+  },
+  {
+    "text": "A",
+    "start": 72.67,
+    "end": 72.71
+  },
+  {
+    "text": "data",
+    "start": 72.71,
+    "end": 73
+  },
+  {
+    "text": "center",
+    "start": 73,
+    "end": 73.4
+  },
+  {
+    "text": "is",
+    "start": 73.47,
+    "end": 73.58
+  },
+  {
+    "text": "not",
+    "start": 73.58,
+    "end": 73.8
+  },
+  {
+    "text": "a",
+    "start": 73.8,
+    "end": 73.87
+  },
+  {
+    "text": "building.",
+    "start": 73.87,
+    "end": 74.72
+  },
+  {
+    "text": "It",
+    "start": 74.75,
+    "end": 74.82
+  },
+  {
+    "text": "is",
+    "start": 74.91,
+    "end": 75.06
+  },
+  {
+    "text": "a",
+    "start": 75.06,
+    "end": 75.14
+  },
+  {
+    "text": "demand",
+    "start": 75.14,
+    "end": 75.66
+  },
+  {
+    "text": "curve,",
+    "start": 75.66,
+    "end": 76.12
+  },
+  {
+    "text": "and",
+    "start": 76.15,
+    "end": 76.23
+  },
+  {
+    "text": "that",
+    "start": 76.31,
+    "end": 76.56
+  },
+  {
+    "text": "demand",
+    "start": 76.56,
+    "end": 76.88
+  },
+  {
+    "text": "curve",
+    "start": 76.95,
+    "end": 77.25
+  },
+  {
+    "text": "is",
+    "start": 77.25,
+    "end": 77.37
+  },
+  {
+    "text": "climbing",
+    "start": 77.37,
+    "end": 77.86
+  },
+  {
+    "text": "fast.",
+    "start": 77.86,
+    "end": 78.34
+  },
+  {
+    "text": "The",
+    "start": 78.37,
+    "end": 78.44
+  },
+  {
+    "text": "International",
+    "start": 78.53,
+    "end": 79.28
+  },
+  {
+    "text": "Energy",
+    "start": 79.28,
+    "end": 79.63
+  },
+  {
+    "text": "Agency",
+    "start": 79.63,
+    "end": 79.95
+  },
+  {
+    "text": "now",
+    "start": 80.03,
+    "end": 80.2
+  },
+  {
+    "text": "projects",
+    "start": 80.2,
+    "end": 80.74
+  },
+  {
+    "text": "global",
+    "start": 80.74,
+    "end": 81.14
+  },
+  {
+    "text": "data",
+    "start": 81.14,
+    "end": 81.4
+  },
+  {
+    "text": "center",
+    "start": 81.4,
+    "end": 81.81
+  },
+  {
+    "text": "electricity",
+    "start": 82.13,
+    "end": 82.38
+  },
+  {
+    "text": "use",
+    "start": 82.45,
+    "end": 82.72
+  },
+  {
+    "text": "will",
+    "start": 82.75,
+    "end": 83
+  },
+  {
+    "text": "roughly",
+    "start": 83.04,
+    "end": 83.48
+  },
+  {
+    "text": "double",
+    "start": 83.55,
+    "end": 83.97
+  },
+  {
+    "text": "by",
+    "start": 83.97,
+    "end": 84.12
+  },
+  {
+    "text": "2030,",
+    "start": 84.12,
+    "end": 85.04
+  },
+  {
+    "text": "from",
+    "start": 85.07,
+    "end": 85.28
+  },
+  {
+    "text": "around",
+    "start": 85.28,
+    "end": 85.6
+  },
+  {
+    "text": "500",
+    "start": 85.65,
+    "end": 86.17
+  },
+  {
+    "text": "terawatt",
+    "start": 86.17,
+    "end": 86.63
+  },
+  {
+    "text": "hours",
+    "start": 86.63,
+    "end": 86.86
+  },
+  {
+    "text": "to",
+    "start": 87.17,
+    "end": 87.18
+  },
+  {
+    "text": "about",
+    "start": 87.18,
+    "end": 87.71
+  },
+  {
+    "text": "950,",
+    "start": 87.73,
+    "end": 88.72
+  },
+  {
+    "text": "with",
+    "start": 88.75,
+    "end": 89
+  },
+  {
+    "text": "AI-specific",
+    "start": 89,
+    "end": 89.77
+  },
+  {
+    "text": "capacity",
+    "start": 89.77,
+    "end": 90.33
+  },
+  {
+    "text": "tripling",
+    "start": 90.41,
+    "end": 90.54
+  },
+  {
+    "text": "over",
+    "start": 90.85,
+    "end": 91.06
+  },
+  {
+    "text": "the",
+    "start": 91.06,
+    "end": 91.28
+  },
+  {
+    "text": "same",
+    "start": 91.28,
+    "end": 91.58
+  },
+  {
+    "text": "period.",
+    "start": 91.58,
+    "end": 92.28
+  },
+  {
+    "text": "That",
+    "start": 92.31,
+    "end": 92.54
+  },
+  {
+    "text": "is",
+    "start": 92.55,
+    "end": 92.68
+  },
+  {
+    "text": "not",
+    "start": 92.68,
+    "end": 92.84
+  },
+  {
+    "text": "a",
+    "start": 92.89,
+    "end": 92.93
+  },
+  {
+    "text": "rounding",
+    "start": 92.93,
+    "end": 93.44
+  },
+  {
+    "text": "error.",
+    "start": 93.51,
+    "end": 94.08
+  },
+  {
+    "text": "That",
+    "start": 94.11,
+    "end": 94.3
+  },
+  {
+    "text": "is",
+    "start": 94.3,
+    "end": 94.41
+  },
+  {
+    "text": "like",
+    "start": 94.41,
+    "end": 94.63
+  },
+  {
+    "text": "adding",
+    "start": 94.63,
+    "end": 94.97
+  },
+  {
+    "text": "a",
+    "start": 94.97,
+    "end": 95.02
+  },
+  {
+    "text": "second",
+    "start": 95.02,
+    "end": 95.36
+  },
+  {
+    "text": "Japan",
+    "start": 95.36,
+    "end": 95.68
+  },
+  {
+    "text": "to",
+    "start": 95.71,
+    "end": 95.78
+  },
+  {
+    "text": "the",
+    "start": 95.87,
+    "end": 95.96
+  },
+  {
+    "text": "world's",
+    "start": 96,
+    "end": 96.44
+  },
+  {
+    "text": "electricity",
+    "start": 96.44,
+    "end": 97.1
+  },
+  {
+    "text": "system.",
+    "start": 97.15,
+    "end": 97.76
+  },
+  {
+    "text": "Now",
+    "start": 97.79,
+    "end": 98
+  },
+  {
+    "text": "follow",
+    "start": 98,
+    "end": 98.49
+  },
+  {
+    "text": "the",
+    "start": 98.49,
+    "end": 98.73
+  },
+  {
+    "text": "chain.",
+    "start": 98.73,
+    "end": 99.37
+  },
+  {
+    "text": "The",
+    "start": 99.43,
+    "end": 99.66
+  },
+  {
+    "text": "AI",
+    "start": 99.66,
+    "end": 99.83
+  },
+  {
+    "text": "stack",
+    "start": 99.83,
+    "end": 100.27
+  },
+  {
+    "text": "runs",
+    "start": 100.27,
+    "end": 100.56
+  },
+  {
+    "text": "chips,",
+    "start": 100.63,
+    "end": 101.22
+  },
+  {
+    "text": "memory,",
+    "start": 101.53,
+    "end": 102
+  },
+  {
+    "text": "storage,",
+    "start": 102,
+    "end": 102.49
+  },
+  {
+    "text": "and",
+    "start": 102.54,
+    "end": 102.68
+  },
+  {
+    "text": "cooling,",
+    "start": 102.68,
+    "end": 103.16
+  },
+  {
+    "text": "and",
+    "start": 103.19,
+    "end": 103.27
+  },
+  {
+    "text": "every",
+    "start": 103.35,
+    "end": 103.66
+  },
+  {
+    "text": "layer",
+    "start": 103.66,
+    "end": 103.92
+  },
+  {
+    "text": "is",
+    "start": 103.99,
+    "end": 104.09
+  },
+  {
+    "text": "electricity.",
+    "start": 104.09,
+    "end": 104.98
+  },
+  {
+    "text": "The",
+    "start": 105.03,
+    "end": 105.11
+  },
+  {
+    "text": "bottleneck",
+    "start": 105.19,
+    "end": 105.76
+  },
+  {
+    "text": "is",
+    "start": 105.83,
+    "end": 105.95
+  },
+  {
+    "text": "no",
+    "start": 105.95,
+    "end": 106.07
+  },
+  {
+    "text": "longer",
+    "start": 106.07,
+    "end": 106.42
+  },
+  {
+    "text": "the",
+    "start": 106.48,
+    "end": 106.61
+  },
+  {
+    "text": "chip",
+    "start": 106.69,
+    "end": 106.82
+  },
+  {
+    "text": "plant.",
+    "start": 107.13,
+    "end": 107.46
+  },
+  {
+    "text": "It",
+    "start": 107.49,
+    "end": 107.56
+  },
+  {
+    "text": "is",
+    "start": 107.65,
+    "end": 107.72
+  },
+  {
+    "text": "the",
+    "start": 107.72,
+    "end": 107.91
+  },
+  {
+    "text": "grid",
+    "start": 107.91,
+    "end": 108.17
+  },
+  {
+    "text": "connection,",
+    "start": 108.17,
+    "end": 108.88
+  },
+  {
+    "text": "the",
+    "start": 108.97,
+    "end": 109.07
+  },
+  {
+    "text": "transformer,",
+    "start": 109.16,
+    "end": 110.02
+  },
+  {
+    "text": "the",
+    "start": 110.05,
+    "end": 110.12
+  },
+  {
+    "text": "transmission",
+    "start": 110.21,
+    "end": 110.89
+  },
+  {
+    "text": "line",
+    "start": 110.89,
+    "end": 111.12
+  },
+  {
+    "text": "that",
+    "start": 111.12,
+    "end": 111.35
+  },
+  {
+    "text": "brings",
+    "start": 111.35,
+    "end": 111.63
+  },
+  {
+    "text": "power",
+    "start": 111.71,
+    "end": 111.84
+  },
+  {
+    "text": "to",
+    "start": 111.84,
+    "end": 112.15
+  },
+  {
+    "text": "the",
+    "start": 112.15,
+    "end": 112.26
+  },
+  {
+    "text": "machine.",
+    "start": 112.29,
+    "end": 112.92
+  },
+  {
+    "text": "Here",
+    "start": 112.95,
+    "end": 113.18
+  },
+  {
+    "text": "is",
+    "start": 113.19,
+    "end": 113.32
+  },
+  {
+    "text": "where",
+    "start": 113.32,
+    "end": 113.65
+  },
+  {
+    "text": "the",
+    "start": 113.65,
+    "end": 113.85
+  },
+  {
+    "text": "market",
+    "start": 113.85,
+    "end": 114.25
+  },
+  {
+    "text": "comes",
+    "start": 114.25,
+    "end": 114.53
+  },
+  {
+    "text": "in.",
+    "start": 114.61,
+    "end": 114.74
+  },
+  {
+    "text": "In",
+    "start": 114.99,
+    "end": 115.07
+  },
+  {
+    "text": "the",
+    "start": 115.15,
+    "end": 115.24
+  },
+  {
+    "text": "United",
+    "start": 115.28,
+    "end": 115.61
+  },
+  {
+    "text": "States,",
+    "start": 115.61,
+    "end": 116.12
+  },
+  {
+    "text": "the",
+    "start": 116.15,
+    "end": 116.22
+  },
+  {
+    "text": "queue",
+    "start": 116.31,
+    "end": 116.52
+  },
+  {
+    "text": "of",
+    "start": 116.52,
+    "end": 116.62
+  },
+  {
+    "text": "projects",
+    "start": 116.62,
+    "end": 117.02
+  },
+  {
+    "text": "waiting",
+    "start": 117.02,
+    "end": 117.37
+  },
+  {
+    "text": "to",
+    "start": 117.37,
+    "end": 117.47
+  },
+  {
+    "text": "connect",
+    "start": 117.47,
+    "end": 117.84
+  },
+  {
+    "text": "to",
+    "start": 117.84,
+    "end": 117.95
+  },
+  {
+    "text": "the",
+    "start": 117.95,
+    "end": 118.25
+  },
+  {
+    "text": "grid",
+    "start": 118.25,
+    "end": 118.5
+  },
+  {
+    "text": "holds",
+    "start": 118.59,
+    "end": 118.94
+  },
+  {
+    "text": "roughly",
+    "start": 118.94,
+    "end": 119.47
+  },
+  {
+    "text": "2,600",
+    "start": 119.47,
+    "end": 120.38
+  },
+  {
+    "text": "gigawatts",
+    "start": 120.69,
+    "end": 121.19
+  },
+  {
+    "text": "of",
+    "start": 121.19,
+    "end": 121.31
+  },
+  {
+    "text": "requests.",
+    "start": 121.35,
+    "end": 122.22
+  },
+  {
+    "text": "Median",
+    "start": 122.25,
+    "end": 122.63
+  },
+  {
+    "text": "weights",
+    "start": 122.63,
+    "end": 123.1
+  },
+  {
+    "text": "have",
+    "start": 123.1,
+    "end": 123.36
+  },
+  {
+    "text": "stretched",
+    "start": 123.36,
+    "end": 123.97
+  },
+  {
+    "text": "past",
+    "start": 123.97,
+    "end": 124.04
+  },
+  {
+    "text": "five",
+    "start": 124.35,
+    "end": 124.52
+  },
+  {
+    "text": "years.",
+    "start": 124.52,
+    "end": 125.1
+  },
+  {
+    "text": "A",
+    "start": 125.13,
+    "end": 125.17
+  },
+  {
+    "text": "data",
+    "start": 125.17,
+    "end": 125.47
+  },
+  {
+    "text": "center",
+    "start": 125.47,
+    "end": 125.86
+  },
+  {
+    "text": "cannot",
+    "start": 125.93,
+    "end": 126.37
+  },
+  {
+    "text": "wait",
+    "start": 126.37,
+    "end": 126.67
+  },
+  {
+    "text": "five",
+    "start": 126.67,
+    "end": 126.92
+  },
+  {
+    "text": "years,",
+    "start": 127.23,
+    "end": 127.4
+  },
+  {
+    "text": "so",
+    "start": 127.43,
+    "end": 127.5
+  },
+  {
+    "text": "the",
+    "start": 127.5,
+    "end": 127.66
+  },
+  {
+    "text": "hyperscalers",
+    "start": 127.66,
+    "end": 128.3
+  },
+  {
+    "text": "are",
+    "start": 128.3,
+    "end": 128.46
+  },
+  {
+    "text": "going",
+    "start": 128.46,
+    "end": 128.73
+  },
+  {
+    "text": "around",
+    "start": 128.73,
+    "end": 129.01
+  },
+  {
+    "text": "the",
+    "start": 129.09,
+    "end": 129.21
+  },
+  {
+    "text": "queue.",
+    "start": 129.21,
+    "end": 129.68
+  },
+  {
+    "text": "Microsoft",
+    "start": 129.71,
+    "end": 130.33
+  },
+  {
+    "text": "struck",
+    "start": 130.33,
+    "end": 130.76
+  },
+  {
+    "text": "a",
+    "start": 130.76,
+    "end": 130.82
+  },
+  {
+    "text": "deal",
+    "start": 130.83,
+    "end": 131.1
+  },
+  {
+    "text": "to",
+    "start": 131.17,
+    "end": 131.25
+  },
+  {
+    "text": "restart",
+    "start": 131.25,
+    "end": 131.49
+  },
+  {
+    "text": "Three",
+    "start": 131.81,
+    "end": 132.06
+  },
+  {
+    "text": "Mile",
+    "start": 132.13,
+    "end": 132.39
+  },
+  {
+    "text": "Island.",
+    "start": 132.39,
+    "end": 133.08
+  },
+  {
+    "text": "Amazon",
+    "start": 133.11,
+    "end": 133.55
+  },
+  {
+    "text": "backed",
+    "start": 133.55,
+    "end": 134.02
+  },
+  {
+    "text": "Xenergies'",
+    "start": 134.02,
+    "end": 134.77
+  },
+  {
+    "text": "small",
+    "start": 134.77,
+    "end": 134.9
+  },
+  {
+    "text": "modular",
+    "start": 135.21,
+    "end": 135.71
+  },
+  {
+    "text": "reactors.",
+    "start": 135.71,
+    "end": 136.64
+  },
+  {
+    "text": "Google",
+    "start": 136.67,
+    "end": 137.08
+  },
+  {
+    "text": "signed",
+    "start": 137.08,
+    "end": 137.52
+  },
+  {
+    "text": "up",
+    "start": 137.52,
+    "end": 137.66
+  },
+  {
+    "text": "Kairos,",
+    "start": 137.67,
+    "end": 138.25
+  },
+  {
+    "text": "and",
+    "start": 138.25,
+    "end": 138.46
+  },
+  {
+    "text": "meta",
+    "start": 138.46,
+    "end": 138.77
+  },
+  {
+    "text": "chose",
+    "start": 138.77,
+    "end": 139.13
+  },
+  {
+    "text": "Terra",
+    "start": 139.13,
+    "end": 139.5
+  },
+  {
+    "text": "Power.",
+    "start": 139.5,
+    "end": 140.07
+  },
+  {
+    "text": "When",
+    "start": 140.19,
+    "end": 140.38
+  },
+  {
+    "text": "the",
+    "start": 140.38,
+    "end": 140.54
+  },
+  {
+    "text": "grid",
+    "start": 140.54,
+    "end": 140.72
+  },
+  {
+    "text": "cannot",
+    "start": 140.77,
+    "end": 141.09
+  },
+  {
+    "text": "deliver",
+    "start": 141.09,
+    "end": 141.47
+  },
+  {
+    "text": "fast",
+    "start": 141.47,
+    "end": 141.69
+  },
+  {
+    "text": "enough,",
+    "start": 141.69,
+    "end": 142.16
+  },
+  {
+    "text": "the",
+    "start": 142.19,
+    "end": 142.26
+  },
+  {
+    "text": "biggest",
+    "start": 142.35,
+    "end": 142.72
+  },
+  {
+    "text": "buyers",
+    "start": 142.77,
+    "end": 143.12
+  },
+  {
+    "text": "are",
+    "start": 143.12,
+    "end": 143.3
+  },
+  {
+    "text": "building",
+    "start": 143.3,
+    "end": 143.77
+  },
+  {
+    "text": "their",
+    "start": 143.78,
+    "end": 143.98
+  },
+  {
+    "text": "own",
+    "start": 143.98,
+    "end": 144.29
+  },
+  {
+    "text": "power",
+    "start": 144.29,
+    "end": 144.54
+  },
+  {
+    "text": "plants.",
+    "start": 144.61,
+    "end": 145.16
+  },
+  {
+    "text": "That",
+    "start": 145.19,
+    "end": 145.44
+  },
+  {
+    "text": "is",
+    "start": 145.48,
+    "end": 145.62
+  },
+  {
+    "text": "why",
+    "start": 145.62,
+    "end": 145.82
+  },
+  {
+    "text": "markets",
+    "start": 145.85,
+    "end": 146.32
+  },
+  {
+    "text": "care.",
+    "start": 146.39,
+    "end": 146.96
+  },
+  {
+    "text": "Electricity",
+    "start": 146.99,
+    "end": 147.61
+  },
+  {
+    "text": "is",
+    "start": 147.65,
+    "end": 147.72
+  },
+  {
+    "text": "becoming",
+    "start": 147.79,
+    "end": 148.25
+  },
+  {
+    "text": "the",
+    "start": 148.25,
+    "end": 148.38
+  },
+  {
+    "text": "binding",
+    "start": 148.43,
+    "end": 148.78
+  },
+  {
+    "text": "input",
+    "start": 149.09,
+    "end": 149.2
+  },
+  {
+    "text": "for",
+    "start": 149.23,
+    "end": 149.3
+  },
+  {
+    "text": "the",
+    "start": 149.39,
+    "end": 149.56
+  },
+  {
+    "text": "most",
+    "start": 149.56,
+    "end": 149.76
+  },
+  {
+    "text": "valuable",
+    "start": 149.81,
+    "end": 150.29
+  },
+  {
+    "text": "companies",
+    "start": 150.29,
+    "end": 150.81
+  },
+  {
+    "text": "on",
+    "start": 150.89,
+    "end": 150.97
+  },
+  {
+    "text": "Earth,",
+    "start": 150.97,
+    "end": 151.36
+  },
+  {
+    "text": "and",
+    "start": 151.39,
+    "end": 151.47
+  },
+  {
+    "text": "whoever",
+    "start": 151.55,
+    "end": 152.01
+  },
+  {
+    "text": "controls",
+    "start": 152.01,
+    "end": 152.52
+  },
+  {
+    "text": "power",
+    "start": 152.52,
+    "end": 152.78
+  },
+  {
+    "text": "supply",
+    "start": 152.82,
+    "end": 153.18
+  },
+  {
+    "text": "is",
+    "start": 153.31,
+    "end": 153.38
+  },
+  {
+    "text": "capturing",
+    "start": 153.47,
+    "end": 154.03
+  },
+  {
+    "text": "the",
+    "start": 154.03,
+    "end": 154.23
+  },
+  {
+    "text": "toll",
+    "start": 154.23,
+    "end": 154.44
+  },
+  {
+    "text": "booth.",
+    "start": 154.51,
+    "end": 155.08
+  },
+  {
+    "text": "So",
+    "start": 155.11,
+    "end": 155.19
+  },
+  {
+    "text": "what",
+    "start": 155.27,
+    "end": 155.42
+  },
+  {
+    "text": "is",
+    "start": 155.42,
+    "end": 155.53
+  },
+  {
+    "text": "the",
+    "start": 155.53,
+    "end": 155.64
+  },
+  {
+    "text": "honest",
+    "start": 155.69,
+    "end": 156.04
+  },
+  {
+    "text": "uncertainty?",
+    "start": 156.04,
+    "end": 156.88
+  },
+  {
+    "text": "Nuclear",
+    "start": 156.91,
+    "end": 157.32
+  },
+  {
+    "text": "is",
+    "start": 157.32,
+    "end": 157.44
+  },
+  {
+    "text": "clean",
+    "start": 157.44,
+    "end": 157.76
+  },
+  {
+    "text": "and",
+    "start": 157.76,
+    "end": 157.95
+  },
+  {
+    "text": "steady,",
+    "start": 157.95,
+    "end": 158.48
+  },
+  {
+    "text": "but",
+    "start": 158.48,
+    "end": 158.7
+  },
+  {
+    "text": "slow",
+    "start": 159.01,
+    "end": 159.12
+  },
+  {
+    "text": "and",
+    "start": 159.15,
+    "end": 159.39
+  },
+  {
+    "text": "expensive.",
+    "start": 159.39,
+    "end": 160.52
+  },
+  {
+    "text": "Gas",
+    "start": 160.55,
+    "end": 160.78
+  },
+  {
+    "text": "is",
+    "start": 160.79,
+    "end": 160.97
+  },
+  {
+    "text": "fast,",
+    "start": 160.97,
+    "end": 161.52
+  },
+  {
+    "text": "but",
+    "start": 161.52,
+    "end": 161.68
+  },
+  {
+    "text": "it",
+    "start": 161.75,
+    "end": 161.87
+  },
+  {
+    "text": "is",
+    "start": 161.87,
+    "end": 161.94
+  },
+  {
+    "text": "a",
+    "start": 162.01,
+    "end": 162.08
+  },
+  {
+    "text": "fossil",
+    "start": 162.08,
+    "end": 162.34
+  },
+  {
+    "text": "fuel",
+    "start": 162.65,
+    "end": 162.8
+  },
+  {
+    "text": "and",
+    "start": 162.8,
+    "end": 163.04
+  },
+  {
+    "text": "it",
+    "start": 163.05,
+    "end": 163.22
+  },
+  {
+    "text": "is",
+    "start": 163.22,
+    "end": 163.39
+  },
+  {
+    "text": "pricey.",
+    "start": 163.39,
+    "end": 164.16
+  },
+  {
+    "text": "Renewables",
+    "start": 164.19,
+    "end": 164.72
+  },
+  {
+    "text": "are",
+    "start": 164.77,
+    "end": 164.91
+  },
+  {
+    "text": "getting",
+    "start": 164.91,
+    "end": 165.3
+  },
+  {
+    "text": "cheaper,",
+    "start": 165.31,
+    "end": 165.77
+  },
+  {
+    "text": "but",
+    "start": 165.85,
+    "end": 165.98
+  },
+  {
+    "text": "they",
+    "start": 165.98,
+    "end": 166.29
+  },
+  {
+    "text": "need",
+    "start": 166.29,
+    "end": 166.45
+  },
+  {
+    "text": "land,",
+    "start": 166.45,
+    "end": 166.83
+  },
+  {
+    "text": "transmission,",
+    "start": 166.87,
+    "end": 167.8
+  },
+  {
+    "text": "and",
+    "start": 167.8,
+    "end": 168
+  },
+  {
+    "text": "storage.",
+    "start": 168,
+    "end": 168.66
+  },
+  {
+    "text": "No",
+    "start": 168.75,
+    "end": 168.82
+  },
+  {
+    "text": "single",
+    "start": 168.91,
+    "end": 169.28
+  },
+  {
+    "text": "answer",
+    "start": 169.28,
+    "end": 169.7
+  },
+  {
+    "text": "can",
+    "start": 169.7,
+    "end": 169.88
+  },
+  {
+    "text": "scale",
+    "start": 169.95,
+    "end": 170.26
+  },
+  {
+    "text": "fast",
+    "start": 170.26,
+    "end": 170.54
+  },
+  {
+    "text": "enough",
+    "start": 170.85,
+    "end": 170.96
+  },
+  {
+    "text": "on",
+    "start": 170.99,
+    "end": 171.1
+  },
+  {
+    "text": "its",
+    "start": 171.1,
+    "end": 171.31
+  },
+  {
+    "text": "own.",
+    "start": 171.31,
+    "end": 171.76
+  },
+  {
+    "text": "The",
+    "start": 171.79,
+    "end": 171.87
+  },
+  {
+    "text": "signal",
+    "start": 171.95,
+    "end": 172.32
+  },
+  {
+    "text": "to",
+    "start": 172.37,
+    "end": 172.47
+  },
+  {
+    "text": "watch",
+    "start": 172.47,
+    "end": 172.78
+  },
+  {
+    "text": "is",
+    "start": 172.79,
+    "end": 172.92
+  },
+  {
+    "text": "not",
+    "start": 172.92,
+    "end": 173.11
+  },
+  {
+    "text": "the",
+    "start": 173.11,
+    "end": 173.3
+  },
+  {
+    "text": "headline",
+    "start": 173.3,
+    "end": 173.58
+  },
+  {
+    "text": "number.",
+    "start": 173.89,
+    "end": 174.43
+  },
+  {
+    "text": "It",
+    "start": 174.47,
+    "end": 174.54
+  },
+  {
+    "text": "is",
+    "start": 174.63,
+    "end": 174.7
+  },
+  {
+    "text": "the",
+    "start": 174.7,
+    "end": 174.9
+  },
+  {
+    "text": "behavior",
+    "start": 174.9,
+    "end": 175.44
+  },
+  {
+    "text": "underneath",
+    "start": 175.44,
+    "end": 176.05
+  },
+  {
+    "text": "it.",
+    "start": 176.13,
+    "end": 176.52
+  },
+  {
+    "text": "Watch",
+    "start": 176.55,
+    "end": 176.8
+  },
+  {
+    "text": "whether",
+    "start": 176.84,
+    "end": 177.24
+  },
+  {
+    "text": "utilities",
+    "start": 177.24,
+    "end": 177.8
+  },
+  {
+    "text": "can",
+    "start": 177.8,
+    "end": 177.94
+  },
+  {
+    "text": "actually",
+    "start": 177.99,
+    "end": 178.34
+  },
+  {
+    "text": "connect",
+    "start": 178.65,
+    "end": 178.84
+  },
+  {
+    "text": "data",
+    "start": 178.84,
+    "end": 179.18
+  },
+  {
+    "text": "centers",
+    "start": 179.18,
+    "end": 179.8
+  },
+  {
+    "text": "without",
+    "start": 179.83,
+    "end": 180.13
+  },
+  {
+    "text": "breaking",
+    "start": 180.13,
+    "end": 180.51
+  },
+  {
+    "text": "the",
+    "start": 180.51,
+    "end": 180.65
+  },
+  {
+    "text": "grid",
+    "start": 180.65,
+    "end": 180.84
+  },
+  {
+    "text": "for",
+    "start": 180.84,
+    "end": 180.96
+  },
+  {
+    "text": "everyone",
+    "start": 181.03,
+    "end": 181.36
+  },
+  {
+    "text": "else.",
+    "start": 181.36,
+    "end": 181.63
+  },
+  {
+    "text": "Watch",
+    "start": 181.77,
+    "end": 182
+  },
+  {
+    "text": "whether",
+    "start": 182,
+    "end": 182.3
+  },
+  {
+    "text": "the",
+    "start": 182.35,
+    "end": 182.5
+  },
+  {
+    "text": "new",
+    "start": 182.57,
+    "end": 182.66
+  },
+  {
+    "text": "nuclear",
+    "start": 182.66,
+    "end": 183.06
+  },
+  {
+    "text": "and",
+    "start": 183.06,
+    "end": 183.29
+  },
+  {
+    "text": "gas",
+    "start": 183.29,
+    "end": 183.52
+  },
+  {
+    "text": "deals",
+    "start": 183.52,
+    "end": 183.56
+  },
+  {
+    "text": "come",
+    "start": 183.83,
+    "end": 184.08
+  },
+  {
+    "text": "online",
+    "start": 184.12,
+    "end": 184.56
+  },
+  {
+    "text": "on",
+    "start": 184.63,
+    "end": 184.76
+  },
+  {
+    "text": "time.",
+    "start": 184.76,
+    "end": 185.34
+  },
+  {
+    "text": "Watch",
+    "start": 185.37,
+    "end": 185.62
+  },
+  {
+    "text": "whether",
+    "start": 185.66,
+    "end": 185.99
+  },
+  {
+    "text": "efficiency",
+    "start": 186.03,
+    "end": 186.61
+  },
+  {
+    "text": "gains",
+    "start": 186.61,
+    "end": 186.92
+  },
+  {
+    "text": "can",
+    "start": 186.92,
+    "end": 187.15
+  },
+  {
+    "text": "slow",
+    "start": 187.15,
+    "end": 187.47
+  },
+  {
+    "text": "the",
+    "start": 187.47,
+    "end": 187.68
+  },
+  {
+    "text": "curve",
+    "start": 187.68,
+    "end": 188.08
+  },
+  {
+    "text": "because",
+    "start": 188.11,
+    "end": 188.59
+  },
+  {
+    "text": "AI",
+    "start": 188.59,
+    "end": 188.73
+  },
+  {
+    "text": "can",
+    "start": 188.73,
+    "end": 188.95
+  },
+  {
+    "text": "use",
+    "start": 188.95,
+    "end": 189.17
+  },
+  {
+    "text": "less",
+    "start": 189.17,
+    "end": 189.46
+  },
+  {
+    "text": "electricity",
+    "start": 189.46,
+    "end": 190.27
+  },
+  {
+    "text": "per",
+    "start": 190.27,
+    "end": 190.46
+  },
+  {
+    "text": "task,",
+    "start": 190.53,
+    "end": 190.84
+  },
+  {
+    "text": "but",
+    "start": 190.87,
+    "end": 191.05
+  },
+  {
+    "text": "it",
+    "start": 191.05,
+    "end": 191.19
+  },
+  {
+    "text": "keeps",
+    "start": 191.19,
+    "end": 191.54
+  },
+  {
+    "text": "finding",
+    "start": 191.54,
+    "end": 192
+  },
+  {
+    "text": "more",
+    "start": 192.07,
+    "end": 192.26
+  },
+  {
+    "text": "tasks.",
+    "start": 192.31,
+    "end": 192.66
+  },
+  {
+    "text": "The",
+    "start": 192.91,
+    "end": 193.12
+  },
+  {
+    "text": "AI",
+    "start": 193.12,
+    "end": 193.28
+  },
+  {
+    "text": "race",
+    "start": 193.28,
+    "end": 193.6
+  },
+  {
+    "text": "was",
+    "start": 193.6,
+    "end": 193.84
+  },
+  {
+    "text": "about",
+    "start": 193.84,
+    "end": 194.24
+  },
+  {
+    "text": "models,",
+    "start": 194.24,
+    "end": 194.9
+  },
+  {
+    "text": "then",
+    "start": 195.01,
+    "end": 195.12
+  },
+  {
+    "text": "it",
+    "start": 195.15,
+    "end": 195.26
+  },
+  {
+    "text": "was",
+    "start": 195.33,
+    "end": 195.46
+  },
+  {
+    "text": "about",
+    "start": 195.46,
+    "end": 195.78
+  },
+  {
+    "text": "chips.",
+    "start": 195.78,
+    "end": 196.31
+  },
+  {
+    "text": "Now",
+    "start": 196.35,
+    "end": 196.55
+  },
+  {
+    "text": "it",
+    "start": 196.55,
+    "end": 196.7
+  },
+  {
+    "text": "is",
+    "start": 196.7,
+    "end": 196.85
+  },
+  {
+    "text": "about",
+    "start": 196.85,
+    "end": 197.23
+  },
+  {
+    "text": "megawatts.",
+    "start": 197.23,
+    "end": 198.14
+  },
+  {
+    "text": "The",
+    "start": 198.19,
+    "end": 198.26
+  },
+  {
+    "text": "grid",
+    "start": 198.35,
+    "end": 198.57
+  },
+  {
+    "text": "was",
+    "start": 198.57,
+    "end": 198.72
+  },
+  {
+    "text": "built",
+    "start": 198.77,
+    "end": 199.04
+  },
+  {
+    "text": "for",
+    "start": 199.04,
+    "end": 199.22
+  },
+  {
+    "text": "a",
+    "start": 199.22,
+    "end": 199.28
+  },
+  {
+    "text": "world",
+    "start": 199.28,
+    "end": 199.58
+  },
+  {
+    "text": "where",
+    "start": 199.63,
+    "end": 199.88
+  },
+  {
+    "text": "power",
+    "start": 199.92,
+    "end": 200.15
+  },
+  {
+    "text": "grew",
+    "start": 200.21,
+    "end": 200.46
+  },
+  {
+    "text": "a",
+    "start": 200.46,
+    "end": 200.52
+  },
+  {
+    "text": "few",
+    "start": 200.52,
+    "end": 200.7
+  },
+  {
+    "text": "percent",
+    "start": 200.7,
+    "end": 201.13
+  },
+  {
+    "text": "a",
+    "start": 201.13,
+    "end": 201.19
+  },
+  {
+    "text": "year.",
+    "start": 201.19,
+    "end": 201.66
+  },
+  {
+    "text": "AI",
+    "start": 201.69,
+    "end": 201.76
+  },
+  {
+    "text": "wants",
+    "start": 201.85,
+    "end": 202.13
+  },
+  {
+    "text": "a",
+    "start": 202.13,
+    "end": 202.19
+  },
+  {
+    "text": "world",
+    "start": 202.19,
+    "end": 202.53
+  },
+  {
+    "text": "where",
+    "start": 202.53,
+    "end": 202.82
+  },
+  {
+    "text": "it",
+    "start": 202.89,
+    "end": 203
+  },
+  {
+    "text": "can",
+    "start": 203,
+    "end": 203.2
+  },
+  {
+    "text": "grow",
+    "start": 203.2,
+    "end": 203.47
+  },
+  {
+    "text": "on",
+    "start": 203.47,
+    "end": 203.49
+  },
+  {
+    "text": "demand.",
+    "start": 203.79,
+    "end": 204.28
+  },
+  {
+    "text": "That",
+    "start": 204.31,
+    "end": 204.56
+  },
+  {
+    "text": "is",
+    "start": 204.6,
+    "end": 204.76
+  },
+  {
+    "text": "the",
+    "start": 204.76,
+    "end": 205
+  },
+  {
+    "text": "tension.",
+    "start": 205,
+    "end": 205.8
+  },
+  {
+    "text": "And",
+    "start": 205.83,
+    "end": 206.06
+  },
+  {
+    "text": "in",
+    "start": 206.07,
+    "end": 206.25
+  },
+  {
+    "text": "2026,",
+    "start": 206.25,
+    "end": 207.5
+  },
+  {
+    "text": "it",
+    "start": 207.5,
+    "end": 207.62
+  },
+  {
+    "text": "has",
+    "start": 207.93,
+    "end": 207.96
+  },
+  {
+    "text": "a",
+    "start": 207.96,
+    "end": 208.03
+  },
+  {
+    "text": "price",
+    "start": 208.07,
+    "end": 208.5
+  },
+  {
+    "text": "tag,",
+    "start": 208.5,
+    "end": 208.95
+  },
+  {
+    "text": "a",
+    "start": 208.97,
+    "end": 209.04
+  },
+  {
+    "text": "record",
+    "start": 209.04,
+    "end": 209.54
+  },
+  {
+    "text": "auction,",
+    "start": 209.54,
+    "end": 210.32
+  },
+  {
+    "text": "a",
+    "start": 210.35,
+    "end": 210.4
+  },
+  {
+    "text": "2,600",
+    "start": 210.4,
+    "end": 211.62
+  },
+  {
+    "text": "gigawatt",
+    "start": 211.62,
+    "end": 212.15
+  },
+  {
+    "text": "queue,",
+    "start": 212.45,
+    "end": 212.96
+  },
+  {
+    "text": "and",
+    "start": 212.96,
+    "end": 213.21
+  },
+  {
+    "text": "a",
+    "start": 213.21,
+    "end": 213.29
+  },
+  {
+    "text": "race",
+    "start": 213.29,
+    "end": 213.64
+  },
+  {
+    "text": "to",
+    "start": 213.64,
+    "end": 213.75
+  },
+  {
+    "text": "build",
+    "start": 213.75,
+    "end": 214.04
+  },
+  {
+    "text": "the",
+    "start": 214.04,
+    "end": 214.21
+  },
+  {
+    "text": "power",
+    "start": 214.21,
+    "end": 214.49
+  },
+  {
+    "text": "plants",
+    "start": 214.49,
+    "end": 214.84
+  },
+  {
+    "text": "that",
+    "start": 214.87,
+    "end": 215.12
+  },
+  {
+    "text": "will",
+    "start": 215.16,
+    "end": 215.4
+  },
+  {
+    "text": "decide",
+    "start": 215.45,
+    "end": 215.84
+  },
+  {
+    "text": "who",
+    "start": 215.84,
+    "end": 216
+  },
+  {
+    "text": "gets",
+    "start": 216.07,
+    "end": 216.36
+  },
+  {
+    "text": "to",
+    "start": 216.36,
+    "end": 216.45
+  },
+  {
+    "text": "compute.",
+    "start": 216.53,
+    "end": 217.22
+  },
+  {
+    "text": "The",
+    "start": 217.29,
+    "end": 217.36
+  },
+  {
+    "text": "question",
+    "start": 217.45,
+    "end": 217.82
+  },
+  {
+    "text": "for",
+    "start": 217.87,
+    "end": 218.02
+  },
+  {
+    "text": "the",
+    "start": 218.02,
+    "end": 218.18
+  },
+  {
+    "text": "next",
+    "start": 218.18,
+    "end": 218.4
+  },
+  {
+    "text": "phase",
+    "start": 218.4,
+    "end": 218.68
+  },
+  {
+    "text": "of",
+    "start": 218.73,
+    "end": 218.87
+  },
+  {
+    "text": "the",
+    "start": 218.95,
+    "end": 219.08
+  },
+  {
+    "text": "AI",
+    "start": 219.39,
+    "end": 219.46
+  },
+  {
+    "text": "economy",
+    "start": 219.46,
+    "end": 220.24
+  },
+  {
+    "text": "is",
+    "start": 220.27,
+    "end": 220.34
+  },
+  {
+    "text": "not",
+    "start": 220.43,
+    "end": 220.57
+  },
+  {
+    "text": "whether",
+    "start": 220.57,
+    "end": 221
+  },
+  {
+    "text": "the",
+    "start": 221.07,
+    "end": 221.24
+  },
+  {
+    "text": "models",
+    "start": 221.24,
+    "end": 221.66
+  },
+  {
+    "text": "get",
+    "start": 221.66,
+    "end": 221.85
+  },
+  {
+    "text": "better.",
+    "start": 221.86,
+    "end": 222.52
+  },
+  {
+    "text": "It",
+    "start": 222.55,
+    "end": 222.62
+  },
+  {
+    "text": "is",
+    "start": 222.62,
+    "end": 222.72
+  },
+  {
+    "text": "whether",
+    "start": 222.72,
+    "end": 223.08
+  },
+  {
+    "text": "the",
+    "start": 223.13,
+    "end": 223.25
+  },
+  {
+    "text": "lights",
+    "start": 223.25,
+    "end": 223.57
+  },
+  {
+    "text": "stay",
+    "start": 223.57,
+    "end": 223.78
+  },
+  {
+    "text": "on",
+    "start": 223.78,
+    "end": 223.88
+  },
+  {
+    "text": "while",
+    "start": 223.88,
+    "end": 224.13
+  },
+  {
+    "text": "they",
+    "start": 224.21,
+    "end": 224.34
+  },
+  {
+    "text": "do.",
+    "start": 224.34,
+    "end": 224.68
+  }
+]

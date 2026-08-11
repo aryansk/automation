@@ -1,0 +1,159 @@
+{
+  "slug": "landscape-2026-08-04-trade-trust",
+  "edition": "04 Aug 2026",
+  "deskName": "godandbaddaily / Landscape Desk",
+  "openerTitle": "MORE TRADE / LESS TRUST?",
+  "openerSub": "One question · the map that is redrawing itself",
+  "headline": "Why global trade is growing while trust is falling",
+  "summary": "From record container volumes to tariff walls and export controls, the world is moving more goods while the rules that moved them quietly lose authority.",
+  "kicker": "TRADE · GEOPOLITICS · WORLD",
+  "region": "Global trade system",
+  "scriptFile": "assets/narration/landscape-2026-08-04-trade-trust-script.txt",
+  "narrationAudio": "assets/narration/landscape-2026-08-04-trade-trust.wav",
+  "captionFile": "assets/narration/landscape-2026-08-04-trade-trust.vtt",
+  "globeCaption": "More goods are moving — through fewer trusted routes",
+  "routeLabel": "TRADE VOLUMES / TRUST SIGNALS",
+  "sources": [
+    { "label": "UNCTAD / APR 2026 / GLOBAL TRADE UPDATE", "url": "https://unctad.org/publication/global-trade-update-april-2026-global-trade-growth-continues-fragility-rises" },
+    { "label": "UNCTAD / JAN 2026 / TOP TRENDS", "url": "https://unctad.org/publication/global-trade-update-january-2026-top-trends-redefining-global-trade-2026" },
+    { "label": "WTO / MAR 2026 / OUTLOOK + STATISTICS", "url": "https://www.wto-ilibrary.org/content/books/9789287090812" },
+    { "label": "WTO / WORLD TRADE REPORT 2026", "url": "https://www.wtn.world/reports/wtn-world-trade-network-03-2026.pdf" },
+    { "label": "MCKINSEY / GEOPOLITICS + GEOMETRY OF TRADE 2026", "url": "https://www.mckinsey.com/mgi/our-research/geopolitics-and-the-geometry-of-global-trade-2026-update" },
+    { "label": "PIIE / SCRAPPING MFN", "url": "https://www.piie.com/blogs/realtime-economics/2026/prying-open-pandoras-box-scrapping-mfn" },
+    { "label": "BIS / SEMICONDUCTOR EXPORT CONTROLS 2026", "url": "https://www.inhouseapac.com/insights/us-semiconductor-export-controls-in-2026-an-apac-gc-map-of-the-ai-diffusion-framework" }
+  ],
+  "chapters": [
+    {
+      "kicker": "01 / THE PARADOX",
+      "title": "The world moved a record amount of goods — and trusted less",
+      "body": "Global trade grew about seven and a half percent in 2025 to a record thirty-five trillion dollars. At the same time, tariffs rose and the rules governing trade lost authority.",
+      "tag": "UNCTAD / 2025 RECORD / $35 TRILLION",
+      "graphic": "letter",
+      "focus": { "codes": "WORLD / TRADE", "label": "GLOBAL / RECORD VOLUMES", "coordinates": "SCHEMATIC" },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "New York",
+        "event": "Record trade volumes · falling trust",
+        "coordinates": [-74.006, 40.7128],
+        "cameraZ": 10.2,
+        "mentionedCountryCodes": ["CN", "MX"],
+        "routePoints": [
+          { "label": "RECORD VOLUMES", "country": "United States", "location": "New York", "coordinates": [-74.006, 40.7128] },
+          { "label": "TARIFF WALLS", "country": "United States", "location": "Washington, D.C.", "coordinates": [-77.0365, 38.9072] },
+          { "label": "FACTORY WORLD", "country": "China", "location": "Guangdong", "coordinates": [113.2644, 23.1291] }
+        ]
+      },
+      "photos": [
+        { "src": "assets/news-images/2026-08-04-trade/containers.jpg", "country": "Global", "location": "Container shipping", "caption": "More goods, more miles.", "credit": "Context image · source credit in story manifest" },
+        { "src": "assets/news-images/2026-08-04-trade/port.jpg", "country": "Global", "location": "Port operations", "caption": "The volume is real.", "credit": "Context image · source credit in story manifest" }
+      ]
+    },
+    {
+      "kicker": "02 / THE DEFINITION",
+      "title": "MFN was the promise that everyone got the same price",
+      "body": "Most-favoured-nation treatment means a country applies its best tariff to everyone. The WTO says the share of trade on MFN terms has fallen to about seventy-two percent.",
+      "tag": "WTO / MFN SHARE / 72%",
+      "graphic": "definition",
+      "focus": { "codes": "WTO / RULES", "label": "GENEVA, SWITZERLAND / THE RULE", "coordinates": "46.2° N / 6.1° E" },
+      "globe": {
+        "countryCode": "CH",
+        "countryName": "Switzerland",
+        "city": "Geneva",
+        "event": "The rule under pressure",
+        "coordinates": [6.1432, 46.2044],
+        "cameraZ": 7.6,
+        "mentionedCountryCodes": ["US", "CN", "EU"],
+        "routePoints": [
+          { "label": "THE RULE", "country": "Switzerland", "location": "Geneva", "coordinates": [6.1432, 46.2044] },
+          { "label": "TARIFFS", "country": "United States", "location": "Washington, D.C.", "coordinates": [-77.0365, 38.9072] },
+          { "label": "COUNTERMEASURES", "country": "China", "location": "Beijing", "coordinates": [116.4074, 39.9042] }
+        ]
+      },
+      "photos": [
+        { "src": "assets/news-images/2026-08-04-trade/geneva.jpg", "country": "Switzerland", "location": "Geneva", "caption": "The rulebook is still here.", "credit": "Context image · source credit in story manifest" },
+        { "src": "assets/news-images/2026-08-04-trade/flag-wall.jpg", "country": "Global", "location": "Trade flags", "caption": "Many flags, fewer shared rules.", "credit": "Context image · source credit in story manifest" }
+      ]
+    },
+    {
+      "kicker": "03 / FOLLOW THE GOODS",
+      "title": "The stack of world trade is being rerouted",
+      "body": "Mexico has overtaken China as the United States' largest trading partner. Semiconductors, batteries and rare minerals are being re-routed by export controls and industrial policy.",
+      "tag": "MEXICO > CHINA / EXPORT CONTROLS / REROUTING",
+      "graphic": "stack",
+      "focus": { "codes": "MEXICO / CHINA / TAIWAN", "label": "AMERICAS / REROUTED VALUE CHAINS", "coordinates": "SCHEMATIC" },
+      "globe": {
+        "countryCode": "MX",
+        "countryName": "Mexico",
+        "city": "Mexico City",
+        "event": "Trade partner reordering",
+        "coordinates": [-99.1332, 19.4326],
+        "cameraZ": 6.8,
+        "mentionedCountryCodes": ["CN", "TW", "VN", "IN"],
+        "routePoints": [
+          { "label": "NEW NO. 1", "country": "Mexico", "location": "Mexico City", "coordinates": [-99.1332, 19.4326] },
+          { "label": "FACTORY WORLD", "country": "China", "location": "Guangdong", "coordinates": [113.2644, 23.1291] },
+          { "label": "CHIP ROUTES", "country": "Taiwan", "location": "Hsinchu", "coordinates": [120.9647, 24.8138] },
+          { "label": "SHIFTING SOURCING", "country": "Vietnam", "location": "Hanoi", "coordinates": [105.8342, 21.0278] }
+        ]
+      },
+      "photos": [
+        { "src": "assets/news-images/2026-08-04-trade/mexico-port.jpg", "country": "Mexico", "location": "Manzanillo port", "caption": "The new north-south lane.", "credit": "Context image · source credit in story manifest" },
+        { "src": "assets/news-images/2026-08-04-trade/chip-fab.jpg", "country": "Taiwan", "location": "Semiconductor fab", "caption": "Chips set the route.", "credit": "Context image · source credit in story manifest" }
+      ]
+    },
+    {
+      "kicker": "04 / WHY MARKETS CARE",
+      "title": "Resilience now has a price — and markets are pricing it",
+      "body": "Companies are accepting ten to twenty-five percent higher costs for supply chains built on trust rather than price. That premium shows up in margins, inventories and inflation.",
+      "tag": "RESILIENCE PREMIUM / 10–25%",
+      "graphic": "market",
+      "focus": { "codes": "MARKETS / RESILIENCE", "label": "NEW YORK / THE COST OF TRUST", "coordinates": "SCHEMATIC" },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "New York",
+        "event": "Pricing the trust premium",
+        "coordinates": [-74.006, 40.7128],
+        "cameraZ": 7.6,
+        "mentionedCountryCodes": ["CN", "MX", "VN", "DE"],
+        "routePoints": [
+          { "label": "TRUST PREMIUM", "country": "United States", "location": "New York", "coordinates": [-74.006, 40.7128] },
+          { "label": "RESHORING", "country": "Germany", "location": "Frankfurt", "coordinates": [8.6821, 50.1109] },
+          { "label": "NEARSHORING", "country": "Mexico", "location": "Monterrey", "coordinates": [-100.3161, 25.6866] }
+        ]
+      },
+      "photos": [
+        { "src": "assets/news-images/2026-08-04-trade/market.jpg", "country": "United States", "location": "Financial markets", "caption": "Trust is now a line item.", "credit": "Context image · source credit in story manifest" },
+        { "src": "assets/news-images/2026-08-04-trade/factory.jpg", "country": "United States", "location": "Factory floor", "caption": "Reshoring changes the math.", "credit": "Context image · source credit in story manifest" }
+      ]
+    },
+    {
+      "kicker": "05 / THE VERDICT",
+      "title": "The world is not decoupling. It is re-routing.",
+      "body": "The question is no longer how much trade, but who trades with whom — and under which rules. Volume keeps rising; the map underneath it keeps being redrawn.",
+      "tag": "RE-ROUTING / NOT DECOUPLING",
+      "graphic": "verdict",
+      "focus": { "codes": "WORLD / RE-ROUTING", "label": "GLOBAL / THE NEW MAP", "coordinates": "SCHEMATIC" },
+      "globe": {
+        "countryCode": "SG",
+        "countryName": "Singapore",
+        "city": "Singapore",
+        "event": "The new hub geometry",
+        "coordinates": [103.8198, 1.3521],
+        "cameraZ": 8.4,
+        "mentionedCountryCodes": ["CN", "US", "MX", "VN", "IN", "DE"],
+        "routePoints": [
+          { "label": "RE-ROUTING", "country": "Singapore", "location": "Singapore", "coordinates": [103.8198, 1.3521] },
+          { "label": "NORTH AMERICA", "country": "United States", "location": "Washington, D.C.", "coordinates": [-77.0365, 38.9072] },
+          { "label": "FACTORY WORLD", "country": "China", "location": "Guangdong", "coordinates": [113.2644, 23.1291] },
+          { "label": "EUROPE", "country": "Germany", "location": "Frankfurt", "coordinates": [8.6821, 50.1109] }
+        ]
+      },
+      "photos": [
+        { "src": "assets/news-images/2026-08-04-trade/singapore.jpg", "country": "Singapore", "location": "Port of Singapore", "caption": "The hub that reroutes the world.", "credit": "Context image · source credit in story manifest" },
+        { "src": "assets/news-images/2026-08-04-trade/map.jpg", "country": "Global", "location": "Trade map", "caption": "The map is the story.", "credit": "Context image · source credit in story manifest" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "eventId": "serbian-eagle-rescue-release-2026-08-09",
+  "tone": "good",
+  "countryCode": "RS",
+  "countryName": "Serbia",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Wildlife · Rescue",
+  "headline": "Kidnapped rare Serbian eagle freed into wild after rescue",
+  "summary": "A rare Serbian eagle kidnapped after its first flight has been rescued from poachers and released back into the wild.",
+  "script": "A rare Serbian eagle was kidnapped after its first flight, then ended up in the Middle East with poachers demanding a ransom. After a rescue, Feliks has now been released back into the wild.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [20.46, 44.8],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/question-04-serbian-eagle/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/question-04-serbian-eagle/secondary.jpg",
+  "imageAlt": "A rare Serbian eagle rescued after being kidnapped by poachers.",
+  "imageAltTwo": "A second eagle image connected to the rescue and release.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/question-04-serbian-eagle.wav",
+  "openingStyle": "question-contrast",
+  "openingText": "How did a kidnapped eagle get home",
+  "openingSub": "QUESTION / CONTRAST · One story · 10 Aug 2026",
+  "captions": [
+    { "lines": ["How did a kidnapped", "eagle get home?"], "highlights": ["kidnapped eagle"] },
+    { "lines": ["Poachers demanded", "a ransom."], "highlights": ["demanded a ransom"] },
+    { "lines": ["Feliks is back", "in the wild."], "highlights": ["back in the wild"] }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Kidnapped rare Serbian eagle freed into wild",
+      "url": "https://www.bbc.co.uk/news/articles/cdewxgw69exo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-09",
+      "usedFor": ["kidnapping and rescue", "ransom demand", "release into wild"]
+    },
+    {
+      "publisher": "BirdLife International",
+      "title": "Raptor conservation context",
+      "url": "https://www.birdlife.org/",
+      "published": "2026-08-10",
+      "usedFor": ["raptor conservation context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 4,
+    "basis": "The rescue-versus-captivity contrast gives the question opening a complete emotional arc; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

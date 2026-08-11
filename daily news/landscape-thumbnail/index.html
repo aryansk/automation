@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"name","type":"string","label":"Batch name","default":"red-sea-reopen"},
+    {"id":"headlineTop","type":"string","label":"Headline top","default":"RED SEA"},
+    {"id":"headlineBottom","type":"string","label":"Headline bottom","default":"STILL CLOSED?"},
+    {"id":"subhead","type":"string","label":"Subhead","default":"WHY THE DETOUR STILL WINS"},
+    {"id":"routeLabel","type":"string","label":"Route label","default":"SUEZ → BAB EL-MANDEB"},
+    {"id":"routeCountries","type":"string","label":"Route countries","default":"EGYPT · YEMEN · SAUDI ARABIA"},
+    {"id":"globeFrame","type":"string","label":"Story globe frame","default":"assets/thumbnails/landscape-2026-08-06-red-sea-reopen-globe-highlight.jpg"},
+    {"id":"edition","type":"string","label":"Edition date","default":"06 AUG 2026"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <link rel="preload" as="font" href="assets/fonts/league-gothic-400.ttf" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/ibm-plex-mono-700.ttf" crossorigin>
+    <link rel="stylesheet" href="thumbnail.css">
+    <script src="assets/vendor/gsap.min.js"></script>
+  </head>
+  <body>
+    <div id="root" data-composition-id="landscape-thumbnail" data-start="0" data-duration="3.6" data-width="1920" data-height="1080">
+      <div class="thumbnail-grid" data-layout-ignore></div>
+      <div class="globe-frame-window" data-layout-ignore>
+        <div class="globe-zoom">
+          <img class="globe-frame" data-var-src="globeFrame" src="assets/thumbnails/landscape-2026-08-06-red-sea-reopen-globe-highlight.jpg" alt="Story-specific HyperFrames globe with the relevant country highlighted">
+        </div>
+      </div>
+      <div class="globe-fade" data-layout-ignore></div>
+      <div class="top-rule" data-layout-ignore></div>
+      <div class="edition" data-bind="edition">06 AUG 2026</div>
+
+      <section class="thumb-copy" id="thumb-copy" data-layout-allow-overlap>
+        <div class="thumb-copy__eyebrow">LANDSCAPE / ONE QUESTION</div>
+        <h1 class="thumb-copy__title"><span id="headline-top">RED SEA</span><span id="headline-bottom">STILL CLOSED?</span></h1>
+        <div class="thumb-rule" id="thumb-rule"></div>
+        <p class="thumb-copy__sub" id="subhead">WHY THE DETOUR STILL WINS</p>
+        <div class="route-card">
+          <span class="route-card__label">THE ROUTE</span>
+          <strong id="route-label">SUEZ → BAB EL-MANDEB</strong>
+          <span class="route-card__countries" id="route-countries">EGYPT · YEMEN · SAUDI ARABIA</span>
+        </div>
+      </section>
+
+      <div class="grain" data-layout-ignore></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["landscape-thumbnail"] = gsap.timeline({ paused: true, defaults: { ease: "power3.out", lazy: false } });
+      const variables = window.__hyperframes.getVariables();
+      document.querySelector("#headline-top").textContent = variables.headlineTop || "RED SEA";
+      document.querySelector("#headline-bottom").textContent = variables.headlineBottom || "STILL CLOSED?";
+      document.querySelector("#subhead").textContent = variables.subhead || "WHY THE DETOUR STILL WINS";
+      document.querySelector("#route-label").textContent = variables.routeLabel || "SUEZ → BAB EL-MANDEB";
+      document.querySelector("#route-countries").textContent = variables.routeCountries || "EGYPT · YEMEN · SAUDI ARABIA";
+      document.querySelector("[data-bind='edition']").textContent = variables.edition || "06 AUG 2026";
+      const timeline = window.__timelines["landscape-thumbnail"];
+      timeline.fromTo(".globe-zoom", { opacity: 0, scale: 1, y: 14 }, { opacity: 1, scale: 1.03, y: 0, duration: 1.18, ease: "power3.out" }, 0);
+      timeline.set("#thumb-copy", { opacity: 0 }, 0);
+      timeline.fromTo("#thumb-copy", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.68 }, 0.18);
+      timeline.fromTo("#headline-top", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.54 }, 0.42);
+      timeline.fromTo("#headline-bottom", { opacity: 0, y: 42 }, { opacity: 1, y: 0, duration: 0.62 }, 0.58);
+      timeline.fromTo("#thumb-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.62, ease: "expo.out" }, 0.86);
+      timeline.fromTo(".thumb-copy__sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 1.18);
+      timeline.fromTo(".route-card", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5 }, 1.36);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+{
+  "eventId": "iran-oman-hormuz-talks-2026-08-03",
+  "tone": "bad",
+  "countryCode": "IR",
+  "countryName": "Iran",
+  "cityName": "Tehran",
+  "coordinates": [51.389, 35.6892],
+  "region": "Middle East",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Energy",
+  "headline": "Iran and Oman hold talks on reopening the Strait of Hormuz",
+  "summary": "Tehran is negotiating with Oman over a shipping route while denying direct talks with the US, as oil prices fall sharply.",
+  "script": "Iran says it is negotiating with Oman over reopening the Strait of Hormuz, while denying direct talks with the United States. Oil prices fell sharply after President Trump signalled a possible deal.",
+  "source": "BBC · Reuters",
+  "edition": "04 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-04-bad/hormuz/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-bad/hormuz/tanker.jpg",
+  "imageAlt": "An oil tanker moving through the Strait of Hormuz.",
+  "imageAltTwo": "The Strait of Hormuz seen from the coast.",
+  "imageCredit": "Reuters image",
+  "imageCreditTwo": "AP image",
+  "narrationAudio": "assets/narration/tour/bad4-2026-08-04-03-iran-oman-hormuz-talks.wav",
+  "statValue": "20%",
+  "statLabel": "of world oil flows via Hormuz",
+  "statPeriod": "pre-war",
+  "captions": [
+    {
+      "lines": ["Iran and Oman hold", "talks on Hormuz."],
+      "highlights": ["Iran", "Oman", "Hormuz"]
+    },
+    {
+      "lines": ["Iran denies direct", "US negotiations."],
+      "highlights": ["Iran denies", "US negotiations"]
+    },
+    {
+      "lines": ["Oil prices", "fall sharply."],
+      "highlights": ["Oil prices", "fall sharply"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Iran says it is in talks with Oman but not the US after Trump says negotiations to resume",
+      "url": "https://www.bbc.co.uk/news/articles/c23579jzv08o",
+      "published": "2026-08-03",
+      "usedFor": ["Iran-Oman talks", "oil price move", "Trump statement"]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "Oman presents Iran with Gulf-backed plan for voluntary fees to use Hormuz",
+      "url": "https://www.reuters.com/world/asia-pacific/gulf-states-back-plan-let-iran-collect-voluntary-fees-use-hormuz-2026-07-28/",
+      "published": "2026-07-28",
+      "usedFor": ["independent corroboration", "Oman mediation context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Current BBC world-feed prominence plus major-agency corroboration; ranking is editorial, not an objective trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

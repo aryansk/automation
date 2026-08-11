@@ -1,0 +1,158 @@
+{
+  "eventId": "russia-warehouse-drone-fire-2026-08-05",
+  "tone": "bad",
+  "countryCode": "RU",
+  "countryName": "Russia",
+  "cityName": "Moscow",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "breaking",
+  "kicker": "Conflict · Economy",
+  "headline": "Drone attack sets fire to Russian retail giant's warehouse",
+  "summary": "Ukraine's latest long-range strike hit a Wildberries logistics center near Moscow, sending flames and smoke over the capital region as the war grinds on.",
+  "script": "A Ukrainian drone attack set a giant Russian warehouse ablaze outside Moscow. The building belongs to the retail giant Wildberries, and thick smoke rose over the capital's outskirts. The strike is part of Kyiv's campaign to hit targets deep inside Russia.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-07-bad/russia-warehouse-drone/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-bad/russia-warehouse-drone/secondary.jpg",
+  "imageAlt": "Firefighters put out a fire after Russian missiles hit a warehouse in Kyiv, Ukraine.",
+  "imageAltTwo": "Firefighters put out a fire after Russian missiles hit a food warehouse near Kyiv, Ukraine.",
+  "imageCredit": "AP Photo/Dan Bashakov",
+  "imageCreditTwo": "AP Photo/Efrem Lukatsky",
+  "narrationAudio": "assets/narration/bad11-2026-08-07-03-russia-warehouse-drone.wav",
+  "captions": [
+    {
+      "lines": [
+        "Drone strike sets",
+        "Russian warehouse ablaze."
+      ],
+      "highlights": [
+        "warehouse ablaze"
+      ]
+    },
+    {
+      "lines": [
+        "Wildberries logistics",
+        "center hit near Moscow."
+      ],
+      "highlights": [
+        "Wildberries hit"
+      ]
+    },
+    {
+      "lines": [
+        "Part of Ukraine's",
+        "deep-strike campaign."
+      ],
+      "highlights": [
+        "deep-strike campaign"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "A Russian retail giant's warehouse burns after Ukraine's latest long-range drone attack",
+      "url": "https://apnews.com/article/russia-ukraine-war-wildberries-ballistic-missiles-6101ca4702e1f66e8cb8a15819cd5931",
+      "published": "2026-08-05",
+      "usedFor": [
+        "drone strike",
+        "Wildberries warehouse",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Ukraine strikes more oil facilities deep inside Russia, Zelenskyy says",
+      "url": "https://apnews.com/article/russia-ukraine-war-ballistic-missiles-patriots-drones-30447169b0145caa2e48ebf22b235c7a",
+      "published": "2026-08-06",
+      "usedFor": [
+        "context on deep strikes",
+        "secondary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Major escalation in the long-range strike campaign; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the strike in Russia.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 05 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "RU",
+            "coordinates": [
+              37.6,
+              55.7
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on the Moscow region, where the warehouse burns.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 05 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Moscow",
+            "coordinates": [
+              37.617,
+              55.756
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the reach of Ukraine's long-range strikes.",
+        "start": 9.5,
+        "animationId": "great-circle-route",
+        "mapSource": "AP News / 05 Aug 2026",
+        "mapData": {
+          "route": [
+            {
+              "name": "Ukraine",
+              "country": "Ukraine",
+              "code": "UA",
+              "coordinates": [
+                31.2,
+                49
+              ]
+            },
+            {
+              "name": "Moscow",
+              "country": "Russia",
+              "code": "RU",
+              "coordinates": [
+                37.617,
+                55.756
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

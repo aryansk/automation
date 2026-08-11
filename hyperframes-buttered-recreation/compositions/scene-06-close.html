@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head></head>
+  <body>
+    <template>
+      <style>
+        #scene06-root { position:absolute; inset:0; overflow:hidden; background:#f2eee1; color:#24252b; font-family:"IBM Plex Mono", monospace; }
+        #scene06-root .plate { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+        #scene06-root .soft { position:absolute; inset:0; background:radial-gradient(circle at 48% 48%, rgba(242,212,118,.15), transparent 32%), rgba(242,238,225,.07); opacity:0; }
+        #scene06-root .final { position:absolute; left:84px; top:690px; opacity:0; font-family:"EB Garamond", serif; font-size:105px; line-height:.78; font-style:italic; letter-spacing:-.05em; white-space:nowrap; }
+        #scene06-root .final.green { color:#4c8c45; }
+        #scene06-root .meta { position:absolute; left:88px; top:190px; font-size:22px; letter-spacing:4px; opacity:0; }
+        #scene06-root .seal { position:absolute; right:118px; top:780px; width:144px; height:144px; border:5px solid #d96d58; border-radius:50%; opacity:0; }
+        #scene06-root .seal::before, #scene06-root .seal::after { content:""; position:absolute; background:#d96d58; }
+        #scene06-root .seal::before { left:67px; top:20px; width:5px; height:104px; }
+        #scene06-root .seal::after { left:20px; top:67px; width:104px; height:5px; }
+        #scene06-root .smallnote { position:absolute; left:88px; bottom:138px; font-size:20px; letter-spacing:3px; opacity:0; }
+        #scene06-root .fade { position:absolute; inset:0; background:#090b0d; opacity:0; pointer-events:none; }
+      </style>
+      <div data-hf-id="hf-94hq" id="scene06-root" data-composition-id="scene06" data-width="1080" data-height="1920" data-duration="8.2">
+        <img data-hf-id="hf-lh5l" id="scene06-art" class="plate" src="assets/illustrations/paper-ripples.svg" alt="">
+        <div data-hf-id="hf-ohpd" id="scene06-soft" class="soft"></div>
+        <div data-hf-id="hf-ra2v" id="scene06-meta" class="meta">FIELD NOTE / LAST PAGE</div>
+        <div data-hf-id="hf-s78h" id="scene06-final-a" class="final" style="left:88px;top:672px;">hold</div>
+        <div data-hf-id="hf-dzk4" id="scene06-final-b" class="final green" style="left:360px;top:780px;">the</div>
+        <div data-hf-id="hf-jxip" id="scene06-final-c" class="final" style="left:518px;top:888px;">ripple</div>
+        <div data-hf-id="hf-rji5" id="scene06-seal" class="seal"></div>
+        <div data-hf-id="hf-w1xq" id="scene06-smallnote" class="smallnote">END / BEGIN AGAIN</div>
+        <div data-hf-id="hf-m4kp" id="scene06-fade" class="fade"></div>
+      </div>
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+        tl.fromTo("#scene06-art", { opacity: 0, scale: 1.04 }, { opacity: 1, scale: 1, duration: .75 }, 0);
+        tl.fromTo("#scene06-soft", { opacity: 0 }, { opacity: 1, duration: 1.2, ease: "sine.out" }, 0);
+        tl.fromTo("#scene06-meta", { opacity: 0, x: -28 }, { opacity: .72, x: 0, duration: .48 }, .22);
+        tl.fromTo("#scene06-final-a", { opacity: 0, x: -42, rotation: -5 }, { opacity: 1, x: 0, rotation: -2, duration: .62 }, .72);
+        tl.fromTo("#scene06-final-b", { opacity: 0, y: 34, rotation: 4 }, { opacity: 1, y: 0, rotation: 1, duration: .58 }, 1.18);
+        tl.fromTo("#scene06-final-c", { opacity: 0, x: 48, rotation: -3 }, { opacity: 1, x: 0, rotation: 2, duration: .68 }, 1.64);
+        tl.fromTo("#scene06-seal", { opacity: 0, scale: .3, rotation: -18 }, { opacity: .76, scale: 1, rotation: -6, duration: .62, ease: "back.out(1.1)" }, 2.32);
+        tl.fromTo("#scene06-smallnote", { opacity: 0 }, { opacity: .68, duration: .44 }, 3.04);
+        tl.to("#scene06-art", { scale: 1.025, duration: 3.8, ease: "sine.inOut" }, 3.12);
+        tl.to("#scene06-final-a, #scene06-final-b, #scene06-final-c", { y: 10, duration: 3.4, ease: "sine.inOut" }, 3.24);
+        tl.to("#scene06-soft", { opacity: .68, duration: 1.1, ease: "sine.inOut" }, 5.45);
+        tl.to("#scene06-fade", { opacity: .84, duration: .58, ease: "power2.in" }, 7.58);
+        window.__timelines["scene06"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

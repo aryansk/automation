@@ -9,7 +9,7 @@
    Steps:
      1. narrate the cold open and each story separately with the selected TTS provider
      2. ffprobe every clip and lay them out on one continuous timeline,
-        so the globe arrives at a country exactly as its line starts
+        so the visual handoff starts exactly as the next line starts
      3. concatenate the clips into one narration track
      4. write a temp composition carrying the total duration and the
         audio src, then render it
@@ -19,10 +19,12 @@
 
    Flags:
      --skip-narrate   reuse existing wavs
-     --gap            silence between stories, default 0.45s
+   --gap            silence between stories, default 0.45s
      --travel         seconds the globe spends rotating, default 2.6
-     --lead           seconds the globe settles before the line, default 0.35
+     --tone           good | bad; selects the default opener
      --opener         cold open line
+     --opener-title      visual title shown on the opening page
+     --cta            spoken end-card line
      --provider       kokoro | heygen | elevenlabs (default kokoro)
      --voice          provider-specific voice id
      --speed          narration speed, default 1.0
@@ -34,6 +36,8 @@ import { spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync, rmSync } from "node:fs";
 import { dirname, isAbsolute, parse, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { normalizeGlobeMapPlan } from "../assets/animations/globe-map-plan.js";
+import { resolveMapPlanForScene } from "../assets/animations/globe-map-runtime.js";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -55,7 +59,7 @@ const die = (message) => {
   process.exit(1);
 };
 
-const HF = option("hyperframes", "0.7.86");
+const HF = option("hyperframes", "0.7.88");
 const PROVIDER = option("provider", "kokoro").toLowerCase();
 const VOICE = option("voice", PROVIDER === "kokoro" ? "af_heart" : "");
 const SPEED = option("speed", "1.0");
@@ -63,12 +67,26 @@ const FPS = option("fps", "30");
 const QUALITY = option("quality", "high");
 const GAP = Number(option("gap", "0.45"));
 const TRAVEL = Number(option("travel", "2.6"));
-const LEAD = Number(option("lead", "0.35"));
-const OPENER = option("opener", "Good morning, bad news.");
-/* Space around the cold open: a beat before it speaks, and a longer
-   hold after, so the line lands before the globe starts travelling. */
-const OPENER_DELAY = Number(option("opener-delay", "0.45"));
-const OPENER_HOLD = Number(option("opener-hold", "1.35"));
+const TONE = option("tone", "bad").toLowerCase();
+const OPENER = option(
+  "opener",
+  TONE === "good" ? "Good morning, good news" : "Good morning, bad news",
+);
+const requestedOpenerTitle = option(
+  "opener-title",
+  TONE === "good" ? "Good morning, good news" : "Good morning, bad news",
+).trim();
+/* Keep the visible title tied to the selected tone even when an old batch
+   command accidentally carries the opposite title override. */
+const OPENER_TITLE = TONE === "good"
+  ? (/good morning,\s*bad news/i.test(requestedOpenerTitle) ? "Good morning, good news" : requestedOpenerTitle)
+  : (/good morning,\s*good news/i.test(requestedOpenerTitle) ? "Good morning, bad news" : requestedOpenerTitle);
+const CTA = option("cta", "Follow for tomorrow's global brief.").trim();
+const ALLOW_HISTORY = flag("allow-history");
+/* Keep the first spoken fact close to frame one. Branding is already present
+   in the top rail, so the cold open only needs a short landing beat. */
+const OPENER_DELAY = Number(option("opener-delay", "0.18"));
+const OPENER_HOLD = Number(option("opener-hold", "0.22"));
 
 function run(command, commandArgs, label) {
   console.log(`\n→ ${label}`);
@@ -93,14 +111,13 @@ function probeDuration(filePath) {
 }
 
 const round = (value) => Number(value.toFixed(3));
-
 /* ---------------- inputs ---------------- */
 
 const storyList = option("stories")
   .split(",")
   .map((entry) => entry.trim())
   .filter(Boolean);
-if (!storyList.length) die("pass --stories a.json,b.json,c.json");
+if (storyList.length !== 3) die("pass exactly three stories with --stories a.json,b.json,c.json");
 
 const outputArg = option("output", "renders/globe-tour.mp4");
 const outputPath = isAbsolute(outputArg) ? outputArg : resolve(projectRoot, outputArg);
@@ -143,6 +160,13 @@ const normalize = (value) =>
    the story's city, fall back to the country centroid. */
 function resolveCoordinates(story) {
   const code = String(story.countryCode || "US").toUpperCase();
+  if (
+    Array.isArray(story.coordinates)
+    && story.coordinates.length === 2
+    && story.coordinates.every((value) => Number.isFinite(Number(value)))
+  ) {
+    return story.coordinates.map(Number);
+  }
   const wanted = normalize(story.cityName);
   if (wanted) {
     const matches = cities.filter(
@@ -161,16 +185,19 @@ function resolveCoordinates(story) {
 
 const clips = [];
 
-const openerPath = resolve(narrationDir, "00-opener.wav");
+/* Keep good and bad openers in separate files so --skip-narrate can never
+   reuse the other edition's voice track. */
+const openerSlug = TONE === "good" ? "00-opener-good" : "00-opener-bad";
+const openerPath = resolve(narrationDir, `${openerSlug}.wav`);
 if (!flag("skip-narrate") || !existsSync(openerPath)) {
-  const openerStory = resolve(narrationDir, "00-opener.json");
-  writeFileSync(openerStory, JSON.stringify({ script: OPENER, narrationAudio: `assets/narration/tour/00-opener.wav` }, null, 2));
+  const openerStory = resolve(narrationDir, `${openerSlug}.json`);
+  writeFileSync(openerStory, JSON.stringify({ script: OPENER, narrationAudio: `assets/narration/tour/${openerSlug}.wav` }, null, 2));
   const openerNarrationArgs = [
     "run", "narrate", "--", "--story", openerStory,
     "--provider", PROVIDER, "--speed", SPEED,
   ];
   if (VOICE) openerNarrationArgs.push("--voice", VOICE);
-  openerNarrationArgs.push("--output", "assets/narration/tour/00-opener.wav");
+  openerNarrationArgs.push("--output", `assets/narration/tour/${openerSlug}.wav`);
   run(
     "npm",
     openerNarrationArgs,
@@ -185,6 +212,77 @@ const stories = storyList.map((entry) => {
   if (!existsSync(storyPath)) die(`story not found: ${storyPath}`);
   return { path: storyPath, slug: parse(storyPath).name, data: JSON.parse(readFileSync(storyPath, "utf8")) };
 });
+
+/* A render is also the point at which a story becomes consumed. Require
+   explicit event metadata and reject event/headline/source collisions before
+   any narration or rendering work begins. */
+const historyArg = option("history", "stories/story-history.json");
+const historyPath = isAbsolute(historyArg) ? historyArg : resolve(projectRoot, historyArg);
+let history = { version: 1, entries: [] };
+if (existsSync(historyPath)) {
+  try {
+    history = JSON.parse(readFileSync(historyPath, "utf8"));
+  } catch (error) {
+    die(`history ledger is invalid JSON: ${error.message}`);
+  }
+}
+const historyEntries = Array.isArray(history.entries) ? history.entries : [];
+const normalizeKey = (value) => String(value || "")
+  .normalize("NFD")
+  .replace(/[̀-ͯ]/g, "")
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, " ")
+  .trim();
+const historyIds = new Set(historyEntries.map((entry) => String(entry.eventId || "").trim()).filter(Boolean));
+const historyTitles = new Set(historyEntries.map((entry) => normalizeKey(entry.titleKey || entry.headline)).filter(Boolean));
+const historyUrls = new Set(
+  historyEntries.flatMap((entry) => Array.isArray(entry.sourceUrls) ? entry.sourceUrls : []).map((url) => String(url).trim()).filter(Boolean),
+);
+const seenIds = new Set();
+const seenTitles = new Set();
+const seenUrls = new Set();
+const ranks = [];
+stories.forEach((story) => {
+  const eventId = String(story.data.eventId || "").trim();
+  const titleKey = normalizeKey(story.data.headline);
+  const sourceUrls = Array.isArray(story.data.sources)
+    ? story.data.sources.map((source) => String(source?.url || "").trim()).filter(Boolean)
+    : [];
+  if (!eventId) die(`${story.slug}: eventId is required for deduplication`);
+  if (story.data.tone !== TONE) die(`${story.slug}: tone must be ${TONE}`);
+  if (!ALLOW_HISTORY && historyIds.has(eventId)) die(`${story.slug}: eventId already exists in story history`);
+  if (!ALLOW_HISTORY && historyTitles.has(titleKey)) die(`${story.slug}: headline already exists in story history`);
+  if (seenIds.has(eventId)) die(`${story.slug}: duplicate eventId in this bundle`);
+  if (seenTitles.has(titleKey)) die(`${story.slug}: duplicate headline in this bundle`);
+  if (!Array.isArray(story.data.sources) || story.data.sources.length < 2) die(`${story.slug}: at least two sources are required`);
+  if (!Array.isArray(story.data.captions) || story.data.captions.length < 2) die(`${story.slug}: captions are required`);
+  if (!Number.isInteger(Number(story.data.selection?.trendRank)) || Number(story.data.selection.trendRank) < 1 || Number(story.data.selection.trendRank) > 3) {
+    die(`${story.slug}: selection.trendRank must be 1, 2 or 3`);
+  }
+  ranks.push(Number(story.data.selection.trendRank));
+  for (const url of sourceUrls) {
+    if (!ALLOW_HISTORY && historyUrls.has(url)) die(`${story.slug}: source URL already exists in story history`);
+    if (seenUrls.has(url)) die(`${story.slug}: source URL is reused within this bundle`);
+    seenUrls.add(url);
+  }
+  seenIds.add(eventId);
+  seenTitles.add(titleKey);
+});
+
+stories.forEach((story) => {
+  const authoredPlan = story.data.animationPlan || story.data.visualPlan;
+  const plan = normalizeGlobeMapPlan(authoredPlan, { duration: 18, requireLibrary: true });
+  if (!plan.valid) die(`${story.slug}: ${plan.errors.join("; ")}`);
+  const resolvedPlan = resolveMapPlanForScene({
+    story: story.data,
+    format: "portrait",
+    mode: "production",
+    duration: 18,
+    requireLibrary: true,
+  });
+  if (!resolvedPlan.valid) die(`${story.slug}: ${resolvedPlan.errors.join("; ")}`);
+});
+if (new Set(ranks).size !== 3) die("selection.trendRank must contain unique values 1, 2 and 3");
 
 for (const story of stories) {
   const target = resolve(narrationDir, `${story.slug}.wav`);
@@ -212,21 +310,43 @@ for (const story of stories) {
   clips.push(target);
 }
 
+const endCtaPath = resolve(narrationDir, "99-end-cta.wav");
+if (!flag("skip-narrate") || !existsSync(endCtaPath)) {
+  const endCtaStory = resolve(narrationDir, "99-end-cta.json");
+  writeFileSync(
+    endCtaStory,
+    JSON.stringify({ script: CTA, narrationAudio: "assets/narration/tour/99-end-cta.wav" }, null, 2),
+  );
+  const endCtaNarrationArgs = [
+    "run", "narrate", "--", "--story", endCtaStory,
+    "--provider", PROVIDER, "--speed", SPEED,
+  ];
+  if (VOICE) endCtaNarrationArgs.push("--voice", VOICE);
+  endCtaNarrationArgs.push("--output", "assets/narration/tour/99-end-cta.wav");
+  run("npm", endCtaNarrationArgs, `narrate end-card CTA (${PROVIDER})`);
+}
+if (!existsSync(endCtaPath)) die(`end-card narration missing: ${endCtaPath}`);
+const endCtaLength = probeDuration(endCtaPath);
+if (!endCtaLength) die(`end-card narration has no measurable duration: ${endCtaPath}`);
+clips.push(endCtaPath);
+
 /* ---------------- lay out the timeline ---------------- */
 
 const openerLength = probeDuration(openerPath);
 const openerSpeaksUntil = OPENER_DELAY + openerLength;
 let cursor = openerSpeaksUntil + OPENER_HOLD;
-const openerEnd = round(openerSpeaksUntil + 0.75);
+const openerEnd = round(openerSpeaksUntil + 0.35);
 
 const tour = stories.map((story, index) => {
-  /* The globe starts turning early enough to be settled LEAD seconds
-     before the line begins. The first leg gets a longer run-up because
-     it also has to travel out of the cold open. */
+  /* The first leg can use the hook as its run-up. Later legs begin at the
+     exact narration handoff so the outgoing story remains on screen until
+     the next line says its place name. */
   const speakAt = cursor;
   const travelTime = index === 0 ? TRAVEL + 0.6 : TRAVEL;
-  const arrive = Math.max(0.8, speakAt - LEAD);
-  const travelStart = Math.max(index === 0 ? 0.9 : 0, arrive - travelTime);
+  const arrive = index === 0 ? speakAt : speakAt + travelTime;
+  const travelStart = index === 0
+    ? Math.max(0.8, arrive - travelTime)
+    : speakAt;
 
   cursor = speakAt + story.length + GAP;
 
@@ -236,10 +356,37 @@ const tour = stories.map((story, index) => {
     locationName: story.data.cityName || story.data.countryName || "",
     kicker: story.data.kicker || "",
     headline: story.data.headline || "",
+    deck: story.data.summary || "",
     source: story.data.source || "",
     imagePath: story.data.imageOne || "",
+    imagePathTwo: story.data.imageTwo || story.data.imageOne || "",
     imageAlt: story.data.imageAlt || "",
+    imageAltTwo: story.data.imageAltTwo || story.data.imageAlt || "",
     imageCredit: story.data.imageCredit || story.data.source || "",
+    imageCreditTwo: story.data.imageCreditTwo || story.data.imageCredit || story.data.source || "",
+    routeLabel: story.data.routeLabel || "",
+    mapAnimation: story.data.mapAnimation || story.data.animationId || story.data.animation || story.data.visualType || "",
+    mapData: story.data.mapData || null,
+    mapSource: story.data.mapSource || story.data.source || "",
+    animationPlan: story.data.animationPlan || story.data.visualPlan || null,
+    routePoints: Array.isArray(story.data.routePoints)
+      ? story.data.routePoints.map((point) => ({
+          label: String(point.label || ""),
+          coordinates: Array.isArray(point.coordinates)
+            ? point.coordinates.map((value) => Number(value))
+            : [0, 0],
+        }))
+      : [],
+    mentionedCountryCodes: Array.isArray(story.data.mentionedCountryCodes)
+      ? story.data.mentionedCountryCodes.map((code) => String(code || "").toUpperCase())
+      : [],
+    affectedCountryCodes: Array.isArray(story.data.affectedCountryCodes)
+      ? story.data.affectedCountryCodes.map((code) => String(code || "").toUpperCase())
+      : String(story.data.affectedCountryCodes || "")
+          .split(/\s+/)
+          .map((code) => code.toUpperCase())
+          .filter(Boolean),
+    locatorInset: Boolean(story.data.locatorInset),
     focusZoom: Number(story.data.focusZoom || 14.9),
     coordinates: resolveCoordinates(story.data),
     travelStart: round(travelStart),
@@ -249,7 +396,10 @@ const tour = stories.map((story, index) => {
   };
 });
 
-const totalDuration = Math.ceil((cursor + 0.9) * 10) / 10;
+const ctaStart = round(cursor);
+const endCardStart = round(Math.max(0, ctaStart - 0.18));
+const endCardReveal = round(endCardStart + 0.22);
+const totalDuration = Math.ceil((ctaStart + endCtaLength + 0.55) * 10) / 10;
 
 console.log("\n── tour ──");
 console.log(`  cold open  speaks ${OPENER_DELAY}s, clears ${openerEnd}s  ("${OPENER}")`);
@@ -269,9 +419,10 @@ const trackPath = resolve(projectRoot, "assets/narration/globe-tour.wav");
 const padded = [];
 clips.forEach((clip) => padded.push("-i", clip));
 
+const clipStarts = [OPENER_DELAY, ...tour.map((stop) => stop.speakAt), ctaStart];
 const delayFilters = clips
   .map((_, index) => {
-    const startAt = (index === 0 ? OPENER_DELAY : tour[index - 1].speakAt) * 1000;
+    const startAt = clipStarts[index] * 1000;
     return `[${index}:a]aresample=24000,adelay=${Math.round(startAt)}|${Math.round(startAt)}[d${index}]`;
   })
   .join(";");
@@ -291,21 +442,26 @@ run(
 
 /* ---------------- render ---------------- */
 
-const compositionPath = resolve(projectRoot, "index-globe.html");
-if (!existsSync(compositionPath)) die("index-globe.html not found");
+const compositionPath = resolve(projectRoot, "index.html");
+if (!existsSync(compositionPath)) die("index.html not found");
 
 let html = readFileSync(compositionPath, "utf8");
 html = html.replace(/(id="root"[\s\S]*?data-duration=")[\d.]+(")/, `$1${totalDuration}$2`);
 html = html.replace(/(id="narration-track"[\s\S]*?data-duration=")[\d.]+(")/, `$1${totalDuration}$2`);
 html = html.replace(/(id="narration-track"[\s\S]*?src=")[^"]*(")/, `$1assets/narration/globe-tour.wav$2`);
 stories.forEach((story, index) => {
-  const imagePath = String(story.data.imageOne || "").trim();
-  if (!imagePath) return;
-  const slot = new RegExp(`(data-story-image-slot="${index}"[^>]*\\ssrc=")[^"]*(")`);
-  html = html.replace(slot, `$1${imagePath}$2`);
+  const imagePaths = [
+    ["primary", String(story.data.imageOne || "").trim()],
+    ["secondary", String(story.data.imageTwo || story.data.imageOne || "").trim()],
+  ];
+  imagePaths.forEach(([variant, imagePath]) => {
+    if (!imagePath) return;
+    const slot = new RegExp(`(data-story-image-slot="${index}-${variant}"[^>]*\\ssrc=")[^"]*(")`);
+    html = html.replace(slot, `$1${imagePath}$2`);
+  });
 });
 
-const renderComposition = "index-globe.__render.html";
+const renderComposition = "index.__render.html";
 const renderCompositionPath = resolve(projectRoot, renderComposition);
 writeFileSync(renderCompositionPath, html);
 
@@ -316,12 +472,17 @@ writeFileSync(
     {
       deskName: "IndieHouse.io News",
       edition: stories[0]?.data.edition || "",
+      openerTitle: OPENER_TITLE,
       openerLine: OPENER,
-      openerSub: `${stories.length} stories · ${stories[0]?.data.edition || ""}`,
+      openerSub: `Global brief · ${stories[0]?.data.edition || ""}`,
       openerEnd,
+      endCardStart,
+      endCardReveal,
       tour: JSON.stringify(tour),
       narrationAudio: "assets/narration/globe-tour.wav",
       footerNote: "Context first",
+      ctaLine: "Follow for tomorrow’s global brief.",
+      ctaSource: "Sources in description.",
     },
     null,
     2,
@@ -343,6 +504,26 @@ if (!flag("skip-render")) {
     `render globe tour (${totalDuration}s)`,
   );
   tryRemove(renderCompositionPath);
+  const recordedAt = new Date().toISOString();
+  const nextHistory = {
+    ...history,
+    version: Number(history.version || 1),
+    entries: [
+      ...historyEntries,
+      ...stories.filter((story) => !historyIds.has(story.data.eventId)).map((story) => ({
+        eventId: story.data.eventId,
+        titleKey: story.data.headline,
+        sourceUrls: Array.isArray(story.data.sources) ? story.data.sources.map((source) => source.url).filter(Boolean) : [],
+        file: story.path,
+        tone: TONE,
+        edition: story.data.edition || "",
+        output: outputPath,
+        recordedAt,
+      })),
+    ],
+  };
+  writeFileSync(historyPath, `${JSON.stringify(nextHistory, null, 2)}\n`);
+  console.log(`  recorded ${nextHistory.entries.length - historyEntries.length} new stories in ${historyPath}`);
   console.log(`\n✓ ${outputPath}  ${probeDuration(outputPath).toFixed(1)}s`);
 } else {
   console.log(`\n✓ timings and narration ready; composition at ${renderComposition}`);

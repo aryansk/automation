@@ -1,0 +1,367 @@
+{
+  "slug": "landscape-2026-08-06-red-sea-reopen",
+  "edition": "06 Aug 2026",
+  "deskName": "godandbaddaily / Landscape Desk",
+  "openerTitle": "TWO STRAITS / ONE QUESTION?",
+  "openerSub": "One question · the shipping chokepoint under the global economy",
+  "headline": "Can the Red Sea reopen?",
+  "summary": "From a 20 July naval blockade to the eighth claimed strike on Saudi tankers near Yanbu, the Red Sea's two chokepoints are closed — and the world's shippers are still paying the detour around the Cape of Good Hope.",
+  "kicker": "SHIPPING · ENERGY · MARKETS · WORLD",
+  "region": "Global Red Sea shipping system",
+  "scriptFile": "assets/narration/landscape-2026-08-06-red-sea-reopen-script.txt",
+  "narrationAudio": "assets/narration/landscape-2026-08-06-red-sea-reopen.wav",
+  "captionFile": "assets/narration/landscape-2026-08-06-red-sea-reopen.vtt",
+  "globeCaption": "One waterway carries a tenth of world trade — and it is closed",
+  "ctaLine": "The reopening is a test of deterrence.",
+  "routeLabel": "SUEZ → BAB EL-MANDEB → CAPE OF GOOD HOPE",
+  "sources": [
+    {
+      "label": "MARITIME EXECUTIVE / 05 AUG 2026 / EIGHTH STRIKE",
+      "url": "https://maritime-executive.com/article/houthis-claim-eighth-saudi-tanker-attack-threatening-to-expand-blockade"
+    },
+    {
+      "label": "REUTERS / 05 AUG 2026 / WAFA STRIKE NEAR YANBU",
+      "url": "https://www.reuters.com/world/middle-east/yemens-houthis-say-they-attacked-saudi-oil-tanker-red-sea-2026-08-05/"
+    },
+    {
+      "label": "CHATHAM HOUSE / 24 JUL 2026 / BLOCKADE",
+      "url": "https://www.chathamhouse.org/2026/07/houthi-red-sea-blockade-will-collective-maritime-security-be-defended-or-break-down"
+    },
+    {
+      "label": "NYT / 05 AUG 2026 / HOUTHIS THREATEN EXPANSION",
+      "url": "https://www.nytimes.com/2026/08/05/world/middleeast/houthis-claim-attack-saudi-arabia-tanker.html"
+    },
+    {
+      "label": "SINGAPORE BIS / HOUTHI RED SEA ATTACKS 2026",
+      "url": "https://southasianchronicle.com/houthi-red-sea-attacks-ships-crisis-2026/"
+    },
+    {
+      "label": "SHIPPINGRATES / RED SEA CRISIS 2026",
+      "url": "https://shippingrates.org/blog/red-sea-crisis-freight-rates-2026"
+    },
+    {
+      "label": "GCAPTAIN / MAERSK CAPE DIVERSION",
+      "url": "https://gcaptain.com/red-sea-comeback-falters-as-maersk-diverts-ships-back-around-cape/"
+    }
+  ],
+  "chapters": [
+    {
+      "kicker": "01 / THE NEW SIGNAL",
+      "title": "A blockade just turned the Red Sea into a trade chokepoint",
+      "body": "On 20 July 2026, the Houthis declared a naval blockade against Saudi Arabia. By 5 August they had claimed eight strikes on Saudi-linked tankers — the latest, the product tanker Wafa, near the export port of Yanbu.",
+      "tag": "20 JUL 2026 / BLOCKADE / 8TH STRIKE",
+      "graphic": "letter",
+      "focus": {
+        "codes": "RED SEA / BAB EL-MANDEB",
+        "label": "YANBU, SAUDI ARABIA / THE TANKER FRONT",
+        "coordinates": "24.1° N / 38.1° E"
+      },
+      "globe": {
+        "countryCode": "SA",
+        "countryName": "Saudi Arabia",
+        "city": "Yanbu",
+        "event": "05 Aug 2026 · eighth claimed tanker strike",
+        "coordinates": [38.064, 24.091],
+        "cameraZ": 7.2,
+        "mentionedCountryCodes": ["YE", "SA", "EG"],
+        "routePoints": [
+          { "label": "YANBU", "country": "Saudi Arabia", "location": "Yanbu port", "coordinates": [38.064, 24.091] },
+          { "label": "BAB EL-MANDEB", "country": "Yemen", "location": "Bab el-Mandeb strait", "coordinates": [43.3, 12.6] },
+          { "label": "SUEZ", "country": "Egypt", "location": "Suez Canal", "coordinates": [32.55, 30.45] }
+        ]
+      },
+      "animationPlan": {
+        "version": 1,
+        "library": "globe-map-library",
+        "policy": "required",
+        "segments": [
+          {
+            "id": "chokepoint",
+            "scriptSection": "opener",
+            "scriptCue": "Name the chokepoint and the event.",
+            "start": 0,
+            "animationId": "chokepoint-focus",
+            "mapSource": "Maritime Executive / Reuters / 05 Aug 2026",
+            "mapData": {
+              "target": { "name": "Bab el-Mandeb", "country": "Yemen", "code": "YE", "coordinates": [43.3, 12.6] },
+              "routes": [
+                { "points": [{ "name": "Suez", "country": "Egypt", "code": "EG", "coordinates": [32.55, 30.45] }, { "name": "Bab el-Mandeb", "country": "Yemen", "code": "YE", "coordinates": [43.3, 12.6] }], "value": 72 }
+              ]
+            }
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-06-bad/houthi-tanker/primary.jpg",
+          "country": "Saudi Arabia",
+          "location": "Red Sea tanker",
+          "caption": "The tanker front is back.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-06-red-sea/yemen-coast.jpg",
+          "country": "Yemen",
+          "location": "Bab el-Mandeb coast",
+          "caption": "The strait that was closed.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "02 / THE DEFINITION",
+      "title": "A chokepoint is where one narrow passage carries a tenth of trade",
+      "body": "The Bab el-Mandeb is a twenty-mile-wide strait between Yemen and Djibouti. Together with the Suez Canal, it carries roughly ten percent of world trade and around eight percent of global LNG — none of it when the strait is closed.",
+      "tag": "~20 MILES / ~10% OF TRADE / LNG ~8%",
+      "graphic": "definition",
+      "focus": {
+        "codes": "YEMEN / DJIBOUTI / ERITREA",
+        "label": "BAB EL-MANDEB / THE 20-MILE GATE",
+        "coordinates": "12.6° N / 43.3° E"
+      },
+      "globe": {
+        "countryCode": "YE",
+        "countryName": "Yemen",
+        "city": "Bab el-Mandeb",
+        "event": "The 20-mile maritime gate",
+        "coordinates": [43.3, 12.6],
+        "cameraZ": 6.2,
+        "mentionedCountryCodes": ["YE", "DJ", "ER", "EG"],
+        "routePoints": [
+          { "label": "YEMEN", "country": "Yemen", "location": "Yemeni coast", "coordinates": [44.2, 13.0] },
+          { "label": "DJIBOUTI", "country": "Djibouti", "location": "Djibouti port", "coordinates": [43.15, 11.58] },
+          { "label": "SUEZ", "country": "Egypt", "location": "Suez Canal", "coordinates": [32.55, 30.45] }
+        ]
+      },
+      "animationPlan": {
+        "version": 1,
+        "library": "globe-map-library",
+        "policy": "required",
+        "segments": [
+          {
+            "id": "shipping-lanes",
+            "scriptSection": "definition",
+            "scriptCue": "Draw the lane that the definition depends on.",
+            "start": 0,
+            "animationId": "shipping-lanes",
+            "mapSource": "SINGAPORE BIS / HOUTHI RED SEA ATTACKS 2026",
+            "mapData": {
+              "routes": [
+                { "points": [{ "name": "Suez", "country": "Egypt", "code": "EG", "coordinates": [32.55, 30.45] }, { "name": "Bab el-Mandeb", "country": "Yemen", "code": "YE", "coordinates": [43.3, 12.6] }], "value": 75, "label": "SUEZ-BAB" },
+                { "points": [{ "name": "Bab el-Mandeb", "country": "Yemen", "code": "YE", "coordinates": [43.3, 12.6] }, { "name": "Singapore", "country": "Singapore", "code": "SG", "coordinates": [103.8198, 1.3521] }], "value": 25, "label": "BAB-ASIA" }
+              ]
+            }
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-06-red-sea/strait.jpg",
+          "country": "Yemen",
+          "location": "Bab el-Mandeb strait",
+          "caption": "Twenty miles wide.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-04-trade/containers.jpg",
+          "country": "Global",
+          "location": "Container shipping",
+          "caption": "A tenth of trade needs this door.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "03 / FOLLOW THE ROUTE",
+      "title": "The detour around the Cape is the price of the blockade",
+      "body": "Ships that used the Suez–Bab corridor now sail around Africa. The Cape route adds roughly 8,500 nautical miles on a round trip and about ten days — and Suez container traffic is running near sixty percent below 2023 levels.",
+      "tag": "+8,500 NM / +10 DAYS / SUEZ -60%",
+      "graphic": "stack",
+      "focus": {
+        "codes": "SUEZ / BAB / CAPE OF GOOD HOPE",
+        "label": "CAPE OF GOOD HOPE / THE DETOUR",
+        "coordinates": "18.4° E / -34.3° S"
+      },
+      "globe": {
+        "countryCode": "ZA",
+        "countryName": "South Africa",
+        "city": "Cape of Good Hope",
+        "event": "The 8,500-nautical-mile detour",
+        "coordinates": [18.42, -34.36],
+        "cameraZ": 7.6,
+        "mentionedCountryCodes": ["EG", "YE", "ZA", "SG"],
+        "routePoints": [
+          { "label": "SUEZ", "country": "Egypt", "location": "Suez Canal", "coordinates": [32.55, 30.45] },
+          { "label": "BAB EL-MANDEB", "country": "Yemen", "location": "Bab el-Mandeb", "coordinates": [43.3, 12.6] },
+          { "label": "CAPE", "country": "South Africa", "location": "Cape of Good Hope", "coordinates": [18.42, -34.36] },
+          { "label": "SINGAPORE", "country": "Singapore", "location": "Singapore", "coordinates": [103.8198, 1.3521] }
+        ]
+      },
+      "animationPlan": {
+        "version": 1,
+        "library": "globe-map-library",
+        "policy": "required",
+        "segments": [
+          {
+            "id": "route-disruption",
+            "scriptSection": "detour",
+            "scriptCue": "Show the baseline Suez lane and the Cape detour.",
+            "start": 0,
+            "animationId": "route-disruption",
+            "mapSource": "GCAPTAIN / MARITIME EXECUTIVE / AUG 2026",
+            "mapData": {
+              "routes": [
+                { "points": [{ "name": "Suez", "country": "Egypt", "code": "EG", "coordinates": [32.55, 30.45] }, { "name": "Bab el-Mandeb", "country": "Yemen", "code": "YE", "coordinates": [43.3, 12.6] }, { "name": "Singapore", "country": "Singapore", "code": "SG", "coordinates": [103.8198, 1.3521] }], "value": 78, "status": "active", "label": "BASELINE" },
+                { "points": [{ "name": "Suez", "country": "Egypt", "code": "EG", "coordinates": [32.55, 30.45] }, { "name": "Cape of Good Hope", "country": "South Africa", "code": "ZA", "coordinates": [18.42, -34.36] }, { "name": "Singapore", "country": "Singapore", "code": "SG", "coordinates": [103.8198, 1.3521] }], "value": 22, "status": "detour", "label": "DETOUR" }
+              ]
+            }
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-06-red-sea/cape.jpg",
+          "country": "South Africa",
+          "location": "Cape of Good Hope",
+          "caption": "The long way around.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-06-red-sea/container-ship.jpg",
+          "country": "Global",
+          "location": "Cargo ship at sea",
+          "caption": "Ten extra days per voyage.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "04 / WHY MARKETS CARE",
+      "title": "Freight rates and tanker premiums are pricing the closure",
+      "body": "Container rates on Asia–Europe lanes are running far above pre-crisis levels, tanker war-risk premiums have jumped, and the Suez Canal Authority is losing toll revenue it counted on. The market is paying for the detour in real time.",
+      "tag": "FREIGHT UP / WAR-RISK UP / SUEZ TOLLS DOWN",
+      "graphic": "market",
+      "focus": {
+        "codes": "MARKETS / FREIGHT / TOLLS",
+        "label": "SINGAPORE / THE FREIGHT SIGNAL",
+        "coordinates": "1.35° N / 103.82° E"
+      },
+      "globe": {
+        "countryCode": "SG",
+        "countryName": "Singapore",
+        "city": "Singapore",
+        "event": "The freight-price signal",
+        "coordinates": [103.8198, 1.3521],
+        "cameraZ": 7.2,
+        "mentionedCountryCodes": ["SG", "EG", "GB"],
+        "routePoints": [
+          { "label": "FREIGHT", "country": "Singapore", "location": "Singapore", "coordinates": [103.8198, 1.3521] },
+          { "label": "TOLLS", "country": "Egypt", "location": "Suez Canal", "coordinates": [32.55, 30.45] },
+          { "label": "INSURANCE", "country": "United Kingdom", "location": "London", "coordinates": [-0.1276, 51.5072] }
+        ]
+      },
+      "animationPlan": {
+        "version": 1,
+        "library": "globe-map-library",
+        "policy": "required",
+        "segments": [
+          {
+            "id": "flow-shift",
+            "scriptSection": "market",
+            "scriptCue": "Show the flow moving from Suez to the Cape.",
+            "start": 0,
+            "animationId": "flow-shift",
+            "mapSource": "SHIPPINGRATES / RED SEA CRISIS 2026",
+            "mapData": {
+              "beforeRoutes": [
+                { "points": [{ "name": "Suez", "country": "Egypt", "code": "EG", "coordinates": [32.55, 30.45] }, { "name": "Bab el-Mandeb", "country": "Yemen", "code": "YE", "coordinates": [43.3, 12.6] }], "value": 78 }
+              ],
+              "afterRoutes": [
+                { "points": [{ "name": "Suez", "country": "Egypt", "code": "EG", "coordinates": [32.55, 30.45] }, { "name": "Cape of Good Hope", "country": "South Africa", "code": "ZA", "coordinates": [18.42, -34.36] }], "value": 22 }
+              ]
+            }
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-04-trade/port.jpg",
+          "country": "Global",
+          "location": "Container port",
+          "caption": "The market prices the reroute.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-06-red-sea/tanker.jpg",
+          "country": "Global",
+          "location": "Oil tanker",
+          "caption": "War-risk premiums jumped.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "05 / THE VERDICT",
+      "title": "The reopening depends on deterrence, not distance",
+      "body": "The detour is expensive but survivable; the question is whether enough naval deterrence, convoy protection and negotiated restraint can reopen the Bab el-Mandeb. Until then, the Cape remains the default — and the chokepoint stays closed.",
+      "tag": "DETERRENCE / CONVOYS / NEGOTIATION",
+      "graphic": "verdict",
+      "focus": {
+        "codes": "RED SEA / WORLD",
+        "label": "GLOBAL / THE REOPENING QUESTION",
+        "coordinates": "SCHEMATIC"
+      },
+      "globe": {
+        "countryCode": "YE",
+        "countryName": "Yemen",
+        "city": "Bab el-Mandeb",
+        "event": "The reopening question",
+        "coordinates": [43.3, 12.6],
+        "cameraZ": 9.0,
+        "mentionedCountryCodes": ["YE", "SA", "EG", "US", "GB"],
+        "routePoints": [
+          { "label": "BAB EL-MANDEB", "country": "Yemen", "location": "Bab el-Mandeb", "coordinates": [43.3, 12.6] },
+          { "label": "SUEZ", "country": "Egypt", "location": "Suez Canal", "coordinates": [32.55, 30.45] },
+          { "label": "CAPE", "country": "South Africa", "location": "Cape of Good Hope", "coordinates": [18.42, -34.36] }
+        ]
+      },
+      "animationPlan": {
+        "version": 1,
+        "library": "globe-map-library",
+        "policy": "required",
+        "segments": [
+          {
+            "id": "verdict-lane",
+            "scriptSection": "verdict",
+            "scriptCue": "Reveal the maritime lane that the verdict hinges on.",
+            "start": 0,
+            "animationId": "great-circle-route",
+            "mapSource": "CHATHAM HOUSE / 24 JUL 2026 / BLOCKADE",
+            "mapData": {
+              "route": [
+                { "name": "Suez Canal", "country": "Egypt", "code": "EG", "coordinates": [32.55, 30.45] },
+                { "name": "Bab el-Mandeb", "country": "Yemen", "code": "YE", "coordinates": [43.3, 12.6] }
+              ]
+            }
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-06-red-sea/naval.jpg",
+          "country": "Red Sea",
+          "location": "Naval escort",
+          "caption": "The answer is convoy and deterrence.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-06-red-sea/suez.jpg",
+          "country": "Egypt",
+          "location": "Suez Canal",
+          "caption": "The toll road stays empty.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    }
+  ]
+}

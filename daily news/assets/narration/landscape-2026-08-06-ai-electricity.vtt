@@ -1,0 +1,376 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:03.180
+In February, 2026, an auction changed
+
+00:00:03.210 --> 00:00:05.440
+how the AI boom is measured.
+
+00:00:05.470 --> 00:00:07.850
+PJM, the grid operator for 13
+
+00:00:07.880 --> 00:00:10.740
+American states, held its annual capacity
+
+00:00:10.770 --> 00:00:11.520
+auction.
+
+00:00:11.550 --> 00:00:12.810
+The price cleared at a record
+
+00:00:12.840 --> 00:00:16.060
+$329 per megawatt day, the
+
+00:00:16.090 --> 00:00:18.550
+highest ever allowed, because, for the
+
+00:00:18.580 --> 00:00:20.080
+first time, the grid could not
+
+00:00:20.110 --> 00:00:22.560
+fully guarantee the power it promised.
+
+00:00:22.590 --> 00:00:23.960
+Here is the part that surprised
+
+00:00:23.990 --> 00:00:24.570
+people.
+
+00:00:24.570 --> 00:00:26.540
+The auction monitor says data centers
+
+00:00:26.670 --> 00:00:29.030
+drove about $6.3 billion of that
+
+00:00:29.060 --> 00:00:31.710
+cost, 38% of the entire bill.
+
+00:00:31.830 --> 00:00:33.020
+That is the question we are
+
+00:00:33.050 --> 00:00:34.060
+going to unpack.
+
+00:00:34.090 --> 00:00:35.310
+Can the world's grids grow as
+
+00:00:35.340 --> 00:00:38.160
+quickly as AI's demand for electricity?
+
+00:00:38.190 --> 00:00:39.270
+The short answer is that the
+
+00:00:39.300 --> 00:00:41.400
+constraint on AI has moved.
+
+00:00:41.430 --> 00:00:42.760
+It used to be chips.
+
+00:00:42.790 --> 00:00:44.320
+Now it is cables.
+
+00:00:44.350 --> 00:00:46.280
+Start with the load itself.
+
+00:00:46.310 --> 00:00:47.860
+A modern AI data center is
+
+00:00:47.890 --> 00:00:49.820
+a building filled with thousands of
+
+00:00:49.850 --> 00:00:51.630
+servers running around the clock, with
+
+00:00:51.660 --> 00:00:53.880
+liquid cooling and backup power stacked
+
+00:00:53.910 --> 00:00:54.480
+on top.
+
+00:00:54.510 --> 00:00:55.930
+One large campus can draw as
+
+00:00:55.960 --> 00:00:57.890
+much electricity as a small city
+
+00:00:57.920 --> 00:00:59.880
+around a gigawatt or more.
+
+00:00:59.910 --> 00:01:02.160
+Northern Virginia, the world's largest data
+
+00:01:02.190 --> 00:01:04.430
+center cluster, now consumes more power
+
+00:01:04.460 --> 00:01:06.160
+than some small countries.
+
+00:01:06.190 --> 00:01:07.690
+The servers that answer your prompts
+
+00:01:07.720 --> 00:01:10.840
+are, quite literally, a city-sized machine.
+
+00:01:10.870 --> 00:01:12.640
+This is the definition we need.
+
+00:01:12.670 --> 00:01:13.840
+A data center is not a
+
+00:01:13.870 --> 00:01:14.720
+building.
+
+00:01:14.750 --> 00:01:16.280
+It is a demand curve, and
+
+00:01:16.310 --> 00:01:18.340
+that demand curve is climbing fast.
+
+00:01:18.370 --> 00:01:20.710
+The International Energy Agency now projects
+
+00:01:20.740 --> 00:01:23.010
+global data center electricity use will
+
+00:01:23.040 --> 00:01:25.620
+roughly double by 2030, from around
+
+00:01:25.650 --> 00:01:28.720
+500 terawatt hours to about 950,
+
+00:01:28.750 --> 00:01:31.250
+with AI-specific capacity tripling over the
+
+00:01:31.280 --> 00:01:32.280
+same period.
+
+00:01:32.310 --> 00:01:34.080
+That is not a rounding error.
+
+00:01:34.110 --> 00:01:35.330
+That is like adding a second
+
+00:01:35.360 --> 00:01:37.760
+Japan to the world's electricity system.
+
+00:01:37.790 --> 00:01:39.400
+Now follow the chain.
+
+00:01:39.430 --> 00:01:41.970
+The AI stack runs chips, memory,
+
+00:01:42.000 --> 00:01:43.960
+storage, and cooling, and every layer
+
+00:01:43.990 --> 00:01:45.000
+is electricity.
+
+00:01:45.030 --> 00:01:46.660
+The bottleneck is no longer the
+
+00:01:46.690 --> 00:01:47.460
+chip plant.
+
+00:01:47.490 --> 00:01:49.130
+It is the grid connection, the
+
+00:01:49.160 --> 00:01:51.680
+transformer, the transmission line that brings
+
+00:01:51.710 --> 00:01:52.920
+power to the machine.
+
+00:01:52.950 --> 00:01:54.580
+Here is where the market comes
+
+00:01:54.610 --> 00:01:54.920
+in.
+
+00:01:54.990 --> 00:01:56.490
+In the United States, the queue
+
+00:01:56.520 --> 00:01:57.920
+of projects waiting to connect to
+
+00:01:57.950 --> 00:02:01.160
+the grid holds roughly 2,600 gigawatts
+
+00:02:01.190 --> 00:02:02.220
+of requests.
+
+00:02:02.250 --> 00:02:04.490
+Median weights have stretched past five
+
+00:02:04.520 --> 00:02:05.100
+years.
+
+00:02:05.130 --> 00:02:07.100
+A data center cannot wait five
+
+00:02:07.230 --> 00:02:08.700
+years, so the hyperscalers are going
+
+00:02:08.730 --> 00:02:09.680
+around the queue.
+
+00:02:09.710 --> 00:02:11.670
+Microsoft struck a deal to restart
+
+00:02:11.810 --> 00:02:13.080
+Three Mile Island.
+
+00:02:13.110 --> 00:02:16.640
+Amazon backed Xenergies' small modular reactors.
+
+00:02:16.670 --> 00:02:18.740
+Google signed up Kairos, and meta
+
+00:02:18.770 --> 00:02:20.160
+chose Terra Power.
+
+00:02:20.190 --> 00:02:21.660
+When the grid cannot deliver fast
+
+00:02:21.690 --> 00:02:23.750
+enough, the biggest buyers are building
+
+00:02:23.780 --> 00:02:25.160
+their own power plants.
+
+00:02:25.190 --> 00:02:26.960
+That is why markets care.
+
+00:02:26.990 --> 00:02:29.200
+Electricity is becoming the binding input
+
+00:02:29.230 --> 00:02:30.940
+for the most valuable companies on
+
+00:02:30.970 --> 00:02:33.280
+Earth, and whoever controls power supply
+
+00:02:33.310 --> 00:02:35.080
+is capturing the toll booth.
+
+00:02:35.110 --> 00:02:36.880
+So what is the honest uncertainty?
+
+00:02:36.910 --> 00:02:38.880
+Nuclear is clean and steady, but
+
+00:02:39.010 --> 00:02:40.520
+slow and expensive.
+
+00:02:40.550 --> 00:02:41.980
+Gas is fast, but it is
+
+00:02:42.010 --> 00:02:43.360
+a fossil fuel and it is
+
+00:02:43.390 --> 00:02:44.160
+pricey.
+
+00:02:44.190 --> 00:02:46.260
+Renewables are getting cheaper, but they
+
+00:02:46.290 --> 00:02:48.720
+need land, transmission, and storage.
+
+00:02:48.750 --> 00:02:50.720
+No single answer can scale fast
+
+00:02:50.850 --> 00:02:51.760
+enough on its own.
+
+00:02:51.790 --> 00:02:53.080
+The signal to watch is not
+
+00:02:53.110 --> 00:02:54.440
+the headline number.
+
+00:02:54.470 --> 00:02:56.520
+It is the behavior underneath it.
+
+00:02:56.550 --> 00:02:58.810
+Watch whether utilities can actually connect
+
+00:02:58.840 --> 00:03:00.810
+data centers without breaking the grid
+
+00:03:00.840 --> 00:03:01.740
+for everyone else.
+
+00:03:01.770 --> 00:03:03.260
+Watch whether the new nuclear and
+
+00:03:03.290 --> 00:03:05.340
+gas deals come online on time.
+
+00:03:05.370 --> 00:03:07.440
+Watch whether efficiency gains can slow
+
+00:03:07.470 --> 00:03:09.140
+the curve because AI can use
+
+00:03:09.170 --> 00:03:11.160
+less electricity per task, but it
+
+00:03:11.190 --> 00:03:12.840
+keeps finding more tasks.
+
+00:03:12.910 --> 00:03:14.980
+The AI race was about models,
+
+00:03:15.010 --> 00:03:16.320
+then it was about chips.
+
+00:03:16.350 --> 00:03:18.160
+Now it is about megawatts.
+
+00:03:18.190 --> 00:03:19.250
+The grid was built for a
+
+00:03:19.280 --> 00:03:20.670
+world where power grew a few
+
+00:03:20.700 --> 00:03:21.660
+percent a year.
+
+00:03:21.690 --> 00:03:22.970
+AI wants a world where it
+
+00:03:23.000 --> 00:03:24.280
+can grow on demand.
+
+00:03:24.310 --> 00:03:25.800
+That is the tension.
+
+00:03:25.830 --> 00:03:28.040
+And in 2026, it has a
+
+00:03:28.070 --> 00:03:30.370
+price tag, a record auction, a
+
+00:03:30.400 --> 00:03:33.610
+2,600 gigawatt queue, and a race
+
+00:03:33.640 --> 00:03:35.130
+to build the power plants that
+
+00:03:35.160 --> 00:03:37.260
+will decide who gets to compute.
+
+00:03:37.290 --> 00:03:38.700
+The question for the next phase
+
+00:03:38.730 --> 00:03:40.540
+of the AI economy is not
+
+00:03:40.570 --> 00:03:42.520
+whether the models get better.
+
+00:03:42.550 --> 00:03:43.750
+It is whether the lights stay
+
+00:03:43.780 --> 00:03:44.860
+on while they do.

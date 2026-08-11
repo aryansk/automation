@@ -1,0 +1,140 @@
+{
+  "eventId": "mexico-michoacan-drone-2026-08-11",
+  "tone": "bad",
+  "countryCode": "MX",
+  "countryName": "Mexico",
+  "cityName": "Culiacan",
+  "region": "North America",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Security · Mexico",
+  "headline": "Drone attack kills four in western Mexico amid cartel clashes",
+  "summary": "A drone laden with explosives struck a town in Michoacan, killing four and wounding six as rival groups fight for control of the region.",
+  "script": "A drone attack has killed four people in western Mexico. An explosive-laden drone struck a town in Michoacan. Six more were wounded as cartel clashes intensify.",
+  "source": "Reuters",
+  "edition": "11 Aug 2026",
+  "storyNumber": "05",
+  "imageOne": "assets/news-images/2026-08-11-bad/mexico-drone/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-11-bad/mexico-drone/secondary.jpg",
+  "imageAlt": "Michoacan, Mexico context — logistics and security in the cartel zone.",
+  "imageAltTwo": "Emergency crews at a building damaged in a strike — proxy for drone-attack damage.",
+  "imageCredit": "AP Photo/Armando Solis",
+  "imageCreditTwo": "Reuters",
+  "narrationAudio": "assets/narration/bad-2026-08-11-05-mexico-drone.wav",
+  "captions": [
+    {
+      "lines": [
+        "Drone attack kills",
+        "four in Mexico."
+      ],
+      "highlights": [
+        "kills four"
+      ]
+    },
+    {
+      "lines": [
+        "Explosive drone hits",
+        "Michoacan town."
+      ],
+      "highlights": [
+        "Michoacan"
+      ]
+    },
+    {
+      "lines": [
+        "Cartel clashes",
+        "intensify."
+      ],
+      "highlights": [
+        "clashes intensify"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Mexico drone attack kills four in Michoacan",
+      "url": "https://www.reuters.com/world/americas/mexico-drone-michoacan-2026-08-11/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "four killed",
+        "Michoacan"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Drone strike in western Mexico",
+      "url": "https://apnews.com/article/mexico-drone-michoacan-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "six wounded"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 5,
+    "basis": "Cartel drone escalation.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Mexico.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "MX",
+            "coordinates": [
+              -102.5,
+              23.6
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Culiacan/Michoacan.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Culiacan",
+            "coordinates": [
+              -107.39,
+              24.8
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show conflict zone.",
+        "start": 9.5,
+        "animationId": "conflict-zone-hatch",
+        "mapSource": "AP News / 11 Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "MX"
+          ],
+          "note": "Michoacan cartel zone"
+        }
+      }
+    ]
+  }
+}

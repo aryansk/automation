@@ -1,0 +1,65 @@
+{
+  "eventId": "gaza-strikes-disarmament-talks-2026-08-02",
+  "tone": "bad",
+  "countryCode": "PS",
+  "countryName": "Gaza Strip",
+  "cityName": "Gaza City",
+  "coordinates": [34.47, 31.5],
+  "region": "Middle East",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Diplomacy",
+  "headline": "Fresh Gaza strikes shadow fragile disarmament talks",
+  "summary": "AP reports at least 17 people were killed as Israel raised security concerns about a proposed Hamas disarmament deal.",
+  "script": "Gaza saw fresh Israeli strikes as negotiations over a Hamas disarmament plan remained unsettled. At least seventeen people were killed, while Israel said it had serious security concerns about the proposed deal.",
+  "source": "AP · BBC",
+  "edition": "03 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-03-real/gaza/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-03-real/gaza/car.jpg",
+  "imageAlt": "Two men search through rubble after destruction in Gaza.",
+  "imageAltTwo": "People gather around a destroyed car on a Gaza road.",
+  "imageCredit": "BBC News image",
+  "imageCreditTwo": "BBC News image",
+  "narrationAudio": "assets/narration/tour/bad3-2026-08-03-02-gaza-strikes.wav",
+  "captions": [
+    {
+      "lines": ["Fresh strikes hit Gaza", "as talks remain unsettled."],
+      "highlights": ["Fresh strikes", "talks"]
+    },
+    {
+      "lines": ["At least 17 people", "were killed."],
+      "highlights": ["At least 17", "killed"]
+    },
+    {
+      "lines": ["Israel says it has", "serious security concerns."],
+      "highlights": ["security concerns"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Associated Press",
+      "title": "Israel faces serious concerns over Hamas disarmament plan as strikes continue",
+      "url": "https://apnews.com/article/72b1493ca75bb9d4cf195f325d8dc425",
+      "published": "2026-08-02",
+      "usedFor": ["death toll", "Israeli security concerns", "negotiation context"]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Gaza strikes and disarmament-plan coverage",
+      "url": "https://www.bbc.co.uk/news/articles/czjlvvkzj20o?at_medium=RSS&at_campaign=rss",
+      "usedFor": ["current story context", "primary and secondary images"]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Current BBC world-feed prominence plus same-day AP reporting; ranking is editorial, not an objective trend metric.",
+    "researchDate": "03 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

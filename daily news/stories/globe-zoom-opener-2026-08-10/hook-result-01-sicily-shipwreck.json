@@ -1,0 +1,86 @@
+{
+  "eventId": "sicily-roman-shipwreck-2026-08-09",
+  "tone": "good",
+  "countryCode": "IT",
+  "countryName": "Italy",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "History · Discovery",
+  "headline": "Ancient Roman shipwreck discovered off Sicily coast",
+  "summary": "Italy says an underwater find off Sicily may be one of its most important archaeological discoveries in years.",
+  "script": "Italy says a Roman shipwreck found off Sicily may be one of its most important underwater discoveries in years. Barnacle-crusted jars were found on the seabed, opening a new window into ancient trade.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-10-hook-test/result-01-sicily-shipwreck/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/result-01-sicily-shipwreck/secondary.jpg",
+  "imageAlt": "An underwater archaeological image from a Roman shipwreck discovery off Sicily.",
+  "imageAltTwo": "A second underwater view connected to the Roman shipwreck discovery.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/result-01-sicily-shipwreck.wav",
+  "captions": [
+    {
+      "lines": [
+        "Roman shipwreck found",
+        "off Sicily."
+      ],
+      "highlights": [
+        "Roman shipwreck found"
+      ]
+    },
+    {
+      "lines": [
+        "Italy calls it a major",
+        "underwater discovery."
+      ],
+      "highlights": [
+        "major underwater discovery"
+      ]
+    },
+    {
+      "lines": [
+        "Ancient trade gets a",
+        "new window."
+      ],
+      "highlights": [
+        "new window"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Ancient Roman shipwreck discovered off Sicily coast",
+      "url": "https://www.bbc.co.uk/news/articles/cvgx1kpz17go?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-09",
+      "usedFor": [
+        "shipwreck discovery",
+        "Sicily location",
+        "underwater archaeology context"
+      ]
+    },
+    {
+      "publisher": "Italian Ministry of Culture",
+      "title": "Official cultural heritage context",
+      "url": "https://cultura.gov.it/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "official heritage context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Clear visual discovery with an immediate result-led opening; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

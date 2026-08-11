@@ -1,7 +1,7 @@
 /* ============================================================
    IndieHouse.io News — globe tour
-   One continuous film. The globe is the broadcast instrument; one field
-   photograph per story gives the viewer a human-scale point of entry.
+   One continuous film. The globe is the broadcast instrument; multiple
+   field photographs per story give the viewer a human-scale point of entry.
    ============================================================ */
 
 @font-face {
@@ -82,7 +82,8 @@ body {
 }
 
 #space-layer,
-#globe-layer {
+#globe-layer,
+#map-layer {
   position: absolute;
   inset: 0;
   width: 1080px;
@@ -97,7 +98,10 @@ body {
 
 #globe-layer {
   z-index: 2;
-  filter: drop-shadow(0 24px 34px rgba(12, 31, 24, 0.32));
+}
+
+#map-layer {
+  z-index: 3;
 }
 
 .paper-grid {
@@ -179,7 +183,7 @@ body {
   position: absolute;
   left: var(--pad-x);
   right: var(--pad-x);
-  top: 690px;
+  top: 810px;
   z-index: 8;
   text-align: center;
 }
@@ -187,8 +191,10 @@ body {
 .opener__line {
   margin: 0;
   font-family: "League Gothic", sans-serif;
+  max-width: 980px;
+  margin-inline: auto;
   font-size: 150px;
-  line-height: 0.9;
+  line-height: 0.86;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: var(--paper);
@@ -198,18 +204,28 @@ body {
     0 7px 22px rgba(10, 28, 21, 0.28);
 }
 
-.opener__line em {
-  font-style: normal;
+.opener__line span {
+  display: block;
+  line-height: 0.86;
+  opacity: 0;
+}
+
+.opener__line span + span {
+  margin-top: 40px;
+}
+
+.opener__line span:last-child {
   color: var(--signal);
 }
 
 .opener__sub {
-  margin: 26px 0 0;
-  font-size: 27px;
+  margin: 72px 0 0;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--mat-copy);
+  opacity: 0;
 }
 
 /* ---------- story photograph ---------- */
@@ -239,6 +255,15 @@ body {
   box-shadow: 18px 18px 0 rgba(12, 31, 24, 0.3);
 }
 
+.story-media__beat {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  background: var(--deep-panel);
+  opacity: 0;
+}
+
 .story-media__image {
   position: absolute;
   inset: 0;
@@ -247,17 +272,41 @@ body {
   display: block;
   object-fit: cover;
   object-position: center;
-  opacity: 0;
   transform: scale(1.08);
-  filter: saturate(0.98) contrast(1.03) brightness(0.96);
-  will-change: transform, opacity;
+  transform-origin: center;
+}
+
+.story-media__beat-index,
+.story-media__beat-credit {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mat-copy);
+  text-shadow: 0 1px 2px rgba(12, 31, 24, 0.55);
+}
+
+.story-media__beat-index {
+  top: 14px;
+  right: 18px;
+  color: var(--signal);
+  opacity: 0;
+}
+
+.story-media__beat-credit {
+  left: 18px;
+  right: 18px;
+  bottom: 15px;
+  opacity: 0;
 }
 
 .story-media__wash,
 .story-media__scrim,
 .story-media__topline,
-.story-media__corner,
-.story-media__credit {
+.story-media__corner {
   position: absolute;
   pointer-events: none;
 }
@@ -308,19 +357,6 @@ body {
   opacity: 0.85;
 }
 
-.story-media__credit {
-  left: 0;
-  right: 0;
-  top: 438px;
-  z-index: 6;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--mat-copy);
-  text-shadow: none;
-}
-
 /* ---------- headline card ---------- */
 
 .card {
@@ -361,6 +397,7 @@ body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--signal);
+  opacity: 0;
 }
 
 .card__meta-spacer {
@@ -376,8 +413,8 @@ body {
   margin: 0;
   font-family: "League Gothic", sans-serif;
   font-weight: 400;
-  font-size: 78px;
-  line-height: 0.94;
+  font-size: 68px;
+  line-height: 0.92;
   letter-spacing: 0.004em;
   text-transform: uppercase;
   color: var(--ink);
@@ -386,6 +423,20 @@ body {
     0.7px 0 rgba(12, 41, 32, 0.3),
     -0.45px 0 rgba(246, 240, 223, 0.55);
   filter: contrast(1.04);
+  opacity: 0;
+}
+
+.card__facts {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 2px solid rgba(24, 42, 52, 0.24);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0;
 }
 
 .card__source {
@@ -396,6 +447,7 @@ body {
   text-transform: uppercase;
   color: var(--muted);
   text-shadow: none;
+  opacity: 0;
 }
 
 /* ---------- location label under the globe ---------- */
@@ -423,13 +475,65 @@ body {
   background: var(--signal);
 }
 
+.locator span {
+  opacity: 0;
+}
+
+/* ---------- final follow / sources card ---------- */
+
+.end-card {
+  position: absolute;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  top: 1478px;
+  z-index: 10;
+  padding: 28px 30px 30px;
+  border: 3px solid var(--ink);
+  border-top: 6px solid var(--signal);
+  background: var(--surface);
+  box-shadow: 12px 12px 0 rgba(12, 31, 24, 0.34);
+  opacity: 0;
+}
+
+.end-card__eyebrow,
+.end-card__source {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.end-card__eyebrow {
+  margin-bottom: 18px;
+  color: #aa7d4f;
+  opacity: 0;
+}
+
+.end-card__title {
+  display: block;
+  font-family: "League Gothic", sans-serif;
+  font-size: 76px;
+  font-weight: 400;
+  line-height: 0.96;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0;
+}
+
+.end-card__source {
+  margin-top: 20px;
+  color: var(--muted);
+  opacity: 0;
+}
+
 /* ---------- footer ---------- */
 
 .footer {
   position: absolute;
   left: var(--pad-x);
   right: var(--pad-x);
-  bottom: 54px;
+  bottom: 126px;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -439,6 +543,10 @@ body {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--mat-copy);
+  opacity: 0;
+}
+
+.footer span {
   opacity: 0;
 }
 

@@ -1,0 +1,91 @@
+{
+  "eventId": "israel-rejects-trump-gaza-plan-2026-08-09",
+  "tone": "bad",
+  "countryCode": "PS",
+  "countryName": "Palestine",
+  "cityName": "Gaza City",
+  "region": "Middle East",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Conflict · Gaza",
+  "headline": "Israel rejects Trump's 15-point plan for Gaza, Netanyahu says",
+  "summary": "Benjamin Netanyahu says Israeli forces will not leave Gaza until Hamas is disarmed, rejecting Donald Trump's 15-point proposal.",
+  "script": "Israel says it rejects Donald Trump's fifteen-point plan for Gaza. Benjamin Netanyahu says Israeli forces will not leave until Hamas is genuinely disarmed, leaving negotiations at an impasse.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [
+    34.47,
+    31.5
+  ],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/question-02-gaza-plan/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/question-02-gaza-plan/secondary.jpg",
+  "imageAlt": "A Gaza scene used in reporting about the rejected 15-point proposal.",
+  "imageAltTwo": "A second Gaza image connected to the negotiation deadlock.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/question-02-gaza-plan.wav",
+  "captions": [
+    {
+      "lines": [
+        "Why reject a",
+        "15-point Gaza plan?"
+      ],
+      "highlights": [
+        "15-point Gaza plan"
+      ]
+    },
+    {
+      "lines": [
+        "Israel says Hamas",
+        "must disarm first."
+      ],
+      "highlights": [
+        "must disarm"
+      ]
+    },
+    {
+      "lines": [
+        "Negotiations remain",
+        "at an impasse."
+      ],
+      "highlights": [
+        "at an impasse"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Israel rejects Trump's 15-point plan for Gaza",
+      "url": "https://www.bbc.co.uk/news/articles/c5yw4lpe0yeo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-09",
+      "usedFor": [
+        "15-point plan",
+        "Netanyahu position",
+        "Gaza negotiation context"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "Middle East conflict and diplomacy coverage",
+      "url": "https://www.reuters.com/world/middle-east/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "independent regional context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "A direct question exposes the negotiation contrast without hiding the consequence; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

@@ -6,13 +6,16 @@ narration, or rendering.
 
 ## What to produce
 
-Each story is an 18-second, vertical 9:16 YouTube Short by default. The sequence
-is fixed:
+Each daily edition is a single vertical 9:16 YouTube Short containing exactly
+three distinct current stories. Produce one constructive edition and one
+adverse edition, so each run contains six different story events. The story
+card remains an 18-second-compatible unit, while the globe-tour builder joins
+the three units into one continuous Short. The sequence is fixed:
 
-1. The textured 3D Earth rotates while the 3D sun and moon cross the background.
+1. The historical textured 3D Earth rotates while the 3D sun and moon cross the background.
 2. The globe locks onto the country or requested city with an accurate outline and target pulse.
 3. Two relevant photographs enter.
-4. The story selector adds a content-appropriate visual, then the category, headline, summary, source, and edition appear.
+4. The shared globe-map library follows the authored script plan: each section selects a stable preset, whose transparent annotations sit over the same historical globe before the category, headline, summary, source, and edition appear.
 5. A text-to-speech narration tells the story.
 
 The multi-country sweep is optional. Use it only when the story itself affects
@@ -23,8 +26,84 @@ insert the fast global sweep before the target lock. Leave those fields out for
 ordinary single-country or single-city stories.
 
 Do not change the composition or animation timing for routine daily stories.
-Create a new JSON file in `stories/`, add local media in `assets/stories/`, then
-render with variables.
+Create three new JSON files per edition in `stories/`, add local media, then
+render them with `scripts/build-globe-tour.mjs`. The separate
+`scripts/build-one-topic.mjs` path is for optional standalone distribution: it
+renders each selected story as its own Short and must not replace the two
+three-story daily editions.
+
+### Choose animation beats before narration
+
+Every future Short and long-form story is library-backed. Before generating
+voice, choose the globe-map preset for each part of the script in
+`animationPlan`. Use `npm run animations:list` to browse the 60 stable IDs and
+copy `stories/templates/animation-plan.example.json` for the shape. Segment
+`start` values are seconds relative to the story narration for a Short or the
+chapter narration for long-form; `scriptSection` and `scriptCue` record why the
+visual belongs at that point.
+
+```json
+"animationPlan": {
+  "version": 1,
+  "library": "globe-map-library",
+  "policy": "required",
+  "segments": [
+    { "id": "open", "scriptSection": "opener", "start": 0, "animationId": "world-orbit" },
+    { "id": "place", "scriptSection": "verified-location", "start": 2.4, "animationId": "city-lock" },
+    { "id": "claim", "scriptSection": "why-it-matters", "start": 6.8, "animationId": "auto" }
+  ]
+}
+```
+
+`auto` uses the verified story fields and source ledger. If the plan is
+omitted, the builders materialize one automatic library beat. The production
+renderers do not fall back to a non-library globe scene; a story without
+claim-bearing geography uses the neutral `world-orbit` library preset.
+
+An optional evidence envelope can request one exact automatic preset:
+
+```json
+"mapEvidence": {
+  "animationId": "route-disruption",
+  "source": "Verified reporting source",
+  "data": { "routes": [] }
+}
+```
+
+Use a complete verified payload in production. Explicit `animationPlan`,
+`mapAnimation` and `mapData` choices win; an invalid envelope is rejected and
+does not fall through to broad keyword guessing.
+
+For a long-form video, put the plan on the chapter when the visual changes
+within that chapter. A chapter plan overrides the story-level plan. Keep
+claim-bearing `mapData` and `mapSource` next to the segment that uses them.
+
+The reusable feature compositions expose the same choices directly to the
+render host: `globeAnimationId` selects a default preset for unconfigured
+chapters, while `globeAnimationPlan`, `globeMapData` and `globeMapSource` let a
+render supply an authored beat and its verified payload. The runtime publishes
+all 60 choices at `window.__featureGlobeMapOptions`; use
+`stories/templates/feature-globe-choice.example.json` for the variables shape.
+Chapter plans and chapter-level IDs remain higher priority than a broad
+feature default.
+
+### Daily bundle and no-repeat gate
+
+Every story must have a stable `eventId`, a `selection.trendRank` of 1, 2 or 3,
+at least two source records, and caption groups. The three records must use the
+unique ranks 1, 2 and 3 and must not collide with
+`stories/story-history.json` by event ID, normalized headline, or source URL.
+Run the structural gate before narration:
+
+```bash
+npm run validate:bundle -- \
+  --tone good \
+  --stories stories/good-01.json,stories/good-02.json,stories/good-03.json
+```
+
+`build-globe-tour.mjs` repeats the gate and records the stories in the history
+ledger only after a successful render. This prevents a failed render from
+consuming a story and prevents a later run from silently repeating one.
 
 Use the optional `storyType` and structured fields when the story benefits from
 a statistic, comparison, quote, market card or timeline. The complete field
@@ -97,9 +176,16 @@ For each downloaded image:
    date in `assets/stories/YYYY-MM-DD/story-slug/image-sources.md`.
 6. Save the files as `primary.jpg` and `secondary.jpg` in that same folder.
 
-If rights cannot be verified, do not download the image. Use an official,
-licensed, public-domain, or generated contextual alternative and label it
-accurately.
+For this workspace, the user has authorized direct source images from news
+stories and first-party media even when the image license has not been
+independently cleared. Download the source file locally, record the article
+page, direct asset URL, credit, access date and rights status in the source
+ledger, and never describe an unverified image as licensed. Do not use
+stylized or art-looking generated images. If a source image is genuinely
+unavailable and an image is truly necessary, the only generation fallback is a
+realistic vertical 9:16 image, clearly marked as generated in metadata. The
+final video itself remains 1080×1920; source images should be framed for the
+existing photo windows rather than stretched or distorted.
 
 ## On-screen text limits
 
@@ -151,6 +237,9 @@ Write for speech:
 - Expand acronyms when pronunciation may be ambiguous.
 - Round numbers in speech while preserving the exact number on screen if needed.
 - Never put URLs, hashtags, citations, or stage directions in the spoken text.
+- Never speak source names or attribution phrases such as “according to AP,”
+  “the BBC reports,” or “officials said.” Keep source names in the on-screen
+  source line, source ledger and description instead.
 - Read the script aloud before synthesizing it.
 
 ## Generate narration with a TTS model
@@ -248,15 +337,22 @@ breaking, statistics, comparison and quote stories live in
 ## Final production checklist
 
 1. Facts and publication date are verified.
-2. City and country codes are correct.
-3. Both images are relevant, local, high-resolution, and licensed.
-4. Image provenance is recorded.
-5. The story passes `npm run validate:story`.
-6. TTS audio is no longer than 18 seconds and has been listened to once.
-7. `narrationAudio` points to the generated local file.
-8. `npm run check` passes.
-9. `npm test` and `npm run validate:examples` pass after changing shared components.
-10. Render with strict variables:
+2. The edition contains exactly three distinct current stories, ranked 1–3.
+3. The bundle passes `npm run validate:bundle` against `stories/story-history.json`.
+4. City and country codes are correct.
+5. Both images are relevant and local; no stylized generated art is used.
+6. Image provenance and the user-authorized rights status are recorded.
+7. Each story passes `npm run validate:story`.
+8. The authored `animationPlan` (when present) uses registered library IDs and
+   passes the verified-data gate; omitted plans resolve to the automatic
+   library beat.
+9. TTS audio is no longer than 18 seconds and has been listened to once.
+10. `narrationAudio` points to the generated local file.
+11. The visible opener is exactly centered `Good morning, good news` or
+    `Good morning, bad news`.
+12. `npm run check` passes.
+13. `npm test` and `npm run validate:examples` pass after changing shared components.
+14. Render with strict variables:
 
 ```bash
 npm run render -- \
@@ -267,3 +363,19 @@ npm run render -- \
 
 Watch the complete MP4 before delivery. Check pronunciation, cropping, target
 location, text wrapping, attribution, and audio/video timing.
+
+## Social publishing gate
+
+For Instagram Reels, the Crop step is a release blocker. Never accept the
+default crop: explicitly select `Original` or `9:16` for every 1080×1920 MP4
+before advancing. The live post must report portrait video dimensions (for
+example, 720×1280 or 1080×1920); 720×720 means the Reel was uploaded wrong and
+the batch must stop.
+
+Publish one file at a time from an exact manifest row containing the story
+number, headline, caption, and absolute MP4 path. Before sharing, confirm the
+caption counter is non-zero and the caption contains the expected story
+summary/source. After sharing, wait for `Your reel has been shared.`, record
+the live Reel URL, reopen it, and verify both the caption/source and the live
+video dimensions before moving to the next file. Do not mark a batch uploaded
+from a share spinner, a square preview, or a selected file alone.

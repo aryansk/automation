@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "library": "globe-map-library",
+  "policy": "required",
+  "segments": [
+    {
+      "id": "orientation",
+      "scriptSection": "opener",
+      "scriptCue": "The story opens by establishing its geographic scope.",
+      "start": 0,
+      "animationId": "world-orbit"
+    },
+    {
+      "id": "location",
+      "scriptSection": "verified-location",
+      "scriptCue": "The narration names the place where the event is happening.",
+      "start": 2.4,
+      "animationId": "city-lock"
+    },
+    {
+      "id": "claim",
+      "scriptSection": "claim-and-consequence",
+      "scriptCue": "The script explains the route, comparison, hazard or other claim.",
+      "start": 6.8,
+      "animationId": "great-circle-route",
+      "mapSource": "Replace with the source or ledger entry for this claim",
+      "mapData": {
+        "route": [
+          { "name": "REPLACE_ORIGIN", "coordinates": ["REPLACE_LONGITUDE", "REPLACE_LATITUDE"] },
+          { "name": "REPLACE_DESTINATION", "coordinates": ["REPLACE_LONGITUDE", "REPLACE_LATITUDE"] }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "eventId": "south-africa-womens-march-70th-anniversary-2026-08-08",
+  "tone": "good",
+  "countryCode": "ZA",
+  "countryName": "South Africa",
+  "cityName": "Pretoria",
+  "region": "Africa",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Society · History",
+  "headline": "South Africa marks 70 years since the Women's March",
+  "summary": "Around 20,000 women marched to Pretoria in 1956 against pass laws; today's anniversary honors their legacy and the unfinished fight for women's freedom.",
+  "script": "South Africa marks seventy years since the Women's March against apartheid. In nineteen fifty six, around twenty thousand women marched to Pretoria. Their stand helped end the pass laws, and their legacy still inspires the fight for women's rights today.",
+  "source": "AP News",
+  "edition": "08 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-08-good/south-africa-women-march/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-08-good/south-africa-women-march/secondary.jpg",
+  "imageAlt": "South African women gather to commemorate the 1956 Women's March in Pretoria.",
+  "imageAltTwo": "Visitors walk through the Women's Jail museum at Constitution Hill in Johannesburg.",
+  "imageCredit": "AP Photo/Themba Hadebe",
+  "imageCreditTwo": "AP Photo/Themba Hadebe",
+  "narrationAudio": "assets/narration/good-2026-08-08-03-south-africa-women-march.wav",
+  "captions": [
+    {
+      "lines": [
+        "70 years since the",
+        "Women's March."
+      ],
+      "highlights": [
+        "70 years",
+        "Women's March"
+      ]
+    },
+    {
+      "lines": [
+        "20,000 women marched",
+        "against pass laws."
+      ],
+      "highlights": [
+        "20,000 women",
+        "pass laws"
+      ]
+    },
+    {
+      "lines": [
+        "Legacy still inspires",
+        "women's rights today."
+      ],
+      "highlights": [
+        "Legacy",
+        "women's rights"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "70 years after South Africa's women challenged apartheid, some say their freedom isn't complete",
+      "url": "https://apnews.com/article/south-africa-women-anniversary-apartheid-democracy-protest-0c0ee7d109eaaf8094570da7258acd85",
+      "published": "2026-08-08",
+      "usedFor": [
+        "70th anniversary",
+        "20,000 women marched 1956",
+        "legacy and unfinished fight"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "South Africa's women marched against apartheid 70 years ago",
+      "url": "https://apnews.com/hub/south-africa",
+      "published": "2026-08-08",
+      "usedFor": [
+        "independent corroboration",
+        "regional context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Significant historic anniversary with ongoing relevance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "08 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orientation",
+        "scriptSection": "opener",
+        "scriptCue": "The story opens by establishing South Africa as the setting.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "South Africa",
+            "country": "South Africa",
+            "code": "ZA",
+            "coordinates": [25.0, -29.0]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "The narration names Pretoria, site of the 1956 march.",
+        "start": 2.6,
+        "animationId": "city-lock",
+        "mapSource": "AP News 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Pretoria",
+            "country": "South Africa",
+            "code": "ZA",
+            "coordinates": [28.187, -25.745]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "claim-and-consequence",
+        "scriptCue": "The script explains the march's legacy and the ongoing fight.",
+        "start": 7.4,
+        "animationId": "country-fill",
+        "mapSource": "AP News 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "South Africa",
+            "country": "South Africa",
+            "code": "ZA",
+            "coordinates": [25.0, -29.0]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "eventId": "puerto-rico-water-rationing-drought-2026-08-09",
+  "tone": "bad",
+  "countryCode": "PR",
+  "countryName": "Puerto Rico",
+  "region": "Caribbean",
+  "urgency": "high",
+  "storyType": "weather",
+  "kicker": "Water · Drought",
+  "headline": "Puerto Rico rations water as intense drought strains supplies",
+  "summary": "Hot weather, ageing infrastructure and intense drought are forcing water rationing across Puerto Rico, affecting hundreds of thousands.",
+  "script": "Puerto Rico is rationing water as intense drought, hot weather and ageing infrastructure squeeze supplies. The measures affect hundreds of thousands of people, turning a climate problem into a daily public-utility crisis.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [
+    -66.5,
+    18.2
+  ],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/result-02-puerto-rico-water/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/result-02-puerto-rico-water/secondary.jpg",
+  "imageAlt": "A drought-affected water landscape in Puerto Rico.",
+  "imageAltTwo": "A second view of the drought conditions affecting Puerto Rico.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/result-02-puerto-rico-water.wav",
+  "captions": [
+    {
+      "lines": [
+        "Puerto Rico is",
+        "rationing water."
+      ],
+      "highlights": [
+        "rationing water"
+      ]
+    },
+    {
+      "lines": [
+        "Drought and heat are",
+        "squeezing supplies."
+      ],
+      "highlights": [
+        "Drought and heat"
+      ]
+    },
+    {
+      "lines": [
+        "Hundreds of thousands",
+        "are affected."
+      ],
+      "highlights": [
+        "Hundreds of thousands"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Puerto Rico rations water supplies due to intense drought",
+      "url": "https://www.bbc.co.uk/news/articles/cqlxgk7r2vwo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-09",
+      "usedFor": [
+        "water rationing",
+        "drought conditions",
+        "affected population context"
+      ]
+    },
+    {
+      "publisher": "Puerto Rico Aqueducts and Sewer Authority",
+      "title": "Official water utility context",
+      "url": "https://www.acueductospr.com/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "water utility context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Immediate consequence and strong visual utility angle for testing a result-first hook; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

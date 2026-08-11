@@ -1,0 +1,88 @@
+{
+  "eventId": "avon-farm-climate-resilient-reserve-2026-08-05",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Bristol",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Nature · Conservation",
+  "headline": "Former dairy farm to become climate-resilient nature reserve",
+  "summary": "Avon Wildlife Trust will transform the 44-acre site near Bristol into a haven for birds, bats and newts, funded by a major bequest.",
+  "script": "A former dairy farm in southwest England will become a climate-resilient nature reserve. Avon Wildlife Trust plans to turn the forty-four acre site into a haven for birds, bats and newts, funded by a major bequest.",
+  "source": "BBC News",
+  "edition": "06 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-06-good/avon-farm/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-06-good/avon-farm/secondary.jpg",
+  "imageAlt": "Aerial view of the former dairy farm with fields, barns and a pond.",
+  "imageAltTwo": "An Avon Wildlife Trust staff member stands in a field at the farm site.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/good7-2026-08-06-02-avon-farm-reserve.wav",
+  "captions": [
+    {
+      "lines": [
+        "Dairy farm becomes",
+        "a nature reserve."
+      ],
+      "highlights": [
+        "nature reserve"
+      ]
+    },
+    {
+      "lines": [
+        "44-acre site near Bristol",
+        "for birds, bats, newts."
+      ],
+      "highlights": [
+        "44-acre site",
+        "birds, bats, newts"
+      ]
+    },
+    {
+      "lines": [
+        "Funded by",
+        "a major bequest."
+      ],
+      "highlights": [
+        "major bequest"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Former dairy farm to become 'climate resilient' nature reserve",
+      "url": "https://www.bbc.co.uk/news/articles/cpd76vep8yqo",
+      "published": "2026-08-05",
+      "usedFor": [
+        "44-acre conversion",
+        "Avon Wildlife Trust plan",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "Avon Wildlife Trust",
+      "title": "Avon Wildlife Trust nature reserve project",
+      "url": "https://www.avonwildlifetrust.org.uk/",
+      "published": "2026-08-05",
+      "usedFor": [
+        "trust context",
+        "secondary corroboration"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Positive local conservation story with national coverage; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

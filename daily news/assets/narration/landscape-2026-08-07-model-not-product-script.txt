@@ -1,0 +1,33 @@
+On July twenty-fourth, 2026, more than two hundred and seventy companies and organizations signed an open letter to Washington. Microsoft, Nvidia, Meta, and a long list of others urged policymakers not to restrict open-weight AI models. The letter is about policy, but it is really a market signal. It is telling you where the profit is moving in the AI economy. And it is not staying in the models.
+
+That is the question we are going to unpack: if capable AI models become open-weight, who keeps the profit?
+
+Here is the short answer: value migrates, it does not disappear. The model itself is becoming the cheapest part of the stack. The money is moving to distribution, workflow ownership, proprietary context, and trust.
+
+Start with the definition we need.
+
+An open-weight model is software you can download, inspect, modify, and run on your own infrastructure. That means the model is interchangeable. If you can run the same capability anywhere, the model stops being a product and becomes a raw input. The product is the system around it. The workflow that turns the model into a result. The data that makes the result worth something. The distribution that puts it in front of a user. And the trust that keeps them coming back.
+
+Now follow the money.
+
+Gartner forecasts worldwide AI spending will reach two point five nine trillion dollars in 2026, up forty-seven percent from a year earlier. But that spending is not landing evenly. The thing to watch is the price of a token, the unit that AI companies sell. Token costs are plunging. Open-weight models are flooding the market, and every model provider is being forced to cut prices to keep up. That is the margin squeeze. The model layer is getting cheaper by the quarter, while the layers around it capture more of the value.
+
+Here is where the market comes in.
+
+Forbes reported in July that token costs are falling so fast that model providers face a new margin squeeze, while enterprise buyers are shifting their spending toward the application layer. The workflow and the data live there. That is the durable moat. Distribution is scarce. Workflow ownership is scarce. Proprietary context is scarce. The weights are not.
+
+So what is the honest uncertainty?
+
+The uncertainty is not whether the model gets commoditized. That is already happening. The uncertainty is which of the surrounding layers turns out to be the durable one. Distribution could consolidate around a few platforms. Workflow could be owned by incumbents who already sit inside the enterprise. Or new context advantages could emerge from the data that only a specific business can collect. No one knows which one compounds fastest. That is the bet.
+
+The signal to watch is not the benchmark scores. It is the behavior underneath them.
+
+Watch whether enterprises keep paying for model access, or start running open weights on their own infrastructure. Watch where the application vendors put their margins. Watch whether the biggest winners are the ones who own the workflow, the distribution, and the data, rather than the model itself.
+
+The AI race was about building the best model. Then it was about the cheapest model. Now it is about the system that makes the model useful.
+
+That is the tension. And in 2026, it has a number attached: two point five nine trillion dollars of spending, a flood of open weights, and a margin squeeze that is telling you exactly where the value is going.
+
+The question for the next phase of the AI economy is not whether the models get better. It is who owns the layers around them.
+
+The moat is the system, not the model.

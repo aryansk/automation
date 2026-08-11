@@ -1,0 +1,153 @@
+{
+  "eventId": "tudriqev-melanoma-approval-2026-08-06",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Woburn",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Health · Medicine",
+  "headline": "FDA approves engineered virus therapy for hard-to-treat melanoma",
+  "summary": "The immunotherapy, Tudriqev, won accelerated approval for advanced melanoma after two prior rejections, giving patients who stopped responding to other drugs a new option.",
+  "script": "The FDA approved a new melanoma treatment after rejecting it twice. Tudriqev uses an engineered virus to attack tumors, and is for patients whose cancer stopped responding to earlier drugs. It offers a new option for a dangerous skin cancer.",
+  "source": "STAT News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-07-good/tudriqev-melanoma/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-good/tudriqev-melanoma/secondary.jpg",
+  "imageAlt": "The Food and Drug Administration seal is seen at the agency's auditorium in Washington.",
+  "imageAltTwo": "The Food and Drug Administration seal is seen at the agency's auditorium in Washington.",
+  "imageCredit": "AP Photo/Jose Luis Magana",
+  "imageCreditTwo": "AP Photo/Jose Luis Magana",
+  "narrationAudio": "assets/narration/good11-2026-08-07-01-tudriqev-melanoma.wav",
+  "captions": [
+    {
+      "lines": [
+        "FDA approves engineered",
+        "virus melanoma therapy."
+      ],
+      "highlights": [
+        "melanoma therapy"
+      ]
+    },
+    {
+      "lines": [
+        "Rejected twice,",
+        "approved on third try."
+      ],
+      "highlights": [
+        "approved on third try"
+      ]
+    },
+    {
+      "lines": [
+        "New option after other",
+        "drugs stop working."
+      ],
+      "highlights": [
+        "new option"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "STAT News",
+      "title": "FDA approves Replimune melanoma drug previously rejected twice",
+      "url": "https://www.statnews.com/2026/08/06/replimune-melanoma-drug-rp1-fda-approves-phase-3-confirmatory-trial/",
+      "published": "2026-08-06",
+      "usedFor": [
+        "FDA accelerated approval",
+        "advanced melanoma indication",
+        "list price",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "BioPharma Dive",
+      "title": "Replimune rebounds to win FDA approval of melanoma drug",
+      "url": "https://www.biopharmadive.com/news/replimune-tudriqev-fda-approve-melanoma-rp1/827226/",
+      "published": "2026-08-06",
+      "usedFor": [
+        "corroboration of approval",
+        "context on prior rejections"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Landmark treatment approval with direct patient impact; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the approval in the United States.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "STAT News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -98,
+              39
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on the drugmaker's home region.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "STAT News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Woburn",
+            "coordinates": [
+              -71.152,
+              42.479
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the national reach of the approval for patients.",
+        "start": 9.5,
+        "animationId": "multi-country-sweep",
+        "mapSource": "STAT News / 06 Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "US",
+            "CA",
+            "GB",
+            "DE",
+            "FR"
+          ],
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -71.152,
+              42.479
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

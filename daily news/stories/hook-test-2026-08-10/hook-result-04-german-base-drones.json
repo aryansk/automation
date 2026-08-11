@@ -1,0 +1,60 @@
+{
+  "eventId": "german-base-drones-2026-08-09",
+  "tone": "bad",
+  "countryCode": "DE",
+  "countryName": "Germany",
+  "cityName": "Mechernich",
+  "region": "Europe",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Security · Germany",
+  "headline": "Drones spotted over German military base after Leipzig bombing",
+  "summary": "Police are investigating drone sightings over a German base reportedly linked to Patriot missile-system parts.",
+  "script": "Police are investigating drones spotted over a German military base days after a bombing in Leipzig. The base reportedly houses parts for Patriot missile systems, raising fresh security questions.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [6.65, 50.6],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/result-04-german-base-drones/primary.png",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/result-04-german-base-drones/secondary.png",
+  "imageAlt": "A drone image used in reporting about sightings over a German military base.",
+  "imageAltTwo": "A second view connected to drone sightings over the German base.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/result-04-german-base-drones.wav",
+  "openingStyle": "result-first",
+  "openingText": "Drones were spotted over a German base",
+  "openingSub": "RESULT FIRST · One story · 10 Aug 2026",
+  "captions": [
+    { "lines": ["Drones spotted over", "a German base."], "highlights": ["Drones spotted"] },
+    { "lines": ["Police are investigating", "the sightings."], "highlights": ["investigating"] },
+    { "lines": ["Patriot parts raise", "fresh questions."], "highlights": ["fresh questions"] }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Drones spotted over German base after Leipzig incident",
+      "url": "https://www.bbc.co.uk/news/articles/cwyeg1ljp2eo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-09",
+      "usedFor": ["drone sightings", "base location", "Patriot-parts report"]
+    },
+    {
+      "publisher": "German Federal Ministry of Defence",
+      "title": "Official defence context",
+      "url": "https://www.bmvg.de/en",
+      "published": "2026-08-10",
+      "usedFor": ["German defence context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 4,
+    "basis": "Immediate security consequence with a concrete visual object for a result-first test; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

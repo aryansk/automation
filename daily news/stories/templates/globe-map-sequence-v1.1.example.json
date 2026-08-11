@@ -1,0 +1,143 @@
+{
+  "libraryVersion": "1.1.0",
+  "mode": "sample",
+  "format": "portrait",
+  "fps": 30,
+  "title": "Illustrative v1.1 globe evidence sequence",
+  "scenes": [
+    {
+      "animation": "policy-status-sweep",
+      "start": 0,
+      "duration": 5.6,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "stages": [
+          { "label": "ANNOUNCED", "states": { "IN": "pending", "EG": "exempt" } },
+          { "label": "IN EFFECT", "states": { "IN": "active", "EG": "blocked" } }
+        ]
+      }
+    },
+    {
+      "animation": "geofenced-area",
+      "start": 5.6,
+      "duration": 5,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "polygon": [[31, 29], [33, 29], [33, 31], [31, 31]],
+        "mode": "restricted",
+        "label": "ILLUSTRATIVE ZONE"
+      }
+    },
+    {
+      "animation": "evidence-confidence-fill",
+      "start": 10.6,
+      "duration": 5.2,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "values": { "IN": "confirmed", "EG": "reported", "KE": "unverified" }
+      }
+    },
+    {
+      "animation": "route-disruption",
+      "start": 15.8,
+      "duration": 6,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "routes": [
+          { "points": [[56.45, 26.56], [72.88, 19.08], [121.47, 31.23]], "value": 72, "status": "active" },
+          { "points": [[4.48, 51.92], [-79.52, 9.08], [103.82, 1.35]], "value": 54, "status": "detour" },
+          { "points": [[32.55, 30.45], [56.45, 26.56]], "value": 0, "status": "blocked" }
+        ]
+      }
+    },
+    {
+      "animation": "network-branch",
+      "start": 21.8,
+      "duration": 6.2,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "nodes": [
+          { "id": "origin", "name": "Origin", "coordinates": [4.48, 51.92], "status": "active" },
+          { "id": "hub", "name": "Hub", "coordinates": [56.45, 26.56], "status": "pending" },
+          { "id": "market", "name": "Market", "coordinates": [121.47, 31.23], "status": "active" }
+        ],
+        "links": [
+          { "from": "origin", "to": "hub", "value": 80, "status": "active" },
+          { "from": "hub", "to": "market", "value": 48, "status": "detour" }
+        ]
+      }
+    },
+    {
+      "animation": "flow-shift",
+      "start": 28,
+      "duration": 6,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "beforeRoutes": [{ "points": [[4.48, 51.92], [32.55, 30.45], [103.82, 1.35]], "value": 78 }],
+        "afterRoutes": [{ "points": [[4.48, 51.92], [-79.52, 9.08], [103.82, 1.35]], "value": 52 }, { "points": [[32.55, 30.45], [56.45, 26.56]], "value": 24 }]
+      }
+    },
+    {
+      "animation": "source-sink-flow",
+      "start": 34,
+      "duration": 6,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "sources": [{ "id": "a", "name": "Source A", "coordinates": [4.48, 51.92] }, { "id": "b", "name": "Source B", "coordinates": [-46.63, -23.55] }],
+        "sinks": [{ "id": "x", "name": "Sink X", "coordinates": [103.82, 1.35] }, { "id": "y", "name": "Sink Y", "coordinates": [121.47, 31.23] }],
+        "flows": [{ "from": "a", "to": "x", "value": 64 }, { "from": "b", "to": "y", "value": 42 }]
+      }
+    },
+    {
+      "animation": "delta-bubbles",
+      "start": 40,
+      "duration": 5.4,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "unit": "index points",
+        "points": [{ "name": "London", "coordinates": [-0.13, 51.51], "before": 36, "after": 54, "delta": 18 }, { "name": "Delhi", "coordinates": [77.21, 28.61], "before": 74, "after": 61, "delta": -13 }]
+      }
+    },
+    {
+      "animation": "rank-shift",
+      "start": 45.4,
+      "duration": 5.6,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "before": [{ "id": "a", "name": "Singapore", "coordinates": [103.82, 1.35], "rank": 1, "value": 91 }, { "id": "b", "name": "Tokyo", "coordinates": [139.69, 35.68], "rank": 2, "value": 84 }],
+        "after": [{ "id": "b", "name": "Tokyo", "coordinates": [139.69, 35.68], "rank": 1, "value": 93 }, { "id": "a", "name": "Singapore", "coordinates": [103.82, 1.35], "rank": 2, "value": 82 }]
+      }
+    },
+    {
+      "animation": "event-cluster",
+      "start": 51,
+      "duration": 5.8,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "points": [{ "coordinates": [-0.13, 51.51], "label": "T-2", "status": "reported" }, { "coordinates": [32.55, 30.45], "label": "T-1", "status": "confirmed" }, { "coordinates": [77.21, 28.61], "label": "NOW", "status": "confirmed" }]
+      }
+    },
+    {
+      "animation": "forecast-cone",
+      "start": 56.8,
+      "duration": 6.2,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "observed": [[128, 12], [132, 16]],
+        "forecast": [[132, 16], [136, 21], [139, 27]],
+        "cone": { "left": [[132, 16], [134, 25], [136, 32]], "right": [[132, 16], [140, 22], [146, 26]] },
+        "confidence": 0.7
+      }
+    },
+    {
+      "animation": "impact-layers",
+      "start": 63,
+      "duration": 5.8,
+      "data": {
+        "source": "Illustrative sample data — not reporting",
+        "target": { "name": "Sydney", "coordinates": [151.21, -33.87] },
+        "layers": [{ "label": "DIRECT", "radiusKm": 24, "value": 12, "unit": "km" }, { "label": "SECONDARY", "radiusKm": 58, "value": 34, "unit": "km" }, { "label": "OUTER", "radiusKm": 92, "value": 61, "unit": "km" }]
+      }
+    }
+  ]
+}

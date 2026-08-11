@@ -1,0 +1,151 @@
+{
+  "eventId": "kazakhstan-amur-tiger-reintroduction-2026-07-31",
+  "tone": "good",
+  "countryCode": "KZ",
+  "countryName": "Kazakhstan",
+  "cityName": "Almaty",
+  "region": "Central Asia",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Wildlife \u00b7 Conservation",
+  "headline": "Amur tiger returns to Kazakhstan's wild after 70 years",
+  "summary": "A female tiger named Umit was released into a reserve as part of a long-running effort to restore tigers to Central Asia, ending more than seven decades of local extinction.",
+  "script": "Kazakhstan has released its first tiger into the wild in more than seventy years. The female Amur tiger, named Umit, meaning hope, was set free in the Ile-Balkhash reserve. She now wears a satellite collar so scientists can track her every move.",
+  "source": "Reuters",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-09-good/kazakhstan-tiger/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-09-good/kazakhstan-tiger/secondary.jpg",
+  "imageAlt": "Female Amur tiger Umit before being released into the wild at the Ile-Balkhash State Nature Reserve in Kazakhstan.",
+  "imageAltTwo": "The female Amur tiger Umit at the Ile-Balkhash State Nature Reserve in southeastern Kazakhstan.",
+  "imageCredit": "Reuters",
+  "imageCreditTwo": "Reuters",
+  "narrationAudio": "assets/narration/good-2026-08-09-01-uzbekistan-tiger.wav",
+  "captions": [
+    {
+      "lines": [
+        "First tiger in Kazakhstan",
+        "wild in 70 years."
+      ],
+      "highlights": [
+        "First tiger",
+        "70 years"
+      ]
+    },
+    {
+      "lines": [
+        "Female Amur tiger Umit,",
+        "meaning 'hope'."
+      ],
+      "highlights": [
+        "Amur tiger Umit"
+      ]
+    },
+    {
+      "lines": [
+        "Satellite collar tracks",
+        "her every move."
+      ],
+      "highlights": [
+        "satellite collar"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Amur tiger released in Kazakhstan under reintroduction project",
+      "url": "https://www.reuters.com/video/watch/idRW306404082026RP1/",
+      "published": "2026-08-04",
+      "usedFor": [
+        "first tiger release in 70 years",
+        "Umit name and release site",
+        "satellite collar"
+      ]
+    },
+    {
+      "publisher": "Astana Times",
+      "title": "Kazakhstan Releases First Tiger Into Wild in More Than 70 Years",
+      "url": "https://astanatimes.com/2026/08/kazakhstan-releases-first-tiger-into-wild-in-more-than-70-years/",
+      "published": "2026-08",
+      "usedFor": [
+        "decade-long preparation",
+        "Ile-Balkhash reserve details"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Historic conservation milestone returning a lost predator to Central Asia; ranking is editorial, not an objective trend metric.",
+    "researchDate": "09 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the milestone in Kazakhstan.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 04 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "KZ",
+            "coordinates": [
+              66.9,
+              48
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on the reserve near Almaty in the southeast.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Reuters / 04 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Almaty",
+            "coordinates": [
+              76.9,
+              43.2
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the historic range the tiger is returning to across Central Asia.",
+        "start": 9.5,
+        "animationId": "multi-country-sweep",
+        "mapSource": "Astana Times / Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "KZ",
+            "UZ",
+            "KG"
+          ],
+          "target": {
+            "code": "KZ",
+            "coordinates": [
+              76.9,
+              43.2
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

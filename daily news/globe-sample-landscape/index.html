@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Globe-Only Animation Sample — Landscape</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; margin: 0; overflow: hidden; background: #2d4b3c; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #2d4b3c; }
+      canvas#globe-layer, canvas#sample-canvas { position: absolute; inset: 0; width: 1920px; height: 1080px; display: block; }
+      canvas#globe-layer { z-index: 0; }
+      canvas#sample-canvas { z-index: 1; }
+      .chrome { position: absolute; z-index: 3; top: 40px; left: 60px; right: 60px; display: flex; justify-content: space-between; align-items: flex-start; pointer-events: none; }
+      .brand { font: 700 20px "IBM Plex Mono", monospace; letter-spacing: 0.2em; color: #d8e1d4; }
+      .format-mark { font: 700 18px "IBM Plex Mono", monospace; letter-spacing: 0.15em; color: #e2b582; }
+      .sample-flag { position: absolute; z-index: 3; top: 96px; left: 60px; font: 700 16px "IBM Plex Mono", monospace; color: #f0a08f; letter-spacing: 0.18em; }
+      .bottom { position: absolute; z-index: 3; bottom: 56px; left: 60px; right: 60px; display: flex; justify-content: space-between; align-items: flex-end; pointer-events: none; }
+      #sample-label { font: 700 22px "IBM Plex Mono", monospace; color: #f5f0df; letter-spacing: 0.12em; }
+      #sample-source { font: 400 16px "IBM Plex Mono", monospace; color: #b4c4b6; margin-top: 8px; }
+      #sample-counter { font: 700 20px "IBM Plex Mono", monospace; color: #e2b582; letter-spacing: 0.12em; }
+      .grain { position: absolute; inset: 0; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="globe-sample-landscape" data-start="0" data-duration="44.8" data-width="1920" data-height="1080">
+      <section id="globe-sample-scene" class="clip" data-start="0" data-duration="44.8" data-track-index="0" data-hf-id="globe-sample-scene">
+        <canvas id="globe-layer" width="1920" height="1080" aria-hidden="true" data-layout-ignore></canvas>
+        <canvas id="sample-canvas" width="1920" height="1080" data-layout-ignore></canvas>
+        <div class="chrome" data-layout-allow-overlap>
+          <div class="brand">Globe-Only Motion Library</div>
+          <div class="format-mark">Landscape / 1920×1080</div>
+        </div>
+        <div class="sample-flag" data-layout-allow-overlap>Sample data only — globe projection</div>
+        <div class="bottom" data-layout-allow-overlap>
+          <div>
+            <div id="sample-label" class="sample-label">COUNTRY-LOCK / CAMERA / GLOBE</div>
+            <div id="sample-source">Illustrative sample data — not reporting</div>
+          </div>
+          <div id="sample-counter">01 / 14</div>
+        </div>
+      </section>
+    </div>
+    <script src="assets/vendor/d3.min.js"></script>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/data/world-data.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["globe-sample-landscape"] = gsap.timeline({ paused: true });
+    </script>
+    <script type="module">
+      import { bootGlobeSample } from "./assets/animations/globe-sample.js";
+      bootGlobeSample({ format: "landscape" });
+    </script>
+  </body>
+</html>

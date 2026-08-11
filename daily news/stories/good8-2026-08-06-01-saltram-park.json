@@ -1,0 +1,90 @@
+{
+  "eventId": "saltram-park-expansion-2026-08-05",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Plymouth",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Nature · Community",
+  "headline": "National Trust opens new 32-hectare park at Saltram",
+  "summary": "Former agricultural land in Plymouth has become public parkland, including a 2.5km accessible trail for walkers, cyclists and wheelchair users.",
+  "script": "A former agricultural field in Plymouth has opened as public parkland. The National Trust's new thirty-two hectare park at Saltram includes a two and a half kilometre trail for walkers, cyclists and wheelchair users, funded by Sport England.",
+  "source": "BBC News",
+  "edition": "06 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-06-good/saltram-park/primary.png",
+  "imageTwo": "assets/news-images/2026-08-06-good/saltram-park/secondary.jpg",
+  "imageAlt": "A wooden wayfinding sign beside a path in the new Saltram parkland.",
+  "imageAltTwo": "A view across the new park's fields and trail near Plymouth.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/good8-2026-08-06-01-saltram-park.wav",
+  "captions": [
+    {
+      "lines": [
+        "New 32-hectare park",
+        "opens at Saltram."
+      ],
+      "highlights": [
+        "32-hectare park",
+        "Saltram"
+      ]
+    },
+    {
+      "lines": [
+        "Former farmland now",
+        "public green space."
+      ],
+      "highlights": [
+        "former farmland",
+        "public green space"
+      ]
+    },
+    {
+      "lines": [
+        "Accessible trail for",
+        "walkers and cyclists."
+      ],
+      "highlights": [
+        "accessible trail"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "National Trust expands park by 32 hectares in Saltram",
+      "url": "https://www.bbc.co.uk/news/articles/cvgvmmv3nr1o",
+      "published": "2026-08-05",
+      "usedFor": [
+        "32-hectare expansion",
+        "2.5km accessible trail",
+        "Sport England funding",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "National Trust",
+      "title": "Our work at Saltram",
+      "url": "https://www.nationaltrust.org.uk/visit/devon/saltram/future-saltram",
+      "published": "2026-08-05",
+      "usedFor": [
+        "Saltram East project context",
+        "secondary corroboration"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Positive community green-space milestone with national coverage; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

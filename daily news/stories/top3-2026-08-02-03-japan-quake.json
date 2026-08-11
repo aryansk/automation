@@ -7,9 +7,9 @@
   "urgency": "breaking",
   "storyType": "breaking",
   "kicker": "Disaster · Recovery",
-  "headline": "Japan quake rescue ends at mall as death toll reaches 34",
+  "headline": "Kumamoto quake aftermath: mall rescue ends as death toll reaches 34",
   "summary": "Authorities ended the five-day search at a collapsed mall, while more than 9,000 people remained in shelters and water shortages affected the region.",
-  "script": "Japan ended the five-day rescue operation at a collapsed mall after a magnitude seven point one quake killed thirty-four people. More than nine thousand survivors remained in shelters, while water shortages and extreme heat complicated recovery.",
+  "script": "The hardest part of Japan's quake may be the recovery after rescue crews leave. A magnitude seven point one disaster killed thirty-four people, left more than nine thousand in shelters, and cut water supplies. Extreme heat makes survival and rebuilding even harder.",
   "source": "AP · Kumamoto Pref.",
   "edition": "02 Aug 2026",
   "storyNumber": "03",
@@ -17,6 +17,21 @@
   "imageTwo": "assets/news-images/2026-07-31/japan-quake-ap.jpg",
   "imageAlt": "A damaged street and collapsed tiled roofs in Kumamoto after the earthquake.",
   "imageCredit": "Kyodo News via AP",
+  "imageCreditTwo": "Context image · AP",
+  "captions": [
+    {
+      "lines": ["Japan ended the five-day rescue", "at a collapsed mall."],
+      "highlights": ["Japan", "rescue"]
+    },
+    {
+      "lines": ["A magnitude 7.1 quake", "killed 34 people."],
+      "highlights": ["Magnitude 7.1", "34 people"]
+    },
+    {
+      "lines": ["More than 9,000 remain in shelters", "as heat complicates recovery."],
+      "highlights": ["9,000", "shelters"]
+    }
+  ],
   "focusZoom": 14.9,
   "narrationAudio": "assets/narration/tour/top3-2026-08-02-03-japan-quake.wav"
 }

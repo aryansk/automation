@@ -1,0 +1,155 @@
+{
+  "eventId": "bc-okanagan-wildfire-evacuations-2026-08-08",
+  "tone": "bad",
+  "countryCode": "CA",
+  "countryName": "Canada",
+  "cityName": "Kelowna",
+  "region": "North America",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Wildfire · Climate",
+  "headline": "Fast-moving wildfire forces 20,000 to evacuate in BC",
+  "summary": "The Bald Range fire near Kelowna, British Columbia, doubled in size to more than 95 square kilometres and forced thousands from their homes.",
+  "script": "A fast-moving wildfire in British Columbia has forced more than twenty thousand people to evacuate. The Bald Range fire near Kelowna has doubled in size to over ninety five square kilometres. Crews are racing to contain it as the region swelters.",
+  "source": "AP News · BBC",
+  "edition": "08 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-08-bad/bc-wildfire/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-08-bad/bc-wildfire/secondary.jpg",
+  "imageAlt": "A wall of wildfire smoke rises over a hillside in British Columbia.",
+  "imageAltTwo": "Firefighting aircraft drop retardant near an advancing wildfire in Canada.",
+  "imageCredit": "The Canadian Press via AP",
+  "imageCreditTwo": "The Canadian Press via AP",
+  "narrationAudio": "assets/narration/bad-2026-08-08-03-bc-wildfire.wav",
+  "captions": [
+    {
+      "lines": [
+        "BC wildfire forces",
+        "20,000 to evacuate."
+      ],
+      "highlights": [
+        "20,000",
+        "evacuate"
+      ]
+    },
+    {
+      "lines": [
+        "Bald Range fire doubled",
+        "to 95 sq km."
+      ],
+      "highlights": [
+        "doubled",
+        "95 sq km"
+      ]
+    },
+    {
+      "lines": [
+        "Crews race to contain",
+        "as region swelters."
+      ],
+      "highlights": [
+        "race to contain"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "A fast-moving wildfire forces more than 20,000 people to evacuate in western Canada",
+      "url": "https://apnews.com/article/wildfire-canada-evacuation-british-columbia-okanagan-61002c95f641a4060b78195b016fbea3",
+      "published": "2026-08-08",
+      "usedFor": [
+        "20,000 evacuations",
+        "Bald Range fire",
+        "doubled size"
+      ]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Fast-moving Canada wildfire doubles in size forcing thousands to flee homes",
+      "url": "https://www.bbc.com/news/articles/cx25dkwk3e3o",
+      "published": "2026-08-08",
+      "usedFor": [
+        "independent corroboration",
+        "36 sq miles / 95 sq km",
+        "out of control status"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Significant displacement and fire danger; ranking is editorial, not an objective trend metric.",
+    "researchDate": "08 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orientation",
+        "scriptSection": "opener",
+        "scriptCue": "The story opens by establishing British Columbia.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News 08 Aug 2026; BBC News 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Canada",
+            "country": "Canada",
+            "code": "CA",
+            "coordinates": [-123.1207, 49.2827]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "The narration names the Bald Range fire near Kelowna.",
+        "start": 2.4,
+        "animationId": "city-lock",
+        "mapSource": "AP News 08 Aug 2026; BBC News 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Kelowna",
+            "country": "Canada",
+            "code": "CA",
+            "coordinates": [-119.496, 49.888]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "claim-and-consequence",
+        "scriptCue": "The script explains the fire's growth and evacuations.",
+        "start": 6.8,
+        "animationId": "wildfire-spread",
+        "mapSource": "AP News 08 Aug 2026; BBC News 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Bald Range fire",
+            "country": "Canada",
+            "code": "CA",
+            "coordinates": [-119.4, 50.1]
+          },
+          "stages": [
+            {
+              "label": "START",
+              "radiusKm": 30
+            },
+            {
+              "label": "NOW",
+              "radiusKm": 55
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"><head></head>
+  <body>
+    <template>
+      <style>
+        #scene05-root { position:absolute; inset:0; overflow:hidden; background:#f2eee1; color:#24252b; font-family:"IBM Plex Mono", monospace; }
+        #scene05-root .paper { position:absolute; inset:0; background:#f2eee1; background-image:linear-gradient(rgba(36,37,43,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(36,37,43,.05) 1px, transparent 1px); background-size:42px 42px; opacity:.78; }
+        #scene05-root .ghost { position:absolute; color:#4c8c45; font-family:"EB Garamond", serif; font-size:260px; font-style:italic; opacity:.1; white-space:nowrap; }
+        #scene05-root .card { position:absolute; padding:14px 14px 26px; background:#fff9ed; box-shadow:10px 16px 0 rgba(36,37,43,.11), 0 18px 26px rgba(36,37,43,.16); opacity:0; }
+        #scene05-root .card img { display:block; width:100%; height:100%; object-fit:cover; }
+        #scene05-root .cutout { position:absolute; width:auto; filter:drop-shadow(0 16px 14px rgba(36,37,43,.2)); opacity:0; }
+        #scene05-root .word { position:absolute; opacity:0; font-family:"EB Garamond", serif; font-style:italic; font-size:82px; line-height:.78; letter-spacing:-.04em; white-space:nowrap; }
+        #scene05-root .word.red { color:#d46a56; }
+        #scene05-root .meta { position:absolute; left:84px; top:158px; font-size:22px; letter-spacing:4px; opacity:0; }
+        #scene05-root .arrow { position:absolute; right:90px; bottom:240px; width:260px; height:6px; background:#f2d476; transform-origin:right center; opacity:0; }
+        #scene05-root .arrow::after { content:""; position:absolute; left:-2px; top:-14px; border-right:26px solid #f2d476; border-top:17px solid transparent; border-bottom:17px solid transparent; }
+        #scene05-root .star { position:absolute; width:40px; height:40px; opacity:0; }
+        #scene05-root .star::before, #scene05-root .star::after { content:""; position:absolute; background:#d96d58; }
+        #scene05-root .star::before { left:18px; top:0; width:4px; height:40px; }
+        #scene05-root .star::after { left:0; top:18px; width:40px; height:4px; }
+      </style>
+      <div data-hf-id="hf-4bvb" id="scene05-root" data-composition-id="scene05" data-width="1080" data-height="1920" data-duration="9.0">
+        <div data-hf-id="hf-x8fw" id="scene05-paper" class="paper"></div>
+        <div data-hf-id="hf-3gne" id="scene05-ghost" class="ghost" data-layout-ignore="" style="left:-82px;top:440px;">little</div>
+        <div data-hf-id="hf-i8n9" id="scene05-meta" class="meta">EVERYDAY INDEX / 05</div>
+        <div data-hf-id="hf-ph1d" id="scene05-card-a" class="card" style="left:80px;top:342px;width:316px;height:388px;"><img data-hf-id="hf-6pf4" src="assets/photos/coffee_steam.jpg" alt=""></div>
+        <div data-hf-id="hf-atr2" id="scene05-card-b" class="card" style="left:650px;top:260px;width:328px;height:392px;"><img data-hf-id="hf-hlx3" src="assets/photos/desk_window.jpg" alt=""></div>
+        <img data-hf-id="hf-hwo4" id="scene05-plant" class="cutout" src="assets/cutouts/plant.png" alt="" style="left:116px;top:760px;height:298px;">
+        <img data-hf-id="hf-mdqj" id="scene05-phone" class="cutout" src="assets/cutouts/smartphone.png" alt="" style="right:102px;top:760px;height:265px;">
+        <img data-hf-id="hf-v1gu" id="scene05-clock" class="cutout" src="assets/cutouts/clock.png" alt="" style="left:370px;top:960px;height:250px;">
+        <img data-hf-id="hf-4ch8" id="scene05-books" class="cutout" src="assets/cutouts/books.png" alt="" style="right:206px;top:1070px;height:250px;">
+        <div data-hf-id="hf-ycxm" id="scene05-word-a" class="word" style="left:82px;top:1354px;">the little</div>
+        <div data-hf-id="hf-lm1h" id="scene05-word-b" class="word red" style="left:330px;top:1456px;">things</div>
+        <div data-hf-id="hf-tqlf" id="scene05-word-c" class="word" style="left:626px;top:1540px;">count</div>
+        <div data-hf-id="hf-ud7y" id="scene05-arrow" class="arrow"></div>
+        <div data-hf-id="hf-18tv" id="scene05-star" class="star" style="right:74px;bottom:124px;"></div>
+      </div>
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+        tl.fromTo("#scene05-paper", { opacity: 0 }, { opacity: .78, duration: .5 }, 0);
+        tl.fromTo("#scene05-ghost", { opacity: 0, x: -80 }, { opacity: .1, x: 0, duration: .8, ease: "sine.out" }, .04);
+        tl.fromTo("#scene05-meta", { opacity: 0, x: -24 }, { opacity: .74, x: 0, duration: .44 }, .16);
+        tl.fromTo("#scene05-card-a", { opacity: 0, x: -72, y: 64, rotation: -16, scale: .86 }, { opacity: 1, x: 0, y: 0, rotation: -6, scale: 1, duration: .72 }, .46);
+        tl.fromTo("#scene05-card-b", { opacity: 0, x: 76, y: -54, rotation: 13, scale: .88 }, { opacity: 1, x: 0, y: 0, rotation: 5, scale: 1, duration: .74 }, .74);
+        tl.fromTo("#scene05-plant, #scene05-phone, #scene05-clock, #scene05-books", { opacity: 0, y: 82, scale: .7, rotation: -10 }, { opacity: 1, y: 0, scale: 1, rotation: 0, duration: .58, stagger: .3, ease: "back.out(1.15)" }, 1.28);
+        tl.fromTo("#scene05-word-a", { opacity: 0, x: -42, rotation: -5 }, { opacity: 1, x: 0, rotation: -2, duration: .48 }, 3.0);
+        tl.fromTo("#scene05-word-b", { opacity: 0, y: 36, rotation: 4 }, { opacity: 1, y: 0, rotation: 1, duration: .54 }, 3.36);
+        tl.fromTo("#scene05-word-c", { opacity: 0, x: 50, rotation: -4 }, { opacity: 1, x: 0, rotation: 2, duration: .54 }, 3.78);
+        tl.fromTo("#scene05-arrow", { opacity: 0, scaleX: 0 }, { opacity: .9, scaleX: 1, duration: .48 }, 4.4);
+        tl.fromTo("#scene05-star", { opacity: 0, scale: .2, rotation: -20 }, { opacity: .75, scale: 1, rotation: 0, duration: .54, ease: "back.out(1.25)" }, 4.72);
+        tl.to("#scene05-card-a, #scene05-card-b", { y: -10, duration: 3.1, ease: "sine.inOut" }, 4.9);
+        tl.to("#scene05-plant, #scene05-phone, #scene05-clock, #scene05-books", { y: 12, duration: 3.0, ease: "sine.inOut", stagger: .08 }, 5.0);
+        tl.to("#scene05-word-a, #scene05-word-b, #scene05-word-c", { y: 10, duration: 2.8, ease: "sine.inOut" }, 5.0);
+        window.__timelines["scene05"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "note": "Feature-render template. Replace every placeholder with verified reporting data before production.",
+  "globeAnimationId": "route-disruption",
+  "globeAnimationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "chapter-01",
+        "scriptSection": "chapter-01",
+        "start": 0,
+        "animationId": "route-disruption",
+        "mapSource": "REPLACE_WITH_VERIFIED_SOURCE",
+        "mapData": {
+          "routes": [
+            {
+              "points": [
+                { "coordinates": ["REPLACE_LONGITUDE", "REPLACE_LATITUDE"] },
+                { "coordinates": ["REPLACE_LONGITUDE", "REPLACE_LATITUDE"] }
+              ],
+              "status": "blocked",
+              "value": "REPLACE_WITH_VERIFIED_VALUE"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "chapters": [
+    {
+      "animationId": "city-lock",
+      "mapSource": "REPLACE_WITH_VERIFIED_SOURCE",
+      "mapData": {
+        "target": {
+          "name": "REPLACE_WITH_VERIFIED_PLACE",
+          "coordinates": ["REPLACE_LONGITUDE", "REPLACE_LATITUDE"]
+        }
+      },
+      "globe": {
+        "coordinates": ["REPLACE_LONGITUDE", "REPLACE_LATITUDE"]
+      }
+    }
+  ]
+}

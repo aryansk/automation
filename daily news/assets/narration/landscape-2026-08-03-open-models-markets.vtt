@@ -1,0 +1,523 @@
+WEBVTT
+
+00:00:00.040 --> 00:00:02.880
+In late July, an unusual alliance formed
+
+00:00:02.880 --> 00:00:04.200
+in Washington.
+
+00:00:04.240 --> 00:00:07.020
+NVIDIA, Microsoft, and other technology
+
+00:00:07.020 --> 00:00:08.870
+heavyweights argued that open-weight
+
+00:00:08.870 --> 00:00:10.730
+artificial intelligence should remain
+
+00:00:10.740 --> 00:00:11.800
+open.
+
+00:00:11.840 --> 00:00:13.760
+A striking position from companies that
+
+00:00:13.760 --> 00:00:16.480
+also sell the chips, cloud, and software
+
+00:00:16.480 --> 00:00:17.320
+around it.
+
+00:00:17.360 --> 00:00:19.480
+That sounds like a policy dispute.
+
+00:00:19.520 --> 00:00:22.120
+It is also a stock market story, because
+
+00:00:22.200 --> 00:00:24.210
+the question is not simply whether open
+
+00:00:24.210 --> 00:00:25.670
+models are good or bad.
+
+00:00:25.760 --> 00:00:27.620
+The question is more uncomfortable.
+
+00:00:27.660 --> 00:00:30.140
+If capable models become widely available,
+
+00:00:30.180 --> 00:00:32.370
+which part of the AI economy keeps the
+
+00:00:32.420 --> 00:00:34.920
+profit, start in the United States.
+
+00:00:34.960 --> 00:00:37.240
+On the 24th of July, the open model
+
+00:00:37.360 --> 00:00:40.000
+argument arrived in front of lawmakers.
+
+00:00:40.040 --> 00:00:41.950
+The companies were not promising that
+
+00:00:41.950 --> 00:00:43.430
+openness is free.
+
+00:00:43.480 --> 00:00:45.760
+They were arguing that a wider ecosystem
+
+00:00:45.840 --> 00:00:47.540
+can make the United States more
+
+00:00:47.540 --> 00:00:49.840
+competitive and keep one gatekeeper from
+
+00:00:49.840 --> 00:00:51.610
+owning every route into artificial
+
+00:00:51.610 --> 00:00:52.430
+intelligence.
+
+00:00:52.520 --> 00:00:54.040
+Now rotate east.
+
+00:00:54.080 --> 00:00:56.150
+China is no longer a footnote in this
+
+00:00:56.150 --> 00:00:56.760
+story.
+
+00:00:56.800 --> 00:00:59.680
+On the 17th of July, Moonshot AI unveiled
+
+00:00:59.680 --> 00:01:02.210
+Kimi K3, a model it described as the
+
+00:01:02.210 --> 00:01:04.520
+world's largest open-weight system at two,
+
+00:01:04.820 --> 00:01:06.760
+eight trillion parameters.
+
+00:01:06.800 --> 00:01:09.080
+Days later, Moonshot temporarily paused
+
+00:01:09.200 --> 00:01:11.670
+new subscriptions after demand strained
+
+00:01:11.670 --> 00:01:12.600
+capacity.
+
+00:01:12.640 --> 00:01:14.890
+Alibaba was previewing its own enormous
+
+00:01:14.890 --> 00:01:17.200
+model before an open-weight release.
+
+00:01:17.240 --> 00:01:18.660
+That sequence tells us something
+
+00:01:18.660 --> 00:01:19.320
+important.
+
+00:01:19.360 --> 00:01:20.930
+Open access can lower the toll on
+
+00:01:20.980 --> 00:01:23.020
+intelligence and still create a queue at
+
+00:01:23.020 --> 00:01:24.520
+the infrastructure layer.
+
+00:01:24.560 --> 00:01:26.280
+Here is the vocabulary.
+
+00:01:26.320 --> 00:01:28.160
+Open-weight does not necessarily mean
+
+00:01:28.160 --> 00:01:29.780
+fully open source.
+
+00:01:29.820 --> 00:01:31.520
+It usually means the trained parameters
+
+00:01:31.520 --> 00:01:33.650
+are released so developers can download a
+
+00:01:33.650 --> 00:01:36.310
+model, run it themselves, fine tune it, or
+
+00:01:36.310 --> 00:01:38.490
+build a private system around it.
+
+00:01:38.600 --> 00:01:40.890
+The training data, the full recipe, the
+
+00:01:41.000 --> 00:01:42.610
+safety process, and the expensive
+
+00:01:42.610 --> 00:01:45.200
+infrastructure may still remain closed.
+
+00:01:45.260 --> 00:01:46.340
+The difference matters.
+
+00:01:46.380 --> 00:01:48.630
+A closed model is a service you rent.
+
+00:01:48.680 --> 00:01:50.400
+An open-weight model is closer to a
+
+00:01:50.400 --> 00:01:52.720
+machine you can take home and modify.
+
+00:01:52.760 --> 00:01:54.720
+That can weaken a provider's pricing
+
+00:01:54.720 --> 00:01:55.260
+power.
+
+00:01:55.300 --> 00:01:57.340
+Customers can negotiate harder.
+
+00:01:57.380 --> 00:01:59.530
+Developers can keep sensitive workloads on
+
+00:01:59.530 --> 00:02:00.840
+their own machines.
+
+00:02:00.880 --> 00:02:02.690
+Startups can build without depending on
+
+00:02:02.690 --> 00:02:04.890
+one company's permission, price, or
+
+00:02:05.000 --> 00:02:07.830
+product roadmap, but cheaper intelligence
+
+00:02:07.830 --> 00:02:09.320
+can create more demand.
+
+00:02:09.360 --> 00:02:11.220
+When a useful capability becomes
+
+00:02:11.220 --> 00:02:13.300
+inexpensive, people usually find more
+
+00:02:13.300 --> 00:02:15.310
+things to do with it, more agents, more
+
+00:02:15.620 --> 00:02:17.940
+automation, more experiments, and more
+
+00:02:17.940 --> 00:02:18.690
+inference.
+
+00:02:18.800 --> 00:02:20.440
+This is where the map rotates from the
+
+00:02:20.440 --> 00:02:22.200
+model to the stack beneath it.
+
+00:02:22.240 --> 00:02:24.430
+Look at China's Guangdong Province.
+
+00:02:24.500 --> 00:02:27.120
+In May, large data center clusters entered
+
+00:02:27.190 --> 00:02:29.600
+electricity spot trading as virtual power
+
+00:02:29.600 --> 00:02:32.490
+plants, a real world sign that AI demand
+
+00:02:32.540 --> 00:02:34.720
+is becoming a grid problem, not just a
+
+00:02:34.720 --> 00:02:36.120
+software problem.
+
+00:02:36.160 --> 00:02:37.360
+Then look at Taiwan.
+
+00:02:37.400 --> 00:02:39.900
+The chip factory is part of the AI story
+
+00:02:39.940 --> 00:02:42.520
+before the model ever reaches a customer.
+
+00:02:42.560 --> 00:02:44.350
+The chain continues through Japan's
+
+00:02:44.350 --> 00:02:46.720
+equipment makers, South Korea's memory
+
+00:02:46.720 --> 00:02:49.080
+industry, the Netherlands lithography
+
+00:02:49.080 --> 00:02:52.120
+ecosystem, and American cloud campuses.
+
+00:02:52.160 --> 00:02:54.450
+The International Energy Agency's base
+
+00:02:54.560 --> 00:02:57.120
+case puts global data center electricity
+
+00:02:57.240 --> 00:03:01.920
+use at about 945 terawatt hours in 2030.
+
+00:03:01.960 --> 00:03:03.850
+That is not a prediction of one company's
+
+00:03:03.850 --> 00:03:04.480
+revenue.
+
+00:03:04.520 --> 00:03:06.700
+It is a reminder that every extra layer of
+
+00:03:06.700 --> 00:03:09.030
+software eventually touches a physical
+
+00:03:09.030 --> 00:03:09.570
+system.
+
+00:03:09.720 --> 00:03:11.600
+Open models can reduce the price of
+
+00:03:11.600 --> 00:03:13.550
+software while increasing the volume of
+
+00:03:13.550 --> 00:03:15.600
+hardware, networking, cooling, and
+
+00:03:15.600 --> 00:03:17.690
+electricity required to run it.
+
+00:03:17.840 --> 00:03:20.920
+Now rotate to New York, Tokyo, and Seoul.
+
+00:03:20.960 --> 00:03:23.150
+Markets do not price possibilities.
+
+00:03:23.200 --> 00:03:25.040
+They price expectations.
+
+00:03:25.080 --> 00:03:27.810
+The IMF says AI exposed markets in the
+
+00:03:27.810 --> 00:03:29.240
+United States, Japan.
+
+00:03:29.280 --> 00:03:31.720
+South Korea and Taiwan outperformed in the
+
+00:03:31.800 --> 00:03:34.070
+second quarter of 2026.
+
+00:03:34.120 --> 00:03:36.480
+That is a broad market signal, not proof
+
+00:03:36.480 --> 00:03:39.170
+that every AI investment will pay off.
+
+00:03:39.220 --> 00:03:41.500
+The BIS warning is the other half of the
+
+00:03:41.500 --> 00:03:42.300
+picture.
+
+00:03:42.340 --> 00:03:44.400
+When valuations and earnings expectations
+
+00:03:44.400 --> 00:03:47.170
+are already high, a disappointment in AI
+
+00:03:47.170 --> 00:03:49.690
+revenue, utilization, or capital spending
+
+00:03:50.000 --> 00:03:52.380
+can travel quickly through the market.
+
+00:03:52.480 --> 00:03:54.920
+If open models make applications cheaper
+
+00:03:54.960 --> 00:03:57.010
+and adoption faster, investors may reward
+
+00:03:57.320 --> 00:04:00.040
+the companies that own distribution, data,
+
+00:04:00.040 --> 00:04:02.040
+and customer relationships.
+
+00:04:02.080 --> 00:04:04.300
+If model prices collapse before massive
+
+00:04:04.300 --> 00:04:06.190
+infrastructure spending pays back,
+
+00:04:06.260 --> 00:04:08.040
+investors may punish the companies
+
+00:04:08.080 --> 00:04:10.560
+carrying the heaviest expectations.
+
+00:04:10.600 --> 00:04:12.320
+The same technology can be good for
+
+00:04:12.320 --> 00:04:14.910
+adoption and bad for a particular business
+
+00:04:14.910 --> 00:04:15.480
+model.
+
+00:04:15.520 --> 00:04:16.680
+So who wins?
+
+00:04:16.720 --> 00:04:19.010
+Chip and memory suppliers may benefit from
+
+00:04:19.120 --> 00:04:21.430
+wider deployment, but hardware pricing can
+
+00:04:21.430 --> 00:04:22.360
+still compress.
+
+00:04:22.400 --> 00:04:24.890
+Cloud companies may sell more compute, but
+
+00:04:24.890 --> 00:04:26.850
+they also have to finance the data
+
+00:04:26.850 --> 00:04:27.580
+centers.
+
+00:04:27.620 --> 00:04:29.470
+Software companies may gain bargaining
+
+00:04:29.470 --> 00:04:31.890
+power over model providers while facing
+
+00:04:31.890 --> 00:04:34.290
+more competition from smaller teams.
+
+00:04:34.340 --> 00:04:36.900
+Model labs may lose some scarcity and gain
+
+00:04:36.900 --> 00:04:39.470
+a much larger ecosystem built around their
+
+00:04:39.780 --> 00:04:40.620
+architecture.
+
+00:04:40.660 --> 00:04:42.950
+Now rotate once more to Germany and
+
+00:04:43.060 --> 00:04:44.080
+Singapore.
+
+00:04:44.120 --> 00:04:46.310
+Europe has committed 5 billion euros
+
+00:04:46.360 --> 00:04:48.880
+towards seven AI mega factories, trying to
+
+00:04:48.960 --> 00:04:51.070
+narrow the distance with the United States
+
+00:04:51.070 --> 00:04:51.840
+and China.
+
+00:04:51.880 --> 00:04:54.560
+Singapore is a deployment and finance hub.
+
+00:04:54.600 --> 00:04:56.260
+China is trying to balance the reach of
+
+00:04:56.260 --> 00:04:57.870
+open models with the control of
+
+00:04:58.180 --> 00:05:00.200
+strategically sensitive technology.
+
+00:05:00.240 --> 00:05:02.300
+The world is not choosing one winner.
+
+00:05:02.340 --> 00:05:04.230
+It is building several interlocking
+
+00:05:04.230 --> 00:05:05.140
+bottlenecks.
+
+00:05:05.180 --> 00:05:07.290
+That is why the signal to watch is not the
+
+00:05:07.290 --> 00:05:08.820
+loudest announcement.
+
+00:05:08.860 --> 00:05:10.760
+Watch the behavior underneath it.
+
+00:05:10.800 --> 00:05:12.930
+Are companies actually deploying open
+
+00:05:12.930 --> 00:05:13.560
+models?
+
+00:05:13.600 --> 00:05:14.880
+Are inference costs falling?
+
+00:05:14.920 --> 00:05:16.400
+Is usage expanding?
+
+00:05:16.440 --> 00:05:18.500
+Are AI revenues growing faster than
+
+00:05:18.500 --> 00:05:19.710
+capital spending?
+
+00:05:19.760 --> 00:05:21.550
+Are customers buying one provider's
+
+00:05:21.550 --> 00:05:23.980
+intelligence or building systems they can
+
+00:05:23.980 --> 00:05:24.620
+switch?
+
+00:05:24.660 --> 00:05:26.910
+The headline is not that open AI will
+
+00:05:26.910 --> 00:05:28.200
+crash the stock market.
+
+00:05:28.480 --> 00:05:30.650
+It is that open models are redrawing the
+
+00:05:30.650 --> 00:05:31.560
+profit map.
+
+00:05:31.600 --> 00:05:33.890
+The model may become the commodity layer.
+
+00:05:34.040 --> 00:05:37.250
+Compute, electricity, data, distribution,
+
+00:05:37.250 --> 00:05:39.320
+and trust may become the new toll booths.
+
+00:05:39.360 --> 00:05:41.870
+That is the market question for the next
+
+00:05:41.870 --> 00:05:42.820
+phase of AI.
+
+00:05:42.860 --> 00:05:45.050
+Not who has the cleverest model, but who
+
+00:05:45.100 --> 00:05:47.720
+still owns the bottleneck after everyone
+
+00:05:47.840 --> 00:05:48.970
+else can use one.

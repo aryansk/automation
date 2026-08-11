@@ -1,0 +1,66 @@
+{
+  "eventId": "suu-kyi-icrc-visit-2026-08-03",
+  "tone": "good",
+  "countryCode": "MM",
+  "countryName": "Myanmar",
+  "cityName": "Naypyidaw",
+  "coordinates": [96.156, 19.7633],
+  "region": "Southeast Asia",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Politics · Rights",
+  "headline": "Aung San Suu Kyi appears healthy in first outside contact in years",
+  "summary": "The 81-year-old democracy leader met an ICRC delegation, her first confirmed outside contact for two and a half years.",
+  "script": "Myanmar has allowed the Red Cross to visit Aung San Suu Kyi for the first time in years. Photographs show the eighty-one-year-old democracy leader looking healthy, raising hopes for wider access.",
+  "source": "BBC · Reuters",
+  "edition": "04 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-04-good/suu-kyi/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-good/suu-kyi/icrc.jpg",
+  "imageAlt": "Aung San Suu Kyi seated and appearing healthy in recently released photos.",
+  "imageAltTwo": "The ICRC delegation meeting with Aung San Suu Kyi.",
+  "imageCredit": "Myanmar Military Information Committee / BBC",
+  "imageCreditTwo": "Myanmar Military Information Committee / Reuters",
+  "narrationAudio": "assets/narration/tour/good4-2026-08-04-02-suu-kyi-icrc-visit.wav",
+  "captions": [
+    {
+      "lines": ["Red Cross visits", "Aung San Suu Kyi."],
+      "highlights": ["Red Cross", "Aung San Suu Kyi"]
+    },
+    {
+      "lines": ["First confirmed outside", "contact in years."],
+      "highlights": ["First confirmed", "outside contact"]
+    },
+    {
+      "lines": ["She appears healthy,", "raising hopes for wider access."],
+      "highlights": ["appears healthy", "wider access"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Aung San Suu Kyi: Myanmar military releases photo of detained former leader",
+      "url": "https://www.bbc.co.uk/news/articles/c1e1d5j6660o",
+      "published": "2026-08-03",
+      "usedFor": ["confirmed ICRC contact", "appearance of health", "primary context"]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "Myanmar's detained former leader Aung San Suu Kyi meets Red Cross official, government says",
+      "url": "https://www.reuters.com/world/asia-pacific/myanmars-aung-san-suu-kyi-meets-red-cross-official-government-says-2026-08-03/",
+      "published": "2026-08-03",
+      "usedFor": ["independent corroboration", "ICRC statement"]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Current BBC world-feed prominence plus major-agency corroboration; ranking is editorial, not an objective trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

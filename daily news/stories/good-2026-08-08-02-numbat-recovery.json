@@ -1,0 +1,143 @@
+{
+  "eventId": "numbat-iucn-downlist-2026-08-08",
+  "tone": "good",
+  "countryCode": "AU",
+  "countryName": "Australia",
+  "cityName": "",
+  "region": "Oceania",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Wildlife · Conservation",
+  "headline": "Numbat comes off endangered list after decades of work",
+  "summary": "The striped marsupial is now classed as near threatened after conservation efforts raised its population to about 3,000.",
+  "script": "Australia's numbat is off the endangered list for the first time in decades. Conservation teams helped the striped marsupial bounce back to about three thousand animals. It is now near threatened, a rare win in a country losing many species.",
+  "source": "BBC News · Mongabay",
+  "edition": "08 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-08-good/numbat-recovery/primary.png",
+  "imageTwo": "assets/news-images/2026-08-08-good/numbat-recovery/secondary.jpg",
+  "imageAlt": "A numbat, a striped marsupial, sits on a log in Dryandra Woodland, Western Australia.",
+  "imageAltTwo": "A numbat licks its nose while perched on a charred log in the Australian bush.",
+  "imageCredit": "Sharon Jones/BBC",
+  "imageCreditTwo": "Sharon Jones/BBC",
+  "narrationAudio": "assets/narration/good-2026-08-08-02-numbat-recovery.wav",
+  "captions": [
+    {
+      "lines": [
+        "Numbat comes off the",
+        "endangered list."
+      ],
+      "highlights": [
+        "comes off",
+        "endangered list"
+      ]
+    },
+    {
+      "lines": [
+        "Population now",
+        "about 3,000."
+      ],
+      "highlights": [
+        "about 3,000"
+      ]
+    },
+    {
+      "lines": [
+        "A rare win as Australia",
+        "loses many species."
+      ],
+      "highlights": [
+        "rare win"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Australia is the planet's extinction hotspot, but one animal offers a glimmer of hope",
+      "url": "https://www.bbc.com/news/articles/c9q94lxqrzzo",
+      "published": "2026-08-08",
+      "usedFor": [
+        "numbat downlisting",
+        "population about 3,000",
+        "Dryandra recovery"
+      ]
+    },
+    {
+      "publisher": "Mongabay",
+      "title": "Once endangered, Australia's numbat is making a hopeful recovery",
+      "url": "https://news.mongabay.com/short-article/2026/07/once-endangered-australias-numbat-is-making-a-hopeful-recovery/",
+      "published": "2026-07",
+      "usedFor": [
+        "independent corroboration",
+        "IUCN Red List near threatened",
+        "conservation context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Notable conservation milestone with global resonance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "08 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orientation",
+        "scriptSection": "opener",
+        "scriptCue": "The story opens by establishing Australia as the setting.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News 08 Aug 2026; Mongabay Jul 2026",
+        "mapData": {
+          "target": {
+            "name": "Australia",
+            "country": "Australia",
+            "code": "AU",
+            "coordinates": [133.7751, -25.2744]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "The narration names Dryandra Woodland in Western Australia.",
+        "start": 2.8,
+        "animationId": "country-fill",
+        "mapSource": "BBC News 08 Aug 2026; Mongabay Jul 2026",
+        "mapData": {
+          "target": {
+            "name": "Australia",
+            "country": "Australia",
+            "code": "AU",
+            "coordinates": [116.97, -32.78]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "claim-and-consequence",
+        "scriptCue": "The script highlights the recovery and the red-list downlisting.",
+        "start": 7.4,
+        "animationId": "dot-density",
+        "mapSource": "BBC News 08 Aug 2026; Mongabay Jul 2026",
+        "mapData": {
+          "values": {
+            "AU": 60,
+            "KE": 30
+          },
+          "dotUnit": 5
+        }
+      }
+    ]
+  }
+}

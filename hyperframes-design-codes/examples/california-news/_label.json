@@ -1,9 +1,0 @@
-{
-  "id": "my-video",
-  "name": "California News",
-  "description": "Claimed by Belen Isakson (beluisakson@gmail.com)",
-  "width": 1080,
-  "height": 1920,
-  "duration": 16.5,
-  "source": "preview-api"
-}

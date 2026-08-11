@@ -1,0 +1,153 @@
+{
+  "eventId": "amsterdam-pride-mass-wedding-2026-08-06",
+  "tone": "good",
+  "countryCode": "NL",
+  "countryName": "Netherlands",
+  "cityName": "Amsterdam",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Society · Pride",
+  "headline": "Dozens marry for a day at Amsterdam Pride's pink church",
+  "summary": "The Married For A Day event celebrated 25 years since the Netherlands became the first country to legalize same-sex marriage.",
+  "script": "Dozens of couples tied the knot at Amsterdam's Pride festival, married for a day in an inflatable pink chapel. The celebration marked twenty five years since the Netherlands became the first country in the world to legalize same sex marriage.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-07-good/amsterdam-pride/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-good/amsterdam-pride/secondary.jpg",
+  "imageAlt": "A couple exchange vows during a mass wedding ceremony in an inflatable chapel in Amsterdam.",
+  "imageAltTwo": "People celebrate atop a boat on one of Amsterdam's historic canals during the Pride Canal Parade.",
+  "imageCredit": "AP Photo/Mouneb Taim",
+  "imageCreditTwo": "AP Photo/Patrick Post",
+  "narrationAudio": "assets/narration/good10-2026-08-07-02-amsterdam-pride.wav",
+  "captions": [
+    {
+      "lines": [
+        "Dozens marry for a day",
+        "at Amsterdam Pride."
+      ],
+      "highlights": [
+        "marry for a day"
+      ]
+    },
+    {
+      "lines": [
+        "25 years since Netherlands",
+        "legalized same-sex marriage."
+      ],
+      "highlights": [
+        "25 years"
+      ]
+    },
+    {
+      "lines": [
+        "More than 36,000 same-sex",
+        "couples married since 2001."
+      ],
+      "highlights": [
+        "36,000 same-sex couples"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Dozens tie the metaphorical knot at Amsterdam's 'Married For A Day' Pride event",
+      "url": "https://apnews.com/article/pride-lgbtqi-amsterdam-wedding-marriage-a37f60c46c36c8c20e72a07fa4087c3b",
+      "published": "2026-08-06",
+      "usedFor": [
+        "Married For A Day event",
+        "25-year anniversary",
+        "36,000 same-sex couples statistic",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Hundreds of thousands line Amsterdam canals for the annual Pride boat parade",
+      "url": "https://apnews.com/article/pride-lgbtqi-amsterdam-canals-security-jetten-4b1d7cca31a9e89d29666f730e1c3cf3",
+      "published": "2026-08-01",
+      "usedFor": [
+        "Pride festival context",
+        "secondary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Joyful community milestone with historic resonance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the story in the Netherlands.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "NL",
+            "coordinates": [
+              5.5,
+              52.2
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Amsterdam, where the weddings took place.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Amsterdam",
+            "coordinates": [
+              4.904,
+              52.367
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the global first this celebration commemorates.",
+        "start": 9.5,
+        "animationId": "multi-country-sweep",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "NL",
+            "GB",
+            "DE",
+            "FR",
+            "ES"
+          ],
+          "target": {
+            "code": "NL",
+            "coordinates": [
+              4.904,
+              52.367
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

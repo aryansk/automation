@@ -1,0 +1,61 @@
+{
+  "eventId": "uk-zero-emission-vehicle-funding-2026-08-09",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "London",
+  "coordinates": [
+    -0.1276,
+    51.5072
+  ],
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Transport · Climate",
+  "headline": "UK announces new funding for zero-emission vehicle technology",
+  "summary": "Nearly £130 million is set to support zero-emission vehicle technology as Britain pushes cleaner transport.",
+  "script": "Britain is putting nearly one hundred and thirty million pounds into zero-emission vehicle technology. The funding is aimed at cleaner transport, from electric powertrains to charging systems, as the UK tries to cut road emissions.",
+  "source": "Reuters",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/stories/2026-08-10/uk-zero-emission-vehicle-funding/primary.png",
+  "imageTwo": "assets/stories/2026-08-10/uk-zero-emission-vehicle-funding/secondary.png",
+  "imageAlt": "An electric car connected to a public charging point in the United Kingdom.",
+  "imageAltTwo": "A second view of an electric vehicle charging point used as transport context.",
+  "imageCredit": "GOV.UK",
+  "imageCreditTwo": "GOV.UK",
+  "narrationAudio": "assets/narration/new-2026-08-10/uk-zero-emission-vehicle-funding.wav",
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "UK announces nearly £130 million funding for zero-emission vehicle technology",
+      "url": "https://www.reuters.com/world/uk/uk-announces-nearly-130-million-funding-zero-emission-vehicle-technology-2026-08-09/",
+      "published": "2026-08-09",
+      "usedFor": [
+        "new funding announcement",
+        "nearly £130 million figure"
+      ]
+    },
+    {
+      "publisher": "UK Department for Transport",
+      "title": "Zero-emission truck, van and depot charging support",
+      "url": "https://www.gov.uk/government/news/1-billion-to-cut-costs-for-businesses-drive-growth-and-clean-up-uk-roads",
+      "published": "2026-03-25",
+      "usedFor": [
+        "UK clean transport context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Fresh policy funding with an immediately legible clean-transport visual; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

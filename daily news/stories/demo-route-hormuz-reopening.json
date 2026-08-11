@@ -1,0 +1,84 @@
+{
+  "slug": "demo-route-hormuz-reopening",
+  "edition": "DEMO EDITION / ILLUSTRATIVE",
+  "deskName": "godandbaddaily / Landscape Desk",
+  "openerTitle": "ROUTES / REOPENED?",
+  "openerSub": "Demo composition · illustrative route data, clearly labeled",
+  "headline": "Demo: what a Hormuz reopening would do to shipping routes",
+  "summary": "A clearly labeled demonstration of automatic route-map selection. The route and volume figures below are illustrative placeholders, not reporting.",
+  "kicker": "DEMO · ROUTE · ILLUSTRATIVE",
+  "region": "Middle East shipping corridor",
+  "scriptFile": "assets/narration/demo-route-hormuz-reopening-script.txt",
+  "narrationAudio": "assets/narration/silence.wav",
+  "captionFile": "assets/narration/demo-route-hormuz-reopening.vtt",
+  "globeCaption": "Demo map · illustrative route only",
+  "routeLabel": "ILLUSTRATIVE ROUTE / HORMUZ → ASIA",
+  "mapAnimation": "great-circle-route",
+  "mapSource": "Illustrative demo source — not reporting",
+  "mapLabel": "ILLUSTRATIVE ROUTE / HORMUZ → INDIA → EAST ASIA",
+  "mapData": {
+    "route": [
+      { "name": "Hormuz", "coordinates": [56.45, 26.56] },
+      { "name": "India", "coordinates": [72.8777, 19.076] },
+      { "name": "East Asia", "coordinates": [139.6917, 35.6895] }
+    ]
+  },
+  "sources": [
+    { "label": "ILLUSTRATIVE / DEMO ONLY", "url": "https://example.com/demo-route-hormuz" }
+  ],
+  "chapters": [
+    {
+      "kicker": "01 / THE GATEWAY",
+      "title": "Demo: Hormuz is the narrow mouth of a global energy route",
+      "body": "Illustrative demo chapter: a route from Hormuz toward India and East Asia. All coordinates and labels are placeholders for pipeline demonstration only.",
+      "tag": "ILLUSTRATIVE / DEMO ROUTE",
+      "graphic": "letter",
+      "focus": { "codes": "IR · OM", "label": "STRAIT OF HORMUZ / DEMO", "coordinates": "26.6° N / 56.5° E" },
+      "globe": {
+        "countryCode": "IR",
+        "countryName": "Iran",
+        "city": "Strait of Hormuz",
+        "event": "Demo · route geography",
+        "coordinates": [56.45, 26.56],
+        "cameraZ": 7.2,
+        "mentionedCountryCodes": ["OM", "IN", "CN", "JP"],
+        "routePoints": [
+          { "label": "HORMUZ", "country": "Iran / Oman", "location": "Strait of Hormuz", "coordinates": [56.45, 26.56] },
+          { "label": "INDIA", "country": "India", "location": "Mumbai", "coordinates": [72.8777, 19.076] },
+          { "label": "EAST ASIA", "country": "Japan", "location": "Tokyo", "coordinates": [139.6917, 35.6895] }
+        ]
+      },
+      "photos": [
+        { "src": "assets/news-images/2026-08-03/hormuz-shipping-ap.jpg", "country": "Strait of Hormuz", "location": "Shipping lane", "caption": "Illustrative demo image · archive visual", "credit": "Illustrative demo · rights review required" },
+        { "src": "assets/news-images/2026-08-04-trade/containers.jpg", "country": "Global", "location": "Container shipping", "caption": "Illustrative demo image", "credit": "Illustrative demo · source credit in manifest" }
+      ]
+    },
+    {
+      "kicker": "02 / FOLLOW THE ROUTE",
+      "title": "Demo: the line does not stop at Hormuz",
+      "body": "Illustrative demo chapter: energy and goods fan out toward India, China, South Korea and Japan. The route below is a placeholder.",
+      "tag": "GULF → ASIA / DEMO",
+      "graphic": "route",
+      "focus": { "codes": "GULF → ASIA", "label": "ILLUSTRATIVE ROUTE", "coordinates": "DEMO" },
+      "globe": {
+        "countryCode": "IN",
+        "countryName": "India",
+        "city": "Mumbai",
+        "event": "Demo · route destination",
+        "coordinates": [72.8777, 19.076],
+        "cameraZ": 9.2,
+        "mentionedCountryCodes": ["IR", "OM", "CN", "KR", "JP"],
+        "routePoints": [
+          { "label": "HORMUZ", "country": "Iran / Oman", "location": "Strait of Hormuz", "coordinates": [56.45, 26.56] },
+          { "label": "INDIA", "country": "India", "location": "Mumbai", "coordinates": [72.8777, 19.076] },
+          { "label": "CHINA", "country": "China", "location": "Shanghai", "coordinates": [121.4737, 31.2304] },
+          { "label": "JAPAN", "country": "Japan", "location": "Tokyo", "coordinates": [139.6917, 35.6895] }
+        ]
+      },
+      "photos": [
+        { "src": "assets/news-images/2026-08-04-trade/mexico-port.jpg", "country": "Global", "location": "Port operations", "caption": "Illustrative demo image", "credit": "Illustrative demo · source credit in manifest" },
+        { "src": "assets/news-images/2026-08-04-trade/map.jpg", "country": "Global", "location": "Shipping map", "caption": "Illustrative demo image", "credit": "Illustrative demo · source credit in manifest" }
+      ]
+    }
+  ]
+}

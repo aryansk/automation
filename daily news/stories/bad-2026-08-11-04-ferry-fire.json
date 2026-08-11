@@ -1,0 +1,165 @@
+{
+  "eventId": "indonesia-ferry-fire-java-2026-08-11",
+  "tone": "bad",
+  "countryCode": "ID",
+  "countryName": "Indonesia",
+  "cityName": "Jakarta",
+  "region": "Asia",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Disaster · Ferry",
+  "headline": "Ferry fire off Java kills six, dozens rescued at sea",
+  "summary": "A passenger ferry caught fire off northern Java, killing six and forcing more than 200 people to abandon ship as rescue boats converged.",
+  "script": "A ferry fire off Java has killed six people. Flames engulfed a passenger ferry off northern Java. More than two hundred passengers abandoned ship as rescuers converged.",
+  "source": "AP News",
+  "edition": "11 Aug 2026",
+  "storyNumber": "04",
+  "imageOne": "assets/news-images/2026-08-11-bad/ferry-fire/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-11-bad/ferry-fire/secondary.jpg",
+  "imageAlt": "Maritime vessel at sea with rescue context — ferry / ship at sea.",
+  "imageAltTwo": "Maritime rescue operation — rescue coordination at sea.",
+  "imageCredit": "Reuters / AP",
+  "imageCreditTwo": "Reuters / AP",
+  "narrationAudio": "assets/narration/bad-2026-08-11-04-ferry-fire.wav",
+  "captions": [
+    {
+      "lines": [
+        "Ferry fire off Java",
+        "kills six."
+      ],
+      "highlights": [
+        "kills six"
+      ]
+    },
+    {
+      "lines": [
+        "Flames engulf vessel",
+        "off northern Java."
+      ],
+      "highlights": [
+        "Flames engulf"
+      ]
+    },
+    {
+      "lines": [
+        "200 abandon ship",
+        "as rescuers converge."
+      ],
+      "highlights": [
+        "200 abandon"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Indonesia ferry fire kills six off Java",
+      "url": "https://apnews.com/article/indonesia-ferry-fire-java-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "six killed",
+        "200 rescue"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "Java ferry fire rescue",
+      "url": "https://www.reuters.com/world/asia-pacific/indonesia-ferry-fire-2026-08-11/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "fire off Java"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 4,
+    "basis": "Major ferry disaster.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Indonesia.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "ID",
+            "coordinates": [
+              120,
+              -5.1
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Jakarta coast.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Jakarta",
+            "coordinates": [
+              106.84,
+              -6.2
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show rescue cluster off Java.",
+        "start": 9.5,
+        "animationId": "event-cluster",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "points": [
+            {
+              "name": "Ferry",
+              "coordinates": [
+                110.5,
+                -6
+              ],
+              "label": "FERRY",
+              "status": "confirmed"
+            },
+            {
+              "name": "Rescue 1",
+              "coordinates": [
+                110.7,
+                -5.9
+              ],
+              "label": "RESCUE 1",
+              "status": "reported"
+            },
+            {
+              "name": "Rescue 2",
+              "coordinates": [
+                110.3,
+                -6.1
+              ],
+              "label": "RESCUE 2",
+              "status": "reported"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

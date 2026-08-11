@@ -1,0 +1,61 @@
+{
+  "eventId": "pentagon-weapons-production-stockpiles-2026-08-10",
+  "tone": "bad",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Washington",
+  "coordinates": [
+    -77.0369,
+    38.9072
+  ],
+  "region": "North America",
+  "urgency": "breaking",
+  "storyType": "editorial",
+  "kicker": "Defense · Supply",
+  "headline": "Pentagon urges defense firms to rebuild weapons production",
+  "summary": "The department is asking contractors for plans after concerns that conflict has reduced key stockpiles.",
+  "script": "The Pentagon is pressing defense companies to speed up weapons production. Officials want plans within three weeks, after concerns that recent conflicts have reduced key stockpiles and exposed supply-chain pressure.",
+  "source": "AP News · DoD",
+  "edition": "10 Aug 2026",
+  "storyNumber": "11",
+  "imageOne": "assets/stories/2026-08-10/pentagon-weapons-production/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-10/pentagon-weapons-production/secondary.jpg",
+  "imageAlt": "A Patriot missile launcher displayed outside Fort Sill in Oklahoma.",
+  "imageAltTwo": "A Patriot launcher assembly area at a United States Army depot.",
+  "imageCredit": "AP Photo",
+  "imageCreditTwo": "U.S. Army",
+  "narrationAudio": "assets/narration/new-2026-08-10/pentagon-weapons-production.wav",
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Pentagon pushes defense companies to boost weapons production",
+      "url": "https://apnews.com/article/iran-war-weapons-stockpile-pentagon-defense-industry-c98e042bfd0fd22cd97d15b1fffa322c",
+      "published": "2026-08-10",
+      "usedFor": [
+        "21-day planning request",
+        "stockpile concern"
+      ]
+    },
+    {
+      "publisher": "U.S. Department of Defense",
+      "title": "Defense industrial base and production context",
+      "url": "https://www.defense.gov/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "official defense-production context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 11,
+    "basis": "A consequential supply warning with an unmistakable defense visual; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

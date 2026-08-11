@@ -1,0 +1,140 @@
+{
+  "eventId": "uk-breast-risk-screening-gap-2026-08-04",
+  "tone": "bad",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Cambridge",
+  "coordinates": [
+    0.1218,
+    52.2053
+  ],
+  "region": "Western Europe",
+  "urgency": "current",
+  "storyType": "statistics",
+  "kicker": "Health · Screening",
+  "headline": "NHS checks miss most high-risk women under 50",
+  "summary": "A study says current criteria miss up to 95% of younger women at higher risk; a broader risk tool found eight times as many women who later developed breast cancer.",
+  "script": "A study says current NHS checks may miss most younger women at higher breast-cancer risk. A broader tool using family history, lifestyle, reproductive and genetic factors found eight times as many women who later developed the disease.",
+  "source": "BBC · BJC study",
+  "edition": "04 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-04-bad/breast-risk/mammogram.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-bad/breast-risk/screening.jpg",
+  "imageAlt": "A patient undergoes a mammogram examination.",
+  "imageAltTwo": "A patient in a medical gown undergoes mammogram screening.",
+  "imageCredit": "Getty Images via BBC News",
+  "imageCreditTwo": "BBC News image",
+  "narrationAudio": "assets/narration/tour/bad6-2026-08-04-02-breast-risk-gap.wav",
+  "captions": [
+    {
+      "lines": [
+        "NHS checks miss",
+        "many younger women."
+      ],
+      "highlights": [
+        "NHS checks",
+        "younger women"
+      ]
+    },
+    {
+      "lines": [
+        "Up to 95%",
+        "may be missed."
+      ],
+      "highlights": [
+        "95%",
+        "missed"
+      ]
+    },
+    {
+      "lines": [
+        "Risk tools use",
+        "more than family history."
+      ],
+      "highlights": [
+        "Risk tools",
+        "family history"
+      ]
+    }
+  ],
+  "statValue": "95%",
+  "statLabel": "at-risk women missed",
+  "statPeriod": "under 50",
+  "mentionedCountryCodes": [
+    "GB"
+  ],
+  "affectedCountryCodes": [
+    "GB"
+  ],
+  "locatorInset": false,
+  "focusZoom": 12.5,
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Breast cancer checks missing most women under 50 who are at risk, says study",
+      "url": "https://www.bbc.co.uk/news/articles/ckgv652r625o",
+      "published": "2026-08-04T01:08:13.465Z",
+      "usedFor": [
+        "95% estimate",
+        "eight-times comparison",
+        "NHS criteria",
+        "study summary"
+      ]
+    },
+    {
+      "publisher": "University of Cambridge Repository",
+      "title": "Evaluating the performance of the BOADICEA model in predicting 10-year breast cancer risks in UK Biobank",
+      "url": "https://www.repository.cam.ac.uk/items/e5c809fa-dd83-4db5-bab5-2926013d0aa0",
+      "published": "2026",
+      "usedFor": [
+        "BOADICEA model factors",
+        "family-history and genetic-risk context"
+      ]
+    },
+    {
+      "publisher": "British Journal of Cancer",
+      "title": "The breast cancer risk assessment pathway in England",
+      "url": "https://www.nature.com/articles/s41416-025-03329-2",
+      "published": "2026-01-06",
+      "usedFor": [
+        "NICE pathway context",
+        "under-50 assessment gaps",
+        "screening-system limitations"
+      ]
+    }
+  ],
+  "imageSources": [
+    {
+      "articleUrl": "https://www.bbc.co.uk/news/articles/ckgv652r625o",
+      "assetUrl": "https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/d894/live/92ce6890-8f37-11f1-bd9f-4361c301d82b.jpg",
+      "localPath": "assets/news-images/2026-08-04-bad/breast-risk/mammogram.jpg",
+      "caption": "A nurse provides assistance during a mammogram.",
+      "credit": "Getty Images",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized source-image workflow; publisher rights were not independently cleared."
+    },
+    {
+      "articleUrl": "https://www.bbc.co.uk/news/articles/ckgv652r625o",
+      "assetUrl": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/29ce/live/a57503a0-8fc3-11f1-b8ee-9b3c26ad07bb.jpg",
+      "localPath": "assets/news-images/2026-08-04-bad/breast-risk/screening.jpg",
+      "caption": "A person in a medical gown undergoes mammogram screening.",
+      "credit": "BBC News image",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized source-image workflow; publisher rights were not independently cleared."
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Fresh BBC Health lead with peer-reviewed journal and university research context; editorial rank reflects recency, prominence and adverse audience interest, not a platform-wide trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "assetLicense": "BBC source photographs used under the authorized newsroom workflow.",
+    "assetCredit": "Getty Images via BBC News; BBC News image.",
+    "commercialEditorialRightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

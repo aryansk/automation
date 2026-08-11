@@ -1,0 +1,15 @@
+{
+  "deskName": "IndieHouse.io News",
+  "edition": "05 Aug 2026",
+  "openerTitle": "Good morning, bad news",
+  "openerLine": "Good morning, bad news",
+  "openerSub": "Article deep dive · 05 Aug 2026",
+  "openerEnd": 2.137,
+  "endCardStart": 13.129,
+  "endCardReveal": 13.349,
+  "tour": "[{\"countryCode\":\"GB\",\"countryName\":\"United Kingdom\",\"locationName\":\"Isle of Sheppey\",\"kicker\":\"Nature · Conservation\",\"headline\":\"Curlews return to nest at Kent reserve where they hatched\",\"factLine\":\"\",\"deck\":\"Birds from previous releases have paired up and returned to Elmley Nature Reserve, in a boost for the at-risk species.\",\"source\":\"BBC News\",\"imagePath\":\"assets/news-images/2026-08-05-good6/curlew/primary.jpg\",\"imagePathTwo\":\"assets/news-images/2026-08-05-good6/curlew/secondary.jpg\",\"imageAlt\":\"A curlew walks across a field of yellow grass at Elmley Nature Reserve.\",\"imageAltTwo\":\"Curlew keeper Simon Higgs stands in a field with a bird enclosure behind him.\",\"imageCredit\":\"BBC News\",\"imageCreditTwo\":\"BBC News\",\"coordinates\":[0.9,51.39],\"routePoints\":[],\"mentionedCountryCodes\":[],\"affectedCountryCodes\":[],\"focusZoom\":14.9,\"storyType\":\"editorial\",\"mapAnimation\":\"\",\"mapData\":null,\"mapSource\":\"BBC News\",\"animationPlan\":null,\"travelStart\":0.8,\"speakAt\":1.787,\"arrive\":1.787,\"holdUntil\":13.129}]",
+  "narrationAudio": "assets/narration/globe-tour-one-topic.wav",
+  "footerNote": "One story · Context first",
+  "ctaLine": "One story. More context tomorrow.",
+  "ctaSource": "Sources · BBC News"
+}

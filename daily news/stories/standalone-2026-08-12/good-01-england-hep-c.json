@@ -1,0 +1,142 @@
+{
+  "eventId": "england-hep-c-elimination-milestone-2026-08-11",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Health · Public health",
+  "headline": "England on track to become one of first countries to eliminate hepatitis C",
+  "summary": "NHS data shows more than 100,000 people have been treated for the virus since 2015, and deaths have fallen by 36 percent in a decade.",
+  "script": "England is on track to become one of the first countries to eliminate hepatitis C. More than one hundred thousand people have been treated since twenty fifteen. Deaths from the virus have fallen by thirty six percent.",
+  "source": "BBC News",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-12-good/hep-c-elimination/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-12-good/hep-c-elimination/secondary.jpg",
+  "imageAlt": "NHS laboratory blood test tubes — hepatitis C testing programme.",
+  "imageAltTwo": "NHS home-testing kit — free confidential hepatitis C self-test.",
+  "imageCredit": "Getty Images via BBC",
+  "imageCreditTwo": "NHS England",
+  "narrationAudio": "assets/narration/good-01-england-hep-c.wav",
+  "captions": [
+    {
+      "lines": [
+        "England targets",
+        "hepatitis C elimination."
+      ],
+      "highlights": [
+        "elimination"
+      ]
+    },
+    {
+      "lines": [
+        "100,000+ treated",
+        "since 2015."
+      ],
+      "highlights": [
+        "100,000+"
+      ]
+    },
+    {
+      "lines": [
+        "Deaths down",
+        "36 percent."
+      ],
+      "highlights": [
+        "36 percent"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "England set to be one of the first countries to eliminate hepatitis C",
+      "url": "https://www.bbc.co.uk/news/articles/c75gk620r22o",
+      "published": "2026-08-11",
+      "usedFor": [
+        "100,000 treated",
+        "36% death reduction",
+        "80% treatment target"
+      ]
+    },
+    {
+      "publisher": "NHS England",
+      "title": "100,000 people receive treatment to cure deadly hep C virus on NHS in just ten years",
+      "url": "https://www.england.nhs.uk/2026/08/100000-people-receive-treatment-to-cure-deadly-hep-c-virus-on-nhs-in-just-ten-years/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "NHS programme scale",
+        "targets"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major public-health milestone.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in England.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "GB",
+            "coordinates": [
+              -1.5,
+              52.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "NHS programme based in England.",
+        "start": 4.5,
+        "animationId": "country-lock",
+        "mapSource": "NHS England / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "GB",
+            "coordinates": [
+              -1.5,
+              52.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "National elimination milestone.",
+        "start": 9.5,
+        "animationId": "country-fill",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "GB",
+            "name": "England"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "eventId": "moderna-mrna-flu-vaccine-fda-2026-08-05",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Health · Medicine",
+  "headline": "US approves first mRNA flu vaccine from Moderna",
+  "summary": "The shot, called mFLUSIVA, is cleared for adults 50 and older and marks the first mRNA flu vaccine approved in the United States.",
+  "script": "The United States has approved the first messenger RNA flu vaccine. Moderna's shot, called mFLUSIVA, is cleared for adults fifty and older. The technology could make future flu shots faster to update and far quicker to produce.",
+  "source": "Reuters · CNN",
+  "edition": "06 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-06-good/moderna-flu/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-06-good/moderna-flu/secondary.jpg",
+  "imageAlt": "A gloved hand prepares a Moderna mRNA vaccine vial with a syringe.",
+  "imageAltTwo": "Healthcare workers vaccinate a patient at a clinic vaccination station.",
+  "imageCredit": "Getty Images via CNN",
+  "imageCreditTwo": "Getty Images via CNN",
+  "narrationAudio": "assets/narration/good7-2026-08-06-01-moderna-mrna-flu.wav",
+  "captions": [
+    {
+      "lines": [
+        "First mRNA flu vaccine",
+        "approved in the US."
+      ],
+      "highlights": [
+        "First mRNA flu vaccine",
+        "approved"
+      ]
+    },
+    {
+      "lines": [
+        "Moderna's shot cleared",
+        "for adults 50 and older."
+      ],
+      "highlights": [
+        "adults 50 and older"
+      ]
+    },
+    {
+      "lines": [
+        "mRNA could make flu shots",
+        "faster to update."
+      ],
+      "highlights": [
+        "faster to update"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "US FDA approves first mRNA flu shot from Moderna",
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-fda-approves-first-mrna-flu-shot-moderna-2026-08-06/",
+      "published": "2026-08-06",
+      "usedFor": [
+        "FDA approval",
+        "age 50+ eligibility",
+        "mRNA technology context"
+      ]
+    },
+    {
+      "publisher": "CNN",
+      "title": "FDA approves first mRNA-based flu vaccine",
+      "url": "https://www.cnn.com/2026/08/05/health/moderna-mrna-flu-vaccine",
+      "published": "2026-08-05",
+      "usedFor": [
+        "independent corroboration",
+        "mFLUSIVA name",
+        "primary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major public-health milestone with global significance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

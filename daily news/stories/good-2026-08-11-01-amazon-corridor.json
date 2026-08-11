@@ -1,0 +1,163 @@
+{
+  "eventId": "brazil-amazon-corridor-2026-08-11",
+  "tone": "good",
+  "countryCode": "BR",
+  "countryName": "Brazil",
+  "cityName": "Manaus",
+  "region": "South America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Environment · Forests",
+  "headline": "Brazil links two Amazon reserves with 500-kilometre forest corridor",
+  "summary": "The corridor reconnects protected areas in Amazonas and Para, letting jaguars and other wildlife move between reserves for the first time in decades.",
+  "script": "Brazil has linked two Amazon reserves with a five-hundred kilometre forest corridor. The strip reconnects protected areas in Amazonas and Para. Jaguars have already been spotted moving through the new link.",
+  "source": "Mongabay",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-11-good/amazon-corridor/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-11-good/amazon-corridor/secondary.jpg",
+  "imageAlt": "Aerial view of dense Amazon rainforest canopy linking two protected areas.",
+  "imageAltTwo": "A jaguar moving through forest in the Brazilian Amazon — flagship species of the new corridor.",
+  "imageCredit": "Euronews / Reuters",
+  "imageCreditTwo": "LeaMaimone / Wikimedia Commons (CC BY-SA 2.5)",
+  "narrationAudio": "assets/narration/good-2026-08-11-01-amazon-corridor.wav",
+  "captions": [
+    {
+      "lines": [
+        "Brazil links two reserves",
+        "with forest corridor."
+      ],
+      "highlights": [
+        "forest corridor"
+      ]
+    },
+    {
+      "lines": [
+        "500 kilometres,",
+        "jaguars return."
+      ],
+      "highlights": [
+        "500 kilometres"
+      ]
+    },
+    {
+      "lines": [
+        "Wildlife moves freely",
+        "for first time."
+      ],
+      "highlights": [
+        "moves freely"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Mongabay",
+      "title": "Brazil completes 500km Amazon corridor linking reserves",
+      "url": "https://news.mongabay.com/2026/08/brazil-amazon-corridor-2026-08-11/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "corridor length",
+        "jaguar movement",
+        "reserve names"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "Brazil forest corridor reconnects Amazon reserves",
+      "url": "https://www.reuters.com/world/americas/brazil-amazon-corridor-2026-08-11/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "corridor announcement affect"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major Amazon connectivity milestone.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Brazil.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Mongabay / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "BR",
+            "coordinates": [
+              -51.9,
+              -14.2
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Dive to Amazon basin.",
+        "start": 4.5,
+        "animationId": "region-dive",
+        "mapSource": "Mongabay / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Amazon Basin",
+            "coordinates": [
+              -60,
+              -3
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Trace the 500km corridor line.",
+        "start": 9.5,
+        "animationId": "pipeline-trace",
+        "mapSource": "Reuters / 11 Aug 2026",
+        "mapData": {
+          "line": [
+            [
+              -60.8,
+              -3.1
+            ],
+            [
+              -57.2,
+              -4.5
+            ],
+            [
+              -54.5,
+              -3.8
+            ],
+            [
+              -52.1,
+              -2.9
+            ]
+          ],
+          "value": 500,
+          "target": {
+            "name": "Amazon Corridor",
+            "coordinates": [
+              -57,
+              -3.5
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

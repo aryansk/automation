@@ -1,0 +1,61 @@
+{
+  "eventId": "vietnam-small-firm-tax-cut-2026-08-10",
+  "tone": "good",
+  "countryCode": "VN",
+  "countryName": "Vietnam",
+  "cityName": "Hanoi",
+  "coordinates": [
+    105.8342,
+    21.0278
+  ],
+  "region": "Asia",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Business · Tax",
+  "headline": "Vietnam proposes 30% tax cut for small firms and households",
+  "summary": "The proposal would lower income-tax bills as Vietnam tries to support smaller businesses and household enterprises.",
+  "script": "Vietnam has proposed cutting income tax by thirty percent for small firms and business households. The plan would reduce the burden on smaller enterprises as the government tries to keep growth moving.",
+  "source": "Reuters",
+  "edition": "10 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/stories/2026-08-10/vietnam-small-firm-tax-cut/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-10/vietnam-small-firm-tax-cut/secondary.png",
+  "imageAlt": "Vietnamese government infographic about household business taxation.",
+  "imageAltTwo": "An official Vietnamese small-business tax infographic with a storefront illustration.",
+  "imageCredit": "Vietnam Government",
+  "imageCreditTwo": "Vietnam.vn",
+  "narrationAudio": "assets/narration/new-2026-08-10/vietnam-small-firm-tax-cut.wav",
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Vietnam proposes 30% income-tax cut for small firms and households",
+      "url": "https://www.reuters.com/world/asia-pacific/vietnam-proposes-30-income-tax-cut-small-firms-business-households-2026-08-10/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "tax-cut proposal",
+        "small-firm and household scope"
+      ]
+    },
+    {
+      "publisher": "Vietnam Government",
+      "title": "Official tax policy and household business guidance",
+      "url": "https://xaydungchinhsach.chinhphu.vn/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "official tax context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "A clear pocket-of-relief business policy with official visual context; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

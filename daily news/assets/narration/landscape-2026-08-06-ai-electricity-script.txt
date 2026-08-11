@@ -1,0 +1,49 @@
+In February 2026, an auction changed how the AI boom is measured.
+
+PJM, the grid operator for thirteen American states, held its annual capacity auction. The price cleared at a record three hundred and twenty-nine dollars per megawatt-day — the highest ever allowed — because, for the first time, the grid could not fully guarantee the power it promised.
+
+Here is the part that surprised people. The auction monitor says data centres drove about six point three billion dollars of that cost — thirty-eight percent of the entire bill.
+
+That is the question we are going to unpack: can the world's grids grow as quickly as AI's demand for electricity?
+
+The short answer is that the constraint on AI has moved. It used to be chips. Now it is cables.
+
+Start with the load itself.
+
+A modern AI data centre is a building filled with thousands of servers running around the clock, with liquid cooling and backup power stacked on top. One large campus can draw as much electricity as a small city — around a gigawatt or more.
+
+Northern Virginia, the world's largest data-centre cluster, now consumes more power than some small countries. The servers that answer your prompts are, quite literally, a city-sized machine.
+
+This is the definition we need: a data centre is not a building. It is a demand curve.
+
+And that demand curve is climbing fast. The International Energy Agency now projects global data-centre electricity use will roughly double by 2030 — from around five hundred terawatt-hours to about nine hundred and fifty — with AI-specific capacity tripling over the same period.
+
+That is not a rounding error. That is like adding a second Japan to the world's electricity system.
+
+Now follow the chain.
+
+The AI stack runs chips, memory, storage and cooling, and every layer is electricity. The bottleneck is no longer the chip plant — it is the grid connection, the transformer, the transmission line that brings power to the machine.
+
+Here is where the market comes in.
+
+In the United States, the queue of projects waiting to connect to the grid holds roughly two thousand six hundred gigawatts of requests. Median waits have stretched past five years. A data centre cannot wait five years, so the hyperscalers are going around the queue.
+
+Microsoft struck a deal to restart Three Mile Island. Amazon backed X-energy's small modular reactors. Google signed up Kairos, and Meta chose TerraPower. When the grid cannot deliver fast enough, the biggest buyers are building their own power plants.
+
+That is why markets care. Electricity is becoming the binding input for the most valuable companies on Earth, and whoever controls power supply is capturing the tollbooth.
+
+So what is the honest uncertainty?
+
+Nuclear is clean and steady, but slow and expensive. Gas is fast, but it is a fossil fuel and it is pricey. Renewables are getting cheaper, but they need land, transmission and storage. No single answer can scale fast enough on its own.
+
+The signal to watch is not the headline number. It is the behaviour underneath it.
+
+Watch whether utilities can actually connect data centres without breaking the grid for everyone else. Watch whether the new nuclear and gas deals come online on time. Watch whether efficiency gains can slow the curve — because AI can use less electricity per task, but it keeps finding more tasks.
+
+The AI race was about models. Then it was about chips. Now it is about megawatts.
+
+The grid was built for a world where power grew a few percent a year. AI wants a world where it can grow on demand.
+
+That is the tension. And in 2026, it has a price tag — a record auction, a two-thousand-six-hundred-gigawatt queue, and a race to build the power plants that will decide who gets to compute.
+
+The question for the next phase of the AI economy is not whether the models get better. It is whether the lights stay on while they do.

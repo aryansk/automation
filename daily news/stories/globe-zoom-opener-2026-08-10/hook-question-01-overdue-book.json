@@ -1,0 +1,91 @@
+{
+  "eventId": "australian-library-book-150-years-overdue-2026-08-07",
+  "tone": "good",
+  "countryCode": "AU",
+  "countryName": "Australia",
+  "cityName": "Launceston",
+  "region": "Oceania",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "History · Books",
+  "headline": "Book hidden in fireplace returned to Australian library 150 years overdue",
+  "summary": "A book hidden in a fireplace has been returned to an Australian library after roughly 150 years, possibly from a stonemason's collection.",
+  "script": "A book hidden inside a fireplace has finally returned to an Australian library, one hundred fifty years overdue. It may have been borrowed by a stonemason who worked on London's Houses of Parliament.",
+  "source": "BBC News",
+  "edition": "10 Aug 2026",
+  "storyNumber": "01",
+  "coordinates": [
+    147.14,
+    -41.44
+  ],
+  "imageOne": "assets/news-images/2026-08-10-hook-test/question-01-overdue-book/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-10-hook-test/question-01-overdue-book/secondary.jpg",
+  "imageAlt": "A historic book found hidden inside a fireplace and returned to a library.",
+  "imageAltTwo": "A second image connected to the long-overdue library book.",
+  "imageCredit": "BBC News",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/hook-test-2026-08-10/question-01-overdue-book.wav",
+  "captions": [
+    {
+      "lines": [
+        "Can a 150-year-old",
+        "book go home?"
+      ],
+      "highlights": [
+        "150-year-old book"
+      ]
+    },
+    {
+      "lines": [
+        "It was hidden inside",
+        "a fireplace."
+      ],
+      "highlights": [
+        "hidden inside"
+      ]
+    },
+    {
+      "lines": [
+        "Now it is back",
+        "at the library."
+      ],
+      "highlights": [
+        "back at the library"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Book hidden in fireplace returned to library 150 years overdue",
+      "url": "https://www.bbc.co.uk/news/articles/c39eprxln0go?at_medium=RSS&at_campaign=rss",
+      "published": "2026-08-07",
+      "usedFor": [
+        "150-year overdue return",
+        "fireplace discovery",
+        "stonemason theory"
+      ]
+    },
+    {
+      "publisher": "Libraries Tasmania",
+      "title": "Australian library context",
+      "url": "https://libraries.tas.gov.au/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "library context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "A surprising object-return contrast makes the question opening easy to compare with result and number hooks; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

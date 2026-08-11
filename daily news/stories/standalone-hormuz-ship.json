@@ -1,0 +1,219 @@
+{
+  "eventId": "uae-adnoc-vessel-missile-hormuz-2026-08-08-ship-cut",
+  "tone": "bad",
+  "countryCode": "AE",
+  "countryName": "United Arab Emirates",
+  "cityName": "Abu Dhabi",
+  "region": "Strait of Hormuz",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Missile strike \u00b7 Hormuz",
+  "headline": "Missile hits ADNOC tanker in the world's tightest oil chokepoint",
+  "summary": "The strike in the Strait of Hormuz shut the lane that carries a fifth of the world's oil, with vessels shown crowding the narrow passage off Oman.",
+  "script": "The United Arab Emirates says Iran hit its ADNOC tanker with a missile in the Strait of Hormuz. The strait carries a fifth of the world's oil. No crew were hurt, but tankers crowd the chokepoint as Gulf states stay on alert.",
+  "source": "Reuters",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "focusZoom": 9.8,
+  "imageOne": "assets/news-images/2026-08-09-bad/adnoc-tanker/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-09-bad/adnoc-tanker/secondary.jpg",
+  "imageAlt": "Oil tankers crowding the Strait of Hormuz off Oman \u2014 the narrow waterway at the centre of the strike.",
+  "imageAltTwo": "A large crude tanker under way in the Strait of Hormuz.",
+  "imageCredit": "Reuters / Al Jazeera",
+  "imageCreditTwo": "Reuters",
+  "narrationAudio": "assets/narration/standalone-hormuz-ship.wav",
+  "captions": [
+    {
+      "lines": [
+        "Missile hits ADNOC",
+        "tanker in Hormuz."
+      ],
+      "highlights": [
+        "Missile hits"
+      ]
+    },
+    {
+      "lines": [
+        "Strait carries a fifth",
+        "of world's oil."
+      ],
+      "highlights": [
+        "fifth of world's oil"
+      ]
+    },
+    {
+      "lines": [
+        "Tankers crowd the",
+        "chokepoint now."
+      ],
+      "highlights": [
+        "crowd the chokepoint"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Al Jazeera",
+      "title": "UAE says Iran targeted ADNOC tanker in Strait of Hormuz, no casualties",
+      "url": "https://www.aljazeera.com/news/2026/8/8/uae-says-iran-targeted-adnoc-tanker-in-hormuz-no-casualties-2",
+      "published": "2026-08-08",
+      "usedFor": [
+        "missile attack on ADNOC vessel",
+        "no casualties",
+        "Gulf condemnation"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "UAE Says Iran Attacked ADNOC Vessel With Missile in Strait of Hormuz",
+      "url": "https://www.usnews.com/news/world/articles/2026-08-08/uae-says-iran-attacked-adnoc-vessel-with-missile-in-strait-of-hormuz",
+      "published": "2026-08-08",
+      "usedFor": [
+        "corroboration",
+        "piracy accusation"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Standalone ship cut \u2014 same verified event, re-edited for punchier visual rhythm.",
+    "researchDate": "09 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "dive",
+        "scriptSection": "opener",
+        "scriptCue": "HARD ZOOM from globe to the chokepoint \u2014 establish how narrow it is.",
+        "start": 0,
+        "animationId": "region-dive",
+        "mapSource": "Al Jazeera / 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Strait of Hormuz",
+            "country": "UAE / Iran",
+            "code": "AE",
+            "coordinates": [
+              56.5,
+              26.5
+            ]
+          },
+          "relatedCountryCodes": [
+            "AE",
+            "IR",
+            "OM"
+          ]
+        }
+      },
+      {
+        "id": "choke",
+        "scriptSection": "location",
+        "scriptCue": "Lock the strike point \u2014 routes converge and the label snaps to the strait.",
+        "start": 3.8,
+        "animationId": "chokepoint-focus",
+        "mapSource": "Al Jazeera / 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Strait of Hormuz",
+            "country": "UAE / Iran",
+            "code": "AE",
+            "coordinates": [
+              56.5,
+              26.5
+            ]
+          },
+          "routes": [
+            {
+              "points": [
+                [
+                  54.37,
+                  24.45
+                ],
+                [
+                  56.5,
+                  26.5
+                ],
+                [
+                  59.6,
+                  25.3
+                ]
+              ],
+              "value": 60
+            }
+          ]
+        }
+      },
+      {
+        "id": "lanes",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Pull back to shipping lanes at risk \u2014 tankers fanning to Asia and Europe as the ship photo takes over.",
+        "start": 8.2,
+        "animationId": "shipping-lanes",
+        "mapSource": "Reuters / 08 Aug 2026",
+        "mapData": {
+          "routes": [
+            {
+              "points": [
+                [
+                  54.37,
+                  24.45
+                ],
+                [
+                  56.5,
+                  26.5
+                ],
+                [
+                  103.8,
+                  1.35
+                ]
+              ],
+              "value": 70
+            },
+            {
+              "points": [
+                [
+                  54.37,
+                  24.45
+                ],
+                [
+                  56.5,
+                  26.5
+                ],
+                [
+                  4.47,
+                  51.92
+                ]
+              ],
+              "value": 50
+            }
+          ],
+          "points": [
+            {
+              "name": "HORMUZ",
+              "coordinates": [
+                56.5,
+                26.5
+              ]
+            },
+            {
+              "name": "ADNOC TANKER",
+              "coordinates": [
+                56.7,
+                26.1
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

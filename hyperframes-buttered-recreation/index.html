@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <title>Small Actions Leave Ripples</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #090b0d; }
+      body { font-family: "IBM Plex Mono", monospace; }
+      #main { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #090b0d; }
+      #main > [data-composition-src] { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; }
+      #main > [data-composition-src] + [data-composition-src] { }
+      audio { display: none; }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-ms6j" id="main" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="49.7">
+      <div data-hf-id="hf-5gvr" id="el-scene00" data-composition-id="scene00" data-composition-src="compositions/scene-00-opener.html" data-start="0" data-duration="4.0" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-rzqx" id="el-scene01" data-composition-id="scene01" data-composition-src="compositions/scene-01-sky.html" data-start="4.0" data-duration="6.5" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-jjgm" id="el-scene02" data-composition-id="scene02" data-composition-src="compositions/scene-02-coral.html" data-start="10.5" data-duration="6.5" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-5x5q" id="el-scene03" data-composition-id="scene03" data-composition-src="compositions/scene-03-artists.html" data-start="17.0" data-duration="7.0" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-44th" id="el-scene04" data-composition-id="scene04" data-composition-src="compositions/scene-04-reef.html" data-start="24.0" data-duration="8.5" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-hkbd" id="el-scene05" data-composition-id="scene05" data-composition-src="compositions/scene-05-collage.html" data-start="32.5" data-duration="9.0" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-u00g" id="el-scene06" data-composition-id="scene06" data-composition-src="compositions/scene-06-close.html" data-start="41.5" data-duration="8.2" data-track-index="1" data-width="1080" data-height="1920"></div>
+
+      <audio data-hf-id="hf-vpfn" id="main-bgm" src="assets/bgm/bed-49s.wav" data-start="0" data-duration="49.7" data-track-index="10" data-volume="0.28"></audio>
+      <audio data-hf-id="hf-qu0c" id="sfx-click-00" src="assets/sfx/click-soft.mp3" data-start="0.48" data-duration="0.36" data-track-index="11" data-volume="0.55"></audio>
+      <audio data-hf-id="hf-gy4s" id="sfx-key-00" src="assets/sfx/key-press.mp3" data-start="1.18" data-duration="0.42" data-track-index="11" data-volume="0.28"></audio>
+      <audio data-hf-id="hf-dxms" id="sfx-click-01" src="assets/sfx/click-soft.mp3" data-start="2.12" data-duration="0.36" data-track-index="11" data-volume="0.55"></audio>
+      <audio data-hf-id="hf-qh5z" id="sfx-whoosh-00" src="assets/sfx/whoosh-short.mp3" data-start="3.58" data-duration="0.57" data-track-index="12" data-volume="0.32"></audio>
+      <audio data-hf-id="hf-8b30" id="sfx-whoosh-01" src="assets/sfx/whoosh-cinematic.mp3" data-start="9.98" data-duration="0.86" data-track-index="12" data-volume="0.28"></audio>
+      <audio data-hf-id="hf-j1xx" id="sfx-click-02" src="assets/sfx/click-soft.mp3" data-start="10.84" data-duration="0.36" data-track-index="11" data-volume="0.48"></audio>
+      <audio data-hf-id="hf-iky4" id="sfx-click-03" src="assets/sfx/click-soft.mp3" data-start="12.02" data-duration="0.36" data-track-index="11" data-volume="0.48"></audio>
+      <audio data-hf-id="hf-4zg5" id="sfx-whoosh-02" src="assets/sfx/whoosh-short.mp3" data-start="16.04" data-duration="0.57" data-track-index="12" data-volume="0.26"></audio>
+      <audio data-hf-id="hf-22bu" id="sfx-click-04" src="assets/sfx/click-soft.mp3" data-start="17.24" data-duration="0.36" data-track-index="11" data-volume="0.48"></audio>
+      <audio data-hf-id="hf-t044" id="sfx-key-01" src="assets/sfx/key-press.mp3" data-start="18.12" data-duration="0.42" data-track-index="11" data-volume="0.25"></audio>
+      <audio data-hf-id="hf-8fdu" id="sfx-whoosh-03" src="assets/sfx/whoosh-short.mp3" data-start="23.48" data-duration="0.57" data-track-index="12" data-volume="0.28"></audio>
+      <audio data-hf-id="hf-svvw" id="sfx-whoosh-04" src="assets/sfx/whoosh-cinematic.mp3" data-start="23.98" data-duration="0.86" data-track-index="13" data-volume="0.2"></audio>
+      <audio data-hf-id="hf-pue1" id="sfx-impact-00" src="assets/sfx/impact-bass-1.mp3" data-start="30.78" data-duration="2.12" data-track-index="13" data-volume="0.24"></audio>
+      <audio data-hf-id="hf-sjex" id="sfx-click-05" src="assets/sfx/click-soft.mp3" data-start="32.82" data-duration="0.36" data-track-index="11" data-volume="0.5"></audio>
+      <audio data-hf-id="hf-m07a" id="sfx-click-06" src="assets/sfx/click-soft.mp3" data-start="34.00" data-duration="0.36" data-track-index="11" data-volume="0.5"></audio>
+      <audio data-hf-id="hf-p1mg" id="sfx-key-02" src="assets/sfx/key-press.mp3" data-start="35.16" data-duration="0.42" data-track-index="11" data-volume="0.25"></audio>
+      <audio data-hf-id="hf-z57o" id="sfx-whoosh-05" src="assets/sfx/whoosh-short.mp3" data-start="40.98" data-duration="0.57" data-track-index="12" data-volume="0.24"></audio>
+      <audio data-hf-id="hf-9k03" id="sfx-chime-00" src="assets/sfx/chime.mp3" data-start="48.18" data-duration="1.52" data-track-index="13" data-volume="0.42"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

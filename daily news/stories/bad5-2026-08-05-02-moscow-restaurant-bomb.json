@@ -1,0 +1,95 @@
+{
+  "eventId": "moscow-restaurant-bomb-2026-08-05",
+  "tone": "bad",
+  "countryCode": "RU",
+  "countryName": "Russia",
+  "cityName": "Moscow",
+  "coordinates": [
+    37.6173,
+    55.7558
+  ],
+  "region": "Europe",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Attack",
+  "headline": "Bomb kills three at a Moscow restaurant, state media say",
+  "summary": "An improvised device detonated at the Balzi Rossi restaurant on Kudrinskaya Square, killing three and injuring 21; Russia's embassy in Italy blamed Ukraine.",
+  "script": "A bomb has killed three people at an Italian restaurant in central Moscow, injuring more than twenty. Officials say a woman tried to enter carrying the device, and a guard stopped her. Russia blames Ukraine, which has not commented.",
+  "source": "BBC · AP",
+  "edition": "05 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-05-bad/moscow-bomb/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-bad/moscow-bomb/secondary.jpg",
+  "imageAlt": "A Russian National Guard vehicle parked outside the restaurant after the blast.",
+  "imageAltTwo": "Security officers stand behind police tape at a nighttime emergency scene.",
+  "imageCredit": "BBC News image",
+  "imageCreditTwo": "BBC News image",
+  "narrationAudio": "assets/narration/tour/bad5-2026-08-05-02-moscow-restaurant-bomb.wav",
+  "captions": [
+    {
+      "lines": [
+        "Bomb kills three at",
+        "a Moscow restaurant."
+      ],
+      "highlights": [
+        "Bomb",
+        "Moscow"
+      ]
+    },
+    {
+      "lines": [
+        "More than twenty people",
+        "were injured."
+      ],
+      "highlights": [
+        "twenty",
+        "injured"
+      ]
+    },
+    {
+      "lines": [
+        "Russia blames Ukraine",
+        "for the attack."
+      ],
+      "highlights": [
+        "Russia",
+        "Ukraine"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Three killed after bomb detonated at Moscow restaurant, state media say",
+      "url": "https://www.bbc.co.uk/news/articles/c86n4ljxp63o",
+      "published": "2026-08-03",
+      "usedFor": [
+        "casualty figures",
+        "primary context",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Steve Rosenberg at the Moscow restaurant where bomb killed three",
+      "url": "https://www.bbc.com/news/articles/cdx8qp451lko",
+      "published": "2026-08-03",
+      "usedFor": [
+        "on-the-ground scene detail",
+        "secondary image",
+        "Russian embassy claim"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Major international-feed story with on-the-ground BBC reporting; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

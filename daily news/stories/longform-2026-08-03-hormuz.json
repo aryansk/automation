@@ -1,0 +1,53 @@
+{
+  "countryCode": "IR",
+  "countryName": "Iran",
+  "cityName": "Strait of Hormuz",
+  "region": "Middle East · Shipping",
+  "kicker": "ONE STORY / EXPLAINER",
+  "headline": "Why the Strait of Hormuz is still the pressure point in the Iran deal",
+  "summary": "A proposed deal says Hormuz should reopen, but Iran says the waterway will not simply return to its prewar status.",
+  "script": "Most people will never see the Strait of Hormuz. It is a narrow passage between Iran and Oman. But when ships slow down here, the consequences travel far beyond the Gulf. On August 2, President Donald Trump said the United States would hold off on new strikes after claiming the outlines of a deal with Iran. He said the deal would include opening Hormuz. Iran’s foreign ministry said there was no agreement to return the strait to its prewar status. So the headline is not that the strait is open. It is that control of this map is still being negotiated. Start with the geography. Tankers leaving the Persian Gulf have to pass through this gateway before reaching the Gulf of Oman and the Arabian Sea. The traffic then fans out toward India, China, South Korea and Japan. The route is short on the map, but there are few practical substitutes. That is why a local incident becomes a global story. AP reported drone attacks in Kuwait and a tanker hit near Oman. And AP says Iraq is now trying to move more oil north through a pipeline to Turkey, targeting at least seven hundred and fifty thousand barrels a day — an alternative, but not a replacement for Gulf shipping. The numbers explain the leverage. The Energy Information Administration estimates about twenty million barrels of oil per day crossed Hormuz in 2024 — about a fifth of global petroleum liquids consumption. About a fifth of global liquefied natural gas trade also passed through it, much of it headed to Asia. So what happens next? A deal could reopen the route, but the positions are still opposed. Washington wants free passage without a new toll regime. Tehran says the postwar arrangement cannot simply go back to the old one. Until those conditions are settled, every tanker, insurance quote and alternate pipeline is part of the negotiation. This is the pressure point: not a dot on a map, but the switch between a regional war and a worldwide energy problem.",
+  "source": "AP · EIA",
+  "edition": "03 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-03/hormuz-shipping-ap.jpg",
+  "imageTwo": "assets/news-images/2026-08-03/trump-air-force-one-ap.jpg",
+  "imageAlt": "Cargo ships seen near the Strait of Hormuz from the United Arab Emirates.",
+  "imageAltTwo": "President Donald Trump speaks to reporters onboard Air Force One.",
+  "imageCredit": "AP Photo / Fatima Shbair · rights review required",
+  "imageCreditTwo": "AP Photo / Jacquelyn Martin · rights review required",
+  "imageSourceOne": "https://apnews.com/article/oil-prices-iran-war-trump-194ab3d3130bb44de445cf3d05954beb",
+  "imageSourceTwo": "https://apnews.com/article/trump-iran-strait-hormuz-israel-gaza-mideast-f4c225f6667d9fd171616304701825a0",
+  "coordinates": [56.45, 26.56],
+  "focusZoom": 14.9,
+  "mentionedCountryCodes": ["OM", "KW", "IQ", "TR", "IN", "CN", "KR", "JP"],
+  "routeLabel": "Hormuz → India → China → South Korea → Japan",
+  "routePoints": [
+    { "label": "Hormuz", "coordinates": [56.45, 26.56] },
+    { "label": "India", "coordinates": [72.8777, 19.076] },
+    { "label": "China", "coordinates": [121.4737, 31.2304] },
+    { "label": "South Korea", "coordinates": [129.0756, 35.1795] },
+    { "label": "Japan", "coordinates": [139.6917, 35.6895] }
+  ],
+  "routeNodes": [
+    { "label": "IRAN", "detail": "north shore", "x": 72, "y": 162 },
+    { "label": "OMAN", "detail": "south shore", "x": 250, "y": 246 },
+    { "label": "HORMUZ", "detail": "the gateway", "x": 426, "y": 188 },
+    { "label": "INDIA", "detail": "first major market", "x": 603, "y": 238 },
+    { "label": "EAST ASIA", "detail": "the main destination", "x": 760, "y": 142 }
+  ],
+  "chapters": [
+    { "kicker": "01 / FIND THE GATEWAY", "title": "The map starts at a narrow mouth", "body": "Hormuz sits between Iran and Oman, linking the Persian Gulf to the Gulf of Oman and the Arabian Sea.", "tag": "26.6° N / 56.5° E", "graphic": "location" },
+    { "kicker": "02 / FOLLOW THE ROUTE", "title": "The line does not stop at Hormuz", "body": "The sea lane carries energy out of the Gulf, then fans toward India and East Asia. A short passage becomes a long supply chain.", "tag": "GULF → ASIA", "graphic": "route" },
+    { "kicker": "03 / WHEN THE MAP BECOMES NEWS", "title": "One incident changes the risk calculation", "body": "AP reported drone attacks in Kuwait and a tanker hit near Oman. Iraq is also trying to move more oil north through Turkey.", "tag": "REPORTED / 02 AUG 2026", "graphic": "incidents" },
+    { "kicker": "04 / WHY MARKETS CARE", "title": "One chokepoint, very few substitutes", "body": "The Energy Information Administration estimates that about twenty million barrels of oil a day crossed Hormuz in 2024.", "tag": "EIA / 2024 FLOW", "graphic": "stats" },
+    { "kicker": "05 / THE NEXT NEGOTIATION", "title": "Open, restricted, or delayed?", "body": "A proposed deal could reopen the route. But Washington and Tehran still disagree over how passage should be managed after the war.", "tag": "NO CONFIRMED REOPENING", "graphic": "deal" }
+  ],
+  "sources": [
+    { "label": "AP / 02 AUG 2026", "url": "https://apnews.com/article/trump-iran-strait-hormuz-israel-gaza-mideast-f4c225f6667d9fd171616304701825a0" },
+    { "label": "AP / DEAL EXPLAINER", "url": "https://apnews.com/article/iran-us-war-interim-peace-deal-explainer-246fec7874bd4d9a270de32642b6f19c" },
+    { "label": "AP / IRAQ–TURKEY", "url": "https://apnews.com/article/iraq-turkey-oil-pipeline-agreement-f930588c201d6cb36c1cedb26a1f9331" },
+    { "label": "EIA / CHOKEPOINT DATA", "url": "https://www.eia.gov/outlooks/steo/report/energysecurity/article.php" }
+  ],
+  "narrationAudio": "assets/narration/longform-2026-08-03-hormuz.wav"
+}

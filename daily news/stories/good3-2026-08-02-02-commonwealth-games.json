@@ -1,0 +1,48 @@
+{
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Glasgow",
+  "coordinates": [-4.2518, 55.8642],
+  "region": "Europe · Commonwealth",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Sport · Community",
+  "headline": "Glasgow closes Commonwealth Games after a 74-nation celebration",
+  "summary": "Scotland hosts the final day of an 11-day event with more than 3,000 athletes, six integrated Para sports, and a streamlined venue plan after Australia withdrew as host.",
+  "script": "Glasgow is showing how a major sporting event can use existing venues after Australia withdrew as host. Athletes from seventy-four nations are competing across ten sports and six Para sports. The practical payoff is less new construction and a more accessible event.",
+  "source": "AP · GOV.UK",
+  "edition": "02 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-02-good/commonwealth-games-editorial.png",
+  "imageTwo": "assets/news-images/2026-08-02-good/commonwealth-games-editorial-detail.png",
+  "imageAlt": "Editorial illustration of international athletes in a Glasgow arena.",
+  "imageAltTwo": "Editorial crop of athletes celebrating with spectators at an international sports event.",
+  "imageCredit": "Editorial illustration · AI-generated",
+  "imageCreditTwo": "Editorial illustration · AI-generated",
+  "narrationAudio": "assets/narration/tour/good3-2026-08-02-02-commonwealth-games.wav",
+  "routeLabel": "Scotland ↔ Australia",
+  "mentionedCountryCodes": ["AU"],
+  "routePoints": [
+    { "label": "Scotland", "coordinates": [-4.2518, 55.8642] },
+    { "label": "Australia", "coordinates": [133.8, -25.3] }
+  ],
+  "captions": [
+    {
+      "lines": ["Glasgow's Commonwealth Games", "reach their final day."],
+      "highlights": ["Glasgow", "final day"]
+    },
+    {
+      "lines": ["Athletes from 74 nations and territories", "are taking part."],
+      "highlights": ["74 nations", "territories"]
+    },
+    {
+      "lines": ["Australia withdrew as host;", "Scotland stepped in."],
+      "highlights": ["Australia", "Scotland"]
+    },
+    {
+      "lines": ["Ten sports and six Para sports", "share existing venues."],
+      "highlights": ["six Para sports", "existing venues"]
+    }
+  ],
+  "focusZoom": 14.8
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head></head>
+  <body>
+    <template>
+      <style>
+        #scene00-root { position:absolute; inset:0; overflow:hidden; background:#090b0d; color:#f2eee1; font-family:"IBM Plex Mono", monospace; }
+        #scene00-root .plate { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+        #scene00-root .veil { position:absolute; inset:0; background:radial-gradient(circle at 50% 48%, transparent 0 25%, rgba(9,11,13,.12) 62%, rgba(9,11,13,.64) 100%); }
+        #scene00-root .word { position:absolute; opacity:0; white-space:nowrap; font-family:"EB Garamond", serif; font-size:72px; font-style:italic; letter-spacing:-.035em; line-height:.9; }
+        #scene00-root .word.small { font-size:46px; color:#f2d476; }
+        #scene00-root .meta { position:absolute; left:82px; top:160px; color:#f2eee1; font-size:22px; letter-spacing:4px; opacity:.82; }
+        #scene00-root .stamp { position:absolute; right:74px; bottom:124px; color:#f2d476; font-size:20px; letter-spacing:2px; opacity:.7; }
+        #scene00-root .seal { position:absolute; left:519px; top:939px; width:42px; height:42px; border:3px solid #f2d476; border-radius:50%; opacity:0; }
+        #scene00-root .cross { position:absolute; width:50px; height:50px; left:82px; bottom:110px; opacity:.72; }
+        #scene00-root .cross::before, #scene00-root .cross::after { content:""; position:absolute; background:#d96d58; }
+        #scene00-root .cross::before { left:23px; top:0; width:3px; height:50px; }
+        #scene00-root .cross::after { left:0; top:23px; width:50px; height:3px; }
+      </style>
+      <div data-hf-id="hf-f9p8" id="scene00-root" data-composition-id="scene00" data-width="1080" data-height="1920" data-duration="4.0">
+        <img data-hf-id="hf-llmu" id="scene00-art" class="plate" src="assets/illustrations/space-earth.svg" alt="">
+        <div data-hf-id="hf-tz83" id="scene00-veil" class="veil"></div>
+        <div data-hf-id="hf-907e" id="scene00-meta" class="meta">FIELD NOTE / 00</div>
+        <div data-hf-id="hf-vyd0" id="scene00-word-a" class="word small" style="left:106px;top:514px;">small</div>
+        <div data-hf-id="hf-3l6s" id="scene00-word-b" class="word" style="left:740px;top:620px;">actions</div>
+        <div data-hf-id="hf-swak" id="scene00-word-c" class="word" style="left:126px;top:1282px;">leave</div>
+        <div data-hf-id="hf-gq2m" id="scene00-word-d" class="word" style="left:620px;top:1374px;">ripples</div>
+        <div data-hf-id="hf-miiz" id="scene00-seal" class="seal"></div>
+        <div data-hf-id="hf-fob5" id="scene00-cross" class="cross"></div>
+        <div data-hf-id="hf-2vig" id="scene00-stamp" class="stamp">A MARK / A MOVEMENT / A START</div>
+      </div>
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+        tl.fromTo("#scene00-art", { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1.0, duration: 0.72 }, 0);
+        tl.fromTo("#scene00-veil", { opacity: 0 }, { opacity: 1, duration: 0.9, ease: "sine.out" }, 0);
+        tl.fromTo("#scene00-meta", { opacity: 0, x: -34 }, { opacity: .82, x: 0, duration: .45 }, .16);
+        tl.fromTo("#scene00-seal", { opacity: 0, scale: .15 }, { opacity: 1, scale: 1, duration: .48, ease: "back.out(1.2)" }, .28);
+        tl.fromTo("#scene00-word-a", { opacity: 0, x: -46, rotation: -7 }, { opacity: 1, x: 0, rotation: -3, duration: .48 }, .54);
+        tl.fromTo("#scene00-word-b", { opacity: 0, x: 52, rotation: 4 }, { opacity: 1, x: 0, rotation: 2, duration: .55 }, .82);
+        tl.fromTo("#scene00-word-c", { opacity: 0, y: 34, rotation: -5 }, { opacity: 1, y: 0, rotation: -2, duration: .52 }, 1.34);
+        tl.fromTo("#scene00-word-d", { opacity: 0, y: -30, rotation: 5 }, { opacity: 1, y: 0, rotation: 2, duration: .54 }, 1.74);
+        tl.to("#scene00-seal", { scale: 1.18, opacity: .38, duration: .92, ease: "sine.inOut" }, 2.02);
+        tl.to("#scene00-word-a, #scene00-word-b, #scene00-word-c, #scene00-word-d", { y: 4, duration: 1.35, ease: "sine.inOut" }, 2.0);
+        tl.fromTo("#scene00-cross, #scene00-stamp", { opacity: 0 }, { opacity: 1, duration: .4 }, 2.58);
+        window.__timelines["scene00"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

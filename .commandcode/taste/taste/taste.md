@@ -1,0 +1,7 @@
+# Taste
+- Prefers an autonomous working style: repeatedly says "continue", "do that", "I authorize you to do everything on your own", or issues a terse task command like "make me todays news shorts" or "do the next 5 prs" with no further instruction — expects the agent to infer the requirements from the established workflow and push the full multi-step job through end-to-end without stopping to ask permission or clarify format, story selection, or tone details. Confidence: 0.98
+- Before setting up new capabilities (e.g., scheduled tasks), wants a brief explanation of how the mechanism works, then an interview to gather requirements. Confidence: 0.7
+- Likes to be shown concrete options before committing to decisions (e.g., YouTube channel title options, 3D globe model options). Confidence: 0.7
+- Wants long-running projects to maintain state files (plan/agent MD docs, memory of what's done vs. what's next) so new threads/agents can resume seamlessly. Confidence: 0.85
+- Runs multiple YouTube channels and expects the agent to confirm which channel a piece of content belongs to when there is ambiguity, rather than guessing. Confidence: 0.7
+- When the user asks to see finished output (e.g., "show me the videos"), open the files in a local viewer (QuickTime) immediately rather than just reporting paths or describing them; show completed items as soon as they're ready instead of waiting for the whole batch. Confidence: 0.6

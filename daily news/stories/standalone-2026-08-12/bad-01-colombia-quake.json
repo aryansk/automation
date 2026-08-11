@@ -1,0 +1,145 @@
+{
+  "eventId": "colombia-choco-earthquake-74-2026-08-10",
+  "tone": "bad",
+  "countryCode": "CO",
+  "countryName": "Colombia",
+  "cityName": "Quibdó",
+  "region": "South America",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Earthquake · Disaster",
+  "headline": "Deadly 7.4 earthquake strikes western Colombia, at least 169 dead",
+  "summary": "The quake hit Chocó department, collapsing buildings in Quibdó, Cali and Pereira as rescuers search for survivors and the death toll is expected to rise.",
+  "script": "A seven point four earthquake has struck western Colombia. The quake hit the Choco region and flattened buildings in Quibdo. At least one hundred sixty nine people are dead, and rescuers say the toll will rise.",
+  "source": "BBC News",
+  "edition": "11 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-12-bad/colombia-quake-choco/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-12-bad/colombia-quake-choco/secondary.jpg",
+  "imageAlt": "Rescue workers searching through rubble of collapsed buildings in Colombia.",
+  "imageAltTwo": "Damaged street in Quibdó after the earthquake.",
+  "imageCredit": "Reuters / AP",
+  "imageCreditTwo": "AFP / Getty",
+  "narrationAudio": "assets/narration/bad-01-colombia-quake.wav",
+  "captions": [
+    {
+      "lines": [
+        "7.4 quake hits",
+        "western Colombia."
+      ],
+      "highlights": [
+        "7.4"
+      ]
+    },
+    {
+      "lines": [
+        "At least 169 dead",
+        "in Chocó."
+      ],
+      "highlights": [
+        "169 dead"
+      ]
+    },
+    {
+      "lines": [
+        "Rescuers dig",
+        "through rubble."
+      ],
+      "highlights": [
+        "rescuers"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Watch: Family escapes home during Colombia earthquake",
+      "url": "https://www.bbc.com/news/videos/cwyl3w1e6zxo",
+      "published": "2026-08-11",
+      "usedFor": [
+        "169 dead",
+        "state of emergency"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "Colombia earthquake: Death toll mounts as rescuers search collapsed buildings",
+      "url": "https://www.reuters.com/world/colombia-earthquake-live-reports-deaths-collapsed-buildings-after-powerful-2026-08-10/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "magnitude 7.4",
+        "Quibdó/Chocó impact"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major disaster with rising toll.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Colombia.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 10 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "CO",
+            "coordinates": [
+              -74,
+              4
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Epicenter in Chocó, near Quibdó.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Reuters / 10 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Quibdó",
+            "coordinates": [
+              -76.66,
+              5.69
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Earthquake ripple from epicenter.",
+        "start": 9.5,
+        "animationId": "earthquake-ripple",
+        "mapSource": "BBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Quibdó",
+            "coordinates": [
+              -76.66,
+              5.69
+            ]
+          },
+          "magnitude": 7.4
+        }
+      }
+    ]
+  }
+}

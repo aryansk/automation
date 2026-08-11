@@ -1,0 +1,139 @@
+{
+  "eventId": "congo-adf-banana-ecole-attack-2026-08-08",
+  "tone": "bad",
+  "countryCode": "CD",
+  "countryName": "DR Congo",
+  "cityName": "Mambasa",
+  "region": "Africa",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Security · Conflict",
+  "headline": "IS-linked militants kill at least 13 in Congo village",
+  "summary": "The ADF group attacked Banana École near Mambasa, burning homes and forcing residents to flee as the region also battles a major Ebola outbreak.",
+  "script": "Militants linked to the Islamic State group have killed at least thirteen people in eastern Congo. They attacked the village of Banana École near Mambasa, burning homes and forcing families to flee. The death toll may still rise.",
+  "source": "AP News",
+  "edition": "08 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-08-bad/congo-adf-attack/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-08-bad/congo-adf-attack/secondary.jpg",
+  "imageAlt": "Smoke rises over a village in eastern Congo after an attack.",
+  "imageAltTwo": "Residents gather near damaged homes in a village in eastern Congo.",
+  "imageCredit": "Dépêche.cd",
+  "imageCreditTwo": "Congo Quotidien",
+  "narrationAudio": "assets/narration/bad-2026-08-08-01-congo-adf-attack.wav",
+  "captions": [
+    {
+      "lines": [
+        "IS-linked militants kill",
+        "at least 13 in Congo."
+      ],
+      "highlights": [
+        "kill at least 13"
+      ]
+    },
+    {
+      "lines": [
+        "Attack in Banana École",
+        "near Mambasa."
+      ],
+      "highlights": [
+        "Banana École"
+      ]
+    },
+    {
+      "lines": [
+        "Residents flee as region",
+        "battles Ebola."
+      ],
+      "highlights": [
+        "Residents flee",
+        "Ebola"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "IS-linked group kills at least 13 in Congo village",
+      "url": "https://apnews.com/article/congo-adf-attack-islamic-state-group-9aa74dd808f76180ab00046f7943e358",
+      "published": "2026-08-08",
+      "usedFor": [
+        "death toll at least 13",
+        "Banana École location",
+        "ADF attribution"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Congo's fastest-spreading Ebola outbreak",
+      "url": "https://apnews.com/article/congo-ebola-outbreak-ituri-protest-health-workers-1de45c3ecedabb974dce0b176f0dcc3f",
+      "published": "2026-08",
+      "usedFor": [
+        "Ebola outbreak context",
+        "regional pressure"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Deadly attack with civilian toll and displacement; ranking is editorial, not an objective trend metric.",
+    "researchDate": "08 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orientation",
+        "scriptSection": "opener",
+        "scriptCue": "The story opens by establishing the location in eastern Congo.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "DR Congo",
+            "country": "DR Congo",
+            "code": "CD",
+            "coordinates": [25.04, -4.04]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "The narration names Banana École near Mambasa.",
+        "start": 2.4,
+        "animationId": "city-lock",
+        "mapSource": "AP News 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Mambasa",
+            "country": "DR Congo",
+            "code": "CD",
+            "coordinates": [29.05, 1.36]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "claim-and-consequence",
+        "scriptCue": "The script explains the attack and its regional impact.",
+        "start": 6.8,
+        "animationId": "conflict-zone-hatch",
+        "mapSource": "AP News 08 Aug 2026",
+        "mapData": {
+          "countryCodes": ["CD"],
+          "note": "ADF activity zone near Mambasa, eastern DR Congo"
+        }
+      }
+    ]
+  }
+}

@@ -91,12 +91,6 @@
       "skillPath": "skills/product-launch-video/SKILL.md",
       "computedHash": "ad9af5235ed2790466196ad55346c07e002b18ab98dfa12c6f21c036c1a91f8a"
     },
-    "remotion-to-hyperframes": {
-      "source": "heygen-com/hyperframes",
-      "sourceType": "github",
-      "skillPath": "skills/remotion-to-hyperframes/SKILL.md",
-      "computedHash": "ee04c5eca6113d5a3a8aeee9e78792451da57f06450bd034486950142ee05766"
-    },
     "slideshow": {
       "source": "heygen-com/hyperframes",
       "sourceType": "github",

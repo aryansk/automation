@@ -2,11 +2,11 @@
    Globe tour — one continuous globe that travels between countries.
 
    Different from createNewsGlobe, which flies a camera at a single
-   target and is built to be used once per story. Here the camera never
-   moves and the whole globe stays inside the frame for the entire film;
-   the planet rotates on its own axis to bring each country round to
-   face the viewer, and that country lights up while its headline is on
-   screen.
+   target and is built to be used once per story. Here the globe remains one
+   continuous instrument, while the lens can breathe between chapters and
+   close shots can intentionally crop the sphere;
+   the planet rotates on its own axis to bring each country round to face the
+   viewer, and that country lights up while its headline is on screen.
 
    Rotation keeps the pole up. To bring (lon, lat) to face the camera:
      rotation.y = PI/2 - (lon + 180) * DEG
@@ -25,17 +25,10 @@ import {
   latLonVector,
 } from "./globe.js";
 
-const clamp01 = (value) => Math.max(0, Math.min(1, value));
-const mix = (from, to, progress) => from + (to - from) * progress;
-const easeInOutQuint = (value) => {
-  const t = clamp01(value);
-  return t < 0.5 ? 16 * t * t * t * t * t : 1 - Math.pow(-2 * t + 2, 5) / 2;
-};
-const smootherstep = (edge0, edge1, value) => {
-  const t = clamp01((value - edge0) / Math.max(1e-6, edge1 - edge0));
-  return t * t * t * (t * (t * 6 - 15) + 10);
-};
+import { clamp01, easeInOutQuint, mix, smootherstep } from "./animation-math.js";
+export { clamp, clamp01, easeInOutQuint, mix, smootherstep } from "./animation-math.js";
 const POST_ARRIVAL_DRIFT = 0.006;
+const GLOBE_RENDER_SCALE = 2 / 3;
 
 function createGraticule(radius) {
   const positions = [];
@@ -92,16 +85,113 @@ function unwrap(target, previous) {
   return next;
 }
 
+function createRouteLayer(points, radius = EARTH_RADIUS + 0.045, showMarkers = true) {
+  if (!Array.isArray(points) || points.length < 2) return null;
+
+  const positions = [];
+  const markerPositions = [];
+  points.forEach((point) => {
+    const coordinates = point?.coordinates || [0, 0];
+    const marker = latLonVector(coordinates[0], coordinates[1], radius + 0.018);
+    markerPositions.push(marker.x, marker.y, marker.z);
+  });
+
+  points.forEach((point, index) => {
+    if (index === points.length - 1) return;
+    const from = latLonVector(point.coordinates[0], point.coordinates[1], 1).normalize();
+    const to = latLonVector(points[index + 1].coordinates[0], points[index + 1].coordinates[1], 1).normalize();
+    const angle = from.angleTo(to);
+    const steps = Math.max(8, Math.ceil(angle / (3.5 * DEG)));
+    for (let step = 0; step <= steps; step += 1) {
+      if (index > 0 && step === 0) continue;
+      const progress = step / steps;
+      const pointOnArc = from.clone().lerp(to, progress).normalize();
+      const arcLift = 1 + Math.sin(Math.PI * progress) * 0.07;
+      pointOnArc.multiplyScalar(radius * arcLift);
+      positions.push(pointOnArc.x, pointOnArc.y, pointOnArc.z);
+    }
+  });
+
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
+  geometry.setDrawRange(0, 0);
+  const material = new THREE.LineBasicMaterial({
+    color: 0xe37568,
+    transparent: true,
+    opacity: 0,
+    depthWrite: false,
+  });
+  const line = new THREE.Line(geometry, material);
+  line.renderOrder = 5.5;
+  line.frustumCulled = false;
+
+  let markers = null;
+  let markerMaterial = null;
+  if (showMarkers) {
+    const markerGeometry = new THREE.BufferGeometry();
+    markerGeometry.setAttribute("position", new THREE.Float32BufferAttribute(markerPositions, 3));
+    markerMaterial = new THREE.PointsMaterial({
+      color: 0xf5f0df,
+      size: 0.075,
+      transparent: true,
+      opacity: 0,
+      depthWrite: false,
+    });
+    markers = new THREE.Points(markerGeometry, markerMaterial);
+    markers.renderOrder = 5.6;
+    markers.frustumCulled = false;
+  }
+
+  const group = new THREE.Group();
+  group.add(line);
+  if (markers) group.add(markers);
+  return {
+    group,
+    geometry,
+    material,
+    markers,
+    markerMaterial,
+    totalVertices: positions.length / 3,
+  };
+}
+
+function createCountryFillLayer(feature, { fill, glow }, renderOrder) {
+  const texture = countryFillTexture(feature, { fill, glow });
+  if (!texture) return { texture: null, material: null, mesh: null };
+
+  const material = new THREE.MeshBasicMaterial({
+    map: texture,
+    transparent: true,
+    opacity: 0,
+    depthWrite: false,
+    side: THREE.FrontSide,
+    blending: THREE.NormalBlending,
+  });
+  const mesh = new THREE.Mesh(
+    new THREE.SphereGeometry(EARTH_RADIUS + 0.009, 96, 64),
+    material,
+  );
+  mesh.renderOrder = renderOrder;
+  mesh.visible = false;
+  return { texture, material, mesh };
+}
+
 export function createGlobeTour(options) {
   const {
     canvas,
     features,
     stops = [],
     idleSpin = 0.034,
-    baseHeight = 0.68,
-    liftHeight = 0.92,
+    baseHeight = 1.24,
+    liftHeight = 1.46,
     onFallback,
   } = options;
+  const showRouteMarkers = options.showRouteMarkers !== false;
+  const showRouteLayers = options.showRouteLayers !== false;
+  const showCountryHighlights = options.showCountryHighlights !== false;
+  const onRender = typeof options.onRender === "function" ? options.onRender : null;
+  const width = Number(options.width || canvas?.width || 1080);
+  const height = Number(options.height || canvas?.height || 1920);
 
   const renderer = new THREE.WebGLRenderer({
     canvas,
@@ -110,7 +200,15 @@ export function createGlobeTour(options) {
     powerPreference: "high-performance",
     premultipliedAlpha: false,
   });
-  renderer.setSize(1080, 1920, false);
+  /* The globe is a transparent instrument layer, not the full-resolution
+     photographic surface. Rendering it at a reduced fixed scale and letting
+     the canvas upscale keeps the globe responsive in both portrait and
+     landscape editions without changing the final output size. */
+  renderer.setSize(
+    Math.round(width * GLOBE_RENDER_SCALE),
+    Math.round(height * GLOBE_RENDER_SCALE),
+    false,
+  );
   renderer.setPixelRatio(1);
   renderer.setClearColor(0x2d4b3c, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -119,13 +217,15 @@ export function createGlobeTour(options) {
 
   const scene = new THREE.Scene();
 
-  /* 17.2 units back with a 31-degree vertical field of view leaves a
-     deliberate breathing band for the photographic story panel below.
-     The original composition sat at 15.5 and let the globe dominate the
-     full vertical frame. */
-  const camera = new THREE.PerspectiveCamera(31, 1080 / 1920, 0.1, 100);
-  const WIDE_Z = 17.2;
-  camera.position.set(0, 0, WIDE_Z);
+  /* Keep the legacy globe tour at its original scale unless a composition
+     opts into the closer long-form camera. Story explainers pass a smaller
+     default and chapter-specific camera distances below. */
+  const camera = new THREE.PerspectiveCamera(31, width / height, 0.1, 100);
+  const CAMERA_Z = Number(options.defaultCameraZ) || 16.4;
+  const OPENING_CAMERA_Z = Number(options.openingCameraZ) || CAMERA_Z;
+  const requestedOpeningHeight = Number(options.openingHeight);
+  const OPENING_HEIGHT = Number.isFinite(requestedOpeningHeight) ? requestedOpeningHeight : 0.72;
+  camera.position.set(0, 0, OPENING_CAMERA_Z);
   camera.lookAt(0, 0, 0);
 
   const planet = new THREE.Group();
@@ -153,16 +253,12 @@ export function createGlobeTour(options) {
   dayTexture.colorSpace = THREE.SRGBColorSpace;
   const cloudTexture = loader.load(TEXTURES.clouds);
   cloudTexture.colorSpace = THREE.SRGBColorSpace;
-  const normalTexture = loader.load(TEXTURES.normal);
-  const specularTexture = loader.load(TEXTURES.specular);
-  [dayTexture, cloudTexture, normalTexture, specularTexture].forEach((texture) => {
+  [dayTexture, cloudTexture].forEach((texture) => {
     texture.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
   });
 
   const earthMaterial = new THREE.MeshStandardMaterial({
     map: dayTexture,
-    normalMap: normalTexture,
-    normalScale: new THREE.Vector2(0.72, 0.72),
     roughness: 0.97,
     metalness: 0,
     color: 0xffffff,
@@ -230,12 +326,6 @@ export function createGlobeTour(options) {
             landMask;
           float hatchInk = (hatchA * 0.62 + hatchB * 0.38) * terrainShadow;
 
-          #ifdef USE_NORMALMAP
-            vec3 reliefSample = texture2D(normalMap, vNormalMapUv).xyz * 2.0 - 1.0;
-            float etchedRelief = clamp((1.0 - reliefSample.z) * 0.34, 0.0, 0.11);
-            modelTone = mix(modelTone, atlasInk, etchedRelief * landMask);
-          #endif
-
           float paperFiber =
             sin(vMapUv.x * 430.0 + sin(vMapUv.y * 57.0) * 2.4) *
             sin(vMapUv.y * 360.0 + cos(vMapUv.x * 49.0) * 2.1);
@@ -255,13 +345,13 @@ export function createGlobeTour(options) {
   earthMaterial.customProgramCacheKey = () => "topographic-paper-atlas-earth-v1";
 
   const earth = new THREE.Mesh(
-    new THREE.SphereGeometry(EARTH_RADIUS, 192, 128),
+    new THREE.SphereGeometry(EARTH_RADIUS, 112, 72),
     earthMaterial,
   );
   planet.add(earth);
 
   const clouds = new THREE.Mesh(
-    new THREE.SphereGeometry(EARTH_RADIUS * 1.014, 160, 112),
+    new THREE.SphereGeometry(EARTH_RADIUS * 1.014, 96, 64),
     new THREE.MeshPhongMaterial({
       map: cloudTexture,
       alphaMap: cloudTexture,
@@ -291,7 +381,7 @@ export function createGlobeTour(options) {
   planet.add(borders);
 
   const atmosphere = new THREE.Mesh(
-    new THREE.SphereGeometry(EARTH_RADIUS * 1.068, 128, 88),
+    new THREE.SphereGeometry(EARTH_RADIUS * 1.068, 72, 48),
     new THREE.ShaderMaterial({
       uniforms: {
         uLightDirection: { value: new THREE.Vector3(-5.8, 3.8, 5.2).normalize() },
@@ -333,31 +423,62 @@ export function createGlobeTour(options) {
   scene.add(keyLight);
   scene.add(new THREE.HemisphereLight(0xf4efd8, 0x3f5e50, 1.42));
 
-  /* One fill layer per stop. Kept hidden until it has some opacity so
-     the renderer is not blending three full spheres every frame. */
+  /* One primary fill layer plus any explicitly named related-country
+     layers per stop. Related countries are authored from the narration, so
+     the globe can show the full geographic scope without implying that every
+     nearby country is part of the story. */
   const legs = stops.map((stop, index) => {
     const feature = features.find((entry) => entry.properties?.code === stop.countryCode);
-    const texture = countryFillTexture(feature, {
-      fill: "rgba(206,130,58,0.86)",
-      glow: "rgba(255,244,211,0.98)",
-    });
-    let mesh = null;
-    let material = null;
-    if (texture) {
-      material = new THREE.MeshBasicMaterial({
-        map: texture,
-        transparent: true,
-        opacity: 0,
-        depthWrite: false,
-        side: THREE.FrontSide,
-        blending: THREE.NormalBlending,
-      });
-      mesh = new THREE.Mesh(new THREE.SphereGeometry(EARTH_RADIUS + 0.009, 160, 112), material);
-      mesh.renderOrder = 4 + index;
-      mesh.visible = false;
-      planet.add(mesh);
-    }
-    return { ...stop, texture, material, mesh, rotation: rotationFor(stop.coordinates) };
+    const primary = showCountryHighlights
+      ? createCountryFillLayer(
+        feature,
+        {
+          fill: "rgba(206,130,58,0.86)",
+          glow: "rgba(255,244,211,0.98)",
+        },
+        5 + index,
+      )
+      : { texture: null, material: null, mesh: null };
+    if (primary.mesh) planet.add(primary.mesh);
+
+    const relatedCodes = [
+      ...(Array.isArray(stop.mentionedCountryCodes) ? stop.mentionedCountryCodes : []),
+      ...(Array.isArray(stop.affectedCountryCodes) ? stop.affectedCountryCodes : []),
+    ]
+      .map((code) => String(code || "").toUpperCase())
+      .filter((code, codeIndex, codes) => code && code !== stop.countryCode && codes.indexOf(code) === codeIndex);
+    const relatedLayers = showCountryHighlights ? relatedCodes.map((code, relatedIndex) => {
+      const relatedFeature = features.find((entry) => entry.properties?.code === code);
+      const layer = createCountryFillLayer(
+        relatedFeature,
+        {
+          fill: "rgba(229,177,91,0.62)",
+          glow: "rgba(255,239,186,0.92)",
+        },
+        4.4 + index + relatedIndex * 0.01,
+      );
+      if (layer.mesh) planet.add(layer.mesh);
+      return { ...layer, countryCode: code };
+    }) : [];
+
+    const requestedCameraZ = Number(stop.cameraZ ?? stop.focusZoom);
+
+    return {
+      ...stop,
+      texture: primary.texture,
+      material: primary.material,
+      mesh: primary.mesh,
+      relatedLayers,
+      cameraZ: Number.isFinite(requestedCameraZ) ? requestedCameraZ : CAMERA_Z,
+      rotation: rotationFor(stop.coordinates),
+    };
+  });
+
+  const routeLayers = showRouteLayers
+    ? legs.map((leg) => createRouteLayer(leg.routePoints, EARTH_RADIUS + 0.045, showRouteMarkers))
+    : legs.map(() => null);
+  routeLayers.forEach((route) => {
+    if (route) planet.add(route.group);
   });
 
   /* Unwrap each leg's target against the one before it. */
@@ -381,13 +502,64 @@ export function createGlobeTour(options) {
 
   let lastTime = 0;
 
+  function projectWorldPoint(worldPoint) {
+    const projected = worldPoint.clone().project(camera);
+    return {
+      x: (projected.x * 0.5 + 0.5) * width,
+      y: (-projected.y * 0.5 + 0.5) * height,
+      depth: projected.z,
+    };
+  }
+
+  function projectCoordinate(coordinates, radiusScale = 1.006) {
+    const longitude = Number(coordinates?.[0]);
+    const latitude = Number(coordinates?.[1]);
+    if (!Number.isFinite(longitude) || !Number.isFinite(latitude)) return null;
+
+    const localPoint = latLonVector(longitude, latitude, EARTH_RADIUS * radiusScale);
+    const localNormal = localPoint.clone().normalize();
+    const worldPoint = localPoint.clone().applyEuler(planet.rotation).add(planet.position);
+    const worldNormal = localNormal.applyEuler(planet.rotation).normalize();
+    const cameraDirection = camera.position.clone().sub(planet.position).normalize();
+    const projected = projectWorldPoint(worldPoint);
+    const globeCenter = projectWorldPoint(planet.position);
+    return {
+      ...projected,
+      visible: worldNormal.dot(cameraDirection) > 0.015,
+      coordinates: [longitude, latitude],
+      center: globeCenter,
+    };
+  }
+
+  function createView() {
+    camera.updateMatrixWorld();
+    planet.updateMatrixWorld(true);
+    const center = projectWorldPoint(planet.position);
+    const focalLength = (height / 2) / Math.tan((camera.fov * DEG) / 2);
+    const globeRadiusPx = Math.abs(focalLength * EARTH_RADIUS / Math.max(0.1, camera.position.z));
+    return Object.freeze({
+      time: lastTime,
+      width,
+      height,
+      center,
+      globeRadiusPx,
+      cameraZ: camera.position.z,
+      projectCoordinate,
+      projectWorldPoint,
+      projectRadiusKm: (radiusKm) => Math.max(
+        8,
+        Math.min(globeRadiusPx * 0.72, (Number(radiusKm) || 0) * globeRadiusPx / 1200),
+      ),
+    });
+  }
+
   function renderAt(time) {
     lastTime = Number.isFinite(time) ? time : 0;
 
     let rotationY = openingRotation.y + lastTime * idleSpin;
     let rotationX = openingRotation.x;
+    let cameraZ = OPENING_CAMERA_Z;
     let lift = 0;
-    let cameraZ = WIDE_Z;
 
     legs.forEach((leg, index) => {
       const previous = index === 0 ? null : legs[index - 1];
@@ -395,6 +567,7 @@ export function createGlobeTour(options) {
         ? previous.rotation.y + Math.max(0, leg.travelStart - previous.arrive) * POST_ARRIVAL_DRIFT
         : openingRotation.y + leg.travelStart * idleSpin;
       const fromX = previous ? previous.rotation.x : openingRotation.x;
+      const fromZ = previous ? previous.cameraZ : OPENING_CAMERA_Z;
 
       if (lastTime >= leg.travelStart) {
         const travel = easeInOutQuint(
@@ -402,11 +575,13 @@ export function createGlobeTour(options) {
         );
         rotationY = mix(fromY, leg.rotation.y, travel);
         rotationX = mix(fromX, leg.rotation.x, travel);
+        cameraZ = mix(fromZ, leg.cameraZ, travel);
 
         /* Once settled, keep a barely-there drift so the globe never
            looks like a frozen still. */
         if (lastTime > leg.arrive) {
           rotationY = leg.rotation.y + (lastTime - leg.arrive) * POST_ARRIVAL_DRIFT;
+          cameraZ = leg.cameraZ + Math.sin((lastTime - leg.arrive) * 0.55) * 0.045;
         }
       }
 
@@ -417,20 +592,24 @@ export function createGlobeTour(options) {
         const breath = 1 + Math.sin(lastTime * 1.8) * 0.035;
         leg.material.opacity = highlight * 0.86 * breath;
         leg.mesh.visible = leg.material.opacity > 0.004;
+
+        leg.relatedLayers.forEach((related) => {
+          if (!related.material || !related.mesh) return;
+          related.material.opacity = highlight * 0.62 * breath;
+          related.mesh.visible = related.material.opacity > 0.004;
+        });
       }
 
-      /* The globe stays wide for the handoff, then closes on the country
-         only after the rotation has arrived. Before the next leg starts,
-         the current focus releases back to the wide establishing view. */
-      if (lastTime >= leg.arrive) {
-        const zoomIn = smootherstep(leg.arrive - 0.55, leg.arrive + 0.45, lastTime);
-        const nextTravelStart = legs[index + 1]?.travelStart;
-        const zoomOut =
-          nextTravelStart == null
-            ? 1
-            : 1 - smootherstep(nextTravelStart - 0.55, nextTravelStart + 0.15, lastTime);
-        const focusBlend = zoomIn * zoomOut;
-        cameraZ = mix(WIDE_Z, Number(leg.focusZoom) || 14.9, focusBlend);
+      const route = routeLayers[index];
+      if (route) {
+        const routeIn = smootherstep(leg.arrive - 0.05, leg.arrive + 0.42, lastTime);
+        const routeOut = 1 - smootherstep(leg.holdUntil - 0.38, leg.holdUntil + 0.18, lastTime);
+        const routeOpacity = routeIn * routeOut;
+        const drawProgress = smootherstep(leg.arrive - 0.02, leg.arrive + 2.8, lastTime);
+        route.geometry.setDrawRange(0, Math.floor(route.totalVertices * drawProgress));
+        route.material.opacity = routeOpacity * 0.96;
+        if (route.markerMaterial) route.markerMaterial.opacity = routeOpacity * 0.94;
+        route.group.visible = routeOpacity > 0.004;
       }
 
       lift = Math.max(
@@ -440,14 +619,20 @@ export function createGlobeTour(options) {
       );
     });
 
+    const openerBlend = firstLeg
+      ? 1 - smootherstep(firstLeg.arrive - 0.35, firstLeg.arrive + 0.45, lastTime)
+      : 1;
     planet.rotation.y = rotationY;
     planet.rotation.x = rotationX;
-    planet.position.y = mix(baseHeight, liftHeight, lift);
+    planet.position.y = mix(mix(baseHeight, liftHeight, lift), OPENING_HEIGHT, openerBlend);
     camera.position.z = cameraZ;
 
-    clouds.rotation.y = lastTime * 0.008;
+    clouds.rotation.y = lastTime * 0.006;
 
     renderer.render(scene, camera);
+    const view = createView();
+    if (onRender) onRender(view);
+    return view;
   }
 
   function dispose() {
@@ -456,7 +641,14 @@ export function createGlobeTour(options) {
       if (Array.isArray(object.material)) object.material.forEach((material) => material.dispose?.());
       else object.material?.dispose?.();
     });
-    [dayTexture, cloudTexture, normalTexture, specularTexture, ...legs.map((leg) => leg.texture)]
+    [
+      dayTexture,
+      cloudTexture,
+      ...legs.flatMap((leg) => [
+        leg.texture,
+        ...leg.relatedLayers.map((related) => related.texture),
+      ]),
+    ]
       .filter(Boolean)
       .forEach((texture) => texture.dispose());
     renderer.dispose();

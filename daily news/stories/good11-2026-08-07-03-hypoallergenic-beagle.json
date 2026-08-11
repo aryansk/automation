@@ -1,0 +1,153 @@
+{
+  "eventId": "hypoallergenic-beagle-crispr-2026-08-05",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "New York",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Science · Society",
+  "headline": "Gene-edited beagle offers hope for people with dog allergies",
+  "summary": "Scientists switched off the gene behind a key allergy protein in two beagles, Bailey and Alfie, in a first-of-its-kind breakthrough published in the CRISPR Journal.",
+  "script": "Scientists created the first gene-edited dogs that don't produce the main allergy protein. Two beagles named Bailey and Alfie were born after researchers switched off the gene. Their owner, who is allergic to dogs, says the pair changed his life.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-07-good/hypoallergenic-beagle/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-good/hypoallergenic-beagle/secondary.jpg",
+  "imageAlt": "Matt Walker sits at home with Bailey, his gene-edited hypoallergenic beagle, in New York.",
+  "imageAltTwo": "Matt Walker sits at home with Bailey, his gene-edited hypoallergenic beagle, in New York.",
+  "imageCredit": "AP Photo/Mary Conlon",
+  "imageCreditTwo": "AP Photo/Mary Conlon",
+  "narrationAudio": "assets/narration/good11-2026-08-07-03-hypoallergenic-beagle.wav",
+  "captions": [
+    {
+      "lines": [
+        "First gene-edited dogs",
+        "without allergy protein."
+      ],
+      "highlights": [
+        "gene-edited dogs"
+      ]
+    },
+    {
+      "lines": [
+        "Beagles Bailey and Alfie",
+        "born after CRISPR edit."
+      ],
+      "highlights": [
+        "Bailey and Alfie"
+      ]
+    },
+    {
+      "lines": [
+        "Allergic owner can now",
+        "pet his own dog."
+      ],
+      "highlights": [
+        "pet his own dog"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Gene-edited beagles may offer a future option for people with dog allergies",
+      "url": "https://apnews.com/article/hypoallergenic-dogs-crispr-pet-allergies-f5bd8cb438dfd1a9d1cccd4a1d46fd2a",
+      "published": "2026-08-05",
+      "usedFor": [
+        "CRISPR gene edit",
+        "Bailey and Alfie",
+        "allergy protein",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "The CRISPR Journal",
+      "title": "First successful gene editing approach in dogs to reduce allergy-causing protein",
+      "url": "https://www.liebertpub.com/doi/10.1089/crispr.2026.0001",
+      "published": "2026-08-05",
+      "usedFor": [
+        "published findings",
+        "scientific corroboration"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Scientific first with broad emotional and commercial relevance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the science story in the United States.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 05 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -98,
+              39
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on New York, where Bailey lives.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 05 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "New York",
+            "coordinates": [
+              -74.006,
+              40.713
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the global interest in allergy-free pets.",
+        "start": 9.5,
+        "animationId": "multi-country-sweep",
+        "mapSource": "AP News / 05 Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "US",
+            "CA",
+            "GB",
+            "DE",
+            "JP"
+          ],
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -74.006,
+              40.713
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

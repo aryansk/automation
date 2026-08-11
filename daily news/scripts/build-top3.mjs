@@ -25,6 +25,8 @@ import { spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync, rmSync } from "node:fs";
 import { dirname, isAbsolute, parse, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { normalizeGlobeMapPlan } from "../assets/animations/globe-map-plan.js";
+import { resolveMapPlanForScene } from "../assets/animations/globe-map-runtime.js";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -84,7 +86,7 @@ const storyList = option("stories")
   .map((entry) => entry.trim())
   .filter(Boolean);
 
-if (!storyList.length) die("pass --stories a.json,b.json,c.json");
+if (storyList.length !== 3) die("exactly three stories are required; pass --stories a.json,b.json,c.json");
 
 const outputArg = option("output", "renders/top3.mp4");
 const outputPath = isAbsolute(outputArg) ? outputArg : resolve(projectRoot, outputArg);
@@ -108,6 +110,19 @@ for (const [index, entry] of storyList.entries()) {
 
   const slug = parse(storyPath).name;
   const story = JSON.parse(readFileSync(storyPath, "utf8"));
+  const animationPlan = normalizeGlobeMapPlan(
+    story.animationPlan || story.visualPlan,
+    { duration: segmentDuration, requireLibrary: true },
+  );
+  if (!animationPlan.valid) die(`${slug}: ${animationPlan.errors.join("; ")}`);
+  const resolvedPlan = resolveMapPlanForScene({
+    story,
+    format: "portrait",
+    mode: "production",
+    duration: segmentDuration,
+    requireLibrary: true,
+  });
+  if (!resolvedPlan.valid) die(`${slug}: ${resolvedPlan.errors.join("; ")}`);
 
   console.log(`\n\u2550\u2550 [${index + 1}/${storyList.length}] ${slug} \u2550\u2550`);
 

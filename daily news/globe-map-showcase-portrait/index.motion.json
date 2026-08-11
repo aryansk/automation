@@ -1,0 +1,11 @@
+{
+  "duration": 156.0,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#map-canvas", "bySec": 0.2 },
+    { "kind": "appearsBy", "selector": "#showcase-title", "bySec": 0.6 },
+    { "kind": "before", "a": "#showcase-title", "b": "#use-note" },
+    { "kind": "staysInFrame", "selector": "#info-panel" },
+    { "kind": "staysInFrame", "selector": "#use-note" },
+    { "kind": "keepsMoving", "withinSelector": ".showcase-scene", "maxStaticSec": 3 }
+  ]
+}

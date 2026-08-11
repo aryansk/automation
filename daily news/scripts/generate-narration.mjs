@@ -57,7 +57,11 @@ const script = String(story.script || "").trim();
 if (!script) die("the story has no script field");
 
 const wordCount = script.split(/\s+/).filter(Boolean).length;
-if (wordCount > 42) die(`script has ${wordCount} words; shorten it to 42 words or fewer`);
+const requestedScriptLimit = Number(story.scriptMaxWords);
+const scriptWordLimit = Number.isInteger(requestedScriptLimit) && requestedScriptLimit > 0
+  ? requestedScriptLimit
+  : 42;
+if (wordCount > scriptWordLimit) die(`script has ${wordCount} words; shorten it to ${scriptWordLimit} words or fewer`);
 
 const provider = option("provider", "kokoro").toLowerCase();
 const speed = option("speed", "1.0");
@@ -153,4 +157,4 @@ renameSync(tempStoryPath, storyPath);
 console.log(`✓ narration generated with ${provider}`);
 console.log(`  audio: ${projectRelativeAudio}`);
 console.log(`  script: ${textPath.slice(projectRoot.length + 1)}`);
-console.log(`  words: ${wordCount}/42`);
+console.log(`  words: ${wordCount}/${scriptWordLimit}`);

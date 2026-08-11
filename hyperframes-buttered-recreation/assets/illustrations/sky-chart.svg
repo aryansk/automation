@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <defs>
+    <pattern id="paper" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M0 4h24M8 0v24" stroke="#24252b" stroke-width="1" opacity=".055"/></pattern>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#cbe8dc"/><stop offset=".56" stop-color="#edf1d9"/><stop offset="1" stop-color="#f2eee1"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1920" fill="#f2eee1"/>
+  <rect width="1080" height="1920" fill="url(#paper)"/>
+  <rect x="0" y="0" width="1080" height="820" fill="url(#sky)" opacity=".9"/>
+  <path d="M0 760c200-80 346-60 520 6 180 68 360 52 560-22v190H0z" fill="#7ea76d" opacity=".25"/>
+  <g transform="translate(104 1000)">
+    <text x="0" y="-54" fill="#24252b" font-family="IBM Plex Mono, monospace" font-size="24" letter-spacing="4">SMALL CHOICES / LONG TRACE</text>
+    <g transform="translate(0 50)" fill="none" stroke="#24252b" stroke-width="3" opacity=".28">
+      <circle cx="118" cy="112" r="94"/><circle cx="356" cy="112" r="94"/><circle cx="594" cy="112" r="94"/>
+      <circle cx="118" cy="360" r="94"/><circle cx="356" cy="360" r="94"/><circle cx="594" cy="360" r="94"/>
+    </g>
+    <g fill="none" stroke-linecap="round" stroke-width="18">
+      <path d="M118 20A94 94 0 0 1 191 165" stroke="#4c8c45"/><path d="M356 20A94 94 0 0 1 411 188" stroke="#39b8d6"/><path d="M594 22A94 94 0 0 1 676 111" stroke="#d96d58"/>
+      <path d="M118 268A94 94 0 0 1 207 397" stroke="#4c8c45"/><path d="M356 268A94 94 0 0 1 420 431" stroke="#39b8d6"/><path d="M594 268A94 94 0 0 1 687 362" stroke="#f2d476"/>
+    </g>
+    <g fill="#24252b" font-family="IBM Plex Mono, monospace" font-size="20" opacity=".72">
+      <text x="68" y="245">THEN</text><text x="304" y="245">NOW</text><text x="535" y="245">NEXT</text><text x="56" y="494">TRACE</text><text x="304" y="494">TRACE</text><text x="535" y="494">TRACE</text>
+    </g>
+  </g>
+  <g stroke="#d96d58" fill="none" stroke-width="4" opacity=".7"><path d="M850 1160c45-75 82-73 111-4s44 65 74 5"/><path d="M856 1178c37-38 70-38 99 2"/></g>
+  <text x="86" y="1712" fill="#4c8c45" font-family="EB Garamond, serif" font-size="76" font-style="italic">the sky keeps a record</text>
+  <text x="88" y="1760" fill="#24252b" font-family="IBM Plex Mono, monospace" font-size="22" letter-spacing="3">FIELD NOTE 01 · KEEP LOOKING UP</text>
+</svg>

@@ -1,0 +1,61 @@
+{
+  "eventId": "raccoon-boot-camp-wildlife-release-2026-08-10",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Gulfport",
+  "coordinates": [
+    -89.0928,
+    30.3674
+  ],
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Wildlife · Rescue",
+  "headline": "Orphaned raccoons train for wild release in ‘boot camp’",
+  "summary": "Woodside Wildlife Rescue is teaching young raccoons to forage, climb and avoid traps before release.",
+  "script": "Orphaned raccoons are getting a wildlife boot camp before release. Woodside Wildlife Rescue teaches the young animals to forage, climb, swim and avoid traps, so they can return to the wild without relying on people.",
+  "source": "WLOX · WWR",
+  "edition": "10 Aug 2026",
+  "storyNumber": "05",
+  "imageOne": "assets/stories/2026-08-10/raccoon-boot-camp/primary.png",
+  "imageTwo": "assets/stories/2026-08-10/raccoon-boot-camp/secondary.jpeg",
+  "imageAlt": "A young raccoon in wildlife rehabilitation.",
+  "imageAltTwo": "A rescued animal photographed by Woodside Wildlife Rescue.",
+  "imageCredit": "Woodside Wildlife Rescue",
+  "imageCreditTwo": "Woodside Wildlife Rescue",
+  "narrationAudio": "assets/narration/new-2026-08-10/raccoon-boot-camp.wav",
+  "sources": [
+    {
+      "publisher": "WLOX",
+      "title": "Raccoon Boot Camp at Woodside Wildlife Rescue",
+      "url": "https://www.wlox.com/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "current boot-camp report"
+      ]
+    },
+    {
+      "publisher": "Woodside Wildlife Rescue",
+      "title": "Wildlife help and rehabilitation guidance",
+      "url": "https://www.woodsidewildliferescue.org/wildlife-help",
+      "published": "2026-08-10",
+      "usedFor": [
+        "rehabilitation practice",
+        "raccoon release context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 5,
+    "basis": "A visually warm animal-rescue story with a clear consequence: independence before release; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

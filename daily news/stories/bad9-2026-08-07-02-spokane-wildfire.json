@@ -1,0 +1,146 @@
+{
+  "eventId": "spokane-wildfire-arson-2026-08-06",
+  "tone": "bad",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Spokane",
+  "region": "North America",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Wildfire · Crime",
+  "headline": "Spokane wildfire arson suspect waited for dry, windy day to start blaze",
+  "summary": "Aaron Farinacci, 37, told police he planned the Old Trails Fire two weeks ahead and claims responsibility for 25 other fires in the area.",
+  "script": "Police in Spokane, Washington say a man accused of starting a massive wildfire waited for a hot, dry and windy day to light it. He's claimed responsibility for twenty five other fires, and more than sixty thousand people remain evacuated.",
+  "source": "BBC News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-07-bad/spokane-wildfire/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-bad/spokane-wildfire/secondary.jpg",
+  "imageAlt": "A woman cries amid burnt rubble in Spokane, Washington.",
+  "imageAltTwo": "A split-screen view of a burned house and a resident being interviewed by the BBC.",
+  "imageCredit": "Getty Images via BBC",
+  "imageCreditTwo": "BBC News",
+  "narrationAudio": "assets/narration/bad9-2026-08-07-02-spokane-wildfire.wav",
+  "captions": [
+    {
+      "lines": [
+        "Arson suspect planned",
+        "fire two weeks ahead."
+      ],
+      "highlights": [
+        "planned two weeks ahead"
+      ]
+    },
+    {
+      "lines": [
+        "Claims responsibility for",
+        "25 other fires."
+      ],
+      "highlights": [
+        "25 other fires"
+      ]
+    },
+    {
+      "lines": [
+        "60,000 people",
+        "still evacuated."
+      ],
+      "highlights": [
+        "60,000 people evacuated"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Spokane wildfire arson suspect waited for dry, windy day to start blaze, police say",
+      "url": "https://www.bbc.com/news/articles/cy0j5nyxk68o",
+      "published": "2026-08-07",
+      "usedFor": [
+        "suspect name and claim",
+        "25 other fires",
+        "60,000 evacuated",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Man charged with arson in Spokane, Washington, told police he planned wildfire for weeks",
+      "url": "https://apnews.com/article/wildfires-spokane-washington-suspect-arson-charges-f9e3d98df0c20a16d2f9b083efd99ab3",
+      "published": "2026-08-06",
+      "usedFor": [
+        "arrest and charge corroboration",
+        "court details"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Major disaster with intentional cause and large displacement; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the story in the United States.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -98,
+              39
+            ]
+          }
+        }
+      },
+      {
+        "id": "target",
+        "scriptSection": "location",
+        "scriptCue": "Lock onto Spokane, Washington.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Spokane",
+            "coordinates": [
+              -117.426,
+              47.658
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the scale of the fire's impact radius.",
+        "start": 10,
+        "animationId": "disaster-radius",
+        "mapSource": "BBC News / 07 Aug 2026",
+        "mapData": {
+          "target": {
+            "coordinates": [
+              -117.426,
+              47.658
+            ]
+          },
+          "radiusKm": 40
+        }
+      }
+    ]
+  }
+}

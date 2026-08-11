@@ -1,0 +1,47 @@
+{
+  "countryCode": "GB",
+  "countryName": "England",
+  "cityName": "London",
+  "coordinates": [
+    -0.1276,
+    51.5072
+  ],
+  "region": "United Kingdom",
+  "kicker": "Health · Access",
+  "headline": "England expands free pharmacy access to emergency contraception",
+  "summary": "Almost 305,000 women used England’s free morning-after pill pharmacy service in its first five months, NHS England says.",
+  "script": "In England, more than three hundred thousand women used a new free morning-after pill service at community pharmacies in its first five months. The NHS says access is now closer to home.",
+  "source": "NHS England / BBC",
+  "edition": "03 Aug 2026",
+  "imageOne": "assets/news-images/2026-08-03-recreated/pharmacy-counter.png",
+  "imageTwo": "assets/news-images/2026-08-03-recreated/pharmacy-consultation.png",
+  "imageAlt": "A pharmacist hands an unbranded medicine box to a customer in a community pharmacy.",
+  "imageAltTwo": "A pharmacist discusses contraception options with a customer in a private consultation room.",
+  "imageCredit": "AI-generated contextual illustration · no news photography",
+  "imageCreditTwo": "AI-generated contextual illustration · no news photography",
+  "narrationAudio": "assets/narration/good-2026-08-03-pharmacy-access.wav",
+  "storyNumber": "01",
+  "storyType": "statistics",
+  "statValue": "305,000",
+  "statLabel": "emergency-pill doses",
+  "statPeriod": "Oct 2025–Mar 2026",
+  "sources": [
+    {
+      "publisher": "NHS England",
+      "title": "Hundreds of thousands of women access free morning-after pill at NHS pharmacies in first 5 months",
+      "url": "https://www.england.nhs.uk/2026/07/hundreds-thousands-women-access-free-morning-after-pill-nhs-pharmacies-first-5-months/",
+      "published": "28 Jul 2026"
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Hundreds of thousands of women get morning-after pill via free pharmacy service",
+      "url": "https://www.bbc.co.uk/news/articles/cn9n1rg3n81o?at_medium=RSS&at_campaign=rss",
+      "published": "28 Jul 2026"
+    }
+  ],
+  "rights": {
+    "assetLicense": "Generated locally with OpenAI image generation; no external news photography used.",
+    "assetCredit": "AI-generated contextual illustrations by OpenAI image generation.",
+    "commercialEditorialRightsVerified": true
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "eventId": "moderna-mrna-flu-vaccine-2026-08-05",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Cambridge",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Health · Science",
+  "headline": "FDA approves first mRNA flu shot, Moderna's mFlusiva",
+  "summary": "The vaccine, built on the technology behind the COVID shots, is for adults 50 and older and proved 27% more effective than a standard flu shot in a large trial.",
+  "script": "The FDA approved the first flu vaccine built with messenger RNA technology. Moderna's shot, called mFlusiva, is for adults fifty and older and cut flu cases by twenty seven percent. It's the first new kind of flu vaccine in years.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-07-good/mrna-flu-vaccine/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-good/mrna-flu-vaccine/secondary.jpg",
+  "imageAlt": "The Food and Drug Administration seal is seen at the agency's auditorium in Washington.",
+  "imageAltTwo": "A sign marks an entrance to a Moderna building in Cambridge, Massachusetts.",
+  "imageCredit": "AP Photo/Jose Luis Magana",
+  "imageCreditTwo": "AP Photo/Bill Sikes",
+  "narrationAudio": "assets/narration/good11-2026-08-07-02-mrna-flu-vaccine.wav",
+  "captions": [
+    {
+      "lines": [
+        "First mRNA flu vaccine",
+        "approved by FDA."
+      ],
+      "highlights": [
+        "first mRNA flu vaccine"
+      ]
+    },
+    {
+      "lines": [
+        "27% fewer flu cases",
+        "than standard shot."
+      ],
+      "highlights": [
+        "27% fewer flu cases"
+      ]
+    },
+    {
+      "lines": [
+        "For adults",
+        "50 and older."
+      ],
+      "highlights": [
+        "50 and older"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "New kind of flu shot is on the way as the FDA approves Moderna's mRNA-based vaccine",
+      "url": "https://apnews.com/article/flu-vaccine-moderna-mrna-fda-mflusiva-59d991a6bf70c26e2f0c210cc8ca87f1",
+      "published": "2026-08-06",
+      "usedFor": [
+        "FDA approval",
+        "27% efficacy",
+        "50+ indication",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "FDA panel backs first-of-its-kind flu vaccine using mRNA technology",
+      "url": "https://apnews.com/article/moderna-flu-vaccine-mrna-fda-advisers-mflusiva-488c68fe39244ca5ebad441a815b4ba2",
+      "published": "2026-06",
+      "usedFor": [
+        "context on FDA panel",
+        "secondary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "First-of-its-kind vaccine with broad public health impact; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the approval in the United States.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -98,
+              39
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on the vaccine maker's home base.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Cambridge",
+            "coordinates": [
+              -71.11,
+              42.373
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the reach of the new vaccine.",
+        "start": 9.5,
+        "animationId": "multi-country-sweep",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "US",
+            "CA",
+            "GB",
+            "DE",
+            "FR"
+          ],
+          "target": {
+            "code": "US",
+            "coordinates": [
+              -71.11,
+              42.373
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

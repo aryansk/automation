@@ -1,0 +1,61 @@
+{
+  "eventId": "usa-u20-4x100-tate-taylor-record-2026-08-09",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Eugene",
+  "coordinates": [
+    -123.0868,
+    44.0521
+  ],
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Athletics · Record",
+  "headline": "Tate Taylor helps USA set world U20 4x100m record",
+  "summary": "The American quartet set a new under-20 world mark in Oregon.",
+  "script": "Tate Taylor helped the United States set a world under-twenty 4-by-100-metre record in Oregon. It is a landmark sprint result for the American junior team at the World Athletics championships.",
+  "source": "World Athletics",
+  "edition": "10 Aug 2026",
+  "storyNumber": "04",
+  "imageOne": "assets/stories/2026-08-10/usa-u20-relay-record/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-10/usa-u20-relay-record/secondary.jpg",
+  "imageAlt": "World Athletics archive image of a United States relay team celebrating a record.",
+  "imageAltTwo": "World Athletics archive image used as illustrative relay context, not the current race.",
+  "imageCredit": "World Athletics",
+  "imageCreditTwo": "World Athletics",
+  "narrationAudio": "assets/narration/new-2026-08-10/usa-u20-relay-record.wav",
+  "sources": [
+    {
+      "publisher": "World Athletics",
+      "title": "World U20 Championships results",
+      "url": "https://worldathletics.org/competition/calendar-results/results/7243025?eventId=%5C",
+      "published": "2026-08-09",
+      "usedFor": [
+        "record result",
+        "Tate Taylor and US team"
+      ]
+    },
+    {
+      "publisher": "USATF",
+      "title": "USA Track and Field U20 results and team context",
+      "url": "https://www.usatf.org/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "US junior athletics context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 4,
+    "basis": "A named athlete and a precise record make this a compact, high-energy sports result; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

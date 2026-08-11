@@ -1,0 +1,159 @@
+{
+  "eventId": "michoacan-avocado-inspections-suspended-2026-08-05",
+  "tone": "bad",
+  "countryCode": "MX",
+  "countryName": "Mexico",
+  "cityName": "Uruapan",
+  "region": "Latin America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Trade · Security",
+  "headline": "US suspends avocado inspections in Mexican state over threat",
+  "summary": "Washington halted operations in Michoacan, the top avocado exporter, citing a threat to US interests, which could disrupt shipments that supply 80% of US imports.",
+  "script": "The United States has suspended avocado inspections in the Mexican state of Michoacan, citing a threat to American interests. The state ships most of the avocados Americans eat, and the halt could disrupt supplies of what locals call green gold.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-07-bad/michoacan-avocado/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-bad/michoacan-avocado/secondary.jpg",
+  "imageAlt": "Crates of avocados wait to be processed at a packing plant in Uruapan, Mexico.",
+  "imageAltTwo": "Avocados from Mexico are for sale at a grocery store in Lyndhurst, New Jersey.",
+  "imageCredit": "AP Photo/Armando Solis",
+  "imageCreditTwo": "AP Photo/John Minchillo",
+  "narrationAudio": "assets/narration/bad10-2026-08-07-02-michoacan-avocado.wav",
+  "captions": [
+    {
+      "lines": [
+        "US halts avocado inspections",
+        "in Michoacan."
+      ],
+      "highlights": [
+        "halts avocado inspections"
+      ]
+    },
+    {
+      "lines": [
+        "State supplies ~80% of",
+        "US avocado imports."
+      ],
+      "highlights": [
+        "80% of imports"
+      ]
+    },
+    {
+      "lines": [
+        "Cartels extort the",
+        "avocado industry."
+      ],
+      "highlights": [
+        "cartels extort"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "US suspends avocado inspections in Mexican state due to unspecified threat",
+      "url": "https://apnews.com/article/mexico-united-states-avocado-exports-threats-c5cf0ef4a260e6a517fae615c08a1f8b",
+      "published": "2026-08-06",
+      "usedFor": [
+        "suspension of inspections",
+        "80% of US imports",
+        "cartel extortion context",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Why Mexican avocado exports to the US have been stopped again",
+      "url": "https://apnews.com/article/mexico-us-avocados-suspended-michoacan-cartels-sheinbaum-trump-689d89d4934a405882785205cc0f8c22",
+      "published": "2026-08-06",
+      "usedFor": [
+        "green gold nickname",
+        "secondary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Trade disruption with direct consumer impact; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor the story in Mexico.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "MX",
+            "coordinates": [
+              -102.5,
+              23.6
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Michoacan, the avocado heartland.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Uruapan",
+            "coordinates": [
+              -102.048,
+              19.411
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the trade route from Mexico to US consumers.",
+        "start": 9.5,
+        "animationId": "great-circle-route",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "route": [
+            {
+              "name": "Michoacan",
+              "country": "Mexico",
+              "code": "MX",
+              "coordinates": [
+                -102.048,
+                19.411
+              ]
+            },
+            {
+              "name": "United States",
+              "country": "United States",
+              "code": "US",
+              "coordinates": [
+                -98,
+                39
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

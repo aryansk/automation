@@ -1,0 +1,150 @@
+{
+  "eventId": "nigeria-largest-rescue-2026-08-05",
+  "tone": "good",
+  "countryCode": "NG",
+  "countryName": "Nigeria",
+  "cityName": "Abuja",
+  "region": "West Africa",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Security · Rescue",
+  "headline": "Nigeria frees 308 kidnap victims in largest single-day rescue",
+  "summary": "Security forces rescued more than 300 people held by bandits in the country's north, including 163 abducted from Kwara and 145 from Niger state.",
+  "script": "Nigeria's president says more than three hundred kidnap victims were freed in a single day. Security forces rescued people held for months in a northern forest, in what he called the largest rescue operation the country has ever seen.",
+  "source": "AP News",
+  "edition": "07 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-07-good/nigeria-rescue/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-07-good/nigeria-rescue/secondary.jpg",
+  "imageAlt": "Nigerian President Bola Tinubu speaks at a news conference in London.",
+  "imageAltTwo": "A freed Nigerian family poses with children released after being kidnapped from a school.",
+  "imageCredit": "AP Photo/Kin Cheung",
+  "imageCreditTwo": "AP Photo/Pelumi Salako",
+  "narrationAudio": "assets/narration/good9-2026-08-07-01-nigeria-rescue.wav",
+  "captions": [
+    {
+      "lines": [
+        "308 kidnap victims",
+        "freed in one day."
+      ],
+      "highlights": [
+        "308 kidnap victims",
+        "freed"
+      ]
+    },
+    {
+      "lines": [
+        "Largest single-day rescue",
+        "in Nigeria's history."
+      ],
+      "highlights": [
+        "largest single-day rescue"
+      ]
+    },
+    {
+      "lines": [
+        "Victims held for months",
+        "in a northern forest."
+      ],
+      "highlights": [
+        "held for months"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "AP News",
+      "title": "Nigerian president hails 'largest ever' single-day rescue as 308 abductees freed in country's north",
+      "url": "https://apnews.com/article/nigeria-rescue-bandits-abductions-cd608d04349161aa1664714ba42af4b6",
+      "published": "2026-08-06",
+      "usedFor": [
+        "308 abductees rescued",
+        "163 from Kwara, 145 from Niger",
+        "largest single-day operation claim",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Children describe how Nigerian militants moving south are seizing more young captives",
+      "url": "https://apnews.com/article/nigeria-school-kidnapping-oyo-children-735c92cd5f6155499c3ea464757613c",
+      "published": "2026-07-17",
+      "usedFor": [
+        "context on abduction crisis",
+        "secondary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major humanitarian rescue milestone with national significance; ranking is editorial, not an objective trend metric.",
+    "researchDate": "07 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Establish the national scope of the rescue operation.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "NG",
+            "coordinates": [
+              8,
+              9.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "places",
+        "scriptSection": "location",
+        "scriptCue": "Name the states where the abductions happened.",
+        "start": 5,
+        "animationId": "multi-country-sweep",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "countryCodes": [
+            "NG"
+          ],
+          "target": {
+            "code": "NG",
+            "coordinates": [
+              8,
+              9.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Highlight the forest rescue operation.",
+        "start": 10,
+        "animationId": "spotlight-dim",
+        "mapSource": "AP News / 06 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "NG",
+            "coordinates": [
+              6.5,
+              9
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

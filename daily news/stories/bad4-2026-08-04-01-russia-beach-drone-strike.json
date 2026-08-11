@@ -1,0 +1,66 @@
+{
+  "eventId": "russia-beach-drone-strike-2026-08-03",
+  "tone": "bad",
+  "countryCode": "RU",
+  "countryName": "Russia",
+  "cityName": "Gelendzhik",
+  "coordinates": [38.0805, 44.5611],
+  "region": "Europe",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · War",
+  "headline": "Drone hits busy Russian beach, killing seven including children",
+  "summary": "A drone crashed on a Black Sea beach near Arkhipo-Osipovka, killing seven including three children and injuring 40, local officials say.",
+  "script": "A drone has hit a busy beach in southern Russia, killing seven people including three children. Local authorities say forty were injured, and both sides deny deliberately targeting civilians.",
+  "source": "BBC · Reuters",
+  "edition": "04 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-04-bad/russia-beach/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-bad/russia-beach/beach.jpg",
+  "imageAlt": "Emergency services at a Black Sea beach after a drone strike.",
+  "imageAltTwo": "Tourists on the beach at Arkhipo-Osipovka on the Black Sea.",
+  "imageCredit": "BBC News image",
+  "imageCreditTwo": "Reuters image",
+  "narrationAudio": "assets/narration/tour/bad4-2026-08-04-01-russia-beach-drone-strike.wav",
+  "captions": [
+    {
+      "lines": ["Drone hits a busy", "Russian beach."],
+      "highlights": ["Drone", "Russian beach"]
+    },
+    {
+      "lines": ["Seven killed, including", "three children."],
+      "highlights": ["Seven killed", "three children"]
+    },
+    {
+      "lines": ["Forty injured in", "the Black Sea resort."],
+      "highlights": ["Forty injured"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Russia says seven killed and 40 injured by Ukrainian drone hitting busy beach",
+      "url": "https://www.bbc.co.uk/news/articles/cr7kmnyrdn7o",
+      "published": "2026-08-03",
+      "usedFor": ["casualty figures", "location", "primary context"]
+    },
+    {
+      "publisher": "Reuters via NV",
+      "title": "Drones attack Krasnodar Krai with people killed on beach near Gelendzhik",
+      "url": "https://english.nv.ua/nation/drones-attack-krasnodar-krai-with-people-killed-on-beach-near-gelendzhik-50629527.html",
+      "published": "2026-08-03",
+      "usedFor": ["independent corroboration", "Krasnodar regional context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Current BBC world-feed top story with major-agency corroboration; ranking is editorial, not an objective trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

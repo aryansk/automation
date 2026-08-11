@@ -1,0 +1,153 @@
+{
+  "eventId": "nasa-voyager2-power-big-bang-2026-08-10",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Pasadena",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Space · Science",
+  "headline": "NASA engineers buy Voyager 2 another year of science with 'Big Bang' power fix",
+  "summary": "The nearly 50-year-old probe was running low on power; the risky component swap keeps its three remaining instruments running at least another year.",
+  "script": "NASA has found a way to keep Voyager two exploring. The probe's power was running low after nearly fifty years. Engineers swapped components to give its instruments at least one more year.",
+  "source": "NASA / GNN",
+  "edition": "10 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-12-good/voyager2-power-big-bang/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-12-good/voyager2-power-big-bang/secondary.jpg",
+  "imageAlt": "Artist illustration of the Voyager 2 spacecraft in deep space.",
+  "imageAltTwo": "NASA deep-space network antenna tracking the Voyager probes.",
+  "imageCredit": "NASA/JPL-Caltech",
+  "imageCreditTwo": "NASA/JPL-Caltech",
+  "narrationAudio": "assets/narration/good-03-voyager2-power.wav",
+  "captions": [
+    {
+      "lines": [
+        "Voyager 2 running",
+        "low on power."
+      ],
+      "highlights": [
+        "low on power"
+      ]
+    },
+    {
+      "lines": [
+        "NASA's 'Big Bang'",
+        "frees up watts."
+      ],
+      "highlights": [
+        "Big Bang"
+      ]
+    },
+    {
+      "lines": [
+        "One more year",
+        "of science."
+      ],
+      "highlights": [
+        "one more year"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "NASA",
+      "title": "NASA Engineers Help Prolong Voyager 2's Science Mission",
+      "url": "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/",
+      "published": "2026-08-04",
+      "usedFor": [
+        "power swap",
+        "one-year extension"
+      ]
+    },
+    {
+      "publisher": "Good News Network",
+      "title": "Voyager 2 was Running Low on Power Until NASA Engineered a 'Big Bang' to Buy Another Year",
+      "url": "https://www.goodnewsnetwork.org/voyager-2-was-running-low-on-power-until-nasa-engineered-big-bang-to-buy-another-year/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "context",
+        "3 instruments remain"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Historic spacecraft milestone.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Space-wide opening.",
+        "start": 0,
+        "animationId": "world-orbit",
+        "mapSource": "NASA / 10 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Interstellar space",
+            "coordinates": [
+              0,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Mission control at JPL.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "NASA / 10 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Pasadena",
+            "coordinates": [
+              -118.14,
+              34.15
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Voyager 2's journey outward.",
+        "start": 9.5,
+        "animationId": "great-circle-route",
+        "mapSource": "NASA / 10 Aug 2026",
+        "mapData": {
+          "route": [
+            {
+              "name": "Earth",
+              "coordinates": [
+                0,
+                0
+              ]
+            },
+            {
+              "name": "Voyager 2",
+              "coordinates": [
+                -50,
+                -30
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

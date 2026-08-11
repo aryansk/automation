@@ -1,0 +1,88 @@
+{
+  "eventId": "houthi-saudi-tanker-attack-2026-08-05",
+  "tone": "bad",
+  "countryCode": "SA",
+  "countryName": "Saudi Arabia",
+  "cityName": "Yanbu",
+  "region": "Middle East",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Shipping",
+  "headline": "Houthis strike Saudi oil tanker off Red Sea port Yanbu",
+  "summary": "The Iran-aligned group said it hit the tanker off Yanbu and threatened to expand Red Sea attacks, raising fresh maritime-security concerns.",
+  "script": "Yemen's Houthi group says it struck a Saudi oil tanker off the Red Sea port of Yanbu. The group is threatening to expand its attacks on shipping, raising fresh fears for vessels and oil routes through the region.",
+  "source": "Reuters · NYT",
+  "edition": "06 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-06-bad/houthi-tanker/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-06-bad/houthi-tanker/secondary.jpg",
+  "imageAlt": "A large tanker at sea in the Strait of Hormuz, part of the region's vital shipping lanes.",
+  "imageAltTwo": "A cargo vessel transits the Strait of Hormuz amid heightened maritime tensions.",
+  "imageCredit": "Reuters via CNN",
+  "imageCreditTwo": "AP via CNN",
+  "narrationAudio": "assets/narration/bad7-2026-08-06-02-houthi-tanker.wav",
+  "captions": [
+    {
+      "lines": [
+        "Houthis strike",
+        "Saudi oil tanker."
+      ],
+      "highlights": [
+        "Houthis strike",
+        "Saudi tanker"
+      ]
+    },
+    {
+      "lines": [
+        "Attack off",
+        "Red Sea port Yanbu."
+      ],
+      "highlights": [
+        "port of Yanbu"
+      ]
+    },
+    {
+      "lines": [
+        "Threats to expand",
+        "Red Sea attacks."
+      ],
+      "highlights": [
+        "expand attacks"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Yemen's Houthis say they attacked Saudi oil tanker in Red Sea",
+      "url": "https://www.reuters.com/world/middle-east/yemens-houthis-say-they-attacked-saudi-oil-tanker-red-sea-2026-08-05/",
+      "published": "2026-08-05",
+      "usedFor": [
+        "missile attack on tanker off Yanbu",
+        "Houthi claim",
+        "primary context"
+      ]
+    },
+    {
+      "publisher": "The New York Times",
+      "title": "Houthis Threaten to Expand Red Sea Attacks, and Claim Strike on Saudi Tanker",
+      "url": "https://www.nytimes.com/2026/08/05/world/middleeast/houthis-claim-attack-saudi-arabia-tanker.html",
+      "published": "2026-08-05",
+      "usedFor": [
+        "independent corroboration",
+        "threat to expand attacks"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Major maritime-security incident affecting global oil shipping; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

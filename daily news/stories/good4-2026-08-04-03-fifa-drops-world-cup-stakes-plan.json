@@ -1,0 +1,66 @@
+{
+  "eventId": "fifa-drops-world-cup-stakes-plan-2026-07-31",
+  "tone": "good",
+  "countryCode": "CH",
+  "countryName": "Switzerland",
+  "cityName": "Geneva",
+  "coordinates": [6.1432, 46.2044],
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Sport · Policy",
+  "headline": "FIFA abandons plan to sell World Cup revenue stakes",
+  "summary": "President Gianni Infantino dropped the divisive private-equity proposal after worldwide pushback from the soccer community.",
+  "script": "FIFA has abandoned its plan to sell a stake in World Cup revenue to private investors. President Gianni Infantino said the proposal had created divisions, after opposition from clubs, federations and fans around the world.",
+  "source": "BBC · AP",
+  "edition": "04 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-04-good/fifa/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-good/fifa/trophy.jpg",
+  "imageAlt": "FIFA president Gianni Infantino speaking at a news conference.",
+  "imageAltTwo": "The FIFA World Cup trophy on a podium.",
+  "imageCredit": "Getty via BBC",
+  "imageCreditTwo": "AP image",
+  "narrationAudio": "assets/narration/tour/good4-2026-08-04-03-fifa-drops-world-cup-stakes-plan.wav",
+  "captions": [
+    {
+      "lines": ["FIFA drops its plan", "to sell World Cup stakes."],
+      "highlights": ["FIFA drops", "sell World Cup stakes"]
+    },
+    {
+      "lines": ["Infantino says the plan", "created divisions."],
+      "highlights": ["Infantino", "created divisions"]
+    },
+    {
+      "lines": ["Worldwide pushback", "wins the day."],
+      "highlights": ["Worldwide pushback"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Watch: Why Fifa dropped plans to sell stakes in the World Cup",
+      "url": "https://www.bbc.co.uk/news/videos/cvgj0vldr1mo",
+      "published": "2026-08-01",
+      "usedFor": ["Infantino statement", "divisive-proposal context"]
+    },
+    {
+      "publisher": "USA Today / AP",
+      "title": "FIFA president Gianni Infantino drops plans to sell World Cup profits to private equity",
+      "url": "https://usa-today-news.com/news/fifa-president-gianni-infantino-drops-plans-to-sell-world-cup-profits-to-private-equity/",
+      "published": "2026-08-01",
+      "usedFor": ["independent corroboration", "pushback detail"]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Current BBC Sport prominence plus international football-policy interest; ranking is editorial, not an objective trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

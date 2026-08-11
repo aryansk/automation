@@ -1,0 +1,88 @@
+{
+  "eventId": "iran-threatens-gulf-states-2026-08-05",
+  "tone": "bad",
+  "countryCode": "IR",
+  "countryName": "Iran",
+  "cityName": "Tehran",
+  "region": "Middle East",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Diplomacy",
+  "headline": "Iran warns Gulf states it will hit energy sites if US strikes",
+  "summary": "Tehran told Gulf leaders any new US attack would trigger retaliation against their oil, power and water infrastructure, sources say.",
+  "script": "Iran has warned Gulf states that any new American attack will trigger retaliation against their oil, power and water infrastructure. The threat comes as Tehran pushes a diplomatic campaign to stop further strikes, with tensions still high across the region.",
+  "source": "Reuters",
+  "edition": "06 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-06-bad/iran-gulf/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-06-bad/iran-gulf/secondary.jpg",
+  "imageAlt": "Zolfaghar missiles on a launcher displayed at Azadi Square in Tehran.",
+  "imageAltTwo": "A tanker transits the Strait of Hormuz, a critical shipping route.",
+  "imageCredit": "AFP",
+  "imageCreditTwo": "Reuters via CNN",
+  "narrationAudio": "assets/narration/bad8-2026-08-06-01-iran-gulf.wav",
+  "captions": [
+    {
+      "lines": [
+        "Iran warns Gulf states",
+        "over new US strikes."
+      ],
+      "highlights": [
+        "Iran warns",
+        "Gulf states"
+      ]
+    },
+    {
+      "lines": [
+        "Oil, power and water",
+        "infrastructure at risk."
+      ],
+      "highlights": [
+        "oil, power, water"
+      ]
+    },
+    {
+      "lines": [
+        "Diplomatic push",
+        "continues."
+      ],
+      "highlights": [
+        "diplomatic push"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Iran threatens to hit Gulf states if US launches new strikes",
+      "url": "https://www.reuters.com/world/middle-east/iran-threatens-hit-gulf-states-if-us-launches-new-strikes-2026-08-05/",
+      "published": "2026-08-05",
+      "usedFor": [
+        "Iran warning to Gulf states",
+        "energy infrastructure threat",
+        "five-source corroboration"
+      ]
+    },
+    {
+      "publisher": "Al-Monitor",
+      "title": "Iran threatens to hit Gulf states if US launches new strikes",
+      "url": "https://www.al-monitor.com/originals/2026/08/iran-threatens-hit-gulf-states-if-us-launches-new-strikes",
+      "published": "2026-08-05",
+      "usedFor": [
+        "independent corroboration",
+        "high-level warning details"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major escalation threat affecting Gulf energy security; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

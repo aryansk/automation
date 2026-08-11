@@ -1,0 +1,70 @@
+{
+  "eventId": "sophie-woods-via-alpina-record-2026-08-03",
+  "tone": "good",
+  "countryCode": "MC",
+  "countryName": "Monaco",
+  "cityName": "Monte Carlo",
+  "coordinates": [7.42, 43.7384],
+  "mentionedCountryCodes": ["NZ"],
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "statistics",
+  "kicker": "Sport · Endurance",
+  "headline": "Ultra-runner Sophie Woods smashes the Alps crossing record",
+  "summary": "The New Zealander ran the 2,000km Via Alpina in 29 days, beating both the men's and women's records by six days.",
+  "script": "New Zealand ultra-runner Sophie Woods has set the fastest known crossing of the Alps, running two thousand kilometres in twenty-nine days. She beat the previous record by six days, crossing eight countries through storms and heat.",
+  "source": "BBC Sport · CNN",
+  "edition": "04 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-04-good/sophie-woods/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-good/sophie-woods/alps.jpg",
+  "imageAlt": "Ultra-runner Sophie Woods running through alpine terrain.",
+  "imageAltTwo": "A mountain trail across the Alps at sunrise.",
+  "imageCredit": "BBC Sport image",
+  "imageCreditTwo": "AP image",
+  "narrationAudio": "assets/narration/tour/good4-2026-08-04-01-sophie-woods-alps.wav",
+  "statValue": "29 days",
+  "statLabel": "fastest Alps crossing",
+  "statPeriod": "2,000km Via Alpina",
+  "captions": [
+    {
+      "lines": ["Sophie Woods ran the Alps", "in a record 29 days."],
+      "highlights": ["record 29 days"]
+    },
+    {
+      "lines": ["2,000km across", "eight countries."],
+      "highlights": ["2,000km", "eight countries"]
+    },
+    {
+      "lines": ["Six days faster than", "the previous record."],
+      "highlights": ["Six days faster"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC Sport",
+      "title": "Sophie Woods completes Via Alpina endurance challenge in record 29 days",
+      "url": "https://www.bbc.com/sport/articles/cg7mdjkrr22o",
+      "published": "2026-08-03",
+      "usedFor": ["record claim", "duration and distance", "primary context"]
+    },
+    {
+      "publisher": "CNN",
+      "title": "Ultrarunner Sophie Woods sets new record for Via Alpina, crossing 8 countries",
+      "url": "https://edition.cnn.com/2026/08/03/world/new-record-for-via-alpina-intl-hnk",
+      "published": "2026-08-03",
+      "usedFor": ["independent corroboration", "record comparison"]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Current BBC Sport prominence plus international endurance-sport interest; ranking is editorial, not an objective trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

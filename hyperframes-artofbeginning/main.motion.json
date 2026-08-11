@@ -1,0 +1,7 @@
+{
+  "duration": 163,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#opening-card .doc-card", "bySec": 1.2 },
+    { "kind": "before", "a": "#opening-card .doc-card", "b": "#red-wait .cinema-copy" }
+  ]
+}

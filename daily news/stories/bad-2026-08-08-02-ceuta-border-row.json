@@ -1,0 +1,149 @@
+{
+  "eventId": "spain-italy-border-controls-ceuta-row-2026-08-08",
+  "tone": "bad",
+  "countryCode": "ES",
+  "countryName": "Spain",
+  "cityName": "Ceuta",
+  "region": "Europe",
+  "urgency": "high",
+  "storyType": "editorial",
+  "kicker": "Migration · EU policy",
+  "headline": "Spain and Italy impose border checks in migration row",
+  "summary": "Spain began checking travelers from Italy for a month, after Italy suspended Schengen following an influx of about 78,000 migrants into Ceuta.",
+  "script": "Spain and Italy are now checking travellers at their borders. The row follows about seventy eight thousand migrants entering Spain's Ceuta enclave. Both countries say the checks will last around a month, as a wider EU migration debate deepens.",
+  "source": "BBC News · AP",
+  "edition": "08 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-08-bad/ceuta-border-row/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-08-bad/ceuta-border-row/secondary.jpg",
+  "imageAlt": "Spanish police check travel documents at an airport arrival area.",
+  "imageAltTwo": "Migrants wait near a temporary centre at Spain's Ceuta border.",
+  "imageCredit": "Reuters",
+  "imageCreditTwo": "Reuters",
+  "narrationAudio": "assets/narration/bad-2026-08-08-02-ceuta-border-row.wav",
+  "captions": [
+    {
+      "lines": [
+        "Spain and Italy impose",
+        "border checks."
+      ],
+      "highlights": [
+        "border checks"
+      ]
+    },
+    {
+      "lines": [
+        "Row over 78,000 migrants",
+        "entering Ceuta."
+      ],
+      "highlights": [
+        "78,000 migrants"
+      ]
+    },
+    {
+      "lines": [
+        "EU migration debate",
+        "deepens."
+      ],
+      "highlights": [
+        "EU migration debate"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Spain imposes border controls against Italy as row over Ceuta migrant influx intensifies",
+      "url": "https://www.bbc.com/news/articles/c5yv5l6yr5ko",
+      "published": "2026-08-08",
+      "usedFor": [
+        "Spain border checks",
+        "78,000 migrants",
+        "month-long measures"
+      ]
+    },
+    {
+      "publisher": "AP News",
+      "title": "Spain imposes border checks on Italian travelers in tit-for-tat move over Ceuta migrants row",
+      "url": "https://apnews.com/article/spain-italy-ceuta-migrants-schengen-border-controls-f3fc82cadf7dce39d553126a47d61fd7",
+      "published": "2026-08-08",
+      "usedFor": [
+        "independent corroboration",
+        "tit-for-tat dynamic",
+        "Schengen suspension"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Major EU policy rupture with human impact; ranking is editorial, not an objective trend metric.",
+    "researchDate": "08 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orientation",
+        "scriptSection": "opener",
+        "scriptCue": "The story opens by establishing the two countries involved.",
+        "start": 0,
+        "animationId": "country-hop",
+        "mapSource": "BBC News 08 Aug 2026; AP News 08 Aug 2026",
+        "mapData": {
+          "from": {
+            "name": "Spain",
+            "country": "Spain",
+            "code": "ES",
+            "coordinates": [-3.7038, 40.4168]
+          },
+          "target": {
+            "name": "Italy",
+            "country": "Italy",
+            "code": "IT",
+            "coordinates": [12.4964, 41.9028]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "The narration names Ceuta and the border row.",
+        "start": 2.6,
+        "animationId": "city-lock",
+        "mapSource": "BBC News 08 Aug 2026; AP News 08 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Ceuta",
+            "country": "Spain",
+            "code": "ES",
+            "coordinates": [-5.3163, 35.8894]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "claim-and-consequence",
+        "scriptCue": "The script explains the migrant influx and the border measures.",
+        "start": 7.2,
+        "animationId": "migration-flow",
+        "mapSource": "BBC News 08 Aug 2026; AP News 08 Aug 2026",
+        "mapData": {
+          "routes": [
+            {
+              "points": [[-5.99, 35.89], [-5.32, 35.89]],
+              "value": 78
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

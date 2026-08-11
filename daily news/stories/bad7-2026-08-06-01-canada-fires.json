@@ -1,0 +1,88 @@
+{
+  "eventId": "canada-climate-fires-wwa-2026-08-06",
+  "tone": "bad",
+  "countryCode": "CA",
+  "countryName": "Canada",
+  "cityName": "",
+  "region": "North America",
+  "urgency": "breaking",
+  "storyType": "weather",
+  "kicker": "Climate · Wildfire",
+  "headline": "Climate crisis made Canada's wildfires twice as likely, study finds",
+  "summary": "Nearly 700 fires are burning across Canada; World Weather Attribution says fossil-fuel heating made the conditions twice as likely.",
+  "script": "A new study says the climate crisis made Canada's wildfire conditions twice as likely. Nearly seven hundred fires are burning, and scientists warn such fire weather is no longer rare, as towns face evacuation and smoke spreads across North America.",
+  "source": "The Guardian",
+  "edition": "06 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-06-bad/canada-fires/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-06-bad/canada-fires/secondary.jpg",
+  "imageAlt": "A wildfire burns along a hillside at night, reflected on a lake in British Columbia.",
+  "imageAltTwo": "Smoke and flames rise through a coniferous forest in Canada.",
+  "imageCredit": "Canadian Press via The Guardian",
+  "imageCreditTwo": "Bloomberg via The Guardian",
+  "narrationAudio": "assets/narration/bad7-2026-08-06-01-canada-fires.wav",
+  "captions": [
+    {
+      "lines": [
+        "Canada's wildfires",
+        "twice as likely."
+      ],
+      "highlights": [
+        "twice as likely"
+      ]
+    },
+    {
+      "lines": [
+        "Climate crisis is",
+        "the main driver."
+      ],
+      "highlights": [
+        "climate crisis"
+      ]
+    },
+    {
+      "lines": [
+        "Nearly 700 fires",
+        "burning nationwide."
+      ],
+      "highlights": [
+        "nearly 700 fires"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "The Guardian",
+      "title": "Human-driven climate crisis fuels Canada's deadly wildfires, study finds",
+      "url": "https://www.theguardian.com/world/2026/aug/06/canada-wildfires-climate-crisis",
+      "published": "2026-08-06",
+      "usedFor": [
+        "WWA study findings",
+        "twice-as-likely attribution",
+        "nearly 700 fires",
+        "primary image"
+      ]
+    },
+    {
+      "publisher": "World Weather Attribution",
+      "title": "WWA rapid attribution analysis",
+      "url": "https://www.worldweatherattribution.org/",
+      "published": "2026-08-06",
+      "usedFor": [
+        "scientific consortium context",
+        "study methodology"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major climate-attribution finding with continent-wide impact; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

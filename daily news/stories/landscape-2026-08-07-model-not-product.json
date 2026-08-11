@@ -1,0 +1,478 @@
+{
+  "slug": "landscape-2026-08-07-model-not-product",
+  "edition": "07 Aug 2026",
+  "deskName": "godandbaddaily / Landscape Desk",
+  "openerTitle": "THE MODEL IS NOT / THE PRODUCT",
+  "openerSub": "One question · the durable moat when models become interchangeable",
+  "headline": "If capable AI models become open-weight, who keeps the profit?",
+  "summary": "Open-weight models are collapsing the price of intelligence itself. The scarce layers — distribution, workflow ownership, proprietary context, and trust — are where the profit moves.",
+  "kicker": "AI · MODELS · MARKETS · WORLD",
+  "region": "Global AI value chain",
+  "globeCaption": "The model is becoming the cheapest part of the stack — the moat is what surrounds it",
+  "routeLabel": "MODEL → DISTRIBUTION → WORKFLOW → CONTEXT → TRUST",
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orientation",
+        "scriptSection": "opener",
+        "scriptCue": "Open with the global scope of the AI economy and the question of where value lands.",
+        "start": 0,
+        "animationId": "world-orbit"
+      },
+      {
+        "id": "value-shift",
+        "scriptSection": "claim-and-consequence",
+        "scriptCue": "The letter from industry to Washington and the value shift from the model layer toward the scarce layers.",
+        "start": 6.8,
+        "animationId": "flow-shift",
+        "mapSource": "Microsoft / Open Weights and American AI Leadership / 24 Jul 2026; Gartner / AI Spending Forecast / May 2026",
+        "mapData": {
+          "beforeRoutes": [
+            {
+              "points": [
+                {
+                  "name": "MODEL LABS",
+                  "coordinates": [
+                    -122.4194,
+                    37.7749
+                  ]
+                },
+                {
+                  "name": "CLOUD",
+                  "coordinates": [
+                    -77.4,
+                    38.9
+                  ]
+                },
+                {
+                  "name": "APPS",
+                  "coordinates": [
+                    8.6821,
+                    50.1109
+                  ]
+                }
+              ],
+              "value": 78,
+              "label": "MODEL LAYER"
+            }
+          ],
+          "afterRoutes": [
+            {
+              "points": [
+                {
+                  "name": "DISTRIBUTION",
+                  "coordinates": [
+                    -122.4194,
+                    37.7749
+                  ]
+                },
+                {
+                  "name": "WORKFLOW",
+                  "coordinates": [
+                    -77.4,
+                    38.9
+                  ]
+                },
+                {
+                  "name": "CONTEXT",
+                  "coordinates": [
+                    8.6821,
+                    50.1109
+                  ]
+                }
+              ],
+              "value": 52,
+              "label": "SCARCE LAYERS"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "label": "MICROSOFT / OPEN WEIGHTS LETTER / 24 JUL 2026",
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/"
+    },
+    {
+      "label": "GARTNER / AI SPENDING 2026 / $2.59T",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-05-19-gartner-forecasts-worldwide-ai-spending-to-grow-47-percent-in-2026"
+    },
+    {
+      "label": "FRANKLIN TEMPLETON / MODEL IS NOT THE MOAT / 2026",
+      "url": "https://www.franklintempleton.com/articles/2026/equity/the-model-is-not-the-moat"
+    },
+    {
+      "label": "FORBES / TOKEN COST MARGIN SQUEEZE / JUL 2026",
+      "url": "https://www.forbes.com/sites/petercohan/2026/07/28/as-token-costs-plunge-enterprise-ai-providers-face-a-new-margin-squeeze/"
+    },
+    {
+      "label": "TURION / LLM COMMODITIZATION 2026 / WHERE THE MOAT LIVES",
+      "url": "https://turion.ai/blog/great-llm-commoditization-2026/"
+    }
+  ],
+  "chapters": [
+    {
+      "kicker": "01 / THE NEW SIGNAL",
+      "title": "The model is becoming a commodity — the moat is what surrounds it",
+      "body": "On 24 July 2026, more than 270 companies and organizations — Microsoft, NVIDIA, Meta and others — signed an open letter urging Washington not to restrict open-weight models. The signal: the price of intelligence itself is collapsing.",
+      "tag": "270+ SIGNATORIES / 24 JUL 2026",
+      "graphic": "letter",
+      "focus": {
+        "codes": "UNITED STATES / POLICY",
+        "label": "WASHINGTON, D.C. / THE OPEN-WEIGHT SIGNAL",
+        "coordinates": "38.9° N / 77.0° W"
+      },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "Washington, D.C.",
+        "event": "24 Jul 2026 · open-weights letter",
+        "coordinates": [
+          -77.0365,
+          38.9072
+        ],
+        "cameraZ": 6.8,
+        "mentionedCountryCodes": [
+          "US",
+          "CN"
+        ],
+        "routePoints": [
+          {
+            "label": "OPEN LETTER",
+            "country": "United States",
+            "location": "Washington, D.C.",
+            "coordinates": [
+              -77.0365,
+              38.9072
+            ]
+          },
+          {
+            "label": "MODEL LABS",
+            "country": "United States",
+            "location": "Silicon Valley",
+            "coordinates": [
+              -122.4194,
+              37.7749
+            ]
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-07-model-not-product/washington.jpg",
+          "country": "United States",
+          "location": "Washington, D.C.",
+          "caption": "The policy signal.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-07-model-not-product/data-centre.jpg",
+          "country": "Global",
+          "location": "Data-centre campus",
+          "caption": "The compute behind the models.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "02 / THE DEFINITION",
+      "title": "A model is not a product — it is an input",
+      "body": "An open-weight model is software you can download, inspect, modify and run on your own infrastructure. The model becomes a raw input; the product is the system around it — workflow, data, distribution, trust.",
+      "tag": "MODEL = INPUT / MOAT = SYSTEM / RAW INPUT",
+      "graphic": "definition",
+      "focus": {
+        "codes": "MODEL / SYSTEM",
+        "label": "THE STACK / INPUT VS PRODUCT",
+        "coordinates": "SCHEMATIC"
+      },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "Worldwide",
+        "event": "The definition of the stack",
+        "coordinates": [
+          -98.5795,
+          39.8283
+        ],
+        "cameraZ": 9.2,
+        "mentionedCountryCodes": [
+          "US",
+          "CN",
+          "EU",
+          "JP"
+        ],
+        "routePoints": [
+          {
+            "label": "MODEL",
+            "country": "United States",
+            "location": "Silicon Valley",
+            "coordinates": [
+              -122.4194,
+              37.7749
+            ]
+          },
+          {
+            "label": "CLOUD",
+            "country": "United States",
+            "location": "Northern Virginia",
+            "coordinates": [
+              -77.4,
+              38.9
+            ]
+          },
+          {
+            "label": "APPS",
+            "country": "Germany",
+            "location": "Frankfurt",
+            "coordinates": [
+              8.6821,
+              50.1109
+            ]
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-07-model-not-product/open-weights.jpg",
+          "country": "Global",
+          "location": "Open model weights",
+          "caption": "The interchangeable input.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-07-model-not-product/server-room.jpg",
+          "country": "Global",
+          "location": "Server room",
+          "caption": "The system around the model.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "03 / FOLLOW THE STACK",
+      "title": "Chips, cloud and apps: where the money lands",
+      "body": "Gartner forecasts worldwide AI spending will reach $2.59 trillion in 2026 — up 47%. Token costs are plunging as open weights flood the market, squeezing model-provider margins while chips, cloud and apps capture the toll.",
+      "tag": "GARTNER / $2.59T / 2026 / +47%",
+      "graphic": "stack",
+      "focus": {
+        "codes": "STACK / VALUE",
+        "label": "GLOBAL / WHERE THE MONEY LANDS",
+        "coordinates": "SCHEMATIC"
+      },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "Worldwide",
+        "event": "The AI value stack",
+        "coordinates": [
+          -98.5795,
+          39.8283
+        ],
+        "cameraZ": 9.5,
+        "mentionedCountryCodes": [
+          "US",
+          "CN",
+          "EU",
+          "JP"
+        ],
+        "routePoints": [
+          {
+            "label": "CHIPS",
+            "country": "United States",
+            "location": "Silicon Valley",
+            "coordinates": [
+              -122.4194,
+              37.7749
+            ]
+          },
+          {
+            "label": "CLOUD",
+            "country": "United States",
+            "location": "Northern Virginia",
+            "coordinates": [
+              -77.4,
+              38.9
+            ]
+          },
+          {
+            "label": "APPS",
+            "country": "Germany",
+            "location": "Frankfurt",
+            "coordinates": [
+              8.6821,
+              50.1109
+            ]
+          },
+          {
+            "label": "ENTERPRISE",
+            "country": "India",
+            "location": "Bengaluru",
+            "coordinates": [
+              77.5946,
+              12.9716
+            ]
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-07-model-not-product/chips.jpg",
+          "country": "Global",
+          "location": "AI accelerators",
+          "caption": "Chips capture the toll.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-07-model-not-product/cloud.jpg",
+          "country": "Global",
+          "location": "Cloud region",
+          "caption": "Cloud is the distribution layer.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "04 / WHY MARKETS CARE",
+      "title": "Enterprise spend is not model spend",
+      "body": "Forbes reports token costs are falling so fast that model providers face a margin squeeze, while enterprise buyers shift spend toward the application layer. Distribution and proprietary context are the scarce, compounding assets — not the weights.",
+      "tag": "MARGIN SQUEEZE / APP LAYER / WORKFLOW + DATA",
+      "graphic": "market",
+      "focus": {
+        "codes": "MARKET / VALUE",
+        "label": "NEW YORK, USA / THE MARGIN SIGNAL",
+        "coordinates": "40.7° N / 74.0° W"
+      },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "New York",
+        "event": "The margin signal",
+        "coordinates": [
+          -74.006,
+          40.7128
+        ],
+        "cameraZ": 7.4,
+        "mentionedCountryCodes": [
+          "US",
+          "GB"
+        ],
+        "routePoints": [
+          {
+            "label": "TOKEN COSTS",
+            "country": "United States",
+            "location": "New York",
+            "coordinates": [
+              -74.006,
+              40.7128
+            ]
+          },
+          {
+            "label": "APP LAYER",
+            "country": "United States",
+            "location": "Silicon Valley",
+            "coordinates": [
+              -122.4194,
+              37.7749
+            ]
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-07-model-not-product/market.jpg",
+          "country": "United States",
+          "location": "New York",
+          "caption": "The margin signal.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-07-model-not-product/office.jpg",
+          "country": "Global",
+          "location": "Enterprise workplace",
+          "caption": "The workflow is the moat.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    },
+    {
+      "kicker": "05 / THE VERDICT",
+      "title": "The weakest business model is selling undifferentiated model access",
+      "body": "Franklin Templeton's 2026 analysis is blunt: value migrates, it does not disappear. The weakest business model is selling undifferentiated model access. The durable moats are distribution, workflow ownership, proprietary context and trust.",
+      "tag": "VALUE MIGRATES / NOT DISAPPEARS / MOAT = CONTEXT + TRUST",
+      "graphic": "verdict",
+      "focus": {
+        "codes": "WORLD / VERDICT",
+        "label": "GLOBAL / THE DURABLE MOAT",
+        "coordinates": "SCHEMATIC"
+      },
+      "globe": {
+        "countryCode": "US",
+        "countryName": "United States",
+        "city": "Worldwide",
+        "event": "The durable moat",
+        "coordinates": [
+          -98.5795,
+          39.8283
+        ],
+        "cameraZ": 10.5,
+        "mentionedCountryCodes": [
+          "US",
+          "CN",
+          "EU"
+        ],
+        "routePoints": [
+          {
+            "label": "MODEL",
+            "country": "United States",
+            "location": "Silicon Valley",
+            "coordinates": [
+              -122.4194,
+              37.7749
+            ]
+          },
+          {
+            "label": "DISTRIBUTION",
+            "country": "United States",
+            "location": "Northern Virginia",
+            "coordinates": [
+              -77.4,
+              38.9
+            ]
+          },
+          {
+            "label": "CONTEXT",
+            "country": "Germany",
+            "location": "Frankfurt",
+            "coordinates": [
+              8.6821,
+              50.1109
+            ]
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "assets/news-images/2026-08-07-model-not-product/globe.jpg",
+          "country": "Global",
+          "location": "World map",
+          "caption": "Value migrates across the globe.",
+          "credit": "Context image · source credit in story manifest"
+        },
+        {
+          "src": "assets/news-images/2026-08-07-model-not-product/trust.jpg",
+          "country": "Global",
+          "location": "Enterprise governance",
+          "caption": "Trust is the scarce asset.",
+          "credit": "Context image · source credit in story manifest"
+        }
+      ]
+    }
+  ],
+  "scriptFile": "assets/narration/landscape-2026-08-07-model-not-product-script.txt",
+  "captionFile": "assets/narration/landscape-2026-08-07-model-not-product.vtt",
+  "narrationAudio": "assets/narration/landscape-2026-08-07-model-not-product.wav"
+}

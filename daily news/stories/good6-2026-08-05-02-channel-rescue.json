@@ -1,0 +1,93 @@
+{
+  "eventId": "channel-boat-fire-rescue-2026-08-05",
+  "tone": "good",
+  "countryCode": "FR",
+  "countryName": "France",
+  "cityName": "Boulogne-sur-Mer",
+  "coordinates": [
+    1.59,
+    50.73
+  ],
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "breaking",
+  "kicker": "Maritime · Rescue",
+  "headline": "More than 170 migrants rescued after boat catches fire in Channel",
+  "summary": "All were taken to Boulogne-sur-Mer for treatment, with 11 minor injuries and no fatalities reported.",
+  "script": "More than one hundred and seventy people have been rescued after a migrant boat caught fire in the English Channel. French and British crews brought everyone safely ashore, with only minor injuries reported.",
+  "source": "BBC · AFP",
+  "edition": "05 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-05-good6/channel-rescue/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-good6/channel-rescue/secondary.jpg",
+  "imageAlt": "Migrants disembark from the French rescue ship Minck following their rescue at sea.",
+  "imageAltTwo": "The Argonaute, one of two French ships involved in the rescue, docked in Boulogne-sur-Mer.",
+  "imageCredit": "AFP via Getty Images",
+  "imageCreditTwo": "AFP via Getty Images",
+  "narrationAudio": "assets/narration/good6-2026-08-05-02-channel-rescue.wav",
+  "captions": [
+    {
+      "lines": [
+        "170+ rescued after",
+        "Channel boat fire."
+      ],
+      "highlights": [
+        "170+ rescued",
+        "boat fire"
+      ]
+    },
+    {
+      "lines": [
+        "French and British crews",
+        "worked together."
+      ],
+      "highlights": [
+        "French and British",
+        "crews"
+      ]
+    },
+    {
+      "lines": [
+        "No lives lost in",
+        "the rescue."
+      ],
+      "highlights": [
+        "No lives lost"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "More than 170 migrants rescued after boat catches fire in Channel",
+      "url": "https://www.bbc.co.uk/news/articles/c4gkpeppjyqo",
+      "published": "2026-08-04",
+      "usedFor": [
+        "rescue figure",
+        "no fatalities",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "French Maritime Prefecture",
+      "title": "Channel and North Sea rescue operation statement",
+      "url": "https://www.premar-manche.gouv.fr",
+      "published": "2026-08-04",
+      "usedFor": [
+        "rescue operation coordination",
+        "casualty report"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Major rescue with positive human outcome and international coordination; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

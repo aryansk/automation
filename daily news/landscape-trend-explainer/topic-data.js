@@ -1,0 +1,719 @@
+window.__topicData = {
+  "story": {
+    "slug": "landscape-2026-08-03-open-models-markets",
+    "edition": "03 Aug 2026",
+    "deskName": "godandbaddaily / Landscape Desk",
+    "openerTitle": "OPEN MODELS / CLOSED PROFITS?",
+    "openerSub": "One question · the profit map of AI",
+    "headline": "What open-weight AI could mean for the stock market",
+    "summary": "From Washington to Shanghai, Taiwan, Tokyo, Seoul, Frankfurt and Singapore, the open-model race is moving the bottleneck from model access toward chips, power, distribution and trust.",
+    "kicker": "TECH · MARKETS · WORLD",
+    "region": "Global AI economy",
+    "scriptFile": "assets/narration/landscape-2026-08-03-open-models-markets-script.txt",
+    "narrationAudio": "assets/narration/landscape-2026-08-03-open-models-markets.wav",
+    "captionFile": "assets/narration/landscape-2026-08-03-open-models-markets.vtt",
+    "globeCaption": "From Washington to Shanghai, the profit map is moving",
+    "routeLabel": "OPEN WEIGHTS / COUNTRY-BY-COUNTRY SIGNALS",
+    "sources": [
+      {
+        "label": "REUTERS / 24 JUL 2026 / OPEN-WEIGHT LETTER",
+        "url": "https://ca.finance.yahoo.com/news/nvidia-microsoft-other-tech-giants-180711020.html"
+      },
+      {
+        "label": "REUTERS / 17 JUL 2026 / KIMI K3",
+        "url": "https://www.investing.com/news/stock-market-news/chinas-moonshot-unveils-worlds-largest-open-ai-model-closing-in-on-us-rivals-4797347"
+      },
+      {
+        "label": "REUTERS / 20 JUL 2026 / MOONSHOT DEMAND",
+        "url": "https://www.investing.com/news/stock-market-news/chinas-moonshot-pauses-kimi-subscriptions-amid-hot-demand-ipo-push-4800006"
+      },
+      {
+        "label": "BLOOMBERG / GUANGDONG POWER MARKET",
+        "url": "https://www.bloomberg.com/news/articles/2026-05-16/china-data-centers-tap-spot-power-trading-first-time-report?srnd=phx-ai"
+      },
+      {
+        "label": "IMF / JULY 2026 OUTLOOK",
+        "url": "https://www.elibrary.imf.org/abstract/book/9798229047999/CH001.xml"
+      },
+      {
+        "label": "BIS / ANNUAL REPORT 2026",
+        "url": "https://www.bis.org/publ/arpdf/ar2026e.pdf"
+      },
+      {
+        "label": "IEA / ENERGY AND AI",
+        "url": "https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai"
+      },
+      {
+        "label": "LE MONDE / EUROPEAN AI MEGAFACTORIES",
+        "url": "https://www.lemonde.fr/en/economy/article/2026/07/31/ai-europe-commits-5-billion-to-fund-seven-ai-megafactories-and-catch-up-with-the-us-and-china_6756020_19.html"
+      }
+    ],
+    "chapters": [
+      {
+        "kicker": "01 / THE NEW SIGNAL",
+        "title": "Washington just turned open models into a market question",
+        "body": "On 24 July, Nvidia, Microsoft and other technology heavyweights backed an open-weight case to U.S. lawmakers—turning model access into a fight over the next AI tollbooth.",
+        "tag": "UNITED STATES / JULY 2026 / OPEN-WEIGHT LETTER",
+        "graphic": "letter",
+        "focus": {
+          "codes": "UNITED STATES / CHINA",
+          "label": "WASHINGTON, UNITED STATES / OPEN-WEIGHT LETTER",
+          "coordinates": "38.9° N / 77.0° W"
+        },
+        "globe": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "city": "Washington, D.C.",
+          "event": "July 2026 · open-weight letter",
+          "coordinates": [
+            -77.0365,
+            38.9072
+          ],
+          "cameraZ": 7.2,
+          "mentionStops": [
+            {
+              "at": 3.05,
+              "countryCode": "US",
+              "countryName": "United States",
+              "city": "Washington, D.C.",
+              "event": "spoken mention · policy alliance",
+              "coordinates": [
+                -77.0365,
+                38.9072
+              ],
+              "cameraZ": 7.2
+            },
+            {
+              "at": 54.08,
+              "countryCode": "CN",
+              "countryName": "China",
+              "city": "Beijing",
+              "event": "spoken mention · model race",
+              "coordinates": [
+                116.4074,
+                39.9042
+              ],
+              "cameraZ": 7.2
+            }
+          ],
+          "mentionedCountryCodes": [
+            "CN"
+          ],
+          "routePoints": [
+            {
+              "label": "POLICY",
+              "country": "United States",
+              "location": "Washington, D.C.",
+              "coordinates": [
+                -77.0365,
+                38.9072
+              ]
+            },
+            {
+              "label": "LABS",
+              "country": "United States",
+              "location": "San Francisco",
+              "coordinates": [
+                -122.4194,
+                37.7749
+              ]
+            },
+            {
+              "label": "MODEL RACE",
+              "country": "China",
+              "location": "Beijing",
+              "coordinates": [
+                116.4074,
+                39.9042
+              ]
+            }
+          ]
+        },
+        "photos": [
+          {
+            "src": "assets/news-images/2026-08-03-open-models/us-capitol.jpg",
+            "country": "United States",
+            "location": "Washington, D.C.",
+            "caption": "Policy becomes pricing power.",
+            "credit": "Martin Falbisoner / Wikimedia Commons / CC BY-SA 3.0"
+          },
+          {
+            "src": "assets/news-images/2026-08-03-open-models/shanghai.jpg",
+            "country": "China",
+            "location": "Shanghai",
+            "caption": "The comparison is global.",
+            "credit": "King of Hearts / Wikimedia Commons / CC BY-SA 4.0"
+          }
+        ]
+      },
+      {
+        "kicker": "02 / THE DEFINITION",
+        "title": "China is making openness feel like a speed test",
+        "body": "On 17 July, Moonshot AI unveiled Kimi K3; days later, demand strained capacity. Open access can lower prices and still create a queue for compute.",
+        "tag": "CHINA / KIMI K3 / JULY 2026",
+        "graphic": "definition",
+        "focus": {
+          "codes": "CHINA / UNITED STATES",
+          "label": "SHANGHAI, CHINA / OPEN-WEIGHT MODEL RACE",
+          "coordinates": "31.2° N / 121.5° E"
+        },
+        "globe": {
+          "countryCode": "CN",
+          "countryName": "China",
+          "city": "Shanghai",
+          "event": "July 2026 · Kimi K3 launch",
+          "coordinates": [
+            121.4737,
+            31.2304
+          ],
+          "cameraZ": 6.6,
+          "mentionedCountryCodes": [
+            "US",
+            "SG"
+          ],
+          "routePoints": [
+            {
+              "label": "KIMI K3",
+              "country": "China",
+              "location": "Shanghai",
+              "coordinates": [
+                121.4737,
+                31.2304
+              ]
+            },
+            {
+              "label": "FRONTIER LABS",
+              "country": "United States",
+              "location": "San Francisco",
+              "coordinates": [
+                -122.4194,
+                37.7749
+              ]
+            },
+            {
+              "label": "DEPLOYMENT",
+              "country": "Singapore",
+              "location": "Singapore",
+              "coordinates": [
+                103.8198,
+                1.3521
+              ]
+            }
+          ]
+        },
+        "photos": [
+          {
+            "src": "assets/news-images/2026-08-03-open-models/shanghai.jpg",
+            "country": "China",
+            "location": "Shanghai",
+            "caption": "Kimi K3 made the race tangible.",
+            "credit": "King of Hearts / Wikimedia Commons / CC BY-SA 4.0"
+          },
+          {
+            "src": "assets/news-images/2026-08-03-open-models/singapore.jpg",
+            "country": "Singapore",
+            "location": "Singapore",
+            "caption": "Run it where the work lives.",
+            "credit": "Merlion444 / Wikimedia Commons / Public domain"
+          }
+        ]
+      },
+      {
+        "kicker": "03 / FOLLOW THE STACK",
+        "title": "From China’s power market to Taiwan’s fabs, the stack is the story",
+        "body": "In May, Guangdong data-centre clusters entered power spot trading. The AI stack reaches Taiwan’s fabs, Japan’s equipment, South Korea’s memory and U.S. cloud.",
+        "tag": "CHINA · TAIWAN · JAPAN · SOUTH KOREA / 945 TWh BY 2030",
+        "graphic": "stack",
+        "focus": {
+          "codes": "TAIWAN / CHINA / JAPAN",
+          "label": "HSINCHU, TAIWAN / CHIPS · POWER · MEMORY",
+          "coordinates": "24.8° N / 121.0° E"
+        },
+        "globe": {
+          "countryCode": "TW",
+          "countryName": "Taiwan",
+          "city": "Hsinchu",
+          "event": "AI stack · chips and power",
+          "coordinates": [
+            120.9647,
+            24.8138
+          ],
+          "cameraZ": 6.8,
+          "mentionStops": [
+            {
+              "at": 142.6,
+              "countryCode": "CN",
+              "countryName": "China",
+              "city": "Guangdong",
+              "event": "spoken mention · power market",
+              "coordinates": [
+                113.2644,
+                23.1291
+              ],
+              "cameraZ": 7
+            },
+            {
+              "at": 156.77,
+              "countryCode": "TW",
+              "countryName": "Taiwan",
+              "city": "Hsinchu",
+              "event": "spoken mention · chip fabs",
+              "coordinates": [
+                120.9647,
+                24.8138
+              ],
+              "cameraZ": 7
+            },
+            {
+              "at": 163.94,
+              "countryCode": "JP",
+              "countryName": "Japan",
+              "city": "Tokyo",
+              "event": "spoken mention · equipment makers",
+              "coordinates": [
+                139.6917,
+                35.6895
+              ],
+              "cameraZ": 7.4
+            },
+            {
+              "at": 165.44,
+              "countryCode": "KR",
+              "countryName": "South Korea",
+              "city": "Seoul",
+              "event": "spoken mention · memory industry",
+              "coordinates": [
+                126.978,
+                37.5665
+              ],
+              "cameraZ": 7.4
+            },
+            {
+              "at": 167.67,
+              "countryCode": "NL",
+              "countryName": "Netherlands",
+              "city": "Veldhoven",
+              "event": "spoken mention · lithography ecosystem",
+              "coordinates": [
+                5.3221,
+                51.409
+              ],
+              "cameraZ": 7.8
+            },
+            {
+              "at": 170.05,
+              "countryCode": "US",
+              "countryName": "United States",
+              "city": "Virginia",
+              "event": "spoken mention · cloud campuses",
+              "coordinates": [
+                -78.6569,
+                37.4316
+              ],
+              "cameraZ": 7.5
+            },
+            {
+              "at": 198.67,
+              "countryCode": "US",
+              "countryName": "United States",
+              "city": "New York",
+              "event": "spoken mention · equity markets",
+              "coordinates": [
+                -74.006,
+                40.7128
+              ],
+              "cameraZ": 7.4
+            },
+            {
+              "at": 198.98,
+              "countryCode": "JP",
+              "countryName": "Japan",
+              "city": "Tokyo",
+              "event": "spoken mention · equity markets",
+              "coordinates": [
+                139.6917,
+                35.6895
+              ],
+              "cameraZ": 7.4
+            },
+            {
+              "at": 200.24,
+              "countryCode": "KR",
+              "countryName": "South Korea",
+              "city": "Seoul",
+              "event": "spoken mention · equity markets",
+              "coordinates": [
+                126.978,
+                37.5665
+              ],
+              "cameraZ": 7.4
+            }
+          ],
+          "mentionedCountryCodes": [
+            "CN",
+            "US",
+            "JP",
+            "KR",
+            "NL"
+          ],
+          "routePoints": [
+            {
+              "label": "CHIPS",
+              "country": "Taiwan",
+              "location": "Hsinchu",
+              "coordinates": [
+                120.9647,
+                24.8138
+              ]
+            },
+            {
+              "label": "POWER",
+              "country": "China",
+              "location": "Guangdong",
+              "coordinates": [
+                113.2644,
+                23.1291
+              ]
+            },
+            {
+              "label": "CLOUD",
+              "country": "United States",
+              "location": "Virginia",
+              "coordinates": [
+                -78.6569,
+                37.4316
+              ]
+            },
+            {
+              "label": "EQUIPMENT",
+              "country": "Japan",
+              "location": "Tokyo",
+              "coordinates": [
+                139.6917,
+                35.6895
+              ]
+            },
+            {
+              "label": "MEMORY",
+              "country": "South Korea",
+              "location": "Seoul",
+              "coordinates": [
+                126.978,
+                37.5665
+              ]
+            }
+          ]
+        },
+        "photos": [
+          {
+            "src": "assets/news-images/2026-08-03-open-models/data-center.jpg",
+            "country": "United States",
+            "location": "Data-centre infrastructure",
+            "caption": "More models still need more machines.",
+            "credit": "Ana Las Heras / Wikimedia Commons / CC BY-SA 4.0"
+          },
+          {
+            "src": "assets/news-images/2026-08-03-open-models/tsmc.jpg",
+            "country": "Taiwan",
+            "location": "TSMC Fab 5",
+            "caption": "The bottleneck can sit below the model.",
+            "credit": "Peellden / Wikimedia Commons / CC BY-SA 3.0"
+          }
+        ]
+      },
+      {
+        "kicker": "04 / WHY MARKETS CARE",
+        "title": "Tokyo, Seoul and New York are pricing the same race differently",
+        "body": "The IMF says AI-exposed markets in the U.S., Japan, South Korea and Taiwan outperformed in Q2. High expectations make capex disappointment matter more.",
+        "tag": "UNITED STATES · JAPAN · SOUTH KOREA · TAIWAN / EXPECTATIONS",
+        "graphic": "market",
+        "focus": {
+          "codes": "UNITED STATES / JAPAN / SOUTH KOREA",
+          "label": "NEW YORK, UNITED STATES / EQUITY EXPECTATIONS",
+          "coordinates": "40.7° N / 74.0° W"
+        },
+        "globe": {
+          "countryCode": "US",
+          "countryName": "United States",
+          "city": "New York",
+          "event": "Market signal · earnings and capex",
+          "coordinates": [
+            -74.006,
+            40.7128
+          ],
+          "cameraZ": 7.4,
+          "mentionStops": [
+            {
+              "at": 207.81,
+              "countryCode": "US",
+              "countryName": "United States",
+              "city": "New York",
+              "event": "spoken mention · AI-exposed market",
+              "coordinates": [
+                -74.006,
+                40.7128
+              ],
+              "cameraZ": 7.4
+            },
+            {
+              "at": 208.6,
+              "countryCode": "JP",
+              "countryName": "Japan",
+              "city": "Tokyo",
+              "event": "spoken mention · AI-exposed market",
+              "coordinates": [
+                139.6917,
+                35.6895
+              ],
+              "cameraZ": 7.4
+            },
+            {
+              "at": 209.28,
+              "countryCode": "KR",
+              "countryName": "South Korea",
+              "city": "Seoul",
+              "event": "spoken mention · AI-exposed market",
+              "coordinates": [
+                126.978,
+                37.5665
+              ],
+              "cameraZ": 7.4
+            },
+            {
+              "at": 210.42,
+              "countryCode": "TW",
+              "countryName": "Taiwan",
+              "city": "Hsinchu",
+              "event": "spoken mention · AI-exposed market",
+              "coordinates": [
+                120.9647,
+                24.8138
+              ],
+              "cameraZ": 7.4
+            }
+          ],
+          "mentionedCountryCodes": [
+            "CN",
+            "DE",
+            "JP",
+            "KR",
+            "TW"
+          ],
+          "routePoints": [
+            {
+              "label": "EQUITIES",
+              "country": "United States",
+              "location": "New York",
+              "coordinates": [
+                -74.006,
+                40.7128
+              ]
+            },
+            {
+              "label": "AI-EXPOSED",
+              "country": "Japan",
+              "location": "Tokyo",
+              "coordinates": [
+                139.6917,
+                35.6895
+              ]
+            },
+            {
+              "label": "AI-EXPOSED",
+              "country": "South Korea",
+              "location": "Seoul",
+              "coordinates": [
+                126.978,
+                37.5665
+              ]
+            },
+            {
+              "label": "MEGAFACTORIES",
+              "country": "Germany",
+              "location": "Frankfurt",
+              "coordinates": [
+                8.6821,
+                50.1109
+              ]
+            }
+          ]
+        },
+        "photos": [
+          {
+            "src": "assets/news-images/2026-08-03-open-models/nyse.jpg",
+            "country": "United States",
+            "location": "New York Stock Exchange",
+            "caption": "Markets price the future early.",
+            "credit": "Carol M. Highsmith / Wikimedia Commons / Public domain"
+          },
+          {
+            "src": "assets/news-images/2026-08-03-open-models/tokyo.jpg",
+            "country": "Japan",
+            "location": "Tokyo",
+            "caption": "AI exposure is not only American.",
+            "credit": "David Kernan / Wikimedia Commons / CC BY 4.0"
+          }
+        ]
+      },
+      {
+        "kicker": "05 / THE VERDICT",
+        "title": "Europe is buying factories; Asia is watching the bottlenecks",
+        "body": "Europe has committed €5B toward seven AI megafactories. Singapore deploys, China competes, and the bottleneck may sit where every model still needs to pay.",
+        "tag": "GERMANY · SINGAPORE · CHINA / WATCH THE NEXT TOLLBOOTH",
+        "graphic": "verdict",
+        "focus": {
+          "codes": "GERMANY / SINGAPORE / CHINA",
+          "label": "FRANKFURT, GERMANY / THE NEXT BOTTLENECK",
+          "coordinates": "50.1° N / 8.7° E"
+        },
+        "globe": {
+          "countryCode": "DE",
+          "countryName": "Germany",
+          "city": "Frankfurt",
+          "event": "Europe’s AI megafactory push",
+          "coordinates": [
+            8.6821,
+            50.1109
+          ],
+          "cameraZ": 7.2,
+          "mentionStops": [
+            {
+              "at": 282.19,
+              "countryCode": "DE",
+              "countryName": "Germany",
+              "city": "Frankfurt",
+              "event": "spoken mention · AI megafactories",
+              "coordinates": [
+                8.6821,
+                50.1109
+              ],
+              "cameraZ": 7.2
+            },
+            {
+              "at": 283.06,
+              "countryCode": "SG",
+              "countryName": "Singapore",
+              "city": "Singapore",
+              "event": "spoken mention · deployment hub",
+              "coordinates": [
+                103.8198,
+                1.3521
+              ],
+              "cameraZ": 7.2
+            },
+            {
+              "at": 290.27,
+              "countryCode": "US",
+              "countryName": "United States",
+              "city": "Virginia",
+              "event": "spoken mention · AI comparison",
+              "coordinates": [
+                -78.6569,
+                37.4316
+              ],
+              "cameraZ": 7.4
+            },
+            {
+              "at": 291.27,
+              "countryCode": "CN",
+              "countryName": "China",
+              "city": "Shanghai",
+              "event": "spoken mention · AI comparison",
+              "coordinates": [
+                121.4737,
+                31.2304
+              ],
+              "cameraZ": 7
+            },
+            {
+              "at": 291.88,
+              "countryCode": "SG",
+              "countryName": "Singapore",
+              "city": "Singapore",
+              "event": "spoken mention · deployment hub",
+              "coordinates": [
+                103.8198,
+                1.3521
+              ],
+              "cameraZ": 7.2
+            },
+            {
+              "at": 294.6,
+              "countryCode": "CN",
+              "countryName": "China",
+              "city": "Shanghai",
+              "event": "spoken mention · strategic technology",
+              "coordinates": [
+                121.4737,
+                31.2304
+              ],
+              "cameraZ": 7
+            }
+          ],
+          "mentionedCountryCodes": [
+            "US",
+            "CN",
+            "SG",
+            "JP",
+            "KR",
+            "TW"
+          ],
+          "routePoints": [
+            {
+              "label": "MEGAFACTORIES",
+              "country": "Germany",
+              "location": "Frankfurt",
+              "coordinates": [
+                8.6821,
+                50.1109
+              ]
+            },
+            {
+              "label": "DEPLOYMENT",
+              "country": "Singapore",
+              "location": "Singapore",
+              "coordinates": [
+                103.8198,
+                1.3521
+              ]
+            },
+            {
+              "label": "MODEL RACE",
+              "country": "China",
+              "location": "Shanghai",
+              "coordinates": [
+                121.4737,
+                31.2304
+              ]
+            },
+            {
+              "label": "CLOUD",
+              "country": "United States",
+              "location": "Virginia",
+              "coordinates": [
+                -78.6569,
+                37.4316
+              ]
+            }
+          ]
+        },
+        "photos": [
+          {
+            "src": "assets/news-images/2026-08-03-open-models/frankfurt.jpg",
+            "country": "Germany",
+            "location": "Frankfurt",
+            "caption": "Europe wants a seat at the table.",
+            "credit": "Thomas Wolf / Wikimedia Commons / CC BY-SA 3.0"
+          },
+          {
+            "src": "assets/news-images/2026-08-03-open-models/seoul.jpg",
+            "country": "South Korea",
+            "location": "Seoul",
+            "caption": "The bottleneck is distributed.",
+            "credit": "mauveine.kim / Wikimedia Commons / CC0"
+          }
+        ]
+      }
+    ]
+  }
+};

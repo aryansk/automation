@@ -1,0 +1,19 @@
+{
+  "provider": "local",
+  "lang": "en",
+  "lines": [
+    { "id": "opening", "text": "There is a version of beginning that looks almost invisible.", "sfx": ["key-press"] },
+    { "id": "prep", "text": "We tell ourselves we are getting ready.", "sfx": ["typing"] },
+    { "id": "fear", "text": "Preparation is fear wearing a useful coat.", "sfx": ["impact-bass-1"] },
+    { "id": "clarity", "text": "Clarity arrives because the work gives your mind something real to answer.", "sfx": ["whoosh-short"] },
+    { "id": "good", "text": "Good.", "sfx": ["click-soft"] },
+    { "id": "action", "text": "Action is how understanding is made.", "sfx": ["whoosh-cinematic"] },
+    { "id": "door", "text": "Eventually, the dark room becomes a doorway.", "sfx": ["riser"] },
+    { "id": "ending", "text": "Begin there. Then begin again.", "sfx": ["chime"] }
+  ],
+  "bgm": {
+    "mode": "generate",
+    "query": "reflective cinematic essay, minimal piano, quiet resolve",
+    "prompt": "Original instrumental soundtrack for a quiet philosophical short film about beginning before certainty: sparse felt piano, low warm room tone, soft bowed texture, restrained analog hiss, very light pulse entering late, slow 74 BPM, minor opening that gradually warms toward a suspended hopeful ending, intimate and spacious, no vocals, no melody that resembles a known song, no trailer drums, no glossy corporate production."
+  }
+}

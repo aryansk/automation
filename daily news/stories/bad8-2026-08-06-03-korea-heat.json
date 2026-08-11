@@ -1,0 +1,89 @@
+{
+  "eventId": "south-korea-heatwave-farmers-drones-2026-08-06",
+  "tone": "bad",
+  "countryCode": "KR",
+  "countryName": "South Korea",
+  "cityName": "Seoul",
+  "region": "Asia",
+  "urgency": "standard",
+  "storyType": "weather",
+  "kicker": "Climate · Heatwave",
+  "headline": "South Korea deploys drones to warn farmers amid deadly heat",
+  "summary": "Provinces are flying loudspeaker drones over fields and rolling out cooling trucks as a heatwave claims lives and pushes farmland to 60°C.",
+  "script": "South Korea is fighting a deadly heatwave with drones that warn farmers to stop working in the fields. Provinces are also sending chilled water trucks to farming areas, as temperatures soar and heat-related deaths mount across the country.",
+  "source": "Reuters · Guardian",
+  "edition": "06 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-06-bad/korea-heat/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-06-bad/korea-heat/secondary.jpg",
+  "imageAlt": "People cool off in the Cheonggyecheon stream in Seoul during a heatwave.",
+  "imageAltTwo": "Farm workers harvest crops under shade umbrellas in extreme heat.",
+  "imageCredit": "Getty via The Guardian",
+  "imageCreditTwo": "SBS News",
+  "narrationAudio": "assets/narration/bad8-2026-08-06-03-korea-heat.wav",
+  "captions": [
+    {
+      "lines": [
+        "Drones warn farmers",
+        "in Korea's heatwave."
+      ],
+      "highlights": [
+        "drones warn farmers",
+        "heatwave"
+      ]
+    },
+    {
+      "lines": [
+        "Fields reach",
+        "60 degrees."
+      ],
+      "highlights": [
+        "60 degrees"
+      ]
+    },
+    {
+      "lines": [
+        "Cooling trucks roll",
+        "out to farm areas."
+      ],
+      "highlights": [
+        "cooling trucks"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "South Korea province deploys drones to warn elderly farmers amid heatwave",
+      "url": "https://www.reuters.com/business/environment/south-korea-province-deploys-drones-warn-elderly-farmers-amid-heatwave-2026-08-06/",
+      "published": "2026-08-06",
+      "usedFor": [
+        "drone warnings to farmers",
+        "province deployment",
+        "heatwave context"
+      ]
+    },
+    {
+      "publisher": "The Guardian",
+      "title": "Seoul braces for heatwave sweeping South Korea as death toll reaches 16",
+      "url": "https://www.theguardian.com/world/2026/aug/04/south-korea-heatwave-seoul-heat-warning",
+      "published": "2026-08-04",
+      "usedFor": [
+        "death toll",
+        "drone safety broadcasts",
+        "primary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Deadly heatwave with novel safety response; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

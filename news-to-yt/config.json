@@ -1,6 +1,6 @@
 {
   "channelName": "Daily World News",
-  "defaultStoriesPerVideo": 5,
+  "defaultStoriesPerVideo": 3,
   "topics": {
     "world": {
       "label": "World",

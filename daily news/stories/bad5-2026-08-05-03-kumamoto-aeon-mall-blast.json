@@ -1,0 +1,93 @@
+{
+  "eventId": "kumamoto-aeon-mall-blast-2026-08-05",
+  "tone": "bad",
+  "countryCode": "JP",
+  "countryName": "Japan",
+  "cityName": "Kumamoto",
+  "coordinates": [
+    130.7417,
+    32.8031
+  ],
+  "region": "East Asia",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Disaster · Quake",
+  "headline": "Two workers die in blast after re-entering quake-hit Japanese mall on boss's order",
+  "summary": "Two store employees were killed when an explosion tore through Kumamoto's Aeon Mall after a magnitude 6.8 quake; their employer has apologised for ordering them back inside.",
+  "script": "Two workers died in an explosion at a quake-damaged mall in Kumamoto, Japan. Their boss had asked them to go back inside to move cash to a safe. The company has apologised, saying the instructions were not worth a life.",
+  "source": "BBC News",
+  "edition": "05 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-05-bad/japan-mall/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-05-bad/japan-mall/secondary.jpg",
+  "imageAlt": "The damaged facade of the Aeon Mall in Kumamoto after the blast.",
+  "imageAltTwo": "A wider view of the Aeon Mall showing twisted metal and torn cladding.",
+  "imageCredit": "Getty Images via BBC",
+  "imageCreditTwo": "Getty Images via BBC",
+  "narrationAudio": "assets/narration/tour/bad5-2026-08-05-03-kumamoto-aeon-mall-blast.wav",
+  "captions": [
+    {
+      "lines": [
+        "Two workers die after",
+        "re-entering a quake-hit mall."
+      ],
+      "highlights": [
+        "Two workers die",
+        "quake-hit mall"
+      ]
+    },
+    {
+      "lines": [
+        "A boss told them to",
+        "secure cash inside."
+      ],
+      "highlights": [
+        "boss",
+        "secure cash"
+      ]
+    },
+    {
+      "lines": [
+        "The employer apologises",
+        "for the lost lives."
+      ],
+      "highlights": [
+        "employer apologises"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Japan earthquake: Two workers killed in Aeon Mall blast after re-entering on boss' order",
+      "url": "https://www.bbc.co.uk/news/articles/c24mr09r99eo",
+      "published": "2026-08-03",
+      "usedFor": [
+        "casualty details",
+        "employer apology",
+        "primary and secondary images"
+      ]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "Japan earthquake death toll rises to 34 as evacuees battle sweltering heat",
+      "url": "https://www.bbc.co.uk/news/articles/cdrv36kv7pzo",
+      "published": "2026-08-02",
+      "usedFor": [
+        "earthquake death-toll context",
+        "independent context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Fresh aftermath of the Kumamoto quake with strong human-interest detail; ranking is editorial, not an objective trend metric.",
+    "researchDate": "05 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

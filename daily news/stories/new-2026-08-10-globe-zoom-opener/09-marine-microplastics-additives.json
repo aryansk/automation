@@ -1,0 +1,61 @@
+{
+  "eventId": "marine-microplastics-additives-fragmentation-2026-08-10",
+  "tone": "bad",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Washington",
+  "coordinates": [
+    -77.0369,
+    38.9072
+  ],
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Ocean · Pollution",
+  "headline": "Marine microplastics can keep carrying hazardous additives",
+  "summary": "A new study finds plastic fragments can remain mobile sources of chemicals such as HBCD after breaking apart.",
+  "script": "Marine microplastics can keep carrying hazardous additives even after they break apart. Researchers say fragments may act as mobile sources of persistent chemicals, meaning smaller pieces do not automatically mean lower risk.",
+  "source": "EurekAlert · PubMed",
+  "edition": "10 Aug 2026",
+  "storyNumber": "09",
+  "imageOne": "assets/stories/2026-08-10/marine-microplastics/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-10/marine-microplastics/secondary.jpg",
+  "imageAlt": "Microplastic fragments collected from a waterway, photographed by NOAA’s Marine Debris Program.",
+  "imageAltTwo": "Microplastic fragments mixed with sand in a NOAA marine-debris image.",
+  "imageCredit": "NOAA Marine Debris Program",
+  "imageCreditTwo": "NOAA",
+  "narrationAudio": "assets/narration/new-2026-08-10/marine-microplastics-additives.wav",
+  "sources": [
+    {
+      "publisher": "PubMed",
+      "title": "Marine microplastics carry chemicals from plastic additives after fragmentation",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42262872/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "HBCD finding",
+        "mobile secondary source conclusion"
+      ]
+    },
+    {
+      "publisher": "NOAA Marine Debris Program",
+      "title": "Microplastics and marine debris background",
+      "url": "https://marinedebris.noaa.gov/what-marine-debris/microplastics",
+      "published": "2026-08-10",
+      "usedFor": [
+        "microplastic visual and definition context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 9,
+    "basis": "A hidden environmental mechanism made visible through close-up debris imagery; ranking is editorial, not an objective trend metric.",
+    "researchDate": "10 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "focusZoom": 9.8
+}

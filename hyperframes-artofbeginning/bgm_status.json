@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-08-02T12:59:18.665Z",
+  "enabled": true,
+  "provider": "lyria",
+  "mode": "detached-single",
+  "path": "assets/bgm/track.wav",
+  "log": "/Users/aryansingh/Downloads/Projects/Automation/hyperframes-artofbeginning/assets/bgm/bgm-1785675521139.log",
+  "pid": 17382,
+  "target_duration_s": 30,
+  "seed_duration_s": null,
+  "loop_count": null,
+  "timeout_ms": 600000,
+  "status": "ready",
+  "ready": true,
+  "waited_ms": 20006,
+  "size_bytes": 5760044,
+  "message": "BGM ready at assets/bgm/track.wav."
+}

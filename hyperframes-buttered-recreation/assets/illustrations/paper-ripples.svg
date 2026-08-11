@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <defs>
+    <pattern id="paper" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M0 7h32M14 0v32" stroke="#24252b" stroke-width="1" opacity=".05"/></pattern>
+    <linearGradient id="door" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f2d476"/><stop offset="1" stop-color="#d96d58"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1920" fill="#f2eee1"/>
+  <rect width="1080" height="1920" fill="url(#paper)"/>
+  <g fill="none" stroke="#4c8c45" stroke-width="8" opacity=".58"><circle cx="542" cy="960" r="164"/><circle cx="542" cy="960" r="286"/><circle cx="542" cy="960" r="420"/><circle cx="542" cy="960" r="560"/></g>
+  <g transform="translate(770 1210) rotate(-5)"><rect x="0" y="0" width="188" height="420" fill="url(#door)" opacity=".72"/><rect x="28" y="28" width="132" height="364" fill="#f2eee1" opacity=".45"/><circle cx="140" cy="215" r="10" fill="#24252b"/></g>
+  <g fill="#4c8c45" stroke="#24252b" stroke-width="6"><path d="M214 1470c-12-122 6-194 45-193 33 0 42 70 38 156 31-122 68-169 101-147 33 22-3 120-40 189H214z"/><path d="M290 1470c72-82 103-153 135-143 28 9 13 64-24 143z" fill="#6a9b58"/></g>
+  <circle cx="542" cy="960" r="18" fill="#f2d476" stroke="#24252b" stroke-width="5"/>
+  <text x="82" y="1780" fill="#24252b" font-family="EB Garamond, serif" font-size="78" font-style="italic">hold the ripple</text>
+</svg>

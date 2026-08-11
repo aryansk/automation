@@ -1,0 +1,136 @@
+{
+  "eventId": "pink-zebra-seaweed-new-species-2026-07-31",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "",
+  "coordinates": [
+    -5.08,
+    50.15
+  ],
+  "region": "Western Europe",
+  "urgency": "current",
+  "storyType": "auto",
+  "kicker": "Science · Nature",
+  "headline": "Rare pink-zebra seaweed confirmed as new species",
+  "summary": "A seaweed fragment found in Cornwall after a 40-year search has been DNA-tested and will join the Natural History Museum collection.",
+  "script": "A tiny pink-striped seaweed found in Cornwall has finally been confirmed as a new species, after a scientist searched for it for four decades. It will join the Natural History Museum collection and help document fragile maerl habitats.",
+  "source": "BBC · Natural England",
+  "edition": "04 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/news-images/2026-08-04-good/seaweed/species.jpg",
+  "imageTwo": "assets/news-images/2026-08-04-good/seaweed/maerl.jpg",
+  "imageAlt": "Pink-striped Ceramium seaweed growing on a maerl bed.",
+  "imageAltTwo": "Pink maerl nodules and marine life on the sea floor.",
+  "imageCredit": "Francis Bunker via BBC News",
+  "imageCreditTwo": "Angie Gall via BBC News",
+  "narrationAudio": "assets/narration/tour/good5-2026-08-04-03-pink-zebra-seaweed.wav",
+  "captions": [
+    {
+      "lines": [
+        "Pink-zebra seaweed",
+        "is a new species."
+      ],
+      "highlights": [
+        "Pink-zebra seaweed",
+        "new species"
+      ]
+    },
+    {
+      "lines": [
+        "A 40-year",
+        "scientific search."
+      ],
+      "highlights": [
+        "40-year",
+        "scientific search"
+      ]
+    },
+    {
+      "lines": [
+        "Cornwall's maerl beds",
+        "hold more secrets."
+      ],
+      "highlights": [
+        "Cornwall",
+        "maerl beds"
+      ]
+    }
+  ],
+  "routeLabel": "Cornish maerl beds",
+  "mentionedCountryCodes": [
+    "GB"
+  ],
+  "affectedCountryCodes": [
+    "GB"
+  ],
+  "locatorInset": false,
+  "focusZoom": 14.2,
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "How scientists finally confirmed rare pink seaweed as new species",
+      "url": "https://www.bbc.co.uk/news/articles/czrxepy3vn3o",
+      "published": "2026-07-31T23:43:10.961Z",
+      "usedFor": [
+        "new-species finding",
+        "40-year search",
+        "Cornwall sample",
+        "scientific name"
+      ]
+    },
+    {
+      "publisher": "Natural England",
+      "title": "Falmouth Bay to St Austell Bay SPA maerl mapping",
+      "url": "https://publications.naturalengland.org.uk/publication/5561639456473088",
+      "published": "2024-11-14",
+      "usedFor": [
+        "Cornwall maerl-bed survey context",
+        "habitat mapping"
+      ]
+    },
+    {
+      "publisher": "Natural History Museum",
+      "title": "New species",
+      "url": "https://www.nhm.ac.uk/discover/new-species.html",
+      "published": "2026",
+      "usedFor": [
+        "museum and species-discovery context"
+      ]
+    }
+  ],
+  "imageSources": [
+    {
+      "articleUrl": "https://www.bbc.co.uk/news/articles/czrxepy3vn3o",
+      "assetUrl": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/c6f8/live/889ac260-8cbc-11f1-b2ab-0dd01740f9f6.jpg",
+      "localPath": "assets/news-images/2026-08-04-good/seaweed/species.jpg",
+      "caption": "New Ceramium is an entirely new species unknown to science.",
+      "credit": "Francis Bunker",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized source-image workflow; publisher rights were not independently cleared."
+    },
+    {
+      "articleUrl": "https://www.bbc.co.uk/news/articles/czrxepy3vn3o",
+      "assetUrl": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/cae1/live/2823e3d0-8cc6-11f1-97f5-93fc85ee9dc4.jpg",
+      "localPath": "assets/news-images/2026-08-04-good/seaweed/maerl.jpg",
+      "caption": "Pink nodules of maerl coating the sea floor.",
+      "credit": "Angie Gall",
+      "accessed": "2026-08-04 Asia/Kolkata",
+      "rightsStatus": "User-authorized source-image workflow; publisher rights were not independently cleared."
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Current BBC Science feed feature with a distinctive conservation and discovery angle; editorial rank reflects recency, prominence and constructive audience interest, not a platform-wide trend metric.",
+    "researchDate": "04 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "assetLicense": "BBC source photographs used under the authorized newsroom workflow.",
+    "assetCredit": "Francis Bunker; Angie Gall; both via BBC News.",
+    "commercialEditorialRightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

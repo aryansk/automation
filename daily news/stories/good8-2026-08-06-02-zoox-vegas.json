@@ -1,0 +1,89 @@
+{
+  "eventId": "zoox-las-vegas-paid-robotaxi-2026-08-10",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Las Vegas",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "product",
+  "kicker": "Technology · Transport",
+  "headline": "Amazon's Zoox launches paid robotaxi rides in Las Vegas",
+  "summary": "Starting August 10, Zoox will charge fares for driverless, steering-wheel-free rides in Vegas — a US first for controls-free autonomy.",
+  "script": "Amazon's Zoox will start paid robotaxi rides in Las Vegas next week. It is the first US service to charge for rides in vehicles with no steering wheel. Federal regulators approved the driverless cars.",
+  "source": "Reuters · CNBC",
+  "edition": "06 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/news-images/2026-08-06-good/zoox-vegas/primary.png",
+  "imageTwo": "assets/news-images/2026-08-06-good/zoox-vegas/secondary.jpg",
+  "imageAlt": "A Zoox autonomous robotaxi parked at night in Las Vegas near neon signs.",
+  "imageAltTwo": "A close view of the Zoox driverless robotaxi vehicle.",
+  "imageCredit": "Zoox via CNBC",
+  "imageCreditTwo": "Getty Images via CNBC",
+  "narrationAudio": "assets/narration/good8-2026-08-06-02-zoox-vegas.wav",
+  "captions": [
+    {
+      "lines": [
+        "Amazon's Zoox starts",
+        "paid robotaxi rides."
+      ],
+      "highlights": [
+        "Zoox",
+        "paid robotaxi rides"
+      ]
+    },
+    {
+      "lines": [
+        "First US service with",
+        "no steering wheel."
+      ],
+      "highlights": [
+        "no steering wheel"
+      ]
+    },
+    {
+      "lines": [
+        "Launching in",
+        "Las Vegas."
+      ],
+      "highlights": [
+        "Las Vegas"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Amazon's Zoox to start paid robotaxi rides in Vegas next week",
+      "url": "https://www.reuters.com/business/autos-transportation/amazons-zoox-start-paid-robotaxi-rides-vegas-next-week-2026-08-05/",
+      "published": "2026-08-05",
+      "usedFor": [
+        "paid rides starting Aug 10",
+        "federal approval",
+        "controls-free vehicles"
+      ]
+    },
+    {
+      "publisher": "CNBC",
+      "title": "Amazon's Zoox to launch paid robotaxi rides in Las Vegas on Aug. 10",
+      "url": "https://www.cnbc.com/2026/08/05/amazon-zoox-paid-robotaxi-rides-las-vegas.html",
+      "published": "2026-08-05",
+      "usedFor": [
+        "independent corroboration",
+        "first commercial launch",
+        "primary image"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Significant US autonomy milestone with commercial launch; ranking is editorial, not an objective trend metric.",
+    "researchDate": "06 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "libraryVersion": "1.0.0",
+  "mode": "sample",
+  "format": "portrait",
+  "fps": 30,
+  "title": "Illustrative globe and map sequence",
+  "scenes": [
+    {
+      "animation": "country-lock",
+      "start": 0,
+      "duration": 4.2,
+      "data": {
+        "label": "Country context",
+        "source": "Illustrative sample data — not reporting",
+        "target": {
+          "name": "Delhi",
+          "country": "India",
+          "code": "IN",
+          "coordinates": [77.209, 28.6139]
+        }
+      }
+    },
+    {
+      "animation": "city-lock",
+      "start": 4.2,
+      "duration": 4.2,
+      "data": {
+        "label": "City-level handoff",
+        "source": "Illustrative sample data — not reporting",
+        "target": {
+          "name": "Nairobi",
+          "country": "Kenya",
+          "code": "KE",
+          "coordinates": [36.8219, -1.2921]
+        }
+      }
+    },
+    {
+      "animation": "trade-flow-ribbons",
+      "start": 8.4,
+      "duration": 5.8,
+      "data": {
+        "label": "Illustrative trade volume",
+        "source": "Illustrative sample data — not reporting",
+        "routes": [
+          {
+            "value": 38,
+            "points": [
+              { "name": "London", "coordinates": [-0.1276, 51.5072] },
+              { "name": "New York", "coordinates": [-74.006, 40.7128] }
+            ]
+          },
+          {
+            "value": 72,
+            "points": [
+              { "name": "Sao Paulo", "coordinates": [-46.6333, -23.5505] },
+              { "name": "Nairobi", "coordinates": [36.8219, -1.2921] },
+              { "name": "Delhi", "coordinates": [77.209, 28.6139] }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "animation": "before-after-swipe",
+      "start": 14.2,
+      "duration": 5.2,
+      "data": {
+        "label": "Illustrative index change",
+        "source": "Illustrative sample data — not reporting",
+        "before": { "values": { "IN": 34, "KE": 52, "EG": 41 } },
+        "after": { "values": { "IN": 72, "KE": 61, "EG": 68 } }
+      }
+    },
+    {
+      "animation": "uncertainty-cloud",
+      "start": 19.4,
+      "duration": 5.2,
+      "data": {
+        "label": "Illustrative estimate",
+        "source": "Illustrative sample data — not reporting",
+        "target": {
+          "name": "Suez Canal",
+          "country": "Egypt",
+          "code": "EG",
+          "coordinates": [32.55, 30.45]
+        },
+        "radiusKm": 240,
+        "confidence": 0.7
+      }
+    },
+    {
+      "animation": "storm-track",
+      "start": 24.6,
+      "duration": 5.8,
+      "data": {
+        "label": "Illustrative cyclone track",
+        "source": "Illustrative sample data — not reporting",
+        "track": [
+          { "coordinates": [128, 12], "status": "observed", "label": "T-24" },
+          { "coordinates": [132, 16], "status": "observed", "label": "NOW" },
+          { "coordinates": [136, 21], "status": "forecast", "label": "+24" },
+          { "coordinates": [139, 27], "status": "forecast", "label": "+48" }
+        ]
+      }
+    }
+  ]
+}
+

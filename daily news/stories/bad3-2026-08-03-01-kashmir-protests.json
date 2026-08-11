@@ -1,0 +1,65 @@
+{
+  "eventId": "rawalakot-kashmir-deadly-protests-2026-08-03",
+  "tone": "bad",
+  "countryCode": "PK",
+  "countryName": "Pakistan-administered Kashmir",
+  "cityName": "Rawalakot",
+  "coordinates": [73.76, 33.86],
+  "region": "South Asia",
+  "urgency": "breaking",
+  "storyType": "breaking",
+  "kicker": "Conflict · Protests",
+  "headline": "Deadly protests deepen crisis in Pakistan-administered Kashmir",
+  "summary": "The BBC reports violent clashes in Rawalakot, where families describe deaths and political demands remain unresolved.",
+  "script": "In Rawalakot, Pakistan-administered Kashmir, protests have turned deadly. Families describe violence and grief as security forces and demonstrators remain locked in a wider political crisis.",
+  "source": "BBC · AP",
+  "edition": "03 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/news-images/2026-08-03-real/kashmir/main.jpg",
+  "imageTwo": "assets/news-images/2026-08-03-real/kashmir/road.jpg",
+  "imageAlt": "A person holds the hand of a victim on a hospital bed.",
+  "imageAltTwo": "A road outside Rawalakot is blocked by fallen trees and debris.",
+  "imageCredit": "BBC News image",
+  "imageCreditTwo": "BBC News image",
+  "narrationAudio": "assets/narration/tour/bad3-2026-08-03-01-kashmir-protests.wav",
+  "captions": [
+    {
+      "lines": ["Rawalakot is facing", "deadly political protests."],
+      "highlights": ["Rawalakot", "deadly"]
+    },
+    {
+      "lines": ["Families describe violence", "and grief."],
+      "highlights": ["violence", "grief"]
+    },
+    {
+      "lines": ["Security forces and protesters", "remain locked in crisis."],
+      "highlights": ["security forces", "crisis"]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "My only son was shot standing up for justice: inside protests in Pakistan-administered Kashmir",
+      "url": "https://www.bbc.co.uk/news/articles/c5yvqk69enko?at_medium=RSS&at_campaign=rss",
+      "usedFor": ["current event report", "Rawalakot location", "primary and secondary images"]
+    },
+    {
+      "publisher": "Associated Press",
+      "title": "Pakistan-administered Kashmir crisis and political protests",
+      "url": "https://apnews.com/article/f2965b19818c8beed8f39ac10e711bbc",
+      "published": "2026-07-28",
+      "usedFor": ["independent context"]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Current BBC world-feed prominence and direct reporting from Rawalakot; ranking is editorial, not an objective trend metric.",
+    "researchDate": "03 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "eventId": "canada-caribou-dene-2026-08-11",
+  "tone": "good",
+  "countryCode": "CA",
+  "countryName": "Canada",
+  "cityName": "Yellowknife",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Wildlife · Conservation",
+  "headline": "Indigenous-led plan brings caribou herds back in Northwest Canada",
+  "summary": "A Dene-led conservation area has helped the Bathurst caribou herd grow for the first time in 20 years, with calf survival sharply up.",
+  "script": "An Indigenous-led plan is bringing caribou back in Northwest Canada. The Dene-led conservation area helped the Bathurst herd grow for the first time in twenty years. Calf survival is sharply up.",
+  "source": "CBC News",
+  "edition": "11 Aug 2026",
+  "storyNumber": "05",
+  "imageOne": "assets/news-images/2026-08-11-good/caribou-canada/primary.jpg",
+  "imageTwo": "assets/news-images/2026-08-11-good/caribou-canada/secondary.jpg",
+  "imageAlt": "Barren-ground caribou in northern Canada — the Bathurst herd species now recovering.",
+  "imageAltTwo": "Close view of caribou — calf survival is sharply up in the Dene-led conservation area.",
+  "imageCredit": "Roy W. Wood / Bering Land Bridge National Preserve via Wikimedia Commons (CC BY 2.0)",
+  "imageCreditTwo": "Roy W. Wood / Bering Land Bridge National Preserve via Wikimedia Commons (CC BY 2.0)",
+  "narrationAudio": "assets/narration/good-2026-08-11-05-caribou-canada.wav",
+  "captions": [
+    {
+      "lines": [
+        "Indigenous-led plan",
+        "brings caribou back."
+      ],
+      "highlights": [
+        "brings caribou back"
+      ]
+    },
+    {
+      "lines": [
+        "Bathurst herd grows",
+        "for first time in 20 years."
+      ],
+      "highlights": [
+        "first time in 20 years"
+      ]
+    },
+    {
+      "lines": [
+        "Calf survival",
+        "sharply up."
+      ],
+      "highlights": [
+        "sharply up"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "CBC News",
+      "title": "Dene-led conservation helps Bathurst caribou recover",
+      "url": "https://www.cbc.ca/news/canada/north/caribou-dene-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "herd growth",
+        "Dene-led area"
+      ]
+    },
+    {
+      "publisher": "The Narwhal",
+      "title": "Caribou recovery in Northwest Territories",
+      "url": "https://thenarwhal.ca/caribou-dene-2026-08-11",
+      "published": "2026-08-11",
+      "usedFor": [
+        "calf survival"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Conservation success.",
+    "researchDate": "11 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Canada.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "CBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "code": "CA",
+            "coordinates": [
+              -106,
+              56.1
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "location",
+        "scriptCue": "Focus on Yellowknife region.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "CBC News / 11 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Yellowknife",
+            "coordinates": [
+              -114.37,
+              62.45
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show protected area.",
+        "start": 9.5,
+        "animationId": "geofenced-area",
+        "mapSource": "The Narwhal / 11 Aug 2026",
+        "mapData": {
+          "polygon": [
+            [
+              -116,
+              63.5
+            ],
+            [
+              -112,
+              64.1
+            ],
+            [
+              -110,
+              62.8
+            ],
+            [
+              -112,
+              61.2
+            ],
+            [
+              -115,
+              61.5
+            ]
+          ],
+          "mode": "protected",
+          "label": "DENE CONSERVATION AREA"
+        }
+      }
+    ]
+  }
+}
