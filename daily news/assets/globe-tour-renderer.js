@@ -30,10 +30,14 @@ document.querySelectorAll("[data-bind]").forEach((element) => {
   element.textContent = variables[element.dataset.bind] ?? "";
 });
 
-/* The opening frame is a title card only. The narrated lead remains in
-   openerLine for the audio track, but no story headline is shown beside it. */
-const openerLine = String(variables.openerLine || "").trim();
-const openerTitleFromLine = /good morning,\s*bad news/i.test(openerLine)
+/* The opening frame can be a short brand-led opener or a story-specific
+   hook. Standalone breaking-news cuts use the latter so the first readable
+   words name the event instead of delaying it behind a generic greeting. */
+const hookMode = variables.hookMode === true || String(variables.hookMode || "").toLowerCase() === "true";
+const openerLine = String(variables.hookLine || variables.openerLine || "").trim();
+const openerTitleFromLine = hookMode
+  ? ""
+  : /good morning,\s*bad news/i.test(openerLine)
   ? "Good morning, bad news"
   : /good morning,\s*good news/i.test(openerLine)
     ? "Good morning, good news"
@@ -44,12 +48,13 @@ const openerTitle = String(
     openerLine.split(/—\s*/)[0] ||
     "Good morning, bad news",
 ).trim();
-const commaIndex = openerTitle.indexOf(",");
-const openerLines = commaIndex >= 0
-  ? [openerTitle.slice(0, commaIndex + 1).trim(), openerTitle.slice(commaIndex + 1).trim()].filter(Boolean)
+const openerSeparator = openerTitle.indexOf(hookMode ? ":" : ",");
+const openerLines = openerSeparator >= 0
+  ? [openerTitle.slice(0, openerSeparator + 1).trim(), openerTitle.slice(openerSeparator + 1).trim()].filter(Boolean)
   : openerTitle.split(/\s*,\s*/, 2).filter(Boolean);
 document.getElementById("opener-line-first").textContent = openerLines[0] || openerTitle;
 document.getElementById("opener-line-second").textContent = openerLines[1] || "";
+root?.classList.toggle("is-story-hook", hookMode);
 
 function parseTour(value) {
   if (Array.isArray(value)) return value;
@@ -224,6 +229,8 @@ stops.forEach((stop, index) => {
   if (beats) {
     if (stop.imagePath) beats.primary.image.src = stop.imagePath;
     if (stop.imagePathTwo) beats.secondary.image.src = stop.imagePathTwo;
+    if (stop.imageFocusPrimary && beats.primary.image) beats.primary.image.style.objectPosition = stop.imageFocusPrimary;
+    if (stop.imageFocusSecondary && beats.secondary.image) beats.secondary.image.style.objectPosition = stop.imageFocusSecondary;
     beats.primary.credit.textContent = stop.imageCredit || "";
     beats.secondary.credit.textContent = stop.imageCreditTwo || stop.imageCredit || "";
     beats.primary.image.alt = stop.imageAlt || "News photograph";
@@ -231,30 +238,69 @@ stops.forEach((stop, index) => {
   }
 });
 
+/* Only authored numerical/statistical beats get an overlay. Narration itself
+   remains clean; the card is reserved for a fact the viewer can scan quickly. */
+const beatCardTrack = document.getElementById("beat-card-track");
+const beatCards = [];
+if (beatCardTrack) {
+  stops.forEach((stop, stopIndex) => {
+    const authoredBeats = Array.isArray(stop.visualBeats) ? stop.visualBeats : [];
+    authoredBeats.forEach((beat, beatIndex) => {
+      if (String(beat?.kind || "").toLowerCase() !== "stat") return;
+      const element = document.createElement("div");
+      element.className = "beat-card is-stat";
+      element.dataset.beatId = `${stopIndex}-${beatIndex}`;
+      const eyebrow = document.createElement("span");
+      eyebrow.className = "beat-card__eyebrow";
+      eyebrow.textContent = String(beat?.eyebrow || "").trim();
+      const value = document.createElement("strong");
+      value.className = "beat-card__value";
+      value.textContent = String(beat?.value || "").trim();
+      const detail = document.createElement("span");
+      detail.className = "beat-card__detail";
+      detail.textContent = String(beat?.detail || "").trim();
+      element.append(eyebrow, value, detail);
+      beatCardTrack.append(element);
+      const storyStart = Number(stop.speakAt ?? stop.arrive ?? 0);
+      const authoredStart = Number(beat?.start);
+      const authoredEnd = Number(beat?.end);
+      const start = storyStart + (Number.isFinite(authoredStart) ? Math.max(0, authoredStart) : 0);
+      const end = storyStart + (
+        Number.isFinite(authoredEnd) && authoredEnd > (Number.isFinite(authoredStart) ? authoredStart : 0)
+          ? authoredEnd
+          : (Number.isFinite(authoredStart) ? authoredStart : 0) + 1.8
+      );
+      beatCards.push({ element, start, end });
+    });
+  });
+}
+
 /* Chrome in first, then hold for the whole film. */
 timeline.set("#opener-line-first, #opener-line-second, .opener__sub", { opacity: 0 }, 0);
 timeline.set("#opener", { opacity: 0 }, 0);
-timeline.fromTo("#rail", { opacity: 0, y: -18 }, { opacity: 1, y: 0, duration: 0.7 }, 0.25);
-timeline.fromTo("#rail-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "expo.out" }, 0.4);
+const openerEnter = hookMode ? 0.04 : 0.28;
+timeline.fromTo("#rail", { opacity: 0, y: -18 }, { opacity: 1, y: 0, duration: 0.7 }, hookMode ? 0.04 : 0.25);
+timeline.fromTo("#rail-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "expo.out" }, hookMode ? 0.12 : 0.4);
 timeline.fromTo(
   "#opener",
   { opacity: 0 },
   { opacity: 1, duration: 0.01, immediateRender: false },
-  0.28,
+  openerEnter,
 );
 
-/* Cold open: the title enters immediately, with no second headline on this page. */
+/* Cold open: a breaking hook enters immediately; the default daily opener
+   retains its slower brand timing for multi-story editions. */
 timeline.fromTo(
   "#opener-line-first, #opener-line-second",
   { opacity: 0, y: 34 },
   { opacity: 1, y: 0, duration: 0.85, ease: "expo.out", immediateRender: false },
-  0.28,
+  openerEnter,
 );
 timeline.fromTo(
   ".opener__sub",
   { opacity: 0 },
   { opacity: 1, duration: 0.6, immediateRender: false },
-  0.72,
+  openerEnter + (hookMode ? 0.34 : 0.44),
 );
 timeline.to("#opener", { opacity: 0, y: -26, duration: 0.55, ease: "power2.in" }, openerEnd - 0.55);
 
@@ -271,11 +317,18 @@ timeline.fromTo(
    readable until the previous line has finished. */
 stops.forEach((stop, index) => {
   const speakAt = Number(stop.speakAt ?? stop.arrive ?? 0);
+  const finiteAt = (value) => Number.isFinite(Number(value));
+  const visualStart = finiteAt(stop.visualStart) ? Number(stop.visualStart) : speakAt;
+  const mediaStart = finiteAt(stop.mediaStart) ? Number(stop.mediaStart) : visualStart;
+  const cardStart = finiteAt(stop.cardStart) ? Number(stop.cardStart) : visualStart;
   const nextSpeakAt = Number(stops[index + 1]?.speakAt ?? DURATION);
   const outAt = index < stops.length - 1
     ? Math.max(speakAt + 1, nextSpeakAt - 0.44)
     : Math.max(speakAt + 1, Number(stop.holdUntil || DURATION) - 0.28);
-  const midAt = Math.min(outAt - 0.7, speakAt + Math.max(4.2, (outAt - speakAt) * 0.52));
+  const authoredPhotoSwap = finiteAt(stop.photoSwapAt) ? Number(stop.photoSwapAt) : Number.NaN;
+  const midAt = Number.isFinite(authoredPhotoSwap)
+    ? Math.min(outAt - 0.42, Math.max(mediaStart + 0.8, authoredPhotoSwap))
+    : Math.min(outAt - 0.7, speakAt + Math.max(4.2, (outAt - speakAt) * 0.52));
 
   const card = storyCards[index]?.element;
   const locator = storyLocators[index]?.element;
@@ -283,27 +336,27 @@ stops.forEach((stop, index) => {
   const beats = storyBeats[index];
   if (!card || !locator || !beats) return;
 
-  timeline.set(locator, { opacity: 0 }, speakAt - 0.001);
-  timeline.set(card, { opacity: 0 }, speakAt - 0.001);
+  timeline.set(locator, { opacity: 0 }, visualStart - 0.001);
+  timeline.set(card, { opacity: 0 }, cardStart - 0.001);
   timeline.fromTo(
     locator,
     { opacity: 0, x: -18 },
     { opacity: 1, x: 0, duration: 0.5, ease: "power3.out", immediateRender: false },
-    speakAt,
+    visualStart,
   );
   if (locatorName) {
     timeline.fromTo(
       locatorName,
       { opacity: 0, x: -10 },
       { opacity: 1, x: 0, duration: 0.42, ease: "power2.out", immediateRender: false },
-      speakAt + 0.08,
+      visualStart + 0.08,
     );
   }
   timeline.fromTo(
     card,
     { opacity: 0, y: 40 },
     { opacity: 1, y: 0, duration: 0.62, ease: "expo.out", immediateRender: false },
-    speakAt + 0.08,
+    cardStart + 0.08,
   );
 
   /* The card's inner text starts at opacity 0 in CSS; reveal it in lockstep
@@ -315,42 +368,57 @@ stops.forEach((stop, index) => {
     immediateRender: false,
   });
   if (card.querySelector(".card__meta")) {
-    timeline.fromTo(card.querySelector(".card__meta"), { opacity: 0 }, innerReveal(), speakAt + 0.14);
+    timeline.fromTo(card.querySelector(".card__meta"), { opacity: 0 }, innerReveal(), cardStart + 0.14);
   }
   if (card.querySelector(".card__headline")) {
-    timeline.fromTo(card.querySelector(".card__headline"), { opacity: 0 }, innerReveal(), speakAt + 0.2);
+    timeline.fromTo(card.querySelector(".card__headline"), { opacity: 0 }, innerReveal(), cardStart + 0.2);
   }
   if (card.querySelector(".card__facts")) {
-    timeline.fromTo(card.querySelector(".card__facts"), { opacity: 0, y: 8 }, { ...innerReveal(), y: 0 }, speakAt + 0.3);
+    timeline.fromTo(card.querySelector(".card__facts"), { opacity: 0, y: 8 }, { ...innerReveal(), y: 0 }, cardStart + 0.3);
   }
   if (card.querySelector(".card__source")) {
-    timeline.fromTo(card.querySelector(".card__source"), { opacity: 0 }, innerReveal(), speakAt + 0.42);
+    timeline.fromTo(card.querySelector(".card__source"), { opacity: 0 }, innerReveal(), cardStart + 0.42);
   }
 
   if (index === 0) {
-    timeline.set(storyMedia, { opacity: 0 }, speakAt - 0.001);
+    timeline.set(storyMedia, { opacity: 0 }, mediaStart - 0.001);
     timeline.fromTo(
       storyMedia,
       { opacity: 0, y: 32, scale: 0.975 },
       { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "expo.out", immediateRender: false },
-      speakAt,
+      mediaStart,
     );
   }
 
   if (beats.primary.element) {
-    timeline.set(beats.primary.element, { opacity: 0 }, speakAt - 0.001);
+    timeline.set(beats.primary.element, { opacity: 0 }, mediaStart - 0.001);
     timeline.fromTo(
       beats.primary.element,
       { opacity: 0, scale: 1.025 },
       { opacity: 1, scale: 1, duration: 0.72, ease: "power3.out", immediateRender: false },
-      speakAt,
+      mediaStart,
     );
+    if (beats.primary.image) {
+      timeline.fromTo(
+        beats.primary.image,
+        { scale: 1.22, xPercent: -3, yPercent: 0 },
+        {
+          scale: 1.38,
+          xPercent: 4,
+          yPercent: -1.5,
+          duration: Math.max(0.8, midAt - mediaStart - 0.04),
+          ease: "none",
+          immediateRender: false,
+        },
+        mediaStart + 0.04,
+      );
+    }
     beats.primary.element.querySelectorAll(".story-media__beat-index, .story-media__beat-credit").forEach((label) => {
       timeline.fromTo(
         label,
         { opacity: 0, y: 8 },
         { opacity: 1, y: 0, duration: 0.38, ease: "power2.out", immediateRender: false },
-        speakAt + 0.22,
+        mediaStart + 0.22,
       );
     });
   }
@@ -363,6 +431,21 @@ stops.forEach((stop, index) => {
       { opacity: 1, scale: 1, duration: 0.64, ease: "power3.out", immediateRender: false },
       midAt,
     );
+    if (beats.secondary.image) {
+    timeline.fromTo(
+      beats.secondary.image,
+        { scale: 1.13, xPercent: 4, yPercent: -1 },
+        {
+          scale: 1.27,
+          xPercent: -3,
+          yPercent: 1,
+          duration: Math.max(0.8, outAt - midAt - 0.1),
+          ease: "none",
+          immediateRender: false,
+        },
+        midAt + 0.04,
+      );
+    }
     beats.secondary.element.querySelectorAll(".story-media__beat-index, .story-media__beat-credit").forEach((label) => {
       timeline.fromTo(
         label,
@@ -395,19 +478,35 @@ stops.forEach((stop, index) => {
 
 });
 
+beatCards.forEach(({ element, start, end }) => {
+  const enterAt = Math.max(0, start);
+  const exitAt = Math.max(enterAt + 0.55, end - 0.18);
+  timeline.set(element, { opacity: 0, visibility: "hidden", y: 0, scale: 1 }, 0);
+  timeline.set(element, { visibility: "visible" }, enterAt);
+  timeline.fromTo(
+    element,
+    { opacity: 0, y: 24, scale: 0.96 },
+    { opacity: 1, y: 0, scale: 1, duration: 0.38, ease: "expo.out", immediateRender: false },
+    enterAt,
+  );
+  timeline.to(element, { opacity: 0, y: -14, scale: 0.985, duration: 0.2, ease: "power2.in" }, exitAt);
+  timeline.set(element, { opacity: 0, visibility: "hidden" }, Math.max(exitAt + 0.2, end));
+});
+
 /* The last two seconds become a clear follow/source handoff. The footer
    stays present and now sits above the platform's bottom UI safe area. */
 const endCardStart = Number(variables.endCardStart) || Math.max(0, DURATION - 2.4);
 const endCardReveal = Number(variables.endCardReveal) || endCardStart + 0.24;
+const storyExitAt = Math.max(0, endCardReveal - 0.08);
 storyCards.map((storyCard) => storyCard.element).filter(Boolean).forEach((card) => {
-  timeline.to(card, { opacity: 0, y: -24, duration: 0.24, ease: "power2.in" }, endCardStart);
+  timeline.to(card, { opacity: 0, y: -24, duration: 0.24, ease: "power2.in" }, storyExitAt);
 });
 storyLocators.map((storyLocator) => storyLocator.element).filter(Boolean).forEach((locator) => {
-  timeline.to(locator, { opacity: 0, duration: 0.24, ease: "power2.in" }, endCardStart);
+  timeline.to(locator, { opacity: 0, duration: 0.24, ease: "power2.in" }, storyExitAt);
 });
-timeline.to(storyMedia, { opacity: 0, y: -20, duration: 0.24, ease: "power2.in" }, endCardStart);
+timeline.to(storyMedia, { opacity: 0, y: -20, duration: 0.24, ease: "power2.in" }, storyExitAt);
 storyBeats.flatMap((beats) => [beats.primary.element, beats.secondary.element]).filter(Boolean).forEach((beat) => {
-  timeline.to(beat, { opacity: 0, scale: 1, duration: 0.24, ease: "power2.in" }, endCardStart);
+  timeline.to(beat, { opacity: 0, scale: 1, duration: 0.24, ease: "power2.in" }, storyExitAt);
 });
 timeline.set(endCard, { opacity: 0 }, endCardReveal - 0.001);
 timeline.fromTo(
@@ -420,19 +519,13 @@ timeline.fromTo(
   ".end-card__eyebrow",
   { opacity: 0, y: 10 },
   { opacity: 1, y: 0, duration: 0.34, ease: "power2.out", immediateRender: false },
-  endCardReveal + 0.1,
+  endCardReveal + 0.04,
 );
 timeline.fromTo(
   ".end-card__title",
   { opacity: 0, y: 16 },
   { opacity: 1, y: 0, duration: 0.46, ease: "expo.out", immediateRender: false },
-  endCardReveal + 0.18,
-);
-timeline.fromTo(
-  ".end-card__source",
-  { opacity: 0, y: 10 },
-  { opacity: 1, y: 0, duration: 0.34, ease: "power2.out", immediateRender: false },
-  endCardReveal + 0.32,
+  endCardReveal + 0.1,
 );
 timeline.to(endCard, { opacity: 0, duration: 0.3, ease: "power2.in" }, DURATION - 0.3);
 

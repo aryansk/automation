@@ -652,3 +652,312 @@ impersonated, and no reply was fabricated.
 | [grpc-go #9296](https://github.com/grpc/grpc-go/pull/9296) | `IC_kwDOAacf888AAAABOMH_xA` | Personal EasyCLA approval and ready state | User completed the legal approval personally; GitHub verifies signed EasyCLA at `df0c7800e6b73c8e5c57ba567face53a762491b2`, and `gh pr ready` succeeded. Replied at [issuecomment-5249247568](https://github.com/grpc/grpc-go/pull/9296#issuecomment-5249247568). | Open / Ready / Review Required; existing `Validate PR` and `upload` failures remain separate. Do not count until merged. |
 
 All four events are recorded as processed in the machine-readable audit state. The global cursor remains `2026-08-10T15:01:03Z` because older emitted events are still queued; no cursor advance was performed.
+
+## 2026-08-11 requested-change and reply pass
+
+The delta audit started from `2026-08-11T10:18:09Z`, rechecked 16 authored PRs,
+and emitted 12 new non-self events. Every emitted event received a truthful
+reply or a resulting-state record. The cursor advanced to
+`2026-08-11T15:34:42Z`; the two older unresolved items remain queued for
+targeted recheck.
+
+| PR | Comment/review ID(s) | Classification | Action, reply, and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [pydantic #13633](https://github.com/pydantic/pydantic/pull/13633) | `IC_kwDOBWBCuM8AAAABOSTfDA`, `IC_kwDOBWBCuM8AAAABOSaVFA` | Automated assign-first policy and CodSpeed report | Acknowledged the assignment gate at [issuecomment-5255290966](https://github.com/pydantic/pydantic/pull/13633#issuecomment-5255290966) and the benchmark report at [issuecomment-5255291232](https://github.com/pydantic/pydantic/pull/13633#issuecomment-5255291232); no reopen or duplicate was attempted | Closed by repository policy; publication remains blocked until a maintainer assigns issue #13630 |
+| [pylint #11254](https://github.com/pylint-dev/pylint/pull/11254) | `IC_kwDOAtdnV88AAAABOScoOw` | Human duplicate/root-cause direction | Checked Astroid #3212, replied at [issuecomment-5255291840](https://github.com/pylint-dev/pylint/pull/11254#issuecomment-5255291840), and closed the superseded Pylint workaround | Closed; monitor Astroid #3212 instead of duplicating the fix |
+| [Python-Markdown #1621](https://github.com/Python-Markdown/markdown/pull/1621) | `PRR_kwDOAAqPss8AAAABJHfUHw`, `PRRC_kwDOAAqPss7gBQpp`, `PRRC_kwDOAAqPss7gCFSY`, `PRRC_kwDOAAqPss7gCvOZ`, `PRRC_kwDOAAqPss7gBViE`, `PRRC_kwDOAAqPss7gBeCj` | Human requested deterministic test and changelog/API correction | Pushed `b745bba2f65f717607a0aaf79e9da66cf7d8c56c`; removed the wall-clock test, added deterministic search-offset coverage, moved #1619 under `Unreleased > Changed`, and verified the remote hash. Replies: [review acknowledgement](https://github.com/Python-Markdown/markdown/pull/1621#issuecomment-5255283727), [timing thread](https://github.com/Python-Markdown/markdown/pull/1621#discussion_r3759358049), [Debian timing thread](https://github.com/Python-Markdown/markdown/pull/1621#discussion_r3759358274), [PyPy thread](https://github.com/Python-Markdown/markdown/pull/1621#discussion_r3759358554), [API thread](https://github.com/Python-Markdown/markdown/pull/1621#discussion_r3759358883), and [changelog thread](https://github.com/Python-Markdown/markdown/pull/1621#discussion_r3759359193). Full unittest suite: 1,089 passed, 13 skipped; changed-file flake8 and `git diff --check` pass | Open draft / Changes Requested; await maintainer re-review |
+| [microsoft/apm #2559](https://github.com/microsoft/apm/pull/2559) | `IC_kwDOPyZEpc8AAAABORFO9A` | Automated legal/CLA blocker | Replied at [issuecomment-5255291538](https://github.com/microsoft/apm/pull/2559#issuecomment-5255291538) that the contributor-controlled agreement was not accepted or impersonated | Open draft; contributor must personally complete the CLA step |
+| [grpc-go #9296](https://github.com/grpc/grpc-go/pull/9296) | `IC_kwDOAacf888AAAABOSx9PA`, `PRR_kwDOAacf888AAAABJHtszw`, `PRRC_kwDOAacf887gCAGn` | Automated review request and requested test coverage | Pushed `efbf74467e6c27ed31febb5fc3d17c736cda1a27`; client stats now assert the default server authority as well as overrides. Remote hash and `go test ./stats -count=1` pass. Replies: [Gemini acknowledgement](https://github.com/grpc/grpc-go/pull/9296#issuecomment-5255287591), [review acknowledgement](https://github.com/grpc/grpc-go/pull/9296#issuecomment-5255287882), and [inline reply](https://github.com/grpc/grpc-go/pull/9296#discussion_r3759361754) | Open ready / Review Required; await maintainer review |
+
+The saved Swift Distributed Tracing #235 architecture boundary and Jupyter
+Server #1689 pending re-review remain unresolved with their prior replies and
+blockers. Routine automation was answered where a reply surface existed; no
+CLA, DCO, legal, identity, cryptographic, or maintainer-only action was
+performed.
+
+## 2026-08-12 review-request and reply pass
+
+The delta audit rechecked authored PRs updated since the previous cursor and
+the saved unresolved items. Every new human or actionable event received a
+reply or resulting-state record; routine OTel dashboard refreshes were treated
+as state notifications after the requested ready transition.
+
+| PR | Incoming event | Request / classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [Python-Markdown #1621](https://github.com/Python-Markdown/markdown/pull/1621) | `IC_kwDOAAqPss8AAAABOUAebA` | Maintainer acknowledgement and delegated review | Replied at [issuecomment-5262762445](https://github.com/Python-Markdown/markdown/pull/1621#issuecomment-5262762445); no duplicate code change | Open Draft / Changes Requested; wait for delegated review |
+| [NetworkX #8835](https://github.com/networkx/networkx/pull/8835) | `PRR_kwDOAA2WCc8AAAABJJAJJg` | Automated-contribution policy closure | Acknowledged at [issuecomment-5262762453](https://github.com/networkx/networkx/pull/8835#issuecomment-5262762453); did not reopen or resubmit | Closed Draft; uncounted |
+| [NetworkX #8836](https://github.com/networkx/networkx/pull/8836) | `IC_kwDOAA2WCc8AAAABOUUDVA` | Automated-contribution policy closure | Acknowledged at [issuecomment-5262762495](https://github.com/networkx/networkx/pull/8836#issuecomment-5262762495); did not reopen or resubmit | Closed Draft; uncounted |
+| [Hatch #2380](https://github.com/pypa/hatch/pull/2380) | `IC_kwDOBYsIqM8AAAABOZJb5A` | Maintainer pointed to the AI-contribution disclosure policy | Added the Codex implementation/test/verification disclosure to the PR body and replied at [issuecomment-5262762458](https://github.com/pypa/hatch/pull/2380#issuecomment-5262762458) | Open Draft; await review |
+| [Swift System #378](https://github.com/apple/swift-system/pull/378) | `IC_kwDOEcmZD88AAAABOZEzRA` | Retarget bug fix to `release/1.8.x` | Verified the branch exists, retargeted the PR, and replied at [issuecomment-5262762457](https://github.com/apple/swift-system/pull/378#issuecomment-5262762457) | Open Draft on `release/1.8.x`; await branch-specific checks |
+| [Swift System #379](https://github.com/apple/swift-system/pull/379) | `IC_kwDOEcmZD88AAAABOZHseg` | Asked whether the fix can preserve modern SDK annotations while supporting the older deployment target | Replied at [issuecomment-5262762455](https://github.com/apple/swift-system/pull/379#issuecomment-5262762455) with the SDK/import-boundary analysis; no speculative code pushed | Open Draft; design hold pending a supported project pattern |
+| [OpenTelemetry #5259](https://github.com/open-telemetry/opentelemetry-specification/pull/5259) | `PRRC_kwDOCv6yE87gG69g`, `PRRC_kwDOCv6yE87gG87V` | Remove editorial changelog entry | Removed `CHANGELOG.md` entry, `git diff --check` passed, pushed `5fe51219cd2a568eb966a32ebb5c3bfdde4fee28`, replied in both exact threads at [discussion_r3763830997](https://github.com/open-telemetry/opentelemetry-specification/pull/5259#discussion_r3763830997) and [discussion_r3763831003](https://github.com/open-telemetry/opentelemetry-specification/pull/5259#discussion_r3763831003), and marked ready | Open Ready; dashboard now waits on reviewers |
+| [OpenTelemetry #5261](https://github.com/open-telemetry/opentelemetry-specification/pull/5261) | `IC_kwDOCv6yE88AAAABOWvHyA` | Dashboard requested ready state | Marked the PR ready; no reply to the automated status comment | Open Ready; wait for reviewers |
+
+The cursor was advanced after the above events were recorded. The unresolved
+queue now retains Swift Distributed Tracing #235, Jupyter Server #1689, and
+Swift System #379's SDK-boundary design hold. No CLA, DCO, legal, identity,
+cryptographic, or maintainer-only action was performed.
+
+## 2026-08-12 review follow-up before next packet
+
+The delta audit rechecked authored PRs since `2026-08-12T05:33:28Z` and the
+saved unresolved items. Every new event received a truthful reply or a
+resulting-state record; the two saved unresolved reviews were rechecked
+without duplicate replies.
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [Python-Markdown #1621](https://github.com/Python-Markdown/markdown/pull/1621) | `IC_kwDOAAqPss8AAAABOba9dg` | Maintainer review-delay acknowledgement | Replied at [issuecomment-5264844097](https://github.com/Python-Markdown/markdown/pull/1621#issuecomment-5264844097); no code change or follow-up requested | Open draft / Changes Requested; wait for delegated review |
+| [Swift System #379](https://github.com/apple/swift-system/pull/379) | `IC_kwDOEcmZD88AAAABOZHseg` | Saved SDK-boundary recheck | Existing analysis reply at [issuecomment-5262762455](https://github.com/apple/swift-system/pull/379#issuecomment-5262762455) remains accurate; no duplicate reply or speculative change | Open draft; design hold remains |
+| [Swift System #379](https://github.com/apple/swift-system/pull/379) | `IC_kwDOEcmZD88AAAABObFiBA` | Maintainer considering compatibility tradeoff | Replied at [issuecomment-5264844117](https://github.com/apple/swift-system/pull/379#issuecomment-5264844117); left the branch unchanged pending a supported project pattern | Open draft; wait for maintainer decision |
+| [SpineOpt.jl #1331](https://github.com/spine-tools/SpineOpt.jl/pull/1331) | `PRR_kwDOCRAilM8AAAABJO2Mlw` | Human requested benchmark-result PR comment | Added the single-comment workflow in `863b75376d4c0abe1dafb4bf203a3fe26f72ca11`, including in-progress/final output, artifact retention, and same-repository write guard; replied at [issuecomment-5264836099](https://github.com/spine-tools/SpineOpt.jl/pull/1331#issuecomment-5264836099). YAML parse and `git diff --check` pass | Open draft; new run is `action_required` pending repository approval |
+| [SpineOpt.jl #1331](https://github.com/spine-tools/SpineOpt.jl/pull/1331) | `IC_kwDOCRAilM8AAAABOcSpAQ` | Automated coverage report | Replied at [issuecomment-5264844107](https://github.com/spine-tools/SpineOpt.jl/pull/1331#issuecomment-5264844107); coverage report was green, with its two-commits-behind note recorded | Open draft; no contributor action needed |
+| [gchq/sleeper #7862](https://github.com/gchq/sleeper/pull/7862) | `IC_kwDOHZiGe88AAAABOc6Bxg` | Human CLA recheck request | Rechecked canonical status: `license/cla` remains pending and reports the CLA is not signed. Replied at [issuecomment-5264851381](https://github.com/gchq/sleeper/pull/7862#issuecomment-5264851381); no legal action was performed | Open draft / Approved; contributor-controlled CLA blocker remains |
+
+Swift Distributed Tracing #235 and Jupyter Server #1689 remain unchanged
+saved blockers with their prior replies. No CLA, DCO, legal, identity,
+cryptographic, or maintainer-only action was performed.
+
+## 2026-08-12 post-publication review delta
+
+The post-publication delta found one new maintainer acknowledgement and three
+previously saved unresolved items. Career Ops #2636 received a concise reply at
+[issuecomment-5265502572](https://github.com/santifer/career-ops/pull/2636#issuecomment-5265502572)
+confirming that the draft remains focused on side-effect-free `--help` and its
+documented-flag regression coverage. Swift Distributed Tracing #235, Jupyter
+Server #1689, and Swift System #379 were rechecked without duplicate replies;
+their existing architecture, re-review, and SDK-boundary blockers remain.
+
+## Sequential publication policy — 2026-08-12
+
+Review work has priority over fresh issue discovery in the next-five workflow.
+When a maintainer requests a change, finish or explicitly block that review
+lane before selecting another implementation lane. New issue publication uses
+`LANE_STATE.json`: one lane at a time, a live preflight immediately before
+implementation, and the same live overlap/policy/base/assignment checks again
+immediately before publication. A closed, claimed, duplicate, or policy-stale
+lane is recorded as stale/blocked and replaced from the reserve pool; it is not
+rescued by sunk cost. The review audit remains a separate post-five gate after
+five canonical `PUBLISHED` states, and no open or closed draft is treated as a
+merge or qualifying count.
+
+## 2026-08-12 pre-OPS-026 review delta
+
+The cursor recheck surfaced one new informational mypy #21838
+`mypy_primer` result (`IC_kwDOAGuhRc8AAAABOfDLVA`): the change produced no
+corpus type-check differences, so no contributor action or reply was needed.
+The Swift Distributed Tracing #235 architecture clarification, Swift System
+#379 SDK-boundary question, and Jupyter Server #1689 requested-change item were
+the previously saved unresolved events, not new events; their prior replies,
+code state, and blockers remain accurate. No speculative code, legal action,
+or duplicate reply was made. The review cursor may advance after recording
+these resulting states; fresh issue selection resumes only after this review
+gate.
+
+## 2026-08-12 post-OPS-026 review delta
+
+The post-publication delta found one informational nbgrader Binder comment and one new Swift System #379 maintainer follow-up. The nbgrader automation comment was recorded as informational with no contributor action; the Swift System follow-up was recorded as a maintainer acknowledgement/design-hold update and needs no speculative code change. Previously saved Swift Distributed Tracing #235, Swift System #379 SDK-boundary, and Jupyter Server #1689 items remain unchanged. No duplicate reply or unauthorized legal, identity, cryptographic, or maintainer-only action was made.
+
+| PR | Incoming event | Resulting state / next check |
+| --- | --- | --- |
+| [nbgrader #2013](https://github.com/jupyter/nbgrader/pull/2013) | Binder bot comment `IC_kwDOAW36nM8AAAABOgHsZQ` | Informational environment link; no contributor action needed; draft remains open and canonical head verified |
+| [Swift System #379](https://github.com/apple/swift-system/pull/379) | Maintainer comment `IC_kwDOEcmZD88AAAABOfiV9A` | Maintainer follow-up recorded; existing SDK/deployment compatibility hold remains; no speculative change pushed |
+
+## 2026-08-13 OPS-027 post-publication review delta
+
+The delta rechecked nine authored PRs from the inclusive publication cutoff.
+The only new actionable event was a maintainer question on fsspec #2099. The
+reply verified that async `_mv_file` support already exists while synchronous
+`AbstractFileSystem.mv` still uses copy/remove, and linked the evidence in
+[issuecomment-5271292281](https://github.com/fsspec/filesystem_spec/pull/2099#issuecomment-5271292281).
+No speculative change was pushed. The audit cursor advanced to
+`2026-08-12T18:51:20Z`; Swift Distributed Tracing #235, Jupyter Server #1689,
+and Swift System #379 remain the three saved unresolved review holds.
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [fsspec #2099](https://github.com/fsspec/filesystem_spec/pull/2099) | `IC_kwDOB8q_OM8AAAABOjBchA` | Human maintainer overlap question | Verified the existing async `_mv_file` implementation and the missing synchronous hook; replied at [issuecomment-5271292281](https://github.com/fsspec/filesystem_spec/pull/2099#issuecomment-5271292281) | Open Draft; no code change requested; await maintainer review |
+
+## 2026-08-13 OPS-028 post-publication review delta
+
+The post-publication delta checked the five new OPS-028 drafts. No maintainer
+comments, reviews, or bots have responded yet on any of them, so no replies were
+posted. The three saved unresolved review holds (Swift Distributed Tracing #235,
+Jupyter Server #1689, Swift System #379) remain unchanged with their prior
+replies. The review cursor advanced to `2026-08-13T06:00:00Z`.
+
+| PR | State | Notes |
+| --- | --- | --- |
+| [dataprof #579](https://github.com/AndreaBozzo/dataprof/pull/579) | OPEN/Draft | No new events; hosted checks pending |
+| [pandas #66744](https://github.com/pandas-dev/pandas/pull/66744) | OPEN/Draft | No new events; hosted checks pending |
+| [marginalia #20](https://github.com/midhunkrishna/marginalia/pull/20) | OPEN/Draft | No new events |
+| [marginalia #21](https://github.com/midhunkrishna/marginalia/pull/21) | OPEN/Draft | No new events |
+| [dataprof #580](https://github.com/AndreaBozzo/dataprof/pull/580) | OPEN/Draft | No new events; hosted checks pending |
+
+## 2026-08-13 OPS-029 post-publication review delta
+
+The post-publication delta checked the five new OPS-029 drafts. No maintainer
+comments, reviews, or bots have responded yet on any of them, so no replies were
+posted. The three saved unresolved review holds (Swift Distributed Tracing #235,
+Jupyter Server #1689, Swift System #379) remain unchanged with their prior
+replies. The review cursor advanced to `2026-08-13T07:30:00Z`.
+
+| PR | State | Notes |
+| --- | --- | --- |
+| [dataprof #581](https://github.com/AndreaBozzo/dataprof/pull/581) | OPEN/Draft | No new events; hosted checks pending |
+| [dataprof #582](https://github.com/AndreaBozzo/dataprof/pull/582) | OPEN/Draft | No new events; hosted checks pending |
+| [dataprof #583](https://github.com/AndreaBozzo/dataprof/pull/583) | OPEN/Draft | No new events; hosted checks pending |
+| [marginalia #22](https://github.com/midhunkrishna/marginalia/pull/22) | OPEN/Draft | No new events |
+| [dataprof #584](https://github.com/AndreaBozzo/dataprof/pull/584) | OPEN/Draft | No new events; hosted checks pending |
+
+## 2026-08-13 OPS-030 post-publication review delta
+
+The post-publication delta checked the five new OPS-030 drafts. No maintainer
+comments, reviews, or bots have responded yet on any of them, so no replies were
+posted. The three saved unresolved review holds (Swift Distributed Tracing #235,
+Jupyter Server #1689, Swift System #379) remain unchanged with their prior
+replies. The review cursor advanced to `2026-08-13T08:30:00Z`.
+
+| PR | State | Notes |
+| --- | --- | --- |
+| [grafana #130651](https://github.com/grafana/grafana/pull/130651) | OPEN/Draft | No new events; hosted checks pending |
+| [xarray #11520](https://github.com/pydata/xarray/pull/11520) | OPEN/Draft | No new events |
+| [kubernetes/website #56970](https://github.com/kubernetes/website/pull/56970) | OPEN/Draft | No new events |
+| [jupyterlab #19359](https://github.com/jupyterlab/jupyterlab/pull/19359) | OPEN/Draft | No new events |
+| [jupyterlab #19360](https://github.com/jupyterlab/jupyterlab/pull/19360) | OPEN/Draft | No new events |
+
+## 2026-08-13 OPS-031 pre-publication review delta
+
+The delta found four new events and two closures:
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [jupyterlab #19360](https://github.com/jupyterlab/jupyterlab/pull/19360) | `IC_kwDOA5k_I88AAAABOpqgWw` | Maintainer closure + duplicate | krassowski closed the draft because maintainer PR #19370 addresses the issue comprehensively. Acknowledged truthfully at [issuecomment-5280707496](https://github.com/jupyterlab/jupyterlab/pull/19360#issuecomment-5280707496) | Closed; do not reopen or duplicate |
+| [jupyterlab #19359](https://github.com/jupyterlab/jupyterlab/pull/19359) | `IC_kwDOA5k_I88AAAABOpsQfA` | Maintainer quality/volume feedback | krassowski asked to follow the PR template, validate locally, and slow down the submission rate. Withdrawn (closed) with a truthful reply in the close comment; no further JupyterLab submissions will be made | Closed by author; volume signal recorded in OUTCOME_LEARNING notes |
+| [opentelemetry-specification #5259](https://github.com/open-telemetry/opentelemetry-specification/pull/5259) | `PRR_kwDOCv6yE88AAAABJaFUlw` | Human review acknowledgement | chalin confirmed relative links are the right convention; no change requested | Open ready; no action needed |
+| [reference-docs #469](https://github.com/kubernetes-sigs/reference-docs/pull/469) | `IC_kwDOBJUbrs8AAAABOriOyw` | Bot approval-notifier | kubernetes-prow reported lavishpal's approval and the OWNERS approver gate; bot comment, no conversational reply needed | Open ready; needs `lgtm` + approver |
+| [SpineOpt.jl #1331](https://github.com/spine-tools/SpineOpt.jl/pull/1331) | `PRR_kwDOCRAilM8AAAABJaAb9w` | Merge review | datejada merged the canonical PR at `c8cfda4d` (2026-08-13T10:55:57Z); branch needed to be in-repo for testing | MERGED; recorded as tracker row 36 |
+| [gchq/sleeper #7862](https://github.com/gchq/sleeper/pull/7862) | `IC_kwDOHZiGe88AAAABOqegLg` | Maintainer closure | ca61688 closed the draft because another contributor's CLA-signed PR was merged instead; no legal action was performed | Closed; do not reopen or duplicate |
+
+The three saved unresolved review holds (Swift Distributed Tracing #235, Jupyter
+Server #1689, Swift System #379) remain unchanged with their prior replies.
+JupyterLab maintainer feedback establishes a repository-specific volume gate:
+no further jupyterlab submissions while the maintainer's feedback stands.
+
+## 2026-08-13 OPS-032 review delta (pre-lane-2)
+
+The delta surfaced two actionable maintainer threads (OTel #5261, JupyterLab
+#19255), one CLA blocker (microsoft/apm #2570), one bot CI summary (dask
+#12554, no-reply noise), and rechecks of the three saved holds.
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [opentelemetry-specification #5261](https://github.com/open-telemetry/opentelemetry-specification/pull/5261) | `PRRC_kwDOCv6yE87hIdKv` | Human requested change | reyang suggested rephrasing to "invoke the `LogRecordExporter`'s `Export`". Adopted at `28914fcf` (plus dropped the construction-vs-first-record OR and the empty-batch flexibility), replied at [discussion_r3777371224](https://github.com/open-telemetry/opentelemetry-specification/pull/5261#discussion_r3777371224) | Resolved; thread replied |
+| [opentelemetry-specification #5261](https://github.com/open-telemetry/opentelemetry-specification/pull/5261) | `PRRC_kwDOCv6yE87hIfSH` | Human requested change | reyang asked to remove the OR in the first trigger bullet; removed (safe because the second bullet's first-record clause still covers records arriving after the construction timer), replied at [discussion_r3777372518](https://github.com/open-telemetry/opentelemetry-specification/pull/5261#discussion_r3777372518) | Resolved; thread replied |
+| [opentelemetry-specification #5261](https://github.com/open-telemetry/opentelemetry-specification/pull/5261) | `PRRC_kwDOCv6yE87hIiPv` | Human question | reyang asked why the empty-queue clause was flexible; simplified to "MAY export an empty batch", replied at [discussion_r3777373546](https://github.com/open-telemetry/opentelemetry-specification/pull/5261#discussion_r3777373546) | Resolved; thread replied |
+| [opentelemetry-specification #5261](https://github.com/open-telemetry/opentelemetry-specification/pull/5261) | `PRR_kwDOCv6yE88AAAABJdVTQA` | Human approval | reyang LGTM'd ("either way works fine") and suggested SHOULD-export-empty-batch | LGTM recorded; suggestion acted on |
+| [opentelemetry-specification #5261](https://github.com/open-telemetry/opentelemetry-specification/pull/5261) | `PRRC_kwDOCv6yE87hKFUk` | Human non-blocking suggestion | Adopted reyang's empty-batch SHOULD wording at `5acfb3f` (markdownlint + `git diff --check` clean), replied at [discussion_r3777595583](https://github.com/open-telemetry/opentelemetry-specification/pull/5261#discussion_r3777595583) | Resolved; thread replied |
+| [opentelemetry-specification #5261](https://github.com/open-telemetry/opentelemetry-specification/pull/5261) | `PRRC_kwDOCv6yE87hKRvk` | Human note | cijothomas confirmed the SHOULD behavior is fine for the Logs SDK and cautioned about stable Trace wording; replied that the Trace spec is untouched (only the new Logs block changed) at [discussion_r3777597269](https://github.com/open-telemetry/opentelemetry-specification/pull/5261#discussion_r3777597269) | Resolved; thread replied |
+| [jupyterlab #19255](https://github.com/jupyterlab/jupyterlab/pull/19255) | `IC_kwDOA5k_I88AAAABOslOag` | Human note (failing test) | krassowski flagged a failing added test. Root cause: the contents mock stamps `last_modified` with the current time on every save and jsdom measures no layout, so the resize test could never produce distinct values. Fixed deterministically at `89f5558` (direct model timestamp + recorded column size through `onResize`); full js-filebrowser suite passes (157 + 1 pre-existing skip). Replied at [issuecomment-5284061016](https://github.com/jupyterlab/jupyterlab/pull/19255#issuecomment-5284061016) | Resolved; CI rerun pending |
+| [microsoft/apm #2570](https://github.com/microsoft/apm/pull/2570) | `IC_kwDOPyZEpc8AAAABOsYgvg` | CLA blocker | microsoft-github-policy-service requests CLA acceptance; automation must not sign. Replied truthfully at [issuecomment-5284111566](https://github.com/microsoft/apm/pull/2570#issuecomment-5284111566); the contributor must reply `@microsoft-github-policy-service agree` | Blocked on human CLA; uncounted |
+| [dask #12554](https://github.com/dask/dask/pull/12554) | `IC_kwDOAbcwm88AAAABOtUaCA` | Automated noise | github-actions Unit Test Results summary with ±0 failures; no contributor action; no-reply noise per ledger precedent | No action |
+| [swift-distributed-tracing #235](https://github.com/apple/swift-distributed-tracing/pull/235) | `PRRC_kwDOEcjaY87fWJfc` | Design hold (recheck) | FranzBusch's multiplex-instrument boundary question; prior reply stands, no new activity | Hold; recheck next audit |
+| [swift-system #379](https://github.com/apple/swift-system/pull/379) | `IC_kwDOEcmZD88AAAABOZHseg` | Human question (recheck) | glessard's macOS 15.4 SDK question was resolved on 2026-08-12 by the versioned `canImport` branch at `a6582c0` with a reply; no new activity | Resolved; awaiting maintainer re-review |
+| [jupyter_server #1689](https://github.com/jupyter-server/jupyter_server/pull/1689) | `PRR_kwDOBBqROs8AAAABI42A0Q` | Requested change (recheck) | krassowski asked to drop the issue templates; branch now contains only `docs/source/operators/security.rst`; reply posted 2026-08-09; CHANGES_REQUESTED still pending maintainer re-review | Awaiting re-review; verify next audit |
+
+JupyterLab volume gate remains in force (no new jupyterlab submissions while
+krassowski's feedback stands). All other items were recorded with a reply URL,
+resulting state, or explicit no-reply blocker before the cursor advanced.
+
+## 2026-08-14 human-comment follow-up
+
+The incremental audit rechecked the three saved unresolved items. Two needed
+current contributor action:
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [swift-distributed-tracing #235](https://github.com/apple/swift-distributed-tracing/pull/235) | `PRRC_kwDOEcjaY87fWJfc` | Human API-boundary clarification | Replied to FranzBusch at [discussion_r3778609963](https://github.com/apple/swift-distributed-tracing/pull/235#discussion_r3778609963), agreeing that the core accessor must not special-case `MultiplexInstrument`; no speculative cross-target API rewrite was made | OPEN/Draft design hold; await the supported ownership/API boundary |
+| [swift-system #379](https://github.com/apple/swift-system/pull/379) | `IC_kwDOEcmZD88AAAABOZHseg` | Human readiness request and question | Verified head `a6582c0`, successful hosted workflow, and 14 passing `MachPort` tests; replied at [issuecomment-5285633170](https://github.com/apple/swift-system/pull/379#issuecomment-5285633170) and marked the PR ready for review | OPEN/Ready on `release/1.8.x`; await maintainer review |
+
+Jupyter Server #1689 already had the requested issue-template removal and a
+truthful reply; it remains OPEN/Ready with `CHANGES_REQUESTED` pending
+maintainer re-review. The connected GitHub write connector returned HTTP 403,
+so the two authorized writes were completed through the authenticated `gh`
+client and independently read back from GitHub. No local source or unrelated
+worktree files were changed.
+
+## 2026-08-14 post-OPS-032 review delta (cursor advanced to 2026-08-14T12:02:48Z)
+
+Incremental audit after OPS-032 reached 5/5 PUBLISHED. Six PRs rechecked;
+three OPS-032 lanes merged and their human review items were handled before
+any fresh issue discovery:
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [GCode #43](https://github.com/shauryagangrade/GCode/pull/43) | `PRRC_kwDOTZmrKM7heJvO` | Human non-blocking nit (merged PR) | Maintainer suggested a distinct non-interactive rejection message because `EOFError` means there is no human declining. PR already merged at `568e62fc`; replied at [discussion_r3783465218](https://github.com/shauryagangrade/GCode/pull/43#discussion_r3783465218) acknowledging and offering a small follow-up if the maintainer wants it | MERGED; nit noted; CHANGELOG entry outstanding |
+| [GCode #44](https://github.com/shauryagangrade/GCode/pull/44) | `PRR_kwDOTZmrKM8AAAABJjcgAg` | Human review (docs items) | Review requested a demo snapshot refresh and a CHANGELOG entry before merge; the PR merged at `4803c6b` without them. Replied at [issuecomment-5293057534](https://github.com/shauryagangrade/GCode/pull/44#issuecomment-5293057534) committing to a small follow-up that adds both CHANGELOG entries and refreshes the demo snapshot | MERGED; follow-up lane promised |
+| [StudyMap #132](https://github.com/StudentSuite/StudyMap/pull/132) | `IC_kwDOS0S8A88AAAABO1kfaQ` | Vercel deploy bot message | Team authorization is a team-member action unavailable to a fork contributor; PR merged at `9c8d0f93`. Replied at [issuecomment-5293057665](https://github.com/StudentSuite/StudyMap/pull/132#issuecomment-5293057665) recording the state | MERGED; no contributor action |
+| [swift-distributed-tracing #235](https://github.com/apple/swift-distributed-tracing/pull/235) | `PRRC_kwDOEcjaY87fWJfc` | Design hold (recheck) | FranzBusch boundary question; existing 2026-08-13 reply stands, no new activity | OPEN/Draft design hold; await supported ownership/API boundary |
+| [jupyter_server #1689](https://github.com/jupyter-server/jupyter_server/pull/1689) | `PRR_kwDOBBqROs8AAAABI42A0Q` | Requested change (recheck) | Branch holds only `security.rst`; reply posted 2026-08-09; CHANGES_REQUESTED still pending maintainer re-review | Awaiting re-review; verify next audit |
+
+All emitted items have a reply URL or an explicit unresolved-hold blocker.
+Cursor advanced via `scripts/review_audit_delta.sh --advance`.
+
+## 2026-08-14 pre-OPS-034 review delta
+
+Incremental audit before OPS-034 discovery. Three unresolved items re-emitted;
+one new human comment required an action:
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [typeshed #16170](https://github.com/python/typeshed/pull/16170) | `IC_kwDOAeOl_88AAAABO4bf9g` | Human maintainer-style request (donbarbos) to remove regression tests | Removed `stdlib/@tests/test_cases/asyncio/check_create_server.py` and pushed `28244d9`; replied at [issuecomment-5293842512](https://github.com/python/typeshed/pull/16170#issuecomment-5293842512) | OPEN/Draft, tests removed, await re-review |
+| [swift-distributed-tracing #235](https://github.com/apple/swift-distributed-tracing/pull/235) | `PRRC_kwDOEcjaY87fWJfc` | Design hold (recheck) | Existing 2026-08-13 reply stands, no new activity | OPEN/Draft design hold; await supported ownership/API boundary |
+| [jupyter_server #1689](https://github.com/jupyter-server/jupyter_server/pull/1689) | `PRR_kwDOBBqROs8AAAABI42A0Q` | Requested change (recheck) | Branch holds only `security.rst`; reply posted 2026-08-09; CHANGES_REQUESTED still pending maintainer re-review | Awaiting re-review; verify next audit |
+
+## 2026-08-14 post-OPS-034 review delta
+
+Incremental audit after OPS-034 reached 5/5 PUBLISHED. Four items rechecked;
+one new bot comment on a new draft and two known holds:
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [StudyMap #133](https://github.com/StudentSuite/StudyMap/pull/133) | `IC_kwDOS0S8A88AAAABO4vtcA` | Vercel deploy bot message | Team authorization is a team-member action unavailable to a fork contributor (same as merged #132); recorded, no contributor action | OPEN/Draft; await team authorization + review |
+| [typeshed #16170](https://github.com/python/typeshed/pull/16170) | `IC_kwDOAeOl_88AAAABO4qbtA` | mypy_primer bot diff (informational) | After removing the regression test, mypy_primer shows websockets gains an unused `type: ignore` (third-party code consequence of the corrected stub). All hosted checks pass, including "mypy: regression tests" and every type-check run | OPEN/Draft; no contributor action |
+| [swift-distributed-tracing #235](https://github.com/apple/swift-distributed-tracing/pull/235) | `PRRC_kwDOEcjaY87fWJfc` | Design hold (recheck) | Existing 2026-08-13 reply stands, no new activity | OPEN/Draft design hold; await supported ownership/API boundary |
+| [jupyter_server #1689](https://github.com/jupyter-server/jupyter_server/pull/1689) | `PRR_kwDOBBqROs8AAAABI42A0Q` | Requested change (recheck) | Branch holds only `security.rst`; reply posted 2026-08-09; CHANGES_REQUESTED still pending maintainer re-review | Awaiting re-review; verify next audit |
+
+## 2026-08-14 pre-OPS-035 review delta
+
+Incremental audit before OPS-035 discovery. Only the two known holds
+re-emitted; the five OPS-034 drafts and all prior drafts had no new human
+activity:
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [swift-distributed-tracing #235](https://github.com/apple/swift-distributed-tracing/pull/235) | `PRRC_kwDOEcjaY87fWJfc` | Design hold (recheck) | Existing 2026-08-13 reply stands, no new activity | OPEN/Draft design hold; await supported ownership/API boundary |
+| [jupyter_server #1689](https://github.com/jupyter-server/jupyter_server/pull/1689) | `PRR_kwDOBBqROs8AAAABI42A0Q` | Requested change (recheck) | Branch holds only `security.rst`; reply posted 2026-08-09; CHANGES_REQUESTED still pending maintainer re-review | Awaiting re-review; verify next audit |
+
+## 2026-08-14 post-OPS-035 review delta
+
+Incremental audit after OPS-035 reached 5/5 PUBLISHED. Five items re-emitted:
+two Vercel bot messages on the new StudyMap drafts, one maintainer close on a
+prior draft, and the two known holds:
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [StudyMap #135](https://github.com/StudentSuite/StudyMap/pull/135) | `IC_kwDOS0S8A88AAAABO5PTIw` | Vercel deploy bot message | Team authorization is a team-member action unavailable to a fork contributor (same as #132/#133/#134); recorded, no contributor action | OPEN/Draft; await team authorization + review |
+| [StudyMap #134](https://github.com/StudentSuite/StudyMap/pull/134) | `IC_kwDOS0S8A88AAAABO5LBPQ` | Vercel deploy bot message | Same team-authorization message as the other StudyMap drafts; recorded, no contributor action | OPEN/Draft; await team authorization + review |
+| [pandas #66744](https://github.com/pandas-dev/pandas/pull/66744) | `IC_kwDOAA0YD88AAAABO5GK1Q` | Maintainer close: duplicate of an already-open PR for #66742 (jorisvandenbossche) | PR was ours (EXT-182, OPS-028); closed 2026-08-14T14:19:10Z with a note to reference the issue going forward. Duplicate scope, no defect in the change itself; recorded and resolved. WORK_QUEUE EXT-182 updated to RESOLVED | CLOSED; no further action |
+| [swift-distributed-tracing #235](https://github.com/apple/swift-distributed-tracing/pull/235) | `PRRC_kwDOEcjaY87fWJfc` | Design hold (recheck) | Existing 2026-08-13 reply stands, no new activity | OPEN/Draft design hold; await supported ownership/API boundary |
+| [jupyter_server #1689](https://github.com/jupyter-server/jupyter_server/pull/1689) | `PRR_kwDOBBqROs8AAAABI42A0Q` | Requested change (recheck) | Branch holds only `security.rst`; reply posted 2026-08-09; CHANGES_REQUESTED still pending maintainer re-review | Awaiting re-review; verify next audit |
+
+## 2026-08-14 post-OPS-036 review delta
+
+Incremental audit after OPS-036 reached 5/5 PUBLISHED. One new human
+maintainer comment required action, plus the two known holds:
+
+| PR | Incoming event | Classification | Action and evidence | Resulting state / next check |
+| --- | --- | --- | --- | --- |
+| [GCode #45](https://github.com/shauryagangrade/GCode/pull/45) | `IC_kwDOTZmrKM8AAAABO5Yd3Q` | Maintainer (owner) direction: slim the PR down | Followed all three points: dropped the CHANGELOG half (entries already on main), kept only `demo/make_demo.py` (full categorized /help snapshot, conflict resolved keeping our version), updated the description and the script docstring to note the vhs migration. Rebuilt branch `d19b42b` is MERGEABLE/CLEAN; replied at [issuecomment-5294868311](https://github.com/shauryagangrade/GCode/pull/45#issuecomment-5294868311) | OPEN/Draft, MERGEABLE; await re-review |
+| [swift-distributed-tracing #235](https://github.com/apple/swift-distributed-tracing/pull/235) | `PRRC_kwDOEcjaY87fWJfc` | Design hold (recheck) | Existing 2026-08-13 reply stands, no new activity | OPEN/Draft design hold; await supported ownership/API boundary |
+| [jupyter_server #1689](https://github.com/jupyter-server/jupyter_server/pull/1689) | `PRR_kwDOBBqROs8AAAABI42A0Q` | Requested change (recheck) | Branch holds only `security.rst`; reply posted 2026-08-09; CHANGES_REQUESTED still pending maintainer re-review | Awaiting re-review; verify next audit |

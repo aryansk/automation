@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "nasa-astrorad-vest-solar-storm-protection-2026-08-12",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Cape Canaveral",
+  "region": "Florida",
+  "urgency": "medium",
+  "storyType": "auto",
+  "kicker": "Space science · USA",
+  "headline": "Radiation vest from Artemis I could cut astronauts' exposure in solar storms",
+  "summary": "A vest worn by a manikin on the 2022 uncrewed Artemis I flight could cut an astronaut's dose by about 60% in a severe solar storm, a new study finds.",
+  "script": "A radiation vest tested on NASA's uncrewed Artemis I mission could cut an astronaut's radiation dose by about sixty percent during a severe solar storm. The Science Advances study simulates how the vest would protect crews on a future moon base.",
+  "source": "AP",
+  "openingHook": "SOLAR STORM SHIELD: VEST CUTS DOSE 60%",
+  "imageOne": "assets/stories/2026-08-13/good-astro-rad-vest/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/good-astro-rad-vest/secondary.jpg",
+  "imageAlt": "NASA manikins Helga and Zohar undergo post-flight inspection after the Artemis I mission, Kennedy Space Center, January 2023.",
+  "imageAltTwo": "3-D rendering showing radiation doses on manikins with and without the AstroRad vest during Artemis I.",
+  "imageCredit": "NASA / AP PHOTO",
+  "imageCreditTwo": "NASA · LOCKHEED MARTIN · DLR",
+  "imageSourceTwo": "https://www.sciencenews.org/article/vest-artemis-mission-blocked-radiation",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-nasa-astrorad-vest-solar-storm-protection.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Kennedy Space Center",
+      "detail": "Florida · USA"
+    },
+    {
+      "start": 2.55,
+      "end": 4.45,
+      "eyebrow": "Field image / context",
+      "value": "AstroRad vest",
+      "detail": "Flown on Artemis I, 2022"
+    },
+    {
+      "start": 4.6,
+      "end": 6.5,
+      "eyebrow": "Dose reduction",
+      "value": "~60%",
+      "detail": "In a severe solar storm",
+      "kind": "stat"
+    },
+    {
+      "start": 6.65,
+      "end": 8.55,
+      "eyebrow": "Who it protects",
+      "value": "Lungs · marrow",
+      "detail": "Breasts and ovaries"
+    },
+    {
+      "start": 8.7,
+      "end": 10.6,
+      "eyebrow": "Outlook / moon",
+      "value": "Moon-base crews",
+      "detail": "Simulated for future missions"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "A vest flown on",
+        "Artemis I."
+      ],
+      "highlights": [
+        "A vest flown on",
+        "Artemis I"
+      ]
+    },
+    {
+      "lines": [
+        "Cuts radiation dose",
+        "by about 60%."
+      ],
+      "highlights": [
+        "Cuts radiation dose",
+        "by about 60%"
+      ]
+    },
+    {
+      "lines": [
+        "Made for",
+        "solar storms."
+      ],
+      "highlights": [
+        "Made for",
+        "solar storms"
+      ]
+    },
+    {
+      "lines": [
+        "Protecting future",
+        "moon crews."
+      ],
+      "highlights": [
+        "Protecting future",
+        "moon crews"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Associated Press",
+      "title": "Radiation vest tested during Artemis I can cut astronauts' exposure in solar storms, study suggests",
+      "url": "https://apnews.com/article/nasa-artemis-moon-radiation-astronauts-13e453c3e0502c0b0b3786b7fbc1a5cd",
+      "published": "2026-08-12",
+      "usedFor": [
+        "~60% dose cut in a 1972-scale storm",
+        "vest developed by StemRad and Lockheed Martin",
+        "Science Advances publication"
+      ]
+    },
+    {
+      "publisher": "Science News",
+      "title": "A vest tested on the Artemis I mission blocked some radiation exposure",
+      "url": "https://www.sciencenews.org/article/vest-artemis-mission-blocked-radiation",
+      "published": "2026-08-12",
+      "usedFor": [
+        "26-kg high-density polyethylene garment",
+        "manikin Zohar wore it, Helga flew unprotected",
+        "flown through the inner Van Allen belt"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

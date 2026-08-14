@@ -1,0 +1,152 @@
+{
+  "eventId": "switzerland-snowmaking-forest-fires-2026-08-13",
+  "tone": "good",
+  "countryCode": "CH",
+  "countryName": "Switzerland",
+  "cityName": "Adelboden",
+  "region": "Bernese Oberland",
+  "urgency": "medium",
+  "storyType": "auto",
+  "kicker": "Swiss climate defense",
+  "headline": "Swiss ski resorts may turn snow cannons on forest fires",
+  "summary": "Adelboden-Lenk in Switzerland says its snow cannons and water reservoirs could double as firefighting tools as summer drought raises wildfire risk.",
+  "script": "Swiss Alps resorts may turn their snow cannons on forest fires. Adelboden-Lenk, in the Bernese Oberland, keeps its snowmaking equipment and water reservoirs ready in summer — ready to drench nearby forests when hot, dry weather raises fire risk.",
+  "source": "AP",
+  "edition": "13 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "SWISS RESORTS: SNOW CANNONS VS. FOREST FIRES",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 52%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-13/good-snow-cannons/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/good-snow-cannons/secondary.jpg",
+  "imageAlt": "Snow cannons stored during the summer at the Adelboden-Lenk ski resort facility in the Lenk valley, Switzerland, 3 Aug 2026.",
+  "imageAltTwo": "A snowmaking water reservoir photographed at the Lenk valley near Adelboden, Switzerland, 3 Aug 2026.",
+  "imageCredit": "AP PHOTO / HERNAN MUNOZ",
+  "imageCreditTwo": "AP PHOTO / HERNAN MUNOZ",
+  "imageSourceTwo": "https://www.ksat.com/2026/08/13/alpine-resorts-snowmaking-equipment-may-be-put-to-work-fighting-summer-forest-fires/",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-good-snow-cannons.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "Bernese Oberland",
+      "detail": "Adelboden-Lenk · Switzerland"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Field image / context",
+      "value": "Cannons stored for summer",
+      "detail": "Snowmaking fleet at Adelboden-Lenk"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Why it matters",
+      "value": "Summer drought",
+      "detail": "Raises wildfire risk in the Alps"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Water supply / stored",
+      "value": "Reservoirs stand ready",
+      "detail": "Snow water as a firefighting line"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Outlook / climate",
+      "value": "New line of defense",
+      "detail": "Resorts adapting to hotter summers"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Swiss ski resorts are",
+        "preparing for fire season."
+      ],
+      "highlights": [
+        "preparing for fire season"
+      ]
+    },
+    {
+      "lines": [
+        "Their snow cannons",
+        "can drench forests."
+      ],
+      "highlights": [
+        "drench forests"
+      ]
+    },
+    {
+      "lines": [
+        "Summer drought raises",
+        "wildfire risk."
+      ],
+      "highlights": [
+        "wildfire risk"
+      ]
+    },
+    {
+      "lines": [
+        "Stored water reservoirs",
+        "stand ready."
+      ],
+      "highlights": [
+        "stand ready"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Associated Press via KSAT",
+      "title": "Alpine resorts' snowmaking equipment may be put to work fighting summer forest fires",
+      "url": "https://www.ksat.com/2026/08/13/alpine-resorts-snowmaking-equipment-may-be-put-to-work-fighting-summer-forest-fires/",
+      "published": "2026-08-13",
+      "usedFor": [
+        "snowmaking equipment as firefighting tools",
+        "Adelboden-Lenk facility and stored cannons",
+        "water reservoirs for snowmaking"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Positive standalone — climate-adaptation story with fresh AP photo set (3 Aug 2026 shoot) and caption-verified imagery.",
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. AP Photo imagery from the 3 Aug 2026 Adelboden-Lenk shoot, credit banners applied.",
+    "generated": false
+  }
+}

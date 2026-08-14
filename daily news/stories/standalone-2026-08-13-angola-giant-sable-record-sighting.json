@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "angola-giant-sable-record-sighting-2026-08-10",
+  "tone": "good",
+  "statWords": "200",
+  "countryCode": "AO",
+  "countryName": "Angola",
+  "cityName": "Malanje",
+  "region": "Africa",
+  "urgency": "medium",
+  "storyType": "auto",
+  "kicker": "Conservation win · Angola",
+  "headline": "Over 200 giant sable antelopes seen in record Angola sighting",
+  "summary": "Angola's national symbol, once nearly extinct, gathered in unprecedented numbers at Cangandala National Park — more than 200 in a single area, a historic sign of recovery.",
+  "script": "Conservationists in Angola are celebrating an extraordinary sighting. More than 200 giant sable antelopes were seen gathered in a single area of Cangandala National Park, the largest gathering ever recorded there, and a strong sign the national symbol is recovering.",
+  "source": "ANGOP",
+  "openingHook": "ANGOLA: 200+ GIANT SABLES SPOTTED",
+  "imageOne": "assets/stories/2026-08-13/good-angola-giant-sable/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/good-angola-giant-sable/secondary.jpg",
+  "imageAlt": "Giant sable antelopes in their natural habitat at Cangandala National Park, Angola.",
+  "imageAltTwo": "Macho Ivan, a giant sable antelope bull photographed at Cangandala National Park.",
+  "imageCredit": "ANGOLA PRESS AGENCY",
+  "imageCreditTwo": "FUNDAÇÃO KISSAMA",
+  "imageSourceTwo": "http://english.news.cn/20260811/fd79e47ab0e042c69fc6fe37f8ae672e/c.html",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-angola-giant-sable-record-sighting.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Cangandala",
+      "detail": "Angola · Malanje province"
+    },
+    {
+      "start": 2.5,
+      "end": 4.4,
+      "eyebrow": "Field image / context",
+      "value": "Giant sable",
+      "detail": "The national symbol"
+    },
+    {
+      "start": 5.38,
+      "end": 7.78,
+      "eyebrow": "Record sighting",
+      "value": "200+",
+      "detail": "Antelopes in one area",
+      "kind": "stat"
+    },
+    {
+      "start": 6.5,
+      "end": 8.4,
+      "eyebrow": "Recovery / history",
+      "value": "Nearly extinct",
+      "detail": "Protected since 1933"
+    },
+    {
+      "start": 8.5,
+      "end": 10.4,
+      "eyebrow": "Outlook / wild",
+      "value": "A species",
+      "detail": "Returning"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Angola's giant sable",
+        "antelope."
+      ],
+      "highlights": [
+        "Angola's giant sable",
+        "antelope"
+      ]
+    },
+    {
+      "lines": [
+        "More than 200",
+        "in one sighting."
+      ],
+      "highlights": [
+        "More than 200",
+        "in one sighting"
+      ]
+    },
+    {
+      "lines": [
+        "A record at",
+        "Cangandala Park."
+      ],
+      "highlights": [
+        "A record at",
+        "Cangandala Park"
+      ]
+    },
+    {
+      "lines": [
+        "The national symbol",
+        "is recovering."
+      ],
+      "highlights": [
+        "The national symbol",
+        "is recovering"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "ANGOP",
+      "title": "Biodiversity - Over 200 Giant Sable Antelopes confirmed in Cangandala Park",
+      "url": "https://angop.ao/en/noticias/ambiente/mais-de-200-palancas-negras-gigantes-avistadas-em-cangandala/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "200+ in one area on 9 Aug",
+        "unprecedented record",
+        "national symbol"
+      ]
+    },
+    {
+      "publisher": "Xinhua",
+      "title": "Angola's Cangandala National Park sees record 200-plus giant sable antelopes",
+      "url": "http://english.news.cn/20260811/fd79e47ab0e042c69fc6fe37f8ae672e/c.html",
+      "published": "2026-08-11",
+      "usedFor": [
+        "independent confirmation of 200-plus sighting",
+        "recovery sign"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

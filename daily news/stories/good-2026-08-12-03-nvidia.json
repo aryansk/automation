@@ -1,0 +1,181 @@
+{
+  "eventId": "nvidia-ai-infrastructure-bet-2026-08-12",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "San Jose",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Technology · AI",
+  "headline": "Nvidia backs a $70 billion buildout of AI infrastructure",
+  "summary": "Analysts say Nvidia's roughly $70 billion in bets on OpenAI, Anthropic and others could cement demand for its chips and pay off for shareholders.",
+  "script": "Nvidia is going all in on the AI boom. Analysts count around seventy billion dollars in bets on OpenAI, Anthropic and other labs. The wager locks in demand for its chips, and if the buildout pays off, so could its shareholders.",
+  "source": "CNBC · WSJ",
+  "edition": "12 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/stories/2026-08-12/good-nvidia/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-12/good-nvidia/secondary.jpg",
+  "imageAlt": "Rows of servers in an AI data center.",
+  "imageAltTwo": "A close-up of an Nvidia AI accelerator chip.",
+  "imageCredit": "Reuters / AP",
+  "imageCreditTwo": "Reuters / AP",
+  "narrationAudio": "assets/narration/good-2026-08-12-03-nvidia.wav",
+  "captions": [
+    {
+      "lines": [
+        "Nvidia bets big",
+        "on the AI boom."
+      ],
+      "highlights": [
+        "bets big"
+      ]
+    },
+    {
+      "lines": [
+        "Around $70B into",
+        "OpenAI, Anthropic and more."
+      ],
+      "highlights": [
+        "$70B"
+      ]
+    },
+    {
+      "lines": [
+        "Locking in demand",
+        "for its chips."
+      ],
+      "highlights": [
+        "Locking in demand"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "CNBC",
+      "title": "Nvidia and OpenAI in talks for up to $250 billion backstop to fund AI infrastructure",
+      "url": "https://www.cnbc.com/2026/08/12/nvidia-openai-ai-infrastructure.html",
+      "published": "2026-08-12",
+      "usedFor": [
+        "AI infrastructure funding",
+        "OpenAI ties",
+        "chip demand"
+      ]
+    },
+    {
+      "publisher": "The Wall Street Journal",
+      "title": "Nvidia in Talks With OpenAI to Guarantee Financing for Data Centers",
+      "url": "https://www.wsj.com/tech/ai/nvidia-openai-data-center-financing-2026-08-12",
+      "published": "2026-08-12",
+      "usedFor": [
+        "scale of the bet",
+        "data-center buildout",
+        "shareholder upside"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Major capital move shaping the AI economy; editorial ranking.",
+    "researchDate": "12 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in the United States tech economy.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "CNBC / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "United States",
+            "code": "US",
+            "coordinates": [
+              -98.5,
+              39.8
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "Focus on Silicon Valley / San Jose.",
+        "start": 5.5,
+        "animationId": "city-lock",
+        "mapSource": "WSJ / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "San Jose",
+            "country": "United States",
+            "code": "US",
+            "coordinates": [
+              -121.8863,
+              37.3382
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "claim-and-consequence",
+        "scriptCue": "Show the network of AI-lab investments radiating out.",
+        "start": 10.5,
+        "animationId": "network-branch",
+        "mapSource": "CNBC / 12 Aug 2026",
+        "mapData": {
+          "nodes": [
+            {
+              "id": "nvidia",
+              "name": "NVIDIA",
+              "coordinates": [
+                -121.8863,
+                37.3382
+              ],
+              "status": "active"
+            },
+            {
+              "id": "openai",
+              "name": "OPENAI",
+              "coordinates": [
+                -122.4194,
+                37.7749
+              ],
+              "status": "active"
+            },
+            {
+              "id": "anthropic",
+              "name": "ANTHROPIC",
+              "coordinates": [
+                -122.4064,
+                37.7853
+              ],
+              "status": "active"
+            }
+          ],
+          "links": [
+            {
+              "from": "nvidia",
+              "to": "openai"
+            },
+            {
+              "from": "nvidia",
+              "to": "anthropic"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

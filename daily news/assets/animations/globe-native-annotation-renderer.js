@@ -13,6 +13,7 @@ const COLORS = Object.freeze({
   copy: "#d8e1d4",
   muted: "#789488",
   blue: "#9fc7bd",
+  coast: "#8bdff0",
   dark: "rgba(25,53,45,0.86)",
 });
 
@@ -109,6 +110,7 @@ function statusColor(status) {
   const value = String(status || "active").toLowerCase();
   if (["blocked", "failed", "offline", "unverified", "negative"].includes(value)) return COLORS.live;
   if (["detour", "pending", "forecast", "reported", "review"].includes(value)) return COLORS.accent;
+  if (["illustrative", "context"].includes(value)) return COLORS.blue;
   if (["exempt", "inactive"].includes(value)) return COLORS.muted;
   return COLORS.paper;
 }
@@ -337,7 +339,7 @@ function drawMarker(state, projected, progress, options = {}) {
     ctx.fill();
   }
   ctx.restore();
-  if (options.label) placeLabel(state, projected, options.label, color, alpha);
+  if (options.label && state.showLabels) placeLabel(state, projected, options.label, color, alpha);
 }
 
 function placeLabel(state, projected, text, color, alpha) {
@@ -449,6 +451,60 @@ function drawFeature(state, feature, progress, options = {}) {
   });
 }
 
+function drawCoastline(state, feature, progress, color = COLORS.coast) {
+  if (!feature?.geometry) return;
+  const polygons = feature.geometry.type === "Polygon"
+    ? [feature.geometry.coordinates]
+    : feature.geometry.type === "MultiPolygon" ? feature.geometry.coordinates : [];
+  const rings = polygons.flat();
+  const ctx = state.ctx;
+  rings.forEach((ring) => {
+    if (!Array.isArray(ring) || ring.length < 2 || !Array.isArray(ring[0])) return;
+    const projected = ring.map((entry) => state.view.projectCoordinate(entry, 1.018));
+    const visible = projected.filter((entry) => entry?.visible);
+    if (visible.length < 2) return;
+    ctx.save();
+    const pulse = 0.72 + oscillate(progress, 0.4, 1.2) * 0.28;
+    ctx.globalAlpha = clamp(progress) * 0.24 * pulse;
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 12;
+    ctx.shadowColor = color;
+    ctx.shadowBlur = 22;
+    ctx.beginPath();
+    let drawing = false;
+    projected.forEach((entry) => {
+      if (!entry?.visible) {
+        drawing = false;
+        return;
+      }
+      if (!drawing) {
+        ctx.moveTo(entry.x, entry.y);
+        drawing = true;
+      } else ctx.lineTo(entry.x, entry.y);
+    });
+    ctx.stroke();
+    ctx.globalAlpha = clamp(progress) * 0.94 * pulse;
+    ctx.lineWidth = 4.2;
+    ctx.shadowBlur = 8;
+    ctx.setLineDash([34, 18]);
+    ctx.lineDashOffset = -clamp(progress) * 260;
+    ctx.beginPath();
+    drawing = false;
+    projected.forEach((entry) => {
+      if (!entry?.visible) {
+        drawing = false;
+        return;
+      }
+      if (!drawing) {
+        ctx.moveTo(entry.x, entry.y);
+        drawing = true;
+      } else ctx.lineTo(entry.x, entry.y);
+    });
+    ctx.stroke();
+    ctx.restore();
+  });
+}
+
 function drawCountryHighlights(state, config, progress) {
   const codes = countryCodes(config);
   const values = config?.values || config?.results || {};
@@ -458,11 +514,13 @@ function drawCountryHighlights(state, config, progress) {
     const feature = state.features.byCode.get(code);
     const value = values[code];
     const status = typeof value === "object" ? value.group : value;
-    const tone = typeof value === "string" ? statusColor(value) : index === 0 ? COLORS.accent : COLORS.live;
+    const tone = typeof value === "string"
+      ? statusColor(value)
+      : config?.target?.code === code ? COLORS.coast : index === 0 ? COLORS.accent : COLORS.live;
     const magnitude = typeof value === "object" ? Number(value.value) : Number(value);
     const alpha = Number.isFinite(magnitude) ? 0.18 + Math.abs(magnitude) / valueMax * 0.52 : 0.45;
     drawFeature(state, feature, reveal(progress, index * 0.08, 0.62 + index * 0.08), {
-      stroke: statusColor(status) || tone,
+      stroke: status ? statusColor(status) : tone,
       fill: `${tone}33`,
       alpha,
       dash: status === "unverified" ? [8, 8] : undefined,
@@ -498,7 +556,9 @@ function drawRoutes(state, config, progress, options = {}) {
       color: options.color || lineColor(route),
       width,
       alpha: options.alpha || 0.86,
-      dash: route.status === "blocked" || route.status === "forecast" ? [10, 8] : options.dash,
+      dash: ["blocked", "forecast", "illustrative"].includes(String(route.status || "").toLowerCase())
+        ? [10, 8]
+        : options.dash,
       glow: options.glow !== false,
       particles: options.particles === false
         ? false
@@ -522,7 +582,7 @@ function drawRoutes(state, config, progress, options = {}) {
         label: endpointIndex === 1 || route.points.length === 2 ? entry.name || entry.label : "",
       });
     });
-    if (visible.length && route.label && index === routes.length - 1) {
+    if (visible.length && route.label) {
       placeLabel(state, visible[Math.floor(visible.length / 2)], route.label, lineColor(route), local);
     }
   });
@@ -665,9 +725,12 @@ function renderHighlight(state, definition, config, progress) {
   } else {
     drawCountryHighlights(state, config, progress);
   }
+  if (definition.id === "country-outline" && config?.target?.code) {
+    drawCoastline(state, state.features.byCode.get(String(config.target.code).toUpperCase()), progress, COLORS.coast);
+  }
   if (config?.target) {
     drawTarget(state, config.target, reveal(progress, 0.22, 0.74), {
-      color: COLORS.live,
+      color: definition.id === "country-outline" ? COLORS.coast : COLORS.live,
       label: config.target.name,
       ring: 11,
       bounce: 0.72,
@@ -856,6 +919,7 @@ export function createGlobeNativeAnnotationRenderer({
   width,
   height,
   format,
+  showLabels = true,
   safeRects = [],
 } = {}) {
   if (!canvas || typeof canvas.getContext !== "function") throw new Error("createGlobeNativeAnnotationRenderer requires a canvas element");
@@ -896,6 +960,7 @@ export function createGlobeNativeAnnotationRenderer({
       height: resolvedHeight,
       format: resolvedFormat,
       features: indexedFeatures,
+      showLabels: showLabels !== false,
       labels: [],
       safeRects: reservedRects,
     };

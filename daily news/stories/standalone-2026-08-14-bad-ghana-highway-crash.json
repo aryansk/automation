@@ -1,0 +1,174 @@
+{
+  "eventId": "ghana-accra-highway-crash-2026-08-13",
+  "tone": "bad",
+  "countryCode": "GH",
+  "countryName": "Ghana",
+  "cityName": "Accra",
+  "region": "Greater Accra",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Accident · Ghana",
+  "headline": "Eleven killed in multi-vehicle crash on Ghana highway",
+  "summary": "A seven-vehicle collision at the Ofankor barrier on the Accra–Kumasi road killed 11 people and injured 13 early Thursday morning.",
+  "script": "A multiple-vehicle crash in Ghana's capital has killed at least eleven people. The collision happened at dawn at the Ofankor barrier on the Accra to Kumasi highway, involving seven vehicles including two trucks and a passenger bus. Thirteen people were injured.",
+  "source": "Xinhua · Graphic",
+  "edition": "14 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "ACCRA CRASH · ELEVEN DEAD",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-14/bad-ghana-highway-crash/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-14/bad-ghana-highway-crash/secondary.jpg",
+  "imageAlt": "Crash scene after a multiple-vehicle collision at the Ofankor barrier on the Accra–Kumasi highway, 13 Aug 2026.",
+  "imageAltTwo": "A vehicle involved in the Ofankor crash, attended by emergency responders.",
+  "imageCredit": "DAILY GRAPHIC",
+  "imageCreditTwo": "GNS · MYJOYONLINE",
+  "imageSourceTwo": "https://www.myjoyonline.com/5-feared-dead-in-early-morning-crash-at-ofankor-barrier/",
+  "narrationAudio": "assets/narration/standalone-2026-08-14-bad-ghana-highway-crash.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "Ofankor Barrier",
+      "detail": "Accra–Kumasi Highway · Ghana"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Collision / scale",
+      "value": "Seven vehicles",
+      "detail": "Trucks, buses and cars"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Casualties / confirmed",
+      "value": "11 dead",
+      "detail": "13 injured in hospital",
+      "kind": "stat"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Response / rescue",
+      "value": "Emergency crews",
+      "detail": "Fire service at the scene"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Aftermath / traffic",
+      "value": "Highway congested",
+      "detail": "Morning rush hour disrupted"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Eleven killed in a",
+        "highway crash."
+      ],
+      "highlights": [
+        "Eleven killed"
+      ]
+    },
+    {
+      "lines": [
+        "Seven vehicles,",
+        "13 injured."
+      ],
+      "highlights": [
+        "Seven vehicles"
+      ]
+    },
+    {
+      "lines": [
+        "At the Ofankor barrier,",
+        "Accra–Kumasi road."
+      ],
+      "highlights": [
+        "Ofankor barrier"
+      ]
+    },
+    {
+      "lines": [
+        "Emergency crews",
+        "at the scene."
+      ],
+      "highlights": [
+        "Emergency crews"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Xinhua",
+      "title": "At least 11 killed, 13 injured in multiple-motor crash in Ghanaian capital",
+      "url": "http://www.news.cn/english/20260813/1a7577468f1142e08da2cee34f9b990f/c.html",
+      "published": "2026-08-13",
+      "usedFor": [
+        "11 killed, 13 injured",
+        "multiple-vehicle crash",
+        "Ofankor barrier"
+      ]
+    },
+    {
+      "publisher": "The Herald Ghana",
+      "title": "11 killed, 13 injured in multi-vehicle crash on Ofankor-Pokuase Highway",
+      "url": "https://theheraldghana.com/11-killed-13-injured-in-multi-vehicle-crash-on-ofankor-pokuase-highway/",
+      "published": "2026-08-13",
+      "usedFor": [
+        "crash at 4:00 a.m. Thursday",
+        "24 people involved",
+        "two trucks and passenger vehicles"
+      ]
+    },
+    {
+      "publisher": "Daily Graphic",
+      "title": "Accra: Multiple vehicle crash at Ofankor barrier, 11 dead",
+      "url": "https://www.graphic.com.gh/news/general-news/accra-multiple-vehicle-collision-at-ofankor-barrier-about-5-dead-heavy-morning-traffic-congestion-being-experienced-in-that-area.html",
+      "published": "2026-08-13",
+      "usedFor": [
+        "crash photos and scene detail",
+        "morning traffic disruption"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Breaking standalone — deadly multiple-vehicle crash with verified wire and local reporting from Xinhua, Herald Ghana and Daily Graphic.",
+    "researchDate": "14 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Daily Graphic and GNFS images used with credit banners.",
+    "generated": false
+  }
+}

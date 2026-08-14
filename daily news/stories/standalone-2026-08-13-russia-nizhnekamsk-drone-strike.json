@@ -1,0 +1,168 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "russia-nizhnekamsk-drone-strike-2026-08-10",
+  "tone": "bad",
+  "statWords": "thirteen",
+  "countryCode": "RU",
+  "countryName": "Russia",
+  "cityName": "Nizhnekamsk",
+  "region": "Tatarstan",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Deep inside Russia",
+  "headline": "Ukrainian drone strike kills 13 deep inside Russia",
+  "summary": "Drones hit the Tatarstan oil hub about 1,200 km from the border, killing 13 people including a child; a hostel blast killed nine, local officials said.",
+  "script": "Ukrainian drones struck Nizhnekamsk, deep in Russia's Tatarstan region. Officials said thirteen people were killed, including a child. One drone hit a hostel, killing nine. The attack targeted an oil refinery more than one thousand kilometres from Ukraine.",
+  "source": "BBC News",
+  "openingHook": "DRONES HIT DEEP INSIDE RUSSIA",
+  "imageOne": "assets/stories/2026-08-13/bad-nizhnekamsk-drone/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/bad-nizhnekamsk-drone/secondary.jpg",
+  "imageAlt": "A refining and petrochemical plant in Nizhnekamsk, stock photo.",
+  "imageAltTwo": "Long-range attacks have driven up civilian casualties in Russia and Ukraine, UN figures show.",
+  "imageCredit": "GETTY IMAGES / BBC",
+  "imageCreditTwo": "DW NEWS",
+  "imageSourceTwo": "https://www.dw.com/en/ukraine-war-russia-drone-strikes/a-71911234",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-russia-nizhnekamsk-drone-strike.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Nizhnekamsk",
+      "detail": "Tatarstan · Russia"
+    },
+    {
+      "start": 2.5,
+      "end": 4.4,
+      "eyebrow": "Field image / context",
+      "value": "Oil hub",
+      "detail": "1,200 km from the border"
+    },
+    {
+      "start": 6.12,
+      "end": 8.52,
+      "eyebrow": "Killed / officials",
+      "value": "13",
+      "detail": "Including a child",
+      "kind": "stat"
+    },
+    {
+      "start": 6.5,
+      "end": 8.4,
+      "eyebrow": "Wounded",
+      "value": "75",
+      "detail": "In the overnight attack"
+    },
+    {
+      "start": 8.5,
+      "end": 10.4,
+      "eyebrow": "Target / refinery",
+      "value": "Tanevo plant",
+      "detail": "Oil refinery struck"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Drones hit deep",
+        "inside Russia."
+      ],
+      "highlights": [
+        "Drones hit deep",
+        "inside Russia"
+      ]
+    },
+    {
+      "lines": [
+        "Thirteen people",
+        "killed."
+      ],
+      "highlights": [
+        "Thirteen people",
+        "killed"
+      ]
+    },
+    {
+      "lines": [
+        "A hostel blast",
+        "killed nine."
+      ],
+      "highlights": [
+        "A hostel blast",
+        "killed nine"
+      ]
+    },
+    {
+      "lines": [
+        "Target: an",
+        "oil refinery."
+      ],
+      "highlights": [
+        "Target: an",
+        "oil refinery"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "At least 13 killed in Ukrainian drone strike deep into Russia",
+      "url": "https://www.bbc.com/news/articles/cvgjvgv926po",
+      "published": "2026-08-10",
+      "usedFor": [
+        "13 dead incl. child, 75 injured",
+        "Tanevo refinery hit, ~1,100 km from border",
+        "7 Uzbek citizens killed"
+      ]
+    },
+    {
+      "publisher": "Associated Press",
+      "title": "Ukrainian attack on Russian oil hub kills 13, authorities say",
+      "url": "https://apnews.com/article/russia-ukraine-war-drones-oil-d0e7dc74936cf153e8e473444cc09366",
+      "published": "2026-08-10",
+      "usedFor": [
+        "13 killed, 78 injured",
+        "Nizhnekamsk 1,200 km east of border",
+        "hostel killed 9 of 13"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

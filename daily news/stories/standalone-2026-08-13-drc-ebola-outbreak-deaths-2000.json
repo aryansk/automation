@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "drc-ebola-outbreak-deaths-2000-2026-08-11",
+  "tone": "bad",
+  "countryCode": "CD",
+  "countryName": "Democratic Republic of the Congo",
+  "cityName": "Bunia",
+  "region": "Ituri province",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Ebola · DR Congo",
+  "headline": "DR Congo Ebola outbreak tops 2,000 deaths, 4,000 cases",
+  "summary": "UN officials say half of the deaths came in the past 20 days, and more than 4,000 confirmed cases make this the fastest-spreading Ebola outbreak on record.",
+  "script": "Ebola deaths in the Democratic Republic of Congo have surpassed two thousand, United Nations officials said, with half occurring in the last twenty days. With more than four thousand confirmed cases, it is the fastest-spreading outbreak on record.",
+  "source": "UN News",
+  "openingHook": "EBOLA: DEATHS TOP 2,000 IN DR CONGO",
+  "imageOne": "assets/stories/2026-08-13/bad-drc-ebola/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/bad-drc-ebola/secondary.jpg",
+  "imageAlt": "Motorcycle taxi operators join an Ebola awareness caravan in Beni, North Kivu province, DR Congo, 5 Aug 2026.",
+  "imageAltTwo": "Passengers arriving in Kinshasa are screened as part of Ebola prevention efforts.",
+  "imageCredit": "REUTERS / GRADEL MUYISA MUMBERE",
+  "imageCreditTwo": "IOM",
+  "imageSourceTwo": "https://news.un.org/en/story/2026/08/1168117",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-drc-ebola-outbreak-deaths-2000.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Ituri province",
+      "detail": "Eastern DR Congo"
+    },
+    {
+      "start": 2.55,
+      "end": 4.45,
+      "eyebrow": "Field image / context",
+      "value": "Awareness campaigns",
+      "detail": "Beni, North Kivu"
+    },
+    {
+      "start": 4.6,
+      "end": 6.5,
+      "eyebrow": "Deaths / confirmed",
+      "value": "2,000+",
+      "detail": "Half in the last 20 days",
+      "kind": "stat"
+    },
+    {
+      "start": 6.65,
+      "end": 8.55,
+      "eyebrow": "Cases / confirmed",
+      "value": "4,000+",
+      "detail": "Fastest-spreading outbreak on record"
+    },
+    {
+      "start": 8.7,
+      "end": 10.6,
+      "eyebrow": "Crisis / response",
+      "value": "Health zones hit",
+      "detail": "53 zones, five provinces"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Ebola deaths pass",
+        "2,000 in DR Congo."
+      ],
+      "highlights": [
+        "Ebola deaths pass",
+        "2,000 in DR Congo"
+      ]
+    },
+    {
+      "lines": [
+        "Half in the",
+        "last 20 days."
+      ],
+      "highlights": [
+        "Half in the",
+        "last 20 days"
+      ]
+    },
+    {
+      "lines": [
+        "More than 4,000",
+        "confirmed cases."
+      ],
+      "highlights": [
+        "More than 4,000",
+        "confirmed cases"
+      ]
+    },
+    {
+      "lines": [
+        "The fastest-spreading",
+        "outbreak on record."
+      ],
+      "highlights": [
+        "The fastest-spreading",
+        "outbreak on record"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "UN News",
+      "title": "Ebola deaths top 2,000 as scientists race to develop vaccine",
+      "url": "https://news.un.org/en/story/2026/08/1168117",
+      "published": "2026-08-11",
+      "usedFor": [
+        "deaths surpassed 2,000, half in last 20 days",
+        "more than 4,000 confirmed cases",
+        "fastest-spreading outbreak on record"
+      ]
+    },
+    {
+      "publisher": "Al Jazeera",
+      "title": "Ebola cases top 4,000 in DRC as WHO urges Ervebo vaccine trial",
+      "url": "https://www.aljazeera.com/news/2026/8/7/ebola-cases-top-4000-in-drc-as-who-urges-ervebo-vaccine-trial",
+      "published": "2026-08-07",
+      "usedFor": [
+        "4,053 confirmed cases",
+        "87% of cases in Ituri",
+        "second-largest outbreak on record"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

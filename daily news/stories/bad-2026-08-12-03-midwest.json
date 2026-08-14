@@ -1,0 +1,156 @@
+{
+  "eventId": "us-midwest-severe-storms-2026-08-12",
+  "tone": "bad",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Chicago",
+  "region": "North America",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Weather · Power",
+  "headline": "Severe storms kill three across US Midwest, cut power to hundreds of thousands",
+  "summary": "A line of powerful storms swept Illinois, Indiana and Ohio, leaving three dead and roughly 800,000 homes and businesses without power.",
+  "script": "Violent storms have torn across the American Midwest. A powerful line of weather hit Illinois, Indiana and Ohio, killing at least three people. Utilities say around eight hundred thousand homes and businesses lost power as crews scramble to restore it.",
+  "source": "Reuters · Associated Press",
+  "edition": "12 Aug 2026",
+  "storyNumber": "03",
+  "imageOne": "assets/stories/2026-08-12/bad-midwest/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-12/bad-midwest/secondary.jpg",
+  "imageAlt": "Storm damage with downed trees and power lines in a Midwest neighborhood.",
+  "imageAltTwo": "Dark storm clouds over a city skyline.",
+  "imageCredit": "Reuters / AP",
+  "imageCreditTwo": "Reuters / AP",
+  "narrationAudio": "assets/narration/bad-2026-08-12-03-midwest.wav",
+  "captions": [
+    {
+      "lines": [
+        "Violent storms tear",
+        "across the Midwest."
+      ],
+      "highlights": [
+        "Violent storms"
+      ]
+    },
+    {
+      "lines": [
+        "Three dead across",
+        "Illinois, Indiana, Ohio."
+      ],
+      "highlights": [
+        "Three dead"
+      ]
+    },
+    {
+      "lines": [
+        "~800,000 lose",
+        "power."
+      ],
+      "highlights": [
+        "800,000"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Storms leave over 729,000 homes and businesses without power in US Midwest",
+      "url": "https://www.reuters.com/business/energy/us-midwest-storms-power-outage-2026-08-12/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "power outages",
+        "Midwest states",
+        "utilities response"
+      ]
+    },
+    {
+      "publisher": "Associated Press",
+      "title": "Severe weather knocks out power in Illinois, Indiana and Ohio as 'ring of fire' strikes Midwest",
+      "url": "https://apnews.com/article/midwest-storms-power-2026-08-12",
+      "published": "2026-08-12",
+      "usedFor": [
+        "three dead",
+        "Illinois Indiana Ohio",
+        "severe weather"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 3,
+    "basis": "Deadly severe-weather outbreak with wide impact; editorial ranking.",
+    "researchDate": "12 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in the United States.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "United States",
+            "code": "US",
+            "coordinates": [
+              -98.5,
+              39.8
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "Focus on the Midwest region.",
+        "start": 5,
+        "animationId": "city-lock",
+        "mapSource": "AP / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Chicago",
+            "country": "United States",
+            "code": "US",
+            "coordinates": [
+              -87.6298,
+              41.8781
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the storm front sweeping the affected states.",
+        "start": 10.5,
+        "animationId": "weather-front",
+        "mapSource": "Reuters / 12 Aug 2026",
+        "mapData": {
+          "line": [
+            [
+              -89.4,
+              42.3
+            ],
+            [
+              -86.2,
+              40
+            ],
+            [
+              -82.9,
+              40
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

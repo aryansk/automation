@@ -8,6 +8,7 @@ import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, isAbsolute, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
+import { hyperframesPin } from "./hyperframes-version.mjs";
 import { normalizeGlobeMapPlan } from "../assets/animations/globe-map-plan.js";
 import { resolveMapPlanForScene } from "../assets/animations/globe-map-runtime.js";
 
@@ -128,7 +129,7 @@ const quality = option("quality", "high");
 const fps = option("fps", "30");
 const renderArgs = [
   "--yes",
-  "hyperframes@0.7.88",
+  hyperframesPin(),
   "render",
   ".",
   "--composition",

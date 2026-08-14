@@ -31,6 +31,8 @@ purposes:
 | `REVIEW_AUDIT.md` | Human and automated PR-comment audit across every authored PR state | Append each batch's scan, action, reply URL, and unresolved blocker |
 | `NOTION_DASHBOARD.md` | Notion per-PR tracker, daily submission chart, and daily merge chart contract | Sync submissions once after the complete five-PR packet; sync merge dates and daily merge counts whenever a canonical merge is verified |
 | `OUTCOME_LEARNING.md` | Evidence-based selection rules from merged, open, closed, and commented PRs | Recalculate after each complete packet or weekly; never use it to override live repository policy |
+| `LANE_STATE.json` | Current sequential packet state, reserve pool, lane statuses, and timestamps | Update through `scripts/lane_state.py`; never treat a stale reserve entry as current eligibility |
+| `scripts/lane_state.py` | Small local state-machine guard for one active lane and canonical publication counting | Verify before and after every lane transition; live GitHub remains authoritative |
 
 ### New-thread startup
 
@@ -40,7 +42,9 @@ purposes:
    repository's own instructions.
 3. Verify that the active queue item, branch, issue, PR, and external state are
    still current. Treat stale notes as leads, not facts.
-4. Mark the selected queue item `IN PROGRESS` and record the thread's exact
+4. Verify `LANE_STATE.json` with `python3 scripts/lane_state.py --state
+   LANE_STATE.json verify`, then select at most one reserve lane for fresh
+   preflight. Mark that queue item `IN PROGRESS` and record the thread's exact
    scope in `STATUS.md` before making changes.
 
 ### Handoff and recovery
@@ -234,34 +238,101 @@ past merges as a guarantee.
   lanes for dashboard work. If the batch closeout sync fails, leave the task
   visibly blocked rather than claiming the dashboard is current.
 
-## Contribution loop
+## Sequential five-PR publication loop (mandatory)
 
-0. Read `OUTCOME_LEARNING.md`, audit current PR outcomes/comments, and score
-   the candidate against the hard gates before reserving it.
-1. Select one issue or a clearly reproducible problem.
-2. Confirm that the issue is still open and not already claimed or implemented.
-3. Reproduce it on the current supported branch.
-4. Comment with the intended scope when the project expects issue-first work.
-5. Create a focused branch following the upstream convention.
-6. Implement the smallest complete fix and meaningful regression coverage.
-7. Run the project's required checks and capture the commands/results.
-8. Prepare the PR using `templates/PR_DESCRIPTION.md`.
-9. Verify the canonical PR URL, author, base, head, draft state, and checks.
-10. After all five packet lanes have been verified, synchronize
-    `NOTION_DASHBOARD.md`: create or update one deduplicated row per canonical
-    PR, recompute the Submitted-per-day aggregate once, and verify the chart
-    view includes the complete batch.
-11. Append the batch result to `WORK_LOG.md`, update `STATUS.md` and
-    `WORK_QUEUE.md`, and keep open/draft work out of the merged count.
-12. Respond to reviewer feedback and keep the PR focused.
-13. Run the all-authored-PR-state review/comment audit and complete or record every
-    actionable human thread before handing the batch back.
-14. After merge, complete `templates/POST_MERGE_RECORD.md`, update the
+The target is five valid, canonical, open upstream draft PRs, not five issues
+researched or five local commits prepared. Never select five implementation
+lanes up front. Work one lane from `RESERVE` through `PUBLISHED`, then perform
+the next lane. A review request or maintainer response takes priority over
+fresh discovery; return to this loop only after the review action is answered
+or explicitly blocked.
+
+Use `LANE_STATE.json` and `scripts/lane_state.py` as the lightweight local
+state machine. The allowed operational statuses are:
+
+`RESERVE -> PREFLIGHTING -> CLAIMED -> IMPLEMENTING -> VALIDATING ->
+FINAL_PREFLIGHT -> PUBLISHED`, with `ABANDONED_STALE` or `BLOCKED` exits.
+`CLOSED_DUPLICATE` records a publication that later became invalid and
+decrements the valid-published total. Record `initial_preflight_at`,
+`claim_or_work_start_at`, `final_preflight_at`, and `published_at` when those
+events occur. Only one lane may be outside `RESERVE`, `PUBLISHED`,
+`ABANDONED_STALE`, `BLOCKED`, or `CLOSED_DUPLICATE` at a time.
+
+A reserve pool of roughly 8–10 lightweight leads is allowed to keep discovery
+efficient, but reserve entries are only leads. Do not implement, branch, or
+claim them until the selected lane receives a fresh live preflight. Candidate
+eligibility expires as soon as the issue, PR list, assignment, maintainer
+policy, or base branch changes; there is no 20-minute validity window.
+
+Before implementation, transition the selected lane to `PREFLIGHTING` and
+recheck the canonical issue and repository live. The preflight must establish:
+
+- the issue is open, unassigned or legitimately available, and has no claim
+  comment or active overlapping PR;
+- no recent unlinked PR already implements the same change, including work in
+  the current packet;
+- the contribution policy, assignment/CLA/DCO/AI-assistance and identity gates
+  permit the intended action;
+- the scope is bounded, issue-backed, reproducible, and has a concrete local
+  validation path; and
+- the candidate is not being chosen merely because a packet slot is empty or
+  because the same repository is currently concentrated in the batch.
+
+Where repository norms permit it, claim or signal intent immediately after
+this preflight and record the exact comment or assignment URL. Then implement
+only that lane. If the issue is stale, claimed, duplicated, closed, policy
+blocked, or no longer bounded, transition it to `ABANDONED_STALE` or `BLOCKED`
+with the reason and automatically take the next reserve candidate; do not
+justify continuing because work has already started.
+
+After local validation, transition to `FINAL_PREFLIGHT` and repeat the live
+issue/PR/policy/overlap checks immediately before pushing or opening the PR.
+If any final check fails, abandon the lane, preserve its evidence, and move to
+the reserve pool. Only after a successful final preflight may the lane be
+pushed and opened as a draft. Verify the canonical URL, author, intended base,
+fork head hash, open/draft state, and any required policy/CI evidence. Then
+transition to `PUBLISHED` with `--verified`; the script counts it only when
+those canonical fields and the publication timestamp are present.
+
+If a PR is closed, superseded, or found to be a duplicate after publication,
+record `CLOSED_DUPLICATE` or `ABANDONED_STALE` with the canonical evidence and
+replace it while the run is active when a reserve candidate can pass both fresh
+preflights. Do not count a closed or invalid PR, and do not ask for permission
+to use an obvious reserve replacement unless a real ambiguity or blocker
+requires a decision. Stop after five `PUBLISHED` lanes, then run the review
+cursor audit and the single Notion closeout for those five canonical rows.
+
+## Detailed contribution checklist for the current sequential lane
+
+0. Select one `RESERVE` lane and run the mandatory live preflight before
+   creating a branch or implementing anything.
+1. Record the initial preflight timestamp and exact issue/PR/policy evidence in
+   `templates/ISSUE_TRIAGE.md`.
+2. Claim or signal intent when the repository permits it, then record the
+   claim/work-start timestamp and URL.
+3. Reproduce the issue on the current supported branch.
+4. Create a focused branch and implement the smallest complete fix with
+   meaningful regression coverage.
+5. Run the repository's required checks and capture commands/results.
+6. Transition through `VALIDATING` to `FINAL_PREFLIGHT`; repeat the live
+   overlap, issue, policy, base, and assignment checks immediately before
+   publication.
+7. Prepare the draft using `templates/PR_DESCRIPTION.md`, push only reviewed
+   paths, and verify the canonical URL, author, intended base, fork head, open
+   state, and required checks.
+8. Mark the lane `PUBLISHED` only through the verified state transition. If
+   the final preflight fails, mark it stale/blocked and use the next reserve
+   lane automatically.
+9. Update `STATUS.md`, `WORK_QUEUE.md`, and append `WORK_LOG.md` after each
+   lane; do not wait until five unrelated lanes are simultaneously in flight.
+10. Prioritize reviewer feedback and maintainer requests before fresh issue
+    discovery. After five valid `PUBLISHED` lanes, run the review audit and
+    the one deduplicated Notion closeout.
+11. After merge, complete `templates/POST_MERGE_RECORD.md`, update the
     per-PR tracker row, update the daily `PRs Merged` activity row, and update
     both local trackers.
-15. At packet closeout, append the outcome, closure reason, maintainer signal,
-    and selection lesson to `OUTCOME_LEARNING.md`; distinguish policy or
-    duplicate closures from implementation failures.
+12. At packet closeout, append outcome, closure reason, maintainer signal, and
+    selection lesson to `OUTCOME_LEARNING.md`.
 
 ## Evidence commands
 

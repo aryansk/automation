@@ -75,6 +75,17 @@ does not override a maintainer policy or guarantee a merge. If five candidates
 do not pass, stop at the smaller set and keep researching rather than padding
 the packet.
 
+### Eligibility is ephemeral
+
+The score is appropriate for a reserve lead, not a durable implementation
+permission. Before implementation and immediately before publication, repeat
+the live issue, assignment, competing-PR, repository-policy, base-branch, and
+validation checks. The pytest #14864 replacement in the 2026-08-12 packet
+illustrated the failure mode: the issue/PR became a duplicate of #14865 while
+the work was being prepared, so it was closed and excluded rather than counted.
+Future runs should mark that lane stale or duplicate and automatically take a
+reserve replacement without defending sunk cost.
+
 ## Packet composition
 
 - At least three candidates should come from the high-impact portfolio.
@@ -269,6 +280,30 @@ This packet is a 3-PR honest packet. The selection lessons:
   missing connector. Keep the queue in monitor/review mode; do not pad a packet
   to five when fewer strong lanes clear the gate.
 
+## 2026-08-13 OPS-027 observation
+
+- **Fresh preflight prevents duplicate work.** Airflow #71497 was abandoned
+  before implementation because upstream `main` already contained the proposed
+  Decimal normalization and coverage. The stale lane was replaced by a live,
+  scoped fsspec move-hook issue instead of publishing a duplicate.
+- **Sync/async counterpart checks matter.** fsspec #2099 was a valid sync
+  counterpart even though the async `_mv_file` hook already exists. The
+  maintainer question was answered with repository evidence before any further
+  code change.
+- **UI fixtures must be checked against neighboring lints.** rust-clippy's
+  first hosted run exposed an existing `eq_op` diagnostic in the negative
+  fixture, plus a formatting failure. The fixture was corrected and the
+  hosted run restarted at `6d40561`; a locally missing `rustc-dev` toolchain is
+  a validation limitation, not evidence that the patch is correct.
+- **Separate code failures from repository/infrastructure failures.** The
+  jupyter-server hosted matrix had broad segmentation, HTTP 500, and label-gate
+  failures while its focused 38-test utility suite and Ruff run passed. Record
+  those states separately and wait for maintainer direction rather than making
+  speculative changes.
+- The five drafts add submitted work without changing the qualifying merged
+  count (still 35). Keep them in monitor/review mode, count none until canonical
+  merge, and leave the Notion batch blocked until a connector is available.
+
 ## 2026-08-11 EXT-153 through EXT-156 observation
 
 This packet published three drafts and hit one repository gate. The lessons:
@@ -297,3 +332,166 @@ This packet published three drafts and hit one repository gate. The lessons:
   unclaimed bug in major Python repos; every candidate had a claimant,
   competing PR, policy gate, or missing toolchain. Honest packets of 3-4 are
   the norm; padding is against the rules.
+
+## 2026-08-13 OPS-028 observation
+
+- **Maintainer-authored issues remain the strongest demand signal.** dataprof
+  #559 and #553 were both authored by Andrea, whose repo has a constructive
+  history with two prior merges; marginalia #17/#18 were authored by the
+  maintainer with detailed proposals. All five lanes cleared preflight without
+  competition.
+- **A repo's AGENTS.md is a green light, not just a blocker.** dataprof's
+  AGENTS.md explicitly instructs AI agents (branch naming, conventional
+  commits, no AI attribution trailers) and its contributor loop produced two
+  merges. Reading the policy early saved discovery time and shaped the PRs.
+- **Cross-file plumbing needs its own regression layer.** marginalia #18's
+  triplet threading touched parser, payload, client, background port,
+  ask-service, ask-flow, thread-controller, and panel-global. Each layer kept
+  its contract testable; the full suite went from 981 to 988 tests with zero
+  regressions.
+- **Preflight competition checks caught a duplicate before work.** Grafana
+  #130611 looked clean on the issue but PR #130619 (opened hours earlier)
+  already implemented it; the lane was abandoned before any checkout instead of
+  after sunk cost.
+- All five drafts are open/unmerged and therefore uncounted; the qualifying
+  external merged total remains 35. Keep the queue in monitor/review mode and
+  prefer fresh maintainer-authored issues in repos with proven constructive
+  histories.
+
+## 2026-08-13 OPS-029 observation
+
+- **Maintainer invitations beat discovery.** dataprof #546 came with an explicit
+  "@aryansk this one is a natural follow-up to your #535" comment; it became the
+  fifth lane after the reserve pool emptied, and every other lane in the packet
+  was also maintainer-authored. Four of the five lanes are dataprof, which is
+  justified by a proven constructive history (two prior merges, an active
+  maintainer, an AGENTS.md that instructs agents) rather than volume-seeking.
+- **Mechanical fixes still need semantic care.** #550 (14 error sites) and #546
+  (22 map sites) were both "mechanical", but each had a semantic decision: which
+  remedy fits each failure cause, and whether BTreeMap's alphabetical order
+  beats IndexMap's insertion order (the repo's existing BTreeMap precedent
+  decided it without a new dependency).
+- **Schema changes need the whole surface.** #548 added a source type, which
+  touched the Rust enum, the Python getter, the runtime schema document, the
+  published JSON schema, the pyi stub, the dispatch, and two tests. Missing any
+  one would leave the published contract inconsistent.
+- All five drafts are open/unmerged and therefore uncounted; the qualifying
+  external merged total remains 35. Keep the queue in monitor/review mode and
+  prefer maintainer-authored or maintainer-invited issues in proven repos.
+
+## 2026-08-13 OPS-030 observation
+
+- **Leak reproductions with a hard failure mode are the strongest bug lanes.**
+  grafana #130649 came with a complete root-cause chain (writer short-write →
+  pgzip skip-close → orphaned goroutine), a reproducer, and measured blast
+  radius (a node going NotReady). The regression test first proved +100
+  goroutines on unfixed code, then flat counts with the fix — the issue's own
+  verification method.
+- **CI-skip defects need fork-level evidence.** xarray #11517 documented six
+  months of silent skips with run IDs, a root-cause commit, and fork runs
+  showing the two-line fix executing the suite. Copying an already-merged fix
+  pattern (#11184) to its sibling workflow is low-risk and high-value.
+- **Per-panel listener leaks share one guard shape.** The two jupyterlab lanes
+  (#19267, #19268) were the same defect class in two packages; each used a
+  one-pass guard (WeakSet in the extension, stored slot in the widget) and a
+  package build with zero TypeScript errors as the local validation anchor.
+- **Fresh-issue space continues to saturate.** grpc-go #9313, helm #32532,
+  prometheus #19395/#19397, black #5307, pylint #11267, and mypy #21841 all
+  had claimant PRs within hours of filing. Honest packets stay viable only by
+  checking competition first and dropping claimed lanes before any work.
+- All five drafts are open/unmerged and therefore uncounted; the qualifying
+  external merged total remains 35. Keep the queue in monitor/review mode.
+
+## 2026-08-14 OPS-033 observation
+
+- **Maintainer review requests are the strongest lanes.** The GCode #45
+  follow-up existed only because the #43/#44 reviews asked for CHANGELOG
+  entries and a demo snapshot; it merged into a repo with an extremely
+  constructive loop (three merges the same day). Promising follow-up work in
+  a committed reply is a real obligation — deliver it in the same session.
+- **Merge reconciliation belongs before fresh discovery.** Three OPS-032 lanes
+  (GCode #43/#44, StudyMap #132) merged while the packet sat open; reconciling
+  them and replying to the review threads (GCode #43 inline nit, #44 docs
+  items, StudyMap Vercel bot) before picking new lanes is exactly the
+  required priority order.
+- **Verify issue dependencies at preflight.** StudyMap #120 explicitly said
+  "Depends on #127" (city pages); #127 was not built, and the only place
+  surface is the server-rendered map page with no server-side per-place URL.
+  The lane was BLOCKED before any code — the acceptance criteria were not
+  implementable as specified. Also triaged out: marginalia #18 was already
+  covered by our own draft #21, railtracks #1397 has a competing PR #1396, and
+  xarray #11518 has the reporter's own PR #11521.
+- **CI-hardening issues with precise deltas merge well.** jayqi #131 and
+  scout-issue #9 both shipped as small, verifiable workflow changes (least-
+  privilege permissions + SHA pins / gitleaks). The live state had drifted
+  from the issue text, so documenting the actual delta in the PR body was
+  important.
+- **Security-scrub code needs honest heuristics.** The intent-drift-skill #26
+  scrub masks known token prefixes, Authorization/Bearer, secret-key
+  assignments, long `key=` values, and base64 blobs (only those with `+/` or
+  `=` padding, so SHAs survive). Length/character gating prevents the classic
+  false positives (`"key": "value"`, hex SHAs) that would have broken the PR.
+- All five drafts are open/unmerged and therefore uncounted; the qualifying
+  external merged total is 40. Keep the drafts in monitor/review mode and the
+  Notion batch blocked until a connector is available.
+- **Duplicates hide inside "fresh" issue lists — check the tracker first.**
+  OPS-034 opened with jayqi #134, which turned out to be our own EXT-203 from
+  OPS-032 (PR #177), and intent-drift-skill #23, which the maintainer had
+  already implemented via merged PR #29 while leaving the issue open. Both
+  were caught at preflight and abandoned without duplicating. The cheapest
+  gate: grep the issue number against PR_TRACKER/WORK_QUEUE before reserving.
+- **Large-repo saturation now extends to the mid-tier.** StudyMap #127 (a
+  maintainer-authored "help wanted" feature) and scout-issue #10/#11 were the
+  strongest lanes; the maintainer-recommended repos keep producing precise,
+  verifiable work while big-repo issue space stays claimed or bot-clogged.
+- **Unicode route segments need an explicit decode.** Next 16/Turbopack passes
+  the still-encoded segment (e.g. `%E5%8E%A6%E9%97%A8`) to a `[slug]` page for
+  non-ASCII values; matching dataset slugs against it silently 404s. Decode
+  with `decodeURIComponent` (guarded) before comparing, and keep Unicode
+  letters in slugify (regex `\p{L}`) so no city collapses to an empty slug.
+- **"Already implemented, issue left open" is a real failure mode.** Both
+  duplicates this packet were issues whose requested work existed on `main`
+  but whose issues were never closed. Preflight must diff the issue's
+  suggested fix against current `main`, not just against open PRs.
+
+## OPS-035 outcome (2026-08-14)
+
+- **Tracker-first discovery works.** Every candidate in this packet passed the
+  duplicate gate against PR_TRACKER + WORK_QUEUE; zero lanes abandoned — the
+  first clean packet since OPS-031. The preflight `gh search prs` re-check
+  remains non-negotiable, but the tracker gate eliminates most rediscovery.
+- **"Partially implemented upstream" is a common false-negative.** StudyMap
+  #118 (deep links) looked unimplemented but `place`/`city`/`types` URL params
+  already existed; the real gap was viewport mirroring. Read the live code
+  (not just the issue) before scoping a lane; split "what the issue asks for"
+  from "what already exists" and deliver the delta.
+- **Maintainer duplicate-closes are a normal, non-defect outcome.** pandas
+  #66744 was closed with "there is already an open PR for that issue" — the
+  change itself was sound. The correct response is to record and resolve, not
+  to reopen or argue; duplicate scope at submission time is hard to detect
+  without a tracker (now mitigated).
+- **Prod-route smoke beats dev-server smoke in this environment.** Dev servers
+  die between commands here; a `next build` + curl sweep over the production
+  server is more reliable for client-route verification.
+
+## OPS-036 outcome (2026-08-14)
+
+- **The tracker-first gate caught a cross-packet duplicate that the live PR
+  search alone would have missed.** jayqi #130 (debug logging) was our own
+  draft #176 from OPS-031; the `gh search prs` sweep surfaced it as a matching
+  open PR but only the tracker revealed it was ours. Checking PR authors
+  against our known draft list before abandoning/committing is now mandatory.
+- **"Already implemented upstream" can arrive mid-lane.** GCode's main advanced
+  while we were working (our own #46 merged), forcing a rebase with a tools.py
+  conflict. The fix pattern — rebuild from origin/main, keep both parties'
+  additions, force-push the same branch name — kept the PR thread and review
+  history intact, and the maintainer's review comments stayed attached.
+- **Issue author's suggested fix can be mathematically wrong.** scout-issue
+  #13's own example table summed to 115%, not 100%. Always verify the numbers
+  a proposal asserts before copying them; the corrected tables (verified
+  programmatically) are a stronger contribution than the literal suggestion.
+- **Maintainer slim-down requests are quick wins when acted on immediately.**
+  The GCode owner's three-point feedback (drop redundant CHANGELOG, keep the
+  useful demo change, fix stale premises) was fully actionable in one pass;
+  the PR went from CONFLICTING to MERGEABLE/CLEAN with a single force-push and
+  a description update.

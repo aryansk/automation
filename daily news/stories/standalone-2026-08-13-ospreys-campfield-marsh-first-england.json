@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "ospreys-campfield-marsh-first-england-2026-08-10",
+  "tone": "good",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Cumbria",
+  "region": "England",
+  "urgency": "medium",
+  "storyType": "auto",
+  "kicker": "Osprey return · England",
+  "headline": "First osprey chicks hatch on RSPB reserve in England since Victorian era",
+  "summary": "Ospreys bred at RSPB Campfield Marsh in Cumbria for the first time since Victorian times, with three chicks named by a local school set to migrate to Africa in September.",
+  "script": "Three osprey chicks have hatched at RSPB Campfield Marsh in Cumbria — the first ospreys to breed on an RSPB reserve in England since Victorian times. Named by a local school, the chicks will fledge this month before migrating to Africa.",
+  "source": "BBC News",
+  "openingHook": "OSPREYS RETURN TO ENGLAND'S MARSHES",
+  "imageOne": "assets/stories/2026-08-13/good-ospreys-campfield/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/good-ospreys-campfield/secondary.jpg",
+  "imageAlt": "Ospreys at RSPB Campfield Marsh, Cumbria — the first breeding pair on an RSPB reserve in England since Victorian times.",
+  "imageAltTwo": "Osprey chicks at Campfield Marsh, all ringed so their future movements can be tracked.",
+  "imageCredit": "RSPB / JEFF TEASDALE",
+  "imageCreditTwo": "RSPB VIA BBC NEWS",
+  "imageSourceTwo": "https://www.rspb.org.uk/whats-happening/news/first-ospreys-to-hatch-on-an-rspb-nature-reserve-in-england-since-victorian-times",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-ospreys-campfield-marsh-first-england.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Cumbria",
+      "detail": "England · Solway coast"
+    },
+    {
+      "start": 2.55,
+      "end": 4.45,
+      "eyebrow": "Field image / context",
+      "value": "Campfield Marsh",
+      "detail": "RSPB nature reserve"
+    },
+    {
+      "start": 4.6,
+      "end": 6.5,
+      "eyebrow": "Chicks / hatched",
+      "value": "3",
+      "detail": "First since Victorian era",
+      "kind": "stat"
+    },
+    {
+      "start": 6.65,
+      "end": 8.55,
+      "eyebrow": "Ringed / tracked",
+      "value": "Blue 571",
+      "detail": "Breeding male, ringed in 2021"
+    },
+    {
+      "start": 8.7,
+      "end": 10.6,
+      "eyebrow": "Outlook / migration",
+      "value": "Africa-bound",
+      "detail": "Fledge in August, fly south in September"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Three osprey chicks",
+        "hatched in Cumbria."
+      ],
+      "highlights": [
+        "Three osprey chicks",
+        "hatched in Cumbria"
+      ]
+    },
+    {
+      "lines": [
+        "First on an RSPB reserve",
+        "since Victorian times."
+      ],
+      "highlights": [
+        "First on an RSPB reserve",
+        "since Victorian times"
+      ]
+    },
+    {
+      "lines": [
+        "Named by a",
+        "local school."
+      ],
+      "highlights": [
+        "Named by a",
+        "local school"
+      ]
+    },
+    {
+      "lines": [
+        "Off to Africa",
+        "this autumn."
+      ],
+      "highlights": [
+        "Off to Africa",
+        "this autumn"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Osprey chicks hatch at RSPB's Campfield Marsh for first time",
+      "url": "https://www.bbc.co.uk/news/articles/c62e6n1607qo",
+      "published": "2026-08-10",
+      "usedFor": [
+        "first ospreys breeding on an RSPB reserve in England",
+        "three chicks, named by local primary school",
+        "fledge in August, migrate to Africa from September"
+      ]
+    },
+    {
+      "publisher": "RSPB",
+      "title": "First Ospreys to hatch on an RSPB nature reserve in England since Victorian times",
+      "url": "https://www.rspb.org.uk/whats-happening/news/first-ospreys-to-hatch-on-an-rspb-nature-reserve-in-england-since-victorian-times",
+      "published": "2026-08-10",
+      "usedFor": [
+        "first since Victorian period",
+        "chicks hatched 7-14 June, ringed in July",
+        "male Blue 571"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

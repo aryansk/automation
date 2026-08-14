@@ -11,6 +11,7 @@ import {
 } from "node:fs";
 import { dirname, extname, isAbsolute, join, parse, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { hyperframesPin } from "./hyperframes-version.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const workspaceRoot = resolve(projectRoot, "..");
@@ -81,7 +82,7 @@ if (provider === "kokoro") {
   const kokoroVoice = voice || "af_heart";
   const commandArgs = [
     "--yes",
-    "hyperframes@0.7.85",
+    hyperframesPin(),
     "tts",
     textPath,
     "--output",

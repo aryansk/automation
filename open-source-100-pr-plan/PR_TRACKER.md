@@ -3,14 +3,20 @@
 Only merged PRs against repositories Aryan does not own belong in this table.
 Do not fill future rows in advance. One row represents one actual merged PR.
 
+Open submissions remain in the queue and dated reconciliation notes until a
+canonical upstream PR is verified. Under the sequential workflow, an open
+draft enters those notes only after the final live preflight and exact
+base/head verification; a stale, closed, or duplicate lane stays evidence and
+does not become a submission or merged-count row.
+
 ## Summary
 
 | Metric | Value | Last verified |
 | --- | ---: | --- |
-| Valid merged PRs in rolling 12 months | 35 | 2026-08-11 live verification; one owned PR excluded |
-| Valid merged PRs in current calendar year | 35 | 2026-08-11 live verification; one owned PR excluded |
-| External repositories with merged work | 30 | 2026-08-11 live verification |
-| Human conversation items | 34 | 2026-08-10 all-authored-PR-state comment audit; failed-build-issue-action merge follow-up replied |
+| Valid merged PRs in rolling 12 months | 43 | 2026-08-14 live verification; one owned PR excluded |
+| Valid merged PRs in current calendar year | 43 | 2026-08-14 live verification; one owned PR excluded |
+| External repositories with merged work | 31 | 2026-08-14 live verification |
+| Human conversation items | 38 | 2026-08-14 review delta: GCode #43 inline nit, GCode #44 review, StudyMap #132 Vercel message, and GCode #48 merge reply handled |
 | Releases containing contributed work | 0 | Update when verified |
 
 Open PRs are tracked in the work queue but are deliberately absent from the
@@ -80,6 +86,27 @@ not an open or countable record.
 `c698142848690b0cb1b6b81d81a5fd05f994240f` and published as draft [PR #7692](https://github.com/esengine/DeepSeek-Reasonix/pull/7692)
 against `main-v2`. The fork branch hash matches local and hosted checks are
 pending; it is open but not countable until canonical upstream merge.
+
+## 2026-08-12 OPS-026 submitted drafts
+
+These are submitted reconciliation records, not merged-tracker rows. Each was
+freshly preflighted before implementation and publication, and each canonical
+head was verified after publication.
+
+| Lane | Base repository / issue | Canonical draft PR | Exact head | Validation | State |
+| --- | --- | --- | --- | --- | --- |
+| EXT-168 | [jupyter/nbconvert #1989](https://github.com/jupyter/nbconvert/issues/1989) | [#2303](https://github.com/jupyter/nbconvert/pull/2303) | `0cf6198ab37a86c02e91b3a51e2af73f872619cc` | Markdown exporter focused suite: 5 passed | OPEN/Draft, unmerged/uncounted |
+| EXT-169 | [jupyter/nbclient #346](https://github.com/jupyter/nbclient/issues/346) | [#351](https://github.com/jupyter/nbclient/pull/351) | `444da39d09e7b0e09446a0e06f52ae4a8859d620` | Full test suite: 127 passed | OPEN/Draft, unmerged/uncounted |
+| EXT-171 | [jupyter-server/jupyter-resource-usage #253](https://github.com/jupyter-server/jupyter-resource-usage/issues/253) | [#264](https://github.com/jupyter-server/jupyter-resource-usage/pull/264) | `f41a8d027732566add3d09578330e10997581ea2` | Focused package suite: 1 passed | OPEN/Draft, unmerged/uncounted |
+| EXT-172 | [jupyter/nbgrader #1982](https://github.com/jupyter/nbgrader/issues/1982) | [#2013](https://github.com/jupyter/nbgrader/pull/2013) | `99dc5a243a99e2fe1307384ac94455ee22f3be50` | Focused submission-size suite: 4 passed | OPEN/Draft, unmerged/uncounted |
+| EXT-173 | [jupyter-server/jupyter_server #1661](https://github.com/jupyter-server/jupyter_server/issues/1661) | [#1693](https://github.com/jupyter-server/jupyter_server/pull/1693) | `8d01a932078523d0cdedc8631fd4d07cd7e57f24` | Focused gateway fixture suite: 2 passed | OPEN/Draft, unmerged/uncounted |
+
+The reserve lane jupyter/jupyter_console #305 was abandoned before
+implementation because `%cls` is delegated to IPython's terminal alias and
+Windows behavior; no duplicate branch or PR was created. The review cursor
+advanced to `2026-08-12T14:33:29Z` after recording the post-publication delta.
+Notion rows for these five drafts and the daily submitted aggregate remain
+blocked by the unavailable connector/token.
 
 `swift-server/swift-service-lifecycle#163` is implemented locally at commits
 `cfab3a6` and `893037f` in `/Users/aryansingh/Downloads/Projects/Automation/swift-service-lifecycle-163`
@@ -174,6 +201,14 @@ hosted checks.
 | 33 | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | [#111](https://github.com/virgiliojr94/book-to-skill/issues/111) | [#112](https://github.com/virgiliojr94/book-to-skill/pull/112) | fix(extractor): detect whitespace-separated CJK ToC headers | Bug fix | 2026-08-05 | 2026-08-10 | `e7980f3fc97f8f44dcf61582065fd4c4f8816093` | 267 tests, 1 skipped, Ruff/compileall/diff passed; GitGuardian pending at submission | Canonical merge verified | Yes | Merged 2026-08-10T17:38:57Z at `e7980f3f` |
 | 34 | [midhunkrishna/marginalia](https://github.com/midhunkrishna/marginalia) | [#7](https://github.com/midhunkrishna/marginalia/issues/7) | [#16](https://github.com/midhunkrishna/marginalia/pull/16) | docs: refresh current extension usage guidance | Docs | 2026-08-09 | 2026-08-10 | `7d716eae8409aa8e8e220555cf473ef7edfb61b3` | 931 tests, lint, format, diff passed; maintainer-requested follow-ups in `c270847` | midhunkrishna approved | Yes | Merged 2026-08-10T18:05:11Z at `7d716eae` |
 | 35 | [atomize-lab/citeseal](https://github.com/atomize-lab/citeseal) | [#2](https://github.com/atomize-lab/citeseal/issues/2) | [#17](https://github.com/atomize-lab/citeseal/pull/17) | docs: add consolidated schema reference | Docs | 2026-08-09 | 2026-08-11 | `3826c0026e381dab204bdb12f5d8a79bdec4b96a` | 242 tests, lint, fixture validation 0 errors/0 warnings, schema/docs checks passed | atomize-lab approved | Yes | Merged 2026-08-11T03:43:45Z at `3826c002` |
+| 36 | [spine-tools/SpineOpt.jl](https://github.com/spine-tools/SpineOpt.jl) | [#1000](https://github.com/spine-tools/SpineOpt.jl/issues/1000) | [#1331](https://github.com/spine-tools/SpineOpt.jl/pull/1331) | ci: add selectable benchmark workflow | CI | 2026-08-06 | 2026-08-13 | `c8cfda4dc7aa8c81cebf165804b1fbbff8274cca` | Workflow YAML/example-path checks passed; Julia unavailable locally | datejada merged after tests; branch needed in-repo, not from a fork | Yes | Merged 2026-08-13T10:55:57Z at `c8cfda4d`; contributing head `7bf68e0` |
+| 37 | [pydata/xarray](https://github.com/pydata/xarray) | [#11517](https://github.com/pydata/xarray/issues/11517) | [#11520](https://github.com/pydata/xarray/pull/11520) | CI: run slow Hypothesis job on schedule and dispatch | CI | 2026-08-13 | 2026-08-14 | `f4a89bd8e82b904a56477260a6038be069b1aa92` | Nightly slow property tests restored; hosted checks passed | VeckoTheGecko approved and merged; thanks reply posted at issuecomment-5289560189 | Yes | Merged 2026-08-14T03:07:02Z at `f4a89bd8`; contributing head `536878df` (OPS-030 xarray lane) |
+| 38 | [shauryagangrade/GCode](https://github.com/shauryagangrade/GCode) | [#13](https://github.com/shauryagangrade/GCode/issues/13) | [#43](https://github.com/shauryagangrade/GCode/pull/43) | fix(tools): make execute_bash non-interactive-safe | Bug fix | 2026-08-13 | 2026-08-14 | `568e62fc1b9160e2f3f4c3b2623cfa9ee9a4dbb6` | 29 local tests, ruff/mypy/bandit clean; maintainer reviewed and merged | shauryagangrade merged the canonical upstream PR | Yes | Merged 2026-08-14T10:07:57Z; OPS-032 GCODE-13 lane; CHANGELOG entry and non-interactive-message nit noted as follow-up; inline nit replied at discussion_r3783465218 |
+| 39 | [shauryagangrade/GCode](https://github.com/shauryagangrade/GCode) | [#31](https://github.com/shauryagangrade/GCode/issues/31) | [#44](https://github.com/shauryagangrade/GCode/pull/44) | feat(cli): categorize /help into General/Model/Session/Git groups | Feature | 2026-08-14 | 2026-08-14 | `4803c6bcae83c7c7200b9b405929876e88467299` | 26 local tests, ruff/mypy/bandit clean; demo snapshot and CHANGELOG items requested in review | shauryagangrade merged the canonical upstream PR | Yes | Merged 2026-08-14T10:06:59Z; OPS-032 EXT-205 lane; docs follow-up promised at issuecomment-5293057534 |
+| 40 | [StudentSuite/StudyMap](https://github.com/StudentSuite/StudyMap) | [#99](https://github.com/StudentSuite/StudyMap/issues/99) | [#132](https://github.com/StudentSuite/StudyMap/pull/132) | fix(a11y): label cluster markers and announce zoom-guard to screen readers | Bug fix | 2026-08-14 | 2026-08-14 | `9c8d0f9330373e15021edbafd06712a8daad57ad` | ESLint, Vitest, TypeScript, and Next build passed locally; Vercel deploy authorization is team-gated | Maintainer merge verified | Yes | Merged 2026-08-14T07:25:16Z; OPS-032 EXT-207 lane; Vercel state recorded at issuecomment-5293057665 |
+| 41 | [shauryagangrade/GCode](https://github.com/shauryagangrade/GCode) | [#33](https://github.com/shauryagangrade/GCode/issues/33) | [#46](https://github.com/shauryagangrade/GCode/pull/46) | feat: show context window and tool support in /models | Feature | 2026-08-14 | 2026-08-14 | `6016ee9` | 38 local tests, ruff/mypy/bandit clean; live label demo verified | shauryagangrade merged the canonical upstream PR | Yes | Merged 2026-08-14T14:56:55Z; OPS-035 EXT-224 lane; follow-up commit e4e062e landed on main |
+| 42 | [shauryagangrade/GCode](https://github.com/shauryagangrade/GCode) | [#17](https://github.com/shauryagangrade/GCode/issues/17) | [#47](https://github.com/shauryagangrade/GCode/pull/47) | fix: make common errors actionable with next-step hints | Bug fix | 2026-08-14 | 2026-08-14 | `54136fc` | 46 local tests (8 new), ruff/mypy/bandit/compileall clean | shauryagangrade merged the canonical upstream PR | Yes | Merged 2026-08-14T15:10:41Z; OPS-036 EXT-226 lane |
+| 43 | [shauryagangrade/GCode](https://github.com/shauryagangrade/GCode) | [#15](https://github.com/shauryagangrade/GCode/issues/15) | [#48](https://github.com/shauryagangrade/GCode/pull/48) | feat: add optional .gcoderc configuration file support | Feature | 2026-08-14 | 2026-08-14 | `37a5c3b1` | 54 local tests (7 new), ruff/mypy/bandit clean; rebased onto post-#47 main (both import blocks kept) and docstring corrected to `~/.gcode/.gcoderc` at `54faa77` | shauryagangrade reviewed (rebase + docstring nit) then merged; reply posted at issuecomment-5296284007 | Yes | Merged 2026-08-14T15:37:58Z at `37a5c3b1`; OPS-036 EXT-230 lane; contributing head `54faa776` |
 
 ## Verification query
 
@@ -698,3 +733,83 @@ daily activity source still returns `object_not_found`, so the expected
 connector blocker rather than asserted as stored. GitHub's live authored
 search is 133 total: 83 open, 31 merged including the owned PR, and 19 closed;
 the qualifying external merged total is **30**.
+
+## 2026-08-14 merge reconciliation (OPS-032 + xarray)
+
+- Live verification added three OPS-032 canonical merges and one OPS-030 lane
+  merge to the merged table: GCode #43 (`568e62fc`, 2026-08-14T10:07:57Z),
+  GCode #44 (`4803c6bc`, 2026-08-14T10:06:59Z), StudyMap #132
+  (`9c8d0f93`, 2026-08-14T07:25:16Z), and xarray #11520
+  (`f4a89bd8`, 2026-08-14T03:07:02Z).
+- The qualifying external merged total is now **40** across **31** external
+  repositories (no new repositories; GCode and StudyMap were already counted).
+- The GCode #43 inline nit and #44 docs items, plus the StudyMap #132 Vercel
+  bot message, were replied to at discussion_r3783465218,
+  issuecomment-5293057534, and issuecomment-5293057665 before the review
+  cursor advanced to 2026-08-14T12:02:48Z.
+- A GCode follow-up lane (CHANGELOG entries for #43/#44 plus the demo snapshot
+  refresh) is the planned first lane of OPS-033.
+
+## 2026-08-14 OPS-033 open-submission reconciliation
+
+Five canonical drafts published this packet; none merged, none counted:
+
+| Repository | Issue | Canonical PR | Head commit | Validation / hosted state | Queue | Counted |
+| --- | --- | --- | --- | --- | --- | --- |
+| [shauryagangrade/GCode](https://github.com/shauryagangrade/GCode) | #43/#44 review follow-up | [#45](https://github.com/shauryagangrade/GCode/pull/45) | `ef131c0f08381419bce8c2cec5630c59e157135c` | Draft on `main`; CHANGELOG entries + demo /help snapshot sync; 30 tests, ruff/mypy/bandit/compileall clean | EXT-208 | No |
+| [jayqi/failed-build-issue-action](https://github.com/jayqi/failed-build-issue-action) | [#131](https://github.com/jayqi/failed-build-issue-action/issues/131) | [#178](https://github.com/jayqi/failed-build-issue-action/pull/178) | `399cdc5d1d0d3b4da3b77f11508c823a367f608d` | Draft on `main`; workflow permissions + codecov SHA pin; 35 tests/100% coverage, lint clean | EXT-209 | No |
+| [shauryagangrade/scout-issue](https://github.com/shauryagangrade/scout-issue) | [#5](https://github.com/shauryagangrade/scout-issue/issues/5) | [#17](https://github.com/shauryagangrade/scout-issue/pull/17) | `9f61d9dc9cfb72a1901a1348280165f985559ac2` | Draft on `main`; gh api timeline replacement for invalid --json fields; markdownlint clean | EXT-213 | No |
+| [shauryagangrade/scout-issue](https://github.com/shauryagangrade/scout-issue) | [#9](https://github.com/shauryagangrade/scout-issue/issues/9) | [#18](https://github.com/shauryagangrade/scout-issue/pull/18) | `0d6769f8047a579102d7cdd2237d9566de514cc6` | Draft on `main`; permissions + pinned gitleaks step; baseline scan clean | EXT-211 | No |
+| [shauryagangrade/intent-drift-skill](https://github.com/shauryagangrade/intent-drift-skill) | [#26](https://github.com/shauryagangrade/intent-drift-skill/issues/26) | [#31](https://github.com/shauryagangrade/intent-drift-skill/pull/31) | `a4c79747c53aa1d12b20a6866b9262605d18e15e` | Draft on `main`; default-on secret scrub; 54 tests (9 new), ruff/mypy/black clean | EXT-212 | No |
+| [StudentSuite/StudyMap](https://github.com/StudentSuite/StudyMap) | [#127](https://github.com/StudentSuite/StudyMap/issues/127) | [#133](https://github.com/StudentSuite/StudyMap/pull/133) | `3d4f5d963e4206b10be279d3d3d0c95c86adf7d3` | Draft on `main`; per-city landing pages, 217 prerendered, collision guard; 46 tests (8 new), validate/tsc/eslint clean; Vercel team-authorization bot message pending | EXT-219 | No |
+| [shauryagangrade/scout-issue](https://github.com/shauryagangrade/scout-issue) | [#11](https://github.com/shauryagangrade/scout-issue/issues/11) | [#19](https://github.com/shauryagangrade/scout-issue/pull/19) | `ed553cc` | Draft on `main`; dependabot.yml + committed lockfile + npm ci in lint job; markdownlint 0.49.1 pinned | EXT-215 | No |
+| [shauryagangrade/scout-issue](https://github.com/shauryagangrade/scout-issue) | [#10](https://github.com/shauryagangrade/scout-issue/issues/10) | [#20](https://github.com/shauryagangrade/scout-issue/pull/20) | `3d401d2` | Draft on `main`; validate-skill.sh (headings, command well-formedness, reference sync); positive + negative tests pass | EXT-216 | No |
+| [shauryagangrade/intent-drift-skill](https://github.com/shauryagangrade/intent-drift-skill) | [#9](https://github.com/shauryagangrade/intent-drift-skill/issues/9) | [#32](https://github.com/shauryagangrade/intent-drift-skill/pull/32) | `1b5d9fa` | Draft on `main`; portable realpath + non-destructive symlink handling; 4 branches tested, bash -n clean | EXT-220 | No |
+| [shauryagangrade/intent-drift-skill](https://github.com/shauryagangrade/intent-drift-skill) | [#25](https://github.com/shauryagangrade/intent-drift-skill/issues/25) | [#33](https://github.com/shauryagangrade/intent-drift-skill/pull/33) | `9e5678e` | Draft on `main`; evidence scale canonicalized to 0-100 (docs + base + provider range test); 47 tests, ruff/black/mypy clean | EXT-218 | No |
+
+OPS-034 preflight abandoned two duplicate leads before implementation: EXT-214
+(jayqi #134, already our own draft PR #177 / EXT-203) and EXT-217
+(intent-drift-skill #23, CI already merged via PR #29).
+
+EXT-210 (StudyMap #120 JSON-LD) was BLOCKED before implementation: it depends
+on #127 per-city landing pages, which are not built, and the only place surface
+is the server-rendered map page with no per-place URL server-side. #127 now
+has draft PR #133 — re-triage #120 after it merges.
+
+## 2026-08-14 OPS-035 open-submission reconciliation
+
+Five canonical drafts published this packet; none merged, none counted:
+
+| Repository | Issue | Canonical PR | Head commit | Validation / hosted state | Queue | Counted |
+| --- | --- | --- | --- | --- | --- | --- |
+| [StudentSuite/StudyMap](https://github.com/StudentSuite/StudyMap) | [#126](https://github.com/StudentSuite/StudyMap/issues/126) | [#134](https://github.com/StudentSuite/StudyMap/pull/134) | `e93e99f` | Draft on `main`; verified-date schema + badge + issue template; 40 tests (2 new), validate/tsc/eslint clean; Vercel team-authorization bot message pending | EXT-221 | No |
+| [StudentSuite/StudyMap](https://github.com/StudentSuite/StudyMap) | [#118](https://github.com/StudentSuite/StudyMap/issues/118) | [#135](https://github.com/StudentSuite/StudyMap/pull/135) | `ffdc4bf` | Draft on `main`; viewport deep-link (lat/lng/zoom) + copyLink; 11 share tests (9 new), tsc/eslint clean, prod routes 200; Vercel team-authorization bot message pending | EXT-222 | No |
+| [shauryagangrade/scout-issue](https://github.com/shauryagangrade/scout-issue) | [#7](https://github.com/shauryagangrade/scout-issue/issues/7) | [#21](https://github.com/shauryagangrade/scout-issue/pull/21) | `de35e0d` | Draft on `main`; SKILL.md + README count semantics ("from N open issues"); count command live-verified; markdownlint clean | EXT-223 | No |
+| [shauryagangrade/GCode](https://github.com/shauryagangrade/GCode) | [#33](https://github.com/shauryagangrade/GCode/issues/33) | [#46](https://github.com/shauryagangrade/GCode/pull/46) | `afc5920` | Draft on `main`; /models size + tool-support enrichment (OpenRouter supported_parameters/pricing); 38 tests (6 new), ruff/black/mypy clean | EXT-224 | No |
+| [shauryagangrade/intent-drift-skill](https://github.com/shauryagangrade/intent-drift-skill) | [#14](https://github.com/shauryagangrade/intent-drift-skill/issues/14) | [#34](https://github.com/shauryagangrade/intent-drift-skill/pull/34) | `9a09dd3` | Draft on `main`; collect_context dedupe + self-token scrub + history cap; 50 tests (3 new), ruff/black/mypy clean | EXT-225 | No |
+
+OPS-035 discovery passed the tracker-first duplicate gate with zero abandoned
+lanes. Prior-packet outcome: pandas #66744 (EXT-182, OPS-028) was closed by
+the maintainer as a duplicate of an already-open PR for #66742 — recorded in
+the post-OPS-035 review delta; WORK_QUEUE EXT-182 is RESOLVED.
+
+## 2026-08-14 OPS-036 open-submission reconciliation
+
+Five canonical drafts published this packet; none merged, none counted:
+
+| Repository | Issue | Canonical PR | Head commit | Validation / hosted state | Queue | Counted |
+| --- | --- | --- | --- | --- | --- | --- |
+| [shauryagangrade/GCode](https://github.com/shauryagangrade/GCode) | [#17](https://github.com/shauryagangrade/GCode/issues/17) | [#47](https://github.com/shauryagangrade/GCode/pull/47) | `eff3536` | Draft on `main`; actionable error messages (key/network/model); 46 tests (8 new), ruff/mypy/bandit/compileall clean | EXT-226 | No |
+| [shauryagangrade/scout-issue](https://github.com/shauryagangrade/scout-issue) | [#13](https://github.com/shauryagangrade/scout-issue/issues/13) | [#22](https://github.com/shauryagangrade/scout-issue/pull/22) | `cd58ac2` | Draft on `main`; exact scoring weight tables (each sums to 100%, verified) + formula + worked example; markdownlint clean | EXT-227 | No |
+| [shauryagangrade/scout-issue](https://github.com/shauryagangrade/scout-issue) | [#6](https://github.com/shauryagangrade/scout-issue/issues/6) | [#23](https://github.com/shauryagangrade/scout-issue/pull/23) | `bc45357` | Draft on `main`; beginner-friendly label reconciliation across SKILL.md/tool-patterns/quick-reference; markdownlint clean | EXT-228 | No |
+| [shauryagangrade/intent-drift-skill](https://github.com/shauryagangrade/intent-drift-skill) | [#17](https://github.com/shauryagangrade/intent-drift-skill/issues/17) | [#35](https://github.com/shauryagangrade/intent-drift-skill/pull/35) | `cf0da7c` | Draft on `main`; --version/--help with metadata.json source of truth; 52 tests (2 new), ruff/black/mypy clean | EXT-229 | No |
+| [shauryagangrade/GCode](https://github.com/shauryagangrade/GCode) | [#15](https://github.com/shauryagangrade/GCode/issues/15) | [#48](https://github.com/shauryagangrade/GCode/pull/48) | `0fc183d` | Draft on `main`; .gcoderc config (model/auto_approve/bash_timeout/system_prompt); 54 tests (7 new), clean; rebased onto merged #46 | EXT-230 | No |
+
+OPS-036 discovery caught jayqi #130 as already covered by our own draft PR #176
+(EXT-202, OPS-031) — replaced with GCode #15; no duplicate created. GCode #46
+(EXT-224, OPS-035) merged at `6016ee9` (row 41), GCode #47 (EXT-226, OPS-036)
+merged at `54136fc` (row 42), and GCode #48 (EXT-230, OPS-036) merged at
+`37a5c3b1` (row 43) after the owner's review asked for a rebase onto the
+post-#47 main and a docstring alignment to `~/.gcode/.gcoderc`; both were
+addressed at contributing head `54faa776` and the reply was posted at
+issuecomment-5296284007.

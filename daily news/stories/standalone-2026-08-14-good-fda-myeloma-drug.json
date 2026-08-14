@@ -1,0 +1,163 @@
+{
+  "eventId": "fda-iberdomide-myeloma-approval-2026-08-13",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "",
+  "region": "United States",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Health · Approval",
+  "headline": "FDA approves new drug for multiple myeloma patients",
+  "summary": "The US regulator granted accelerated approval to iberdomide combined with daratumumab for patients whose multiple myeloma has returned.",
+  "script": "The FDA has approved a new treatment for multiple myeloma, a cancer of the blood. The drug, iberdomide, is the first of its kind, and it is approved for patients whose cancer has returned. It will be given alongside an existing therapy.",
+  "source": "Reuters · FDA",
+  "edition": "14 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "FDA APPROVES · NEW MYELOMA DRUG",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-14/good-fda-myeloma-drug/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-14/good-fda-myeloma-drug/secondary.jpg",
+  "imageAlt": "The US Food and Drug Administration building, which granted accelerated approval to iberdomide on 13 Aug 2026.",
+  "imageAltTwo": "Microscopy image of myeloma cells, the blood cancer the new treatment targets.",
+  "imageCredit": "2 MINUTE MEDICINE",
+  "imageCreditTwo": "NCI / PUBLIC DOMAIN",
+  "imageSourceTwo": "https://commons.wikimedia.org/wiki/File:Myeloma_cells.jpg",
+  "narrationAudio": "assets/narration/standalone-2026-08-14-good-fda-myeloma-drug.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "United States",
+      "detail": "FDA decision"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Drug / new class",
+      "value": "Iberdomide",
+      "detail": "First CELMoD therapy"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Disease / target",
+      "value": "Multiple myeloma",
+      "detail": "Blood cancer of plasma cells"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Patients / eligible",
+      "value": "Relapsed disease",
+      "detail": "Cancer that has returned"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Approval / type",
+      "value": "Accelerated",
+      "detail": "Given with daratumumab"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "FDA approves a new",
+        "myeloma treatment."
+      ],
+      "highlights": [
+        "new myeloma treatment"
+      ]
+    },
+    {
+      "lines": [
+        "Iberdomide is",
+        "first of its kind."
+      ],
+      "highlights": [
+        "first of its kind"
+      ]
+    },
+    {
+      "lines": [
+        "For patients whose",
+        "cancer has returned."
+      ],
+      "highlights": [
+        "cancer has returned"
+      ]
+    },
+    {
+      "lines": [
+        "Given with an",
+        "existing therapy."
+      ],
+      "highlights": [
+        "existing therapy"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "US FDA approves Bristol Myers' blood cancer treatment",
+      "url": "https://www.reuters.com/legal/litigation/us-fda-approves-bristol-myers-blood-cancer-treatment-2026-08-13/",
+      "published": "2026-08-13",
+      "usedFor": [
+        "FDA approval of iberdomide",
+        "multiple myeloma indication",
+        "Bristol Myers Squibb"
+      ]
+    },
+    {
+      "publisher": "US Food and Drug Administration",
+      "title": "FDA grants accelerated approval to iberdomide with daratumumab and hyaluronidase-fihj and dexamethasone",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone",
+      "published": "2026-08-13",
+      "usedFor": [
+        "accelerated approval",
+        "combination regimen",
+        "relapsed/refractory multiple myeloma"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Positive standalone — significant new cancer treatment approval verified via Reuters and the FDA; editorial ranking.",
+    "researchDate": "14 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. FDA building photo and public-domain NCI microscopy image used with credit banners.",
+    "generated": false
+  }
+}

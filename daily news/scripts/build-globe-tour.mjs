@@ -38,6 +38,7 @@ import { dirname, isAbsolute, parse, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { normalizeGlobeMapPlan } from "../assets/animations/globe-map-plan.js";
 import { resolveMapPlanForScene } from "../assets/animations/globe-map-runtime.js";
+import { HYPERFRAMES_VERSION } from "./hyperframes-version.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -59,7 +60,7 @@ const die = (message) => {
   process.exit(1);
 };
 
-const HF = option("hyperframes", "0.7.88");
+const HF = option("hyperframes", HYPERFRAMES_VERSION);
 const PROVIDER = option("provider", "kokoro").toLowerCase();
 const VOICE = option("voice", PROVIDER === "kokoro" ? "af_heart" : "");
 const SPEED = option("speed", "1.0");
@@ -347,6 +348,11 @@ const tour = stories.map((story, index) => {
   const travelStart = index === 0
     ? Math.max(0.8, arrive - travelTime)
     : speakAt;
+  const authoredAt = (field, fallback = null) => {
+    const value = Number(story.data[field]);
+    return Number.isFinite(value) ? round(speakAt + Math.max(0, value)) : fallback;
+  };
+  const visualStart = authoredAt("visualStart", round(speakAt));
 
   cursor = speakAt + story.length + GAP;
 
@@ -369,6 +375,16 @@ const tour = stories.map((story, index) => {
     mapData: story.data.mapData || null,
     mapSource: story.data.mapSource || story.data.source || "",
     animationPlan: story.data.animationPlan || story.data.visualPlan || null,
+    storyLength: round(story.length),
+    captions: Array.isArray(story.data.captions) ? story.data.captions : [],
+    captionTimings: Array.isArray(story.data.captionTimings) ? story.data.captionTimings : [],
+    visualBeats: Array.isArray(story.data.visualBeats) ? story.data.visualBeats : [],
+    visualStart,
+    mediaStart: authoredAt("mediaStart", visualStart),
+    cardStart: authoredAt("cardStart", visualStart),
+    photoSwapAt: authoredAt("photoSwapAt", null),
+    imageFocusPrimary: story.data.imageFocusPrimary || "",
+    imageFocusSecondary: story.data.imageFocusSecondary || "",
     routePoints: Array.isArray(story.data.routePoints)
       ? story.data.routePoints.map((point) => ({
           label: String(point.label || ""),
@@ -474,6 +490,8 @@ writeFileSync(
       edition: stories[0]?.data.edition || "",
       openerTitle: OPENER_TITLE,
       openerLine: OPENER,
+      hookMode: false,
+      hookLine: OPENER,
       openerSub: `Global brief · ${stories[0]?.data.edition || ""}`,
       openerEnd,
       endCardStart,
@@ -482,7 +500,7 @@ writeFileSync(
       narrationAudio: "assets/narration/globe-tour.wav",
       footerNote: "Context first",
       ctaLine: "Follow for tomorrow’s global brief.",
-      ctaSource: "Sources in description.",
+      ctaSource: "",
     },
     null,
     2,

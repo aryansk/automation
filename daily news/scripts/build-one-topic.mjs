@@ -27,6 +27,7 @@ import { basename, dirname, isAbsolute, parse, relative, resolve } from "node:pa
 import { fileURLToPath } from "node:url";
 import { normalizeGlobeMapPlan } from "../assets/animations/globe-map-plan.js";
 import { resolveMapPlanForScene } from "../assets/animations/globe-map-runtime.js";
+import { HYPERFRAMES_VERSION } from "./hyperframes-version.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -70,7 +71,7 @@ Options:
   --speed SPEED               TTS speed (default 1.0)
   --fps FPS                   Render frame rate (default 30)
   --quality QUALITY           draft, standard, or high (default high)
-  --hyperframes VERSION       HyperFrames version (default 0.7.94)
+  --hyperframes VERSION       HyperFrames version (default: package.json pin)
   --tone good|bad             Require one tone for every input story
   --cta TEXT                  Spoken end-card line (regenerates the CTA audio)
   --gap SECONDS               Gap before the end card (default 0.45)
@@ -84,7 +85,7 @@ if (flag("help") || flag("h")) {
   process.exit(0);
 }
 
-const HF = option("hyperframes", "0.7.94");
+const HF = option("hyperframes", HYPERFRAMES_VERSION);
 const PROVIDER = option("provider", "kokoro").toLowerCase();
 const VOICE = option("voice", PROVIDER === "kokoro" ? "af_heart" : "");
 const SPEED = option("speed", "1.0");
@@ -283,6 +284,12 @@ function ensureNarration({ story, storyPath, outputPath, scratchPath, label, for
 }
 
 function buildStop(story, storyLength, storySpeakAt) {
+  const authoredAt = (field, fallback = null) => {
+    const value = Number(story[field]);
+    if (!Number.isFinite(value)) return fallback;
+    return round(storySpeakAt + Math.max(0, value));
+  };
+  const visualStart = authoredAt("visualStart", round(storySpeakAt));
   return {
     countryCode: String(story.countryCode || "US").toUpperCase(),
     countryName: story.countryName || "",
@@ -308,6 +315,16 @@ function buildStop(story, storyLength, storySpeakAt) {
     mapData: story.mapData || null,
     mapSource: story.mapSource || story.source || "",
     animationPlan: story.animationPlan || story.visualPlan || null,
+    storyLength: round(storyLength),
+    captions: Array.isArray(story.captions) ? story.captions : [],
+    captionTimings: Array.isArray(story.captionTimings) ? story.captionTimings : [],
+    visualBeats: Array.isArray(story.visualBeats) ? story.visualBeats : [],
+    visualStart,
+    mediaStart: authoredAt("mediaStart", visualStart),
+    cardStart: authoredAt("cardStart", visualStart),
+    photoSwapAt: authoredAt("photoSwapAt", null),
+    imageFocusPrimary: story.imageFocusPrimary || "",
+    imageFocusSecondary: story.imageFocusSecondary || "",
     travelStart: round(Math.max(0.8, storySpeakAt - TRAVEL)),
     speakAt: round(storySpeakAt),
     arrive: round(storySpeakAt),
@@ -315,8 +332,9 @@ function buildStop(story, storyLength, storySpeakAt) {
   };
 }
 
-function writeNarrationTrack({ openerPath, storyPath, ctaPath, starts, totalDuration, outputPath }) {
-  const inputs = [openerPath, storyPath, ctaPath];
+function writeNarrationTrack({ tracks, starts, totalDuration, outputPath }) {
+  const inputs = Array.isArray(tracks) ? tracks.filter(Boolean) : [];
+  if (!inputs.length || inputs.length !== starts.length) die("narration track inputs and starts must match");
   const filters = inputs.map((_, index) => {
     const delay = Math.round(Number(starts[index]) * 1000);
     return `[${index}:a]aresample=24000,adelay=${delay}|${delay}[d${index}]`;
@@ -328,7 +346,7 @@ function writeNarrationTrack({ openerPath, storyPath, ctaPath, starts, totalDura
       "-y", "-loglevel", "error",
       ...inputs.flatMap((input) => ["-i", input]),
       "-filter_complex",
-      `${filters.join(";")};${mixed}amix=inputs=${inputs.length}:normalize=0[mixed];[mixed]apad=whole_dur=${totalDuration}[out]`,
+      `${filters.join(";")};${mixed}amix=inputs=${inputs.length}:normalize=0[mixed];[mixed]loudnorm=I=-19:TP=-1.5:LRA=7:linear=true[limited];[limited]apad=whole_dur=${totalDuration}[out]`,
       "-map", "[out]",
       "-t", String(totalDuration),
       "-ar", "24000",
@@ -481,28 +499,41 @@ function buildOne(storyPath) {
   });
   if (!resolvedPlan.valid) die(`${slug}: ${resolvedPlan.errors.join("; ")}`);
 
-  const openingText = String(effectiveStory.openingText || "").trim() || defaultOpeningText(tone);
-  const openerPath = ensureOpener(tone, storyWorkDir, openingText);
+  /* Every standalone Short opens with the consistent brand sting. Story
+     specific openingHook copy belongs in the later story card, not frame one. */
+  const openingText = defaultOpeningText(tone);
+  const spokenOpener = true;
+  const openerPath = spokenOpener ? ensureOpener(tone, storyWorkDir, openingText) : null;
   const ctaPath = ensureCta(storyWorkDir);
-  const openerLength = probeDuration(openerPath);
+  const openerLength = openerPath ? probeDuration(openerPath) : 0;
   const ctaLength = probeDuration(ctaPath);
-  if (!openerLength || !ctaLength) die(`${slug}: opener or CTA audio has no measurable duration`);
+  if ((spokenOpener && !openerLength) || !ctaLength) die(`${slug}: opener or CTA audio has no measurable duration`);
 
-  const openerDelay = Number(option("opener-delay", "0.18"));
-  const openerHold = Number(option("opener-hold", "0.22"));
-  const storySpeakAt = round(openerDelay + openerLength + openerHold);
+  const openerDelay = spokenOpener ? Number(option("opener-delay", "0.18")) : 0;
+  const openerHold = spokenOpener ? Number(option("opener-hold", "0.22")) : 0;
+  const storySpeakAt = spokenOpener ? round(openerDelay + openerLength + openerHold) : 0;
   const ctaStart = round(storySpeakAt + storyLength + GAP);
-  const endCardStart = round(Math.max(storySpeakAt + 1, ctaStart - 0.18));
-  const endCardReveal = round(endCardStart + 0.22);
-  const totalDuration = Math.ceil((ctaStart + ctaLength + 0.55) * 10) / 10;
+  const endCardStart = round(spokenOpener
+    ? Math.max(storySpeakAt + 1, ctaStart - 0.18)
+    : Math.max(0, ctaStart - 0.08));
+  const endCardReveal = round(spokenOpener ? endCardStart + 0.22 : ctaStart);
+  const totalDuration = Math.ceil((ctaStart + ctaLength + (spokenOpener ? 0.55 : 0.35)) * 10) / 10;
   const stop = buildStop(effectiveStory, storyLength, storySpeakAt);
   const mixedAudioPath = resolve(storyWorkDir, `${tone}-${slug}.narration.wav`);
+  const narrationTracks = [
+    ...(openerPath ? [openerPath] : []),
+    storyAudioPath,
+    ctaPath,
+  ];
+  const narrationStarts = [
+    ...(openerPath ? [openerDelay] : []),
+    storySpeakAt,
+    ctaStart,
+  ];
 
   writeNarrationTrack({
-    openerPath,
-    storyPath: storyAudioPath,
-    ctaPath,
-    starts: [openerDelay, storySpeakAt, ctaStart],
+    tracks: narrationTracks,
+    starts: narrationStarts,
     totalDuration,
     outputPath: mixedAudioPath,
   });
@@ -515,8 +546,9 @@ function buildOne(storyPath) {
       edition: effectiveStory.edition || "Current edition",
       openerTitle: openingText,
       openerLine: openingText,
-      openerSub: effectiveStory.openingSub
-        || `${String(effectiveStory.openingStyle || "").replace(/[-_]+/g, " ").toUpperCase()}${effectiveStory.openingStyle ? " · " : ""}One story · ${effectiveStory.edition || "Current edition"}`,
+      hookMode: false,
+      hookLine: "",
+      openerSub: effectiveStory.openingSub || `Global brief · ${effectiveStory.edition || "Current edition"}`,
       openerEnd: round(storySpeakAt + 0.35),
       endCardStart,
       endCardReveal,
@@ -524,7 +556,7 @@ function buildOne(storyPath) {
       narrationAudio: projectRelative(mixedAudioPath),
       footerNote: "One story · Context first",
       ctaLine: "Follow for tomorrow’s global brief.",
-      ctaSource: `Sources · ${sourceLabel(effectiveStory)}`,
+      ctaSource: "",
     }, null, 2)}\n`,
   );
 

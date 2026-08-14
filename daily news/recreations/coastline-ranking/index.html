@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"edition","type":"string","label":"Edition date","default":"12 AUG 2026"},
+    {"id":"deskName","type":"string","label":"Top rail","default":"GREEN GLOBE / SPECIAL"},
+    {"id":"openerSub","type":"string","label":"Opening sub-label","default":"EDITORIAL RANKING / COASTAL GEOGRAPHY"},
+    {"id":"tour","type":"string","label":"Timed globe stops","default":"[]"},
+    {"id":"duration","type":"number","label":"Composition duration","default":60},
+    {"id":"openerEnd","type":"number","label":"Opening title end","default":7.1},
+    {"id":"endCardStart","type":"number","label":"End card start","default":55.4},
+    {"id":"endCardReveal","type":"number","label":"End card reveal","default":55.7},
+    {"id":"narrationAudio","type":"string","label":"Continuous narration track","default":"assets/narration/recreation-coastline-mix.wav"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <link rel="preload" as="font" href="assets/fonts/league-gothic-400.ttf" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/ibm-plex-mono-700.ttf" crossorigin>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/vendor/d3.min.js"></script>
+    <script src="assets/data/world-data.js"></script>
+    <style>
+      @font-face {
+        font-family: "League Gothic";
+        src: url("assets/fonts/league-gothic-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "IBM Plex Mono";
+        src: url("assets/fonts/ibm-plex-mono-400.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "IBM Plex Mono";
+        src: url("assets/fonts/ibm-plex-mono-700.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        --matte: #2d4b3c;
+        --ink: #17372f;
+        --paper: #f1ead8;
+        --sage: #d8e1d4;
+        --muted: #aab9a9;
+        --brass: #d6995b;
+        --live: #e37568;
+        --ice: #8bdff0;
+        --frost: #e5faff;
+        --deep-ice: #204e5e;
+        --cool-shadow: rgba(32, 78, 94, 0.42);
+        --hairline: rgba(216, 225, 212, 0.25);
+      }
+
+      * { box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--matte);
+      }
+      body {
+        color: var(--sage);
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 400;
+      }
+      #root {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--matte);
+      }
+      .field,
+      .field::after,
+      canvas,
+      .grain,
+      .safe-vignette {
+        position: absolute;
+        inset: 0;
+      }
+      canvas { width: 100%; height: 100%; }
+      .field {
+        z-index: 0;
+        background:
+          radial-gradient(circle at 50% 47%, rgba(94, 123, 101, 0.25), transparent 38%),
+          linear-gradient(180deg, #2d4b3c 0%, #294638 100%);
+      }
+      .field::after {
+        content: "";
+        opacity: 0.19;
+        background-image:
+          linear-gradient(rgba(216, 225, 212, 0.12) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(216, 225, 212, 0.12) 1px, transparent 1px);
+        background-size: 72px 72px;
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 72%);
+      }
+      #space-layer { z-index: 1; opacity: 0.58; }
+      #globe-layer { z-index: 2; }
+      #map-layer { z-index: 3; pointer-events: none; }
+      .freeze-wash {
+        position: absolute;
+        inset: 0;
+        z-index: 1.5;
+        opacity: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 50% 30%, rgba(139, 223, 240, 0.12), transparent 34%),
+          linear-gradient(180deg, rgba(32, 78, 94, 0.035), rgba(32, 78, 94, 0.09));
+        mix-blend-mode: screen;
+      }
+      .scan-ring {
+        position: absolute;
+        z-index: 5;
+        left: 155px;
+        top: 240px;
+        width: 770px;
+        height: 770px;
+        border: 2px solid rgba(139, 223, 240, 0.72);
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow:
+          0 0 0 18px rgba(139, 223, 240, 0.07),
+          0 0 30px rgba(139, 223, 240, 0.18),
+          inset 0 0 0 1px rgba(229, 250, 255, 0.22);
+      }
+      .scan-ring::before,
+      .scan-ring::after {
+        content: "";
+        position: absolute;
+        background: rgba(139, 223, 240, 0.76);
+      }
+      .scan-ring::before {
+        top: -42px;
+        left: 50%;
+        width: 2px;
+        height: calc(100% + 84px);
+        transform: translateX(-50%);
+      }
+      .scan-ring::after {
+        top: 50%;
+        left: -42px;
+        width: calc(100% + 84px);
+        height: 2px;
+        transform: translateY(-50%);
+      }
+      .ice-field {
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        top: 300px;
+        width: 980px;
+        height: 980px;
+        margin-left: -490px;
+        border: 3px solid rgba(139, 223, 240, 0.76);
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 43% 28%, rgba(229, 250, 255, 0.19), transparent 23%),
+          radial-gradient(circle at 52% 54%, rgba(84, 190, 226, 0.11), transparent 55%);
+        box-shadow:
+          0 0 0 20px rgba(139, 223, 240, 0.06),
+          0 0 42px rgba(139, 223, 240, 0.30),
+          inset 0 0 24px rgba(229, 250, 255, 0.18);
+      }
+      .ice-field::before,
+      .ice-field::after {
+        content: "";
+        position: absolute;
+        left: 8%;
+        right: 8%;
+        height: 7px;
+        background: linear-gradient(90deg, transparent, var(--frost), var(--ice), transparent);
+        box-shadow: 0 0 24px rgba(139, 223, 240, 0.9);
+      }
+      .ice-field::before {
+        top: 38%;
+        transform: rotate(-11deg);
+      }
+      .ice-field::after {
+        top: 57%;
+        transform: rotate(8deg);
+        opacity: 0.56;
+      }
+      .ice-field__tag {
+        position: absolute;
+        top: 88px;
+        right: 34px;
+        padding: 8px 12px 7px;
+        color: var(--deep-ice);
+        background: var(--frost);
+        border-left: 5px solid var(--ice);
+        box-shadow: 8px 8px 0 var(--cool-shadow);
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+      .safe-vignette {
+        z-index: 4;
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(23,55,47,0.36), transparent 24%, transparent 72%, rgba(23,55,47,0.55));
+      }
+      .chrome,
+      .opener,
+      .caption,
+      .chapter-card,
+      .progress-rail,
+      .closer,
+      .footer {
+        position: absolute;
+        z-index: 8;
+      }
+
+      /* This cut is visual-first: the voice and subtitles carry the words.
+         All editorial UI remains in the source for easy future variants but
+         is intentionally absent from this caption-only export. */
+      .chrome,
+      .chrome-rule,
+      .opener,
+      .chapter-card,
+      .progress-rail,
+      .closer,
+      .footer {
+        display: none !important;
+      }
+      .scan-ring,
+      .ice-field {
+        display: none !important;
+      }
+
+      .chrome {
+        top: 62px;
+        left: 72px;
+        right: 72px;
+        height: 62px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--sage);
+        background: rgba(23, 55, 47, 0.78);
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+      }
+      .chrome__desk { display: inline-flex; align-items: center; gap: 13px; }
+      .chrome__dot {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: var(--live);
+        box-shadow: 0 0 0 7px rgba(227, 117, 104, 0.13);
+      }
+      .chrome__date { color: var(--brass); }
+      .chrome-rule {
+        position: absolute;
+        top: 135px;
+        left: 72px;
+        right: 72px;
+        height: 2px;
+        z-index: 8;
+        transform-origin: left center;
+        background: var(--hairline);
+      }
+
+      .opener {
+        top: 188px;
+        left: 72px;
+        width: 936px;
+      }
+      .opener__eyebrow,
+      .chapter-card__kicker,
+      .closer__eyebrow,
+      .footer,
+      .caption__eyebrow {
+        color: var(--brass);
+        font-size: 21px;
+        font-weight: 700;
+        letter-spacing: 3.1px;
+        line-height: 1.25;
+        text-transform: uppercase;
+      }
+      .opener h1 {
+        max-width: 940px;
+        margin: 23px 0 26px;
+        color: var(--paper);
+        font-family: "League Gothic", sans-serif;
+        font-size: 118px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 0.82;
+        text-transform: uppercase;
+      }
+      .opener h1 span { display: block; }
+      .opener h1 span:last-child { color: var(--sage); }
+      .opener__sub {
+        display: inline-block;
+        margin: 0;
+        padding: 7px 14px 6px;
+        color: var(--ink);
+        background: rgba(216, 225, 212, 0.94);
+        border-left: 6px solid var(--live);
+        font-size: 25px;
+        letter-spacing: 1.6px;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .caption {
+        top: 1518px;
+        left: 58px;
+        right: 58px;
+        min-height: 142px;
+        padding: 12px 16px 16px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(23, 55, 47, 0.90) 12%,
+          rgba(23, 55, 47, 0.90) 88%,
+          transparent 100%
+        );
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .caption__eyebrow {
+        display: none;
+      }
+      .caption__plain,
+      .caption__accent {
+        display: block;
+        font-family: "League Gothic", sans-serif;
+        font-weight: 400;
+        letter-spacing: 2px;
+        line-height: 0.92;
+        text-shadow:
+          0 3px 0 rgba(23, 55, 47, 0.95),
+          2px 0 0 rgba(23, 55, 47, 0.95),
+          -2px 0 0 rgba(23, 55, 47, 0.95),
+          0 0 24px rgba(23, 55, 47, 0.68);
+      }
+      .caption__plain { color: var(--paper); font-size: 48px; }
+      .caption__accent { color: var(--brass); font-size: 70px; }
+      .caption.is-cold .caption__eyebrow { color: var(--ice); }
+      .caption.is-cold .caption__accent {
+        color: var(--frost);
+        text-shadow:
+          0 3px 0 var(--deep-ice),
+          2px 0 0 var(--deep-ice),
+          -2px 0 0 var(--deep-ice),
+          0 0 28px rgba(139, 223, 240, 0.72);
+      }
+      .caption--opener .opener-caption__plain,
+      .caption--opener .opener-caption__accent {
+        display: block;
+        font-family: "League Gothic", sans-serif;
+        font-weight: 400;
+        letter-spacing: 2px;
+        line-height: 0.92;
+        text-shadow:
+          0 3px 0 rgba(23, 55, 47, 0.95),
+          2px 0 0 rgba(23, 55, 47, 0.95),
+          -2px 0 0 rgba(23, 55, 47, 0.95),
+          0 0 24px rgba(23, 55, 47, 0.68);
+      }
+      .caption--opener .opener-caption__plain { color: var(--paper); font-size: 48px; }
+      .caption--opener .opener-caption__accent { color: var(--brass); font-size: 70px; }
+
+      .chapter-card {
+        left: 72px;
+        right: 72px;
+        top: 1358px;
+        min-height: 302px;
+        padding: 28px 34px 30px;
+        display: grid;
+        grid-template-columns: 128px 1fr;
+        column-gap: 27px;
+        background: rgba(23, 55, 47, 0.92);
+        border: 2px solid rgba(216, 225, 212, 0.38);
+        box-shadow: 18px 18px 0 rgba(23, 55, 47, 0.24);
+      }
+      .chapter-card.is-cold {
+        border-color: rgba(139, 223, 240, 0.74);
+        box-shadow: 18px 18px 0 var(--cool-shadow), 0 0 28px rgba(139, 223, 240, 0.13);
+      }
+      .chapter-card__rank {
+        color: var(--brass);
+        font-family: "League Gothic", sans-serif;
+        font-size: 138px;
+        line-height: 0.72;
+      }
+      .chapter-card.is-cold .chapter-card__rank,
+      .chapter-card.is-cold .chapter-card__source { color: var(--ice); }
+      .chapter-card__main { min-width: 0; }
+      .chapter-card__country {
+        margin: 5px 0 20px;
+        color: var(--paper);
+        font-family: "League Gothic", sans-serif;
+        font-size: 76px;
+        letter-spacing: 1px;
+        line-height: 0.84;
+        text-transform: uppercase;
+      }
+      .chapter-card__headline {
+        margin: 0 0 12px;
+        color: var(--sage);
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 1.1px;
+        line-height: 1.23;
+        text-transform: uppercase;
+      }
+      .chapter-card__detail {
+        margin: 0;
+        color: var(--muted);
+        font-size: 20px;
+        line-height: 1.35;
+      }
+      .chapter-card__source {
+        grid-column: 2;
+        margin-top: 21px;
+        padding-top: 15px;
+        border-top: 1px solid var(--hairline);
+        color: var(--brass);
+        font-size: 16px;
+        letter-spacing: 0.7px;
+        line-height: 1.35;
+        text-transform: uppercase;
+      }
+
+      .progress-rail {
+        top: 1694px;
+        left: 72px;
+        right: 72px;
+        height: 30px;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: var(--muted);
+        background: rgba(23, 55, 47, 0.78);
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .progress-rail__line {
+        position: relative;
+        flex: 1;
+        height: 4px;
+        overflow: hidden;
+        background: rgba(216, 225, 212, 0.2);
+      }
+      .progress-rail__fill {
+        position: absolute;
+        inset: 0;
+        background: var(--brass);
+        transform: scaleX(0);
+        transform-origin: left center;
+      }
+      .progress-rail__count { color: var(--brass); white-space: nowrap; }
+
+      .closer {
+        top: 670px;
+        left: 72px;
+        right: 72px;
+        text-align: center;
+      }
+      .closer__eyebrow {
+        display: inline-block;
+        padding: 5px 12px 4px;
+        color: var(--ink);
+        background: var(--sage);
+      }
+      .closer__title {
+        margin: 20px 0 16px;
+        color: var(--paper);
+        font-family: "League Gothic", sans-serif;
+        font-size: 125px;
+        letter-spacing: 1px;
+        line-height: 0.78;
+        text-transform: uppercase;
+      }
+      .closer__sub {
+        margin: 0;
+        color: var(--sage);
+        font-size: 28px;
+        letter-spacing: 1.1px;
+        text-transform: uppercase;
+      }
+      .closer__stamp {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 250px;
+        margin-top: 35px;
+        padding: 14px 22px;
+        color: var(--ink);
+        background: var(--brass);
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .footer {
+        bottom: 66px;
+        left: 72px;
+        right: 72px;
+        padding: 8px 12px;
+        display: flex;
+        justify-content: space-between;
+        color: rgba(216, 225, 212, 0.70);
+        background: rgba(23, 55, 47, 0.78);
+        font-size: 17px;
+        letter-spacing: 2px;
+      }
+      .footer span:last-child { color: var(--brass); }
+      .grain {
+        z-index: 20;
+        pointer-events: none;
+        opacity: 0.09;
+        background-image: radial-gradient(rgba(244, 238, 218, 0.22) 0.7px, transparent 0.8px);
+        background-size: 6px 6px;
+        mix-blend-mode: screen;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="coastline-ranking" data-start="0" data-duration="60" data-width="1080" data-height="1920" data-fps="30">
+      <div class="field" data-layout-ignore></div>
+      <canvas id="space-layer" width="1080" height="1920" aria-hidden="true" data-layout-ignore></canvas>
+      <canvas id="globe-layer" width="1080" height="1920" aria-hidden="true" data-layout-ignore></canvas>
+      <canvas id="map-layer" width="1080" height="1920" aria-hidden="true" data-layout-ignore></canvas>
+      <div class="freeze-wash" id="freeze-wash" aria-hidden="true" data-layout-ignore></div>
+      <div class="scan-ring" id="scan-ring" aria-hidden="true" data-layout-ignore></div>
+      <div class="ice-field" id="ice-field" aria-hidden="true" data-layout-ignore></div>
+      <div class="safe-vignette" data-layout-ignore></div>
+
+      <div class="chrome" id="chrome">
+        <span class="chrome__desk"><span class="chrome__dot"></span><span id="desk-name"></span></span>
+        <span class="chrome__date" id="edition"></span>
+      </div>
+      <div class="chrome-rule" id="chrome-rule" data-layout-ignore></div>
+
+      <section class="opener" id="opener" aria-label="Opening title" data-layout-allow-overlap>
+        <div class="opener__eyebrow">COASTAL GEOGRAPHY / FIVE-PART COUNTDOWN</div>
+        <h1><span id="opener-title-top"></span><span id="opener-title-bottom"></span></h1>
+        <p class="opener__sub" id="opener-sub"></p>
+      </section>
+
+      <div class="caption caption--opener" id="caption-opener" data-layout-allow-overlap>
+        <span class="opener-caption__plain">A COAST CAN LOOK POWERFUL</span>
+        <strong class="opener-caption__accent">ACCESS IS NOT GUARANTEED</strong>
+      </div>
+
+      <div class="caption" id="caption-0" data-layout-allow-overlap>
+        <div class="caption__eyebrow" id="caption-eyebrow-0"></div>
+        <span class="caption__plain" id="caption-plain-0"></span>
+        <strong class="caption__accent" id="caption-accent-0"></strong>
+      </div>
+      <div class="caption" id="caption-1" data-layout-allow-overlap>
+        <div class="caption__eyebrow" id="caption-eyebrow-1"></div>
+        <span class="caption__plain" id="caption-plain-1"></span>
+        <strong class="caption__accent" id="caption-accent-1"></strong>
+      </div>
+      <div class="caption" id="caption-2" data-layout-allow-overlap>
+        <div class="caption__eyebrow" id="caption-eyebrow-2"></div>
+        <span class="caption__plain" id="caption-plain-2"></span>
+        <strong class="caption__accent" id="caption-accent-2"></strong>
+      </div>
+      <div class="caption" id="caption-3" data-layout-allow-overlap>
+        <div class="caption__eyebrow" id="caption-eyebrow-3"></div>
+        <span class="caption__plain" id="caption-plain-3"></span>
+        <strong class="caption__accent" id="caption-accent-3"></strong>
+      </div>
+      <div class="caption" id="caption-4" data-layout-allow-overlap>
+        <div class="caption__eyebrow" id="caption-eyebrow-4"></div>
+        <span class="caption__plain" id="caption-plain-4"></span>
+        <strong class="caption__accent" id="caption-accent-4"></strong>
+      </div>
+
+      <article class="chapter-card" id="chapter-0">
+        <div class="chapter-card__rank" id="chapter-rank-0"></div>
+        <div class="chapter-card__main">
+          <div class="chapter-card__kicker" id="chapter-kicker-0"></div>
+          <div class="chapter-card__country" id="chapter-country-0"></div>
+          <h2 class="chapter-card__headline" id="chapter-headline-0"></h2>
+          <p class="chapter-card__detail" id="chapter-detail-0"></p>
+        </div>
+        <div class="chapter-card__source" id="chapter-source-0"></div>
+      </article>
+      <article class="chapter-card" id="chapter-1">
+        <div class="chapter-card__rank" id="chapter-rank-1"></div>
+        <div class="chapter-card__main">
+          <div class="chapter-card__kicker" id="chapter-kicker-1"></div>
+          <div class="chapter-card__country" id="chapter-country-1"></div>
+          <h2 class="chapter-card__headline" id="chapter-headline-1"></h2>
+          <p class="chapter-card__detail" id="chapter-detail-1"></p>
+        </div>
+        <div class="chapter-card__source" id="chapter-source-1"></div>
+      </article>
+      <article class="chapter-card" id="chapter-2">
+        <div class="chapter-card__rank" id="chapter-rank-2"></div>
+        <div class="chapter-card__main">
+          <div class="chapter-card__kicker" id="chapter-kicker-2"></div>
+          <div class="chapter-card__country" id="chapter-country-2"></div>
+          <h2 class="chapter-card__headline" id="chapter-headline-2"></h2>
+          <p class="chapter-card__detail" id="chapter-detail-2"></p>
+        </div>
+        <div class="chapter-card__source" id="chapter-source-2"></div>
+      </article>
+      <article class="chapter-card" id="chapter-3">
+        <div class="chapter-card__rank" id="chapter-rank-3"></div>
+        <div class="chapter-card__main">
+          <div class="chapter-card__kicker" id="chapter-kicker-3"></div>
+          <div class="chapter-card__country" id="chapter-country-3"></div>
+          <h2 class="chapter-card__headline" id="chapter-headline-3"></h2>
+          <p class="chapter-card__detail" id="chapter-detail-3"></p>
+        </div>
+        <div class="chapter-card__source" id="chapter-source-3"></div>
+      </article>
+      <article class="chapter-card" id="chapter-4">
+        <div class="chapter-card__rank" id="chapter-rank-4"></div>
+        <div class="chapter-card__main">
+          <div class="chapter-card__kicker" id="chapter-kicker-4"></div>
+          <div class="chapter-card__country" id="chapter-country-4"></div>
+          <h2 class="chapter-card__headline" id="chapter-headline-4"></h2>
+          <p class="chapter-card__detail" id="chapter-detail-4"></p>
+        </div>
+        <div class="chapter-card__source" id="chapter-source-4"></div>
+      </article>
+
+      <div class="progress-rail" id="progress-rail">
+        <span>COASTLINES / 05</span>
+        <span class="progress-rail__line"><i class="progress-rail__fill" id="progress-fill"></i></span>
+        <span class="progress-rail__count">01 → 05</span>
+      </div>
+
+      <section class="closer" id="closer" aria-label="Closing title" data-layout-allow-overlap>
+        <div class="closer__eyebrow">THE TAKEAWAY</div>
+        <h2 class="closer__title" id="closer-title"></h2>
+        <p class="closer__sub" id="closer-sub"></p>
+        <div class="closer__stamp">SOURCE-LED / GLOBE-FIRST</div>
+      </section>
+
+      <footer class="footer" id="footer">
+        <span>COASTAL GEOGRAPHY / EDITORIAL RECREATION</span>
+        <span>GREEN GLOBE WORKFLOW</span>
+      </footer>
+
+      <audio id="narration-track" class="clip" data-start="0" data-duration="60" data-track-index="10" data-volume="1" src="assets/narration/recreation-coastline-mix.wav"></audio>
+      <div class="grain" data-layout-ignore></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      gsap.defaults({ lazy: false });
+      window.__timelines["coastline-ranking"] = gsap.timeline({
+        paused: true,
+        defaults: { ease: "power3.out", lazy: false },
+      });
+      window.__coastlineVariables = window.__hyperframes.getVariables();
+    </script>
+    <script type="module" src="renderer.js"></script>
+  </body>
+</html>

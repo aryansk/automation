@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "kazakhstan-first-tiger-release-umit-2026-08-10",
+  "tone": "good",
+  "statWords": "seventy",
+  "countryCode": "KZ",
+  "countryName": "Kazakhstan",
+  "cityName": "Almaty",
+  "region": "Central Asia",
+  "urgency": "medium",
+  "storyType": "auto",
+  "kicker": "Tigers return · Kazakhstan",
+  "headline": "Kazakhstan releases first tiger into the wild in 70 years",
+  "summary": "Tigress Umit, whose name means hope in Kazakh, bounded into the 450,000-hectare Ile-Balkhash reserve on 31 July — the first tiger in the country since 1948.",
+  "script": "Kazakhstan has released its first tiger into the wild in seventy years. Tigress Umit, whose name means hope, bounded into the vast Ile-Balkhash reserve on July thirty first. Three more tigers await release as the species returns to Central Asia.",
+  "source": "Mongabay",
+  "openingHook": "FIRST TIGER IN KAZAKHSTAN IN 70 YEARS",
+  "imageOne": "assets/stories/2026-08-13/good-kazakhstan-tiger/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/good-kazakhstan-tiger/secondary.jpg",
+  "imageAlt": "Umit, an adult female Amur tiger, recently released into the Ile-Balkhash State Nature Reserve in southeastern Kazakhstan.",
+  "imageAltTwo": "The first tiger released into Kazakhstan's wild, more than 70 years after the Turan tiger's extinction.",
+  "imageCredit": "KZ MINISTRY OF ECOLOGY / MONGABAY",
+  "imageCreditTwo": "KZ MINISTRY OF ECOLOGY / EURONEWS",
+  "imageSourceTwo": "https://www.euronews.com/2026/08/05/first-tiger-released-into-the-wild-in-kazakhstan-70-years-after-turan-tiger-extinction",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-kazakhstan-first-tiger-release-umit.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Ile-Balkhash reserve",
+      "detail": "Southeastern Kazakhstan"
+    },
+    {
+      "start": 2.5,
+      "end": 4.4,
+      "eyebrow": "Field image / context",
+      "value": "Tigress Umit",
+      "detail": "Satellite-collared, 31 July"
+    },
+    {
+      "start": 3.5,
+      "end": 5.9,
+      "eyebrow": "First release / 70 years",
+      "value": "70",
+      "detail": "Years since a tiger last roamed Kazakhstan",
+      "kind": "stat"
+    },
+    {
+      "start": 6.5,
+      "end": 8.4,
+      "eyebrow": "Species / comeback",
+      "value": "Turan tiger",
+      "detail": "Extinct in the wild since the 1940s"
+    },
+    {
+      "start": 8.5,
+      "end": 10.4,
+      "eyebrow": "Outlook / rewilding",
+      "value": "3 more tigers",
+      "detail": "Await release in Central Asia"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "First tiger in Kazakhstan",
+        "in 70 years."
+      ],
+      "highlights": [
+        "First tiger in Kazakhstan",
+        "in 70 years"
+      ]
+    },
+    {
+      "lines": [
+        "Umit means",
+        "hope."
+      ],
+      "highlights": [
+        "Umit means",
+        "hope"
+      ]
+    },
+    {
+      "lines": [
+        "Released into",
+        "Ile-Balkhash reserve."
+      ],
+      "highlights": [
+        "Released into",
+        "Ile-Balkhash reserve"
+      ]
+    },
+    {
+      "lines": [
+        "Three more tigers",
+        "to come."
+      ],
+      "highlights": [
+        "Three more tigers",
+        "to come"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Mongabay",
+      "title": "Kazakhstan releases first tiger into the wild in 70 years",
+      "url": "https://news.mongabay.com/short-article/kazakhstan-releases-first-tiger-into-the-wild-in-70-years/",
+      "published": "2026-08-10",
+      "usedFor": [
+        "first tiger since 1948",
+        "Umit released 31 July 2026 into Ile-Balkhash",
+        "three more tigers await release"
+      ]
+    },
+    {
+      "publisher": "Euronews",
+      "title": "First tiger released into the wild in Kazakhstan 70 years after Turan tiger extinction",
+      "url": "https://www.euronews.com/2026/08/05/first-tiger-released-into-the-wild-in-kazakhstan-70-years-after-turan-tiger-extinction",
+      "published": "2026-08-05",
+      "usedFor": [
+        "corroborates release and 70-year gap",
+        "Turan tiger extinction context"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

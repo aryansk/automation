@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "fort-hood-apache-crash-salado-texas-2026-08-12",
+  "tone": "bad",
+  "statWords": "two",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Salado",
+  "region": "Texas",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Army crash · Texas",
+  "headline": "Two US soldiers killed in Apache helicopter crash in Texas",
+  "summary": "An AH-64 Apache from Fort Hood crashed into a field near Salado, Texas, killing both crew members and sparking a large grass fire; the cause is under investigation.",
+  "script": "A US Army Apache helicopter crashed into a field near Fort Hood in Texas on Wednesday, killing two soldiers and sparking a grass fire. Officials confirmed the crash happened in Bell County, north of Austin. The cause is under investigation.",
+  "source": "Reuters",
+  "openingHook": "TEXAS: APACHE CRASH KILLS 2",
+  "imageOne": "assets/stories/2026-08-13/bad-fort-hood-apache/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/bad-fort-hood-apache/secondary.jpg",
+  "imageAlt": "Emergency personnel respond to the crash of an AH-64 Apache helicopter near Salado, Texas, 12 Aug 2026.",
+  "imageAltTwo": "A tanker aircraft drops fire retardant on a field southwest of Salado after the helicopter crash sparked a grass fire.",
+  "imageCredit": "BELL COUNTY SHERIFF / REUTERS",
+  "imageCreditTwo": "KILLEEN DAILY HERALD / AP",
+  "imageSourceTwo": "https://www.cbsnews.com/news/apache-helicopter-crash-salado-texas-fort-hood/",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-fort-hood-apache-crash-salado-texas.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Salado",
+      "detail": "Texas · Bell County"
+    },
+    {
+      "start": 2.5,
+      "end": 4.4,
+      "eyebrow": "Field image / context",
+      "value": "AH-64 Apache",
+      "detail": "From Fort Hood"
+    },
+    {
+      "start": 6.34,
+      "end": 8.74,
+      "eyebrow": "Crew / killed",
+      "value": "2",
+      "detail": "Soldiers died at the scene",
+      "kind": "stat"
+    },
+    {
+      "start": 6.5,
+      "end": 8.4,
+      "eyebrow": "Crash / aftermath",
+      "value": "Grass fire",
+      "detail": "Large blaze sparked"
+    },
+    {
+      "start": 8.5,
+      "end": 10.4,
+      "eyebrow": "Investigation",
+      "value": "Cause unknown",
+      "detail": "Under investigation"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "An Apache crashed",
+        "near Fort Hood."
+      ],
+      "highlights": [
+        "An Apache crashed",
+        "near Fort Hood"
+      ]
+    },
+    {
+      "lines": [
+        "Two soldiers",
+        "killed."
+      ],
+      "highlights": [
+        "Two soldiers",
+        "killed"
+      ]
+    },
+    {
+      "lines": [
+        "The crash sparked",
+        "a grass fire."
+      ],
+      "highlights": [
+        "The crash sparked",
+        "a grass fire"
+      ]
+    },
+    {
+      "lines": [
+        "Cause under",
+        "investigation."
+      ],
+      "highlights": [
+        "Cause under",
+        "investigation"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Two US Army soldiers killed in Texas helicopter crash",
+      "url": "https://www.reuters.com/world/us/two-us-army-soldiers-killed-texas-helicopter-crash-2026-08-12/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "2 soldiers dead",
+        "AH-64 from Fort Hood, Bell County",
+        "grass fire"
+      ]
+    },
+    {
+      "publisher": "CBS News",
+      "title": "2 soldiers killed as Apache helicopter from Fort Hood crashes in Salado, Texas",
+      "url": "https://www.cbsnews.com/news/apache-helicopter-crash-salado-texas-fort-hood/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "both pronounced dead ~2:30pm",
+        "crash sparked wildfire"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

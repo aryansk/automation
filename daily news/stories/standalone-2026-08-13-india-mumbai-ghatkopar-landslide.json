@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "india-mumbai-ghatkopar-landslide-2026-08-12",
+  "tone": "bad",
+  "statWords": "seven",
+  "countryCode": "IN",
+  "countryName": "India",
+  "cityName": "Mumbai",
+  "region": "Maharashtra",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Landslide · Mumbai",
+  "headline": "Landslide kills 7 as monsoon rains batter Mumbai's Ghatkopar",
+  "summary": "A hillside collapsed onto homes in Mumbai's Ghatkopar suburb before dawn Wednesday, killing at least seven people and injuring four, officials said, with one person missing.",
+  "script": "A hillside collapsed onto homes in Mumbai's Ghatkopar neighbourhood before dawn Wednesday. Officials say at least seven people died, and four were injured. Rescuers pulled ten survivors from the rubble. One person remained missing.",
+  "source": "AP",
+  "openingHook": "MUMBAI: LANDSLIDE KILLS 7",
+  "imageOne": "assets/stories/2026-08-13/bad-mumbai-landslide/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/bad-mumbai-landslide/secondary.jpg",
+  "imageAlt": "Rescue workers carry the body of a victim after a landslide at a slum in Mumbai, India, 12 Aug 2026.",
+  "imageAltTwo": "A rescue worker takes a break in a slum affected by the landslide in Mumbai, India, 12 Aug 2026.",
+  "imageCredit": "AP PHOTO / RAFIQ MAQBOOL",
+  "imageCreditTwo": "AP PHOTO / RAFIQ MAQBOOL",
+  "imageSourceTwo": "https://apnews.com/article/india-mumbai-monsoon-rains-landslide-ghatkopar-413691a4ef81319fe2487d77edfb8c81",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-india-mumbai-ghatkopar-landslide.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Mumbai",
+      "detail": "Ghatkopar · India"
+    },
+    {
+      "start": 2.5,
+      "end": 4.4,
+      "eyebrow": "Field image / context",
+      "value": "Hillside collapse",
+      "detail": "Before dawn Wednesday"
+    },
+    {
+      "start": 7.14,
+      "end": 9.54,
+      "eyebrow": "Death toll / officials",
+      "value": "7",
+      "detail": "Killed, 4 injured",
+      "kind": "stat"
+    },
+    {
+      "start": 6.5,
+      "end": 8.4,
+      "eyebrow": "Rescue / rubble",
+      "value": "10 pulled out",
+      "detail": "One person missing"
+    },
+    {
+      "start": 8.5,
+      "end": 10.4,
+      "eyebrow": "Weather / ongoing",
+      "value": "Monsoon rains",
+      "detail": "Still battering the city"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "A hillside collapsed",
+        "on Mumbai homes."
+      ],
+      "highlights": [
+        "A hillside collapsed",
+        "on Mumbai homes"
+      ]
+    },
+    {
+      "lines": [
+        "Seven people",
+        "died."
+      ],
+      "highlights": [
+        "Seven people",
+        "died"
+      ]
+    },
+    {
+      "lines": [
+        "Rescuers pulled",
+        "10 to safety."
+      ],
+      "highlights": [
+        "Rescuers pulled",
+        "10 to safety"
+      ]
+    },
+    {
+      "lines": [
+        "One person",
+        "still missing."
+      ],
+      "highlights": [
+        "One person",
+        "still missing"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Associated Press",
+      "title": "Landslide in Mumbai kills 7 as monsoon rains drench India",
+      "url": "https://apnews.com/article/india-mumbai-monsoon-rains-landslide-ghatkopar-413691a4ef81319fe2487d77edfb8c81",
+      "published": "2026-08-12",
+      "usedFor": [
+        "toll of 7",
+        "4 injured, 1 missing",
+        "more monsoon forecast"
+      ]
+    },
+    {
+      "publisher": "ABC News (AP wire)",
+      "title": "Landslide in Mumbai kills 6 as India is drenched by monsoon rains",
+      "url": "https://abcnews.com/International/wireStory/landslide-mumbai-kills-6-india-drenched-monsoon-rains-135569163",
+      "published": "2026-08-12",
+      "usedFor": [
+        "initial toll and rescue details",
+        "10 pulled from debris"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

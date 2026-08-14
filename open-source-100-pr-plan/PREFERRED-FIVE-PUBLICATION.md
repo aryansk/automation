@@ -5,6 +5,18 @@ The refined-github PR is excluded from this campaign and will not be touched;
 its maintainer request remains respected within that repository. Each
 independent repository still requires its own live preflight.
 
+## Current operating protocol
+
+The historical tables in this handoff are leads and evidence, not a
+preselected five-lane work order. The active workflow uses
+`LANE_STATE.json`: keep at most a small reserve pool, select one candidate,
+perform a fresh live preflight immediately before implementation, and repeat
+that preflight immediately before publication. Use the next reserve candidate
+when the issue closes, is claimed, overlaps another PR, or fails a policy or
+validation gate. Record the four lane timestamps and count only canonical,
+head-verified open drafts in `PUBLISHED`. Do not use a historical table entry
+as current eligibility without both fresh checks.
+
 ## Current handoff — 2026-08-10
 
 The latest five-PR packet is complete: Apache Beam #39688 and #39689 plus

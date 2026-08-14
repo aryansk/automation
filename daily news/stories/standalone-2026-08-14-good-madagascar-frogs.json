@@ -1,0 +1,165 @@
+{
+  "eventId": "madagascar-seven-diamond-frog-species-2026-08-11",
+  "tone": "good",
+  "countryCode": "MG",
+  "countryName": "Madagascar",
+  "cityName": "",
+  "region": "Indian Ocean",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Nature · Discovery",
+  "headline": "Seven new diamond frog species found in Madagascar",
+  "summary": "After 12 years of research, scientists identified seven new diamond frogs, showing the island's amphibian diversity is larger than thought.",
+  "script": "Scientists have discovered seven new species of diamond frog in Madagascar. The tiny frogs were found after twelve years of research, hidden in the island's forests. Researchers say the discovery shows Madagascar's wildlife is even richer than believed.",
+  "source": "Phys.org · SciTechDaily",
+  "edition": "14 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "SEVEN NEW FROGS · MADAGASCAR",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-14/good-madagascar-frogs/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-14/good-madagascar-frogs/secondary.jpg",
+  "imageAlt": "A diamond frog, Rhombophryne mavokely, one of seven newly described species from Madagascar.",
+  "imageAltTwo": "A Boophis tree frog species from Madagascar, named after Captain Pike.",
+  "imageCredit": "SCITECHDAILY",
+  "imageCreditTwo": "SCITECHDAILY",
+  "imageSourceTwo": "https://scitechdaily.com/seven-new-frog-species-uncovered-in-madagascar-after-12-years-of-research/",
+  "narrationAudio": "assets/narration/standalone-2026-08-14-good-madagascar-frogs.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "Madagascar",
+      "detail": "Indian Ocean island"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Discovery / count",
+      "value": "Seven species",
+      "detail": "New diamond frogs",
+      "kind": "stat"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Research / effort",
+      "value": "12 years",
+      "detail": "International team",
+      "kind": "stat"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Significance / diversity",
+      "value": "Hidden diversity",
+      "detail": "Island richer than known"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Outlook / conservation",
+      "value": "Guides protection",
+      "detail": "Informs conservation planning"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Seven new frog species",
+        "found in Madagascar."
+      ],
+      "highlights": [
+        "Seven new"
+      ]
+    },
+    {
+      "lines": [
+        "After 12 years",
+        "of research."
+      ],
+      "highlights": [
+        "12 years"
+      ]
+    },
+    {
+      "lines": [
+        "Tiny diamond frogs,",
+        "hidden in forests."
+      ],
+      "highlights": [
+        "diamond frogs"
+      ]
+    },
+    {
+      "lines": [
+        "Island's wildlife",
+        "richer than known."
+      ],
+      "highlights": [
+        "richer than known"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Phys.org",
+      "title": "Seven new diamond frog species reveal Madagascar's hidden diversity",
+      "url": "https://phys.org/news/2026-08-diamond-frog-species-reveal-madagascar.html",
+      "published": "2026-08-03",
+      "usedFor": [
+        "seven new species",
+        "Rhombophryne diamond frogs",
+        "12 years of fieldwork"
+      ]
+    },
+    {
+      "publisher": "SciTechDaily",
+      "title": "Seven New Frog Species Uncovered in Madagascar After 12 Years of Research",
+      "url": "https://scitechdaily.com/seven-new-frog-species-uncovered-in-madagascar-after-12-years-of-research/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "hidden diversity shaping conservation",
+        "diamond frog identification",
+        "species photos"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Positive standalone — biodiversity discovery verified via Phys.org and SciTechDaily with caption-checked imagery.",
+    "researchDate": "14 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. SciTechDaily species images used with credit banners.",
+    "generated": false
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "eventId": "lewes-train-derailment-2026-08-13",
+  "tone": "bad",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Lewes",
+  "region": "East Sussex",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Accident · Rail",
+  "headline": "Two seriously injured as train derails near Lewes",
+  "summary": "A Southern service from London to Eastbourne left the tracks close to Lewes station, injuring around 20 people including two seriously.",
+  "script": "A passenger train has derailed near Lewes in southern England. The Southern service from London to Eastbourne left the tracks close to the station, with carriages tipping over. At least twenty people were injured, two of them seriously.",
+  "source": "BBC · ITV",
+  "edition": "14 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "TRAIN DERAILS · LEWES",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-14/bad-lewes-derailment/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-14/bad-lewes-derailment/secondary.jpg",
+  "imageAlt": "Aerial photograph of a passenger train derailment near Lewes, East Sussex, with carriages off the tracks, 13 Aug 2026.",
+  "imageAltTwo": "Emergency responders and rail workers beside a derailed train carriage resting on its side near Lewes.",
+  "imageCredit": "EDDIE MITCHELL · BBC",
+  "imageCreditTwo": "ROB BRADLEY · BBC",
+  "imageSourceTwo": "https://www.bbc.com/news/articles/cz972d30l30o",
+  "narrationAudio": "assets/narration/standalone-2026-08-14-bad-lewes-derailment.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "Lewes",
+      "detail": "East Sussex · England"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Service / route",
+      "value": "London → Eastbourne",
+      "detail": "Southern commuter train"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Casualties / confirmed",
+      "value": "2 seriously hurt",
+      "detail": "Around 20 injured total",
+      "kind": "stat"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Response / rescue",
+      "value": "Carriages overturned",
+      "detail": "Emergency services at scene"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Aftermath / closure",
+      "value": "Lines closed",
+      "detail": "Routes disrupted in area"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Passenger train",
+        "derails near Lewes."
+      ],
+      "highlights": [
+        "derails"
+      ]
+    },
+    {
+      "lines": [
+        "Two seriously injured,",
+        "20 hurt overall."
+      ],
+      "highlights": [
+        "Two seriously injured"
+      ]
+    },
+    {
+      "lines": [
+        "Carriages tipped",
+        "off the track."
+      ],
+      "highlights": [
+        "tipped off"
+      ]
+    },
+    {
+      "lines": [
+        "Rail lines",
+        "closed after crash."
+      ],
+      "highlights": [
+        "closed"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Two seriously hurt as passenger train derails in Lewes",
+      "url": "https://www.bbc.com/news/articles/cz972d30l30o",
+      "published": "2026-08-13",
+      "usedFor": [
+        "two seriously injured",
+        "London Victoria to Eastbourne service",
+        "derailed close to Lewes station"
+      ]
+    },
+    {
+      "publisher": "ITV News",
+      "title": "Pair seriously injured in Lewes train derailment not in life-threatening condition",
+      "url": "https://www.itv.com/news/meridian/2026-08-13/train-derails-near-lewes-station-with-people-warned-to-avoid-the-area",
+      "published": "2026-08-13",
+      "usedFor": [
+        "two passengers seriously injured",
+        "avoid-the-area warning",
+        "rail disruption"
+      ]
+    },
+    {
+      "publisher": "The New York Times",
+      "title": "Two Seriously Injured When Train Derails in Southern England",
+      "url": "https://www.nytimes.com/2026/08/13/world/europe/train-derails-southern-england.html",
+      "published": "2026-08-13",
+      "usedFor": [
+        "British Transport Police statement",
+        "injuries confirmed"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Breaking standalone — rail accident with two serious injuries, verified by BBC, ITV and NYT; caption-checked photos.",
+    "researchDate": "14 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. BBC contributor photos used with credit banners.",
+    "generated": false
+  }
+}

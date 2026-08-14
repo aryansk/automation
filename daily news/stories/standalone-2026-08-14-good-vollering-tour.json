@@ -1,0 +1,174 @@
+{
+  "eventId": "vollering-tour-femmes-second-title-2026-08-09",
+  "tone": "good",
+  "countryCode": "FR",
+  "countryName": "France",
+  "cityName": "Nice",
+  "region": "Côte d'Azur",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Sport · Cycling",
+  "headline": "Vollering wins second Tour de France Femmes title",
+  "summary": "Demi Vollering attacked on the final stage in Nice to become the first two-time winner of the women's Tour de France.",
+  "script": "Demi Vollering has won the Tour de France Femmes for the second year running. The Dutch rider attacked on the final stage in Nice and held on to become the race's first two-time winner. She is one of cycling's brightest stars.",
+  "source": "BBC · Guardian",
+  "edition": "14 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "VOLLERING WINS · TOUR DE FRANCE",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-14/good-vollering-tour/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-14/good-vollering-tour/secondary.jpg",
+  "imageAlt": "Demi Vollering lifts her bike to celebrate after winning the final stage of the 2026 Tour de France Femmes in Nice.",
+  "imageAltTwo": "The jersey winners on the podium after the final stage of the 2026 Tour de France Femmes.",
+  "imageCredit": "GETTY · BBC SPORT",
+  "imageCreditTwo": "GETTY · BBC SPORT",
+  "imageSourceTwo": "https://www.bbc.com/sport/cycling/articles/ceqevv9vjpdo",
+  "narrationAudio": "assets/narration/standalone-2026-08-14-good-vollering-tour.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "Nice",
+      "detail": "Final stage · France"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Rider / winner",
+      "value": "Demi Vollering",
+      "detail": "Dutch rider, SD Worx"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Title / history",
+      "value": "Second victory",
+      "detail": "First two-time winner",
+      "kind": "stat"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Final stage / drama",
+      "value": "Solo attack",
+      "detail": "Won on the Col d'Èze"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Reaction / future",
+      "value": "Back-to-back",
+      "detail": "Now a two-time champion"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Demi Vollering",
+        "wins again."
+      ],
+      "highlights": [
+        "wins again"
+      ]
+    },
+    {
+      "lines": [
+        "Second Tour de France",
+        "Femmes title."
+      ],
+      "highlights": [
+        "Second"
+      ]
+    },
+    {
+      "lines": [
+        "First woman to win",
+        "the race twice."
+      ],
+      "highlights": [
+        "first woman"
+      ]
+    },
+    {
+      "lines": [
+        "Solo attack",
+        "on the final stage."
+      ],
+      "highlights": [
+        "Solo attack"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC Sport",
+      "title": "Vollering wins final stage to clinch second Tour title",
+      "url": "https://www.bbc.com/sport/cycling/articles/ceqevv9vjpdo",
+      "published": "2026-08-09",
+      "usedFor": [
+        "first two-time winner",
+        "won final stage in Nice",
+        "second Tour de France Femmes title"
+      ]
+    },
+    {
+      "publisher": "The Guardian",
+      "title": "Vollering wins second title but tactics row simmers",
+      "url": "https://www.theguardian.com/sport/2026/aug/09/tour-de-france-femmes-demi-vollering-cycling",
+      "published": "2026-08-09",
+      "usedFor": [
+        "solo attack on final stage",
+        "second title confirmed",
+        "race context"
+      ]
+    },
+    {
+      "publisher": "France 24",
+      "title": "Demi Vollering wins second Women's Tour de France title",
+      "url": "https://www.france24.com/en/sport/20260809-demi-vollering-wins-second-women-s-tour-de-france-title",
+      "published": "2026-08-09",
+      "usedFor": [
+        "victory in Nice",
+        "final stage winner"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Positive standalone — landmark sporting achievement verified via BBC, Guardian and France 24; caption-checked imagery.",
+    "researchDate": "14 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Getty via BBC Sport images used with credit banners.",
+    "generated": false
+  }
+}

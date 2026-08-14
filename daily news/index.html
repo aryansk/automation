@@ -7,6 +7,8 @@
     {"id":"openerTitle","type":"string","label":"Opening title","default":"Good morning, bad news"},
     {"id":"openerLine","type":"string","label":"Cold open line","default":"Good morning, bad news"},
     {"id":"openerSub","type":"string","label":"Cold open sub-label","default":"Global brief · 02 Aug 2026"},
+    {"id":"hookMode","type":"boolean","label":"Story-specific hook mode","default":false},
+    {"id":"hookLine","type":"string","label":"Story-specific hook","default":""},
     {"id":"openerEnd","type":"number","label":"When the cold open leaves","default":3.4},
     {"id":"endCardStart","type":"number","label":"When the end card enters","default":48.8},
     {"id":"endCardReveal","type":"number","label":"When the end card is readable","default":49.1},
@@ -14,7 +16,7 @@
     {"id":"narrationAudio","type":"string","label":"Continuous narration track","default":"assets/narration/silence.wav"},
     {"id":"footerNote","type":"string","label":"Footer left text","default":"Context first"},
     {"id":"ctaLine","type":"string","label":"End-card follow line","default":"Follow for tomorrow’s global brief."},
-    {"id":"ctaSource","type":"string","label":"End-card source reminder","default":"Sources in description."}
+    {"id":"ctaSource","type":"string","label":"End-card source reminder","default":""}
   ]'
 >
   <head>
@@ -43,7 +45,6 @@
 
       <div class="rail" id="rail">
         <span class="rail__desk"><span class="rail__dot"></span> <span data-bind="deskName"></span></span>
-        <span data-bind="edition"></span>
       </div>
       <div class="rail__rule" id="rail-rule" data-layout-ignore></div>
 
@@ -54,6 +55,8 @@
         </h1>
         <p class="opener__sub" data-bind="openerSub"></p>
       </div>
+
+      <div class="beat-card-track" id="beat-card-track"></div>
 
       <div class="locator" id="locator-0">
         <span class="locator__tick"></span>
@@ -198,7 +201,6 @@
       <div class="end-card" id="end-card">
         <span class="end-card__eyebrow">IndieHouse.io News / Next edition</span>
         <strong class="end-card__title" data-bind="ctaLine"></strong>
-        <span class="end-card__source" data-bind="ctaSource"></span>
       </div>
 
       <div class="footer" id="footer">

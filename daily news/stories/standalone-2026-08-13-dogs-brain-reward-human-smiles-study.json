@@ -1,0 +1,166 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "dogs-brain-reward-human-smiles-study-2026-08-10",
+  "tone": "good",
+  "countryCode": "AT",
+  "countryName": "Austria",
+  "cityName": "Vienna",
+  "region": "Europe",
+  "urgency": "low",
+  "storyType": "auto",
+  "kicker": "Animal science · Austria",
+  "headline": "Dogs' brains light up with reward when they see humans smile",
+  "summary": "fMRI scans of awake dogs show photographs of smiling people activate reward circuitry in the canine brain, researchers at the University of Vienna report.",
+  "script": "Brain scans of fourteen dogs found that photographs of smiling human faces activate reward regions of the canine brain. Scientists at the University of Vienna say the study shows smiling at dogs carries real positive value.",
+  "source": "BBC News",
+  "openingHook": "SCIENCE: DOGS' BRAINS REWARD OUR SMILES",
+  "imageOne": "assets/stories/2026-08-13/good-dogs-smile/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/good-dogs-smile/secondary.jpg",
+  "imageAlt": "Kun-kun, a dog, sits patiently in an MRI brain scanner during the study.",
+  "imageAltTwo": "Researchers Raúl Hernández-Pérez and Laura Cuaya with their dogs Odín and Kun-kun.",
+  "imageCredit": "LAURA CUAYA / UNIV. OF VIENNA",
+  "imageCreditTwo": "LAURA CUAYA / UNIV. OF VIENNA",
+  "imageSourceTwo": "https://www.bbc.com/news/articles/ce8kr3yrl6eo",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-dogs-brain-reward-human-smiles-study.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Vienna",
+      "detail": "Austria"
+    },
+    {
+      "start": 2.55,
+      "end": 4.45,
+      "eyebrow": "Field image / context",
+      "value": "14 dogs scanned",
+      "detail": "Awake in an MRI"
+    },
+    {
+      "start": 4.6,
+      "end": 6.5,
+      "eyebrow": "Finding / brains",
+      "value": "Smiling faces",
+      "detail": "Light up reward regions"
+    },
+    {
+      "start": 6.65,
+      "end": 8.55,
+      "eyebrow": "Method / study",
+      "value": "iScience journal",
+      "detail": "University of Vienna"
+    },
+    {
+      "start": 8.7,
+      "end": 10.6,
+      "eyebrow": "Takeaway / dogs",
+      "value": "Real positive value",
+      "detail": "Domestication shaped the bond"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Fourteen dogs scanned",
+        "in an MRI."
+      ],
+      "highlights": [
+        "Fourteen dogs scanned",
+        "in an MRI"
+      ]
+    },
+    {
+      "lines": [
+        "Smiling faces light",
+        "up reward regions."
+      ],
+      "highlights": [
+        "Smiling faces light",
+        "up reward regions"
+      ]
+    },
+    {
+      "lines": [
+        "Dogs read",
+        "human emotion."
+      ],
+      "highlights": [
+        "Dogs read",
+        "human emotion"
+      ]
+    },
+    {
+      "lines": [
+        "So smile at",
+        "your dog."
+      ],
+      "highlights": [
+        "So smile at",
+        "your dog"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "We should smile at our dogs - a new scientific study reveals why",
+      "url": "https://www.bbc.com/news/articles/ce8kr3yrl6eo",
+      "published": "2026-08-10",
+      "usedFor": [
+        "14 dogs scanned awake",
+        "reward circuitry responded to happy faces",
+        "University of Vienna researchers"
+      ]
+    },
+    {
+      "publisher": "ScienceDaily",
+      "title": "Dogs can tell fear from sadness - and scientists saw it in their brains",
+      "url": "https://www.sciencedaily.com/releases/2026/08/260811011132.htm",
+      "published": "2026-08-11",
+      "usedFor": [
+        "iScience study",
+        "temporal cortex and caudate nucleus activity",
+        "machine-learning analysis"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

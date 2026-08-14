@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "lakers-record-12-5bn-sale-2026-08-12",
+  "tone": "good",
+  "statWords": "twelve point five",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Los Angeles",
+  "region": "California",
+  "urgency": "medium",
+  "storyType": "auto",
+  "kicker": "Record sale · NBA",
+  "headline": "LA Lakers sold for record $12.5 billion, biggest US sports deal",
+  "summary": "Josh Kushner and former Disney chief Bob Iger are buying the NBA's most valuable franchise from Mark Walter for $12.5 billion, topping every previous US sports team sale.",
+  "script": "The Los Angeles Lakers are being sold for a record twelve point five billion dollars. Josh Kushner and former Disney chief Bob Iger will buy the NBA franchise from Mark Walter. The price tops every previous US sports team sale.",
+  "source": "AP",
+  "openingHook": "LAKERS SOLD FOR $12.5 BILLION",
+  "imageOne": "assets/stories/2026-08-13/good-lakers-sale/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/good-lakers-sale/secondary.jpg",
+  "imageAlt": "Luka Doncic, the LA Lakers' star player, during a game.",
+  "imageAltTwo": "Crypto.com Arena before a Lakers game, January 2026, file photo.",
+  "imageCredit": "GETTY IMAGES / BBC SPORT",
+  "imageCreditTwo": "AP PHOTO / ETHAN SWOPE",
+  "imageSourceTwo": "https://apnews.com/article/lakers-sale-kushner-iger-12-billion-d5058bb845d87873e23e270a6bb9be9f",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-lakers-record-12-5bn-sale.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Los Angeles",
+      "detail": "California · USA"
+    },
+    {
+      "start": 2.5,
+      "end": 4.4,
+      "eyebrow": "Field image / context",
+      "value": "LA Lakers",
+      "detail": "NBA's most valuable franchise"
+    },
+    {
+      "start": 2.9,
+      "end": 5.3,
+      "eyebrow": "Sale price / record",
+      "value": "$12.5B",
+      "detail": "Biggest US sports team sale",
+      "kind": "stat"
+    },
+    {
+      "start": 6.5,
+      "end": 8.4,
+      "eyebrow": "Buyers / sellers",
+      "value": "Kushner · Iger",
+      "detail": "From Mark Walter"
+    },
+    {
+      "start": 8.5,
+      "end": 10.4,
+      "eyebrow": "Pending / NBA",
+      "value": "Board approval",
+      "detail": "Still required"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "The Lakers sold",
+        "for $12.5 billion."
+      ],
+      "highlights": [
+        "The Lakers sold",
+        "for $12.5 billion"
+      ]
+    },
+    {
+      "lines": [
+        "A record US",
+        "sports deal."
+      ],
+      "highlights": [
+        "A record US",
+        "sports deal"
+      ]
+    },
+    {
+      "lines": [
+        "Kushner and Iger",
+        "lead the buy."
+      ],
+      "highlights": [
+        "Kushner and Iger",
+        "lead the buy"
+      ]
+    },
+    {
+      "lines": [
+        "NBA approval",
+        "still pending."
+      ],
+      "highlights": [
+        "NBA approval",
+        "still pending"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC Sport",
+      "title": "LA Lakers to be sold in record $12.5bn deal",
+      "url": "https://www.bbc.com/sport/basketball/articles/c04k2dn422xo",
+      "published": "2026-08-12",
+      "usedFor": [
+        "record $12.5bn price",
+        "Kushner and Iger buyers, Walter seller"
+      ]
+    },
+    {
+      "publisher": "Associated Press",
+      "title": "Lakers being sold to Josh Kushner and Bob Iger for $12.5 billion",
+      "url": "https://apnews.com/article/lakers-sale-kushner-iger-12-billion-d5058bb845d87873e23e270a6bb9be9f",
+      "published": "2026-08-13",
+      "usedFor": [
+        "record for US pro sports",
+        "prior $10bn valuation",
+        "NBA board approval needed"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

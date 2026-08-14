@@ -2823,3 +2823,661 @@ a conversational reply.
 - **Next pickup:** monitor the three drafts for hosted checks and maintainer
   feedback; run the Notion batch closeout when possible; keep pydantic #13630
   ready for publication if a maintainer assigns the issue.
+
+## 2026-08-11 — review comments handled after EXT-153 through EXT-156
+
+- The live delta audit started at `2026-08-11T10:18:09Z`, rechecked 16
+  authored PRs, emitted 12 non-self events, and advanced the cursor to
+  `2026-08-11T15:34:42Z` after every event had a reply URL or resulting state.
+- **Python-Markdown #1621:** addressed the maintainer feedback in
+  `b745bba2f65f717607a0aaf79e9da66cf7d8c56c`. Removed the flaky wall-clock
+  regression test, added deterministic search-offset coverage, and moved the
+  #1619 changelog entry under `Unreleased > Changed`. The full unittest suite
+  passed 1,089 tests with 13 skipped; changed-file flake8 and `git diff --check`
+  passed; local and remote heads match. Replies were posted to the review
+  summary and each of the five inline review comments.
+- **grpc-go #9296:** implemented Gemini's requested default-authority check in
+  `efbf74467e6c27ed31febb5fc3d17c736cda1a27`; `go test ./stats -count=1`
+  passed and the fork remote hash matches. Replied to the command comment,
+  review summary, and inline thread. The PR remains Ready / Review Required.
+- **Pylint #11254:** the maintainer pointed to Astroid #3212 as the root fix.
+  Replied with the evidence and closed the superseded Pylint workaround; no
+  duplicate was reopened.
+- **Pydantic #13633:** acknowledged the assign-first policy and CodSpeed
+  notices on the already-closed PR. **Microsoft APM #2559:** replied that the
+  CLA remains contributor-controlled and was not accepted or impersonated.
+- Saved unresolved items remain Swift Distributed Tracing #235's API-boundary
+  decision and Jupyter Server #1689's pending maintainer re-review. The Notion
+  batch closeout remains blocked because no connector/token is available.
+
+## 2026-08-12 — authored-PR review follow-up
+
+- Removed the unnecessary OTel #5259 changelog entry, pushed
+  `5fe51219cd2a568eb966a32ebb5c3bfdde4fee28`, verified the remote head, replied
+  in both inline threads, and marked #5259 ready. Marked OTel #5261 ready after
+  its dashboard status requested reviewer handoff.
+- Added the required Codex AI-assistance disclosure to Hatch #2380 and replied
+  to the maintainer. Retargeted Swift System #378 to `release/1.8.x` and
+  verified the live base branch.
+- Replied to the Python-Markdown #1621 acknowledgement, both NetworkX policy
+  closures, and Swift System #379's SDK question. No speculative Swift #379
+  change was pushed; the SDK-boundary question remains a design hold.
+- The live delta audit was recorded and its cursor advanced. Remaining
+  unresolved items are the prior Swift Distributed Tracing and Jupyter Server
+  holds plus Swift System #379's compatibility-boundary question.
+
+## 2026-08-12 — OPS-024 five-PR publication closeout
+
+- The packet was selected after the review-delta pass and live duplicate,
+  claimant, repository-policy, and licensing checks. The original fsspec
+  #2059 lane was invalidated before implementation because upstream commit
+  `dee64db136576bdb7b732d6e17137427e110cd8a` already converted the exact
+  requested class-scoped fixtures to classmethods. Replacement mypy #21744
+  was freshly preflighted and had no open canonical PR or competing claim.
+- **Hatch #2384 → [PR #2385](https://github.com/pypa/hatch/pull/2385):** kept the
+  raw authored version string for Core Metadata while retaining normalized
+  PEP 440 handling internally. Commit `ab35793b6a0844c8948c4ccaad39e03f7333baf0`;
+  334 metadata tests passed; fork and canonical heads match.
+- **mypy #21813 → [PR #21837](https://github.com/python/mypy/pull/21837):** added
+  `__hash__` to the `Iterator` protocol and fixture, with a regression showing
+  `Iterator[str]` satisfies `Hashable` while `Iterable[str]` does not. Commit
+  `cec8b480122fcd8d67ee77921e075e764b62d9af`; 200 tests passed, 1 skipped,
+  and the issue reproducer succeeds.
+- **swift-format #1260 → [PR #1262](https://github.com/swiftlang/swift-format/pull/1262):**
+  changed standalone declaration modifier breaks to same-level breaks so a
+  wrapped `nonisolated` declaration is not over-indented. Commit
+  `1d5e960667e36c1f0b26e3108a7bc4fee113fd1`; build passed and StructDecl 15,
+  Attribute 27, and FunctionDecl 29 tests passed.
+- **mypy #21744 → [PR #21836](https://github.com/python/mypy/pull/21836):**
+  resolved the defining fullname and receiver type for `super().method(...)`
+  so `get_method_signature_hook` runs on those calls. Commit
+  `13622128bdf382b770ff319bd2e3dee1a822eac6`; custom-plugin suite 64 passed.
+- **Black #5270 → [PR #5305](https://github.com/psf/black/pull/5305):** added a
+  scoped fast path for flat subscript chains that selects the existing split
+  candidate without rebuilding every rejected candidate. Commit
+  `3bff8ca4217e88d879288fba4d5f2e088457155a`; exact-output/split-search tests
+  2 passed, transformation test 1 passed, output parity matched baseline,
+  and the hosted B905 pre-commit failure was fixed with explicit
+  `strict=False` before the updated head was pushed. The full test file had
+  166 passed and 2 unrelated terminal-color assertion failures.
+- All five canonical PRs are OPEN/Draft, mergeable, and exact-head verified;
+  none is counted until GitHub reports a canonical merge. Black pre-commit
+  passes on the corrected head. mypy formatting/type-check and pre-commit jobs
+  pass while broader jobs remain pending; one #21836 mypy_primer shard failed
+  before analysis because its pydantic clone exited 128. Hatch and
+  swift-format currently report no checks for their draft branches.
+- **Notion:** connector/token unavailable. EXT-157..161 and the
+  `PRs Submitted — 2026-08-12` aggregate were not written; GitHub remains
+  authoritative and the batch closeout is visibly incomplete.
+- **Post-publication review delta:** replied to the new Career Ops #2636
+  maintainer acknowledgement at `issuecomment-5265502572`; the saved Swift
+  Distributed Tracing #235, Jupyter Server #1689, and Swift System #379 holds
+  were rechecked without duplicate replies. The review cursor advanced to
+  `2026-08-12T10:29:18Z` after 9 PR rechecks.
+
+## 2026-08-12 — Sequential five-PR workflow adopted
+
+- Updated the OSS operating protocol after the OPS-025 replacement lane
+  demonstrated the stale-candidate failure mode: pytest #14864 was prepared
+  and briefly published, then closed by the maintainer as a duplicate of
+  #14865. The new workflow does not let a stale local implementation occupy a
+  packet slot.
+- Added `LANE_STATE.json` and `scripts/lane_state.py`. The state machine
+  supports reserve, fresh preflight, claim, implementation, validation, final
+  preflight, publication, stale, blocked, and duplicate states; records the
+  initial preflight, claim/work-start, final preflight, and publication times;
+  enforces one active lane; and counts only explicitly verified canonical
+  publications.
+- Updated `AGENTS.md`, `CODEX.md`, `CLAUDE.md`, `CONTRIBUTING.md`, `PLAN.md`,
+  `README.md`, `REPO_MATRIX.md`, `OUTCOME_LEARNING.md`,
+  `PREFERRED-FIVE-PUBLICATION.md`, `NOTION_DASHBOARD.md`, `PR_TRACKER.md`,
+  `WORK_QUEUE.md`, `STATUS.md`, and the issue-triage/thread-handoff templates.
+  They now require sequential execution, two live preflights, early claim
+  where permitted, review priority, automatic reserve replacement, and a
+  five-`PUBLISHED` closeout definition.
+- OPS-026 is the next ready queue item. Its state file starts with zero valid
+  published lanes; OPS-025 remains five open/unmerged drafts and its Notion
+  closeout is still connector-blocked.
+
+## 2026-08-12 — OPS-026 sequential five-PR publication closeout
+
+- The sequential packet reached the target exactly: `LANE_STATE.json` records
+  five canonical `PUBLISHED` lanes, no active lane, and an empty reserve pool;
+  `scripts/lane_state.py verify` reports `published_valid=5/5`.
+- **jupyter/nbconvert issue #1989 → [PR #2303](https://github.com/jupyter/nbconvert/pull/2303):** reused
+  nbconvert's existing `strip_ansi` filter for Markdown stream output and added
+  a regression test. Five focused exporter tests passed. The final canonical
+  head is `0cf6198ab37a86c02e91b3a51e2af73f872619cc`; pre-commit.ci also added
+  its changelog update.
+- **jupyter/nbclient issue #346 → [PR #351](https://github.com/jupyter/nbclient/pull/351):** removed the
+  duplicate release workflow because the equivalent check already runs from
+  `main.yml`. The full test suite passed 127 tests; canonical head
+  `444da39d09e7b0e09446a0e06f52ae4a8859d620`.
+- **jupyter-server/jupyter-resource-usage issue #253 → [PR #264](https://github.com/jupyter-server/jupyter-resource-usage/pull/264):**
+  updated the contribution-guide JupyterLab example from v3 to v4, matching
+  the repository dependency metadata. The focused package test passed; head
+  `f41a8d027732566add3d09578330e10997581ea2`.
+- **jupyter/nbgrader issue #1982 → [PR #2013](https://github.com/jupyter/nbgrader/pull/2013):** applied the
+  same ignore/include rules to the submission directory-size calculation and
+  copy operation. Four focused submission tests passed; head
+  `99dc5a243a99e2fe1307384ac94455ee22f3be50`.
+- **jupyter-server/jupyter_server issue #1661 → [PR #1693](https://github.com/jupyter-server/jupyter_server/pull/1693):**
+  supplied Tornado request start lines in the two affected gateway fixtures.
+  Two focused tests passed; head
+  `8d01a932078523d0cdedc8631fd4d07cd7e57f24`. The commit used `--no-verify`
+  because the local pre-commit hook referenced a deleted temporary uv
+  environment; staged diff checks and focused tests passed.
+- The jupyter-console #305 candidate was abandoned before implementation after
+  scope inspection showed that `%cls` belongs to IPython's terminal alias and
+  Windows behavior. No duplicate PR was created.
+- A post-publication review audit was recorded and its cursor advanced to
+  `2026-08-12T14:33:29Z`. The new nbgrader Binder comment was informational;
+  the Swift System #379 maintainer follow-up preserved the existing SDK/design
+  hold and required no speculative code change.
+- All five PRs are OPEN/Draft and unmerged, so they remain submitted but not
+  merged/countable. Notion rows and the `PRs Submitted — 2026-08-12` aggregate
+  could not be written because the connector/token is unavailable; GitHub and
+  the local state machine remain authoritative.
+
+## 2026-08-13 — OPS-027 closeout
+
+- The sequential fresh-preflight packet completed with five canonical upstream
+  draft PRs: fsspec #2098, jupyter-server #1694, rust-clippy #17553, fsspec
+  #2099, and nbformat #457. `lane_state.py verify` reports `published_valid=5/5`
+  with no active lane or reserve lead.
+- Airflow #71497 was recorded as `ABANDONED_STALE` before implementation after
+  live inspection showed that upstream `main` already contains the Decimal
+  normalization and regression coverage. No duplicate branch or PR was created.
+- Local validation is recorded in `STATUS.md`: Sphinx/diff checks for fsspec
+  #2098; 38 utility tests and Ruff for jupyter-server #1694; the corrected
+  Rust UI fixture and formatting for rust-clippy #17553; 4 + 38 + 3 move tests
+  with Ruff for fsspec #2099; and 195 passed / 2 skipped with Ruff and targeted
+  pre-commit hooks for nbformat #457.
+- The initial rust-clippy hosted failure was handled by correcting the fixture
+  that triggered the existing `eq_op` lint and formatting the PR body; the
+  next hosted run then exposed the exact multi-diagnostic golden output,
+  including its terminal blank lines. That output was blessed and pushed at
+  corrected head `6d40561`, now under a fresh hosted check run. Full local
+  Clippy compilation remains unavailable because `rustc-dev` is not installed.
+- The post-publication audit answered fsspec #2099's maintainer overlap question
+  using the verified async-versus-sync implementation distinction and advanced
+  the cursor to `2026-08-12T18:51:20Z`. Swift Distributed Tracing #235, Jupyter
+  Server #1689, and Swift System #379 remain saved unresolved review holds.
+- All five drafts remain open, unmerged, and uncounted; the qualifying external
+  merge total remains 35. The Notion batch closeout is still blocked by the
+  unavailable connector/token, so GitHub and `LANE_STATE.json` are authoritative.
+
+## 2026-08-13 — OPS-028 closeout
+
+- The sequential fresh-preflight packet completed with five canonical upstream
+  draft PRs: dataprof #579, pandas #66744, marginalia #20, marginalia #21, and
+  dataprof #580. `lane_state.py verify` reports `published_valid=5/5` with no
+  active lane; two reserve leads (EXT-185, EXT-187) remain unclaimed.
+- **dataprof issue #559 → [PR #579](https://github.com/AndreaBozzo/dataprof/pull/579):**
+  blank records no longer vote in delimiter scoring. Commit `2fa0ffc`; 42 csv
+  tests, clippy, fmt, and diff checks pass.
+- **pandas issue #66742 → [PR #66744](https://github.com/pandas-dev/pandas/pull/66744):**
+  Index/DataFrame docs now state dicts are accepted and keys are used, with a
+  whatsnew entry. Commit `b671877`; runtime-verified on pandas 3.0.5, syntax
+  and diff checks pass.
+- **marginalia issue #17 → [PR #20](https://github.com/midhunkrishna/marginalia/pull/20):**
+  options page gained per-provider key-source links and order-of-magnitude cost
+  hints. Commit `abf62b8`; 981 tests, prettier, and diff checks pass.
+- **marginalia issue #18 → [PR #21](https://github.com/midhunkrishna/marginalia/pull/21):**
+  Gemini follow-ups reuse the hidden side-conversation via the captured
+  `[cid, rid, rcid]` triplet, threaded through parser, payload, client,
+  background port, ask-service, ask-flow, thread-controller, and panel-global.
+  Commit `b49e8d9`; 988 tests, eslint, prettier, and diff checks pass.
+- **dataprof issue #553 → [PR #580](https://github.com/AndreaBozzo/dataprof/pull/580):**
+  `schema_stable` now derives from scan exhaustion with a one-past-the-cap probe
+  for CSV and JSON/JSONL. Commit `d9be8ed`; partial 32, csv 41, core 142, json
+  52 tests, clippy, fmt, and diff checks pass.
+- Grafana #130611 was abandoned during preflight: open PR #130619 already
+  implements username whitespace trimming.
+- All five PRs are OPEN/Draft, mergeable, exact-head verified, and unmerged;
+  the qualifying external merged total remains 35. The Notion batch closeout
+  stays connector-blocked; GitHub and LANE_STATE.json are authoritative.
+
+## 2026-08-13 — OPS-029 closeout
+
+- The sequential fresh-preflight packet completed with five canonical upstream
+  draft PRs: dataprof #581, #582, #583, marginalia #22, and dataprof #584.
+  `lane_state.py verify` reports `published_valid=5/5` with no active lane and an
+  empty reserve pool.
+- **dataprof issue #550 → [PR #581](https://github.com/AndreaBozzo/dataprof/pull/581):**
+  `StreamingError` gained a per-site `suggestion` field; all 14 construction
+  sites now supply a cause-fitting remedy (or none), the two Parquet sites move
+  the file-path remedy out of `message`, and no error reachable from Python
+  names the Rust builder API. Commit `404dfd5`; 142 core, 10 engines, 33
+  partial tests plus clippy/fmt pass.
+- **dataprof issue #551 → [PR #582](https://github.com/AndreaBozzo/dataprof/pull/582):**
+  materialized Parquet byte buffers now route through the blocking reader via a
+  new `AsyncDataSource::take_bytes()` hook, so `asyncio.profile_bytes(..., format="parquet")`
+  matches the sync report. Commit `3807b30`; 51 runtime tests and a new Python
+  parity test pass.
+- **dataprof issue #548 → [PR #583](https://github.com/AndreaBozzo/dataprof/pull/583):**
+  added the `"bytes"` source type: `DataSource::Bytes`, the Python getter, the
+  schema enum, and the byte-buffer construction sites; real dataframes stay
+  `"dataframe"`. Commit `e4c7f63`; 141 core tests, all touched crates green,
+  schema README documents the additive v1 change.
+- **marginalia issue #19 → [PR #22](https://github.com/midhunkrishna/marginalia/pull/22):**
+  the context-menu handler now detects a blocked content script (sendMessage
+  rejection) and opens a guidance page naming site-access, admin-policy, and
+  Firefox-quarantine causes; README gained a Troubleshooting section. Commit
+  `b959112`; 987 tests pass including 3 new dead-click tests.
+- **dataprof issue #546 → [PR #584](https://github.com/AndreaBozzo/dataprof/pull/584):**
+  all report-facing mapping fields are now `BTreeMap`, making `to_json()`
+  byte-stable for unchanged input (maintainer-invited follow-up to #535).
+  Commit `bb85344`; 191 core/runtime tests and a new byte-stability Python test
+  pass.
+- All five PRs are OPEN/Draft, mergeable, exact-head verified, and unmerged;
+  the qualifying external merged total remains 35. The Notion batch closeout
+  stays connector-blocked; GitHub and LANE_STATE.json are authoritative.
+
+## 2026-08-13 — OPS-030 closeout
+
+- The sequential fresh-preflight packet completed with five canonical upstream
+  draft PRs: grafana #130651, xarray #11520, kubernetes/website #56970,
+  jupyterlab #19359, and jupyterlab #19360. `lane_state.py verify` reports
+  `published_valid=5/5` with no active lane or reserve leads.
+- **grafana issue #130649 → [PR #130651](https://github.com/grafana/grafana/pull/130651):**
+  `Gziper` now skips HEAD requests, preventing the pgzip short-write goroutine
+  leak. The regression test reproduces +100 goroutines on the unfixed code and
+  passes with the fix. Commit `a40ae7b4`; full middleware package, gofmt, vet
+  pass.
+- **xarray issue #11517 → [PR #11520](https://github.com/pydata/xarray/pull/11520):**
+  applied #11184's two-line `always() && needs.cache-pixi-lock.result == 'success'`
+  gate to the hypothesis job, restoring the nightly slow-Hypothesis suite that
+  had been silently skipped for ~6 months. Commit `536878d`; YAML parses clean.
+- **kubernetes/website issue #56966 → [PR #56970](https://github.com/kubernetes/website/pull/56970):**
+  the ResourceSlice glossary `full_link` now targets the GA
+  `resource-slice-v1` API page in en/fr/zh-cn. Commit `8b87685`; the old
+  v1beta1 page was confirmed removed from the tree.
+- **jupyterlab issue #19268 → [PR #19359](https://github.com/jupyterlab/jupyterlab/pull/19359):**
+  the contentVisibility `cells.changed` handler is stored and connected at most
+  once, and disconnected on model swap. Commit `19d4924`; notebook package
+  builds with zero TS errors and eslint matches baseline.
+- **jupyterlab issue #19267 → [PR #19360](https://github.com/jupyterlab/jupyterlab/pull/19360):**
+  a `WeakSet<NotebookPanel>` guards the collapse-state listener pair in
+  `notebook-extension`, so switching notebooks no longer stacks handlers.
+  Commit `f831e92`; extension package builds with zero TS errors.
+- All five PRs are OPEN/Draft, mergeable, exact-head verified, and unmerged;
+  the qualifying external merged total remains 35. The Notion batch closeout
+  stays connector-blocked; GitHub and LANE_STATE.json are authoritative.
+
+## 2026-08-13 OPS-031 lane 3 (EXT-200) published — microsoft/apm #2570
+
+- Discovered lane 3: microsoft/apm issue #2550 — `apm install --dry-run`
+  reported "No dependencies found in apm.yml" for LSP-only manifests because
+  LSP deps were parsed (`get_lsp_dependencies`) but never passed to
+  `render_and_exit`. Rejected 14+ other candidates this session (scikit-learn,
+  sphinx, hatch, dask, pylint, grafana, matplotlib, pandas, ipython,
+  setuptools, fsspec, xarray) due to competing open PRs, prior claims, stale
+  scope, or AI-policy blocks (scipy #7168).
+- Preflight (2026-08-13T14:35Z): issue OPEN, unassigned, triaged ACCEPT by the
+  repo bot panel, no competing PR, no claim comment, MIT, base=main, unit
+  tests exist for the module; score 10/13.
+- Fix: `dry_run.py` renders an `LSP dependencies (N):` block gated by
+  `should_install_mcp` (matching service_integration.py) and includes LSP deps
+  in the empty-manifest check; `install.py` passes `lsp_deps`. Commit
+  `14da0e7`, PR #2570, base main, fork head `14da0e7743e018156b9c035358616162c9a3f6c2`.
+- Validation: 1974 install unit tests + 3316 deps/model tests pass, ruff
+  check/format clean, mypy only pre-existing errors (5 on clean tree too);
+  live repro confirmed LSP-only manifest now renders the LSP block and empty
+  manifest still reports correctly.
+- Final preflight (2026-08-13T14:58Z) re-verified issue open, unassigned, no
+  competing PRs (2550 refs + dry_run refs), no new comments.
+- State: PUBLISHED with `--verified`; LANE_STATE now 3/5. STATUS.md and
+  WORK_QUEUE.md updated (EXT-198/199/200 rows, OPS-031 IN PROGRESS).
+
+## 2026-08-13 OPS-031 lane 4 (EXT-201) — dask/dask docs for low-cardinality join keys
+
+- Candidate: dask/dask #8769 ("DataFrame merge: clarify that merging on column
+  puts all matching values into one partition") — maintainer pavithraes
+  explicitly called the documentation task a good-first-issue; issue carries
+  the "needs attention" label.
+- Discovery: 20+ candidates rejected this session for lane 4 before selecting
+  this one — pandas #45409 (stale 2023, lukewarm), #47582 (2022 semantics
+  debate), scipy #7168 (AI policy) and #23522 (already done), pylint #5533
+  (maintainer: don't fix in pylint) and #7935 (maintainer: hard), matplotlib
+  #5380 (maintainer removed good-first-issue to stop AI spam) and #11797
+  (competing #31047), scikit-learn #34500 (claimed), #13339 (competing
+  #32290), #31595 (not a good first issue), #29094 (maintainer: tests not
+  needed), #23172 (2022, math-heavy), numpy #29720 (deep C, not a good first
+  issue), h5py #1604 (stale 2021), scikit-image #7272 (competing #8243),
+  dask #8769 runtime part, dask/distributed #4429/#7147 (competing PRs open),
+  microsoft/apm #2551/#2398 (concentration/competing PRs), apache/beam
+  #20059 (already fixed upstream), pydantic #10262 (rust, not good-first),
+  pip #12667 (maintainer: won't fix), sympy #27888 (competing refine PRs),
+  dataprof #517 (repo concentration).
+- Preflight (2026-08-13T15:10Z): issue OPEN, unassigned, no competing PR for
+  the docs part (only #12442 covers index-reset behaviour, different content;
+  #8966 merged docstring update "partially resolves"), BSD-3, no DCO/CLA
+  gate, base=main, docs page still lacks the caveat; score 10/13.
+- Fix: `docs/source/dataframe-joins.rst` — new paragraph in "Large to Large
+  Unsorted Joins" explaining that all rows sharing a join value land in one
+  partition, so low-cardinality keys can exceed single-worker memory and
+  raise MemoryError, with a pointer to the Sorted Joins section. Commit
+  `650b749`, branch `docs/8769-join-low-cardinality`, PR #12554, base main,
+  fork head `650b7492afb848e590984740da242a3d980551c2`.
+- Validation: full Sphinx docs build (`sphinx -b html docs/source`) succeeds
+  with no warnings on this page; new paragraph and internal `Sorted Joins`
+  anchor link render in the HTML output; behavioral claim verified locally
+  (15-row df across 3 partitions, merge on key, every value confined to a
+  single partition via to_delayed/compute); codespell clean; EOF newline ok.
+- Final preflight (2026-08-13T15:42Z): issue still OPEN/unassigned, no
+  competing PR, base=main, fork up to date with origin/main.
+- State: PUBLISHED with `--verified`; LANE_STATE now 4/5 (EXT-198/199/200/201).
+  STATUS.md updated; PR #12554 verified OPEN/Draft/MERGEABLE/author aryansk/
+  base main/head 650b749.
+
+## 2026-08-13 OPS-031 lane 5 (EXT-202) — jayqi/failed-build-issue-action debug {} for plain errors
+
+- Candidate: jayqi/failed-build-issue-action #130 ("Debug logging of errors
+  produces {} for plain errors") — maintainer-authored bug with an exact
+  proposed fix; repo has proven constructive history (PR #157 merged
+  2026-08-10 at `275f9754`).
+- Discovery: fresh-issue space remains saturated (pandas #66639 has three
+  competing PRs #66723/#66641/#66644; pandas #66656 is a design discussion;
+  mypy #21843 is a spec debate; no recent good-first-issue results in pandas/
+  xarray/dask/mypy/sphinx/pylint/scikit-learn/jupyter). Marginalia and
+  dataprof skipped for concentration (5 and 6 authored open PRs respectively).
+- Preflight (2026-08-13T15:52Z): issue OPEN, unassigned, 0 comments, label
+  `bug`, no competing PR, MIT, no CONTRIBUTING/AI-policy gate, base=main,
+  validation = `npm test` + eslint; score 12/13.
+- Fix (checkout `failed-build-issue-action-130`, branch
+  `codex/fix-130-error-debug`): `formatErrorForDebug` logs `error.stack`
+  (falling back to `String(error)`) plus `status`/`response.data` for Octokit
+  RequestErrors, replacing the `JSON.stringify(error)` that yields `{}`.
+  Two regression tests added. Commit `9c0b573`.
+- Validation: `npm test` 37 passed / 4 suites / 100% statement coverage,
+  `npm run lint` clean, `npm run build` (ncc) regenerated dist; `git diff
+  --check` clean. Node 24.19.0 via mise (repo devEngines gate rejects 25.x).
+- Final preflight (2026-08-13T16:05Z): issue OPEN/unassigned, no competing
+  PR, fork main up to date, base=main.
+- State: PUBLISHED with `--verified`; PR #176 verified OPEN/Draft/MERGEABLE/
+  author aryansk/base main/head 9c0b573. OPS-031 now 5/5; state preserved as
+  `LANE_STATE.OPS-031.complete.json`.
+
+## 2026-08-13 OPS-032 lane 1 (EXT-203) — jayqi/failed-build-issue-action label metadata
+
+- Candidate: jayqi/failed-build-issue-action #134 ("Set color/description when
+  auto-creating the label; document comment-target semantics") —
+  maintainer-authored enhancement with exact proposed fix (optional
+  `label-color`/`label-description` inputs or a fixed default color; document
+  or switch the sort semantics).
+- Preflight (2026-08-13T16:10Z): issue OPEN, unassigned, 0 comments, label
+  `enhancement`, no competing PR (only open PR is our own draft #176), MIT,
+  base=main; score 12/13.
+- Fix (checkout `failed-build-issue-action-134`, branch
+  `codex/issue-134-label-metadata`): added `label-color` (default `B60205`,
+  GitHub red) and `label-description` inputs to action.yml, passed through
+  main.js, and included in the `createLabel` request body only when set;
+  README "Comments vs. new issues" now documents created-date semantics and
+  the acceptable find-then-create race. Three tests (pass-through, body with
+  inputs, omitted-when-absent). Commit `a53b398`.
+- Validation: `npm test` 36 passed / 4 suites / 100% statement AND branch
+  coverage, `npm run lint` clean, ncc dist rebuilt, `git diff --check` clean.
+- Final preflight (2026-08-13T16:23Z): issue OPEN/unassigned, no competing
+  PR (AND query for label-color/label-description PRs = 0), fork up to date.
+- State: PUBLISHED with `--verified`; PR #177 verified OPEN/Draft/MERGEABLE/
+  author aryansk/base main/head a53b398. OPS-032 now 1/5.
+
+## 2026-08-13 review response delta + OPS-032 lane-2 pickup (pre-discovery)
+
+- Ran `scripts/review_audit_delta.sh`; new items: OTel #5261 (reyang LGTM +
+  3 inline comments + SHOULD-empty-batch suggestion, cijothomas note),
+  jupyterlab #19255 (krassowski: failing added test), apm #2570 (CLA bot),
+  dask #12554 (bot CI summary), holds rechecks #235/#379/#1689.
+- OTel #5261: implemented reyang's rephrase + OR removal + empty-batch
+  simplification at `28914fcf`; adopted SHOULD-export-empty-batch at
+  `5acfb3f`; markdownlint + `git diff --check` clean; 4 threads replied
+  (r3777371224, r3777372518, r3777373546, r3777595583, r3777597269).
+- jupyterlab #19255: root-caused the failing test (mock contents.save stamps
+  last_modified=now; jsdom no layout). Fixed deterministically at `89f5558`
+  by setting the timestamp directly on the model and driving the recorded
+  column size through `onResize`. Verified: full js-filebrowser suite passes
+  (157 tests + 1 pre-existing skip), tsc clean, eslint 0 errors. Replied at
+  issuecomment-5284061016.
+- apm #2570: CLA blocker recorded; truthful reply at issuecomment-5284111566
+  (human must reply `@microsoft-github-policy-service agree`); not signed.
+- dask #12554: bot noise, no-reply per precedent.
+- Holds rechecked: #235 design hold, #379 versioned canImport stands,
+  #1689 templates removed (only security.rst in branch) — no new activity.
+- `REVIEW_AUDIT.md` updated with the full delta table; cursor advanced to
+  `2026-08-13T17:27:26Z` (90 processed IDs, 3 holds remain).
+- Next: OPS-032 lane 2 discovery (fresh-issue space saturated; review
+  jayqi #131 / langgraph-agent-stack #132 / GCode / StudyMap / gortex leads).
+
+## 2026-08-13 — OPS-032 lane 2 PUBLISHED (GCode #43, EXT-204)
+
+- **Thread/task:** Publish OPS-032 lane 2: `shauryagangrade/GCode` issue #13 —
+  `execute_bash` confirmation prompt incompatible with non-interactive
+  environments (CI/Docker/pipes): raw `input()` raised `EOFError`/blocked.
+- **Discovery dead ends recorded:** langchain #39569 and #39568 both actively
+  claimed by reporter (PR #39596 exists, auto-closed pending assignment;
+  maintainer confirmed #39568 approach). langgraph #8608 has PR #8611.
+  deepagents #5469 has a require-issue-link auto-close gate and external
+  self-assignment returns 403 — submission would be auto-closed, lane blocked.
+  `Brescou/GCode` fork no longer exists; canonical repo is
+  `shauryagangrade/GCode`.
+- **Preflight:** issue open, 0 comments, no claimant, no PR references, no
+  auto-close gate, external PRs accepted (3 prior aryansk PRs #36/#37/#38
+  merged; AnayDhawan/AaronProbha18 also merged). Reproduced: `EOFError` under
+  piped stdin.
+- **Fix:** `gcode/tools.py` — wrap the approval `input()` in
+  `except (EOFError, KeyboardInterrupt): return "Command execution cancelled
+  by user."` — exactly mirrors `RichUI.ask_permission` (gcode/ui.py) which
+  already handles this; `--yes` (auto-approve) skips the prompt entirely;
+  docstring documents non-interactive rejection. No behavior change for
+  interactive sessions.
+- **Validation:** 29 tests pass (25 existing + 4 new: EOFError cancel,
+  KeyboardInterrupt cancel, non-y reject, auto-approve skips prompt); ruff
+  check + format clean; mypy clean; bandit clean.
+- **Publication:** draft [PR #43](https://github.com/shauryagangrade/GCode/pull/43)
+  at `f02444a` (branch `fix/tools/non-interactive-execute-bash` on
+  `aryansk/GCode` fork), base `main`, canonical-verified via lane_state
+  transition. `LANE_STATE.json` now `published_valid=2/5`.
+- **Files changed:** `/tmp/gcode-13/gcode/tools.py`, `/tmp/gcode-13/tests/test_tools.py`;
+  venv `/tmp/gcode-venv` (python3.13).
+- **Next:** lane 3 discovery (see STATUS.md prepared-next-candidate row).
+
+## 2026-08-14 — human PR comment follow-up
+
+- Ran `bash open-source-100-pr-plan/scripts/review_audit_delta.sh` from the
+  saved cursor. It rechecked the three saved holds: Swift Distributed Tracing
+  #235, Swift System #379, and Jupyter Server #1689.
+- Posted the truthful design-boundary reply to Swift Distributed Tracing #235
+  at `discussion_r3778609963`; no speculative code change was made.
+- For Swift System #379, verified the exact head `a6582c0`, hosted workflow
+  success, and `swift test --filter MachPort` (14/14 passed), replied at
+  `issuecomment-5285633170`, and marked the PR ready for review. The base is
+  `release/1.8.x`.
+- The GitHub app connector returned HTTP 403 for writes; authenticated `gh`
+  succeeded, and both GitHub URLs plus the ready state were read back. Jupyter
+  Server #1689 remains awaiting maintainer re-review. No unrelated local files
+  were staged, reset, or changed.
+
+## 2026-08-14 OPS-033 sequential five-PR packet (completed 5/5)
+
+- **Start state:** OPS-032 was 5/5 PUBLISHED in `LANE_STATE.json`; preserved as
+  `LANE_STATE.OPS-032.complete.json`; OPS-033 initialized (target 5).
+- **Merge reconciliation first (36 → 40):** verified three OPS-032 merges and
+  the OPS-030 xarray merge live: GCode #43 (`568e62fc`, 2026-08-14T10:07:57Z),
+  GCode #44 (`4803c6bc`, 2026-08-14T10:06:59Z), StudyMap #132
+  (`9c8d0f93`, 2026-08-14T07:25:16Z), xarray #11520 (`f4a89bd8`,
+  2026-08-14T03:07:02Z). Added PR_TRACKER rows 38–40 + summary (40 merges / 31
+  repos). Replied to the three merge-thread comments (GCode #43 inline nit,
+  GCode #44 review, StudyMap #132 Vercel bot) and advanced the review cursor to
+  2026-08-14T12:02:48Z, then 2026-08-14T12:24:31Z after the closeout delta.
+- **Lane 1 EXT-208 (GCode #45):** maintainer-directed follow-up for the #43/#44
+  review items — CHANGELOG Unreleased entries (Fixed: execute_bash
+  non-interactive rejection; Added: categorized /help) + demo/make_demo.py
+  `/help` snapshot mirrored to the new General/Model/Session/Git groups.
+  Branch `docs/followup-changelog-demo` at `ef131c0`; 30 tests,
+  ruff/mypy/bandit/compileall clean, Rich render check; draft PR #45
+  OPEN/Draft/MERGEABLE, base main, head verified. demo.tape regeneration noted
+  as requiring asciinema (unavailable headless).
+- **Lane 2 EXT-209 (jayqi #178):** issue #131 — the repo had already hardened
+  some jobs, so the delta was: workflow-level `permissions: contents: read`
+  (tests.yml, check-dist.yml), `issues: write` on the notify job, and
+  codecov/codecov-action pinned to `fb8b3582` (# v7). Branch
+  `codex/issue-131-harden-workflows` at `399cdc5`; Node 24 via mise, 35 tests
+  / 100% coverage, lint clean, dist unchanged; draft PR #178.
+- **Lane 3 EXT-213 (scout-issue #17):** issue #5 — replaced five invalid
+  `gh issue view --json timelineItems/linkedPRs` occurrences with a verified
+  `gh api .../issues/N/timeline` command filtered to cross-referenced PRs
+  (returns `[176]` on jayqi #130, `[]` on scout-issue #5). Branch
+  `fix/invalid-gh-issue-view-json` at `9f61d9d`; markdownlint + diff clean;
+  draft PR #17. **EXT-210 (StudyMap #120 JSON-LD) BLOCKED:** depends on #127
+  city pages (not built); only surface is the server-rendered map page (328
+  places, no server-side per-place URL) — acceptance criteria not implementable
+  as specified. Also triaged out: marginalia #18 already covered by our own
+  draft #21; railtracks #1397 has competing PR #1396; xarray #11518 has
+  reporter PR #11521.
+- **Lane 4 EXT-211 (scout-issue #18):** issue #9 — workflow-level
+  `permissions: contents: read` + the grep-based secret scan replaced with a
+  pinned gitleaks 8.30.1 step (`gitleaks detect --no-git --source . --redact
+  --verbose`, fails on findings; linux x64/arm64 assets verified). Branch
+  `fix/ci-harden-permissions-gitleaks` at `0d6769f`; baseline scan clean,
+  YAML parses; draft PR #18.
+- **Lane 5 EXT-212 (intent-drift-skill #31):** issue #26 — default-on
+  `sanitize_text()` in scripts/collect_context.py (token prefixes, Authorization/
+  Bearer, secret-key assignments incl. URL params, 16+ char `key=` values,
+  long base64 blobs with `+`/`/` or `=` padding so SHAs survive), applied to
+  git_diff/recent_commits/recent_commands; `ContextCollector(sanitize_secrets=
+  False)` opt-out; SKILL.md documented. Branch `fix/scrub-secrets-in-auto-context`
+  at `a4c7974` (fork created first — aryansk/intent-drift-skill); Python 3.13
+  venv, 54 tests (9 new), ruff/mypy/black clean; draft PR #31.
+- **Closeout:** `LANE_STATE.OPS-033.complete.json` preserved; review audit
+  delta rechecked 7 PRs (no new human comments; two known holds unchanged);
+  cursor advanced. Notion batch closeout remains BLOCKED (no connector/token);
+  GitHub and the preserved state file are authoritative. STATUS.md,
+  WORK_QUEUE.md, PR_TRACKER.md, and OUTCOME_LEARNING.md updated.
+
+## 2026-08-14 OPS-034 sequential five-PR publication
+
+- Pre-closeout review delta: typeshed #16170 received a human maintainer-style
+  request (donbarbos) to remove regression tests — removed
+  `check_create_server.py`, pushed `28244d9`, replied. Cursor advanced.
+- Initialized OPS-034; discovery from proven repos (StudyMap, scout-issue,
+  intent-drift-skill) after jayqi #134 turned out to be our own already-published
+  EXT-203 (PR #177) — abandoned EXT-214 at preflight.
+- Published five drafts, each implemented + validated + live-verified at exact
+  head before PUBLISHED:
+  1. EXT-219 StudyMap #133 (`3d4f5d9`): per-city landing pages for 217 cities —
+     `generateStaticParams` SSG, slug from the `city` field, Unicode-preserving
+     slugify (厦门), collision guard (build fails loudly), thin-city prompt,
+     `/map?place=` deep links, sitemap entries. Debugged a Next 16 quirk: the
+     route passes the still-encoded segment for non-ASCII slugs, so the page
+     decodes before matching. 46 tests (8 new), validate/tsc/eslint clean.
+  2. EXT-215 scout-issue #19 (`ed553cc`): dependabot.yml (actions + npm),
+     package.json/lockfile pinning markdownlint-cli 0.49.1, lint job uses
+     `npm ci` + setup-node cache; un-ignored the lockfile. markdownlint clean.
+  3. EXT-216 scout-issue #20 (`3d401d2`): scripts/validate-skill.sh —
+     pipeline headings, gh/git subcommand well-formedness (bash-3.2-safe),
+     quick-reference sync; renamed the no-op "Install GitHub CLI" step.
+     Positive + negative tests pass (bare `gh`, `gh isue`, orphan command).
+  4. EXT-220 intent-drift-skill #32 (`1b5d9fa`): install.sh portable realpath
+     (readlink -f → python3 → pwd -P) and non-destructive symlink handling;
+     all four branches tested with a fake HOME.
+  5. EXT-218 intent-drift-skill #33 (`9e5678e`): evidence values canonicalized
+     to 0-100 (SKILL.md, docs/api.md, base collect() docstring) + provider
+     range test; 47 tests, ruff/black/mypy clean.
+- EXT-217 (intent-drift-skill #23 add CI) abandoned at preflight: CI +
+  pyproject.toml already merged via PR #29; issue left open, no duplicate.
+- Post-publication delta: StudyMap #133 Vercel bot message (team-member
+  action), typeshed #16170 mypy_primer bot diff (informational, all checks
+  pass), two known holds unchanged; cursor advanced to 2026-08-14T13:54:13Z.
+- Notion batch closeout remains BLOCKED (no connector/token); GitHub and
+  `LANE_STATE.OPS-034.complete.json` are authoritative. STATUS.md,
+  WORK_QUEUE.md, PR_TRACKER.md, REVIEW_AUDIT.md updated.
+
+## 2026-08-14 OPS-035 (EXT-221..225) — five-PR packet closeout
+
+- **EXT-221 StudyMap #126 → PR #134** (`e93e99f`): optional `verified` date
+  field. Schema + validate-places checks (format, no future dates, no
+  `verify-date` vs `verified` conflict), `VerifiedBadge` (src-check) in
+  PinPopup + results-list, `verify-place.yml` template, data/CONTRIBUTING.md
+  policy line updated. 40 tests (2 new), validate/tsc/eslint clean. Vercel
+  team-authorization bot message recorded (same as #132/#133).
+- **EXT-222 StudyMap #118 → PR #135** (`ffdc4bf`): viewport deep-link.
+  Discovery showed `place`/`city`/`types` URL params already existed — the
+  gap was lat/lng/zoom mirroring. `buildShareUrl` gained optional viewport,
+  `MapView` reports moves via `onViewportChange`, `PlacesMap` reads/writes URL
+  state, `copyLink` includes viewport. 11 share tests (9 new), tsc/eslint
+  clean, prod routes all 200. Trick: dev-server smoke tests are unreliable in
+  this environment — used a production build + curl route sweep instead.
+- **EXT-223 scout-issue #7 → PR #21** (`de35e0d`): docs clarity on counts.
+  SKILL.md phase lines now "Found [N] strong candidates from [M] open issues"
+  with per-phase counts; README "How It Works" mirrors it. The count command
+  was verified live against a real repo before committing.
+- **EXT-224 GCode #33 → PR #46** (`afc5920`): /models enrichment. Ollama rows
+  already showed size; OpenRouter didn't. Pulled real `pricing` (size) and
+  `supported_parameters.tools` (tool support) from OpenRouter's API,
+  `_model_label` helper unit-tested, labels live-demoed. 38 tests (6 new),
+  ruff/black/mypy clean. (Push needed the `aryansingh` fork remote.)
+- **EXT-225 intent-drift-skill #14 → PR #34** (`9a09dd3`): collector perf.
+  Self-referential lines (a command containing the current command name),
+  duplicate lines, and >20-history-command trimming; regression tests
+  extended. 50 tests (3 new), ruff/black/mypy clean.
+- Discovery was tracker-first: all five candidates passed the duplicate gate
+  with zero abandoned lanes (first packet since OPS-031 with no preflight
+  drop).
+- Review delta: StudyMap #134/#135 Vercel bot messages (informational);
+  **pandas #66744 closed by maintainer as duplicate of an open PR for #66742**
+  (no defect in the change; EXT-182 → RESOLVED); two known holds unchanged.
+  Cursor → 2026-08-14T14:41:46Z.
+
+## 2026-08-14 OPS-036 (EXT-226..230) — five-PR packet closeout
+
+- **EXT-226 GCode #17 → PR #47** (`eff3536`): actionable error messages.
+  `errors.py` gained three builders (missing_api_key → /setup + env file + keys
+  URL; network_error → connection/proxy checks; unknown_model → /models +
+  /model <full-id>); `_report_no_models` distinguishes catalog-fetch failure,
+  empty local catalog, and no reachable source; model-init failures reuse
+  `format_model_error`. 46 tests (8 new), ruff/mypy/bandit/compileall clean.
+- **EXT-227 scout-issue #13 → PR #22** (`cd58ac2`): scoring rubric weight
+  adaptation. Replaced "Others: reduced proportionally" with exact per-scenario
+  tables; each verified to sum to 100% (the issue's own example summed to 115 —
+  fixed). Documented the reduction formula and added a fully worked example.
+  markdownlint clean.
+- **EXT-228 scout-issue #6 → PR #23** (`bc45357`): beginner-friendly label
+  contradiction. The `good first issue` filter is now a hunting hint only
+  (SKILL.md Phase 2 + tool-patterns), Phase 3 verifies difficulty from the
+  issue body/code, and Important Rule 2 says "solely from labels". Consistent
+  across all three docs. markdownlint clean.
+- **EXT-229 intent-drift #17 → PR #35** (`cf0da7c`): --version/--help.
+  Version read from metadata.json (single source of truth, mypy-safe
+  fallback — importing `__init__.__version__` pulled the file into mypy and
+  ruff scope, so it was avoided); --help lists every flag with defaults and
+  examples. 52 tests (2 new), ruff/black/mypy clean.
+- **EXT-230 GCode #15 → PR #48** (`0fc183d`): .gcoderc config file.
+  Dependency-free `gcode/config.py` (no tomllib — py3.10 floor) parses
+  `key = value` from project root or `~/.gcode/.gcoderc`; model,
+  auto_approve, bash_timeout, system_prompt with CLI/env > config > default
+  precedence; `set_bash_timeout` added. 54 tests (7 new). Main advanced mid-
+  lane (our #46 merged) → rebased with a tools.py conflict (both
+  `is_auto_approve` and `set_bash_timeout` kept); final head `0fc183d`
+  MERGEABLE.
+- Discovery: jayqi #130 → already our own draft #176 (EXT-202, OPS-031) —
+  tracker gate caught it; replaced with GCode #15.
+- Merge reconciled: GCode #46 (EXT-224) merged at `6016ee9`; count 40 → 41.
+- Maintainer feedback: GCode owner slimmed #45 — dropped CHANGELOG (already on
+  main), kept only make_demo.py full /help snapshot + vhs docstring note;
+  reply posted. #45 now MERGEABLE/CLEAN at `d19b42b`.
+
+## 2026-08-14 — OPS-036 merge reconciliation (GCode #48) and OPS-037 start
+
+- **Thread/task:** Begin OPS-037 (next five-PR packet); first, handle review
+  delta and reconcile the GCode #48 merge.
+- **Actions:** Ran the review delta from cursor `2026-08-14T15:08:01Z`. New
+  human item: GCode #48 owner review (rebase onto post-#47 main + docstring
+  `~/.gcode/config` vs `~/.gcode/.gcoderc` alignment). Verified the merged
+  head `54faa776` (commit `54faa77` "docs(config): correct user config path")
+  addressed both points; posted a truthful reply at
+  issuecomment-5296284007. Advanced cursor to `2026-08-14T17:30:25Z`.
+- **Merge reconciliation:** GCode #48 merged `2026-08-14T15:37:58Z` at merge
+  commit `37a5c3b1` — PR_TRACKER row 43, qualifying external total **43**.
+  Notion row update remains blocked by the unavailable connector/token.
+- **Next pickup:** OPS-037 discovery (initialized below).

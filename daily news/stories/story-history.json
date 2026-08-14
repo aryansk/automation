@@ -1036,6 +1036,663 @@
       "edition": "08 Aug 2026",
       "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/2026-08-08-three-story/bad-2026-08-08.mp4",
       "recordedAt": "2026-08-08T19:56:31.249Z"
+    },
+    {
+      "eventId": "europe-total-solar-eclipse-2026-08-12",
+      "titleKey": "Total solar eclipse sweeps across Spain, first in over a century",
+      "sourceUrls": [
+        "https://www.nytimes.com/live/2026/08/12/science/solar-eclipse-europe",
+        "https://www.theguardian.com/science/2026/aug/12/europe-total-solar-eclipse"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good-2026-08-12-01-eclipse.json",
+      "tone": "good",
+      "edition": "12 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/good-2026-08-12.mp4",
+      "recordedAt": "2026-08-13T05:36:03.282Z"
+    },
+    {
+      "eventId": "us-july-cpi-cools-2026-08-12",
+      "titleKey": "US inflation stays mild in July, holding at a 3.4% annual rate",
+      "sourceUrls": [
+        "https://www.reuters.com/markets/us/us-consumer-inflation-mild-july-2026-08-12/",
+        "https://www.cnbc.com/2026/08/12/cpi-inflation-report-july-2026.html"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good-2026-08-12-02-inflation.json",
+      "tone": "good",
+      "edition": "12 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/good-2026-08-12.mp4",
+      "recordedAt": "2026-08-13T05:36:03.282Z"
+    },
+    {
+      "eventId": "nvidia-ai-infrastructure-bet-2026-08-12",
+      "titleKey": "Nvidia backs a $70 billion buildout of AI infrastructure",
+      "sourceUrls": [
+        "https://www.cnbc.com/2026/08/12/nvidia-openai-ai-infrastructure.html",
+        "https://www.wsj.com/tech/ai/nvidia-openai-data-center-financing-2026-08-12"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/good-2026-08-12-03-nvidia.json",
+      "tone": "good",
+      "edition": "12 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/good-2026-08-12.mp4",
+      "recordedAt": "2026-08-13T05:36:03.282Z"
+    },
+    {
+      "eventId": "colombia-earthquake-western-2026-08-12",
+      "titleKey": "Powerful 7.4 quake strikes western Colombia, scores killed",
+      "sourceUrls": [
+        "https://www.reuters.com/world/americas/colombia-earthquake-2026-08-12/",
+        "https://www.cbsnews.com/news/colombia-earthquake-baby-rescued-2026-08-12/"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad-2026-08-12-01-colombia-quake.json",
+      "tone": "bad",
+      "edition": "12 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/bad-2026-08-12.mp4",
+      "recordedAt": "2026-08-13T05:40:11.297Z"
+    },
+    {
+      "eventId": "red-sea-houthi-attack-bab-el-mandeb-2026-08-12",
+      "titleKey": "Houthi attack on Red Sea ship kills six as Hormuz talks stall",
+      "sourceUrls": [
+        "https://www.reuters.com/world/middle-east/red-sea-houthi-attack-2026-08-12/",
+        "https://www.aljazeera.com/news/2026/8/12/red-sea-ship-attack"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad-2026-08-12-02-redsea.json",
+      "tone": "bad",
+      "edition": "12 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/bad-2026-08-12.mp4",
+      "recordedAt": "2026-08-13T05:40:11.297Z"
+    },
+    {
+      "eventId": "us-midwest-severe-storms-2026-08-12",
+      "titleKey": "Severe storms kill three across US Midwest, cut power to hundreds of thousands",
+      "sourceUrls": [
+        "https://www.reuters.com/business/energy/us-midwest-storms-power-outage-2026-08-12/",
+        "https://apnews.com/article/midwest-storms-power-2026-08-12"
+      ],
+      "file": "/Users/aryansingh/Downloads/Projects/Automation/daily news/stories/bad-2026-08-12-03-midwest.json",
+      "tone": "bad",
+      "edition": "12 Aug 2026",
+      "output": "/Users/aryansingh/Downloads/Projects/Automation/daily news/renders/bad-2026-08-12.mp4",
+      "recordedAt": "2026-08-13T05:40:11.297Z"
+    },
+    {
+      "eventId": "switzerland-snowmaking-forest-fires-2026-08-13",
+      "titleKey": "Swiss ski resorts may turn snow cannons on forest fires",
+      "sourceUrls": [
+        "https://www.ksat.com/2026/08/13/alpine-resorts-snowmaking-equipment-may-be-put-to-work-fighting-summer-forest-fires/"
+      ],
+      "file": "stories/standalone-2026-08-13-good-snow-cannons.json",
+      "tone": "good",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "zimbabwe-kariba-ferry-capsized-2026-08-11",
+      "titleKey": "At least 44 dead after ferry capsizes on Zimbabwe's Lake Kariba",
+      "sourceUrls": [
+        "https://www.dailysabah.com/world/africa/ferry-disaster-on-zimbabwes-lake-kariba-kills-at-least-44"
+      ],
+      "file": "stories/standalone-2026-08-13-bad-kariba-ferry.json",
+      "tone": "bad",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "prame-t-cell-therapy-remission-heidelberg-2026-08-12",
+      "titleKey": "German teenager cancer-free a year after engineered-cell infusion",
+      "sourceUrls": [
+        "https://time.com/article/2026/08/12/experimental-pediatric-cancer-treatment/"
+      ],
+      "file": "stories/standalone-2026-08-13-prame-t-cell-therapy-remission-heidelberg.json",
+      "tone": "good",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "ospreys-campfield-marsh-first-england-2026-08-10",
+      "titleKey": "First osprey chicks hatch on RSPB reserve in England since Victorian era",
+      "sourceUrls": [
+        "https://www.bbc.co.uk/news/articles/c62e6n1607qo"
+      ],
+      "file": "stories/standalone-2026-08-13-ospreys-campfield-marsh-first-england.json",
+      "tone": "good",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "nasa-astrorad-vest-solar-storm-protection-2026-08-12",
+      "titleKey": "Radiation vest from Artemis I could cut astronauts' exposure in solar storms",
+      "sourceUrls": [
+        "https://apnews.com/article/nasa-artemis-moon-radiation-astronauts-13e453c3e0502c0b0b3786b7fbc1a5cd"
+      ],
+      "file": "stories/standalone-2026-08-13-nasa-astrorad-vest-solar-storm-protection.json",
+      "tone": "good",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "dogs-brain-reward-human-smiles-study-2026-08-10",
+      "titleKey": "Dogs' brains light up with reward when they see humans smile",
+      "sourceUrls": [
+        "https://www.bbc.com/news/articles/ce8kr3yrl6eo"
+      ],
+      "file": "stories/standalone-2026-08-13-dogs-brain-reward-human-smiles-study.json",
+      "tone": "good",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "india-assam-floods-death-toll-2026-08-10",
+      "titleKey": "Flood death toll in India's Assam reaches 100 as rivers stay high",
+      "sourceUrls": [
+        "https://apnews.com/article/india-floods-monsoon-assam-brahmaputra-river-7bc402002a9159d828f220914fd9fb21"
+      ],
+      "file": "stories/standalone-2026-08-13-india-assam-floods-death-toll.json",
+      "tone": "bad",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "drc-ebola-outbreak-deaths-2000-2026-08-11",
+      "titleKey": "DR Congo Ebola outbreak tops 2,000 deaths, 4,000 cases",
+      "sourceUrls": [
+        "https://news.un.org/en/story/2026/08/1168117"
+      ],
+      "file": "stories/standalone-2026-08-13-drc-ebola-outbreak-deaths-2000.json",
+      "tone": "bad",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "philippines-storms-landslide-deaths-2026-08-12",
+      "titleKey": "Philippines storms toll climbs to 26 as landslides hit Baguio",
+      "sourceUrls": [
+        "https://www.gmanetwork.com/news/topstories/nation/998242/death-toll-from-luis-maymay-habagat-climbs-to-26-pnp/story/"
+      ],
+      "file": "stories/standalone-2026-08-13-philippines-storms-landslide-deaths.json",
+      "tone": "bad",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "novorossiysk-drone-strike-2026-08-12",
+      "titleKey": "Ukraine strike on Russia's Novorossiysk kills 3, hits grain terminals",
+      "sourceUrls": [
+        "https://www.bbc.com/news/articles/c5y49xp2wrno"
+      ],
+      "file": "stories/standalone-2026-08-13-novorossiysk-drone-strike.json",
+      "tone": "bad",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "kazakhstan-first-tiger-release-umit-2026-08-10",
+      "tone": "good",
+      "titleKey": "first-tiger-kazakhstan",
+      "sourceUrls": [
+        "https://news.mongabay.com/short-article/kazakhstan-releases-first-tiger-into-the-wild-in-70-years/",
+        "https://www.euronews.com/2026/08/05/first-tiger-released-into-the-wild-in-kazakhstan-70-years-after-turan-tiger-extinction"
+      ],
+      "file": "stories/standalone-2026-08-13-kazakhstan-first-tiger-release-umit.json",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "definium-lsd-pill-anxiety-phase3-voyage-2026-08-12",
+      "tone": "good",
+      "titleKey": "lsd-pill-anxiety-voyage",
+      "sourceUrls": [
+        "https://www.reuters.com/business/healthcare-pharmaceuticals/definium-says-lsd-based-pill-reduces-anxiety-late-stage-study-2026-08-12/",
+        "https://pharmaphorum.com/news/definium-chalks-new-phase-3-win-lsd-based-therapy"
+      ],
+      "file": "stories/standalone-2026-08-13-definium-lsd-pill-anxiety-phase3-voyage.json",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "angola-giant-sable-record-sighting-2026-08-10",
+      "tone": "good",
+      "titleKey": "giant-sable-angola",
+      "sourceUrls": [
+        "https://angop.ao/en/noticias/ambiente/mais-de-200-palancas-negras-gigantes-avistadas-em-cangandala/",
+        "http://english.news.cn/20260811/fd79e47ab0e042c69fc6fe37f8ae672e/c.html"
+      ],
+      "file": "stories/standalone-2026-08-13-angola-giant-sable-record-sighting.json",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "jcb-hydromax-hydrogen-land-speed-record-2026-08-11",
+      "tone": "good",
+      "titleKey": "jcb-hydrogen-record",
+      "sourceUrls": [
+        "https://www.fia.com/news/fia-confirms-new-406320-mph-world-land-speed-record-hydrogen-powered-vehicle",
+        "https://www.bbc.com/news/articles/czjl2yzx8epo"
+      ],
+      "file": "stories/standalone-2026-08-13-jcb-hydromax-hydrogen-land-speed-record.json",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "lakers-record-12-5bn-sale-2026-08-12",
+      "tone": "good",
+      "titleKey": "lakers-12-5bn-sale",
+      "sourceUrls": [
+        "https://www.bbc.com/sport/basketball/articles/c04k2dn422xo",
+        "https://apnews.com/article/lakers-sale-kushner-iger-12-billion-d5058bb845d87873e23e270a6bb9be9f"
+      ],
+      "file": "stories/standalone-2026-08-13-lakers-record-12-5bn-sale.json",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "oman-oil-spill-reaches-mainland-2026-08-13",
+      "tone": "bad",
+      "titleKey": "oman-oil-spill-mainland",
+      "sourceUrls": [
+        "https://www.cnn.com/2026/08/13/middleeast/oil-spill-oman-grounded-tanker-intl",
+        "https://www.aljazeera.com/economy/2026/8/13/oman-says-oil-spill-from-stricken-tanker-has-reached-its-coast"
+      ],
+      "file": "stories/standalone-2026-08-13-oman-oil-spill-reaches-mainland.json",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "india-mumbai-ghatkopar-landslide-2026-08-12",
+      "tone": "bad",
+      "titleKey": "mumbai-landslide",
+      "sourceUrls": [
+        "https://apnews.com/article/india-mumbai-monsoon-rains-landslide-ghatkopar-413691a4ef81319fe2487d77edfb8c81",
+        "https://abcnews.com/International/wireStory/landslide-mumbai-kills-6-india-drenched-monsoon-rains-135569163"
+      ],
+      "file": "stories/standalone-2026-08-13-india-mumbai-ghatkopar-landslide.json",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "russia-nizhnekamsk-drone-strike-2026-08-10",
+      "tone": "bad",
+      "titleKey": "nizhnekamsk-drone-strike",
+      "sourceUrls": [
+        "https://www.bbc.com/news/articles/cvgjvgv926po",
+        "https://apnews.com/article/russia-ukraine-war-drones-oil-d0e7dc74936cf153e8e473444cc09366"
+      ],
+      "file": "stories/standalone-2026-08-13-russia-nizhnekamsk-drone-strike.json",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "uttarakhand-chamoli-hydro-tunnel-flood-2026-08-13",
+      "tone": "bad",
+      "titleKey": "chamoli-tunnel-flood",
+      "sourceUrls": [
+        "https://www.ndtv.com/india-news/several-workers-trapped-as-water-debris-enter-tunnel-in-uttarakhands-chamoli-11906228",
+        "https://www.aa.com.tr/en/asia-pacific/7-dead-in-north-india-tunnel-accident-rescue-efforts-continue/4027006"
+      ],
+      "file": "stories/standalone-2026-08-13-uttarakhand-chamoli-hydro-tunnel-flood.json",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "fort-hood-apache-crash-salado-texas-2026-08-12",
+      "tone": "bad",
+      "titleKey": "fort-hood-apache-crash",
+      "sourceUrls": [
+        "https://www.reuters.com/world/us/two-us-army-soldiers-killed-texas-helicopter-crash-2026-08-12/",
+        "https://www.cbsnews.com/news/apache-helicopter-crash-salado-texas-fort-hood/"
+      ],
+      "file": "stories/standalone-2026-08-13-fort-hood-apache-crash-salado-texas.json",
+      "edition": "13 Aug 2026"
+    },
+    {
+      "eventId": "japan-chiba-record-rainfall-floods-2026-08-14",
+      "tone": "bad",
+      "titleKey": "Record rainfall floods Chiba, at least eight dead",
+      "sourceUrls": [
+        {
+          "publisher": "The New York Times",
+          "title": "Record-Breaking Rainfall Leaves Eight Dead and Floods Area East of Tokyo",
+          "url": "https://www.nytimes.com/2026/08/14/world/asia/chiba-tokyo-flood-rain-deaths.html",
+          "published": "2026-08-14",
+          "usedFor": [
+            "at least eight dead",
+            "flooding east of Tokyo",
+            "record rainfall"
+          ]
+        },
+        {
+          "publisher": "Associated Press",
+          "title": "Flooding near Tokyo kills at least 5 and disrupts travel",
+          "url": "https://apnews.com/article/japan-chiba-rain-floods-d37730f09557f9cce4948754fcef673c",
+          "published": "2026-08-14",
+          "usedFor": [
+            "360mm rain in 24 hours",
+            "Narita airport stranded travellers",
+            "flooded cities and homes"
+          ]
+        },
+        {
+          "publisher": "Reuters",
+          "title": "Japan's record rains strand thousands at Narita airport; kill at least eight",
+          "url": "https://www.reuters.com/world/asia-pacific/thousands-stranded-japans-narita-airport-after-record-rain-kills-four-2026-08-14/",
+          "published": "2026-08-14",
+          "usedFor": [
+            "power outages",
+            "transport disruption",
+            "death toll"
+          ]
+        }
+      ],
+      "file": "stories/standalone-2026-08-14-bad-chiba-floods.json",
+      "edition": "14 Aug 2026"
+    },
+    {
+      "eventId": "england-wildfires-record-heat-2026-08-13",
+      "tone": "bad",
+      "titleKey": "Wildfires hit England on hottest day of the year",
+      "sourceUrls": [
+        {
+          "publisher": "BBC News",
+          "title": "Multiple fires destroy homes and cause devastation in West Midlands",
+          "url": "https://www.bbc.com/news/articles/c04k20w7lr6o",
+          "published": "2026-08-13",
+          "usedFor": [
+            "hottest day of the year 38.1C",
+            "Stourbridge golf course fire, 100 firefighters",
+            "homes destroyed and evacuations"
+          ]
+        },
+        {
+          "publisher": "Associated Press",
+          "title": "European countries battle multiple wildfires as record heat grips the continent",
+          "url": "https://apnews.com/article/fires-france-england-heat-drought-bb9926465acf98a7790a7bf01294f604",
+          "published": "2026-08-14",
+          "usedFor": [
+            "multiple wildfires across England",
+            "record heat wave context"
+          ]
+        }
+      ],
+      "file": "stories/standalone-2026-08-14-bad-england-wildfires.json",
+      "edition": "14 Aug 2026"
+    },
+    {
+      "eventId": "ghana-accra-highway-crash-2026-08-13",
+      "tone": "bad",
+      "titleKey": "Eleven killed in multi-vehicle crash on Ghana highway",
+      "sourceUrls": [
+        {
+          "publisher": "Xinhua",
+          "title": "At least 11 killed, 13 injured in multiple-motor crash in Ghanaian capital",
+          "url": "http://www.news.cn/english/20260813/1a7577468f1142e08da2cee34f9b990f/c.html",
+          "published": "2026-08-13",
+          "usedFor": [
+            "11 killed, 13 injured",
+            "multiple-vehicle crash",
+            "Ofankor barrier"
+          ]
+        },
+        {
+          "publisher": "The Herald Ghana",
+          "title": "11 killed, 13 injured in multi-vehicle crash on Ofankor-Pokuase Highway",
+          "url": "https://theheraldghana.com/11-killed-13-injured-in-multi-vehicle-crash-on-ofankor-pokuase-highway/",
+          "published": "2026-08-13",
+          "usedFor": [
+            "crash at 4:00 a.m. Thursday",
+            "24 people involved",
+            "two trucks and passenger vehicles"
+          ]
+        },
+        {
+          "publisher": "Daily Graphic",
+          "title": "Accra: Multiple vehicle crash at Ofankor barrier, 11 dead",
+          "url": "https://www.graphic.com.gh/news/general-news/accra-multiple-vehicle-collision-at-ofankor-barrier-about-5-dead-heavy-morning-traffic-congestion-being-experienced-in-that-area.html",
+          "published": "2026-08-13",
+          "usedFor": [
+            "crash photos and scene detail",
+            "morning traffic disruption"
+          ]
+        }
+      ],
+      "file": "stories/standalone-2026-08-14-bad-ghana-highway-crash.json",
+      "edition": "14 Aug 2026"
+    },
+    {
+      "eventId": "greece-west-nile-outbreak-2026-08-13",
+      "tone": "bad",
+      "titleKey": "West Nile virus cases surge in Greece, nine dead",
+      "sourceUrls": [
+        {
+          "publisher": "Euronews",
+          "title": "West Nile virus surge in Greece with Attica at the epicentre",
+          "url": "https://www.euronews.com/health/2026/08/13/west-nile-virus-surge-in-greece-with-attica-at-the-epicentre",
+          "published": "2026-08-13",
+          "usedFor": [
+            "110 cases, 9 deaths",
+            "45 new cases in one week",
+            "Athens epicentre"
+          ]
+        },
+        {
+          "publisher": "AFP via Daily Sabah",
+          "title": "Greece reports 'significant' rise in West Nile virus cases with 9 dead",
+          "url": "https://www.dailysabah.com/world/europe/greece-reports-significant-rise-in-west-nile-virus-cases-with-9-dead",
+          "published": "2026-08-13",
+          "usedFor": [
+            "nine deaths confirmed",
+            "mosquito-borne spread",
+            "health authority warnings"
+          ]
+        }
+      ],
+      "file": "stories/standalone-2026-08-14-bad-greece-west-nile.json",
+      "edition": "14 Aug 2026"
+    },
+    {
+      "eventId": "lewes-train-derailment-2026-08-13",
+      "tone": "bad",
+      "titleKey": "Two seriously injured as train derails near Lewes",
+      "sourceUrls": [
+        {
+          "publisher": "BBC News",
+          "title": "Two seriously hurt as passenger train derails in Lewes",
+          "url": "https://www.bbc.com/news/articles/cz972d30l30o",
+          "published": "2026-08-13",
+          "usedFor": [
+            "two seriously injured",
+            "London Victoria to Eastbourne service",
+            "derailed close to Lewes station"
+          ]
+        },
+        {
+          "publisher": "ITV News",
+          "title": "Pair seriously injured in Lewes train derailment not in life-threatening condition",
+          "url": "https://www.itv.com/news/meridian/2026-08-13/train-derails-near-lewes-station-with-people-warned-to-avoid-the-area",
+          "published": "2026-08-13",
+          "usedFor": [
+            "two passengers seriously injured",
+            "avoid-the-area warning",
+            "rail disruption"
+          ]
+        },
+        {
+          "publisher": "The New York Times",
+          "title": "Two Seriously Injured When Train Derails in Southern England",
+          "url": "https://www.nytimes.com/2026/08/13/world/europe/train-derails-southern-england.html",
+          "published": "2026-08-13",
+          "usedFor": [
+            "British Transport Police statement",
+            "injuries confirmed"
+          ]
+        }
+      ],
+      "file": "stories/standalone-2026-08-14-bad-lewes-derailment.json",
+      "edition": "14 Aug 2026"
+    },
+    {
+      "eventId": "fda-iberdomide-myeloma-approval-2026-08-13",
+      "tone": "good",
+      "titleKey": "FDA approves new drug for multiple myeloma patients",
+      "sourceUrls": [
+        {
+          "publisher": "Reuters",
+          "title": "US FDA approves Bristol Myers' blood cancer treatment",
+          "url": "https://www.reuters.com/legal/litigation/us-fda-approves-bristol-myers-blood-cancer-treatment-2026-08-13/",
+          "published": "2026-08-13",
+          "usedFor": [
+            "FDA approval of iberdomide",
+            "multiple myeloma indication",
+            "Bristol Myers Squibb"
+          ]
+        },
+        {
+          "publisher": "US Food and Drug Administration",
+          "title": "FDA grants accelerated approval to iberdomide with daratumumab and hyaluronidase-fihj and dexamethasone",
+          "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone",
+          "published": "2026-08-13",
+          "usedFor": [
+            "accelerated approval",
+            "combination regimen",
+            "relapsed/refractory multiple myeloma"
+          ]
+        }
+      ],
+      "file": "stories/standalone-2026-08-14-good-fda-myeloma-drug.json",
+      "edition": "14 Aug 2026"
+    },
+    {
+      "eventId": "jwst-black-hole-star-mom-bh1-2026-08-12",
+      "tone": "good",
+      "titleKey": "Astronomers find a new kind of star powered by a black hole",
+      "sourceUrls": [
+        {
+          "publisher": "The Guardian",
+          "title": "Astronomers discover a new kind of cosmic object: a black hole star",
+          "url": "https://www.theguardian.com/science/2026/aug/12/astronomy-discovery-new-cosmic-object-black-hole-star",
+          "published": "2026-08-12",
+          "usedFor": [
+            "black hole star discovery",
+            "660 million years after Big Bang",
+            "new class of cosmic object"
+          ]
+        },
+        {
+          "publisher": "MIT News",
+          "title": "Astronomers discover a brand-new type of astrophysical object: the black hole star",
+          "url": "https://news.mit.edu/2026/astronomers-discover-brand-new-type-astrophysical-object-black-hole-star-0812",
+          "published": "2026-08-12",
+          "usedFor": [
+            "MIT researchers led the work",
+            "MoM-BH*-1 identification",
+            "earliest black hole evidence"
+          ]
+        },
+        {
+          "publisher": "Nature",
+          "title": "Little red dots and the black hole star announcement",
+          "url": "https://en.wikipedia.org/wiki/Little_red_dot_(astronomical_object)",
+          "published": "2026-08-12",
+          "usedFor": [
+            "Nature publication context",
+            "Naidu et al. analysis"
+          ]
+        }
+      ],
+      "file": "stories/standalone-2026-08-14-good-jwst-black-hole-star.json",
+      "edition": "14 Aug 2026"
+    },
+    {
+      "eventId": "madagascar-seven-diamond-frog-species-2026-08-11",
+      "tone": "good",
+      "titleKey": "Seven new diamond frog species found in Madagascar",
+      "sourceUrls": [
+        {
+          "publisher": "Phys.org",
+          "title": "Seven new diamond frog species reveal Madagascar's hidden diversity",
+          "url": "https://phys.org/news/2026-08-diamond-frog-species-reveal-madagascar.html",
+          "published": "2026-08-03",
+          "usedFor": [
+            "seven new species",
+            "Rhombophryne diamond frogs",
+            "12 years of fieldwork"
+          ]
+        },
+        {
+          "publisher": "SciTechDaily",
+          "title": "Seven New Frog Species Uncovered in Madagascar After 12 Years of Research",
+          "url": "https://scitechdaily.com/seven-new-frog-species-uncovered-in-madagascar-after-12-years-of-research/",
+          "published": "2026-08-11",
+          "usedFor": [
+            "hidden diversity shaping conservation",
+            "diamond frog identification",
+            "species photos"
+          ]
+        }
+      ],
+      "file": "stories/standalone-2026-08-14-good-madagascar-frogs.json",
+      "edition": "14 Aug 2026"
+    },
+    {
+      "eventId": "matisse-engravings-recovered-brazil-2026-08-13",
+      "tone": "good",
+      "titleKey": "Police recover eight stolen Matisse works in Brazil",
+      "sourceUrls": [
+        {
+          "publisher": "BBC News",
+          "title": "Stolen Matisse artworks recovered by police in Brazil",
+          "url": "https://www.bbc.com/news/articles/c1l1ym96ydvo",
+          "published": "2026-08-14",
+          "usedFor": [
+            "eight engravings recovered",
+            "stolen from São Paulo library",
+            "recovery announced Thursday"
+          ]
+        },
+        {
+          "publisher": "The New York Times",
+          "title": "8 Matisse Works, Looted from Library in Brazil, Are Recovered",
+          "url": "https://www.nytimes.com/2026/08/14/world/americas/matisse-stolen-art-found-sao-paulo-brazil-heist.html",
+          "published": "2026-08-14",
+          "usedFor": [
+            "stolen in daylight heist last year",
+            "recovery confirmed by officials"
+          ]
+        },
+        {
+          "publisher": "Le Monde",
+          "title": "Brazilian police recover eight stolen Matisse engravings",
+          "url": "https://www.lemonde.fr/en/culture/article/2026/08/14/brazilian-police-recover-eight-stolen-matisse-engravings_6756494_30.html",
+          "published": "2026-08-14",
+          "usedFor": [
+            "value around $200,000",
+            "recovery on Thursday 13 August"
+          ]
+        }
+      ],
+      "file": "stories/standalone-2026-08-14-good-matisse-recovered.json",
+      "edition": "14 Aug 2026"
+    },
+    {
+      "eventId": "vollering-tour-femmes-second-title-2026-08-09",
+      "tone": "good",
+      "titleKey": "Vollering wins second Tour de France Femmes title",
+      "sourceUrls": [
+        {
+          "publisher": "BBC Sport",
+          "title": "Vollering wins final stage to clinch second Tour title",
+          "url": "https://www.bbc.com/sport/cycling/articles/ceqevv9vjpdo",
+          "published": "2026-08-09",
+          "usedFor": [
+            "first two-time winner",
+            "won final stage in Nice",
+            "second Tour de France Femmes title"
+          ]
+        },
+        {
+          "publisher": "The Guardian",
+          "title": "Vollering wins second title but tactics row simmers",
+          "url": "https://www.theguardian.com/sport/2026/aug/09/tour-de-france-femmes-demi-vollering-cycling",
+          "published": "2026-08-09",
+          "usedFor": [
+            "solo attack on final stage",
+            "second title confirmed",
+            "race context"
+          ]
+        },
+        {
+          "publisher": "France 24",
+          "title": "Demi Vollering wins second Women's Tour de France title",
+          "url": "https://www.france24.com/en/sport/20260809-demi-vollering-wins-second-women-s-tour-de-france-title",
+          "published": "2026-08-09",
+          "usedFor": [
+            "victory in Nice",
+            "final stage winner"
+          ]
+        }
+      ],
+      "file": "stories/standalone-2026-08-14-good-vollering-tour.json",
+      "edition": "14 Aug 2026"
     }
   ]
 }

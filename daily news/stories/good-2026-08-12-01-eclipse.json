@@ -1,0 +1,158 @@
+{
+  "eventId": "europe-total-solar-eclipse-2026-08-12",
+  "tone": "good",
+  "countryCode": "ES",
+  "countryName": "Spain",
+  "cityName": "Madrid",
+  "region": "Europe",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Science · Sky",
+  "headline": "Total solar eclipse sweeps across Spain, first in over a century",
+  "summary": "Millions gathered as the Moon blacked out the Sun over Spain and Iceland, the first total eclipse to cross the Northern Hemisphere in years.",
+  "script": "For a few minutes, day turned to night over Spain. Millions gathered as the Moon fully covered the Sun, the first total eclipse here in over a century. The path swept from Iceland across Europe, and crowds cheered.",
+  "source": "NYT · Guardian",
+  "edition": "12 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/stories/2026-08-12/good-eclipse/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-12/good-eclipse/secondary.jpg",
+  "imageAlt": "A total solar eclipse with the Sun's corona visible around the dark disk of the Moon.",
+  "imageAltTwo": "Crowds watching the sky through eclipse glasses during totality.",
+  "imageCredit": "Reuters / AP",
+  "imageCreditTwo": "Reuters / AP",
+  "narrationAudio": "assets/narration/good-2026-08-12-01-eclipse.wav",
+  "captions": [
+    {
+      "lines": [
+        "Day turns to night",
+        "over Spain."
+      ],
+      "highlights": [
+        "night"
+      ]
+    },
+    {
+      "lines": [
+        "First total eclipse here",
+        "in over a century."
+      ],
+      "highlights": [
+        "over a century"
+      ]
+    },
+    {
+      "lines": [
+        "Stars came out",
+        "at noon."
+      ],
+      "highlights": [
+        "at noon"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "The New York Times",
+      "title": "Solar Eclipse Live Updates: Europe's First Total Eclipse in Decades",
+      "url": "https://www.nytimes.com/live/2026/08/12/science/solar-eclipse-europe",
+      "published": "2026-08-12",
+      "usedFor": [
+        "totality over Spain",
+        "first in decades",
+        "path from Iceland"
+      ]
+    },
+    {
+      "publisher": "The Guardian",
+      "title": "Europe's total solar eclipse: the best place to see it and how to view it safely",
+      "url": "https://www.theguardian.com/science/2026/aug/12/europe-total-solar-eclipse",
+      "published": "2026-08-12",
+      "usedFor": [
+        "millions gathered",
+        "Spain first in over a century",
+        "public viewing"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Rare celestial event drawing millions; editorial ranking, not an objective trend metric.",
+    "researchDate": "12 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Establish the hemisphere the eclipse crossed.",
+        "start": 0,
+        "animationId": "hemisphere-reveal",
+        "mapSource": "NYT / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Europe",
+            "code": "ES",
+            "coordinates": [
+              3.7,
+              40.4
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "Lock onto Spain where totality was seen.",
+        "start": 5.2,
+        "animationId": "city-lock",
+        "mapSource": "The Guardian / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Madrid",
+            "country": "Spain",
+            "code": "ES",
+            "coordinates": [
+              -3.7038,
+              40.4168
+            ]
+          }
+        }
+      },
+      {
+        "id": "path",
+        "scriptSection": "claim-and-consequence",
+        "scriptCue": "Trace the eclipse path from Iceland across Europe.",
+        "start": 11,
+        "animationId": "great-circle-route",
+        "mapSource": "NYT / 12 Aug 2026",
+        "mapData": {
+          "route": [
+            {
+              "name": "Iceland",
+              "coordinates": [
+                -19.0208,
+                64.9631
+              ]
+            },
+            {
+              "name": "Spain",
+              "coordinates": [
+                -3.7038,
+                40.4168
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -3,8 +3,24 @@
 This document governs work performed under the 100-PR plan. The target
 repository's own contribution guide always takes precedence.
 
+## Sequential publication gate
+
+The five-PR target is five valid published lanes, not five preselected issues.
+Keep only lightweight leads in a reserve pool and execute one lane at a time.
+Before coding, transition the lane to `PREFLIGHTING` and verify live that the
+issue is open, available, unclaimed, non-duplicate, policy-compatible,
+bounded, and locally testable. Claim or signal intent when the repository
+expects it. After validation, transition to `FINAL_PREFLIGHT` and repeat those
+checks immediately before pushing or opening the draft. If the issue or scope
+has gone stale, abandon it and take the next reserve lane automatically.
+Record initial preflight, claim/work-start, final preflight, and publication
+timestamps in `LANE_STATE.json`; only a canonical URL with intended base,
+matching head, open state, and explicit verification becomes `PUBLISHED`.
+
 ## Before coding
 
+- Verify `LANE_STATE.json` and select exactly one reserve lane for fresh
+  preflight; do not implement a preselected five-issue slate.
 - Confirm the canonical repository, default branch, license, and contribution
   guide.
 - Check open issues and pull requests for duplicates or existing ownership.
@@ -24,6 +40,10 @@ repository's own contribution guide always takes precedence.
 
 - Run the project's required build, typecheck, lint, and test commands.
 - Review `git diff --stat`, `git diff --check`, and the exact changed paths.
+- Run the final live preflight again: issue state, assignment/claim, competing
+  or recent unlinked PRs, policy gates, intended base, and current scope.
+- If final preflight fails, record `ABANDONED_STALE` or `BLOCKED` and move to
+  the next reserve lane; do not publish because implementation is complete.
 - Confirm the base/head repository pair.
 - Use `templates/PR_DESCRIPTION.md`.
 - Request a draft PR unless the user explicitly authorizes a ready PR.

@@ -49,6 +49,7 @@ export function createGlobeMapLayer({
   drawBackground = true,
   /* Runtime compositions already provide the canonical Three.js globe. */
   drawGlobeSurface = false,
+  showLabels = true,
   safeRects = [],
 }) {
   const target = canvas2d(canvas);
@@ -60,6 +61,7 @@ export function createGlobeMapLayer({
       width,
       height,
       format,
+      showLabels,
       safeRects,
     });
   } catch {

@@ -26,7 +26,7 @@ repositories do **not** count toward that Anthropic route.
 8. Record every actual PR in [PR_TRACKER.md](PR_TRACKER.md).
 9. Record ownership, reviewer, merge, release, and adoption evidence in
    [EVIDENCE_LEDGER.md](EVIDENCE_LEDGER.md).
-10. After every five-PR batch, run the review cursor delta audit in
+10. After every five valid `PUBLISHED` PR lanes, run the review cursor delta audit in
     [`scripts/review_audit_delta.sh`](scripts/review_audit_delta.sh) and reply
     to new or still-unresolved actionable human comments with verified
     evidence. Re-run the full all-state baseline only when the cursor contract
@@ -34,6 +34,13 @@ repositories do **not** count toward that Anthropic route.
 11. Before ending a thread, update `STATUS.md`, `WORK_QUEUE.md`, and
    [WORK_LOG.md](WORK_LOG.md) using
    [templates/THREAD_HANDOFF.md](templates/THREAD_HANDOFF.md).
+
+For new work, follow the sequential publication protocol in `AGENTS.md` and
+`LANE_STATE.json`: reserve leads may support efficient discovery, but only one
+candidate is deeply preflighted and implemented at a time. Recheck live before
+implementation and immediately before publication; count only canonical,
+head-verified open drafts. Run
+`python3 scripts/lane_state.py --state LANE_STATE.json verify` when resuming.
 
 `STATUS.md` is the current truth, `WORK_QUEUE.md` is the pickup list, and
 `WORK_LOG.md` is the append-only history. A new thread should verify that

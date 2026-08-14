@@ -1,0 +1,166 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "india-assam-floods-death-toll-2026-08-10",
+  "tone": "bad",
+  "countryCode": "IN",
+  "countryName": "India",
+  "cityName": "Guwahati",
+  "region": "Assam",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Monsoon floods · India",
+  "headline": "Flood death toll in India's Assam reaches 100 as rivers stay high",
+  "summary": "Rivers including the Brahmaputra remain above danger levels after Assam's monsoon floods killed 100 people and drove nearly 300,000 into relief camps, officials said.",
+  "script": "Monsoon floods have killed one hundred people in India's northeastern Assam state, officials said Monday. Rivers including the Brahmaputra remain above danger levels. Nearly three hundred thousand people were forced into relief camps.",
+  "source": "AP",
+  "openingHook": "INDIA: ASSAM FLOOD TOLL REACHES 100",
+  "imageOne": "assets/stories/2026-08-13/bad-assam-floods/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/bad-assam-floods/secondary.jpg",
+  "imageAlt": "A villager rows a makeshift banana raft carrying grass for his cattle in floodwaters in Alengmora village, Jorhat, India, 10 Aug 2026.",
+  "imageAltTwo": "A school girl and her father wade through floodwaters in Alengmora village, Jorhat, India, 10 Aug 2026.",
+  "imageCredit": "AP PHOTO / PARIKHIT SAIKIA",
+  "imageCreditTwo": "AP PHOTO / PARIKHIT SAIKIA",
+  "imageSourceTwo": "https://apnews.com/article/india-floods-monsoon-assam-brahmaputra-river-7bc402002a9159d828f220914fd9fb21",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-india-assam-floods-death-toll.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Assam",
+      "detail": "Northeast India"
+    },
+    {
+      "start": 2.55,
+      "end": 4.45,
+      "eyebrow": "Field image / context",
+      "value": "Brahmaputra river",
+      "detail": "Above danger levels"
+    },
+    {
+      "start": 4.6,
+      "end": 6.5,
+      "eyebrow": "Death toll / confirmed",
+      "value": "100",
+      "detail": "Officials, Monday",
+      "kind": "stat"
+    },
+    {
+      "start": 6.65,
+      "end": 8.55,
+      "eyebrow": "Displaced / camps",
+      "value": "~300,000",
+      "detail": "Forced into relief camps"
+    },
+    {
+      "start": 8.7,
+      "end": 10.6,
+      "eyebrow": "Ongoing / relief",
+      "value": "49,000 sheltered",
+      "detail": "Across 125 camps"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Assam's monsoon floods",
+        "have killed 100."
+      ],
+      "highlights": [
+        "Assam's monsoon floods",
+        "have killed 100"
+      ]
+    },
+    {
+      "lines": [
+        "The Brahmaputra",
+        "remains above danger."
+      ],
+      "highlights": [
+        "The Brahmaputra",
+        "remains above danger"
+      ]
+    },
+    {
+      "lines": [
+        "Nearly 300,000 people",
+        "in relief camps."
+      ],
+      "highlights": [
+        "Nearly 300,000 people",
+        "in relief camps"
+      ]
+    },
+    {
+      "lines": [
+        "Waters still",
+        "rising."
+      ],
+      "highlights": [
+        "Waters still",
+        "rising"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Associated Press",
+      "title": "Flood death toll in India's Assam reaches 100 as thousands lose their homes",
+      "url": "https://apnews.com/article/india-floods-monsoon-assam-brahmaputra-river-7bc402002a9159d828f220914fd9fb21",
+      "published": "2026-08-10",
+      "usedFor": [
+        "death toll of 100",
+        "rivers above danger levels",
+        "nearly 300,000 in relief camps; 49,000 in 125 camps"
+      ]
+    },
+    {
+      "publisher": "NPR",
+      "title": "Flood death toll in India's Assam reaches 100 as thousands lose their homes",
+      "url": "https://www.npr.org/2026/08/10/g-s1-138015/flood-death-toll-in-indias-assam-reaches-100-as-thousands-lose-their-homes",
+      "published": "2026-08-10",
+      "usedFor": [
+        "corroborates toll and Brahmaputra overflow",
+        "communities inundated"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

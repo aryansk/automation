@@ -1,0 +1,173 @@
+{
+  "eventId": "matisse-engravings-recovered-brazil-2026-08-13",
+  "tone": "good",
+  "countryCode": "BR",
+  "countryName": "Brazil",
+  "cityName": "São Paulo",
+  "region": "São Paulo",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Art · Recovery",
+  "headline": "Police recover eight stolen Matisse works in Brazil",
+  "summary": "Brazilian police found eight Matisse engravings taken from a São Paulo library last year in a brazen daylight heist.",
+  "script": "Brazilian police have recovered eight artworks by the French master Henri Matisse. The engravings were stolen from a Sao Paulo library last year by armed men in a daylight raid. Police say the works are safe and will be returned.",
+  "source": "BBC · NYT",
+  "edition": "14 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "STOLEN MATISSE · RECOVERED",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-14/good-matisse-recovered/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-14/good-matisse-recovered/secondary.jpg",
+  "imageAlt": "The eight recovered Matisse illustrations — bold cut-out collages in primary colours and black.",
+  "imageAltTwo": "A police car outside the Mário de Andrade Library in São Paulo, where the works were stolen.",
+  "imageCredit": "SÃO PAULO SECURITY · BBC",
+  "imageCreditTwo": "GETTY · BBC",
+  "imageSourceTwo": "https://www.bbc.com/news/articles/c1l1ym96ydvo",
+  "narrationAudio": "assets/narration/standalone-2026-08-14-good-matisse-recovered.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "São Paulo",
+      "detail": "Brazil"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Artworks / recovered",
+      "value": "8 Matisse prints",
+      "detail": "Stolen from library"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Heist / last year",
+      "value": "Daylight raid",
+      "detail": "Armed men, Dec 2025"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Value / estimate",
+      "value": "≈ $200,000",
+      "detail": "Per police estimate",
+      "kind": "stat"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Outcome / safe",
+      "value": "Works recovered",
+      "detail": "To be returned"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Eight stolen Matisse works",
+        "recovered in Brazil."
+      ],
+      "highlights": [
+        "recovered"
+      ]
+    },
+    {
+      "lines": [
+        "Taken from a",
+        "São Paulo library."
+      ],
+      "highlights": [
+        "São Paulo library"
+      ]
+    },
+    {
+      "lines": [
+        "Armed men staged",
+        "a daylight raid."
+      ],
+      "highlights": [
+        "daylight raid"
+      ]
+    },
+    {
+      "lines": [
+        "The prints are",
+        "now safe."
+      ],
+      "highlights": [
+        "now safe"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Stolen Matisse artworks recovered by police in Brazil",
+      "url": "https://www.bbc.com/news/articles/c1l1ym96ydvo",
+      "published": "2026-08-14",
+      "usedFor": [
+        "eight engravings recovered",
+        "stolen from São Paulo library",
+        "recovery announced Thursday"
+      ]
+    },
+    {
+      "publisher": "The New York Times",
+      "title": "8 Matisse Works, Looted from Library in Brazil, Are Recovered",
+      "url": "https://www.nytimes.com/2026/08/14/world/americas/matisse-stolen-art-found-sao-paulo-brazil-heist.html",
+      "published": "2026-08-14",
+      "usedFor": [
+        "stolen in daylight heist last year",
+        "recovery confirmed by officials"
+      ]
+    },
+    {
+      "publisher": "Le Monde",
+      "title": "Brazilian police recover eight stolen Matisse engravings",
+      "url": "https://www.lemonde.fr/en/culture/article/2026/08/14/brazilian-police-recover-eight-stolen-matisse-engravings_6756494_30.html",
+      "published": "2026-08-14",
+      "usedFor": [
+        "value around $200,000",
+        "recovery on Thursday 13 August"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Positive standalone — notable cultural recovery with verified BBC, NYT and Le Monde reporting; caption-checked photos.",
+    "researchDate": "14 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. São Paulo security and Getty via BBC images used with credit banners.",
+    "generated": false
+  }
+}

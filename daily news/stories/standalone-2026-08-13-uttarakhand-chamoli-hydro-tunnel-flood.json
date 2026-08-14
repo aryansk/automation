@@ -1,0 +1,166 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "uttarakhand-chamoli-hydro-tunnel-flood-2026-08-13",
+  "tone": "bad",
+  "statWords": "seven",
+  "countryCode": "IN",
+  "countryName": "India",
+  "cityName": "Chamoli",
+  "region": "Uttarakhand",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Himalayan tunnel disaster",
+  "headline": "Seven workers killed as water floods Himalayan hydro tunnel",
+  "summary": "Water and debris surged into an under-construction tunnel at the Vishnugad-Pipalkoti project, trapping workers; seven confirmed dead, three still missing.",
+  "script": "Officials said water and debris surged into an under-construction hydro tunnel at Pipalkoti in northern India's Chamoli district on Thursday evening. Seven workers were confirmed killed, three remain trapped, and eighteen were rescued. Rescue teams are still searching.",
+  "source": "NDTV",
+  "openingHook": "HIMALAYAN TUNNEL FLOOD KILLS 7",
+  "imageOne": "assets/stories/2026-08-13/bad-chamoli-tunnel/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/bad-chamoli-tunnel/secondary.jpg",
+  "imageAlt": "People gather after water and debris entered an under-construction tunnel of the Vishnugad-Pipalkoti Hydroelectric Project, Chamoli, Uttarakhand, 13 Aug 2026.",
+  "imageAltTwo": "The Chamoli tunnel site where workers were trapped.",
+  "imageCredit": "PTI PHOTO",
+  "imageCreditTwo": "INDIA TODAY",
+  "imageSourceTwo": "https://www.aa.com.tr/en/asia-pacific/7-dead-in-north-india-tunnel-accident-rescue-efforts-continue/4027006",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-uttarakhand-chamoli-hydro-tunnel-flood.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Pipalkoti",
+      "detail": "Chamoli · Uttarakhand"
+    },
+    {
+      "start": 2.5,
+      "end": 4.4,
+      "eyebrow": "Field image / context",
+      "value": "Hydro tunnel",
+      "detail": "Under construction"
+    },
+    {
+      "start": 9.45,
+      "end": 11.85,
+      "eyebrow": "Confirmed dead",
+      "value": "7",
+      "detail": "Workers killed",
+      "kind": "stat"
+    },
+    {
+      "start": 6.5,
+      "end": 8.4,
+      "eyebrow": "Still inside",
+      "value": "3 trapped",
+      "detail": "18 rescued"
+    },
+    {
+      "start": 8.5,
+      "end": 10.4,
+      "eyebrow": "Rescue / ongoing",
+      "value": "Search continues",
+      "detail": "In the tunnel"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Water flooded a",
+        "Himalayan tunnel."
+      ],
+      "highlights": [
+        "Water flooded a",
+        "Himalayan tunnel"
+      ]
+    },
+    {
+      "lines": [
+        "Seven workers",
+        "killed."
+      ],
+      "highlights": [
+        "Seven workers",
+        "killed"
+      ]
+    },
+    {
+      "lines": [
+        "Three still",
+        "trapped."
+      ],
+      "highlights": [
+        "Three still",
+        "trapped"
+      ]
+    },
+    {
+      "lines": [
+        "Rescue teams",
+        "searching."
+      ],
+      "highlights": [
+        "Rescue teams",
+        "searching"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "NDTV",
+      "title": "7 Killed, 3 Trapped As Water, Debris Enter Tunnel In Uttarakhand's Chamoli",
+      "url": "https://www.ndtv.com/india-news/several-workers-trapped-as-water-debris-enter-tunnel-in-uttarakhands-chamoli-11906228",
+      "published": "2026-08-13",
+      "usedFor": [
+        "toll of 7, 3 trapped, 18 rescued of 28",
+        "water surge at 6:30pm"
+      ]
+    },
+    {
+      "publisher": "Anadolu Agency",
+      "title": "7 dead in north India tunnel accident, rescue efforts continue",
+      "url": "https://www.aa.com.tr/en/asia-pacific/7-dead-in-north-india-tunnel-accident-rescue-efforts-continue/4027006",
+      "published": "2026-08-14",
+      "usedFor": [
+        "7 declared dead, 10 injured hospitalised",
+        "Chamoli district"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

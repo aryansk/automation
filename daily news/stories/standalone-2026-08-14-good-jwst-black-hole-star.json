@@ -1,0 +1,173 @@
+{
+  "eventId": "jwst-black-hole-star-mom-bh1-2026-08-12",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "",
+  "region": "Space · MIT",
+  "urgency": "standard",
+  "storyType": "editorial",
+  "kicker": "Science · Space",
+  "headline": "Astronomers find a new kind of star powered by a black hole",
+  "summary": "MIT researchers using the James Webb Space Telescope identified the first black hole star, an object from 660 million years after the Big Bang.",
+  "script": "Astronomers have found a new kind of cosmic object, half star and half black hole. The James Webb telescope spotted it just six hundred and sixty million years after the Big Bang. Researchers say it could explain mysteries of the early universe.",
+  "source": "Guardian · MIT",
+  "edition": "14 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "BLACK HOLE STAR · FOUND",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-14/good-jwst-black-hole-star/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-14/good-jwst-black-hole-star/secondary.jpg",
+  "imageAlt": "Illustration of the black hole star MoM-BH*-1, with illuminated wavy red lines circling a black dot.",
+  "imageAltTwo": "A red dot highlighted in space — the location of the black hole star found by the James Webb Space Telescope.",
+  "imageCredit": "MIT · GUARDIAN",
+  "imageCreditTwo": "MIT · GUARDIAN",
+  "imageSourceTwo": "https://www.theguardian.com/science/2026/aug/12/astronomy-discovery-new-cosmic-object-black-hole-star",
+  "narrationAudio": "assets/narration/standalone-2026-08-14-good-jwst-black-hole-star.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "Early universe",
+      "detail": "660M years post-Big Bang"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Discovery / telescope",
+      "value": "James Webb",
+      "detail": "NASA space telescope"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Object / new class",
+      "value": "Black hole star",
+      "detail": "Half star, half black hole"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Name / catalogued",
+      "value": "MoM-BH*-1",
+      "detail": "First of its kind"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Why it matters",
+      "value": "Early-universe clues",
+      "detail": "MIT-led research"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "A brand-new kind of",
+        "cosmic object."
+      ],
+      "highlights": [
+        "brand-new kind"
+      ]
+    },
+    {
+      "lines": [
+        "Half star,",
+        "half black hole."
+      ],
+      "highlights": [
+        "half black hole"
+      ]
+    },
+    {
+      "lines": [
+        "Found by the",
+        "James Webb telescope."
+      ],
+      "highlights": [
+        "James Webb"
+      ]
+    },
+    {
+      "lines": [
+        "From 660 million years",
+        "after the Big Bang."
+      ],
+      "highlights": [
+        "660 million years"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "The Guardian",
+      "title": "Astronomers discover a new kind of cosmic object: a black hole star",
+      "url": "https://www.theguardian.com/science/2026/aug/12/astronomy-discovery-new-cosmic-object-black-hole-star",
+      "published": "2026-08-12",
+      "usedFor": [
+        "black hole star discovery",
+        "660 million years after Big Bang",
+        "new class of cosmic object"
+      ]
+    },
+    {
+      "publisher": "MIT News",
+      "title": "Astronomers discover a brand-new type of astrophysical object: the black hole star",
+      "url": "https://news.mit.edu/2026/astronomers-discover-brand-new-type-astrophysical-object-black-hole-star-0812",
+      "published": "2026-08-12",
+      "usedFor": [
+        "MIT researchers led the work",
+        "MoM-BH*-1 identification",
+        "earliest black hole evidence"
+      ]
+    },
+    {
+      "publisher": "Nature",
+      "title": "Little red dots and the black hole star announcement",
+      "url": "https://en.wikipedia.org/wiki/Little_red_dot_(astronomical_object)",
+      "published": "2026-08-12",
+      "usedFor": [
+        "Nature publication context",
+        "Naidu et al. analysis"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Positive standalone — major astronomy discovery verified via Guardian and MIT News; imagery caption-checked.",
+    "researchDate": "14 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Guardian/MIT science imagery used with credit banners.",
+    "generated": false
+  }
+}

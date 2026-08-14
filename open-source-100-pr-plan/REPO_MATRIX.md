@@ -8,6 +8,12 @@ credibility. These are candidate repositories, not permission to create
 simultaneous or artificial PRs. Every issue must still pass the live duplicate,
 ownership, scope, and reproduction checks.
 
+The matrix is a discovery and reserve-lead source, not a preapproved batch.
+Every issue must pass a fresh canonical GitHub preflight immediately before
+implementation and again immediately before publication. Remove or abandon a
+lead when its issue closes, is claimed, becomes a duplicate, or no longer has
+an acceptable validation path; do not carry stale eligibility forward.
+
 | Tier | Repository | Local checkout | Contribution surface | Current next gate |
 | --- | --- | --- | --- | --- |
 | Active | [tuist/tuist](https://github.com/tuist/tuist) | Historical checkout moved to recoverable Trash | Swift CLI, project generation, dependency/platform compatibility, acceptance tests | Maintain draft [PR #12203](https://github.com/tuist/tuist/pull/12203) for [#11693](https://github.com/tuist/tuist/issues/11693) |

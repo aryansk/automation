@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "prame-t-cell-therapy-remission-heidelberg-2026-08-12",
+  "tone": "good",
+  "countryCode": "DE",
+  "countryName": "Germany",
+  "cityName": "Heidelberg",
+  "region": "Europe",
+  "urgency": "medium",
+  "storyType": "auto",
+  "kicker": "Health win · Germany",
+  "headline": "German teenager cancer-free a year after engineered-cell infusion",
+  "summary": "A 17-year-old treated in Heidelberg is in complete remission after one infusion of PRAME-hunting immune cells, doctors reported this week in the New England Journal of Medicine.",
+  "script": "A seventeen-year-old German with advanced kidney cancer is cancer-free one year after a single infusion of engineered immune cells. Doctors in Heidelberg targeted a protein called PRAME, and every detectable tumor disappeared. His engineered cells remained active months later.",
+  "source": "TIME",
+  "openingHook": "CANCER REMISSION: ONE INFUSION, ONE YEAR",
+  "imageOne": "assets/stories/2026-08-13/good-prame-therapy/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/good-prame-therapy/secondary.jpg",
+  "imageAlt": "A 17-year-old cancer patient back on his bike at a cycling festival in Riva del Garda, May 2026.",
+  "imageAltTwo": "The patient receiving PRAME-targeting T-cell therapy at the Hopp Children's Cancer Center in July 2025.",
+  "imageCredit": "TIME / HOPP CHILDREN'S CANCER CENTER",
+  "imageCreditTwo": "COURTESY HOPP CHILDREN'S CANCER CENTER",
+  "imageSourceTwo": "https://time.com/article/2026/08/12/experimental-pediatric-cancer-treatment/",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-prame-t-cell-therapy-remission-heidelberg.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Heidelberg",
+      "detail": "Germany"
+    },
+    {
+      "start": 2.55,
+      "end": 4.45,
+      "eyebrow": "Field image / context",
+      "value": "One infusion",
+      "detail": "Engineered PRAME-hunting T cells"
+    },
+    {
+      "start": 4.6,
+      "end": 6.5,
+      "eyebrow": "Remission / confirmed",
+      "value": "1 year",
+      "detail": "Cancer-free, no detectable tumors",
+      "kind": "stat"
+    },
+    {
+      "start": 6.65,
+      "end": 8.55,
+      "eyebrow": "Target / science",
+      "value": "PRAME protein",
+      "detail": "Found on the tumor cells"
+    },
+    {
+      "start": 8.7,
+      "end": 10.6,
+      "eyebrow": "Outlook / medicine",
+      "value": "Cells still active",
+      "detail": "Months after treatment"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "A single infusion of",
+        "engineered immune cells."
+      ],
+      "highlights": [
+        "A single infusion of",
+        "engineered immune cells"
+      ]
+    },
+    {
+      "lines": [
+        "Target: a protein",
+        "called PRAME."
+      ],
+      "highlights": [
+        "Target: a protein",
+        "called PRAME"
+      ]
+    },
+    {
+      "lines": [
+        "One year later,",
+        "cancer-free."
+      ],
+      "highlights": [
+        "One year later,",
+        "cancer-free"
+      ]
+    },
+    {
+      "lines": [
+        "His cells are",
+        "still hunting."
+      ],
+      "highlights": [
+        "His cells are",
+        "still hunting"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "TIME",
+      "title": "An Experimental Pediatric Cancer Treatment Shows Promise in New Research",
+      "url": "https://time.com/article/2026/08/12/experimental-pediatric-cancer-treatment/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "17-year-old with kidney cancer, complete remission after one infusion",
+        "PRAME-hunting T cells still in blood",
+        "cycling achievement"
+      ]
+    },
+    {
+      "publisher": "Inside Precision Medicine",
+      "title": "Personalized T-Cell Therapy Induces Complete Remission of Metastatic Kidney Cancer",
+      "url": "https://www.insideprecisionmedicine.com/topics/oncology/personalized-t-cell-therapy-induces-complete-remission-of-metastatic-kidney-cancer/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "NEJM publication",
+        "cells engineered at NCT Heidelberg",
+        "PRAME target identified via sequencing"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

@@ -1,0 +1,165 @@
+{
+  "eventId": "greece-west-nile-outbreak-2026-08-13",
+  "tone": "bad",
+  "countryCode": "GR",
+  "countryName": "Greece",
+  "cityName": "Athens",
+  "region": "Attica",
+  "urgency": "medium",
+  "storyType": "breaking",
+  "kicker": "Health · Virus",
+  "headline": "West Nile virus cases surge in Greece, nine dead",
+  "summary": "Greece has recorded 110 West Nile virus infections and nine deaths this season, with 45 new cases in a single week around Athens.",
+  "script": "Greece is reporting a sharp rise in West Nile virus. Authorities have recorded one hundred and ten infections this season, and nine people have died. Forty five new cases appeared in a week, with Athens at the centre.",
+  "source": "Euronews · AFP",
+  "edition": "14 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "WEST NILE SURGE · GREECE",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-14/bad-greece-west-nile/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-14/bad-greece-west-nile/secondary.jpg",
+  "imageAlt": "Mosquito spraying during Greece's West Nile virus outbreak response, Aug 2026 (file photo).",
+  "imageAltTwo": "Greek health and emergency vehicles during the West Nile response (file photo).",
+  "imageCredit": "EURONEWS",
+  "imageCreditTwo": "EURONEWS",
+  "imageSourceTwo": "https://www.euronews.com/health/2026/08/13/west-nile-virus-surge-in-greece-with-attica-at-the-epicentre",
+  "narrationAudio": "assets/narration/standalone-2026-08-14-bad-greece-west-nile.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "Athens",
+      "detail": "Attica · Greece"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Cases / season",
+      "value": "110",
+      "detail": "Infections since May",
+      "kind": "stat"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Deaths / confirmed",
+      "value": "9",
+      "detail": "All elderly patients",
+      "kind": "stat"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Spread / one week",
+      "value": "45 new cases",
+      "detail": "Sharpest rise of season"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Response / control",
+      "value": "Mosquito spraying",
+      "detail": "Authorities step up control"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "West Nile cases",
+        "surge in Greece."
+      ],
+      "highlights": [
+        "surge"
+      ]
+    },
+    {
+      "lines": [
+        "110 infections,",
+        "nine deaths."
+      ],
+      "highlights": [
+        "110 infections"
+      ]
+    },
+    {
+      "lines": [
+        "45 new cases",
+        "in one week."
+      ],
+      "highlights": [
+        "45 new cases"
+      ]
+    },
+    {
+      "lines": [
+        "Athens is the",
+        "outbreak centre."
+      ],
+      "highlights": [
+        "Athens"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Euronews",
+      "title": "West Nile virus surge in Greece with Attica at the epicentre",
+      "url": "https://www.euronews.com/health/2026/08/13/west-nile-virus-surge-in-greece-with-attica-at-the-epicentre",
+      "published": "2026-08-13",
+      "usedFor": [
+        "110 cases, 9 deaths",
+        "45 new cases in one week",
+        "Athens epicentre"
+      ]
+    },
+    {
+      "publisher": "AFP via Daily Sabah",
+      "title": "Greece reports 'significant' rise in West Nile virus cases with 9 dead",
+      "url": "https://www.dailysabah.com/world/europe/greece-reports-significant-rise-in-west-nile-virus-cases-with-9-dead",
+      "published": "2026-08-13",
+      "usedFor": [
+        "nine deaths confirmed",
+        "mosquito-borne spread",
+        "health authority warnings"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Breaking standalone — public health outbreak with verified Euronews and AFP reporting; file photos flagged as context.",
+    "researchDate": "14 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Euronews file photos used with credit banners.",
+    "generated": false
+  }
+}

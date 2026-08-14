@@ -1,0 +1,175 @@
+{
+  "eventId": "japan-chiba-record-rainfall-floods-2026-08-14",
+  "tone": "bad",
+  "countryCode": "JP",
+  "countryName": "Japan",
+  "cityName": "Chiba",
+  "region": "Kanto Plain",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Flooding · Japan",
+  "headline": "Record rainfall floods Chiba, at least eight dead",
+  "summary": "Unprecedented rain east of Tokyo flooded cities, stranded thousands at Narita airport and left at least eight people dead.",
+  "script": "Record rainfall has flooded Japan's Chiba region, east of Tokyo. At least eight people have died, and thousands were stranded at Narita airport. More than three hundred millimetres of rain fell in a day, flooding homes and cutting power.",
+  "source": "AP · Reuters",
+  "edition": "14 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "CHIBA FLOODS · EIGHT DEAD",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-14/bad-chiba-floods/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-14/bad-chiba-floods/secondary.jpg",
+  "imageAlt": "Cars make their way through a flooded road after heavy rain in Oamishirasato, Chiba prefecture, Japan, 14 Aug 2026.",
+  "imageAltTwo": "Flooding aftermath covering fields and roads across Chiba prefecture.",
+  "imageCredit": "AP PHOTO",
+  "imageCreditTwo": "AP PHOTO",
+  "imageSourceTwo": "https://apnews.com/article/japan-chiba-rain-floods-d37730f09557f9cce4948754fcef673c",
+  "narrationAudio": "assets/narration/standalone-2026-08-14-bad-chiba-floods.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "Chiba Prefecture",
+      "detail": "East of Tokyo · Japan"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Rainfall / record",
+      "value": "360mm in 24h",
+      "detail": "Unprecedented downpour"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Casualties / confirmed",
+      "value": "8 dead",
+      "detail": "Police and local media",
+      "kind": "stat"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Transport / disruption",
+      "value": "Narita stranded",
+      "detail": "Thousands of travellers hit"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Power / outages",
+      "value": "Homes without power",
+      "detail": "Flooding and damage"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Record rainfall",
+        "hits Chiba."
+      ],
+      "highlights": [
+        "Record rainfall"
+      ]
+    },
+    {
+      "lines": [
+        "At least eight",
+        "people have died."
+      ],
+      "highlights": [
+        "eight"
+      ]
+    },
+    {
+      "lines": [
+        "Thousands stranded",
+        "at Narita airport."
+      ],
+      "highlights": [
+        "Narita airport"
+      ]
+    },
+    {
+      "lines": [
+        "360mm of rain",
+        "in 24 hours."
+      ],
+      "highlights": [
+        "360mm"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "The New York Times",
+      "title": "Record-Breaking Rainfall Leaves Eight Dead and Floods Area East of Tokyo",
+      "url": "https://www.nytimes.com/2026/08/14/world/asia/chiba-tokyo-flood-rain-deaths.html",
+      "published": "2026-08-14",
+      "usedFor": [
+        "at least eight dead",
+        "flooding east of Tokyo",
+        "record rainfall"
+      ]
+    },
+    {
+      "publisher": "Associated Press",
+      "title": "Flooding near Tokyo kills at least 5 and disrupts travel",
+      "url": "https://apnews.com/article/japan-chiba-rain-floods-d37730f09557f9cce4948754fcef673c",
+      "published": "2026-08-14",
+      "usedFor": [
+        "360mm rain in 24 hours",
+        "Narita airport stranded travellers",
+        "flooded cities and homes"
+      ]
+    },
+    {
+      "publisher": "Reuters",
+      "title": "Japan's record rains strand thousands at Narita airport; kill at least eight",
+      "url": "https://www.reuters.com/world/asia-pacific/thousands-stranded-japans-narita-airport-after-record-rain-kills-four-2026-08-14/",
+      "published": "2026-08-14",
+      "usedFor": [
+        "power outages",
+        "transport disruption",
+        "death toll"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Breaking standalone — major flooding disaster east of Tokyo with verified wire reporting from AP, NYT and Reuters.",
+    "researchDate": "14 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. AP photos used with credit banners.",
+    "generated": false
+  }
+}

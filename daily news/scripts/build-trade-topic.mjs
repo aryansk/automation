@@ -8,6 +8,7 @@ import { spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, isAbsolute, parse, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { hyperframesPin } from "./hyperframes-version.mjs";
 import { normalizeGlobeMapPlan } from "../assets/animations/globe-map-plan.js";
 import { resolveMapPlanForScene } from "../assets/animations/globe-map-runtime.js";
 
@@ -147,7 +148,7 @@ writeFileSync(tempCompositionPath, renderHtml);
 
 const renderArgs = [
   "--yes",
-  "hyperframes@0.7.90",
+  hyperframesPin(),
   "render",
   ".",
   "--composition",

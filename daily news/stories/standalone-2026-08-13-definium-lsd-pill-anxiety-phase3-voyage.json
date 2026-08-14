@@ -1,0 +1,168 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "definium-lsd-pill-anxiety-phase3-voyage-2026-08-12",
+  "tone": "good",
+  "statWords": "eleven point six",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "New York",
+  "region": "North America",
+  "urgency": "medium",
+  "storyType": "auto",
+  "kicker": "Anxiety breakthrough · Health",
+  "headline": "LSD-based pill eases anxiety in late-stage trial, study shows",
+  "summary": "One dose of Definium's pill DT120 cut anxiety scores 11.6 points vs 6.2 with placebo at 12 weeks in a 214-patient trial, a potential first new anxiety drug in decades.",
+  "script": "A single dose of an LSD-based pill cut anxiety scores by eleven point six points in a two hundred fourteen patient trial. Definium Therapeutics says the one-time, therapist-guided treatment worked within days, and the effect lasted the full twelve weeks.",
+  "source": "Reuters",
+  "openingHook": "ANXIETY TRIAL: LSD PILL CUTS SCORES 11.6",
+  "imageOne": "assets/stories/2026-08-13/good-definium-lsd-anxiety/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/good-definium-lsd-anxiety/secondary.jpg",
+  "imageAlt": "Medicines illustration for Definium's LSD-based anxiety pill trial coverage.",
+  "imageAltTwo": "A therapy room used to deliver the one-off, therapist-assisted LSD-based treatment.",
+  "imageCredit": "REUTERS",
+  "imageCreditTwo": "DEFINIUM THERAPEUTICS / PHARMAPHORUM",
+  "imageSourceTwo": "https://pharmaphorum.com/news/definium-chalks-new-phase-3-win-lsd-based-therapy",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-definium-lsd-pill-anxiety-phase3-voyage.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "New York",
+      "detail": "United States"
+    },
+    {
+      "start": 2.5,
+      "end": 4.4,
+      "eyebrow": "Field image / context",
+      "value": "Late-stage trial",
+      "detail": "214 patients · 12 weeks"
+    },
+    {
+      "start": 3.88,
+      "end": 6.28,
+      "eyebrow": "Anxiety score cut",
+      "value": "11.6",
+      "detail": "Points vs 6.2 with placebo",
+      "kind": "stat"
+    },
+    {
+      "start": 6.5,
+      "end": 8.4,
+      "eyebrow": "Treatment / design",
+      "value": "One dose",
+      "detail": "Therapist-guided"
+    },
+    {
+      "start": 8.5,
+      "end": 10.4,
+      "eyebrow": "Outlook / medicine",
+      "value": "Effect lasted",
+      "detail": "The full 12 weeks"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "One dose of an",
+        "LSD-based pill."
+      ],
+      "highlights": [
+        "One dose of an",
+        "LSD-based pill"
+      ]
+    },
+    {
+      "lines": [
+        "Cut anxiety scores",
+        "by 11.6 points."
+      ],
+      "highlights": [
+        "Cut anxiety scores",
+        "by 11.6 points"
+      ]
+    },
+    {
+      "lines": [
+        "Placebo: just",
+        "6.2 points."
+      ],
+      "highlights": [
+        "Placebo: just",
+        "6.2 points"
+      ]
+    },
+    {
+      "lines": [
+        "Effect lasted",
+        "12 weeks."
+      ],
+      "highlights": [
+        "Effect lasted",
+        "12 weeks"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Definium says LSD-based pill reduces anxiety in late-stage study",
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/definium-says-lsd-based-pill-reduces-anxiety-late-stage-study-2026-08-12/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "11.6 vs 6.2 point cut on HAM-A",
+        "214-patient Voyage trial",
+        "one-time therapist-guided dose"
+      ]
+    },
+    {
+      "publisher": "pharmaphorum",
+      "title": "Definium chalks up new phase 3 win for LSD-based therapy",
+      "url": "https://pharmaphorum.com/news/definium-chalks-new-phase-3-win-lsd-based-therapy",
+      "published": "2026-08-12",
+      "usedFor": [
+        "phase 3 corroboration",
+        "12-week endpoint",
+        "100 mcg dose"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

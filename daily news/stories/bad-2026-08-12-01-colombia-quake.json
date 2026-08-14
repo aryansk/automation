@@ -1,0 +1,152 @@
+{
+  "eventId": "colombia-earthquake-western-2026-08-12",
+  "tone": "bad",
+  "countryCode": "CO",
+  "countryName": "Colombia",
+  "cityName": "Cali",
+  "region": "South America",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Disaster · Earthquake",
+  "headline": "Powerful 7.4 quake strikes western Colombia, scores killed",
+  "summary": "A magnitude 7.4 earthquake, Colombia's strongest in years, killed more than a hundred people and trapped others in collapsed buildings.",
+  "script": "A powerful earthquake has struck western Colombia. The magnitude seven point four quake is the country's strongest in years, and officials say more than a hundred people have died. Rescuers are digging through collapsed buildings.",
+  "source": "Reuters · CBS News",
+  "edition": "12 Aug 2026",
+  "storyNumber": "01",
+  "imageOne": "assets/stories/2026-08-12/bad-colombia-quake/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-12/bad-colombia-quake/secondary.jpg",
+  "imageAlt": "Collapsed building and rubble after an earthquake in Colombia.",
+  "imageAltTwo": "Rescue workers searching debris for survivors.",
+  "imageCredit": "Reuters / AP",
+  "imageCreditTwo": "Reuters / AP",
+  "narrationAudio": "assets/narration/bad-2026-08-12-01-colombia-quake.wav",
+  "captions": [
+    {
+      "lines": [
+        "7.4 quake hits",
+        "western Colombia."
+      ],
+      "highlights": [
+        "7.4 quake"
+      ]
+    },
+    {
+      "lines": [
+        "Strongest in years,",
+        "over 100 killed."
+      ],
+      "highlights": [
+        "over 100 killed"
+      ]
+    },
+    {
+      "lines": [
+        "A baby pulled",
+        "alive from rubble."
+      ],
+      "highlights": [
+        "alive"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "More than 100 killed after strongest quake this century hits western Colombia",
+      "url": "https://www.reuters.com/world/americas/colombia-earthquake-2026-08-12/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "magnitude 7.4",
+        "western Colombia",
+        "death toll over 100"
+      ]
+    },
+    {
+      "publisher": "CBS News",
+      "title": "Baby rescued from earthquake rubble in Colombia as death toll rises",
+      "url": "https://www.cbsnews.com/news/colombia-earthquake-baby-rescued-2026-08-12/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "baby rescued",
+        "collapsed buildings",
+        "rescue operations"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Major deadly natural disaster; editorial ranking.",
+    "researchDate": "12 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in Colombia.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Colombia",
+            "code": "CO",
+            "coordinates": [
+              -74.3,
+              4.6
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "Focus on western Colombia near the epicenter.",
+        "start": 4.5,
+        "animationId": "city-lock",
+        "mapSource": "Reuters / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Cali",
+            "country": "Colombia",
+            "code": "CO",
+            "coordinates": [
+              -76.532,
+              3.4516
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show the quake's epicenter and shaking radius.",
+        "start": 9.5,
+        "animationId": "earthquake-ripple",
+        "mapSource": "USGS / Reuters 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Western Colombia",
+            "code": "CO",
+            "coordinates": [
+              -76.9,
+              3.6
+            ]
+          },
+          "magnitude": 7.4,
+          "label": "M7.4"
+        }
+      }
+    ]
+  }
+}

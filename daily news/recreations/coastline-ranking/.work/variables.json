@@ -1,0 +1,11 @@
+{
+  "edition": "12 AUG 2026",
+  "deskName": "GREEN GLOBE / SPECIAL",
+  "openerSub": "EDITORIAL RANKING / COASTAL GEOGRAPHY",
+  "tour": "[{\"countryCode\":\"FI\",\"countryName\":\"FINLAND\",\"coordinates\":[26,64],\"mapSource\":\"Finnish Meteorological Institute / Baltic sea ice\",\"speakAt\":6.342,\"travelStart\":2.9919999999999995,\"arrive\":5.762,\"holdUntil\":14.352,\"focusZoom\":4.5,\"resetCamera\":false,\"freezeMode\":\"baltic\"},{\"countryCode\":\"SR\",\"countryName\":\"SURINAME\",\"coordinates\":[-56,4],\"mapSource\":\"UNFCCC / Suriname national communication\",\"speakAt\":15.342,\"travelStart\":14.392,\"arrive\":15.242,\"holdUntil\":24.227,\"focusZoom\":4,\"resetCamera\":true,\"freezeMode\":null},{\"countryCode\":\"NA\",\"countryName\":\"NAMIBIA\",\"coordinates\":[17,-22],\"mapSource\":\"NASA / UNESCO Namib Sand Sea\",\"speakAt\":25.217,\"travelStart\":24.267,\"arrive\":25.117,\"holdUntil\":34.4,\"focusZoom\":4.2,\"resetCamera\":true,\"freezeMode\":null},{\"countryCode\":\"RU\",\"countryName\":\"RUSSIA\",\"coordinates\":[100,60],\"mapSource\":\"Arctic sea-ice / Northern Sea Route reporting\",\"speakAt\":35.39,\"travelStart\":34.44,\"arrive\":35.29,\"holdUntil\":45.171,\"focusZoom\":4.5,\"resetCamera\":true,\"freezeMode\":\"arctic\"},{\"countryCode\":\"BA\",\"countryName\":\"BOSNIA AND HERZEGOVINA\",\"coordinates\":[18,44],\"mapSource\":\"Bosnia and Herzegovina / Neum coastal geography\",\"speakAt\":46.161,\"travelStart\":45.211,\"arrive\":46.061,\"holdUntil\":57.36,\"focusZoom\":3.5,\"resetCamera\":true,\"freezeMode\":null}]",
+  "duration": 60,
+  "openerEnd": 4.3,
+  "endCardStart": 57.4,
+  "endCardReveal": 57.7,
+  "narrationAudio": "assets/narration/recreation-coastline-mix.wav"
+}

@@ -1,0 +1,155 @@
+{
+  "eventId": "zimbabwe-kariba-ferry-capsized-2026-08-11",
+  "tone": "bad",
+  "countryCode": "ZW",
+  "countryName": "Zimbabwe",
+  "cityName": "Kariba",
+  "region": "Lake Kariba",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Kariba ferry disaster",
+  "headline": "At least 44 dead after ferry capsizes on Zimbabwe's Lake Kariba",
+  "summary": "An overcrowded ferry carrying more than 100 passengers sank in rough weather on Lake Kariba; police confirmed the toll as rescuers kept searching.",
+  "script": "An overcrowded ferry has capsized on Lake Kariba in Zimbabwe, killing at least 44 people. The vessel was carrying more than 100 passengers when it went down in rough weather. Rescuers pulled 77 people from the water and are still searching.",
+  "source": "AFP",
+  "edition": "13 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "FERRY DISASTER · LAKE KARIBA",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 46%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-13/bad-kariba-ferry/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/bad-kariba-ferry/secondary.jpg",
+  "imageAlt": "Rescuers and boats attend to survivors after an overcrowded ferry sank on Lake Kariba, Zimbabwe, 11 Aug 2026.",
+  "imageAltTwo": "The Kariba dam seen from one of its ridges — the world's largest man-made lake by volume.",
+  "imageCredit": "AFP",
+  "imageCreditTwo": "AFP VIA GETTY · BBC NEWS",
+  "imageSourceTwo": "https://www.dailysabah.com/world/africa/ferry-disaster-on-zimbabwes-lake-kariba-kills-at-least-44",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-bad-kariba-ferry.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "Lake Kariba",
+      "detail": "Zimbabwe · 300 km NE of Harare"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Field image / context",
+      "value": "Overcrowded ferry",
+      "detail": "114 passengers + 5 crew · capacity 90"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Casualties / confirmed",
+      "value": "44",
+      "detail": "Drowned, police say",
+      "kind": "stat"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Rescue / ongoing",
+      "value": "77 rescued",
+      "detail": "Helicopter and divers at the scene"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Search / continuing",
+      "value": "Still searching",
+      "detail": "For any unaccounted people"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "An overcrowded ferry",
+        "sank on Lake Kariba."
+      ],
+      "highlights": [
+        "overcrowded ferry",
+        "sank"
+      ]
+    },
+    {
+      "lines": [
+        "At least 44 people",
+        "have died."
+      ],
+      "highlights": [
+        "44 people"
+      ]
+    },
+    {
+      "lines": [
+        "Rescuers pulled",
+        "77 people to safety."
+      ],
+      "highlights": [
+        "77 people"
+      ]
+    },
+    {
+      "lines": [
+        "Search crews are",
+        "still looking."
+      ],
+      "highlights": [
+        "still looking"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Daily Sabah (AFP)",
+      "title": "Ferry disaster on Zimbabwe's Lake Kariba kills at least 44",
+      "url": "https://www.dailysabah.com/world/africa/ferry-disaster-on-zimbabwes-lake-kariba-kills-at-least-44",
+      "published": "2026-08-12",
+      "usedFor": [
+        "death toll of 44 confirmed by police",
+        "114 adult passengers, 5 crew, capacity 90",
+        "77 rescued, 15 bodies initially retrieved",
+        "sank Tuesday in rough weather"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Breaking standalone — major casualties, verified via AFP wire and police statement; images caption-checked across AFP re-syndication and BBC.",
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. AFP wire photo and AFP via Getty image used with credit banners.",
+    "generated": false
+  }
+}

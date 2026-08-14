@@ -1,0 +1,168 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "oman-oil-spill-reaches-mainland-2026-08-13",
+  "tone": "bad",
+  "statWords": "five hundred",
+  "countryCode": "OM",
+  "countryName": "Oman",
+  "cityName": "Ras Madrakah",
+  "region": "Middle East",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Oil spill · Oman",
+  "headline": "Oil spill off Oman hits mainland beaches as slick spreads",
+  "summary": "Crude from the grounded shadow-fleet tanker Caroline Bezengi has reached Oman's coast about 120 miles from the wreck, threatening marine reserves and turtle nesting beaches.",
+  "script": "Greenpeace says a Russian-linked oil tanker grounded off Oman is leaking crude, and the slick now covers an estimated five hundred square miles. It has reached mainland beaches, and officials warn up to forty kilometres of coast could be polluted.",
+  "source": "CNN",
+  "openingHook": "OMAN: OIL SLICK REACHES THE COAST",
+  "imageOne": "assets/stories/2026-08-13/bad-oman-oil-spill/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/bad-oman-oil-spill/secondary.jpg",
+  "imageAlt": "Satellite image showing the damaged vessel Caroline Bezengi at sea off the coast of Oman, 13 Aug 2026.",
+  "imageAltTwo": "The tanker Caroline Bezengi, grounded and partly submerged off the coast of Oman, 5 Aug 2026.",
+  "imageCredit": "AIRBUS / REUTERS VIA CNN",
+  "imageCreditTwo": "PLEIADES CNES / AIRBUS DS VIA AP",
+  "imageSourceTwo": "https://www.aljazeera.com/economy/2026/8/13/oman-says-oil-spill-from-stricken-tanker-has-reached-its-coast",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-oman-oil-spill-reaches-mainland.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Ras Madrakah",
+      "detail": "Oman · Arabian Sea"
+    },
+    {
+      "start": 2.5,
+      "end": 4.4,
+      "eyebrow": "Field image / context",
+      "value": "Caroline Bezengi",
+      "detail": "Grounded shadow-fleet tanker"
+    },
+    {
+      "start": 7.39,
+      "end": 9.79,
+      "eyebrow": "Slick size / estimate",
+      "value": "500",
+      "detail": "Square miles, Greenpeace",
+      "kind": "stat"
+    },
+    {
+      "start": 6.5,
+      "end": 8.4,
+      "eyebrow": "Coast / threat",
+      "value": "40 km",
+      "detail": "Of coastline could be polluted"
+    },
+    {
+      "start": 8.5,
+      "end": 10.4,
+      "eyebrow": "Wildlife / at risk",
+      "value": "Marine reserves",
+      "detail": "Turtle beaches and whales"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "A grounded tanker",
+        "is leaking oil."
+      ],
+      "highlights": [
+        "A grounded tanker",
+        "is leaking oil"
+      ]
+    },
+    {
+      "lines": [
+        "The slick covers",
+        "500 square miles."
+      ],
+      "highlights": [
+        "The slick covers",
+        "500 square miles"
+      ]
+    },
+    {
+      "lines": [
+        "Oil has reached",
+        "Oman's coast."
+      ],
+      "highlights": [
+        "Oil has reached",
+        "Oman's coast"
+      ]
+    },
+    {
+      "lines": [
+        "Wildlife is",
+        "at risk."
+      ],
+      "highlights": [
+        "Wildlife is",
+        "at risk"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "CNN",
+      "title": "Huge oil spill off the coast of Oman now covers hundreds of square miles",
+      "url": "https://www.cnn.com/2026/08/13/middleeast/oil-spill-oman-grounded-tanker-intl",
+      "published": "2026-08-13",
+      "usedFor": [
+        "500 sq mi Greenpeace estimate",
+        "mainland beaches reached",
+        "up to 40 km of coastline"
+      ]
+    },
+    {
+      "publisher": "Al Jazeera",
+      "title": "Oman says oil spill from stricken tanker has reached its coast",
+      "url": "https://www.aljazeera.com/economy/2026/8/13/oman-says-oil-spill-from-stricken-tanker-has-reached-its-coast",
+      "published": "2026-08-13",
+      "usedFor": [
+        "40 km coastline warning",
+        "sanctioned shadow-fleet vessel",
+        "official ~400 sq km figure"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

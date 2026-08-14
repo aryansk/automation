@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "novorossiysk-drone-strike-2026-08-12",
+  "tone": "bad",
+  "countryCode": "RU",
+  "countryName": "Russia",
+  "cityName": "Novorossiysk",
+  "region": "Krasnodar Krai",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "War · Russia",
+  "headline": "Ukraine strike on Russia's Novorossiysk kills 3, hits grain terminals",
+  "summary": "Three people including an eight-year-old child died in the overnight attack, and two grain export terminals were knocked out, local officials said.",
+  "script": "A Ukrainian overnight drone and missile strike on Russia's Black Sea port of Novorossiysk killed three people, including a child, officials said. Two major grain export terminals were damaged, and water supplies were suspended.",
+  "source": "BBC News",
+  "openingHook": "BLACK SEA: UKRAINE HITS NOVOROSSIYSK",
+  "imageOne": "assets/stories/2026-08-13/bad-novorossiysk-strike/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/bad-novorossiysk-strike/secondary.jpg",
+  "imageAlt": "A plume of smoke rising over the port of Novorossiysk after the overnight strike.",
+  "imageAltTwo": "A grain terminal in Russia's port city of Novorossiysk, file photo.",
+  "imageCredit": "ZELENSKY / TELEGRAM VIA BBC",
+  "imageCreditTwo": "AP PHOTO",
+  "imageSourceTwo": "https://www.aljazeera.com/news/2026/8/12/three-killed-in-overnight-attacks-on-russian-ukrainian-port",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-novorossiysk-drone-strike.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Novorossiysk",
+      "detail": "Black Sea · Russia"
+    },
+    {
+      "start": 2.55,
+      "end": 4.45,
+      "eyebrow": "Field image / context",
+      "value": "Port strike",
+      "detail": "Overnight drones and missiles"
+    },
+    {
+      "start": 4.6,
+      "end": 6.5,
+      "eyebrow": "Killed / officials",
+      "value": "3",
+      "detail": "Including an eight-year-old child",
+      "kind": "stat"
+    },
+    {
+      "start": 6.65,
+      "end": 8.55,
+      "eyebrow": "Damaged / exports",
+      "value": "2 grain terminals",
+      "detail": "Major export facilities hit"
+    },
+    {
+      "start": 8.7,
+      "end": 10.6,
+      "eyebrow": "Aftermath / city",
+      "value": "Water suspended",
+      "detail": "Emergency declared"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Ukraine hit the port",
+        "of Novorossiysk."
+      ],
+      "highlights": [
+        "Ukraine hit the port",
+        "of Novorossiysk"
+      ]
+    },
+    {
+      "lines": [
+        "Three people died,",
+        "including a child."
+      ],
+      "highlights": [
+        "Three people died,",
+        "including a child"
+      ]
+    },
+    {
+      "lines": [
+        "Two grain terminals",
+        "damaged."
+      ],
+      "highlights": [
+        "Two grain terminals",
+        "damaged"
+      ]
+    },
+    {
+      "lines": [
+        "Water supplies",
+        "suspended."
+      ],
+      "highlights": [
+        "Water supplies",
+        "suspended"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack",
+      "url": "https://www.bbc.com/news/articles/c5y49xp2wrno",
+      "published": "2026-08-12",
+      "usedFor": [
+        "3 killed including 8-year-old child, 24 injured",
+        "two grain terminals damaged",
+        "water suspended, emergency declared"
+      ]
+    },
+    {
+      "publisher": "Al Jazeera",
+      "title": "Ukraine hits grain terminals at Russia's Novorossiysk port, killing three",
+      "url": "https://www.aljazeera.com/news/2026/8/12/three-killed-in-overnight-attacks-on-russian-ukrainian-port",
+      "published": "2026-08-12",
+      "usedFor": [
+        "child among 3 killed per governor",
+        "two grain terminals out of action",
+        "strike of strategic significance"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

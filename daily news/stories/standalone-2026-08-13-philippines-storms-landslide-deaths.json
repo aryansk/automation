@@ -1,0 +1,167 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "philippines-storms-landslide-deaths-2026-08-12",
+  "tone": "bad",
+  "countryCode": "PH",
+  "countryName": "Philippines",
+  "cityName": "Baguio City",
+  "region": "Cordillera region",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Storm · Philippines",
+  "headline": "Philippines storms toll climbs to 26 as landslides hit Baguio",
+  "summary": "Landslides from Tropical Cyclones Luis and Maymay and the enhanced monsoon killed 26 people, with 3.1 million affected across ten Philippine regions, police said.",
+  "script": "The Philippines reported twenty-six deaths from storms Luis and Maymay and the monsoon, police said Wednesday. Landslides killed ten people in Baguio City. More than three million people were affected across ten regions.",
+  "source": "GMA News",
+  "openingHook": "PHILIPPINES: STORM TOLL CLIMBS TO 26",
+  "imageOne": "assets/stories/2026-08-13/bad-philippines-storms/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/bad-philippines-storms/secondary.jpg",
+  "imageAlt": "Police and responders conduct search, rescue and retrieval operations after a landslide hit a residence in Riverside, Guisad Surong, Baguio City.",
+  "imageAltTwo": "Emergency responders work through mud and debris at the Guisad Surong landslide site in Baguio City.",
+  "imageCredit": "PNP-PIO / GMA NEWS",
+  "imageCreditTwo": "COURTESY MAU VICTA / RAPPLER",
+  "imageSourceTwo": "https://www.rappler.com/philippines/deaths-landslides-heavy-rain-batter-cordillera-august-2026/",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-philippines-storms-landslide-deaths.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Baguio City",
+      "detail": "Cordillera, Philippines"
+    },
+    {
+      "start": 2.55,
+      "end": 4.45,
+      "eyebrow": "Field image / context",
+      "value": "Landslide site",
+      "detail": "Guisad Surong"
+    },
+    {
+      "start": 4.6,
+      "end": 6.5,
+      "eyebrow": "Death toll / police",
+      "value": "26",
+      "detail": "Including 10 in Baguio City",
+      "kind": "stat"
+    },
+    {
+      "start": 6.65,
+      "end": 8.55,
+      "eyebrow": "Affected / scale",
+      "value": "3.1 million",
+      "detail": "Across ten regions"
+    },
+    {
+      "start": 8.7,
+      "end": 10.6,
+      "eyebrow": "Damage / reported",
+      "value": "972 houses",
+      "detail": "Damaged in the storms"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Storms Luis and Maymay",
+        "kill 26 people."
+      ],
+      "highlights": [
+        "Storms Luis and Maymay",
+        "kill 26 people"
+      ]
+    },
+    {
+      "lines": [
+        "Ten died in",
+        "a Baguio landslide."
+      ],
+      "highlights": [
+        "Ten died in",
+        "a Baguio landslide"
+      ]
+    },
+    {
+      "lines": [
+        "3.1 million people",
+        "affected."
+      ],
+      "highlights": [
+        "3.1 million people",
+        "affected"
+      ]
+    },
+    {
+      "lines": [
+        "Search operations",
+        "continue."
+      ],
+      "highlights": [
+        "Search operations",
+        "continue"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "GMA News",
+      "title": "Death toll from Luis, Maymay, Habagat climbs to 26 -PNP",
+      "url": "https://www.gmanetwork.com/news/topstories/nation/998242/death-toll-from-luis-maymay-habagat-climbs-to-26-pnp/story/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "PNP toll of 26",
+        "10 deaths in Baguio City landslide",
+        "3.1M people affected, 972 houses damaged"
+      ]
+    },
+    {
+      "publisher": "Rappler",
+      "title": "14 dead as landslides, heavy rain batter Cordillera",
+      "url": "https://www.rappler.com/philippines/deaths-landslides-heavy-rain-batter-cordillera-august-2026/",
+      "published": "2026-08-11",
+      "usedFor": [
+        "landslide deaths in Cordillera",
+        "Guisad Surong landslide details",
+        "evacuation centers"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

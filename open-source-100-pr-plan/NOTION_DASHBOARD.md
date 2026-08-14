@@ -16,6 +16,13 @@ session with important unsynced state. GitHub is authoritative; after a Notion
 write, re-query only the affected rows and aggregates instead of rereading the
 full database.
 
+For the sequential workflow, “five newly submitted PRs” means five lanes that
+reached `PUBLISHED` after a fresh final preflight and canonical verification.
+Reserved, implemented, locally validated, failed, blocked, closed, duplicate,
+or abandoned lanes never fill a slot. If a published lane is later invalidated
+or closed, remove it from the valid packet count and use a replacement when the
+run is still active; keep the invalidation evidence locally.
+
 ## Canonical dashboard identifiers
 
 - Data source: `655f44cc-b295-4aea-8cff-3548ef7aa58b`
@@ -49,6 +56,11 @@ GitHub:
 
 A local commit, pushed fork branch, failed PR creation, or blocked interaction
 does not trigger a submitted-PR row.
+
+The row is created only after the sequential lane state is `PUBLISHED` and the
+canonical URL, intended base, matching head hash, author, and open/draft state
+have all been rechecked. A stale candidate is not rescued by a successful
+local test.
 
 ## Required batch closeout sync
 

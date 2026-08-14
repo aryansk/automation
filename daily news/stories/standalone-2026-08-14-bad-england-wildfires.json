@@ -1,0 +1,163 @@
+{
+  "eventId": "england-wildfires-record-heat-2026-08-13",
+  "tone": "bad",
+  "countryCode": "GB",
+  "countryName": "United Kingdom",
+  "cityName": "Stourbridge",
+  "region": "West Midlands",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Wildfire · Heat",
+  "headline": "Wildfires hit England on hottest day of the year",
+  "summary": "Fires destroyed homes around Stourbridge as temperatures hit 38.1C, the UK's hottest day of 2026, with blazes across the country.",
+  "script": "Wildfires have broken out across England on the hottest day of the year. Temperatures reached thirty eight degrees, and a large blaze near Stourbridge destroyed homes and forced families to evacuate. Fire crews are battling fires across the country.",
+  "source": "BBC · AP",
+  "edition": "14 Aug 2026",
+  "storyNumber": "01",
+  "openingHook": "ENGLAND WILDFIRES · RECORD HEAT",
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 46%",
+  "focusZoom": 9.8,
+  "imageOne": "assets/stories/2026-08-14/bad-england-wildfires/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-14/bad-england-wildfires/secondary.jpg",
+  "imageAlt": "An aerial view of smoke rising over houses as a wildfire burns near Stourbridge, West Midlands, 13 Aug 2026.",
+  "imageAltTwo": "A firefighter walks in front of a burnt-out red-brick house after a wildfire.",
+  "imageCredit": "PA MEDIA · BBC",
+  "imageCreditTwo": "BBC",
+  "imageSourceTwo": "https://www.bbc.com/news/articles/c04k20w7lr6o",
+  "narrationAudio": "assets/narration/standalone-2026-08-14-bad-england-wildfires.wav",
+  "visualBeats": [
+    {
+      "start": 2.1,
+      "end": 4.2,
+      "eyebrow": "Map lock / location",
+      "value": "Stourbridge",
+      "detail": "West Midlands · England"
+    },
+    {
+      "start": 4.3,
+      "end": 6.15,
+      "eyebrow": "Heat / record",
+      "value": "38.1°C",
+      "detail": "Hottest day of 2026",
+      "kind": "stat"
+    },
+    {
+      "start": 6.25,
+      "end": 8.85,
+      "eyebrow": "Blaze / damage",
+      "value": "Homes destroyed",
+      "detail": "Stourbridge golf course fire"
+    },
+    {
+      "start": 8.95,
+      "end": 10.65,
+      "eyebrow": "Response / crews",
+      "value": "100 firefighters",
+      "detail": "Tackling the flames"
+    },
+    {
+      "start": 10.75,
+      "end": 13.25,
+      "eyebrow": "Outlook / risk",
+      "value": "Fires across England",
+      "detail": "Extreme heat warning"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "Hottest day of the year",
+        "in the UK."
+      ],
+      "highlights": [
+        "Hottest day"
+      ]
+    },
+    {
+      "lines": [
+        "38.1°C",
+        "in London."
+      ],
+      "highlights": [
+        "38.1°C"
+      ]
+    },
+    {
+      "lines": [
+        "Wildfires hit homes",
+        "near Stourbridge."
+      ],
+      "highlights": [
+        "Wildfires"
+      ]
+    },
+    {
+      "lines": [
+        "Firefighters battle",
+        "blazes nationwide."
+      ],
+      "highlights": [
+        "battle blazes"
+      ]
+    }
+  ],
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "BBC News",
+      "title": "Multiple fires destroy homes and cause devastation in West Midlands",
+      "url": "https://www.bbc.com/news/articles/c04k20w7lr6o",
+      "published": "2026-08-13",
+      "usedFor": [
+        "hottest day of the year 38.1C",
+        "Stourbridge golf course fire, 100 firefighters",
+        "homes destroyed and evacuations"
+      ]
+    },
+    {
+      "publisher": "Associated Press",
+      "title": "European countries battle multiple wildfires as record heat grips the continent",
+      "url": "https://apnews.com/article/fires-france-england-heat-drought-bb9926465acf98a7790a7bf01294f604",
+      "published": "2026-08-14",
+      "usedFor": [
+        "multiple wildfires across England",
+        "record heat wave context"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "basis": "Breaking standalone — record heat and destructive wildfires with verified BBC and AP reporting and caption-checked photos.",
+    "researchDate": "14 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. BBC / PA Media images used with credit banners.",
+    "generated": false
+  }
+}

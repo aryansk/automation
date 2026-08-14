@@ -29,6 +29,8 @@ import { clamp01, easeInOutQuint, mix, smootherstep } from "./animation-math.js"
 export { clamp, clamp01, easeInOutQuint, mix, smootherstep } from "./animation-math.js";
 const POST_ARRIVAL_DRIFT = 0.006;
 const GLOBE_RENDER_SCALE = 2 / 3;
+const RESET_PULL_END = 0.28;
+const RESET_HOLD_END = 0.72;
 
 function createGraticule(radius) {
   const positions = [];
@@ -174,6 +176,97 @@ function createCountryFillLayer(feature, { fill, glow }, renderOrder) {
   mesh.renderOrder = renderOrder;
   mesh.visible = false;
   return { texture, material, mesh };
+}
+
+/* Animate the cold beat on the globe itself. This is a transparent equirectangular
+   ice surface, not a screen-space decoration: it follows the Three.js planet as
+   the camera travels, then reveals a moving frost front with deterministic
+   shimmer and fracture lines. */
+function createFreezeSurface(mode, renderOrder) {
+  const material = new THREE.ShaderMaterial({
+    uniforms: {
+      uProgress: { value: 0 },
+      uOpacity: { value: 0 },
+      uTime: { value: 0 },
+      uMode: { value: mode === "arctic" ? 2 : 1 },
+    },
+    transparent: true,
+    depthWrite: false,
+    side: THREE.FrontSide,
+    blending: THREE.NormalBlending,
+    vertexShader: `
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `,
+    fragmentShader: `
+      precision highp float;
+      varying vec2 vUv;
+      uniform float uProgress;
+      uniform float uOpacity;
+      uniform float uTime;
+      uniform float uMode;
+
+      void main() {
+        float longitude = vUv.x * 360.0 - 180.0;
+        float latitude = (0.5 - vUv.y) * 180.0;
+
+        float balticCore = exp(
+          -pow((longitude - 22.0) / 34.0, 2.0)
+          -pow((latitude - 61.0) / 15.0, 2.0)
+        );
+        float balticRegion = smoothstep(0.14, 0.56, balticCore);
+        float balticOrder = clamp((longitude - 2.0) / 50.0, 0.0, 1.0);
+
+        float arcticBand = smoothstep(57.0, 70.0, latitude);
+        float russiaLongitude = smoothstep(22.0, 48.0, longitude)
+          * (1.0 - smoothstep(174.0, 190.0, longitude));
+        float arcticRegion = arcticBand * russiaLongitude;
+        float polarCap = smoothstep(70.0, 83.0, latitude) * russiaLongitude;
+        float arcticShape = max(arcticRegion * 0.92, polarCap * 0.86);
+        float arcticOrder = clamp((longitude - 20.0) / 170.0, 0.0, 1.0);
+
+        float arcticMode = step(1.5, uMode);
+        float region = mix(balticRegion, arcticShape, arcticMode);
+        float order = mix(balticOrder, arcticOrder, arcticMode);
+        float revealGate = smoothstep(0.02, 0.16, uProgress);
+        float reveal = smoothstep(order - 0.18, order + 0.04, uProgress) * revealGate;
+        float movingFront = 1.0 - smoothstep(0.0, 0.18, abs(order - uProgress));
+
+        float shimmer = 0.5 + 0.5 * sin(longitude * 0.11 + latitude * 0.23 - uTime * 1.35);
+        float fractureA = smoothstep(
+          0.80,
+          0.99,
+          abs(sin(longitude * 0.72 + latitude * 1.32 + uTime * 0.42))
+        );
+        float fractureB = smoothstep(
+          0.84,
+          0.995,
+          abs(sin(longitude * 1.18 - latitude * 0.58 - uTime * 0.28))
+        );
+
+        vec3 ice = mix(
+          vec3(0.31, 0.72, 0.86),
+          vec3(0.88, 0.98, 1.0),
+          0.48 + shimmer * 0.28
+        );
+        ice = mix(ice, vec3(0.98, 1.0, 1.0), movingFront * 0.55 + fractureA * 0.12);
+        float alpha = region * reveal * uOpacity * (0.36 + shimmer * 0.16 + fractureB * 0.12);
+        if (alpha < 0.003) discard;
+        gl_FragColor = vec4(ice, alpha);
+      }
+    `,
+  });
+  const mesh = new THREE.Mesh(
+    new THREE.SphereGeometry(EARTH_RADIUS * 1.018, 112, 72),
+    material,
+  );
+  mesh.renderOrder = renderOrder;
+  mesh.frustumCulled = false;
+  mesh.visible = false;
+  return { material, mesh };
 }
 
 export function createGlobeTour(options) {
@@ -433,13 +526,18 @@ export function createGlobeTour(options) {
       ? createCountryFillLayer(
         feature,
         {
-          fill: "rgba(206,130,58,0.86)",
-          glow: "rgba(255,244,211,0.98)",
+          fill: stop.highlightFill || "rgba(206,130,58,0.86)",
+          glow: stop.highlightGlow || "rgba(255,244,211,0.98)",
         },
         5 + index,
       )
       : { texture: null, material: null, mesh: null };
     if (primary.mesh) planet.add(primary.mesh);
+
+    const freeze = stop.freezeMode
+      ? createFreezeSurface(stop.freezeMode, 4.6 + index * 0.01)
+      : { material: null, mesh: null };
+    if (freeze.mesh) planet.add(freeze.mesh);
 
     const relatedCodes = [
       ...(Array.isArray(stop.mentionedCountryCodes) ? stop.mentionedCountryCodes : []),
@@ -469,6 +567,7 @@ export function createGlobeTour(options) {
       material: primary.material,
       mesh: primary.mesh,
       relatedLayers,
+      freeze,
       cameraZ: Number.isFinite(requestedCameraZ) ? requestedCameraZ : CAMERA_Z,
       rotation: rotationFor(stop.coordinates),
     };
@@ -570,12 +669,28 @@ export function createGlobeTour(options) {
       const fromZ = previous ? previous.cameraZ : OPENING_CAMERA_Z;
 
       if (lastTime >= leg.travelStart) {
-        const travel = easeInOutQuint(
+        const travelRaw = clamp01(
           (lastTime - leg.travelStart) / Math.max(0.1, leg.arrive - leg.travelStart),
         );
+        const travel = easeInOutQuint(travelRaw);
         rotationY = mix(fromY, leg.rotation.y, travel);
         rotationX = mix(fromX, leg.rotation.x, travel);
-        cameraZ = mix(fromZ, leg.cameraZ, travel);
+        if (previous && leg.resetCamera !== false) {
+          /* Between countries, make the reset leg explicit: pull away from
+           * the finished close-up, hold on the full globe, then push into the
+           * next country. This keeps the next map from appearing too early. */
+          const pullback = smootherstep(0, RESET_PULL_END, travelRaw);
+          const pushIn = smootherstep(RESET_HOLD_END, 1, travelRaw);
+          if (travelRaw <= RESET_PULL_END) {
+            cameraZ = mix(fromZ, OPENING_CAMERA_Z, pullback);
+          } else if (travelRaw < RESET_HOLD_END) {
+            cameraZ = OPENING_CAMERA_Z;
+          } else {
+            cameraZ = mix(OPENING_CAMERA_Z, leg.cameraZ, pushIn);
+          }
+        } else {
+          cameraZ = mix(fromZ, leg.cameraZ, travel);
+        }
 
         /* Once settled, keep a barely-there drift so the globe never
            looks like a frozen still. */
@@ -598,6 +713,15 @@ export function createGlobeTour(options) {
           related.material.opacity = highlight * 0.62 * breath;
           related.mesh.visible = related.material.opacity > 0.004;
         });
+      }
+
+      if (leg.freeze?.material && leg.freeze.mesh) {
+        const freezeReveal = smootherstep(leg.arrive - 0.42, leg.arrive + 1.72, lastTime);
+        const freezeFade = 1 - smootherstep(leg.holdUntil - 0.5, leg.holdUntil + 0.22, lastTime);
+        leg.freeze.material.uniforms.uProgress.value = freezeReveal;
+        leg.freeze.material.uniforms.uOpacity.value = freezeFade * (0.92 + Math.sin(lastTime * 1.2) * 0.04);
+        leg.freeze.material.uniforms.uTime.value = lastTime;
+        leg.freeze.mesh.visible = freezeReveal > 0.003 && freezeFade > 0.003;
       }
 
       const route = routeLayers[index];

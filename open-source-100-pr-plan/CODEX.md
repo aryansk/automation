@@ -8,8 +8,28 @@ authoritative instructions and resumable state for this folder.
 This folder is documentation and evidence infrastructure. Do not infer push,
 commit, or PR authorization from the existence of the plan.
 
-Before ending work on a five-PR packet, synchronize the Notion dashboard once
-for the complete set of verified PR submissions, append to [WORK_LOG.md](WORK_LOG.md),
+## Sequential lane rule
+
+For every new packet, use `LANE_STATE.json` and
+`python3 scripts/lane_state.py --state LANE_STATE.json verify`. Keep a small
+reserve pool of leads if useful, but never select or implement five lanes in
+advance. Process exactly one lane at a time:
+`RESERVE -> PREFLIGHTING -> CLAIMED -> IMPLEMENTING -> VALIDATING ->
+FINAL_PREFLIGHT -> PUBLISHED`.
+
+The selected issue must pass a fresh live preflight immediately before coding:
+open, available, unclaimed, non-duplicate, policy-compatible, bounded, and
+locally testable. Where repository norms permit, claim it then. After local
+validation, repeat the same live checks immediately before pushing/opening the
+draft. Abandon stale or duplicate work and use the next reserve candidate;
+do not let sunk cost override the final preflight. Only a canonical,
+head-verified open draft enters the five-lane count. The state file records the
+initial preflight, claim/work-start, final preflight, and publication times and
+enforces one active implementation lane.
+
+After five valid `PUBLISHED` lanes—not five researched or attempted issues—
+synchronize the Notion dashboard once for the complete set of verified PR
+submissions, append to [WORK_LOG.md](WORK_LOG.md),
 run the cursor-based authored-PR comment/review audit in [REVIEW_AUDIT.md](REVIEW_AUDIT.md)
 and `scripts/review_audit_delta.sh` (falling back to a full all-state sweep only
 when the cursor contract requires it),

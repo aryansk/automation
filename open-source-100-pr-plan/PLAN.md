@@ -52,13 +52,46 @@ not depend on one conversation:
 - [OUTCOME_LEARNING.md](OUTCOME_LEARNING.md) turns verified merged, open,
   closed, and commented-PR outcomes into selection gates and a recalibrated
   candidate score.
-- [PREFERRED-FIVE-PUBLICATION.md](PREFERRED-FIVE-PUBLICATION.md) contains the
-  exact five-candidate order, base branches, validation commands, and draft PR
-  outlines for the next allowed publication window.
+- [PREFERRED-FIVE-PUBLICATION.md](PREFERRED-FIVE-PUBLICATION.md) contains
+  historical candidate leads, validation context, and the sequential
+  publication protocol; its tables are not a preauthorized five-candidate
+  order.
 
 Every new thread must verify the current snapshot against the live repository
 and GitHub state. Every ending thread must leave one concrete next action,
 updated statuses, exact changed paths, checks run, and unresolved decisions.
+
+## Sequential publication model — adopted 2026-08-12
+
+The next-five workflow is now a sequential publication run. The target is five
+canonical, open, head-verified draft PRs; it is not five researched issues,
+five local branches, or five attempted publications. Keep a lightweight
+reserve pool of roughly 8–10 leads when discovery is useful, but select and
+deeply preflight only one lane at a time. The next lane is not eligible merely
+because an earlier search said it was eligible.
+
+Each lane is tracked in `LANE_STATE.json` and moves through
+`RESERVE -> PREFLIGHTING -> CLAIMED -> IMPLEMENTING -> VALIDATING ->
+FINAL_PREFLIGHT -> PUBLISHED`. `ABANDONED_STALE`, `BLOCKED`, and
+`CLOSED_DUPLICATE` preserve failure evidence without inflating the valid
+publication count. The state records the initial preflight, claim/work-start,
+final preflight, and publication timestamps and enforces one active lane.
+
+The selected candidate receives a fresh live preflight immediately before
+implementation: open issue, available assignment/claim state, no overlapping
+or recent unlinked PR, compatible repository policy and identity/CLA/DCO/AI
+gates, bounded scope, and a runnable validation path. Claim or signal intent
+when project norms allow it. After local validation, repeat the same checks
+immediately before push/publication. If the issue closes, is claimed, becomes a
+duplicate, or fails policy or scope checks, abandon it and move to the next
+reserve candidate without sunk-cost justification. If a published draft later
+becomes invalid, replace it while the run is active when a reserve lane passes
+both preflights.
+
+Review work and maintainer requests take priority over fresh discovery. Stop
+the run after five `PUBLISHED` lanes, then run the review cursor audit and one
+deduplicated Notion closeout. Only canonical GitHub state can establish the
+publication count; local commits and stale notes are evidence, not eligibility.
 
 ## What counts as one PR
 

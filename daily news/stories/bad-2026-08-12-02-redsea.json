@@ -1,0 +1,170 @@
+{
+  "eventId": "red-sea-houthi-attack-bab-el-mandeb-2026-08-12",
+  "tone": "bad",
+  "countryCode": "YE",
+  "countryName": "Yemen",
+  "cityName": "",
+  "region": "Middle East",
+  "urgency": "high",
+  "storyType": "breaking",
+  "kicker": "Conflict · Shipping",
+  "headline": "Houthi attack on Red Sea ship kills six as Hormuz talks stall",
+  "summary": "A ship was hit near the Bab al-Mandeb strait, killing six crew, as traffic through the Strait of Hormuz slid to new lows and diplomacy faltered.",
+  "script": "The war on Red Sea shipping has turned deadly again. Yemen says a Houthi attack near the Bab al-Mandeb strait killed six crew members. Traffic through the Strait of Hormuz has sunk to new lows.",
+  "source": "Reuters · Al Jazeera",
+  "edition": "12 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/stories/2026-08-12/bad-redsea/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-12/bad-redsea/secondary.jpg",
+  "imageAlt": "A cargo ship in the Red Sea shipping lane.",
+  "imageAltTwo": "A naval patrol near a maritime chokepoint.",
+  "imageCredit": "Reuters / AP",
+  "imageCreditTwo": "Reuters / AP",
+  "narrationAudio": "assets/narration/bad-2026-08-12-02-redsea.wav",
+  "captions": [
+    {
+      "lines": [
+        "Ship hit near",
+        "Bab al-Mandeb."
+      ],
+      "highlights": [
+        "Bab al-Mandeb"
+      ]
+    },
+    {
+      "lines": [
+        "Houthi attack",
+        "kills six crew."
+      ],
+      "highlights": [
+        "kills six"
+      ]
+    },
+    {
+      "lines": [
+        "Hormuz traffic sinks,",
+        "talks stall."
+      ],
+      "highlights": [
+        "talks stall"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "Houthi attack on small cargo ship in Red Sea kills crew members, sources say",
+      "url": "https://www.reuters.com/world/middle-east/red-sea-houthi-attack-2026-08-12/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "ship attacked",
+        "crew killed",
+        "Red Sea shipping"
+      ]
+    },
+    {
+      "publisher": "Al Jazeera",
+      "title": "Six killed in Houthi attack on Bab al-Mandeb ship, Yemen's government says",
+      "url": "https://www.aljazeera.com/news/2026/8/12/red-sea-ship-attack",
+      "published": "2026-08-12",
+      "usedFor": [
+        "six killed",
+        "Bab al-Mandeb location",
+        "Yemen government"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Deadly attack with global supply-chain stakes; editorial ranking.",
+    "researchDate": "12 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor on the Red Sea region.",
+        "start": 0,
+        "animationId": "region-dive",
+        "mapSource": "Reuters / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Red Sea",
+            "code": "YE",
+            "coordinates": [
+              43.5,
+              13.5
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "Lock onto the Bab al-Mandeb strait.",
+        "start": 5,
+        "animationId": "city-lock",
+        "mapSource": "Al Jazeera / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Bab al-Mandeb",
+            "coordinates": [
+              43.35,
+              12.58
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "why-it-matters",
+        "scriptCue": "Show why this narrow passage matters to global shipping.",
+        "start": 10.5,
+        "animationId": "chokepoint-focus",
+        "mapSource": "Reuters / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Bab al-Mandeb",
+            "code": "YE",
+            "coordinates": [
+              43.35,
+              12.58
+            ]
+          },
+          "routes": [
+            {
+              "points": [
+                {
+                  "name": "Bab al-Mandeb",
+                  "code": "YE",
+                  "coordinates": [
+                    43.35,
+                    12.58
+                  ]
+                },
+                {
+                  "name": "Strait of Hormuz",
+                  "code": "AE",
+                  "coordinates": [
+                    56.25,
+                    26.57
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

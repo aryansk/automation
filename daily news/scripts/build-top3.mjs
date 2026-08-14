@@ -27,6 +27,7 @@ import { dirname, isAbsolute, parse, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { normalizeGlobeMapPlan } from "../assets/animations/globe-map-plan.js";
 import { resolveMapPlanForScene } from "../assets/animations/globe-map-runtime.js";
+import { HYPERFRAMES_VERSION } from "./hyperframes-version.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -51,7 +52,7 @@ const die = (message) => {
   process.exit(1);
 };
 
-const HF = option("hyperframes", "0.7.71");
+const HF = option("hyperframes", HYPERFRAMES_VERSION);
 const VOICE = option("voice", "af_heart");
 const COMPOSITION = option("composition", "index.html");
 const FPS = option("fps", "30");

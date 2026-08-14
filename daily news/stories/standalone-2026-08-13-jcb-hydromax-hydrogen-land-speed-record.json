@@ -1,0 +1,168 @@
+{
+  "spokenOpener": false,
+  "hookEnd": 0.12,
+  "visualStart": 0,
+  "mediaStart": 0,
+  "cardStart": 0.28,
+  "photoSwapAt": 4.6,
+  "imageFocusPrimary": "50% 50%",
+  "imageFocusSecondary": "50% 50%",
+  "focusZoom": 9.8,
+  "storyNumber": "01",
+  "captionTimings": [
+    {
+      "start": 0.12,
+      "end": 5.18
+    },
+    {
+      "start": 5.38,
+      "end": 8.45
+    },
+    {
+      "start": 8.65,
+      "end": 10.45
+    },
+    {
+      "start": 10.6,
+      "end": 13.2
+    }
+  ],
+  "selection": {
+    "trendRank": 1,
+    "researchDate": "13 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared. Source photos used with credit banners.",
+    "generated": false
+  },
+  "eventId": "jcb-hydromax-hydrogen-land-speed-record-2026-08-11",
+  "tone": "good",
+  "statWords": "406",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Bonneville Salt Flats",
+  "region": "Utah",
+  "urgency": "medium",
+  "storyType": "auto",
+  "kicker": "Speed record · Hydrogen",
+  "headline": "Hydrogen-powered car smashes world speed record at 406 mph",
+  "summary": "JCB's hydrogen-powered Hydromax, driven by retired RAF pilot Andy Green, hit 406.320 mph at Utah's Bonneville Salt Flats — more than double the previous hydrogen record.",
+  "script": "British engineer Andy Green has smashed the world speed record for a hydrogen-powered car, hitting 406 miles per hour on the Bonneville Salt Flats in Utah. It is more than double the previous mark and runs on engines from JCB's diggers.",
+  "source": "BBC News",
+  "openingHook": "HYDROGEN CAR HITS 406 MPH",
+  "imageOne": "assets/stories/2026-08-13/good-jcb-hydrogen-record/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-13/good-jcb-hydrogen-record/secondary.jpg",
+  "imageAlt": "Andy Green in his yellow and black JCB driving suit before the record run.",
+  "imageAltTwo": "The JCB Hydromax reaching 406.320 mph at the Bonneville Salt Flats, Utah.",
+  "imageCredit": "BBC NEWS / JCB",
+  "imageCreditTwo": "FIA",
+  "imageSourceTwo": "https://www.fia.com/news/fia-confirms-new-406320-mph-world-land-speed-record-hydrogen-powered-vehicle",
+  "narrationAudio": "assets/narration/standalone-2026-08-13-jcb-hydromax-hydrogen-land-speed-record.wav",
+  "visualBeats": [
+    {
+      "start": 0.5,
+      "end": 2.4,
+      "eyebrow": "Map lock / location",
+      "value": "Bonneville Salt Flats",
+      "detail": "Utah · USA"
+    },
+    {
+      "start": 2.5,
+      "end": 4.4,
+      "eyebrow": "Field image / context",
+      "value": "JCB Hydromax",
+      "detail": "Hydrogen-powered car"
+    },
+    {
+      "start": 6.24,
+      "end": 8.64,
+      "eyebrow": "Top speed / FIA",
+      "value": "406",
+      "detail": "Miles per hour",
+      "kind": "stat"
+    },
+    {
+      "start": 6.5,
+      "end": 8.4,
+      "eyebrow": "Previous mark",
+      "value": "185.5 mph",
+      "detail": "Hydrogen benchmark, 2004"
+    },
+    {
+      "start": 8.5,
+      "end": 10.4,
+      "eyebrow": "Power / engines",
+      "value": "1,600 bhp",
+      "detail": "Two engines from JCB diggers"
+    }
+  ],
+  "captions": [
+    {
+      "lines": [
+        "A hydrogen-powered car",
+        "hits 406 mph."
+      ],
+      "highlights": [
+        "A hydrogen-powered car",
+        "hits 406 mph"
+      ]
+    },
+    {
+      "lines": [
+        "More than double",
+        "the old record."
+      ],
+      "highlights": [
+        "More than double",
+        "the old record"
+      ]
+    },
+    {
+      "lines": [
+        "On the Bonneville",
+        "Salt Flats."
+      ],
+      "highlights": [
+        "On the Bonneville",
+        "Salt Flats"
+      ]
+    },
+    {
+      "lines": [
+        "Engines from",
+        "JCB diggers."
+      ],
+      "highlights": [
+        "Engines from",
+        "JCB diggers"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "FIA",
+      "title": "FIA confirms new 406.320 mph World Land Speed Record for a hydrogen-powered vehicle",
+      "url": "https://www.fia.com/news/fia-confirms-new-406320-mph-world-land-speed-record-hydrogen-powered-vehicle",
+      "published": "2026-08-11",
+      "usedFor": [
+        "406.320 mph / 653.909 kph two-run average",
+        "eclipses 185.5 mph benchmark",
+        "FIA oversight"
+      ]
+    },
+    {
+      "publisher": "BBC News",
+      "title": "British driver who broke sound barrier sets new speed record",
+      "url": "https://www.bbc.com/news/articles/czjl2yzx8epo",
+      "published": "2026-08-12",
+      "usedFor": [
+        "Andy Green, 406 mph",
+        "two hydrogen engines, 1,600 bhp",
+        "production-based engines power JCB diggers"
+      ]
+    }
+  ],
+  "edition": "13 Aug 2026"
+}

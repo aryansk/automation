@@ -1,0 +1,155 @@
+{
+  "eventId": "us-july-cpi-cools-2026-08-12",
+  "tone": "good",
+  "countryCode": "US",
+  "countryName": "United States",
+  "cityName": "Washington",
+  "region": "North America",
+  "urgency": "standard",
+  "storyType": "statistics",
+  "kicker": "Economy · Prices",
+  "headline": "US inflation stays mild in July, holding at a 3.4% annual rate",
+  "summary": "Consumer prices rose just 0.1% in July, keeping the annual rate at 3.4% and easing pressure on households and the Federal Reserve.",
+  "statValue": "3.4%",
+  "statLabel": "annual inflation, July",
+  "script": "There's some relief on prices in the United States. Consumer prices rose just one tenth of a percent in July, holding inflation at three point four percent for the year. It eased pressure on households and on the Federal Reserve.",
+  "source": "Reuters · CNBC",
+  "edition": "12 Aug 2026",
+  "storyNumber": "02",
+  "imageOne": "assets/stories/2026-08-12/good-inflation/primary.jpg",
+  "imageTwo": "assets/stories/2026-08-12/good-inflation/secondary.jpg",
+  "imageAlt": "A grocery store aisle with price tags on shelves.",
+  "imageAltTwo": "The Federal Reserve building in Washington.",
+  "imageCredit": "Reuters / AP",
+  "imageCreditTwo": "Reuters / AP",
+  "narrationAudio": "assets/narration/good-2026-08-12-02-inflation.wav",
+  "captions": [
+    {
+      "lines": [
+        "Prices rose just",
+        "0.1% in July."
+      ],
+      "highlights": [
+        "0.1%"
+      ]
+    },
+    {
+      "lines": [
+        "Inflation holds at",
+        "3.4% a year."
+      ],
+      "highlights": [
+        "3.4%"
+      ]
+    },
+    {
+      "lines": [
+        "Eases pressure on",
+        "households and the Fed."
+      ],
+      "highlights": [
+        "Eases pressure"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Reuters",
+      "title": "US consumer inflation mild in July, economy still not out of the woods",
+      "url": "https://www.reuters.com/markets/us/us-consumer-inflation-mild-july-2026-08-12/",
+      "published": "2026-08-12",
+      "usedFor": [
+        "mild July inflation",
+        "3.4% annual rate",
+        "as expected"
+      ]
+    },
+    {
+      "publisher": "CNBC",
+      "title": "Consumer prices rose 0.1% in July, as expected, putting the annual rate at 3.4%",
+      "url": "https://www.cnbc.com/2026/08/12/cpi-inflation-report-july-2026.html",
+      "published": "2026-08-12",
+      "usedFor": [
+        "0.1% monthly rise",
+        "3.4% annual",
+        "Fed pressure"
+      ]
+    }
+  ],
+  "selection": {
+    "trendRank": 2,
+    "basis": "Closely watched economic release affecting households and rates; editorial ranking.",
+    "researchDate": "12 Aug 2026",
+    "distinctFromHistory": true
+  },
+  "rights": {
+    "rightsVerified": false,
+    "status": "User-authorized source-image workflow; publisher rights were not independently cleared.",
+    "generated": false
+  },
+  "animationPlan": {
+    "version": 1,
+    "library": "globe-map-library",
+    "policy": "required",
+    "segments": [
+      {
+        "id": "orient",
+        "scriptSection": "opener",
+        "scriptCue": "Anchor in the United States.",
+        "start": 0,
+        "animationId": "country-lock",
+        "mapSource": "Reuters / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "United States",
+            "code": "US",
+            "coordinates": [
+              -98.5,
+              39.8
+            ]
+          }
+        }
+      },
+      {
+        "id": "place",
+        "scriptSection": "verified-location",
+        "scriptCue": "Focus on Washington and the Federal Reserve.",
+        "start": 6,
+        "animationId": "city-lock",
+        "mapSource": "CNBC / 12 Aug 2026",
+        "mapData": {
+          "target": {
+            "name": "Washington",
+            "country": "United States",
+            "code": "US",
+            "coordinates": [
+              -77.0369,
+              38.9072
+            ]
+          }
+        }
+      },
+      {
+        "id": "claim",
+        "scriptSection": "claim-and-consequence",
+        "scriptCue": "Show the eased inflation reading as a single figure over the country.",
+        "start": 11,
+        "animationId": "proportional-bubbles",
+        "mapSource": "CNBC / 12 Aug 2026",
+        "mapData": {
+          "points": [
+            {
+              "name": "US CPI",
+              "coordinates": [
+                -98.5,
+                39.8
+              ],
+              "value": 3.4,
+              "label": "3.4% YoY"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

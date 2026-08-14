@@ -19,6 +19,12 @@ into `STATUS.md`, update `WORK_QUEUE.md`, and append a short entry to
 - Issue URL:
 - PR URL and state:
 - What is true now:
+- Lane state (`RESERVE` / `PREFLIGHTING` / `CLAIMED` / `IMPLEMENTING` /
+  `VALIDATING` / `FINAL_PREFLIGHT` / `PUBLISHED` / `ABANDONED_STALE` /
+  `BLOCKED`):
+- Initial preflight, claim/work-start, final preflight, and publication
+  timestamps (UTC):
+- Reserve replacement to take next, if any:
 
 ## Completed this thread
 
@@ -57,6 +63,8 @@ conversation:
 - [ ] `STATUS.md` updated with current truth and next action.
 - [ ] `WORK_QUEUE.md` updated with status, dependency, and evidence.
 - [ ] `WORK_LOG.md` received an append-only entry.
+- [ ] `LANE_STATE.json` was verified and the lane timestamps/status were
+      updated through `scripts/lane_state.py`.
 - [ ] All open PRs authored by `aryansk` were scanned for human comments and
       review threads; every actionable item has a reply URL or a documented
       blocker in `REVIEW_AUDIT.md`.
